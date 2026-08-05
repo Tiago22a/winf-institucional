@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>404 — Página não encontrada | WINF™</title>
+  <meta name="description" content="A página solicitada não foi encontrada no ecossistema WINF™." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#050505" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #050505;
+      --panel: rgba(18, 18, 19, 0.78);
+      --line: rgba(255, 255, 255, 0.11);
+      --line-strong: rgba(255, 255, 255, 0.22);
+      --text: #f5f5f5;
+      --muted: #8d8d93;
+      --soft: #b9b9bd;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      min-height: 100%;
+      margin: 0;
+    }
+
+    body {
+      overflow-x: hidden;
+      background:
+        radial-gradient(circle at 75% 18%, rgba(255,255,255,.065), transparent 28%),
+        radial-gradient(circle at 15% 85%, rgba(255,255,255,.035), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      pointer-events: none;
+      opacity: .2;
+      background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: linear-gradient(to bottom, black, transparent 85%);
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background: linear-gradient(135deg, transparent 0 48%, rgba(255,255,255,.025) 48% 48.1%, transparent 48.1% 100%);
+    }
+
+    ::selection {
+      background: #fff;
+      color: #000;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .topbar {
+      min-height: 88px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 20px clamp(22px, 5vw, 72px);
+      border-bottom: 1px solid var(--line);
+      background: rgba(5, 5, 5, .64);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      text-decoration: none;
+    }
+
+    .brand img {
+      display: block;
+      width: auto;
+      max-width: 156px;
+      height: 26px;
+      object-fit: contain;
+    }
+
+    .brand-wordmark {
+      display: none;
+      font-family: "Inter", sans-serif;
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: .24em;
+    }
+
+    .system-label {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    main {
+      width: 100%;
+      flex: 1;
+      display: grid;
+      place-items: center;
+      padding: clamp(48px, 7vw, 100px) clamp(22px, 5vw, 72px);
+    }
+
+    .error-shell {
+      width: min(1180px, 100%);
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(300px, .9fr);
+      border: 1px solid var(--line);
+      background: var(--panel);
+      box-shadow: 0 36px 90px rgba(0,0,0,.42);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      animation: enter .8s cubic-bezier(.16,1,.3,1) both;
+    }
+
+    .content {
+      padding: clamp(38px, 6vw, 82px);
+      border-right: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 32px;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: var(--line-strong);
+    }
+
+    .code {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      font-size: clamp(92px, 16vw, 190px);
+      font-weight: 300;
+      line-height: .78;
+      letter-spacing: -.075em;
+      color: var(--white);
+    }
+
+    h1 {
+      max-width: 780px;
+      margin: 34px 0 22px;
+      font-family: "Inter", sans-serif;
+      font-size: clamp(34px, 5vw, 68px);
+      font-weight: 700;
+      line-height: .96;
+      letter-spacing: -.045em;
+      text-transform: uppercase;
+    }
+
+    .description {
+      max-width: 620px;
+      margin: 0;
+      color: var(--soft);
+      font-size: clamp(15px, 1.7vw, 18px);
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    .path-box {
+      max-width: 620px;
+      margin-top: 30px;
+      padding: 15px 17px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,.28);
+      overflow: hidden;
+    }
+
+    .path-label {
+      display: block;
+      margin-bottom: 7px;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      color: #6f6f74;
+    }
+
+    #requested-path {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 11px;
+      color: #c8c8cc;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 38px;
+    }
+
+    .button {
+      min-height: 52px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 0 24px;
+      border: 1px solid var(--line-strong);
+      text-decoration: none;
+      font-family: "Inter", sans-serif;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      transition: transform .25s ease, background .35s ease, color .35s ease, border-color .35s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      background: #fff;
+      color: #000;
+      border-color: #fff;
+    }
+
+    .button-primary:hover {
+      background: #dcdcdc;
+      border-color: #dcdcdc;
+    }
+
+    .button-secondary {
+      background: transparent;
+      color: #fff;
+    }
+
+    .button-secondary:hover {
+      background: rgba(255,255,255,.07);
+      border-color: rgba(255,255,255,.42);
+    }
+
+    .visual {
+      position: relative;
+      min-height: 620px;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.02), transparent),
+        #0a0a0b;
+    }
+
+    .visual::before,
+    .visual::after {
+      content: "";
+      position: absolute;
+      pointer-events: none;
+    }
+
+    .visual::before {
+      inset: 10%;
+      border: 1px solid rgba(255,255,255,.08);
+      transform: rotate(45deg) scale(.72);
+    }
+
+    .visual::after {
+      width: 1px;
+      top: 9%;
+      bottom: 9%;
+      left: 50%;
+      background: linear-gradient(to bottom, transparent, rgba(255,255,255,.24), transparent);
+    }
+
+    .orbit {
+      position: absolute;
+      width: 66%;
+      aspect-ratio: 1;
+      top: 50%;
+      left: 50%;
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      animation: rotate 28s linear infinite;
+    }
+
+    .orbit::before,
+    .orbit::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: #fff;
+    }
+
+    .orbit::before {
+      width: 6px;
+      height: 6px;
+      top: 4%;
+      left: 27%;
+      box-shadow: 0 0 20px rgba(255,255,255,.5);
+    }
+
+    .orbit::after {
+      width: 3px;
+      height: 3px;
+      right: 8%;
+      bottom: 24%;
+      opacity: .5;
+    }
+
+    .status {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 34px;
+    }
+
+    .status-top,
+    .status-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 8px;
+      letter-spacing: .19em;
+      text-transform: uppercase;
+      color: #66666b;
+    }
+
+    .status-center {
+      align-self: center;
+      width: min(290px, 88%);
+      padding: 28px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(5,5,5,.62);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      text-align: center;
+    }
+
+    .status-center strong {
+      display: block;
+      margin-bottom: 10px;
+      font-family: "Inter", sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+
+    .status-center span {
+      display: block;
+      color: #808086;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 9px;
+      line-height: 1.8;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 22px clamp(22px, 5vw, 72px);
+      border-top: 1px solid var(--line);
+      color: #66666b;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 8px;
+      letter-spacing: .16em;
+      line-height: 1.7;
+      text-transform: uppercase;
+    }
+
+    @keyframes enter {
+      from { opacity: 0; transform: translateY(26px) scale(.985); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    @keyframes rotate {
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    @media (max-width: 900px) {
+      .error-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .content {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .visual {
+        min-height: 320px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .topbar {
+        min-height: 74px;
+      }
+
+      .system-label {
+        display: none;
+      }
+
+      main {
+        padding-top: 28px;
+        padding-bottom: 28px;
+      }
+
+      .content {
+        padding: 32px 24px 38px;
+      }
+
+      h1 {
+        margin-top: 28px;
+      }
+
+      .actions {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .status {
+        padding: 24px;
+      }
+
+      footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .001ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Voltar para a página inicial da WINF">
+        <img
+          src="/assets/src/img/LOGO%20BRANCO.png"
+          alt="WINF™"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';"
+        />
+        <span class="brand-wordmark">WINF™</span>
+      </a>
+
+      <span class="system-label">WINF™ / ROUTE CONTROL / ERROR 404</span>
+    </header>
+
+    <main>
+      <section class="error-shell" aria-labelledby="error-title">
+        <div class="content">
+          <div class="eyebrow">Recurso indisponível</div>
+          <p class="code" aria-hidden="true">404</p>
+
+          <h1 id="error-title">Esta rota não está disponível.</h1>
+
+          <p class="description">
+            O endereço informado não existe, foi removido ou pertence a uma área que não pode ser acessada por esta rota.
+          </p>
+
+          <div class="path-box" aria-label="Endereço solicitado">
+            <span class="path-label">Endereço solicitado</span>
+            <code id="requested-path">/</code>
+          </div>
+
+          <div class="actions">
+            <a class="button button-primary" href="/">
+              Voltar ao início
+              <span aria-hidden="true">→</span>
+            </a>
+
+            <a class="button button-secondary" href="/catalogo/">
+              Ver catálogo
+            </a>
+          </div>
+        </div>
+
+        <div class="visual" aria-hidden="true">
+          <div class="orbit"></div>
+
+          <div class="status">
+            <div class="status-top">
+              <span>Protocol 404</span>
+              <span>Access denied</span>
+            </div>
+
+            <div class="status-center">
+              <strong>WINF™ Route Control</strong>
+              <span>Destino não localizado<br />ou acesso não publicado</span>
+            </div>
+
+            <div class="status-bottom">
+              <span>Secure surface</span>
+              <span>Return home</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2026 WINF Partners™. Todos os direitos reservados.</span>
+      <span>Tecnologia invisível. Controle absoluto.</span>
+    </footer>
+  </div>
+
+  <script>
+    (() => {
+      const pathElement = document.getElementById('requested-path');
+      if (!pathElement) return;
+
+      const requestedPath = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+      pathElement.textContent = requestedPath || '/';
+    })();
+  </script>
+</body>
+</html>
