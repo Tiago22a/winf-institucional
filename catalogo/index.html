@@ -126,9 +126,9 @@
 
     <div class="flex bg-[#111112]/90 p-1 border border-zinc-800 absolute left-1/2 -translate-x-1/2 shadow-2xl backdrop-blur-xl" style="max-width:calc(100vw - 120px);">
       <button onclick="setCategory('arch')" id="tab-arch" class="nav-tab-active px-3 md:px-7 py-2.5 text-[9px] md:text-[10px] tracking-[.15em] md:tracking-[.25em] uppercase font-black transition-all duration-300 whitespace-nowrap">Arch</button>
-      <button onclick="setCategory('auto')" id="tab-auto" class="nav-tab px-3 md:px-7 py-2.5 text-[9px] md:text-[10px] tracking-[.15em] md:tracking-[.25em] uppercase font-black transition-all duration-300 whitespace-nowrap">Auto</button>
-      <button onclick="setCategory('marine')" id="tab-marine" class="nav-tab px-3 md:px-7 py-2.5 text-[9px] md:text-[10px] tracking-[.15em] md:tracking-[.25em] uppercase font-black transition-all duration-300 whitespace-nowrap">Marine</button>
-      <button onclick="setCategory('aero')" id="tab-aero" class="nav-tab px-3 md:px-7 py-2.5 text-[9px] md:text-[10px] tracking-[.15em] md:tracking-[.25em] uppercase font-black transition-all duration-300 whitespace-nowrap">Aero</button>
+      <button onclick="setCategory('auto')" id="tab-auto" class="hidden nav-tab px-3 md:px-7 py-2.5 text-[9px] md:text-[10px] tracking-[.15em] md:tracking-[.25em] uppercase font-black transition-all duration-300 whitespace-nowrap">Auto</button>
+      <button onclick="setCategory('marine')" id="tab-marine" class="hidden nav-tab px-3 md:px-7 py-2.5 text-[9px] md:text-[10px] tracking-[.15em] md:tracking-[.25em] uppercase font-black transition-all duration-300 whitespace-nowrap">Marine</button>
+      <button onclick="setCategory('aero')" id="tab-aero" class="hidden nav-tab px-3 md:px-7 py-2.5 text-[9px] md:text-[10px] tracking-[.15em] md:tracking-[.25em] uppercase font-black transition-all duration-300 whitespace-nowrap">Aero</button>
     </div>
 
     <div class="flex items-center gap-3">
@@ -875,7 +875,7 @@ function setCategory(cat) {
   document.getElementById('sim-film-select').value = '';
 
   // tabs visual state
-  ['arch','auto','marine','aero'].forEach(c => {
+  ['arch'].forEach(c => {
     const btn = document.getElementById(`tab-${c}`);
     if (!btn) return;
     btn.className = (c === cat)
