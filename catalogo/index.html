@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo WINF™</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght=200;300;400;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #131314; color: #fff; }
+    
+    .hide-scrollbar::-webkit-scrollbar { display: none; }
+    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+    @keyframes thermalDash {
+      to { stroke-dashoffset: -100; }
+    }
+    .animate-thermal-dash { animation: thermalDash 12s linear infinite; }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+    .animate-pulse { animation: pulse 2s cubic-bezier(0.4,0,0.6,1) infinite; }
+
+    .premium-slider {
+      -webkit-appearance: none;
+      width: 100%; height: 6px;
+      background: linear-gradient(to right, #3b82f6 0%, #eab308 50%, #ef4444 100%);
+      border-radius: 9999px; outline: none;
+    }
+    .premium-slider::-webkit-slider-thumb {
+      -webkit-appearance: none; appearance: none;
+      width: 18px; height: 18px; border-radius: 9999px;
+      background: #fff; border: 2px solid #ef4444; cursor: pointer;
+      box-shadow: 0 0 12px rgba(239,68,68,.4); transition: transform .15s ease;
+    }
+    .premium-slider::-webkit-slider-thumb:hover {
+      transform: scale(1.2); box-shadow: 0 0 16px rgba(239,68,68,.6);
+    }
+    .premium-slider::-moz-range-thumb {
+      width: 18px; height: 18px; border-radius: 9999px;
+      background: #fff; border: 2px solid #ef4444; cursor: pointer;
+      box-shadow: 0 0 12px rgba(239,68,68,.4);
+    }
+
+    .product-card { transition: transform .5s ease, background .3s ease; }
+    .product-card:hover { background: rgba(255,255,255,.04); }
+    .product-card:hover .card-img-inner { transform: scale(1.05); }
+    .card-img-inner { transition: transform 1s ease; }
+    .product-card:hover .card-cta { opacity: 1; }
+    .card-cta { opacity: .6; transition: opacity .3s; }
+    .card-hover-line { width: 0; transition: width .5s ease; background: currentColor; }
+    .product-card:hover .card-hover-line { width: 100%; }
+    .product-card:hover .card-arrow { transform: translateX(4px); }
+    .card-arrow { transition: transform .3s; }
+
+    .nav-tab-active { background: #fff; color: #000; font-weight: 800; box-shadow: 0 4px 6px -1px rgba(0,0,0,.3); }
+    .nav-tab { color: #71717a; }
+    .nav-tab:hover { color: #f4f4f5; }
+    .nav-tab-locked { color: #52525b; }
+    .nav-tab-locked:hover { color: #71717a; }
+
+    .sim-heat-glow {
+      position: absolute; inset: 0;
+      background: #ea580c; mix-blend-mode: color;
+      pointer-events: none;
+      transition: opacity .5s;
+    }
+    .motion-bar { transition: width .6s cubic-bezier(.34,1.56,.64,1); }
+
+    /* fade in on load */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp .6s ease forwards; }
+    .fade-up-delay { animation: fadeUp .6s ease .2s forwards; opacity: 0; }
+    .fade-up-delay2 { animation: fadeUp .6s ease .4s forwards; opacity: 0; }
+    
+    select option { background: #131314; color: #fff; }
+
+    /* ===================== MODAL DE ESPECIFICAÇÕES ===================== */
+    @keyframes modalBackdropIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes modalPanelIn {
+      from { opacity: 0; transform: translateY(24px) scale(.98); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    #spec-modal-backdrop.is-open { animation: modalBackdropIn .35s ease forwards; }
+    #spec-modal-panel.is-open { animation: modalPanelIn .45s cubic-bezier(.16,1,.3,1) forwards; }
+
+    #spec-modal-backdrop { backdrop-filter: blur(4px); }
+
+    .spec-modal-scroll::-webkit-scrollbar { width: 6px; }
+    .spec-modal-scroll::-webkit-scrollbar-track { background: transparent; }
+    .spec-modal-scroll::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 9999px; }
+
+    .spec-row { transition: background .2s ease; }
+    .spec-row:hover { background: rgba(255,255,255,.03); }
+
+    .benefit-card { transition: border-color .3s ease, background .3s ease; }
+    .benefit-card:hover { border-color: rgba(255,255,255,.25); background: rgba(255,255,255,.03); }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-zinc-500/30">
+
+  <div class="fixed inset-0 pointer-events-none z-0">
+    <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-zinc-900/40 rounded-none blur-[150px] opacity-50 mix-blend-screen"></div>
+  </div>
+
+  <nav id="nav" class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 py-6 bg-[#131314]/60 backdrop-blur-xl border-b border-[#444746] transition-colors duration-700">
+    <a href="../" class="w-10 h-10 flex items-center justify-center border border-[#444746] hover:bg-white/10 transition-colors">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+    </a>
+
+    <div class="flex bg-[#111112]/90 p-1 border border-zinc-800 absolute left-1/2 -translate-x-1/2 shadow-2xl backdrop-blur-xl" style="max-width:calc(100vw - 120px);">
+      <button onclick="setCategory('arch')" id="tab-arch" class="nav-tab-active px-3 md:px-7 py-2.5 text-[9px] md:text-[10px] tracking-[.15em] md:tracking-[.25em] uppercase font-black transition-all duration-300 whitespace-nowrap">Arch</button>
+      <button onclick="setCategory('auto')" id="tab-auto" class="nav-tab px-3 md:px-7 py-2.5 text-[9px] md:text-[10px] tracking-[.15em] md:tracking-[.25em] uppercase font-black transition-all duration-300 whitespace-nowrap">Auto</button>
+      <button onclick="setCategory('marine')" id="tab-marine" class="nav-tab px-3 md:px-7 py-2.5 text-[9px] md:text-[10px] tracking-[.15em] md:tracking-[.25em] uppercase font-black transition-all duration-300 whitespace-nowrap">Marine</button>
+      <button onclick="setCategory('aero')" id="tab-aero" class="nav-tab px-3 md:px-7 py-2.5 text-[9px] md:text-[10px] tracking-[.15em] md:tracking-[.25em] uppercase font-black transition-all duration-300 whitespace-nowrap">Aero</button>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <button onclick="falarConsultor()" class="hidden md:flex items-center gap-2 px-4 py-2 border border-[#25D366] text-[#25D366] text-[10px] font-black uppercase tracking-[.2em] hover:bg-[#25D366] hover:text-black transition-all">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.124 1.533 5.858L.057 23.857a.5.5 0 0 0 .608.608l6.001-1.476A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.861 0-3.607-.49-5.117-1.346l-.367-.214-3.803.934.953-3.803-.228-.374A9.97 9.97 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Falar com Consultor
+      </button>
+      <div class="hidden md:block text-xs font-bold tracking-widest uppercase border-l-2 border-[#444746] pl-4">CATÁLOGO <span class="opacity-50">WINF™</span></div>
+    </div>
+  </nav>
+
+  <section class="relative z-10 pt-48 pb-20 px-6 md:px-12 max-w-7xl mx-auto w-full flex flex-col md:flex-row items-end justify-between gap-12 fade-up">
+    <div class="max-w-3xl">
+      <div class="text-[11px] uppercase font-bold tracking-[.4em] mb-6 flex items-center gap-4 text-white/40">
+        <div class="h-px w-8 bg-[#444746]"></div>
+        <span id="division-label">Divisão de Conforto Arquitetônico</span>
+      </div>
+      <h1 id="hero-title" class="text-4xl md:text-7xl font-extralight tracking-tight leading-[1.1] mb-8">
+        O mesmo vidro.<br><span class="font-medium">Uma nova percepção.</span>
+      </h1>
+      <div id="hero-desc" class="text-base md:text-xl font-light leading-relaxed max-w-2xl text-white/40">
+        <p><b class="text-white">A Tecnologia Não Precisa Ser Vista. Precisa Ser Sentida.</b> Transforme ambientes em santuários de conforto, privacidade e eficiência, filtrando o que há de ruim no sol e deixando entrar apenas a luz.</p>
+      </div>
+    </div>
+    <div class="hidden lg:flex w-32 h-32 border border-dashed border-[#444746] items-center justify-center relative shrink-0 fade-up-delay2">
+      <div class="absolute inset-0 flex items-center justify-center animate-pulse opacity-20">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18"/></svg>
+      </div>
+      <div class="text-[8px] font-black tracking-widest text-center uppercase text-white">Master<br>Specs</div>
+    </div>
+  </section>
+
+  <section class="relative z-10 pb-32 px-6 md:px-12 w-full max-w-7xl mx-auto flex-1">
+    <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"></div>
+  </section>
+
+  <section class="relative z-10 py-24 px-6 md:px-12 w-full max-w-7xl mx-auto border-t border-[#444746]">
+    <div class="mb-12">
+      <h2 class="text-4xl md:text-5xl font-light mb-4 text-white">Simulador Termodinâmico.</h2>
+      <p class="text-sm text-white/40 max-w-2xl leading-relaxed">Selecione uma película do catálogo e um cenário base para visualizar a redução de calor e escurecimento (VLT) em tempo real.</p>
+    </div>
+
+    <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
+      <div class="lg:w-1/3 flex flex-col gap-6">
+        <div class="p-8 border border-[#444746] bg-[#131314]">
+          <div class="mb-6">
+            <label class="text-[10px] font-bold uppercase tracking-widest mb-3 block text-white/40">CENÁRIO (MODELO EM TESTE)</label>
+            <select id="sim-model-select" onchange="updateSimDisplay()" class="w-full bg-transparent border-b border-[#444746] pb-3 text-sm focus:outline-none appearance-none cursor-pointer text-white">
+              <option value="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2669&auto=format&fit=crop">Fachada Corporativa</option>
+              <option value="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop">Residência Luxo</option>
+              <option value="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop">Vista Panorâmica</option>
+            </select>
+          </div>
+          <div class="mb-6">
+            <label class="text-[10px] font-bold uppercase tracking-widest mb-3 block text-white/40">PELÍCULA APLICADA</label>
+            <select id="sim-film-select" onchange="updateSimDisplay()" class="w-full bg-transparent border-b border-[#444746] pb-3 text-sm focus:outline-none appearance-none cursor-pointer text-white">
+              <option value="">Selecione a Película...</option>
+            </select>
+          </div>
+          <div class="mt-8 flex flex-col gap-4">
+            <div class="flex justify-between items-center pb-4 border-b border-[#444746]">
+              <span class="text-[10px] uppercase font-bold tracking-widest text-white/40">Transmissão de Luz (VLT):</span>
+              <span id="sim-vlt" class="font-light text-xl">-</span>
+            </div>
+            <div class="flex justify-between items-center pb-4 border-b border-[#444746]">
+              <span class="text-[10px] uppercase font-bold tracking-widest text-white/40">Rejeição IR:</span>
+              <span id="sim-ir" class="font-light text-xl">-</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-[10px] uppercase font-bold tracking-widest text-white/40">Garantia:</span>
+              <span id="sim-warranty" class="font-light text-sm uppercase tracking-widest">-</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-8 border border-[#444746] bg-[#131314] flex flex-col gap-6">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-white/40">Intensidade de Radiação Solar</span>
+              <span id="sun-label" class="text-sm font-bold bg-[#ef4444]/15 text-[#f57c00] border border-[#ef4444]/20 px-3 py-1 font-mono">85%</span>
+            </div>
+            <p class="text-[11px] opacity-70 mb-4 leading-relaxed">Ajuste a radiação térmica para simular condições climáticas reais e testar a barreira física sob altas temperaturas.</p>
+          </div>
+          <div class="relative">
+            <input type="range" min="0" max="100" value="85" id="sun-slider" class="premium-slider w-full cursor-pointer" oninput="onSunChange(this.value)" />
+            <div class="mt-2 flex items-center justify-between text-[9px] font-mono opacity-50 uppercase tracking-widest">
+              <span>0% Sombra</span><span>50% Sol Moderado</span><span>100% Extremo</span>
+            </div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <span class="text-[9px] font-mono text-zinc-400 uppercase tracking-widest">Presets Rápidos de Clima:</span>
+            <div class="grid grid-cols-2 gap-2">
+              <button onclick="setSun(0)"   id="preset-0"   class="px-2 py-1.5 text-[9px] font-mono uppercase tracking-wider border border-zinc-800 text-zinc-400 hover:border-zinc-700 transition-all">0% Sombra</button>
+              <button onclick="setSun(40)"  id="preset-40"  class="px-2 py-1.5 text-[9px] font-mono uppercase tracking-wider border border-zinc-800 text-zinc-400 hover:border-zinc-700 transition-all">40% Nublado</button>
+              <button onclick="setSun(80)"  id="preset-80"  class="px-2 py-1.5 text-[9px] font-mono uppercase tracking-wider border border-zinc-800 text-zinc-400 hover:border-zinc-700 transition-all">80% Sol Forte</button>
+              <button onclick="setSun(100)" id="preset-100" class="px-2 py-1.5 text-[9px] font-mono uppercase tracking-wider border border-zinc-800 text-zinc-400 hover:border-zinc-700 transition-all">100% Extremo</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:w-2/3 flex flex-col gap-6">
+        <div class="w-full h-[280px] md:h-[400px] border border-[#444746] relative overflow-hidden bg-neutral-950 shadow-2xl">
+          <div id="sim-bg" class="absolute inset-0 bg-cover bg-center transition-all duration-700 pointer-events-none" style="background-image:url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2669&auto=format&fit=crop')"></div>
+          <div class="absolute inset-0 bg-gradient-to-tr from-white/[0.01] via-white/[0.05] to-transparent pointer-events-none z-10"></div>
+
+          <div class="absolute inset-0 flex z-10">
+            <div class="w-1/2 h-full relative border-r border-dashed border-zinc-700/50 flex flex-col justify-between p-4 md:p-6 select-none overflow-hidden">
+              <div id="heat-glow" class="sim-heat-glow" style="opacity:0.3"></div>
+              <div class="absolute inset-0 bg-amber-500/10 pointer-events-none"></div>
+              <span class="text-[10px] uppercase tracking-widest font-black text-amber-500 bg-amber-500/10 border border-amber-500/20 px-2 py-0.5 self-start z-10 shadow-sm backdrop-blur-md">Sem Película</span>
+              <div class="absolute inset-x-0 top-1/4 bottom-1/4 pointer-events-none z-0">
+                <svg class="w-full h-full opacity-35" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M 10,-20 L 150,160" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6,4" fill="none" class="animate-thermal-dash"/>
+                  <path d="M 60,-20 L 200,160" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="8,5" fill="none" class="animate-thermal-dash"/>
+                </svg>
+              </div>
+              <div class="flex flex-col z-10 bg-black/45 backdrop-blur-sm p-2.5 border border-white/5 max-w-[170px] sm:max-w-none">
+                <span class="text-[8px] font-mono opacity-50 uppercase tracking-widest mb-0.5">ESTADO TÉRMICO:</span>
+                <span id="temp-common" class="text-xl md:text-2xl font-light text-red-500 font-mono tracking-widest">40°C</span>
+              </div>
+            </div>
+            <div class="w-1/2 h-full relative flex flex-col justify-between p-4 md:p-6 select-none overflow-hidden transition-all duration-700">
+              <div id="tint-overlay" class="absolute inset-0 bg-[#02050b] transition-all duration-700 pointer-events-none" style="opacity:0"></div>
+              <span id="film-badge" class="text-[10px] uppercase tracking-widest font-black self-start px-2 py-0.5 z-10 transition-all duration-300 shadow-sm backdrop-blur-md border text-zinc-400 bg-zinc-800/10 border-zinc-800/20">Sem Barreira</span>
+              <div class="absolute inset-x-0 top-1/4 bottom-1/4 pointer-events-none z-0">
+                <svg id="right-svg" class="w-full h-full opacity-45" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M 40,-20 L 180,160" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6,4" fill="none" class="animate-thermal-dash"/>
+                  <path d="M 90,-20 L 230,160" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="8,5" fill="none" class="animate-thermal-dash"/>
+                </svg>
+              </div>
+              <div class="flex flex-col z-10 bg-black/45 backdrop-blur-sm p-2.5 border border-white/5 max-w-[170px] sm:max-w-none transition-all duration-500">
+                <span class="text-[8px] font-mono opacity-50 uppercase tracking-widest mb-0.5">ESTADO TÉRMICO:</span>
+                <span id="temp-winf" class="text-xl md:text-2xl font-light font-mono tracking-widest text-amber-500 transition-colors duration-500">40°C</span>
+              </div>
+            </div>
+          </div>
+
+          <div id="sun-badge" class="absolute top-4 right-4 md:top-6 md:right-6 flex flex-col items-end pointer-events-none select-none z-20">
+            <div id="sun-orb" class="w-10 h-10 rounded-full blur-[6px] opacity-80 bg-amber-400 shadow-[0_0_15px_rgba(251,191,36,.4)]"></div>
+            <span id="sun-ext-temp" class="text-[7px] font-mono text-white tracking-[.35em] uppercase mt-2 text-right block drop-shadow-md bg-black/50 px-2 py-0.5">EXT: 38°C</span>
+          </div>
+          <div class="absolute inset-y-0 inset-x-4 md:inset-x-8 border-x border-zinc-800/15 pointer-events-none z-10"></div>
+          <div id="sim-bottom-label" class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-neutral-950/95 border border-zinc-800 backdrop-blur-md px-3 py-1.5 text-[8px] md:text-[9px] uppercase tracking-[.2em] font-black text-white z-20 shadow-xl whitespace-nowrap">
+            VISÃO DO INTERIOR • COMPLETAMENTE EXPOSTO
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row border border-[#444746] bg-[#0c0c0e] divide-y sm:divide-y-0 sm:divide-x divide-zinc-800">
+          <div class="flex-1 p-6 md:p-8 flex flex-col gap-4 bg-zinc-950/20">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 flex items-center justify-center bg-red-500/10 text-red-500 border border-red-500/20">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+                </div>
+                <div>
+                  <h4 class="text-[9px] font-black uppercase tracking-[.25em] text-red-400 mb-0.5">Vidro Comum (Sem Proteção)</h4>
+                  <p class="text-[8px] text-zinc-500 font-mono tracking-widest uppercase">Calor Livre e Raios IR</p>
+                </div>
+              </div>
+              <div id="bar-common-val" class="text-3xl font-light text-white tracking-widest font-mono">40°C</div>
+            </div>
+            <div class="w-full h-1.5 bg-red-950/20 relative overflow-hidden">
+              <div id="bar-common" class="h-full bg-gradient-to-r from-amber-500 via-orange-500 to-red-500 motion-bar" style="width:66%"></div>
+            </div>
+          </div>
+          <div id="bar-winf-panel" class="flex-1 p-6 md:p-8 flex flex-col gap-4 transition-all duration-500 bg-zinc-950/10">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div id="bar-winf-icon" class="w-10 h-10 flex items-center justify-center bg-zinc-800/10 text-zinc-500 border border-zinc-800/10 transition-all duration-500">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div>
+                  <h4 id="bar-winf-label" class="text-[9px] font-black uppercase tracking-[.25em] text-zinc-500 mb-0.5 transition-colors duration-500">Com Winf™ Protection</h4>
+                  <p class="text-[8px] text-zinc-500 font-mono tracking-widest uppercase">Blindagem Térmica Ativa</p>
+                </div>
+              </div>
+              <div id="bar-winf-val" class="text-3xl font-light text-white tracking-widest font-mono transition-colors duration-500">40°C</div>
+            </div>
+            <div class="w-full h-1.5 bg-zinc-900 relative overflow-hidden">
+              <div id="bar-winf" class="h-full bg-zinc-700 motion-bar" style="width:66%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 border-t border-[#444746] mt-auto text-center">
+    <p class="text-xs uppercase tracking-widest font-bold text-white/40">Aplicação Artesanal. Realizada apenas por Mestres Aplicadores Certificados Winf Ascend™.</p>
+  </section>
+
+  <div id="toast" class="fixed bottom-6 right-6 z-[100] max-w-sm bg-neutral-950/95 border border-zinc-800 p-4 shadow-2xl backdrop-blur-xl flex items-start gap-3.5 pointer-events-none opacity-0 transition-all duration-500 scale-95">
+    <div class="w-8 h-8 border border-neutral-800 flex items-center justify-center text-amber-500 shrink-0">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    </div>
+    <div class="min-w-0 flex-1">
+      <h4 id="toast-title" class="text-[10px] font-black text-white uppercase tracking-widest mb-1"></h4>
+      <p id="toast-sub" class="text-[10px] text-zinc-400 leading-relaxed font-light"></p>
+    </div>
+    <button onclick="hideToast()" class="text-zinc-500 hover:text-white transition-colors text-xs font-black p-1 pointer-events-auto">×</button>
+  </div>
+
+  <div id="spec-modal-backdrop" class="fixed inset-0 z-[200] bg-black/80 hidden items-center justify-center p-4 md:p-8" onclick="if(event.target===this) closeSpecModal()">
+    <div id="spec-modal-panel" class="w-full max-w-3xl max-h-[88vh] bg-[#131314] border border-[#444746] shadow-2xl flex flex-col overflow-hidden">
+
+      <div class="relative h-[200px] md:h-[260px] shrink-0 overflow-hidden">
+        <div id="spec-modal-image" class="absolute inset-0 bg-cover bg-center"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#131314] via-[#131314]/50 to-black/20"></div>
+
+        <button onclick="closeSpecModal()" class="absolute top-4 right-4 w-9 h-9 bg-black/50 backdrop-blur-md border border-white/15 flex items-center justify-center hover:bg-white hover:text-black transition-all text-white z-10">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+
+        <div class="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+          <div id="spec-modal-badge" class="inline-block bg-white text-black px-3 py-1 text-[10px] font-black uppercase tracking-[.2em] mb-3"></div>
+          <h2 id="spec-modal-name" class="text-2xl md:text-4xl font-light text-white leading-tight"></h2>
+          <p id="spec-modal-subname" class="text-sm italic text-white/60 mt-1"></p>
+        </div>
+      </div>
+
+      <div class="spec-modal-scroll overflow-y-auto flex-1 p-6 md:p-8 flex flex-col gap-8">
+
+        <p id="spec-modal-description" class="text-sm md:text-base font-light leading-relaxed text-white/60"></p>
+
+        <div>
+          <h3 class="text-[10px] font-black uppercase tracking-[.25em] text-white/40 mb-4">Métricas-Chave</h3>
+          <div id="spec-modal-keymetrics" class="grid grid-cols-2 md:grid-cols-4 gap-3"></div>
+        </div>
+
+        <div id="spec-modal-benefits-wrapper">
+          <h3 class="text-[10px] font-black uppercase tracking-[.25em] text-white/40 mb-4">Benefícios</h3>
+          <div id="spec-modal-benefits" class="grid grid-cols-1 md:grid-cols-2 gap-3"></div>
+        </div>
+
+        <div>
+          <h3 class="text-[10px] font-black uppercase tracking-[.25em] text-white/40 mb-4">Especificações Técnicas</h3>
+          <div id="spec-modal-specs" class="border border-[#444746] divide-y divide-[#2a2a2c]"></div>
+        </div>
+      </div>
+
+      <div class="shrink-0 p-6 md:p-8 border-t border-[#444746] flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between bg-[#0f0f10]">
+        <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white/40">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white/20"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span id="spec-modal-warranty"></span>
+        </div>
+        <button id="spec-modal-share" class="flex items-center justify-center gap-2 px-5 py-3 bg-[#25D366] text-black text-[10px] font-black uppercase tracking-[.2em] hover:bg-[#1ebe5d] transition-all">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.124 1.533 5.858L.057 23.857a.5.5 0 0 0 .608.608l6.001-1.476A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.861 0-3.607-.49-5.117-1.346l-.367-.214-3.803.934.953-3.803-.228-.374A9.97 9.97 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Falar com Consultor
+        </button>
+      </div>
+    </div>
+  </div>
+
+<script>
+// ===================== LOGICA DO PARAMETRO WHATSAPP PARTNER =====================
+const urlParams = new URLSearchParams(window.location.search);
+const partnerParam = urlParams.get('partner');
+// Limpa caracteres especiais caso venham formatados e mantém apenas números
+const WHATSAPP_NUMBER = partnerParam ? partnerParam.replace(/\D/g, '') : '5513997815375';
+
+// ===================== ICON SET (sem dependências externas) =====================
+const BENEFIT_ICONS = {
+  Eye: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>',
+  Sun: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>',
+  Shield: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+  Droplets: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/><path d="M12.56 6.6A18.5 18.5 0 0 0 17 4c0 1.46.42 4.18 4.07 7.5"/><path d="M17 17.9a4 4 0 0 0 4-4c0-1.16-.57-2.26-1.71-3.19"/></svg>'
+};
+const DEFAULT_BENEFIT_ICON = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>';
+
+// ===================== DATA =====================
+const PRODUCT_CATALOG = [
+  // ==========================================
+  // WINF SELECT (ARQUITETURA) - WINF™ ARCHITECTURAL COLLECTION
+  // ==========================================
+  {
+    id: 'select-blackpro',
+    name: 'WINF™ BlackPro®',
+    subname: 'TTA15 | Não Metalizada • Fumê',
+    badge: 'PRIVACIDADE E CONFORTO',
+    category: 'arch',
+    line: 'select',
+    image: 'https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&q=80&w=2400',
+    shortDescription: 'Película arquitetônica premium para clientes que desejam privacidade, redução de calor e visual sofisticado.',
+    fullDescription: 'Tecnologia Carbon Film com tonalidade Black. Maior privacidade, redução do calor, proteção UV, economia de energia e redução do ofuscamento.',
+    keyMetrics: { ir: '73%', uv: '99%', tser: 'N/A', warranty: '10 Anos' },
+    benefits: [
+      { title: 'Privacidade e Estética', description: 'Visual sofisticado e recluso.', icon: 'Eye' },
+      { title: 'Conforto Térmico', description: 'Redução eficaz do ofuscamento e do calor.', icon: 'Sun' }
+    ],
+    specs: { vlt: '15%', irer: '73%', tsr: 'N/A', thickness: '2 mil', material: 'Carbon Film', glareReduction: 'N/A' }
+  },
+  {
+    id: 'select-dualreflect',
+    name: 'WINF™ DualReflect®',
+    subname: 'SI15 | Refletiva • Controle Solar',
+    badge: 'MÁXIMO CONTROLE SOLAR',
+    category: 'arch',
+    line: 'select',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2400',
+    shortDescription: 'Película de máxima eficiência para fachadas expostas ao sol.',
+    fullDescription: 'Tecnologia Reflective Solar Control com acabamento Silver Reflective. Máxima rejeição solar, privacidade diurna, e visual corporativo premium.',
+    keyMetrics: { ir: 'Alto', uv: '99%', tser: 'N/A', warranty: '10 Anos' },
+    benefits: [
+      { title: 'Privacidade Diurna', description: 'Alta reflexividade externa e privacidade durante o dia.', icon: 'Eye' },
+      { title: 'Economia Energética', description: 'Redução significativa do brilho e calor.', icon: 'Sun' }
+    ],
+    specs: { vlt: '15%', irer: 'N/A', tsr: 'N/A', thickness: 'N/A', material: 'Reflective Solar Control', glareReduction: 'N/A' }
+  },
+  {
+    id: 'select-invisible-pro',
+    name: 'WINF™ Invisible Pro®',
+    subname: 'HT75100 | Alta Transparência',
+    badge: 'PROTEÇÃO NATURAL',
+    category: 'arch',
+    line: 'select',
+    image: 'https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&q=80&w=2072',
+    shortDescription: 'Proteção térmica premium mantendo a aparência natural do vidro.',
+    fullDescription: 'Tecnologia Nano Ceramic de alta transparência. Mantém a estética original do vidro com alta redução térmica e proteção UV.',
+    keyMetrics: { ir: '95%', uv: '99%', tser: 'N/A', warranty: '10 Anos' },
+    benefits: [
+      { title: 'Estética Preservada', description: 'Mantém a aparência original e transparente.', icon: 'Eye' },
+      { title: 'Redução Térmica', description: 'Bloqueia 95% do calor IR sem escurecer o vidro.', icon: 'Sun' }
+    ],
+    specs: { vlt: '75%', irer: '95%', tsr: 'N/A', thickness: '2 mil', material: 'Nano Ceramic', glareReduction: 'N/A' }
+  },
+  {
+    id: 'select-invisible-elite',
+    name: 'WINF™ Invisible Elite®',
+    subname: 'TOP70 | Ultra Premium',
+    badge: 'TECNOLOGIA SUPREMA',
+    category: 'arch',
+    line: 'select',
+    image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2670&auto=format&fit=crop',
+    shortDescription: 'A película arquitetônica mais avançada da WINF.',
+    fullDescription: 'Sputtering Ceramic Technology para fachadas de luxo e projetos AAA. Máxima rejeição de calor e transparência excepcional.',
+    keyMetrics: { ir: '98%', uv: '99%', tser: 'N/A', warranty: '10 Anos' },
+    benefits: [
+      { title: 'Clareza Absoluta', description: 'Ultra Clear com transmissão luminosa de 70%.', icon: 'Eye' },
+      { title: 'Conforto Máximo', description: 'Rejeição de calor de 98% e conforto térmico superior.', icon: 'Sun' }
+    ],
+    specs: { vlt: '70%', irer: '98%', tsr: 'N/A', thickness: '2 mil', material: 'Sputtering Ceramic', glareReduction: 'N/A' }
+  },
+
+  // ==========================================
+  // AEROCORE WINDOWFILM
+  // ==========================================
+  {
+    id: 'aerocore-ghost',
+    name: 'AeroCore™ Ghost',
+    subname: 'HP-Series | Performance Tingida',
+    badge: 'CONFORTO DIÁRIO',
+    category: 'auto',
+    line: 'aerocore',
+    image: 'https://images.unsplash.com/photo-1611016186450-41da9d07372d?q=80&w=2600&auto=format&fit=crop',
+    shortDescription: 'A linha de entrada de alta performance, ideal para conforto diário e privacidade clássica.',
+    fullDescription: 'Filme arquitetônico e automotivo de alta precisão com tecnologia primária de termo-absorção clássica e alta estabilidade de cor.',
+    keyMetrics: { ir: '58%', uv: '92%', tser: 'N/A', warranty: '3 Anos' },
+    benefits: [
+      { title: 'Conforto e Privacidade', description: 'Ideal para conforto diário e privacidade clássica.', icon: 'Eye' },
+    ],
+    specs: { vlt: '05%, 15%, 35%', irer: '58%', tsr: 'N/A', thickness: 'N/A', material: 'Performance Tingida', glareReduction: 'N/A' }
+  },
+  {
+    id: 'aerocore-phantom',
+    name: 'AeroCore™ Phantom',
+    subname: 'TTA-Series | Carbono Estrutural',
+    badge: 'CONTROLE TÉRMICO',
+    category: 'auto',
+    line: 'aerocore',
+    image: 'https://images.unsplash.com/photo-1542382103-997f7422f6d0?q=80&w=2670&auto=format&fit=crop',
+    shortDescription: 'A evolução do controle térmico. Proteção avançada que não interfere em sinais GPS e conectividade.',
+    fullDescription: 'Filme arquitetônico e automotivo de alta precisão com tecnologia primária de matriz não-metálica e estabilidade de cor muito alta.',
+    keyMetrics: { ir: '73%', uv: '99%', tser: 'N/A', warranty: '10 Anos' },
+    benefits: [
+      { title: 'Zero Interferência', description: 'Matriz estrutural que não bloqueia GPS, 5G ou tags de pedágio.', icon: 'Shield' },
+    ],
+    specs: { vlt: '05%, 15%, 35%', irer: '73%', tsr: 'N/A', thickness: 'N/A', material: 'Carbono Estrutural', glareReduction: 'N/A' }
+  },
+  {
+    id: 'aerocore-spectre',
+    name: 'AeroCore™ Spectre',
+    subname: 'HT-Series | Nano-Cerâmica',
+    badge: 'ÁPICE DA TECNOLOGIA',
+    category: 'auto',
+    line: 'aerocore',
+    image: 'https://images.unsplash.com/photo-1621360662232-a50e599b8287?q=80&w=2684&auto=format&fit=crop',
+    shortDescription: 'O ápice da tecnologia em rejeição de calor com conforto extremo, utilizando nanopartículas injetadas.',
+    fullDescription: 'Tecnologia primária com nanopartículas cerâmicas, garantindo estabilidade de cor absoluta, conforto extremo e 95% de bloqueio térmico.',
+    keyMetrics: { ir: '95%', uv: '99%', tser: 'N/A', warranty: '10 Anos' },
+    benefits: [
+      { title: 'Bloqueio Extremo IR', description: 'As nanopartículas interceptam 95% das ondas infravermelhas causadoras de calor.', icon: 'Sun' },
+    ],
+    specs: { vlt: '05%, 15%, 35%', irer: '95%', tsr: 'N/A', thickness: 'N/A', material: 'Nano-Cerâmica', glareReduction: 'N/A' }
+  },
+  {
+    id: 'aerocore-wraith70',
+    name: 'AeroCore™ Wraith 70',
+    subname: 'TOP-Series | Sputtering Iônico',
+    badge: 'MÁXIMA PERFORMANCE',
+    category: 'auto',
+    line: 'aerocore',
+    image: 'https://images.unsplash.com/photo-1605342417724-11e2fbc0cb99?q=80&w=2614&auto=format&fit=crop',
+    shortDescription: 'Para clientes que exigem a mais alta performance térmica do planeta, mantendo o vidro perfeitamente transparente.',
+    fullDescription: 'Tecnologia de sputtering multicamada garante estabilidade de cor absoluta, tornando a película praticamente invisível com o máximo de proteção térmica.',
+    keyMetrics: { ir: '98%', uv: '99%', tser: 'N/A', warranty: '10 Anos' },
+    benefits: [
+      { title: 'Transparência Absoluta', description: 'Visibilidade cristalina de 70% VLT, ideal para para-brisas e arquitetura limpa.', icon: 'Eye' },
+    ],
+    specs: { vlt: '70%', irer: '98%', tsr: 'N/A', thickness: 'N/A', material: 'Sputtering Multicamada', glareReduction: 'N/A' }
+  },
+
+  // ==========================================
+  // NEOSKIN DEFENSE (PPF & LIQUID)
+  // ==========================================
+  {
+    id: 'neoskin-bunker150',
+    name: 'NeoSkin™ BKR-150 Bunker',
+    subname: 'TPU Elastomérico Premium | 150 Microns',
+    badge: 'DEFESA INVISÍVEL',
+    category: 'auto',
+    line: 'neoskin',
+    image: 'https://images.unsplash.com/photo-1619405399517-d7fce0f13302?q=80&w=2574&auto=format&fit=crop',
+    shortDescription: 'Defesa balística invisível para proteção do dia-a-dia contra pedriscos, arranhões e desgastes.',
+    fullDescription: 'Tecnologia primária de auto-cura estrutural térmica, resistência química alta a ácidos leves, chuva ácida e sal, com 99% de bloqueio ativo UV anti-amarelamento.',
+    keyMetrics: { ir: 'N/A', uv: '99%', tser: 'N/A', warranty: '8 Anos', thickness: '6.0 Mil (150 Microns)' },
+    benefits: [
+      { title: 'Auto-Cura Estrutural', description: 'Regeneração contra pequenos riscos apenas com o calor do sol ou água quente.', icon: 'Shield' },
+    ],
+    specs: { vlt: '100%', irer: 'N/A', tsr: 'N/A', thickness: '6.0 Mil', material: 'TPU Elastomérico Premium', glareReduction: '0%' }
+  },
+  {
+    id: 'neoskin-apocalypse190',
+    name: 'NeoSkin™ APX-190 Apocalypse',
+    subname: 'TPU Blindado Militar | 190 Microns',
+    badge: 'RESISTÊNCIA BRUTAL',
+    category: 'auto',
+    line: 'neoskin',
+    image: 'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=2670&auto=format&fit=crop',
+    shortDescription: 'Nossa armadura mais espessa e resistente, projetada para suportar os impactos mais brutais nas rodovias e pistas.',
+    fullDescription: 'Tecnologia de auto-cura instantânea por calor, com 450% de alongamento máximo. Resistência química absoluta contra solventes, combustíveis e detritos.',
+    keyMetrics: { ir: 'N/A', uv: '99.9%', tser: 'N/A', warranty: 'Vitalícia', thickness: '7.5 Mil (190 Microns)' },
+    benefits: [
+      { title: 'Barreira Espectral 99.9%', description: 'Anti-amarelamento absoluto e defense química extrema.', icon: 'Shield' },
+    ],
+    specs: { vlt: '100%', irer: 'N/A', tsr: 'N/A', thickness: '7.5 Mil', material: 'TPU Blindado Militar', glareReduction: '0%' }
+  },
+  {
+    id: 'neoskin-ghostliquid',
+    name: 'NeoSkin™ GHT-LIQ Ghost Liquid',
+    subname: 'Nano-Cerâmico Vitrificador 9H',
+    badge: 'BRILHO EXTREMO',
+    category: 'auto',
+    line: 'neoskin',
+    image: 'https://images.unsplash.com/photo-1620336655174-32ff84ee624d?q=80&w=2574&auto=format&fit=crop',
+    shortDescription: 'Cristalização química para máxima repelência de água e brilho espelhado extremo.',
+    fullDescription: 'Cristalização de Sílica 9H em camada nano (10-15 nm). Propriedades ultra-hidrofóbicas e estabilizador térmico ativo.',
+    keyMetrics: { ir: 'N/A', uv: 'Estabilizador Ativo', tser: 'N/A', warranty: '3 Anos', thickness: '10-15 nm' },
+    benefits: [
+      { title: 'Ultra-Hidrofóbico', description: 'Efeito lotus que repele líquidos, tornando a superfície auto-limpante e anti-corrosiva.', icon: 'Droplets' },
+    ],
+    specs: { vlt: '100%', irer: 'N/A', tsr: 'N/A', thickness: 'Nano (10-15nm)', material: 'Sílica 9H Vitrificadora', glareReduction: '0%' }
+  },
+
+  // ==========================================
+  // MARINE — cópia dos produtos Auto
+  // ==========================================
+  {
+    id: 'marine-aerocore-ghost',
+    name: 'AeroCore™ Ghost',
+    subname: 'HP-Series | Performance Tingida',
+    badge: 'CONFORTO DIÁRIO',
+    category: 'marine',
+    line: 'aerocore',
+    image: 'https://images.unsplash.com/photo-1611016186450-41da9d07372d?q=80&w=2600&auto=format&fit=crop',
+    shortDescription: 'A linha de entrada de alta performance, ideal para conforto diário e privacidade clássica.',
+    fullDescription: 'Filme marítimo de alta precisão com tecnologia primária de termo-absorção clássica e alta estabilidade de cor.',
+    keyMetrics: { ir: '58%', uv: '92%', tser: 'N/A', warranty: '3 Anos' },
+    benefits: [
+      { title: 'Conforto e Privacidade', description: 'Ideal para conforto diário e privacidade clássica.', icon: 'Eye' },
+    ],
+    specs: { vlt: '05%, 15%, 35%', irer: '58%', tsr: 'N/A', thickness: 'N/A', material: 'Performance Tingida', glareReduction: 'N/A' }
+  },
+  {
+    id: 'marine-aerocore-phantom',
+    name: 'AeroCore™ Phantom',
+    subname: 'TTA-Series | Carbono Estrutural',
+    badge: 'CONTROLE TÉRMICO',
+    category: 'marine',
+    line: 'aerocore',
+    image: 'https://images.unsplash.com/photo-1542382103-997f7422f6d0?q=80&w=2670&auto=format&fit=crop',
+    shortDescription: 'A evolução do controle térmico. Proteção avançada que não interfere em sinais GPS e conectividade.',
+    fullDescription: 'Filme marítimo de alta precisão com tecnologia primária de matriz não-metálica e estabilidade de cor muito alta.',
+    keyMetrics: { ir: '73%', uv: '99%', tser: 'N/A', warranty: '10 Anos' },
+    benefits: [
+      { title: 'Zero Interferência', description: 'Matriz estrutural que não bloqueia GPS, 5G ou tags de pedágio.', icon: 'Shield' },
+    ],
+    specs: { vlt: '05%, 15%, 35%', irer: '73%', tsr: 'N/A', thickness: 'N/A', material: 'Carbono Estrutural', glareReduction: 'N/A' }
+  },
+  {
+    id: 'marine-aerocore-spectre',
+    name: 'AeroCore™ Spectre',
+    subname: 'HT-Series | Nano-Cerâmica',
+    badge: 'ÁPICE DA TECNOLOGIA',
+    category: 'marine',
+    line: 'aerocore',
+    image: 'https://images.unsplash.com/photo-1621360662232-a50e599b8287?q=80&w=2684&auto=format&fit=crop',
+    shortDescription: 'O ápice da tecnologia em rejeição de calor com conforto extremo, utilizando nanopartículas injetadas.',
+    fullDescription: 'Tecnologia primária com nanopartículas cerâmicas, garantindo estabilidade de cor absoluta, conforto extremo e 95% de bloqueio térmico.',
+    keyMetrics: { ir: '95%', uv: '99%', tser: 'N/A', warranty: '10 Anos' },
+    benefits: [
+      { title: 'Bloqueio Extremo IR', description: 'As nanopartículas interceptam 95% das ondas infravermelhas causadoras de calor.', icon: 'Sun' },
+    ],
+    specs: { vlt: '05%, 15%, 35%', irer: '95%', tsr: 'N/A', thickness: 'N/A', material: 'Nano-Cerâmica', glareReduction: 'N/A' }
+  },
+  {
+    id: 'marine-aerocore-wraith70',
+    name: 'AeroCore™ Wraith 70',
+    subname: 'TOP-Series | Sputtering Iônico',
+    badge: 'MÁXIMA PERFORMANCE',
+    category: 'marine',
+    line: 'aerocore',
+    image: 'https://images.unsplash.com/photo-1605342417724-11e2fbc0cb99?q=80&w=2614&auto=format&fit=crop',
+    shortDescription: 'Para clientes que exigem a mais alta performance térmica do planeta, mantendo o vidro perfeitamente transparente.',
+    fullDescription: 'Tecnologia de sputtering multicamada garante estabilidade de cor absoluta, tornando a película praticamente invisível com o máximo de proteção térmica.',
+    keyMetrics: { ir: '98%', uv: '99%', tser: 'N/A', warranty: '10 Anos' },
+    benefits: [
+      { title: 'Transparência Absoluta', description: 'Visibilidade cristalina de 70% VLT, ideal para embarcações premium.', icon: 'Eye' },
+    ],
+    specs: { vlt: '70%', irer: '98%', tsr: 'N/A', thickness: 'N/A', material: 'Sputtering Multicamada', glareReduction: 'N/A' }
+  },
+  {
+    id: 'marine-neoskin-bunker150',
+    name: 'NeoSkin™ BKR-150 Bunker',
+    subname: 'TPU Elastomérico Premium | 150 Microns',
+    badge: 'DEFESA INVISÍVEL',
+    category: 'marine',
+    line: 'neoskin',
+    image: 'https://images.unsplash.com/photo-1619405399517-d7fce0f13302?q=80&w=2574&auto=format&fit=crop',
+    shortDescription: 'Defesa balística invisível para proteção contra pedriscos, arranhões e desgastes em ambiente marítimo.',
+    fullDescription: 'Tecnologia primária de auto-cura estrutural térmica com resistência química alta a sal marinho, chuva ácida e umidade extrema.',
+    keyMetrics: { ir: 'N/A', uv: '99%', tser: 'N/A', warranty: '8 Anos', thickness: '6.0 Mil (150 Microns)' },
+    benefits: [
+      { title: 'Auto-Cura Estrutural', description: 'Regeneração contra pequenos riscos apenas com o calor do sol ou água quente.', icon: 'Shield' },
+    ],
+    specs: { vlt: '100%', irer: 'N/A', tsr: 'N/A', thickness: '6.0 Mil', material: 'TPU Elastomérico Premium', glareReduction: '0%' }
+  },
+  {
+    id: 'marine-neoskin-apocalypse190',
+    name: 'NeoSkin™ APX-190 Apocalypse',
+    subname: 'TPU Blindado Militar | 190 Microns',
+    badge: 'RESISTÊNCIA BRUTAL',
+    category: 'marine',
+    line: 'neoskin',
+    image: 'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=2670&auto=format&fit=crop',
+    shortDescription: 'Nossa armadura mais espessa e resistente, projetada para suportar os impactos mais brutais em alto mar.',
+    fullDescription: 'Tecnologia de auto-cura instantânea por calor, com 450% de alongamento máximo. Resistência química absoluta contra sal, solventes e detritos marítimos.',
+    keyMetrics: { ir: 'N/A', uv: '99.9%', tser: 'N/A', warranty: 'Vitalícia', thickness: '7.5 Mil (190 Microns)' },
+    benefits: [
+      { title: 'Barreira Espectral 99.9%', description: 'Anti-amarelamento absoluto e defesa química extrema contra maresia.', icon: 'Shield' },
+    ],
+    specs: { vlt: '100%', irer: 'N/A', tsr: 'N/A', thickness: '7.5 Mil', material: 'TPU Blindado Militar', glareReduction: '0%' }
+  },
+  {
+    id: 'marine-neoskin-ghostliquid',
+    name: 'NeoSkin™ GHT-LIQ Ghost Liquid',
+    subname: 'Nano-Cerâmico Vitrificador 9H',
+    badge: 'BRILHO EXTREMO',
+    category: 'marine',
+    line: 'neoskin',
+    image: 'https://images.unsplash.com/photo-1620336655174-32ff84ee624d?q=80&w=2574&auto=format&fit=crop',
+    shortDescription: 'Cristalização química para máxima repelência de água salgada e brilho espelhado extremo.',
+    fullDescription: 'Cristalização de Sílica 9H em camada nano (10-15 nm). Propriedades ultra-hidrofóbicas ideais para ambientes marítimos.',
+    keyMetrics: { ir: 'N/A', uv: 'Estabilizador Ativo', tser: 'N/A', warranty: '3 Anos', thickness: '10-15 nm' },
+    benefits: [
+      { title: 'Ultra-Hidrofóbico', description: 'Efeito lotus que repele água salgada, tornando a superfície auto-limpante e anti-corrosiva.', icon: 'Droplets' },
+    ],
+    specs: { vlt: '100%', irer: 'N/A', tsr: 'N/A', thickness: 'Nano (10-15nm)', material: 'Sílica 9H Vitrificadora', glareReduction: '0%' }
+  },
+
+  // ==========================================
+  // AERO — cópia dos produtos Auto
+  // ==========================================
+  {
+    id: 'aero-aerocore-ghost',
+    name: 'AeroCore™ Ghost',
+    subname: 'HP-Series | Performance Tingida',
+    badge: 'CONFORTO DIÁRIO',
+    category: 'aero',
+    line: 'aerocore',
+    image: 'https://images.unsplash.com/photo-1611016186450-41da9d07372d?q=80&w=2600&auto=format&fit=crop',
+    shortDescription: 'A linha de entrada de alta performance, ideal para conforto diário e privacidade clássica em aeronaves.',
+    fullDescription: 'Filme aeroespacial de alta precisão com tecnologia primária de termo-absorção clássica e alta estabilidade de cor.',
+    keyMetrics: { ir: '58%', uv: '92%', tser: 'N/A', warranty: '3 Anos' },
+    benefits: [
+      { title: 'Conforto e Privacidade', description: 'Ideal para conforto diário e privacidade clássica em cabines.', icon: 'Eye' },
+    ],
+    specs: { vlt: '05%, 15%, 35%', irer: '58%', tsr: 'N/A', thickness: 'N/A', material: 'Performance Tingida', glareReduction: 'N/A' }
+  },
+  {
+    id: 'aero-aerocore-phantom',
+    name: 'AeroCore™ Phantom',
+    subname: 'TTA-Series | Carbono Estrutural',
+    badge: 'CONTROLE TÉRMICO',
+    category: 'aero',
+    line: 'aerocore',
+    image: 'https://images.unsplash.com/photo-1542382103-997f7422f6d0?q=80&w=2670&auto=format&fit=crop',
+    shortDescription: 'A evolução do controle térmico. Proteção avançada que não interfere em sinais de navegação aérea.',
+    fullDescription: 'Filme aeroespacial de alta precisão com tecnologia primária de matriz não-metálica e estabilidade de cor muito alta.',
+    keyMetrics: { ir: '73%', uv: '99%', tser: 'N/A', warranty: '10 Anos' },
+    benefits: [
+      { title: 'Zero Interferência', description: 'Matriz estrutural que não bloqueia GPS, transponders ou sistemas de navegação.', icon: 'Shield' },
+    ],
+    specs: { vlt: '05%, 15%, 35%', irer: '73%', tsr: 'N/A', thickness: 'N/A', material: 'Carbono Estrutural', glareReduction: 'N/A' }
+  },
+  {
+    id: 'aero-aerocore-spectre',
+    name: 'AeroCore™ Spectre',
+    subname: 'HT-Series | Nano-Cerâmica',
+    badge: 'ÁPICE DA TECNOLOGIA',
+    category: 'aero',
+    line: 'aerocore',
+    image: 'https://images.unsplash.com/photo-1621360662232-a50e599b8287?q=80&w=2684&auto=format&fit=crop',
+    shortDescription: 'O ápice da tecnologia em rejeição de calor com conforto extremo para cabines aeroespaciais.',
+    fullDescription: 'Tecnologia primária com nanopartículas cerâmicas, garantindo estabilidade de cor absoluta, conforto extremo e 95% de bloqueio térmico.',
+    keyMetrics: { ir: '95%', uv: '99%', tser: 'N/A', warranty: '10 Anos' },
+    benefits: [
+      { title: 'Bloqueio Extremo IR', description: 'As nanopartículas interceptam 95% das ondas infravermelhas causadoras de calor em altitude.', icon: 'Sun' },
+    ],
+    specs: { vlt: '05%, 15%, 35%', irer: '95%', tsr: 'N/A', thickness: 'N/A', material: 'Nano-Cerâmica', glareReduction: 'N/A' }
+  },
+  {
+    id: 'aero-aerocore-wraith70',
+    name: 'AeroCore™ Wraith 70',
+    subname: 'TOP-Series | Sputtering Iônico',
+    badge: 'MÁXIMA PERFORMANCE',
+    category: 'aero',
+    line: 'aerocore',
+    image: 'https://images.unsplash.com/photo-1605342417724-11e2fbc0cb99?q=80&w=2614&auto=format&fit=crop',
+    shortDescription: 'Para aeronaves que exigem a mais alta performance térmica mantendo o vidro perfeitamente transparente.',
+    fullDescription: 'Tecnologia de sputtering multicamada garante estabilidade de cor absoluta, tornando a película praticamente invisível com o máximo de proteção térmica.',
+    keyMetrics: { ir: '98%', uv: '99%', tser: 'N/A', warranty: '10 Anos' },
+    benefits: [
+      { title: 'Transparência Absoluta', description: 'Visibilidade cristalina de 70% VLT, ideal para cockpits e cabines de luxo.', icon: 'Eye' },
+    ],
+    specs: { vlt: '70%', irer: '98%', tsr: 'N/A', thickness: 'N/A', material: 'Sputtering Multicamada', glareReduction: 'N/A' }
+  },
+  {
+    id: 'aero-neoskin-bunker150',
+    name: 'NeoSkin™ BKR-150 Bunker',
+    subname: 'TPU Elastomérico Premium | 150 Microns',
+    badge: 'DEFESA INVISÍVEL',
+    category: 'aero',
+    line: 'neoskin',
+    image: 'https://images.unsplash.com/photo-1619405399517-d7fce0f13302?q=80&w=2574&auto=format&fit=crop',
+    shortDescription: 'Defesa balística invisível para proteção de superfícies aeroespaciais contra abrasão e impactos.',
+    fullDescription: 'Tecnologia primária de auto-cura estrutural térmica, resistência química alta e bloqueio UV total para proteção em altitude.',
+    keyMetrics: { ir: 'N/A', uv: '99%', tser: 'N/A', warranty: '8 Anos', thickness: '6.0 Mil (150 Microns)' },
+    benefits: [
+      { title: 'Auto-Cura Estrutural', description: 'Regeneração contra pequenos riscos em condições extremas de temperatura.', icon: 'Shield' },
+    ],
+    specs: { vlt: '100%', irer: 'N/A', tsr: 'N/A', thickness: '6.0 Mil', material: 'TPU Elastomérico Premium', glareReduction: '0%' }
+  },
+  {
+    id: 'aero-neoskin-apocalypse190',
+    name: 'NeoSkin™ APX-190 Apocalypse',
+    subname: 'TPU Blindado Militar | 190 Microns',
+    badge: 'RESISTÊNCIA BRUTAL',
+    category: 'aero',
+    line: 'neoskin',
+    image: 'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=2670&auto=format&fit=crop',
+    shortDescription: 'Nossa armadura mais espessa e resistente, projetada para suportar condições extremas aeroespaciais.',
+    fullDescription: 'Tecnologia de auto-cura instantânea por calor, com 450% de alongamento máximo. Resistência química absoluta contra combustíveis aeronáuticos e detritos.',
+    keyMetrics: { ir: 'N/A', uv: '99.9%', tser: 'N/A', warranty: 'Vitalícia', thickness: '7.5 Mil (190 Microns)' },
+    benefits: [
+      { title: 'Barreira Espectral 99.9%', description: 'Anti-amarelamento absoluto e defesa química extrema para uso aeroespacial.', icon: 'Shield' },
+    ],
+    specs: { vlt: '100%', irer: 'N/A', tsr: 'N/A', thickness: '7.5 Mil', material: 'TPU Blindado Militar', glareReduction: '0%' }
+  },
+  {
+    id: 'aero-neoskin-ghostliquid',
+    name: 'NeoSkin™ GHT-LIQ Ghost Liquid',
+    subname: 'Nano-Cerâmico Vitrificador 9H',
+    badge: 'BRILHO EXTREMO',
+    category: 'aero',
+    line: 'neoskin',
+    image: 'https://images.unsplash.com/photo-1620336655174-32ff84ee624d?q=80&w=2574&auto=format&fit=crop',
+    shortDescription: 'Cristalização química para máxima repelência de sujeira e brilho espelhado em superfícies aeronáuticas.',
+    fullDescription: 'Cristalização de Sílica 9H em camada nano (10-15 nm). Propriedades ultra-hidrofóbicas e estabilizador térmico ativo para uso aeroespacial.',
+    keyMetrics: { ir: 'N/A', uv: 'Estabilizador Ativo', tser: 'N/A', warranty: '3 Anos', thickness: '10-15 nm' },
+    benefits: [
+      { title: 'Ultra-Hidrofóbico', description: 'Efeito lotus que repele líquidos em qualquer altitude, superfície auto-limpante e anti-corrosiva.', icon: 'Droplets' },
+    ],
+    specs: { vlt: '100%', irer: 'N/A', tsr: 'N/A', thickness: 'Nano (10-15nm)', material: 'Sílica 9H Vitrificadora', glareReduction: '0%' }
+  }
+];
+
+// Rótulos de divisão e hero por categoria (para manter o manifesto coerente ao trocar de aba)
+const CATEGORY_META = {
+  arch: {
+    label: 'Divisão de Conforto Arquitetônico',
+    title: 'O mesmo vidro.<br><span class="font-medium">Uma nova percepção.</span>',
+    desc: '<p><b class="text-white">A Tecnologia Não Precisa Ser Vista. Precisa Ser Sentida.</b> Transforme ambientes em santuários de conforto, privacidade e eficiência, filtrando o que há de ruim no sol e deixando entrar apenas a luz.</p>'
+  },
+  auto: {
+    label: 'Divisão Automotiva de Performance',
+    title: 'O mesmo veículo.<br><span class="font-medium">Uma nova blindagem.</span>',
+    desc: '<p><b class="text-white">Engenharia Aeroespacial em Cada Camada.</b> Da nanocerâmica invisível ao PPF mais brutal do mercado, proteja a pintura e o conforto térmico do seu veículo.</p>'
+  },
+  marine: {
+    label: 'Divisão Marítima de Proteção',
+    title: 'O mesmo mar.<br><span class="font-medium">Uma nova proteção.</span>',
+    desc: '<p><b class="text-white">Resistência ao Extremo Marítimo.</b> Películas e proteções desenvolvidas para suportar sal, umidade e radiação intensa. Conforto e durabilidade para embarcações que exigem o melhor.</p>'
+  },
+  aero: {
+    label: 'Divisão Aeroespacial de Elite',
+    title: 'O mesmo horizonte.<br><span class="font-medium">Uma nova altitude.</span>',
+    desc: '<p><b class="text-white">Tecnologia que Desafia a Gravidade.</b> Soluções de proteção para aeronaves que operam nos limites da performance. Máxima proteção térmica, UV e estrutural para cabines de alto padrão.</p>'
+  }
+};
+
+// ===================== STATE =====================
+let activeCategory = 'arch';
+let sunIntensity = 85;
+let selectedFilmId = '';
+let toastTimer = null;
+
+// ===================== INIT =====================
+document.addEventListener('DOMContentLoaded', () => {
+  renderGrid();
+  populateFilmSelect();
+  setSun(85);
+  updateSimDisplay();
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeSpecModal();
+  });
+});
+
+// ===================== CATEGORY =====================
+function setCategory(cat) {
+  activeCategory = cat;
+  selectedFilmId = '';
+  document.getElementById('sim-film-select').value = '';
+
+  // tabs visual state
+  ['arch','auto','marine','aero'].forEach(c => {
+    const btn = document.getElementById(`tab-${c}`);
+    if (!btn) return;
+    btn.className = (c === cat)
+      ? 'nav-tab-active px-3 md:px-7 py-2.5 text-[9px] md:text-[10px] tracking-[.15em] md:tracking-[.25em] uppercase font-black transition-all duration-300 whitespace-nowrap'
+      : 'nav-tab px-3 md:px-7 py-2.5 text-[9px] md:text-[10px] tracking-[.15em] md:tracking-[.25em] uppercase font-black transition-all duration-300 whitespace-nowrap';
+  });
+
+  // manifesto header
+  const meta = CATEGORY_META[cat];
+  if (meta) {
+    document.getElementById('division-label').textContent = meta.label;
+    document.getElementById('hero-title').innerHTML = meta.title;
+    document.getElementById('hero-desc').innerHTML = meta.desc;
+  }
+
+  renderGrid();
+  populateFilmSelect();
+  updateSimDisplay();
+}
+
+// ===================== GRID =====================
+function renderGrid() {
+  const grid = document.getElementById('product-grid');
+  const products = PRODUCT_CATALOG.filter(p => p.category === activeCategory);
+  grid.innerHTML = '';
+  products.forEach((product, idx) => {
+    const card = document.createElement('div');
+    card.className = 'product-card group cursor-pointer border border-[#444746] bg-[#131314] overflow-hidden flex flex-col relative';
+    card.style.animationDelay = `${idx * 0.08}s`;
+    card.onclick = () => openSpecModal(product.id);
+    card.innerHTML = `
+      <div class="relative h-[300px] overflow-hidden">
+        <div class="card-img-inner absolute inset-0 bg-cover bg-center" style="background-image:url('${product.image}')"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/40 to-transparent"></div>
+        <div class="absolute top-4 left-4 right-4 flex justify-between items-start">
+          <div class="bg-[#131314]/60 backdrop-blur-md px-3 py-1.5 text-[10px] uppercase tracking-[.2em] font-bold text-white border border-[#444746]">${product.line.toUpperCase()}</div>
+          <button onclick="falarConsultorProduto(event,'${product.name}')" class="w-8 h-8 bg-[#131314]/60 backdrop-blur-md flex items-center justify-center border border-[#25D366]/40 hover:bg-[#25D366] hover:text-black transition-all text-[#25D366]">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.124 1.533 5.858L.057 23.857a.5.5 0 0 0 .608.608l6.001-1.476A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.861 0-3.607-.49-5.117-1.346l-.367-.214-3.803.934.953-3.803-.228-.374A9.97 9.97 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="p-8 flex flex-col flex-1 relative">
+        <div class="text-[11px] font-black uppercase tracking-[.2em] mb-3 text-white/40">${product.badge}</div>
+        <h3 class="text-2xl font-light mb-1 text-white">${product.name}</h3>
+        <h4 class="text-xs italic mb-6 text-white/40">${product.subname}</h4>
+        <p class="text-sm font-light leading-relaxed mb-10 flex-1 text-white/40 line-clamp-3">${product.shortDescription}</p>
+        <div class="flex items-center justify-between mt-auto pt-6 border-t border-[#444746]">
+          <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white/40">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white/20"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            ${product.keyMetrics.warranty}
+          </div>
+          <button onclick="event.stopPropagation(); openSpecModal('${product.id}')" class="card-cta text-[10px] uppercase font-bold tracking-[.2em] flex items-center gap-2 text-white">
+            Explorar Specs <svg class="card-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+        </div>
+        <div class="card-hover-line absolute bottom-0 left-0 h-[2px] text-white"></div>
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+// ===================== FILM SELECT =====================
+function populateFilmSelect() {
+  const sel = document.getElementById('sim-film-select');
+  sel.innerHTML = '<option value="">Selecione a Película...</option>';
+  const products = PRODUCT_CATALOG.filter(p => p.category === activeCategory);
+  products.forEach(p => {
+    const vlt = (p.specs.vlt.match(/\d+/) || ['?'])[0];
+    const opt = document.createElement('option');
+    opt.value = p.id; opt.textContent = `${p.name} — VLT ${vlt}%`;
+    sel.appendChild(opt);
+  });
+}
+
+// ===================== SIMULATOR =====================
+function getVltNumber(vltStr) {
+  if (!vltStr) return 100;
+  const m = vltStr.match(/\d+/);
+  return m ? parseInt(m[0]) : 100;
+}
+
+// Corrigido typo na função para evitar warnings no console
+function getIrNumber(irStr) {
+  if (!irStr || irStr === 'N/A') return 0;
+  const m = irStr.replace(/[^\d.]/g,'');
+  return parseFloat(m) || 0;
+}
+
+function calcTemps(sun, film) {
+  const externalTemp = Math.round(25 + sun * 0.15);
+  const commonTemp   = Math.round(20 + sun * 0.21);
+  if (!film) return { externalTemp, commonTemp, winfTemp: commonTemp };
+  const irVal = getIrNumber(film.keyMetrics.ir);
+  const factor = (100 - irVal) / 100;
+  const winfTemp = Math.round(20 + sun * 0.21 * Math.max(0.05, factor));
+  return { externalTemp, commonTemp, winfTemp };
+}
+
+function updateSimDisplay() {
+  selectedFilmId = document.getElementById('sim-film-select').value;
+  const modelUrl  = document.getElementById('sim-model-select').value;
+  const film = selectedFilmId ? PRODUCT_CATALOG.find(p => p.id === selectedFilmId) : null;
+  const temps = calcTemps(sunIntensity, film);
+
+  // bg
+  document.getElementById('sim-bg').style.backgroundImage = `url('${modelUrl}')`;
+
+  // heat glow
+  document.getElementById('heat-glow').style.opacity = sunIntensity / 100 * 0.35;
+
+  // tint
+  const vlt = film ? getVltNumber(film.specs.vlt) : 100;
+  const tintOpacity = film ? (100 - vlt) / 100 : 0;
+  document.getElementById('tint-overlay').style.opacity = tintOpacity;
+
+  // film badge
+  const filmBadge = document.getElementById('film-badge');
+  if (film) {
+    filmBadge.textContent = 'Blindagem WINF™';
+    filmBadge.className = 'text-[10px] uppercase tracking-widest font-black self-start px-2 py-0.5 z-10 transition-all duration-300 shadow-sm backdrop-blur-md border text-blue-400 bg-blue-500/15 border-blue-400/20';
+  } else {
+    filmBadge.textContent = 'Sem Barreira';
+    filmBadge.className = 'text-[10px] uppercase tracking-widest font-black self-start px-2 py-0.5 z-10 transition-all duration-300 shadow-sm backdrop-blur-md border text-zinc-400 bg-zinc-800/10 border-zinc-800/20';
+  }
+
+  // right SVG
+  const rightSvg = document.getElementById('right-svg');
+  if (film) {
+    rightSvg.innerHTML = `
+      <path d="M 120,125 C 80,75 60,-15 160,-15" stroke="#3b82f6" stroke-width="3.5" stroke-dasharray="6,4" fill="none" class="animate-thermal-dash"/>
+      <path d="M 180,125 C 140,75 120,-15 220,-15" stroke="#60a5fa" stroke-width="2" fill="none" class="animate-pulse"/>
+    `;
+  } else {
+    rightSvg.innerHTML = `
+      <path d="M 40,-20 L 180,160" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6,4" fill="none" class="animate-thermal-dash"/>
+      <path d="M 90,-20 L 230,160" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="8,5" fill="none" class="animate-thermal-dash"/>
+    `;
+  }
+
+  // temps text
+  document.getElementById('temp-common').textContent = temps.commonTemp + '°C';
+  const winfTempEl = document.getElementById('temp-winf');
+  winfTempEl.textContent = (film ? temps.winfTemp : temps.commonTemp) + '°C';
+  winfTempEl.className = `text-xl md:text-2xl font-light font-mono tracking-widest transition-colors duration-500 ${film ? 'text-blue-400' : 'text-amber-500'}`;
+
+  // bottom label
+  document.getElementById('sim-bottom-label').textContent =
+    `VISÃO DO INTERIOR ${film ? `• VLT ${film.specs.vlt}` : '• COMPLETAMENTE EXPOSTO'}`;
+
+  // sun badge
+  const orb = document.getElementById('sun-orb');
+  document.getElementById('sun-ext-temp').textContent = `EXT: ${temps.externalTemp}°C`;
+  document.getElementById('sun-badge').style.transform = `scale(${1 + sunIntensity * 0.002})`;
+  if (sunIntensity > 75) {
+    orb.className = 'w-10 h-10 rounded-full blur-[6px] opacity-80 bg-amber-400 shadow-[0_0_25px_rgba(245,158,11,.6)] animate-pulse';
+  } else if (sunIntensity > 40) {
+    orb.className = 'w-10 h-10 rounded-full blur-[6px] opacity-80 bg-amber-300 shadow-[0_0_15px_rgba(251,191,36,.4)]';
+  } else {
+    orb.className = 'w-10 h-10 rounded-full blur-[6px] opacity-80 bg-amber-100 shadow-[0_0_8px_rgba(253,230,138,.2)]';
+  }
+
+  // spec panel
+  document.getElementById('sim-vlt').textContent     = film ? film.specs.vlt : '-';
+  document.getElementById('sim-ir').textContent      = film ? film.keyMetrics.ir : '-';
+  document.getElementById('sim-warranty').textContent = film ? film.keyMetrics.warranty : '-';
+
+  // bars
+  const commonPct = Math.min(100, (temps.commonTemp / 60) * 100);
+  const winfPct   = Math.min(100, ((film ? temps.winfTemp : temps.commonTemp) / 60) * 100);
+  document.getElementById('bar-common').style.width = commonPct + '%';
+  document.getElementById('bar-common-val').textContent = temps.commonTemp + '°C';
+  document.getElementById('bar-winf').style.width = winfPct + '%';
+  document.getElementById('bar-winf-val').textContent = (film ? temps.winfTemp : temps.commonTemp) + '°C';
+
+  const winfBarPanel = document.getElementById('bar-winf-panel');
+  const winfIcon     = document.getElementById('bar-winf-icon');
+  const winfLbl      = document.getElementById('bar-winf-label');
+  const winfBar      = document.getElementById('bar-winf');
+  const winfVal      = document.getElementById('bar-winf-val');
+
+  if (film) {
+    winfBarPanel.className = 'flex-1 p-6 md:p-8 flex flex-col gap-4 transition-all duration-500 bg-blue-950/15';
+    winfIcon.className     = 'w-10 h-10 flex items-center justify-center bg-blue-500/15 text-blue-400 border border-blue-500/30 shadow-[0_0_15px_rgba(59,130,246,.15)] transition-all duration-500';
+    winfLbl.className      = 'text-[9px] font-black uppercase tracking-[.25em] text-blue-400 mb-0.5 transition-colors duration-500';
+    winfLbl.textContent    = `Com ${film.name}`;
+    winfBar.className      = 'h-full bg-gradient-to-r from-blue-500 to-cyan-400 motion-bar';
+    winfVal.className      = 'text-3xl font-light text-blue-300 tracking-widest font-mono transition-colors duration-500';
+  } else {
+    winfBarPanel.className = 'flex-1 p-6 md:p-8 flex flex-col gap-4 transition-all duration-500 bg-zinc-950/10';
+    winfIcon.className     = 'w-10 h-10 flex items-center justify-center bg-zinc-800/10 text-zinc-500 border border-zinc-800/10 transition-all duration-500';
+    winfLbl.className      = 'text-[9px] font-black uppercase tracking-[.25em] text-zinc-500 mb-0.5 transition-colors duration-500';
+    winfLbl.textContent    = 'Com Winf™ Protection';
+    winfBar.className      = 'h-full bg-zinc-700 motion-bar';
+    winfVal.className      = 'text-3xl font-light text-white tracking-widest font-mono transition-colors duration-500';
+  }
+}
+
+// ===================== SUN =====================
+function onSunChange(val) {
+  sunIntensity = parseInt(val);
+  document.getElementById('sun-label').textContent = val + '%';
+  updatePresetButtons();
+  updateSimDisplay();
+}
+
+// Preset do tailwind para manter as cores dinâmicas sem quebras
+function setSun(val) {
+  sunIntensity = val;
+  document.getElementById('sun-slider').value = val;
+  document.getElementById('sun-label').textContent = val + '%';
+  updatePresetButtons();
+  updateSimDisplay();
+}
+
+function updatePresetButtons() {
+  const presets = { 0:'blue', 40:'amber', 80:'orange', 100:'red' };
+  Object.entries(presets).forEach(([v, color]) => {
+    const btn = document.getElementById(`preset-${v}`);
+    if (!btn) return;
+    if (sunIntensity === parseInt(v)) {
+      btn.className = `px-2 py-1.5 text-[9px] font-mono uppercase tracking-wider border transition-all bg-${color}-500/10 text-${color}-400 border-${color}-400`;
+    } else {
+      btn.className = 'px-2 py-1.5 text-[9px] font-mono uppercase tracking-wider border border-zinc-800 text-zinc-400 hover:border-zinc-700 transition-all';
+    }
+  });
+}
+
+// ===================== MODAL DE ESPECIFICAÇÕES (vanilla JS) =====================
+let currentSpecProductId = null;
+
+function openSpecModal(productId) {
+  const product = PRODUCT_CATALOG.find(p => p.id === productId);
+  if (!product) return;
+  currentSpecProductId = productId;
+
+  // Header
+  document.getElementById('spec-modal-image').style.backgroundImage = `url('${product.image}')`;
+  document.getElementById('spec-modal-badge').textContent = product.badge;
+  document.getElementById('spec-modal-name').textContent = product.name;
+  document.getElementById('spec-modal-subname').textContent = product.subname;
+  document.getElementById('spec-modal-description').textContent = product.fullDescription || product.shortDescription;
+
+  // Key metrics (grid de 4 blocos fixos: IR, UV, TSER, Garantia)
+  const km = product.keyMetrics;
+  const keyMetricsHtml = [
+    { label: 'Rejeição IR', value: km.ir },
+    { label: 'Proteção UV', value: km.uv },
+    { label: 'TSER', value: km.tser },
+    { label: 'Garantia', value: km.warranty }
+  ].map(item => `
+    <div class="border border-[#444746] p-4 flex flex-col gap-1">
+      <span class="text-[9px] uppercase font-bold tracking-widest text-white/40">${item.label}</span>
+      <span class="text-lg font-light text-white">${item.value}</span>
+    </div>
+  `).join('');
+  document.getElementById('spec-modal-keymetrics').innerHTML = keyMetricsHtml;
+
+  // Benefits
+  const benefitsWrapper = document.getElementById('spec-modal-benefits-wrapper');
+  if (product.benefits && product.benefits.length) {
+    benefitsWrapper.classList.remove('hidden');
+    document.getElementById('spec-modal-benefits').innerHTML = product.benefits.map(b => `
+      <div class="benefit-card border border-[#444746] p-4 flex items-start gap-3">
+        <div class="w-9 h-9 shrink-0 flex items-center justify-center border border-[#444746] text-white/70 bg-white/[0.02]">
+          ${BENEFIT_ICONS[b.icon] || DEFAULT_BENEFIT_ICON}
+        </div>
+        <div>
+          <h5 class="text-xs font-bold uppercase tracking-widest text-white mb-1">${b.title}</h5>
+          <p class="text-xs text-white/40 leading-relaxed font-light">${b.description}</p>
+        </div>
+      </div>
+    `).join('');
+  } else {
+    benefitsWrapper.classList.add('hidden');
+  }
+
+  // Technical specs table
+  const sp = product.specs;
+  const specRows = [
+    { label: 'VLT (Transmissão de Luz)', value: sp.vlt },
+    { label: 'IRER (Rejeição IR)', value: sp.irer },
+    { label: 'TSR (Rejeição Solar Total)', value: sp.tsr },
+    { label: 'Espessura', value: sp.thickness },
+    { label: 'Material', value: sp.material },
+    { label: 'Redução de Ofuscamento (Glare)', value: sp.glareReduction }
+  ];
+  document.getElementById('spec-modal-specs').innerHTML = specRows.map(row => `
+    <div class="spec-row flex items-center justify-between px-5 py-3.5">
+      <span class="text-xs text-white/40 uppercase tracking-wide">${row.label}</span>
+      <span class="text-sm text-white font-light">${row.value}</span>
+    </div>
+  `).join('');
+
+  // Footer
+  document.getElementById('spec-modal-warranty').textContent = `Garantia: ${km.warranty}`;
+  document.getElementById('spec-modal-share').onclick = (e) => falarConsultorProduto(e, product.name);
+
+  // Open modal
+  const backdrop = document.getElementById('spec-modal-backdrop');
+  const panel = document.getElementById('spec-modal-panel');
+  backdrop.classList.remove('hidden');
+  backdrop.classList.add('flex');
+  backdrop.classList.add('is-open');
+  panel.classList.add('is-open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeSpecModal() {
+  const backdrop = document.getElementById('spec-modal-backdrop');
+  const panel = document.getElementById('spec-modal-panel');
+  backdrop.classList.remove('is-open');
+  panel.classList.remove('is-open');
+  backdrop.classList.remove('flex');
+  backdrop.classList.add('hidden');
+  document.body.style.overflow = '';
+  currentSpecProductId = null;
+}
+
+// ===================== TOAST =====================
+function showToast(title, sub) {
+  document.getElementById('toast-title').textContent = title;
+  document.getElementById('toast-sub').textContent = sub;
+  const t = document.getElementById('toast');
+  t.style.opacity = '1'; t.style.transform = 'scale(1)'; t.style.pointerEvents = 'auto';
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(hideToast, 4000);
+}
+function hideToast() {
+  const t = document.getElementById('toast');
+  t.style.opacity = '0'; t.style.transform = 'scale(0.95)'; t.style.pointerEvents = 'none';
+}
+
+// ===================== CONTROLE DOS REDIRECIONAMENTOS DE CONTATO =====================
+function falarConsultorProduto(e, name) {
+  if (e && e.stopPropagation) e.stopPropagation();
+  const msg = `Olá! Tenho interesse no produto *${name}* do Catálogo WINF™. Poderia me ajudar com mais informações?`;
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
+}
+function falarConsultor() {
+  const msg = `Olá! Estou acessando o *Catálogo Oficial WINF™* e gostaria de falar com um consultor para conhecer melhor as soluções disponíveis.`;
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
+}
+// mantido por compatibilidade caso seja chamado do modal
+function shareProduct(e, id, name) {
+  falarConsultorProduto(e, name);
+}
+function shareAll() {
+  falarConsultor();
+}
+</script>
+</body>
+</html>
