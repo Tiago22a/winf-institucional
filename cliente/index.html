@@ -277,6 +277,7 @@
   const db = firebase.firestore();
 
   const WHATSAPP_URL = 'https://api.whatsapp.com/send/?phone=5513997815375';
+  const PUBLIC_PORTAL_URL = 'https://winf.com.br/cliente';
   const ID_ALPHABET = '23456789ABCDEFGHJKMNPQRSTUVWXYZ';
   let activeTab = 'warranty';
   let currentResult = null;
@@ -686,21 +687,56 @@
     window.print();
   }
 
+  function buildWarrantyShareUrl() {
+    const uf = normalizeUF(
+      currentResult?.customerState ||
+      currentResult?.stateKey ||
+      document.getElementById('search-state').value
+    );
+
+    const citySource =
+      currentResult?.customerCity ||
+      currentResult?.cityKey ||
+      document.getElementById('search-city').value;
+
+    const city = normalizeCity(citySource);
+
+    const id = normalizePublicId(
+      currentResult?.id ||
+      document.getElementById('search-id').value
+    );
+
+    const url = new URL(PUBLIC_PORTAL_URL);
+    url.searchParams.set('garantia', id);
+    url.searchParams.set('uf', uf);
+    url.searchParams.set('cidade', city);
+
+    return url.toString();
+  }
+
   async function shareCurrentResult() {
-    if (!currentResult) return;
+    if (!currentResult || activeTab !== 'warranty') return;
 
-    const uf = normalizeUF(document.getElementById('search-state').value);
-    const city = document.getElementById('search-city').value.trim();
-    const id = normalizePublicId(document.getElementById('search-id').value);
+    const shareUrl = buildWarrantyShareUrl();
+    const id = normalizePublicId(currentResult.id || '');
+    const city = currentResult.customerCity || document.getElementById('search-city').value.trim();
+    const uf = normalizeUF(currentResult.customerState || document.getElementById('search-state').value);
 
-    const text = `WINF™ — ${activeTab === 'warranty' ? 'Garantia' : 'Orçamento'} ${id} — ${city}/${uf}`;
+    const text = `WINF™ — Garantia verificada ${id} — ${city}/${uf}`;
 
     try {
       if (navigator.share) {
-        await navigator.share({ title:'WINF™ Portal Cliente', text, url:location.href });
+        await navigator.share({
+          title: 'WINF™ — Garantia Verificada',
+          text,
+          url: shareUrl
+        });
       } else if (navigator.clipboard) {
-        await navigator.clipboard.writeText(`${text}\n${location.href}`);
-        alert('Dados da consulta copiados para a área de transferência.');
+        await navigator.clipboard.writeText(`${text}
+${shareUrl}`);
+        alert('Link direto da garantia copiado para a área de transferência.');
+      } else {
+        window.prompt('Copie o link da garantia:', shareUrl);
       }
     } catch (err) {
       if (err?.name !== 'AbortError') console.warn(err);
@@ -732,10 +768,72 @@
     if (e.key === 'Enter') handleSearch();
   });
 
+  // ==========================================================
+  // LINK DIRETO DE GARANTIA
+  //
+  // Exemplo:
+  // https://winf.com.br/cliente?garantia=H7KP-92MX-R4QF&uf=SP&cidade=santos
+  //
+  // Ao abrir, a página:
+  // 1. seleciona a aba Garantia;
+  // 2. preenche UF, cidade e ID;
+  // 3. consulta automaticamente o Firestore;
+  // 4. exibe o certificado encontrado.
+  // ==========================================================
+  async function initializeFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+
+    const warrantyId = params.get('garantia');
+    const ufParam = params.get('uf');
+    const cityParam = params.get('cidade');
+
+    // Sem parâmetros de garantia: comportamento normal do portal.
+    if (!warrantyId && !ufParam && !cityParam) {
+      setTab('warranty');
+      updateNormalizedPreview();
+      lucide.createIcons();
+      return;
+    }
+
+    // Se o link estiver incompleto, não faz consulta automática.
+    if (!warrantyId || !ufParam || !cityParam) {
+      setTab('warranty');
+
+      if (ufParam) {
+        document.getElementById('search-state').value = normalizeUF(ufParam);
+      }
+
+      if (cityParam) {
+        document.getElementById('search-city').value = cityParam;
+      }
+
+      if (warrantyId) {
+        document.getElementById('search-id').value = normalizePublicId(warrantyId);
+      }
+
+      updateNormalizedPreview();
+      showError('Link de garantia incompleto. Confira estado, cidade e código.');
+      lucide.createIcons();
+      return;
+    }
+
+    setTab('warranty');
+
+    document.getElementById('search-state').value = normalizeUF(ufParam);
+    document.getElementById('search-city').value = cityParam;
+    document.getElementById('search-id').value = normalizePublicId(warrantyId);
+
+    updateNormalizedPreview();
+    lucide.createIcons();
+
+    // Aguarda o primeiro ciclo de renderização e consulta automaticamente.
+    requestAnimationFrame(() => {
+      handleSearch();
+    });
+  }
+
   // Inicialização
-  setTab('warranty');
-  updateNormalizedPreview();
-  lucide.createIcons();
+  initializeFromUrl();
 </script>
 
 </body>
