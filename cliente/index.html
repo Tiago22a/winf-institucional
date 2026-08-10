@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <title>WINF™ | Portal do Cliente</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'winf-card': '#1A1A1C',
+            'winf-bg': '#131314'
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background:#131314; }
+    ::selection { background: rgba(255,255,255,.18); }
+
+    .fade-in { animation: fadeIn .35s ease both; }
+    .rise-in { animation: riseIn .45s cubic-bezier(.2,.8,.2,1) both; }
+    .scale-in { animation: scaleIn .25s ease both; }
+    .spinner { animation: spin .8s linear infinite; }
+
+    @keyframes fadeIn { from { opacity:0 } to { opacity:1 } }
+    @keyframes riseIn { from { opacity:0; transform:translateY(22px) } to { opacity:1; transform:translateY(0) } }
+    @keyframes scaleIn { from { opacity:0; transform:scale(.97) } to { opacity:1; transform:scale(1) } }
+    @keyframes spin { to { transform:rotate(360deg) } }
+
+    .glass {
+      background: rgba(19,19,20,.48);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+    }
+
+    .field {
+      background: transparent;
+      color: #fff;
+      outline: none;
+      width: 100%;
+      text-transform: uppercase;
+    }
+    .field::placeholder { color:#3f3f46; }
+
+    .select-dark {
+      appearance: none;
+      background-color: transparent;
+      color: #fff;
+      outline: none;
+    }
+    .select-dark option {
+      background:#18181b;
+      color:#fff;
+    }
+
+    .result-paper {
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    @media print {
+      body * { visibility: hidden !important; }
+      #print-area, #print-area * { visibility: visible !important; }
+      #print-area {
+        position:absolute !important;
+        left:0 !important;
+        top:0 !important;
+        width:100% !important;
+        margin:0 !important;
+      }
+      .no-print { display:none !important; }
+    }
+  </style>
+</head>
+
+<body class="min-h-screen bg-[#131314] text-white font-sans antialiased">
+
+  <!-- SYSTEM COMMAND BAR -->
+  <nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[92%] max-w-[1400px] z-[80]">
+    <div class="relative w-full border border-[#444746] glass h-16 md:h-20 flex items-center px-6 md:px-10 shadow-[0_20px_40px_rgba(0,0,0,0.3)]">
+      <div class="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-transparent pointer-events-none"></div>
+
+      <div class="relative w-full flex justify-between items-center z-10">
+        <div class="flex items-center gap-4 md:gap-8">
+          <button onclick="goBack()" class="text-zinc-500 hover:text-white transition-colors p-2 hover:bg-white/5" aria-label="Voltar">
+            <i data-lucide="chevron-left" class="w-5 h-5"></i>
+          </button>
+
+          <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="flex items-center gap-3 group">
+            <span class="font-black tracking-tighter text-lg md:text-xl uppercase italic">WINF™</span>
+            <span class="hidden sm:flex items-center gap-2 px-2 py-0.5 border border-zinc-800 bg-white/5">
+              <span class="w-1 h-1 bg-white/40"></span>
+              <span class="text-[7px] font-black text-white/40 uppercase tracking-widest">Portal Cliente</span>
+            </span>
+          </button>
+        </div>
+
+        <a href="https://api.whatsapp.com/send/?phone=5513997815375"
+           target="_blank" rel="noopener noreferrer"
+           class="flex items-center gap-3 bg-white/5 border border-[#444746] px-4 md:px-6 py-2.5 text-[10px] md:text-[11px] font-black uppercase tracking-widest text-white/40 hover:text-white hover:border-zinc-500 transition-all shadow-xl">
+          <i data-lucide="message-square" class="w-3.5 h-3.5"></i>
+          <span class="hidden sm:inline">Suporte Técnico</span>
+          <span class="sm:hidden">Suporte</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-6 pt-36 pb-10 md:pt-48 md:pb-24">
+    <section class="text-center mb-10 md:mb-16 rise-in">
+      <h1 class="text-3xl md:text-6xl font-black tracking-tighter mb-4 uppercase italic">
+        ACESSO AO ECOSSISTEMA
+      </h1>
+      <p class="text-white/40 text-xs md:text-lg max-w-2xl mx-auto font-light">
+        Consulte suas garantias, visualize orçamentos técnicos ou entre em contato com nosso suporte especializado.
+      </p>
+    </section>
+
+    <!-- TABS -->
+    <div class="flex flex-wrap justify-center gap-2 mb-10 md:mb-12">
+      <button id="tab-warranty" onclick="setTab('warranty')" class="portal-tab flex items-center gap-2 md:gap-3 px-4 md:px-6 py-2.5 md:py-3 text-[10px] md:text-xs font-bold uppercase tracking-widest transition-all">
+        <i data-lucide="shield-check" class="w-3.5 h-3.5 md:w-4 md:h-4"></i>
+        Consultar Garantia
+      </button>
+      <button id="tab-quote" onclick="setTab('quote')" class="portal-tab flex items-center gap-2 md:gap-3 px-4 md:px-6 py-2.5 md:py-3 text-[10px] md:text-xs font-bold uppercase tracking-widest transition-all">
+        <i data-lucide="file-text" class="w-3.5 h-3.5 md:w-4 md:h-4"></i>
+        Ver Orçamento
+      </button>
+      <button id="tab-support" onclick="setTab('support')" class="portal-tab flex items-center gap-2 md:gap-3 px-4 md:px-6 py-2.5 md:py-3 text-[10px] md:text-xs font-bold uppercase tracking-widest transition-all">
+        <i data-lucide="message-square" class="w-3.5 h-3.5 md:w-4 md:h-4"></i>
+        Suporte Técnico
+      </button>
+    </div>
+
+    <!-- SEARCH -->
+    <section id="search-section" class="relative max-w-2xl mx-auto scale-in">
+      <div class="relative group">
+        <div class="absolute -inset-1 bg-gradient-to-r from-white/10 to-white/5 blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+
+        <div class="relative bg-[#1A1A1C] border border-[#444746] p-4 md:p-5">
+          <div class="grid grid-cols-1 sm:grid-cols-[120px_1fr] gap-3 mb-3">
+            <div class="relative border border-[#343437] bg-[#131314]">
+              <i data-lucide="map-pin" class="w-4 h-4 absolute left-4 top-1/2 -translate-y-1/2 text-white/30 pointer-events-none"></i>
+              <select id="search-state" class="select-dark w-full h-full py-4 pl-11 pr-8 text-xs font-mono uppercase">
+                <option value="">UF</option>
+                <option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option>
+                <option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option>
+                <option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option>
+                <option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
+                <option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option>
+                <option>SE</option><option>TO</option>
+              </select>
+            </div>
+
+            <div class="flex items-center border border-[#343437] bg-[#131314]">
+              <div class="pl-4 text-white/30"><i data-lucide="building-2" class="w-4 h-4"></i></div>
+              <input id="search-city"
+                     type="text"
+                     autocomplete="address-level2"
+                     placeholder="Cidade"
+                     class="field py-4 px-4 font-mono text-xs"
+                     maxlength="100" />
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center border border-[#444746] bg-[#131314] overflow-hidden">
+            <div class="flex items-center flex-1">
+              <div class="pl-5 text-white/40"><i data-lucide="search" class="w-[18px] h-[18px]"></i></div>
+              <input id="search-id"
+                     type="text"
+                     autocomplete="off"
+                     spellcheck="false"
+                     placeholder="Código do certificado"
+                     class="field py-5 md:py-6 px-4 font-mono text-xs md:text-sm tracking-[0.08em]"
+                     maxlength="14" />
+            </div>
+            <button id="search-button"
+                    onclick="handleSearch()"
+                    class="bg-white text-black px-8 py-4 md:py-6 font-black text-[10px] uppercase tracking-widest hover:bg-gray-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+              Consultar
+            </button>
+          </div>
+
+          <div class="flex flex-wrap items-center justify-between gap-2 mt-3">
+            <p id="search-help" class="text-[9px] text-white/25 uppercase tracking-widest font-mono">
+              Informe UF, cidade e código.
+            </p>
+            <p id="normalized-preview" class="text-[9px] text-white/20 font-mono uppercase tracking-wider"></p>
+          </div>
+        </div>
+      </div>
+
+      <div id="error-box" class="hidden mt-4 border border-red-900/60 bg-red-950/20 px-4 py-3 text-center">
+        <p id="error-text" class="text-red-400 text-[10px] md:text-xs font-bold uppercase tracking-widest"></p>
+      </div>
+    </section>
+
+    <!-- SUPPORT -->
+    <section id="support-section" class="hidden grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-[#1A1A1C] border border-[#444746] p-5 md:p-8 hover:border-zinc-500 transition-all group rise-in">
+        <div class="w-12 h-12 bg-white/10 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
+          <i data-lucide="message-square" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-2">WhatsApp Direct</h3>
+        <p class="text-white/40 text-sm mb-6">
+          Fale agora com um especialista técnico para tirar dúvidas sobre seu projeto, orçamento ou garantia.
+        </p>
+        <a href="https://api.whatsapp.com/send/?phone=5513997815375"
+           target="_blank" rel="noopener noreferrer"
+           class="block w-full py-4 bg-white text-black text-center font-black text-[10px] uppercase tracking-widest hover:bg-zinc-200 transition-all">
+          Iniciar Conversa
+        </a>
+      </div>
+
+      <div class="bg-[#1A1A1C] border border-[#444746] p-5 md:p-8 hover:border-zinc-500 transition-all group rise-in">
+        <div class="w-12 h-12 bg-white/5 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
+          <i data-lucide="package" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-2">Catálogo de Ativos</h3>
+        <p class="text-white/40 text-sm mb-6">
+          Conheça as especificações técnicas das tecnologias e linhas de proteção WINF™.
+        </p>
+        <a href="/"
+           class="block w-full py-4 bg-white/5 border border-[#444746] text-white text-center font-black text-[10px] uppercase tracking-widest hover:bg-white/10 transition-all">
+          Ver Catálogo
+        </a>
+      </div>
+    </section>
+
+    <!-- RESULT -->
+    <section id="result-section" class="hidden mt-16"></section>
+  </main>
+
+  <footer class="border-t border-[#444746] py-12">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col items-center gap-6">
+      <p class="text-[10px] font-bold text-gray-600 uppercase tracking-[0.5em] text-center">
+        WINF™ ENGINEERING // PROTEÇÃO MOLECULAR
+      </p>
+      <a href="/login"
+         class="text-[10px] md:text-[11px] font-bold text-gray-700 uppercase tracking-widest hover:text-white transition-colors">
+        Área Restrita: Login do Parceiro
+      </a>
+    </div>
+  </footer>
+
+<script>
+  // ==========================================================
+  // FIREBASE
+  // ==========================================================
+  const firebaseConfig = {
+    apiKey: "AIzaSyBs5nRf528evxnNQUIsxf8Ygrkzxi1KEv4",
+    authDomain: "winf-auth.firebaseapp.com",
+    projectId: "winf-auth",
+    storageBucket: "winf-auth.firebasestorage.app",
+    messagingSenderId: "218399040481",
+    appId: "1:218399040481:web:1f971f1a71a70812c728a0"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+
+  const WHATSAPP_URL = 'https://api.whatsapp.com/send/?phone=5513997815375';
+  const ID_ALPHABET = '23456789ABCDEFGHJKMNPQRSTUVWXYZ';
+  let activeTab = 'warranty';
+  let currentResult = null;
+
+  // ==========================================================
+  // NORMALIZAÇÃO E VALIDAÇÃO
+  // ==========================================================
+  function normalizeUF(value) {
+    return String(value || '').trim().toUpperCase();
+  }
+
+  function normalizeCity(value) {
+    return String(value || '')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .trim()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+  }
+
+  function normalizePublicId(value) {
+    const raw = String(value || '')
+      .toUpperCase()
+      .replace(/[^A-Z0-9]/g, '')
+      .split('')
+      .filter(ch => ID_ALPHABET.includes(ch))
+      .join('')
+      .slice(0, 12);
+
+    if (raw.length <= 4) return raw;
+    if (raw.length <= 8) return raw.slice(0, 4) + '-' + raw.slice(4);
+    return raw.slice(0, 4) + '-' + raw.slice(4, 8) + '-' + raw.slice(8);
+  }
+
+  function isValidPublicId(value) {
+    const compact = normalizePublicId(value).replace(/-/g, '');
+    return compact.length === 12 &&
+      [...compact].every(ch => ID_ALPHABET.includes(ch));
+  }
+
+  function isValidUF(uf) {
+    const valid = new Set([
+      'AC','AL','AP','AM','BA','CE','DF','ES','GO','MA','MT','MS','MG',
+      'PA','PB','PR','PE','PI','RJ','RN','RS','RO','RR','SC','SP','SE','TO'
+    ]);
+    return valid.has(normalizeUF(uf));
+  }
+
+  function sanitizeText(value) {
+    return String(value ?? '').replace(/[<>&"']/g, char => ({
+      '<':'&lt;', '>':'&gt;', '&':'&amp;', '"':'&quot;', "'":'&#39;'
+    })[char]);
+  }
+
+  function formatDateBR(value) {
+    if (!value) return '—';
+    const raw = String(value);
+    const date = /^\d{4}-\d{2}-\d{2}$/.test(raw)
+      ? new Date(raw + 'T00:00:00')
+      : new Date(raw);
+    return Number.isNaN(date.getTime()) ? '—' : date.toLocaleDateString('pt-BR');
+  }
+
+  function formatCurrency(value) {
+    const n = Number(value || 0);
+    return n.toLocaleString('pt-BR', { style:'currency', currency:'BRL' });
+  }
+
+  function formatCityDisplay(city, uf) {
+    const c = String(city || '').trim();
+    const s = normalizeUF(uf);
+    return [c, s].filter(Boolean).join(' — ');
+  }
+
+  // ==========================================================
+  // UI
+  // ==========================================================
+  function setTab(tab) {
+    activeTab = tab;
+    currentResult = null;
+
+    document.getElementById('result-section').classList.add('hidden');
+    document.getElementById('result-section').innerHTML = '';
+    hideError();
+
+    document.querySelectorAll('.portal-tab').forEach(btn => {
+      btn.className = 'portal-tab flex items-center gap-2 md:gap-3 px-4 md:px-6 py-2.5 md:py-3 text-[10px] md:text-xs font-bold uppercase tracking-widest transition-all bg-white/5 text-white/40 hover:bg-white/10 hover:text-white';
+    });
+
+    const selected = document.getElementById('tab-' + tab);
+    if (selected) {
+      selected.className = 'portal-tab flex items-center gap-2 md:gap-3 px-4 md:px-6 py-2.5 md:py-3 text-[10px] md:text-xs font-bold uppercase tracking-widest transition-all bg-white text-black';
+    }
+
+    const isSupport = tab === 'support';
+    document.getElementById('search-section').classList.toggle('hidden', isSupport);
+    document.getElementById('support-section').classList.toggle('hidden', !isSupport);
+
+    if (!isSupport) {
+      document.getElementById('search-id').value = '';
+      document.getElementById('search-id').placeholder =
+        tab === 'warranty' ? 'Código da garantia' : 'Código REF do orçamento';
+      document.getElementById('search-help').textContent =
+        tab === 'warranty'
+          ? 'Informe UF, cidade e código da garantia.'
+          : 'Informe UF, cidade e código REF do orçamento.';
+      updateNormalizedPreview();
+    }
+  }
+
+  function showError(message) {
+    const box = document.getElementById('error-box');
+    document.getElementById('error-text').textContent = message;
+    box.classList.remove('hidden');
+  }
+
+  function hideError() {
+    document.getElementById('error-box').classList.add('hidden');
+    document.getElementById('error-text').textContent = '';
+  }
+
+  function setLoading(loading) {
+    const btn = document.getElementById('search-button');
+    btn.disabled = loading;
+    btn.innerHTML = loading
+      ? '<span class="inline-flex items-center gap-2"><span class="w-3 h-3 border-2 border-black/30 border-t-black spinner"></span>Processando...</span>'
+      : 'Consultar';
+  }
+
+  function updateNormalizedPreview() {
+    const uf = normalizeUF(document.getElementById('search-state').value);
+    const city = normalizeCity(document.getElementById('search-city').value);
+    const id = normalizePublicId(document.getElementById('search-id').value);
+
+    const parts = [uf || 'UF', city || 'cidade', id || 'código'];
+    document.getElementById('normalized-preview').textContent = parts.join(' / ');
+  }
+
+  // ==========================================================
+  // FIRESTORE PUBLIC LOOKUP
+  // Paths:
+  // garantiasPublicas/{UF}/{cidadeNormalizada}/{ID}
+  // orcamentosPublicos/{UF}/{cidadeNormalizada}/{ID}
+  // ==========================================================
+  async function fetchPublicDocument(collectionName, uf, cityKey, id) {
+    const ref = db
+      .collection(collectionName)
+      .doc(uf)
+      .collection(cityKey)
+      .doc(id);
+
+    const snap = await ref.get();
+    return snap.exists ? { ...snap.data(), id: snap.id } : null;
+  }
+
+  async function handleSearch() {
+    if (activeTab === 'support') return;
+
+    hideError();
+    document.getElementById('result-section').classList.add('hidden');
+
+    const uf = normalizeUF(document.getElementById('search-state').value);
+    const cityOriginal = document.getElementById('search-city').value.trim();
+    const cityKey = normalizeCity(cityOriginal);
+    const id = normalizePublicId(document.getElementById('search-id').value);
+
+    if (!isValidUF(uf)) {
+      showError('Selecione um estado válido.');
+      document.getElementById('search-state').focus();
+      return;
+    }
+
+    if (!cityOriginal || cityKey.length < 2) {
+      showError('Informe uma cidade válida.');
+      document.getElementById('search-city').focus();
+      return;
+    }
+
+    if (!isValidPublicId(id)) {
+      showError('Código inválido. Use o formato XXXX-XXXX-XXXX.');
+      document.getElementById('search-id').focus();
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const collectionName =
+        activeTab === 'warranty' ? 'garantiasPublicas' : 'orcamentosPublicos';
+
+      const data = await fetchPublicDocument(collectionName, uf, cityKey, id);
+
+      if (!data) {
+        showError(
+          activeTab === 'warranty'
+            ? 'Garantia não encontrada. Confira UF, cidade e código.'
+            : 'Orçamento não encontrado. Confira UF, cidade e código REF.'
+        );
+        return;
+      }
+
+      // Defesa adicional: se o documento trouxer UF/cidade, verifica coerência.
+      const docUF = normalizeUF(data.customerState || data.stateKey || uf);
+      const docCity = normalizeCity(data.customerCity || data.cityKey || cityOriginal);
+
+      if (docUF && docUF !== uf) {
+        showError('Os dados encontrados não correspondem ao estado informado.');
+        return;
+      }
+
+      if (docCity && docCity !== cityKey) {
+        showError('Os dados encontrados não correspondem à cidade informada.');
+        return;
+      }
+
+      currentResult = data;
+
+      if (activeTab === 'warranty') {
+        renderWarranty(data);
+      } else {
+        renderQuote(data);
+      }
+
+    } catch (err) {
+      console.error('Public portal Firestore error:', err);
+      showError('Não foi possível concluir a consulta agora. Tente novamente ou fale com o suporte.');
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  // ==========================================================
+  // RESULT — GARANTIA
+  // ==========================================================
+  function renderWarranty(w) {
+    const result = document.getElementById('result-section');
+    const issueDate = w.issueDate || w.purchaseDate || w.createdAt;
+    const product = w.product || w.productLine || '—';
+    const city = w.customerCity || '';
+    const uf = w.customerState || '';
+    const warrantyLabel = w.warrantyLabel || (w.warrantyPeriod === 'lifetime' ? 'Vitalícia' : 'Ativa');
+    const expiry = w.expiryDate ? formatDateBR(w.expiryDate) : 'Sem expiração';
+
+    result.innerHTML = `
+      <div id="print-area" class="result-paper bg-white text-black p-6 md:p-12 shadow-2xl relative overflow-hidden rise-in">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-gray-50 -mr-32 -mt-32 z-0"></div>
+
+        <div class="relative z-10">
+          <div class="flex flex-col md:flex-row justify-between items-start gap-6 md:gap-0 mb-8 md:mb-12">
+            <div>
+              <div class="flex items-center gap-2 mb-2">
+                <i data-lucide="shield-check" class="w-5 h-5 md:w-6 md:h-6 text-black"></i>
+                <span class="text-[10px] md:text-xs font-black uppercase tracking-[0.3em]">Certificado de Autenticidade</span>
+              </div>
+              <h2 class="text-2xl md:text-5xl font-black tracking-tighter uppercase italic">GARANTIA ATIVA</h2>
+            </div>
+
+            <div class="text-left md:text-right">
+              <p class="text-[10px] font-bold text-black/40 uppercase tracking-widest mb-1">Código de Verificação</p>
+              <p class="font-mono font-bold text-base md:text-lg">${sanitizeText(w.id || '—')}</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
+            <div>
+              <p class="text-[10px] font-bold text-black/40 uppercase tracking-widest mb-2">Titular</p>
+              <p class="font-bold text-sm md:text-base">${sanitizeText(w.customerName || '—')}</p>
+            </div>
+
+            <div>
+              <p class="text-[10px] font-bold text-black/40 uppercase tracking-widest mb-2">Tecnologia Aplicada</p>
+              <p class="font-bold text-sm md:text-base">${sanitizeText(product)}</p>
+            </div>
+
+            <div>
+              <p class="text-[10px] font-bold text-black/40 uppercase tracking-widest mb-2">Emissão</p>
+              <p class="font-bold text-sm md:text-base">${sanitizeText(formatDateBR(issueDate))}</p>
+            </div>
+
+            <div>
+              <p class="text-[10px] font-bold text-black/40 uppercase tracking-widest mb-2">Localidade</p>
+              <p class="font-bold text-sm md:text-base">${sanitizeText(formatCityDisplay(city, uf) || '—')}</p>
+            </div>
+
+            <div>
+              <p class="text-[10px] font-bold text-black/40 uppercase tracking-widest mb-2">Cobertura</p>
+              <p class="font-bold text-sm md:text-base">${sanitizeText(warrantyLabel)}</p>
+            </div>
+
+            <div>
+              <p class="text-[10px] font-bold text-black/40 uppercase tracking-widest mb-2">Expiração</p>
+              <p class="font-bold text-sm md:text-base">${sanitizeText(expiry)}</p>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 p-4 md:p-6 border border-gray-100 mb-8">
+            <div class="flex items-center gap-3 text-emerald-700 mb-2">
+              <i data-lucide="check" class="w-[18px] h-[18px] md:w-5 md:h-5"></i>
+              <span class="font-bold text-xs md:text-sm">Status: Verificado & Autêntico</span>
+            </div>
+            <p class="text-xs text-black/45 leading-relaxed">
+              Este registro foi localizado na base pública WINF™ a partir da combinação de estado, cidade e código de verificação.
+            </p>
+          </div>
+
+          <div class="flex flex-wrap gap-4 no-print">
+            <button onclick="printCurrentResult()" class="flex-1 min-w-[200px] bg-[#131314] text-white py-4 font-bold uppercase tracking-widest text-[10px] flex items-center justify-center gap-2 hover:bg-gray-800 transition-all">
+              <i data-lucide="printer" class="w-4 h-4"></i> Imprimir / Salvar PDF
+            </button>
+            <button onclick="shareCurrentResult()" class="flex-1 min-w-[200px] bg-zinc-100 text-black py-4 font-bold uppercase tracking-widest text-[10px] flex items-center justify-center gap-2 hover:bg-zinc-200 transition-all">
+              <i data-lucide="share-2" class="w-4 h-4"></i> Compartilhar
+            </button>
+          </div>
+        </div>
+      </div>
+    `;
+
+    result.classList.remove('hidden');
+    lucide.createIcons();
+    result.scrollIntoView({ behavior:'smooth', block:'start' });
+  }
+
+  // ==========================================================
+  // RESULT — ORÇAMENTO
+  // ==========================================================
+  function renderQuote(q) {
+    const result = document.getElementById('result-section');
+    const items = Array.isArray(q.items) ? q.items : [];
+    const installments = Number(q.installments || 1);
+    const total = Number(q.totalAmount || 0);
+
+    const itemsHtml = items.length
+      ? items.map(item => `
+          <div class="flex justify-between items-center gap-4 py-3 md:py-4 border-b border-[#444746]">
+            <div class="max-w-[70%]">
+              <p class="font-bold text-xs md:text-sm">${sanitizeText(item.description || 'Item')}</p>
+              <p class="text-[10px] text-white/40 uppercase tracking-widest">Qtd: ${sanitizeText(item.quantity ?? 0)}</p>
+            </div>
+            <p class="font-bold text-sm md:text-base">${formatCurrency(Number(item.quantity || 0) * Number(item.unitPrice || 0))}</p>
+          </div>
+        `).join('')
+      : '<p class="text-white/40 text-sm">Nenhum item detalhado neste registro.</p>';
+
+    result.innerHTML = `
+      <div id="print-area" class="bg-[#1A1A1C] border border-[#444746] p-6 md:p-12 rise-in">
+        <div class="flex flex-col md:flex-row justify-between items-start gap-6 md:gap-0 mb-8 md:mb-12">
+          <div>
+            <h2 class="text-2xl md:text-3xl font-black tracking-tighter uppercase italic mb-2">ORÇAMENTO TÉCNICO</h2>
+            <p class="text-[10px] font-bold text-white/40 uppercase tracking-widest">REF: ${sanitizeText(q.id || '—')}</p>
+          </div>
+
+          <div class="px-4 py-2 text-[10px] font-black uppercase tracking-widest bg-white/10 text-white/50">
+            Documento Localizado
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-8">
+          <div>
+            <p class="text-[9px] text-white/35 uppercase tracking-widest mb-1">Cliente / Projeto</p>
+            <p class="font-bold text-sm">${sanitizeText(q.customerName || '—')}</p>
+          </div>
+          <div>
+            <p class="text-[9px] text-white/35 uppercase tracking-widest mb-1">Localidade</p>
+            <p class="font-bold text-sm">${sanitizeText(formatCityDisplay(q.customerCity, q.customerState) || '—')}</p>
+          </div>
+          <div>
+            <p class="text-[9px] text-white/35 uppercase tracking-widest mb-1">Emissão</p>
+            <p class="font-bold text-sm">${sanitizeText(formatDateBR(q.createdAt))}</p>
+          </div>
+        </div>
+
+        <div class="space-y-0 mb-8 md:mb-12">
+          ${itemsHtml}
+        </div>
+
+        <div class="flex flex-col items-end gap-1 md:gap-2 mb-10 md:mb-12">
+          <p class="text-[10px] font-bold text-white/40 uppercase tracking-widest">Valor Total do Investimento</p>
+          <p class="text-3xl md:text-4xl font-black text-white">${formatCurrency(total)}</p>
+          ${installments > 1
+            ? `<p class="text-xs md:text-sm text-white/40">Ou ${installments}x de ${formatCurrency(total / installments)}</p>`
+            : ''
+          }
+          <p class="text-[10px] text-white/30 uppercase tracking-widest mt-1">${sanitizeText(q.paymentMethod || '')}</p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4 no-print">
+          <a href="${WHATSAPP_URL}" target="_blank" rel="noopener noreferrer"
+             class="flex-1 bg-white text-black py-4 text-center font-bold uppercase tracking-widest text-[10px] hover:bg-zinc-200 transition-all">
+            Aprovar via WhatsApp
+          </a>
+          <button onclick="printCurrentResult()"
+                  class="flex-1 bg-white/5 border border-[#444746] text-white py-4 font-bold uppercase tracking-widest text-[10px] flex items-center justify-center gap-2 hover:bg-white/10 transition-all">
+            <i data-lucide="printer" class="w-4 h-4"></i> Imprimir
+          </button>
+        </div>
+      </div>
+    `;
+
+    result.classList.remove('hidden');
+    lucide.createIcons();
+    result.scrollIntoView({ behavior:'smooth', block:'start' });
+  }
+
+  function printCurrentResult() {
+    if (!currentResult) return;
+    window.print();
+  }
+
+  async function shareCurrentResult() {
+    if (!currentResult) return;
+
+    const uf = normalizeUF(document.getElementById('search-state').value);
+    const city = document.getElementById('search-city').value.trim();
+    const id = normalizePublicId(document.getElementById('search-id').value);
+
+    const text = `WINF™ — ${activeTab === 'warranty' ? 'Garantia' : 'Orçamento'} ${id} — ${city}/${uf}`;
+
+    try {
+      if (navigator.share) {
+        await navigator.share({ title:'WINF™ Portal Cliente', text, url:location.href });
+      } else if (navigator.clipboard) {
+        await navigator.clipboard.writeText(`${text}\n${location.href}`);
+        alert('Dados da consulta copiados para a área de transferência.');
+      }
+    } catch (err) {
+      if (err?.name !== 'AbortError') console.warn(err);
+    }
+  }
+
+  function goBack() {
+    if (history.length > 1) history.back();
+    else location.href = '/';
+  }
+
+  // ==========================================================
+  // INPUT HARDENING
+  // ==========================================================
+  document.getElementById('search-id').addEventListener('input', e => {
+    const formatted = normalizePublicId(e.target.value);
+    e.target.value = formatted;
+    updateNormalizedPreview();
+  });
+
+  document.getElementById('search-city').addEventListener('input', updateNormalizedPreview);
+  document.getElementById('search-state').addEventListener('change', updateNormalizedPreview);
+
+  document.getElementById('search-city').addEventListener('keydown', e => {
+    if (e.key === 'Enter') document.getElementById('search-id').focus();
+  });
+
+  document.getElementById('search-id').addEventListener('keydown', e => {
+    if (e.key === 'Enter') handleSearch();
+  });
+
+  // Inicialização
+  setTab('warranty');
+  updateNormalizedPreview();
+  lucide.createIcons();
+</script>
+
+</body>
+</html>
