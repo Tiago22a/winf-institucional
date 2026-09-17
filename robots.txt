@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://winf.com/sitemap.xml
+Sitemap: https://winf.com.br/sitemap.xml
