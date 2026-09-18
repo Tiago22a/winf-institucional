@@ -126,9 +126,7 @@
 
     <div class="flex bg-[#111112]/90 p-1 border border-zinc-800 absolute left-1/2 -translate-x-1/2 shadow-2xl backdrop-blur-xl" style="max-width:calc(100vw - 120px);">
       <button onclick="setCategory('arch')" id="tab-arch" class="nav-tab-active px-3 md:px-7 py-2.5 text-[9px] md:text-[10px] tracking-[.15em] md:tracking-[.25em] uppercase font-black transition-all duration-300 whitespace-nowrap">Arch</button>
-      <button onclick="setCategory('auto')" id="tab-auto" class="hidden nav-tab px-3 md:px-7 py-2.5 text-[9px] md:text-[10px] tracking-[.15em] md:tracking-[.25em] uppercase font-black transition-all duration-300 whitespace-nowrap">Auto</button>
-      <button onclick="setCategory('marine')" id="tab-marine" class="hidden nav-tab px-3 md:px-7 py-2.5 text-[9px] md:text-[10px] tracking-[.15em] md:tracking-[.25em] uppercase font-black transition-all duration-300 whitespace-nowrap">Marine</button>
-      <button onclick="setCategory('aero')" id="tab-aero" class="hidden nav-tab px-3 md:px-7 py-2.5 text-[9px] md:text-[10px] tracking-[.15em] md:tracking-[.25em] uppercase font-black transition-all duration-300 whitespace-nowrap">Aero</button>
+      <button onclick="setCategory('auto')" id="tab-auto" class="nav-tab px-3 md:px-7 py-2.5 text-[9px] md:text-[10px] tracking-[.15em] md:tracking-[.25em] uppercase font-black transition-all duration-300 whitespace-nowrap">Auto</button>
     </div>
 
     <div class="flex items-center gap-3">
@@ -405,76 +403,127 @@ const PRODUCT_CATALOG = [
   // WINF SELECT (ARQUITETURA) - WINF™ ARCHITECTURAL COLLECTION
   // ==========================================
   {
+    id: 'select-invisible-70',
+    name: 'WINF™ Invisible® 70',
+    subname: 'HT70 | Nano Cerâmica Não Metalizada',
+    badge: 'PROTEÇÃO NATURAL',
+    category: 'arch',
+    line: 'select',
+    image: '/images/invisible-poster-1.webp',
+    shortDescription: 'Proteção solar e UV sem escurecer o vidro, preservando a leitura cromática original da fachada.',
+    fullDescription: 'Tecnologia Nano Cerâmica não metalizada, 100% dielétrica e sem interferência em sinais eletrônicos. Indicada para fachadas com regras rígidas de preservação estética.',
+    keyMetrics: { ir: '94%', uv: '99,9%', tser: '62%', warranty: '10 Anos' },
+    benefits: [
+      { title: 'Clareza Óptica', description: 'Transmissão de 70% de luz, sem alteração perceptível da aparência do vidro.', icon: 'Eye' },
+      { title: 'Zero Interferência', description: 'Construção 100% dielétrica, sem impacto em sinais Wi-Fi, GPS ou celular.', icon: 'Shield' }
+    ],
+    specs: { vlt: '70%', irer: '94%', tsr: '62%', thickness: '2 mil', material: 'Nano Cerâmica Não Metalizada', glareReduction: 'N/A' }
+  },
+  {
+    id: 'select-invisible-80',
+    name: 'WINF™ Invisible® 80',
+    subname: 'HT80 | Ultra Clara',
+    badge: 'MÁXIMA TRANSPARÊNCIA',
+    category: 'arch',
+    line: 'select',
+    image: '/images/invisible-poster-2.webp',
+    shortDescription: 'Variante ultra clara da linha Invisible, com 82% de transmissão de luz e alto bloqueio de calor.',
+    fullDescription: 'Tecnologia Nano Cerâmica não metalizada com a maior transparência da linha, indicada para projetos que exigem o mínimo de alteração visual possível.',
+    keyMetrics: { ir: '96%', uv: '99,9%', tser: '58%', warranty: '10 Anos' },
+    benefits: [
+      { title: 'Transparência Máxima', description: '82% de VLT, a variante mais clara da linha Invisible.', icon: 'Eye' },
+      { title: 'Conforto Térmico', description: '96% de rejeição de infravermelho sem escurecer o ambiente.', icon: 'Sun' }
+    ],
+    specs: { vlt: '82%', irer: '96%', tsr: '58%', thickness: '2 mil', material: 'Nano Cerâmica Não Metalizada', glareReduction: 'N/A' }
+  },
+  {
+    id: 'select-invisible-spectre',
+    name: 'WINF™ Invisible® Spectre',
+    subname: 'Optic Grade | Alta Performance',
+    badge: 'TECNOLOGIA SUPREMA',
+    category: 'arch',
+    line: 'select',
+    image: '/images/invisible-poster-3.webp',
+    shortDescription: 'A película arquitetônica mais avançada da linha Invisible, com bloqueio de infravermelho de até 99% e garantia vitalícia.',
+    fullDescription: 'Grade óptica premium com 99% de rejeição de infravermelho e 99,99% de bloqueio UV, mantendo 75% de transparência e reflexão noturna reduzida.',
+    keyMetrics: { ir: '99%', uv: '99,99%', tser: '68%', warranty: '15 Anos (Vitalícia)' },
+    benefits: [
+      { title: 'Rejeição IR Extrema', description: 'Até 99% de bloqueio de infravermelho, o maior da linha arquitetônica.', icon: 'Sun' },
+      { title: 'Garantia Vitalícia', description: '15 anos de garantia para projetos residenciais e comerciais.', icon: 'Shield' }
+    ],
+    specs: { vlt: '75%', irer: '99%', tsr: '68%', thickness: '2 mil', material: 'Nano Cerâmica Optic Grade', glareReduction: 'N/A' }
+  },
+  {
     id: 'select-blackpro',
     name: 'WINF™ BlackPro®',
-    subname: 'TTA15 | Não Metalizada • Fumê',
+    subname: 'BP10 | Não Metalizada • Fumê',
     badge: 'PRIVACIDADE E CONFORTO',
     category: 'arch',
     line: 'select',
-    image: 'https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&q=80&w=2400',
-    shortDescription: 'Película arquitetônica premium para clientes que desejam privacidade, redução de calor e visual sofisticado.',
-    fullDescription: 'Tecnologia Carbon Film com tonalidade Black. Maior privacidade, redução do calor, proteção UV, economia de energia e redução do ofuscamento.',
-    keyMetrics: { ir: '73%', uv: '99%', tser: 'N/A', warranty: '10 Anos' },
+    image: '/images/blackpro-poster-1.webp',
+    shortDescription: 'Película arquitetônica de privacidade com visual fumê, foco em presença visual, conforto térmico e discrição.',
+    fullDescription: 'Construção não metalizada com efeito Blackout Privacy. Reduz a exposição visual do ambiente e melhora o conforto térmico sem comprometer a fachada.',
+    keyMetrics: { ir: '95%', uv: '99,9%', tser: 'N/A', warranty: '10 Anos' },
     benefits: [
       { title: 'Privacidade e Estética', description: 'Visual sofisticado e recluso.', icon: 'Eye' },
       { title: 'Conforto Térmico', description: 'Redução eficaz do ofuscamento e do calor.', icon: 'Sun' }
     ],
-    specs: { vlt: '15%', irer: '73%', tsr: 'N/A', thickness: '2 mil', material: 'Carbon Film', glareReduction: 'N/A' }
+    specs: { vlt: '70%', irer: '95%', tsr: 'N/A', thickness: '2 mil', material: 'Não Metalizada Fumê', glareReduction: 'N/A' }
   },
   {
     id: 'select-dualreflect',
-    name: 'WINF™ DualReflect®',
+    name: 'WINF™ Dual Reflect®',
     subname: 'SI15 | Refletiva • Controle Solar',
     badge: 'MÁXIMO CONTROLE SOLAR',
     category: 'arch',
     line: 'select',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2400',
-    shortDescription: 'Película de máxima eficiência para fachadas expostas ao sol.',
-    fullDescription: 'Tecnologia Reflective Solar Control com acabamento Silver Reflective. Máxima rejeição solar, privacidade diurna, e visual corporativo premium.',
-    keyMetrics: { ir: 'Alto', uv: '99%', tser: 'N/A', warranty: '10 Anos' },
+    image: '/images/dualreflect-poster-1.webp',
+    shortDescription: 'Película de máxima eficiência para fachadas expostas ao sol, com efeito espelho diurno e alta rejeição térmica.',
+    fullDescription: 'Tecnologia refletiva com controle solar e privacidade diurna por efeito espelhado, preservando a leitura arquitetônica da fachada.',
+    keyMetrics: { ir: '82%', uv: '99,9%', tser: 'N/A', warranty: '10 Anos' },
     benefits: [
       { title: 'Privacidade Diurna', description: 'Alta reflexividade externa e privacidade durante o dia.', icon: 'Eye' },
       { title: 'Economia Energética', description: 'Redução significativa do brilho e calor.', icon: 'Sun' }
     ],
-    specs: { vlt: '15%', irer: 'N/A', tsr: 'N/A', thickness: 'N/A', material: 'Reflective Solar Control', glareReduction: 'N/A' }
+    specs: { vlt: '15%', irer: '82%', tsr: 'N/A', thickness: 'N/A', material: 'Refletiva Controle Solar', glareReduction: 'N/A' }
   },
   {
-    id: 'select-invisible-pro',
-    name: 'WINF™ Invisible Pro®',
-    subname: 'HT75100 | Alta Transparência',
-    badge: 'PROTEÇÃO NATURAL',
+    id: 'select-securityblinder',
+    name: 'WINF™ SecurityBlinder®',
+    subname: 'Safety & Security Film | Retenção de Estilhaços',
+    badge: 'BLINDAGEM TRANSPARENTE',
     category: 'arch',
     line: 'select',
-    image: 'https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&q=80&w=2072',
-    shortDescription: 'Proteção térmica premium mantendo a aparência natural do vidro.',
-    fullDescription: 'Tecnologia Nano Ceramic de alta transparência. Mantém a estética original do vidro com alta redução térmica e proteção UV.',
-    keyMetrics: { ir: '95%', uv: '99%', tser: 'N/A', warranty: '10 Anos' },
+    image: '/images/securityblind/scene-01.webp',
+    shortDescription: 'Blindagem multicamada de segurança que retém fragmentos após a quebra do vidro e reduz a projeção de estilhaços.',
+    fullDescription: 'Construção em PET de alta tenacidade com adesivo sensível à pressão. Aumenta o tempo necessário para uma intrusão sem trocar o conjunto de vidro existente.',
+    keyMetrics: { ir: 'N/A', uv: '99,9%', tser: 'N/A', warranty: '10 Anos' },
     benefits: [
-      { title: 'Estética Preservada', description: 'Mantém a aparência original e transparente.', icon: 'Eye' },
-      { title: 'Redução Térmica', description: 'Bloqueia 95% do calor IR sem escurecer o vidro.', icon: 'Sun' }
+      { title: 'Retenção de Estilhaços', description: 'Mantém os fragmentos aderidos após o impacto, reduzindo a projeção.', icon: 'Shield' },
+      { title: 'Proteção UV', description: 'Bloqueia 99,9% dos raios ultravioleta.', icon: 'Sun' }
     ],
-    specs: { vlt: '75%', irer: '95%', tsr: 'N/A', thickness: '2 mil', material: 'Nano Ceramic', glareReduction: 'N/A' }
+    specs: { vlt: 'N/A', irer: 'N/A', tsr: 'N/A', thickness: '4 a 8 mil', material: 'PET Multicamada', glareReduction: 'N/A' }
   },
   {
-    id: 'select-invisible-elite',
-    name: 'WINF™ Invisible Elite®',
-    subname: 'TOP70 | Ultra Premium',
-    badge: 'TECNOLOGIA SUPREMA',
+    id: 'select-miniblind-venetian',
+    name: 'WINF™ Miniblind & Venetian®',
+    subname: 'Película Decorativa | Efeito Persiana',
+    badge: 'PRIVACIDADE DECORATIVA',
     category: 'arch',
     line: 'select',
-    image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2670&auto=format&fit=crop',
-    shortDescription: 'A película arquitetônica mais avançada da WINF.',
-    fullDescription: 'Sputtering Ceramic Technology para fachadas de luxo e projetos AAA. Máxima rejeição de calor e transparência excepcional.',
-    keyMetrics: { ir: '98%', uv: '99%', tser: 'N/A', warranty: '10 Anos' },
+    image: '/images/miniblind-venetian/scene-01.webp',
+    shortDescription: 'Reproduz visualmente uma persiana horizontal, unindo privacidade moderada, difusão de luz e composição gráfica sem peças móveis.',
+    fullDescription: 'Faixas opacas ou jateadas alternadas com faixas transparentes, disponíveis em traços de 1,0 cm ou 0,5 cm. Solução permanente e sem manutenção.',
+    keyMetrics: { ir: 'N/A', uv: 'N/A', tser: 'N/A', warranty: 'Sob Consulta' },
     benefits: [
-      { title: 'Clareza Absoluta', description: 'Ultra Clear com transmissão luminosa de 70%.', icon: 'Eye' },
-      { title: 'Conforto Máximo', description: 'Rejeição de calor de 98% e conforto térmico superior.', icon: 'Sun' }
+      { title: 'Zero Peças Móveis', description: 'Efeito persiana permanente, sem manutenção.', icon: 'Shield' },
+      { title: 'Difusão de Luz', description: 'Privacidade suave com entrada de luz controlada.', icon: 'Eye' }
     ],
-    specs: { vlt: '70%', irer: '98%', tsr: 'N/A', thickness: '2 mil', material: 'Sputtering Ceramic', glareReduction: 'N/A' }
+    specs: { vlt: 'N/A', irer: 'N/A', tsr: 'N/A', thickness: 'Traços 1,0cm / 0,5cm', material: 'Película Decorativa Jateada', glareReduction: 'N/A' }
   },
 
   // ==========================================
-  // AEROCORE WINDOWFILM
+  // AEROCORE™ WINDOWFILM (AUTOMOTIVA)
   // ==========================================
   {
     id: 'aerocore-ghost',
@@ -483,10 +532,10 @@ const PRODUCT_CATALOG = [
     badge: 'CONFORTO DIÁRIO',
     category: 'auto',
     line: 'aerocore',
-    image: 'https://images.unsplash.com/photo-1611016186450-41da9d07372d?q=80&w=2600&auto=format&fit=crop',
+    image: '/images/aerocore-catalog/ghost-15.webp',
     shortDescription: 'A linha de entrada de alta performance, ideal para conforto diário e privacidade clássica.',
-    fullDescription: 'Filme arquitetônico e automotivo de alta precisão com tecnologia primária de termo-absorção clássica e alta estabilidade de cor.',
-    keyMetrics: { ir: '58%', uv: '92%', tser: 'N/A', warranty: '3 Anos' },
+    fullDescription: 'Filme automotivo de alta precisão com tecnologia primária de termo-absorção clássica e alta estabilidade de cor.',
+    keyMetrics: { ir: '58%', uv: '99%', tser: 'N/A', warranty: '3 Anos' },
     benefits: [
       { title: 'Conforto e Privacidade', description: 'Ideal para conforto diário e privacidade clássica.', icon: 'Eye' },
     ],
@@ -499,9 +548,9 @@ const PRODUCT_CATALOG = [
     badge: 'CONTROLE TÉRMICO',
     category: 'auto',
     line: 'aerocore',
-    image: 'https://images.unsplash.com/photo-1542382103-997f7422f6d0?q=80&w=2670&auto=format&fit=crop',
+    image: '/images/aerocore-catalog/phantom-15.webp',
     shortDescription: 'A evolução do controle térmico. Proteção avançada que não interfere em sinais GPS e conectividade.',
-    fullDescription: 'Filme arquitetônico e automotivo de alta precisão com tecnologia primária de matriz não-metálica e estabilidade de cor muito alta.',
+    fullDescription: 'Filme automotivo de alta precisão com tecnologia primária de matriz não metálica e estabilidade de cor muito alta.',
     keyMetrics: { ir: '73%', uv: '99%', tser: 'N/A', warranty: '10 Anos' },
     benefits: [
       { title: 'Zero Interferência', description: 'Matriz estrutural que não bloqueia GPS, 5G ou tags de pedágio.', icon: 'Shield' },
@@ -515,7 +564,7 @@ const PRODUCT_CATALOG = [
     badge: 'ÁPICE DA TECNOLOGIA',
     category: 'auto',
     line: 'aerocore',
-    image: 'https://images.unsplash.com/photo-1621360662232-a50e599b8287?q=80&w=2684&auto=format&fit=crop',
+    image: '/images/aerocore-catalog/spectre-15.webp',
     shortDescription: 'O ápice da tecnologia em rejeição de calor com conforto extremo, utilizando nanopartículas injetadas.',
     fullDescription: 'Tecnologia primária com nanopartículas cerâmicas, garantindo estabilidade de cor absoluta, conforto extremo e 95% de bloqueio térmico.',
     keyMetrics: { ir: '95%', uv: '99%', tser: 'N/A', warranty: '10 Anos' },
@@ -531,7 +580,7 @@ const PRODUCT_CATALOG = [
     badge: 'MÁXIMA PERFORMANCE',
     category: 'auto',
     line: 'aerocore',
-    image: 'https://images.unsplash.com/photo-1605342417724-11e2fbc0cb99?q=80&w=2614&auto=format&fit=crop',
+    image: '/images/aerocore-catalog/wraith-70.webp',
     shortDescription: 'Para clientes que exigem a mais alta performance térmica do planeta, mantendo o vidro perfeitamente transparente.',
     fullDescription: 'Tecnologia de sputtering multicamada garante estabilidade de cor absoluta, tornando a película praticamente invisível com o máximo de proteção térmica.',
     keyMetrics: { ir: '98%', uv: '99%', tser: 'N/A', warranty: '10 Anos' },
@@ -542,287 +591,60 @@ const PRODUCT_CATALOG = [
   },
 
   // ==========================================
-  // NEOSKIN DEFENSE (PPF & LIQUID)
+  // NEOSKIN™ (PAINT PROTECTION FILM)
   // ==========================================
   {
     id: 'neoskin-bunker150',
     name: 'NeoSkin™ BKR-150 Bunker',
-    subname: 'TPU Elastomérico Premium | 150 Microns',
+    subname: 'PPF Elite | 150 Microns',
     badge: 'DEFESA INVISÍVEL',
     category: 'auto',
     line: 'neoskin',
-    image: 'https://images.unsplash.com/photo-1619405399517-d7fce0f13302?q=80&w=2574&auto=format&fit=crop',
-    shortDescription: 'Defesa balística invisível para proteção do dia-a-dia contra pedriscos, arranhões e desgastes.',
-    fullDescription: 'Tecnologia primária de auto-cura estrutural térmica, resistência química alta a ácidos leves, chuva ácida e sal, com 99% de bloqueio ativo UV anti-amarelamento.',
+    image: '/images/neoskin-catalog/bunker-150.webp',
+    shortDescription: 'Barreira hidrofóbica e tática de alta densidade contra pedriscos, arranhões e desgastes.',
+    fullDescription: 'Poliuretano de alta elasticidade com autorregeneração de micro riscos por calor solar ou térmico. Resistência a pedrisco, areia e contato diário.',
     keyMetrics: { ir: 'N/A', uv: '99%', tser: 'N/A', warranty: '8 Anos', thickness: '6.0 Mil (150 Microns)' },
     benefits: [
       { title: 'Auto-Cura Estrutural', description: 'Regeneração contra pequenos riscos apenas com o calor do sol ou água quente.', icon: 'Shield' },
     ],
-    specs: { vlt: '100%', irer: 'N/A', tsr: 'N/A', thickness: '6.0 Mil', material: 'TPU Elastomérico Premium', glareReduction: '0%' }
+    specs: { vlt: '100%', irer: 'N/A', tsr: 'N/A', thickness: '150 microns (BKR-150)', material: 'TPU Elastomérico Premium', glareReduction: '0%' }
   },
   {
     id: 'neoskin-apocalypse190',
     name: 'NeoSkin™ APX-190 Apocalypse',
-    subname: 'TPU Blindado Militar | 190 Microns',
+    subname: 'PPF Militar | 190 Microns',
     badge: 'RESISTÊNCIA BRUTAL',
     category: 'auto',
     line: 'neoskin',
-    image: 'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=2670&auto=format&fit=crop',
-    shortDescription: 'Nossa armadura mais espessa e resistente, projetada para suportar os impactos mais brutais nas rodovias e pistas.',
-    fullDescription: 'Tecnologia de auto-cura instantânea por calor, com 450% de alongamento máximo. Resistência química absoluta contra solventes, combustíveis e detritos.',
-    keyMetrics: { ir: 'N/A', uv: '99.9%', tser: 'N/A', warranty: 'Vitalícia', thickness: '7.5 Mil (190 Microns)' },
+    image: '/images/neoskin-catalog/apocalypse-190.webp',
+    shortDescription: 'Nossa armadura mais espessa e resistente, projetada para suportar os impactos mais brutais.',
+    fullDescription: 'Maior espessura da família NeoSkin, associada a proteção física contra impactos de alta energia e superfícies que exigem uma camada de defesa mais robusta.',
+    keyMetrics: { ir: 'N/A', uv: '99,9%', tser: 'N/A', warranty: 'Vitalícia', thickness: '7.5 Mil (190 Microns)' },
     benefits: [
-      { title: 'Barreira Espectral 99.9%', description: 'Anti-amarelamento absoluto e defense química extrema.', icon: 'Shield' },
+      { title: 'Barreira Espectral 99,9%', description: 'Anti-amarelamento absoluto e defesa química extrema.', icon: 'Shield' },
     ],
-    specs: { vlt: '100%', irer: 'N/A', tsr: 'N/A', thickness: '7.5 Mil', material: 'TPU Blindado Militar', glareReduction: '0%' }
+    specs: { vlt: '100%', irer: 'N/A', tsr: 'N/A', thickness: '190 microns (APX-190)', material: 'TPU Blindado Militar', glareReduction: '0%' }
   },
+
+  // ==========================================
+  // CERAMIC ARMORING™
+  // ==========================================
   {
-    id: 'neoskin-ghostliquid',
-    name: 'NeoSkin™ GHT-LIQ Ghost Liquid',
-    subname: 'Nano-Cerâmico Vitrificador 9H',
-    badge: 'BRILHO EXTREMO',
+    id: 'ceramic-armoring',
+    name: 'Ceramic Armoring™',
+    subname: 'Blindagem Molecular 9H',
+    badge: 'BLINDAGEM MOLECULAR',
     category: 'auto',
-    line: 'neoskin',
-    image: 'https://images.unsplash.com/photo-1620336655174-32ff84ee624d?q=80&w=2574&auto=format&fit=crop',
-    shortDescription: 'Cristalização química para máxima repelência de água e brilho espelhado extremo.',
-    fullDescription: 'Cristalização de Sílica 9H em camada nano (10-15 nm). Propriedades ultra-hidrofóbicas e estabilizador térmico ativo.',
-    keyMetrics: { ir: 'N/A', uv: 'Estabilizador Ativo', tser: 'N/A', warranty: '3 Anos', thickness: '10-15 nm' },
+    line: 'ceramic',
+    image: '/images/ceramic-hero.webp',
+    shortDescription: 'Blindagem molecular cerâmica de dureza 9H para vidros e superfícies premium, com acabamento invisível.',
+    fullDescription: 'Camada de proteção molecular que protege contra riscos, ação química e desgaste, mantendo a superfície com acabamento invisível.',
+    keyMetrics: { ir: 'N/A', uv: 'N/A', tser: 'N/A', warranty: 'Sob Consulta' },
     benefits: [
-      { title: 'Ultra-Hidrofóbico', description: 'Efeito lotus que repele líquidos, tornando a superfície auto-limpante e anti-corrosiva.', icon: 'Droplets' },
+      { title: 'Dureza 9H', description: 'Proteção contra riscos e desgaste do dia a dia.', icon: 'Shield' },
+      { title: 'Acabamento Invisível', description: 'Não altera a estética original da superfície.', icon: 'Eye' },
     ],
-    specs: { vlt: '100%', irer: 'N/A', tsr: 'N/A', thickness: 'Nano (10-15nm)', material: 'Sílica 9H Vitrificadora', glareReduction: '0%' }
-  },
-
-  // ==========================================
-  // MARINE — cópia dos produtos Auto
-  // ==========================================
-  {
-    id: 'marine-aerocore-ghost',
-    name: 'AeroCore™ Ghost',
-    subname: 'HP-Series | Performance Tingida',
-    badge: 'CONFORTO DIÁRIO',
-    category: 'marine',
-    line: 'aerocore',
-    image: 'https://images.unsplash.com/photo-1611016186450-41da9d07372d?q=80&w=2600&auto=format&fit=crop',
-    shortDescription: 'A linha de entrada de alta performance, ideal para conforto diário e privacidade clássica.',
-    fullDescription: 'Filme marítimo de alta precisão com tecnologia primária de termo-absorção clássica e alta estabilidade de cor.',
-    keyMetrics: { ir: '58%', uv: '92%', tser: 'N/A', warranty: '3 Anos' },
-    benefits: [
-      { title: 'Conforto e Privacidade', description: 'Ideal para conforto diário e privacidade clássica.', icon: 'Eye' },
-    ],
-    specs: { vlt: '05%, 15%, 35%', irer: '58%', tsr: 'N/A', thickness: 'N/A', material: 'Performance Tingida', glareReduction: 'N/A' }
-  },
-  {
-    id: 'marine-aerocore-phantom',
-    name: 'AeroCore™ Phantom',
-    subname: 'TTA-Series | Carbono Estrutural',
-    badge: 'CONTROLE TÉRMICO',
-    category: 'marine',
-    line: 'aerocore',
-    image: 'https://images.unsplash.com/photo-1542382103-997f7422f6d0?q=80&w=2670&auto=format&fit=crop',
-    shortDescription: 'A evolução do controle térmico. Proteção avançada que não interfere em sinais GPS e conectividade.',
-    fullDescription: 'Filme marítimo de alta precisão com tecnologia primária de matriz não-metálica e estabilidade de cor muito alta.',
-    keyMetrics: { ir: '73%', uv: '99%', tser: 'N/A', warranty: '10 Anos' },
-    benefits: [
-      { title: 'Zero Interferência', description: 'Matriz estrutural que não bloqueia GPS, 5G ou tags de pedágio.', icon: 'Shield' },
-    ],
-    specs: { vlt: '05%, 15%, 35%', irer: '73%', tsr: 'N/A', thickness: 'N/A', material: 'Carbono Estrutural', glareReduction: 'N/A' }
-  },
-  {
-    id: 'marine-aerocore-spectre',
-    name: 'AeroCore™ Spectre',
-    subname: 'HT-Series | Nano-Cerâmica',
-    badge: 'ÁPICE DA TECNOLOGIA',
-    category: 'marine',
-    line: 'aerocore',
-    image: 'https://images.unsplash.com/photo-1621360662232-a50e599b8287?q=80&w=2684&auto=format&fit=crop',
-    shortDescription: 'O ápice da tecnologia em rejeição de calor com conforto extremo, utilizando nanopartículas injetadas.',
-    fullDescription: 'Tecnologia primária com nanopartículas cerâmicas, garantindo estabilidade de cor absoluta, conforto extremo e 95% de bloqueio térmico.',
-    keyMetrics: { ir: '95%', uv: '99%', tser: 'N/A', warranty: '10 Anos' },
-    benefits: [
-      { title: 'Bloqueio Extremo IR', description: 'As nanopartículas interceptam 95% das ondas infravermelhas causadoras de calor.', icon: 'Sun' },
-    ],
-    specs: { vlt: '05%, 15%, 35%', irer: '95%', tsr: 'N/A', thickness: 'N/A', material: 'Nano-Cerâmica', glareReduction: 'N/A' }
-  },
-  {
-    id: 'marine-aerocore-wraith70',
-    name: 'AeroCore™ Wraith 70',
-    subname: 'TOP-Series | Sputtering Iônico',
-    badge: 'MÁXIMA PERFORMANCE',
-    category: 'marine',
-    line: 'aerocore',
-    image: 'https://images.unsplash.com/photo-1605342417724-11e2fbc0cb99?q=80&w=2614&auto=format&fit=crop',
-    shortDescription: 'Para clientes que exigem a mais alta performance térmica do planeta, mantendo o vidro perfeitamente transparente.',
-    fullDescription: 'Tecnologia de sputtering multicamada garante estabilidade de cor absoluta, tornando a película praticamente invisível com o máximo de proteção térmica.',
-    keyMetrics: { ir: '98%', uv: '99%', tser: 'N/A', warranty: '10 Anos' },
-    benefits: [
-      { title: 'Transparência Absoluta', description: 'Visibilidade cristalina de 70% VLT, ideal para embarcações premium.', icon: 'Eye' },
-    ],
-    specs: { vlt: '70%', irer: '98%', tsr: 'N/A', thickness: 'N/A', material: 'Sputtering Multicamada', glareReduction: 'N/A' }
-  },
-  {
-    id: 'marine-neoskin-bunker150',
-    name: 'NeoSkin™ BKR-150 Bunker',
-    subname: 'TPU Elastomérico Premium | 150 Microns',
-    badge: 'DEFESA INVISÍVEL',
-    category: 'marine',
-    line: 'neoskin',
-    image: 'https://images.unsplash.com/photo-1619405399517-d7fce0f13302?q=80&w=2574&auto=format&fit=crop',
-    shortDescription: 'Defesa balística invisível para proteção contra pedriscos, arranhões e desgastes em ambiente marítimo.',
-    fullDescription: 'Tecnologia primária de auto-cura estrutural térmica com resistência química alta a sal marinho, chuva ácida e umidade extrema.',
-    keyMetrics: { ir: 'N/A', uv: '99%', tser: 'N/A', warranty: '8 Anos', thickness: '6.0 Mil (150 Microns)' },
-    benefits: [
-      { title: 'Auto-Cura Estrutural', description: 'Regeneração contra pequenos riscos apenas com o calor do sol ou água quente.', icon: 'Shield' },
-    ],
-    specs: { vlt: '100%', irer: 'N/A', tsr: 'N/A', thickness: '6.0 Mil', material: 'TPU Elastomérico Premium', glareReduction: '0%' }
-  },
-  {
-    id: 'marine-neoskin-apocalypse190',
-    name: 'NeoSkin™ APX-190 Apocalypse',
-    subname: 'TPU Blindado Militar | 190 Microns',
-    badge: 'RESISTÊNCIA BRUTAL',
-    category: 'marine',
-    line: 'neoskin',
-    image: 'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=2670&auto=format&fit=crop',
-    shortDescription: 'Nossa armadura mais espessa e resistente, projetada para suportar os impactos mais brutais em alto mar.',
-    fullDescription: 'Tecnologia de auto-cura instantânea por calor, com 450% de alongamento máximo. Resistência química absoluta contra sal, solventes e detritos marítimos.',
-    keyMetrics: { ir: 'N/A', uv: '99.9%', tser: 'N/A', warranty: 'Vitalícia', thickness: '7.5 Mil (190 Microns)' },
-    benefits: [
-      { title: 'Barreira Espectral 99.9%', description: 'Anti-amarelamento absoluto e defesa química extrema contra maresia.', icon: 'Shield' },
-    ],
-    specs: { vlt: '100%', irer: 'N/A', tsr: 'N/A', thickness: '7.5 Mil', material: 'TPU Blindado Militar', glareReduction: '0%' }
-  },
-  {
-    id: 'marine-neoskin-ghostliquid',
-    name: 'NeoSkin™ GHT-LIQ Ghost Liquid',
-    subname: 'Nano-Cerâmico Vitrificador 9H',
-    badge: 'BRILHO EXTREMO',
-    category: 'marine',
-    line: 'neoskin',
-    image: 'https://images.unsplash.com/photo-1620336655174-32ff84ee624d?q=80&w=2574&auto=format&fit=crop',
-    shortDescription: 'Cristalização química para máxima repelência de água salgada e brilho espelhado extremo.',
-    fullDescription: 'Cristalização de Sílica 9H em camada nano (10-15 nm). Propriedades ultra-hidrofóbicas ideais para ambientes marítimos.',
-    keyMetrics: { ir: 'N/A', uv: 'Estabilizador Ativo', tser: 'N/A', warranty: '3 Anos', thickness: '10-15 nm' },
-    benefits: [
-      { title: 'Ultra-Hidrofóbico', description: 'Efeito lotus que repele água salgada, tornando a superfície auto-limpante e anti-corrosiva.', icon: 'Droplets' },
-    ],
-    specs: { vlt: '100%', irer: 'N/A', tsr: 'N/A', thickness: 'Nano (10-15nm)', material: 'Sílica 9H Vitrificadora', glareReduction: '0%' }
-  },
-
-  // ==========================================
-  // AERO — cópia dos produtos Auto
-  // ==========================================
-  {
-    id: 'aero-aerocore-ghost',
-    name: 'AeroCore™ Ghost',
-    subname: 'HP-Series | Performance Tingida',
-    badge: 'CONFORTO DIÁRIO',
-    category: 'aero',
-    line: 'aerocore',
-    image: 'https://images.unsplash.com/photo-1611016186450-41da9d07372d?q=80&w=2600&auto=format&fit=crop',
-    shortDescription: 'A linha de entrada de alta performance, ideal para conforto diário e privacidade clássica em aeronaves.',
-    fullDescription: 'Filme aeroespacial de alta precisão com tecnologia primária de termo-absorção clássica e alta estabilidade de cor.',
-    keyMetrics: { ir: '58%', uv: '92%', tser: 'N/A', warranty: '3 Anos' },
-    benefits: [
-      { title: 'Conforto e Privacidade', description: 'Ideal para conforto diário e privacidade clássica em cabines.', icon: 'Eye' },
-    ],
-    specs: { vlt: '05%, 15%, 35%', irer: '58%', tsr: 'N/A', thickness: 'N/A', material: 'Performance Tingida', glareReduction: 'N/A' }
-  },
-  {
-    id: 'aero-aerocore-phantom',
-    name: 'AeroCore™ Phantom',
-    subname: 'TTA-Series | Carbono Estrutural',
-    badge: 'CONTROLE TÉRMICO',
-    category: 'aero',
-    line: 'aerocore',
-    image: 'https://images.unsplash.com/photo-1542382103-997f7422f6d0?q=80&w=2670&auto=format&fit=crop',
-    shortDescription: 'A evolução do controle térmico. Proteção avançada que não interfere em sinais de navegação aérea.',
-    fullDescription: 'Filme aeroespacial de alta precisão com tecnologia primária de matriz não-metálica e estabilidade de cor muito alta.',
-    keyMetrics: { ir: '73%', uv: '99%', tser: 'N/A', warranty: '10 Anos' },
-    benefits: [
-      { title: 'Zero Interferência', description: 'Matriz estrutural que não bloqueia GPS, transponders ou sistemas de navegação.', icon: 'Shield' },
-    ],
-    specs: { vlt: '05%, 15%, 35%', irer: '73%', tsr: 'N/A', thickness: 'N/A', material: 'Carbono Estrutural', glareReduction: 'N/A' }
-  },
-  {
-    id: 'aero-aerocore-spectre',
-    name: 'AeroCore™ Spectre',
-    subname: 'HT-Series | Nano-Cerâmica',
-    badge: 'ÁPICE DA TECNOLOGIA',
-    category: 'aero',
-    line: 'aerocore',
-    image: 'https://images.unsplash.com/photo-1621360662232-a50e599b8287?q=80&w=2684&auto=format&fit=crop',
-    shortDescription: 'O ápice da tecnologia em rejeição de calor com conforto extremo para cabines aeroespaciais.',
-    fullDescription: 'Tecnologia primária com nanopartículas cerâmicas, garantindo estabilidade de cor absoluta, conforto extremo e 95% de bloqueio térmico.',
-    keyMetrics: { ir: '95%', uv: '99%', tser: 'N/A', warranty: '10 Anos' },
-    benefits: [
-      { title: 'Bloqueio Extremo IR', description: 'As nanopartículas interceptam 95% das ondas infravermelhas causadoras de calor em altitude.', icon: 'Sun' },
-    ],
-    specs: { vlt: '05%, 15%, 35%', irer: '95%', tsr: 'N/A', thickness: 'N/A', material: 'Nano-Cerâmica', glareReduction: 'N/A' }
-  },
-  {
-    id: 'aero-aerocore-wraith70',
-    name: 'AeroCore™ Wraith 70',
-    subname: 'TOP-Series | Sputtering Iônico',
-    badge: 'MÁXIMA PERFORMANCE',
-    category: 'aero',
-    line: 'aerocore',
-    image: 'https://images.unsplash.com/photo-1605342417724-11e2fbc0cb99?q=80&w=2614&auto=format&fit=crop',
-    shortDescription: 'Para aeronaves que exigem a mais alta performance térmica mantendo o vidro perfeitamente transparente.',
-    fullDescription: 'Tecnologia de sputtering multicamada garante estabilidade de cor absoluta, tornando a película praticamente invisível com o máximo de proteção térmica.',
-    keyMetrics: { ir: '98%', uv: '99%', tser: 'N/A', warranty: '10 Anos' },
-    benefits: [
-      { title: 'Transparência Absoluta', description: 'Visibilidade cristalina de 70% VLT, ideal para cockpits e cabines de luxo.', icon: 'Eye' },
-    ],
-    specs: { vlt: '70%', irer: '98%', tsr: 'N/A', thickness: 'N/A', material: 'Sputtering Multicamada', glareReduction: 'N/A' }
-  },
-  {
-    id: 'aero-neoskin-bunker150',
-    name: 'NeoSkin™ BKR-150 Bunker',
-    subname: 'TPU Elastomérico Premium | 150 Microns',
-    badge: 'DEFESA INVISÍVEL',
-    category: 'aero',
-    line: 'neoskin',
-    image: 'https://images.unsplash.com/photo-1619405399517-d7fce0f13302?q=80&w=2574&auto=format&fit=crop',
-    shortDescription: 'Defesa balística invisível para proteção de superfícies aeroespaciais contra abrasão e impactos.',
-    fullDescription: 'Tecnologia primária de auto-cura estrutural térmica, resistência química alta e bloqueio UV total para proteção em altitude.',
-    keyMetrics: { ir: 'N/A', uv: '99%', tser: 'N/A', warranty: '8 Anos', thickness: '6.0 Mil (150 Microns)' },
-    benefits: [
-      { title: 'Auto-Cura Estrutural', description: 'Regeneração contra pequenos riscos em condições extremas de temperatura.', icon: 'Shield' },
-    ],
-    specs: { vlt: '100%', irer: 'N/A', tsr: 'N/A', thickness: '6.0 Mil', material: 'TPU Elastomérico Premium', glareReduction: '0%' }
-  },
-  {
-    id: 'aero-neoskin-apocalypse190',
-    name: 'NeoSkin™ APX-190 Apocalypse',
-    subname: 'TPU Blindado Militar | 190 Microns',
-    badge: 'RESISTÊNCIA BRUTAL',
-    category: 'aero',
-    line: 'neoskin',
-    image: 'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=2670&auto=format&fit=crop',
-    shortDescription: 'Nossa armadura mais espessa e resistente, projetada para suportar condições extremas aeroespaciais.',
-    fullDescription: 'Tecnologia de auto-cura instantânea por calor, com 450% de alongamento máximo. Resistência química absoluta contra combustíveis aeronáuticos e detritos.',
-    keyMetrics: { ir: 'N/A', uv: '99.9%', tser: 'N/A', warranty: 'Vitalícia', thickness: '7.5 Mil (190 Microns)' },
-    benefits: [
-      { title: 'Barreira Espectral 99.9%', description: 'Anti-amarelamento absoluto e defesa química extrema para uso aeroespacial.', icon: 'Shield' },
-    ],
-    specs: { vlt: '100%', irer: 'N/A', tsr: 'N/A', thickness: '7.5 Mil', material: 'TPU Blindado Militar', glareReduction: '0%' }
-  },
-  {
-    id: 'aero-neoskin-ghostliquid',
-    name: 'NeoSkin™ GHT-LIQ Ghost Liquid',
-    subname: 'Nano-Cerâmico Vitrificador 9H',
-    badge: 'BRILHO EXTREMO',
-    category: 'aero',
-    line: 'neoskin',
-    image: 'https://images.unsplash.com/photo-1620336655174-32ff84ee624d?q=80&w=2574&auto=format&fit=crop',
-    shortDescription: 'Cristalização química para máxima repelência de sujeira e brilho espelhado em superfícies aeronáuticas.',
-    fullDescription: 'Cristalização de Sílica 9H em camada nano (10-15 nm). Propriedades ultra-hidrofóbicas e estabilizador térmico ativo para uso aeroespacial.',
-    keyMetrics: { ir: 'N/A', uv: 'Estabilizador Ativo', tser: 'N/A', warranty: '3 Anos', thickness: '10-15 nm' },
-    benefits: [
-      { title: 'Ultra-Hidrofóbico', description: 'Efeito lotus que repele líquidos em qualquer altitude, superfície auto-limpante e anti-corrosiva.', icon: 'Droplets' },
-    ],
-    specs: { vlt: '100%', irer: 'N/A', tsr: 'N/A', thickness: 'Nano (10-15nm)', material: 'Sílica 9H Vitrificadora', glareReduction: '0%' }
+    specs: { vlt: 'N/A', irer: 'N/A', tsr: 'N/A', thickness: 'Nano', material: 'Blindagem Molecular Cerâmica 9H', glareReduction: 'N/A' }
   }
 ];
 
@@ -836,17 +658,7 @@ const CATEGORY_META = {
   auto: {
     label: 'Divisão Automotiva de Performance',
     title: 'O mesmo veículo.<br><span class="font-medium">Uma nova blindagem.</span>',
-    desc: '<p><b class="text-white">Engenharia Aeroespacial em Cada Camada.</b> Da nanocerâmica invisível ao PPF mais brutal do mercado, proteja a pintura e o conforto térmico do seu veículo.</p>'
-  },
-  marine: {
-    label: 'Divisão Marítima de Proteção',
-    title: 'O mesmo mar.<br><span class="font-medium">Uma nova proteção.</span>',
-    desc: '<p><b class="text-white">Resistência ao Extremo Marítimo.</b> Películas e proteções desenvolvidas para suportar sal, umidade e radiação intensa. Conforto e durabilidade para embarcações que exigem o melhor.</p>'
-  },
-  aero: {
-    label: 'Divisão Aeroespacial de Elite',
-    title: 'O mesmo horizonte.<br><span class="font-medium">Uma nova altitude.</span>',
-    desc: '<p><b class="text-white">Tecnologia que Desafia a Gravidade.</b> Soluções de proteção para aeronaves que operam nos limites da performance. Máxima proteção térmica, UV e estrutural para cabines de alto padrão.</p>'
+    desc: '<p><b class="text-white">Engenharia Aplicada em Cada Camada.</b> Da nano cerâmica invisível ao PPF mais resistente do mercado, proteja a pintura e o conforto térmico do seu veículo.</p>'
   }
 };
 
@@ -875,7 +687,7 @@ function setCategory(cat) {
   document.getElementById('sim-film-select').value = '';
 
   // tabs visual state
-  ['arch'].forEach(c => {
+  ['arch', 'auto'].forEach(c => {
     const btn = document.getElementById(`tab-${c}`);
     if (!btn) return;
     btn.className = (c === cat)
