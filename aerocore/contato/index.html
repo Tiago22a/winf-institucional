@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato | Canal Seguro AEROCORE™</title>
+    <meta name="description" content="Entre em contato com a equipe de engenharia e atendimento exclusivo AEROCORE." />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Mr+Dafoe&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              aerocore: ['Outfit', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>body { background-color: #000000; color: #f0f0f0; font-family: 'Inter', sans-serif; }</style>
+  </head>
+  <body class="antialiased bg-black text-white">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-[60] transition-all duration-700 bg-transparent py-8">
+      <div class="max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center">
+        <a href="../" class="flex items-center group cursor-pointer">
+          <span class="text-base md:text-xl tracking-[0.5em] font-light text-white font-aerocore">
+            AEROCORE<span class="text-white/60 text-[10px] md:text-xs align-top ml-1 font-sans">™</span>
+          </span>
+        </a>
+        <button id="menu-toggle" aria-label="Abrir Menu" class="relative w-10 h-10 flex flex-col justify-center items-center gap-[6px] text-white/70 hover:text-white z-[60] cursor-pointer">
+          <span id="ham-line-1" class="block w-6 h-[1px] bg-current transition-transform duration-500 ease-in-out"></span>
+          <span id="ham-line-2" class="block w-6 h-[1px] bg-current transition-transform duration-500 ease-in-out"></span>
+        </button>
+      </div>
+    </nav>
+
+    <div id="nav-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-md z-[45] opacity-0 pointer-events-none transition-opacity duration-500"></div>
+    <div id="nav-drawer" class="fixed top-0 right-0 h-screen w-full md:w-96 bg-black/85 backdrop-blur-2xl border-l border-white/10 z-[55] flex flex-col justify-center items-center translate-x-full transition-transform duration-500">
+      <div class="flex flex-col items-center gap-4 w-full max-h-[85vh] overflow-y-auto pt-20 pb-12 px-6">
+        <a href="../" class="w-full p-3.5 bg-white/[0.03] border border-white/10 rounded-sm hover:bg-white/[0.08] transition-all flex flex-col items-center gap-1.5"><i data-lucide="home" class="w-5 h-5 text-white/70"></i><span class="text-[12px] uppercase tracking-[0.2em] text-white">Nexus</span></a>
+        <a href="../aerocore/" class="w-full p-3.5 bg-white/[0.03] border border-white/10 rounded-sm hover:bg-white/[0.08] transition-all flex flex-col items-center gap-1.5"><i data-lucide="cloud" class="w-5 h-5 text-white/70"></i><span class="text-[12px] uppercase tracking-[0.2em] text-white">AeroCore</span></a>
+        <a href="../neoskin/" class="w-full p-3.5 bg-white/[0.03] border border-white/10 rounded-sm hover:bg-white/[0.08] transition-all flex flex-col items-center gap-1.5"><i data-lucide="shield" class="w-5 h-5 text-[#4e6130]"></i><span class="text-[12px] uppercase tracking-[0.2em] text-white">NeoSkin</span></a>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-24 px-4 md:px-8">
+      <div class="max-w-3xl mx-auto">
+        <span class="text-[10px] tracking-[0.8em] text-white/40 uppercase block mb-4 font-light">Canal Seguro // Atendimento Prioritário</span>
+        <h1 class="text-4xl md:text-6xl font-thin tracking-tighter italic mb-12">Entre em Contato</h1>
+        
+        <form class="contact-form-component space-y-6">
+          <input type="text" name="name" placeholder="NOME" class="w-full bg-white/[0.03] border border-white/[0.1] p-4 text-sm tracking-widest uppercase text-white focus:outline-none focus:border-white transition-all font-light" />
+          <input type="email" name="email" placeholder="EMAIL" class="w-full bg-white/[0.03] border border-white/[0.1] p-4 text-sm tracking-widest uppercase text-white focus:outline-none focus:border-white transition-all font-light" />
+          <select name="interest" class="w-full bg-black border border-white/[0.1] p-4 text-sm tracking-widest uppercase text-white focus:outline-none focus:border-white transition-all font-light">
+            <option value="" disabled selected>SELECIONE O ASSUNTO</option>
+            <option value="AeroCore Windowfilm">AeroCore Windowfilm</option>
+            <option value="NeoSkin PPF">NeoSkin PPF</option>
+            <option value="WINF Select Arquitetura">WINF Select (Arquitetura)</option>
+            <option value="Ceramic Armoring">Ceramic Armoring</option>
+            <option value="Licenciamento">Licenciamento Territorial</option>
+          </select>
+          <textarea placeholder="MENSAGEM" class="w-full bg-white/[0.03] border border-white/[0.1] p-4 text-sm tracking-widest uppercase text-white h-32 focus:outline-none focus:border-white transition-all font-light"></textarea>
+          
+          <div class="flex flex-col sm:flex-row gap-4">
+            <button type="button" class="contact-send-btn flex-1 bg-white text-black p-4 font-bold uppercase tracking-[0.3em] text-xs hover:bg-white/90 transition-all cursor-pointer">
+              Enviar Mensagem
+            </button>
+            <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20um%20atendimento%20AeroCore." target="_blank" rel="noopener noreferrer" class="contact-whatsapp-btn flex items-center justify-center gap-2 px-8 py-4 border border-[#25D366]/40 text-[#25D366] uppercase font-bold text-xs tracking-widest hover:bg-[#25D366]/10 transition-all">
+              WhatsApp
+            </a>
+          </div>
+
+          <div class="contact-feedback hidden text-center text-xs tracking-widest uppercase text-emerald-400 font-mono py-2">
+            Mensagem transmitida. Entraremos em contato com você em breve.
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer class="py-24 bg-black border-t border-white/5 px-4 text-center">
+      <div class="text-3xl tracking-[0.6em] font-light text-white mb-6 font-aerocore">AEROCORE</div>
+      <p class="text-[8px] text-white/60 tracking-[0.4em] uppercase">© 2025 AEROCORE. TODOS OS DIREITOS RESERVADOS.</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "name": "Remix AEROCORE",
+  "description": "Plataforma institucional para a AEROCORE, líder global em engenharia de alta performance e sistemas avançados.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

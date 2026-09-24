@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AeroStrike | Proteção Solar para Aeronaves | AeroCore</title>
+    <meta name="description" content="Proteção solar de elite e engenharia para jatos e helicópteros. Domínio dos céus com AeroCore." />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Mr+Dafoe&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              display: ['Montserrat', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              aerocore: ['Outfit', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>body { background-color: #050505; color: #f0f0f0; font-family: 'Inter', sans-serif; }</style>
+  </head>
+  <body class="antialiased bg-[#050505] text-[#f0f0f0]">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-[60] transition-all duration-700 bg-transparent py-8">
+      <div class="max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center">
+        <a href="../" class="flex items-center group cursor-pointer">
+          <span class="text-base md:text-xl tracking-[0.5em] font-light text-white font-aerocore">
+            AEROCORE<span class="text-white/60 text-[10px] md:text-xs align-top ml-1 font-sans">™</span>
+          </span>
+        </a>
+        <button id="menu-toggle" aria-label="Abrir Menu" class="relative w-10 h-10 flex flex-col justify-center items-center gap-[6px] text-white/70 hover:text-white z-[60] cursor-pointer">
+          <span id="ham-line-1" class="block w-6 h-[1px] bg-current transition-transform duration-500 ease-in-out"></span>
+          <span id="ham-line-2" class="block w-6 h-[1px] bg-current transition-transform duration-500 ease-in-out"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Slide-out Menu -->
+    <div id="nav-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-md z-[45] opacity-0 pointer-events-none transition-opacity duration-500"></div>
+    <div id="nav-drawer" class="fixed top-0 right-0 h-screen w-full md:w-96 bg-black/85 backdrop-blur-2xl border-l border-white/10 z-[55] flex flex-col justify-center items-center translate-x-full transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+      <div class="flex flex-col items-center gap-4 w-full max-h-[85vh] overflow-y-auto pt-20 pb-12 px-6">
+        <a href="../" class="w-full p-3.5 bg-white/[0.03] border border-white/10 rounded-sm hover:bg-white/[0.08] transition-all flex flex-col items-center gap-1.5"><i data-lucide="home" class="w-5 h-5 text-white/70"></i><span class="text-[12px] uppercase tracking-[0.2em] text-white">Nexus</span></a>
+        <a href="../aerocore/" class="w-full p-3.5 bg-white/[0.03] border border-white/10 rounded-sm hover:bg-white/[0.08] transition-all flex flex-col items-center gap-1.5"><i data-lucide="cloud" class="w-5 h-5 text-white/70"></i><span class="text-[12px] uppercase tracking-[0.2em] text-white">AeroCore</span></a>
+        <a href="../winf-select/" class="w-full p-3.5 bg-white/[0.03] border border-white/10 rounded-sm hover:bg-white/[0.08] transition-all flex flex-col items-center gap-1.5"><i data-lucide="building-2" class="w-5 h-5 text-amber-400"></i><span class="text-[12px] uppercase tracking-[0.2em] text-white">WINF Select</span></a>
+        <a href="../ceramic-armoring/" class="w-full p-3.5 bg-white/[0.03] border border-white/10 rounded-sm hover:bg-white/[0.08] transition-all flex flex-col items-center gap-1.5"><i data-lucide="sparkles" class="w-5 h-5 text-white/70"></i><span class="text-[12px] uppercase tracking-[0.2em] text-white">Ceramic Armoring</span></a>
+        <a href="../neoskin/" class="w-full p-3.5 bg-white/[0.03] border border-white/10 rounded-sm hover:bg-white/[0.08] transition-all flex flex-col items-center gap-1.5"><i data-lucide="shield" class="w-5 h-5 text-[#4e6130]"></i><span class="text-[12px] uppercase tracking-[0.2em] text-white">NeoSkin</span></a>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+      <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-black pt-32">
+        <video src="../aerostrike-video.mp4" autoPlay muted loop playsInline class="absolute inset-0 w-full h-full object-cover z-0 opacity-40"></video>
+        <div class="absolute top-32 left-8 z-20">
+          <a href="../" class="flex items-center gap-2 text-white/50 hover:text-white transition-colors text-xs uppercase tracking-widest">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i> Voltar
+          </a>
+        </div>
+        <div class="container mx-auto px-4 sm:px-8 relative z-10 text-center">
+          <h1 class="text-4xl md:text-[5rem] font-light uppercase tracking-[0.2em] leading-none mb-8 text-white font-aerocore">
+            AeroStrike
+          </h1>
+          <p class="text-sm md:text-lg text-white/65 tracking-[0.4em] uppercase font-light max-w-2xl mx-auto">
+            Proteção solar de elite e engenharia para jatos e helicópteros.
+          </p>
+        </div>
+      </section>
+
+      <!-- Applications -->
+      <section class="py-24 bg-black border-y border-white/5">
+        <div class="max-w-4xl mx-auto px-8">
+          <h2 class="text-3xl font-light uppercase tracking-[0.3em] mb-12">Aplicações</h2>
+          <div class="text-white/60 space-y-6 leading-relaxed text-sm md:text-base">
+            <p>A tecnologia AeroCore para aeronaves neutraliza radiação UV/IR sem comprometer sistemas de comunicação, garantindo conforto térmico absoluto e visibilidade cristalina para pilotos e passageiros.</p>
+            <p>Soluções ideais para jatos privados e helicópteros de resgate ou executivos, exigindo proteção contra calor extremo sem interferir em sistemas vitais.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Service Packs -->
+      <section class="py-24 bg-black">
+        <div class="container mx-auto px-8">
+          <h2 class="text-3xl font-light uppercase tracking-[0.3em] mb-16 text-center">Combos de Serviço</h2>
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="border border-white/10 p-8 bg-white/[0.02] flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold uppercase tracking-widest mb-4">Essencial</h3>
+                <div class="text-2xl font-mono text-[#3b82f6] mb-6">R$ 6.500</div>
+                <ul class="space-y-3 text-xs uppercase tracking-wider text-white/60 mb-8">
+                  <li>• AeroCore Entry</li>
+                  <li>• NeoCeramic Light</li>
+                </ul>
+              </div>
+              <a href="../contato/" class="w-full py-3 text-center border border-white/20 text-xs uppercase font-bold tracking-widest hover:bg-white hover:text-black transition-all">Solicitar</a>
+            </div>
+
+            <div class="border border-white/10 p-8 bg-white/[0.02] flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold uppercase tracking-widest mb-4">Executivo</h3>
+                <div class="text-2xl font-mono text-[#3b82f6] mb-6">R$ 12.000</div>
+                <ul class="space-y-3 text-xs uppercase tracking-wider text-white/60 mb-8">
+                  <li>• AeroCore High-Perf</li>
+                  <li>• NeoSkin PPF (Parcial)</li>
+                </ul>
+              </div>
+              <a href="../contato/" class="w-full py-3 text-center border border-white/20 text-xs uppercase font-bold tracking-widest hover:bg-white hover:text-black transition-all">Solicitar</a>
+            </div>
+
+            <div class="border border-white/10 p-8 bg-white/[0.02] flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold uppercase tracking-widest mb-4">Master Flight</h3>
+                <div class="text-2xl font-mono text-[#3b82f6] mb-6">R$ 22.000</div>
+                <ul class="space-y-3 text-xs uppercase tracking-wider text-white/60 mb-8">
+                  <li>• Full AeroCore</li>
+                  <li>• Full NeoSkin PPF</li>
+                  <li>• Ceramic Coating 5Y</li>
+                </ul>
+              </div>
+              <a href="../contato/" class="w-full py-3 text-center border border-white/20 text-xs uppercase font-bold tracking-widest hover:bg-white hover:text-black transition-all">Solicitar</a>
+            </div>
+
+            <div class="border border-white/10 p-8 bg-white/[0.02] flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold uppercase tracking-widest mb-4">Ceramic Armoring</h3>
+                <div class="text-2xl font-mono text-[#3b82f6] mb-6">R$ 8.000</div>
+                <ul class="space-y-3 text-xs uppercase tracking-wider text-white/60 mb-8">
+                  <li>• Blindagem Molecular</li>
+                  <li>• Repelência Extrema</li>
+                  <li>• Proteção Química</li>
+                </ul>
+              </div>
+              <a href="../contato/" class="w-full py-3 text-center border border-white/20 text-xs uppercase font-bold tracking-widest hover:bg-white hover:text-black transition-all">Solicitar</a>
+            </div>
+          </div>
+
+          <div class="mt-16 border border-white/10 p-12 text-center bg-white/5">
+            <h3 class="text-2xl font-light uppercase tracking-[0.2em] mb-4 text-[#3b82f6]">Monte o Seu Sob Medida</h3>
+            <p class="text-white/60 mb-8 max-w-2xl mx-auto">Desenvolvemos soluções customizadas de engenharia de superfícies para projetos únicos. Fale com um especialista AeroCore e desenhe sua blindagem exclusiva.</p>
+            <a href="../contato/" class="px-10 py-4 border border-white/50 text-white font-bold uppercase tracking-[0.2em] text-xs hover:bg-white/10 transition-all">Solicitar Consultoria Especializada</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="py-24 px-8 bg-[#050505]">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl font-light uppercase tracking-[0.3em] mb-16 text-center">Dúvidas Táticas</h2>
+          <div class="accordion-group w-full max-w-3xl mx-auto space-y-2">
+            <div class="accordion-item border-b border-white/10">
+              <button class="accordion-trigger w-full flex justify-between items-center py-6 text-left group cursor-pointer">
+                <span class="text-lg font-light tracking-widest group-hover:text-white/70">Como o revestimento afeta a aerodinâmica?</span>
+                <i data-lucide="chevron-down" class="accordion-icon w-5 h-5 text-white/40"></i>
+              </button>
+              <div class="accordion-content hidden pb-6 text-white/50 text-sm">Nossa tecnologia não altera a massa ou a perfilagem aerodinâmica, mas reduz drasticamente o arrasto ao nivelar microscopicamente a superfície, otimizando o fluxo laminar da fuselagem.</div>
+            </div>
+            <div class="accordion-item border-b border-white/10">
+              <button class="accordion-trigger w-full flex justify-between items-center py-6 text-left group cursor-pointer">
+                <span class="text-lg font-light tracking-widest group-hover:text-white/70">Existe impacto no peso da aeronave?</span>
+                <i data-lucide="chevron-down" class="accordion-icon w-5 h-5 text-white/40"></i>
+              </button>
+              <div class="accordion-content hidden pb-6 text-white/50 text-sm">Negligenciável. A aplicação é medida em mícrons, garantindo proteção robusta sem comprometer o balanço de massa ou a carga útil da aeronave.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="py-24 bg-black border-t border-white/5 px-4 text-center">
+        <div class="text-3xl tracking-[0.6em] font-light text-white mb-6 font-aerocore">AEROCORE</div>
+        <p class="text-[8px] text-white/60 tracking-[0.4em] uppercase">© 2025 AEROCORE. TODOS OS DIREITOS RESERVADOS.</p>
+      </footer>
+    </main>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>

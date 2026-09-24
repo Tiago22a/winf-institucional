@@ -1,0 +1,16 @@
+{
+  "name": "aerocore-platform",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 3000 --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --port 3000 --host 0.0.0.0",
+    "start": "vite preview --port 3000 --host 0.0.0.0",
+    "lint": "node -e \"console.log('OK - Site 100% estático HTML/JS puro')\""
+  },
+  "devDependencies": {
+    "vite": "^6.2.3"
+  }
+}

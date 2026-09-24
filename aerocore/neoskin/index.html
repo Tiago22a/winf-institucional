@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeoSkin™ | Blindagem Tática & Paint Protection Film (PPF)</title>
+    <meta name="description" content="Defesa tática definitiva: PPF de alta espessura com auto-cura e proteção cerâmica de última geração para preservação total de ativos." />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Mr+Dafoe&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              display: ['Montserrat', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              aerocore: ['Outfit', 'sans-serif'],
+            },
+            colors: {
+              'neo-light': '#D4F1B4',
+              'neo-dark': '#4e6130',
+            },
+            keyframes: {
+              marqueeReverse: {
+                '0%': { transform: 'translateX(-50%)' },
+                '100%': { transform: 'translateX(0%)' },
+              }
+            },
+            animation: {
+              marqueeReverse: 'marqueeReverse 40s linear infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+      body { background-color: #050505; color: #f0f0f0; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+      ::selection { background-color: #4e6130; color: #ffffff; }
+    </style>
+  </head>
+  <body class="antialiased bg-[#050505] text-[#f0f0f0]">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-[60] transition-all duration-700 bg-transparent py-8">
+      <div class="max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center">
+        <a href="../" class="flex items-center group cursor-pointer">
+          <span class="text-base md:text-xl tracking-[0.5em] font-light text-white" style="font-family: 'Outfit', sans-serif;">
+            AEROCORE<span class="text-white/60 text-[10px] md:text-xs align-top ml-1 font-sans">™</span>
+          </span>
+        </a>
+        <button id="menu-toggle" aria-label="Abrir Menu" class="relative w-10 h-10 flex flex-col justify-center items-center gap-[6px] text-white/70 hover:text-white z-[60] cursor-pointer">
+          <span id="ham-line-1" class="block w-6 h-[1px] bg-current transition-transform duration-500 ease-in-out"></span>
+          <span id="ham-line-2" class="block w-6 h-[1px] bg-current transition-transform duration-500 ease-in-out"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Slide-out Menu Overlay & Drawer -->
+    <div id="nav-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-md z-[45] opacity-0 pointer-events-none transition-opacity duration-500"></div>
+    <div id="nav-drawer" class="fixed top-0 right-0 h-screen w-full md:w-96 bg-black/85 backdrop-blur-2xl border-l border-white/10 z-[55] flex flex-col justify-center items-center translate-x-full transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+      <div class="flex flex-col items-center gap-4 w-full max-h-[85vh] overflow-y-auto pt-20 pb-12 px-6">
+        <div class="text-white/40 text-[9px] uppercase tracking-[0.3em] font-light mt-2 mb-1">Início</div>
+        <a href="../" class="w-full p-3.5 bg-white/[0.03] border border-white/10 rounded-sm hover:bg-white/[0.08] transition-all flex flex-col items-center gap-1.5 group">
+          <i data-lucide="home" class="w-5 h-5 text-white/70"></i>
+          <span class="text-[12px] uppercase tracking-[0.2em] font-medium text-white">Nexus</span>
+          <span class="text-[9px] uppercase tracking-[0.1em] opacity-40 text-white">Base Zero</span>
+        </a>
+        <div class="text-white/40 text-[9px] uppercase tracking-[0.3em] font-light mt-4 mb-1">Tecnologias</div>
+        <a href="../aerocore/" class="w-full p-3.5 bg-white/[0.03] border border-white/10 rounded-sm hover:bg-white/[0.08] transition-all flex flex-col items-center gap-1.5 group">
+          <i data-lucide="cloud" class="w-5 h-5 text-white/70"></i>
+          <span class="text-[12px] uppercase tracking-[0.2em] font-medium text-white">AeroCore</span>
+          <span class="text-[9px] uppercase tracking-[0.1em] opacity-40 text-white">Engenharia de Elite</span>
+        </a>
+        <a href="../winf-select/" class="w-full p-3.5 bg-white/[0.03] border border-white/10 rounded-sm hover:bg-white/[0.08] transition-all flex flex-col items-center gap-1.5 group">
+          <i data-lucide="building-2" class="w-5 h-5 text-amber-400"></i>
+          <span class="text-[12px] uppercase tracking-[0.2em] font-medium text-white">WINF Select</span>
+          <span class="text-[9px] uppercase tracking-[0.1em] opacity-40 text-white">Setor de Arquitetura</span>
+        </a>
+        <a href="../ceramic-armoring/" class="w-full p-3.5 bg-white/[0.03] border border-white/10 rounded-sm hover:bg-white/[0.08] transition-all flex flex-col items-center gap-1.5 group">
+          <i data-lucide="sparkles" class="w-5 h-5 text-white/70"></i>
+          <span class="text-[12px] uppercase tracking-[0.2em] font-medium text-white">Ceramic Armoring</span>
+          <span class="text-[9px] uppercase tracking-[0.1em] opacity-40 text-white">Blindagem Cerâmica</span>
+        </a>
+        <a href="../neoskin/" class="w-full p-3.5 bg-white/[0.08] border border-[#4e6130] rounded-sm transition-all flex flex-col items-center gap-1.5 group">
+          <i data-lucide="shield" class="w-5 h-5 text-[#D4F1B4]"></i>
+          <span class="text-[12px] uppercase tracking-[0.2em] font-medium text-white">NeoSkin</span>
+          <span class="text-[9px] uppercase tracking-[0.1em] opacity-40 text-white">Blindagem Molecular</span>
+        </a>
+        <div class="text-white/40 text-[9px] uppercase tracking-[0.3em] font-light mt-4 mb-1">Soluções</div>
+        <a href="../aeronautica/" class="w-full p-3.5 bg-white/[0.03] border border-white/10 rounded-sm hover:bg-white/[0.08] transition-all flex flex-col items-center gap-1.5">
+          <i data-lucide="plane" class="w-5 h-5 text-white/70"></i>
+          <span class="text-[12px] uppercase tracking-[0.2em] text-white">Aeronaves</span>
+        </a>
+        <a href="../supermaquinas/" class="w-full p-3.5 bg-white/[0.03] border border-white/10 rounded-sm hover:bg-white/[0.08] transition-all flex flex-col items-center gap-1.5">
+          <i data-lucide="truck" class="w-5 h-5 text-white/70"></i>
+          <span class="text-[12px] uppercase tracking-[0.2em] text-white">Caminhões</span>
+        </a>
+        <a href="../luxo/" class="w-full p-3.5 bg-white/[0.03] border border-white/10 rounded-sm hover:bg-white/[0.08] transition-all flex flex-col items-center gap-1.5">
+          <i data-lucide="car" class="w-5 h-5 text-white/70"></i>
+          <span class="text-[12px] uppercase tracking-[0.2em] text-white">Carros</span>
+        </a>
+        <a href="../marine/" class="w-full p-3.5 bg-white/[0.03] border border-white/10 rounded-sm hover:bg-white/[0.08] transition-all flex flex-col items-center gap-1.5">
+          <i data-lucide="ship" class="w-5 h-5 text-white/70"></i>
+          <span class="text-[12px] uppercase tracking-[0.2em] text-white">Iates</span>
+        </a>
+        <a href="../motorsports/" class="w-full p-3.5 bg-white/[0.03] border border-white/10 rounded-sm hover:bg-white/[0.08] transition-all flex flex-col items-center gap-1.5">
+          <i data-lucide="gauge" class="w-5 h-5 text-white/70"></i>
+          <span class="text-[12px] uppercase tracking-[0.2em] text-white">Motorsports</span>
+        </a>
+        <a href="../supermotos/" class="w-full p-3.5 bg-white/[0.03] border border-white/10 rounded-sm hover:bg-white/[0.08] transition-all flex flex-col items-center gap-1.5">
+          <i data-lucide="bike" class="w-5 h-5 text-white/70"></i>
+          <span class="text-[12px] uppercase tracking-[0.2em] text-white">Motos</span>
+        </a>
+        <div class="text-white/40 text-[9px] uppercase tracking-[0.3em] font-light mt-4 mb-1">Corporativo</div>
+        <a href="../contato/" class="w-full p-3.5 bg-white/[0.03] border border-white/10 rounded-sm hover:bg-white/[0.08] transition-all flex flex-col items-center gap-1.5">
+          <i data-lucide="message-square" class="w-5 h-5 text-white/70"></i>
+          <span class="text-[12px] uppercase tracking-[0.2em] text-white">Contato</span>
+        </a>
+        <a href="../licenciamento/" class="w-full p-3.5 bg-white/[0.03] border border-white/10 rounded-sm hover:bg-white/[0.08] transition-all flex flex-col items-center gap-1.5">
+          <i data-lucide="handshake" class="w-5 h-5 text-white/70"></i>
+          <span class="text-[12px] uppercase tracking-[0.2em] text-white">Licenciamento</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Main View -->
+    <main>
+      <!-- Hero Section -->
+      <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+        <div class="absolute inset-0 z-0">
+          <video autoPlay loop muted playsInline class="absolute inset-0 w-full h-full object-cover opacity-100 brightness-75 contrast-120 saturate-150">
+            <source src="../porsche-dirt.mp4" type="video/mp4" />
+          </video>
+          <div class="absolute inset-0 bg-black/15"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/10"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 sm:px-8 relative z-10 text-center flex flex-col items-center justify-center">
+          <h1 class="text-5xl md:text-[8rem] font-light uppercase tracking-[0.2em] md:tracking-[0.3em] leading-none mb-8 text-white w-full text-center mt-12 md:mt-20 font-display">
+            NEOSKIN<span class="text-white/60 text-xl md:text-4xl align-top ml-1">™</span>
+          </h1>
+
+          <div class="flex flex-col items-center gap-8 w-full text-center">
+            <div class="flex flex-col gap-3 max-w-2xl text-center">
+              <p class="text-xs md:text-sm text-white/65 tracking-[0.4em] uppercase font-light leading-relaxed font-display">
+                REDEFINING ABSOLUTE PROTECTION FOR A NEW GENERATION
+              </p>
+            </div>
+            
+            <!-- Left-to-right infinite marquee banner -->
+            <div class="w-screen relative left-1/2 -translate-x-1/2 overflow-hidden border-y border-white/5 py-8 md:py-10 bg-black/20 backdrop-blur-sm mt-8">
+              <div class="flex whitespace-nowrap overflow-hidden">
+                <div class="flex gap-16 text-[10px] md:text-[11px] font-black uppercase tracking-[0.4em] text-white/40 shrink-0 select-none pr-16 animate-marqueeReverse">
+                  <span class="flex items-center gap-16">
+                    <span>NEOSKIN™ DEFENSE</span>
+                    <span class="text-white/20">//</span>
+                    <span>MILITARY SPECIFICATIONS</span>
+                    <span class="text-white/20">//</span>
+                    <span>AUTO-CURA IMEDIATA</span>
+                    <span class="text-white/20">//</span>
+                    <span>BARREIRA BALÍSTICA E ESTÉTICA</span>
+                    <span class="text-white/20">//</span>
+                  </span>
+                  <span class="flex items-center gap-16">
+                    <span>NEOSKIN™ DEFENSE</span>
+                    <span class="text-white/20">//</span>
+                    <span>MILITARY SPECIFICATIONS</span>
+                    <span class="text-white/20">//</span>
+                    <span>AUTO-CURA IMEDIATA</span>
+                    <span class="text-white/20">//</span>
+                    <span>BARREIRA BALÍSTICA E ESTÉTICA</span>
+                    <span class="text-white/20">//</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-6 mt-8 justify-center">
+              <a href="#arsenal" class="px-8 py-3 bg-transparent border border-white/50 text-white font-black uppercase tracking-[0.2em] text-[10px] hover:bg-white hover:text-black transition-all duration-300">
+                Analisar Arsenal
+              </a>
+              <a href="../aerocore/" class="px-8 py-3 bg-transparent border border-white/50 text-white font-black uppercase tracking-[0.2em] text-[10px] hover:bg-white hover:text-black transition-all duration-300">
+                Voltar Aerocore
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4">
+          <div class="w-px h-16 bg-gradient-to-b from-white to-transparent animate-bounce"></div>
+        </div>
+      </section>
+
+      <!-- Engineering Section -->
+      <section class="py-24 md:py-32 bg-black relative border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
+          <div class="flex flex-col items-center text-center max-w-4xl mx-auto">
+            <span class="text-[10px] tracking-[1em] text-[#4e6130] uppercase mb-8 block font-black">Engenharia Sobrevivencial</span>
+            <h2 class="text-4xl md:text-6xl font-black mb-12 uppercase leading-none text-[#4e6130]">Enquanto o mundo desmorona, a <span class="text-white">NeoSkin</span> permanece intacta.</h2>
+            <p class="text-white/50 text-sm md:text-lg tracking-wider mb-16 leading-relaxed max-w-2xl">Uma barreira de sacrifício hiper-resistente para enfrentar o impiedoso. Projetada para durar além das fronteiras do comum.</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 text-left w-full">
+              <div class="border-l border-white/15 pl-6 md:pl-8 group">
+                <div class="text-[#4e6130] mb-4 transform group-hover:scale-125 transition-transform">
+                  <i data-lucide="hard-hat" class="w-6 h-6"></i>
+                </div>
+                <span class="text-[10px] md:text-[11px] font-black text-[#4e6130]/80 uppercase tracking-widest mb-2 block">Crit_01</span>
+                <h3 class="text-base font-black uppercase mb-2 tracking-tighter text-[#4e6130] group-hover:text-white transition-colors">Resistência Extrema</h3>
+                <p class="text-[11px] sm:text-xs text-white/60 uppercase tracking-widest leading-relaxed">Abrasão de galhos, pedras e detritos off-road.</p>
+              </div>
+
+              <div class="border-l border-white/15 pl-6 md:pl-8 group">
+                <div class="text-[#4e6130] mb-4 transform group-hover:scale-125 transition-transform">
+                  <i data-lucide="zap" class="w-6 h-6"></i>
+                </div>
+                <span class="text-[10px] md:text-[11px] font-black text-[#4e6130]/80 uppercase tracking-widest mb-2 block">Crit_02</span>
+                <h3 class="text-base font-black uppercase mb-2 tracking-tighter text-[#4e6130] group-hover:text-white transition-colors">Auto-Cura Brutal</h3>
+                <p class="text-[11px] sm:text-xs text-white/60 uppercase tracking-widest leading-relaxed">Arranhões severos curam com calor intenso.</p>
+              </div>
+
+              <div class="border-l border-white/15 pl-6 md:pl-8 group">
+                <div class="text-[#4e6130] mb-4 transform group-hover:scale-125 transition-transform">
+                  <i data-lucide="bomb" class="w-6 h-6"></i>
+                </div>
+                <span class="text-[10px] md:text-[11px] font-black text-[#4e6130]/80 uppercase tracking-widest mb-2 block">Crit_03</span>
+                <h3 class="text-base font-black uppercase mb-2 tracking-tighter text-[#4e6130] group-hover:text-white transition-colors">Barreira Química</h3>
+                <p class="text-[11px] sm:text-xs text-white/60 uppercase tracking-widest leading-relaxed">Intransponível para fluidos corrosivos.</p>
+              </div>
+
+              <div class="border-l border-white/15 pl-6 md:pl-8 group">
+                <div class="text-[#4e6130] mb-4 transform group-hover:scale-125 transition-transform">
+                  <i data-lucide="shield-alert" class="w-6 h-6"></i>
+                </div>
+                <span class="text-[10px] md:text-[11px] font-black text-[#4e6130]/80 uppercase tracking-widest mb-2 block">Crit_04</span>
+                <h3 class="text-base font-black uppercase mb-2 tracking-tighter text-[#4e6130] group-hover:text-white transition-colors">Camuflagem UV</h3>
+                <p class="text-[11px] sm:text-xs text-white/60 uppercase tracking-widest leading-relaxed">Estabilizadores reativos impedem a degradação.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Industrial Offer -->
+      <section id="industrial" class="py-24 md:py-32 bg-black text-white px-4 md:px-8 border-t border-white/[0.05]">
+        <div class="max-w-7xl mx-auto">
+          <div class="mb-20">
+            <span class="text-xs md:text-sm tracking-[0.5em] text-[#4e6130] uppercase mb-4 block">Arsenal Industrial // NeoSkin</span>
+            <h2 class="text-4xl md:text-6xl font-thin tracking-tighter italic mb-8">Proteção Multifuncional de <br/><span class="text-white/60">Nível Tático.</span></h2>
+            <p class="max-w-2xl text-white/60 text-sm md:text-base leading-relaxed tracking-widest">
+              A mesma precisão molecular aplicada à proteção de ativos estratégicos, estruturas militares e maquinário pesado. Um investimento sólido para operações onde a falha não é uma opção.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
+            <div class="p-8 bg-white/[0.02] border border-white/[0.05] hover:bg-white/[0.05] transition-colors">
+              <i data-lucide="shield" class="w-8 h-8 text-[#4e6130] mb-6"></i>
+              <h3 class="text-sm font-bold tracking-widest uppercase mb-4">Dureza > 9H</h3>
+              <p class="text-white/50 text-xs leading-relaxed tracking-widest">Resistência extrema contra abrasão e riscos, validada em testes industriais.</p>
+            </div>
+            <div class="p-8 bg-white/[0.02] border border-white/[0.05] hover:bg-white/[0.05] transition-colors">
+              <i data-lucide="thermometer" class="w-8 h-8 text-[#4e6130] mb-6"></i>
+              <h3 class="text-sm font-bold tracking-widest uppercase mb-4">Estabilidade Térmica</h3>
+              <p class="text-white/50 text-xs leading-relaxed tracking-widest">Proteção contra temperaturas de -50°C até ambientes críticos de alta caloria.</p>
+            </div>
+            <div class="p-8 bg-white/[0.02] border border-white/[0.05] hover:bg-white/[0.05] transition-colors">
+              <i data-lucide="zap" class="w-8 h-8 text-[#4e6130] mb-6"></i>
+              <h3 class="text-sm font-bold tracking-widest uppercase mb-4">Barreira Química</h3>
+              <p class="text-white/50 text-xs leading-relaxed tracking-widest">100% resistente a solventes, ácidos e contaminantes ambientais agressivos.</p>
+            </div>
+            <div class="p-8 bg-white/[0.02] border border-white/[0.05] hover:bg-white/[0.05] transition-colors">
+              <i data-lucide="alert-triangle" class="w-8 h-8 text-[#4e6130] mb-6"></i>
+              <h3 class="text-sm font-bold tracking-widest uppercase mb-4">Defesa UV & Corrosão</h3>
+              <p class="text-white/50 text-xs leading-relaxed tracking-widest">Previne envelhecimento prematuro, oxidação e degradação estrutural.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NeoSkin PPF Showcase -->
+      <section id="ppf" class="py-24 md:py-32 bg-black text-white px-4 md:px-8 border-t border-white/[0.05]">
+        <div class="max-w-7xl mx-auto">
+          <div class="mb-20">
+            <span class="text-xs md:text-sm tracking-[0.5em] text-[#D4F1B4] uppercase mb-4 block">NeoSkin // Película de Proteção</span>
+            <h2 class="text-4xl md:text-6xl font-thin tracking-tighter italic mb-8">O Auge da <br/><span class="text-white/60">Proteção de Pintura.</span></h2>
+            <p class="max-w-2xl text-white/60 text-sm md:text-base leading-relaxed tracking-widest">
+              A escolha definitiva para quem exige o melhor. Nossa película de última geração utiliza a mesma tecnologia nano-cerâmica que nos tornou líderes, garantindo um acabamento impecável e durabilidade excepcional.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
+            <div class="p-8 bg-white/[0.02] border border-white/[0.05] hover:bg-white/[0.05] transition-colors">
+              <i data-lucide="droplets" class="w-8 h-8 text-[#D4F1B4] mb-6"></i>
+              <h3 class="text-sm font-bold tracking-widest uppercase mb-4">Extremamente Hidrofóbico</h3>
+              <p class="text-white/50 text-xs leading-relaxed tracking-widest">Repele água sem esforço, mantendo acabamento limpo e brilhante com manutenção mínima.</p>
+            </div>
+            <div class="p-8 bg-white/[0.02] border border-white/[0.05] hover:bg-white/[0.05] transition-colors">
+              <i data-lucide="sparkles" class="w-8 h-8 text-[#D4F1B4] mb-6"></i>
+              <h3 class="text-sm font-bold tracking-widest uppercase mb-4">Tecnologia de Autocura Insana</h3>
+              <p class="text-white/50 text-xs leading-relaxed tracking-widest">Arranhou? Ele se auto regenera magicamente com calor! Tecnologia que mantém sua superfície sempre perfeita.</p>
+            </div>
+            <div class="p-8 bg-white/[0.02] border border-white/[0.05] hover:bg-white/[0.05] transition-colors">
+              <i data-lucide="shield" class="w-8 h-8 text-[#D4F1B4] mb-6"></i>
+              <h3 class="text-sm font-bold tracking-widest uppercase mb-4">Resistência Superior</h3>
+              <p class="text-white/50 text-xs leading-relaxed tracking-widest">Defesa avançada contra detritos, excrementos de pássaros e contaminantes ambientais.</p>
+            </div>
+            <div class="p-8 bg-white/[0.02] border border-white/[0.05] hover:bg-white/[0.05] transition-colors">
+              <i data-lucide="zap" class="w-8 h-8 text-[#D4F1B4] mb-6"></i>
+              <h3 class="text-sm font-bold tracking-widest uppercase mb-4">Infusão de Cerâmica</h3>
+              <p class="text-white/50 text-xs leading-relaxed tracking-widest">Combina película durável com tecnologia cerâmica para brilho incomparável.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Arsenal Product List with Porsche Dirt Video Background -->
+      <section id="arsenal" class="relative py-24 md:py-32 bg-[#050505] px-4 sm:px-8 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+          <video autoPlay loop muted playsInline class="w-full h-full object-cover opacity-90 brightness-150">
+            <source src="../porsche-dirt.mp4" type="video/mp4" />
+          </video>
+          <div class="absolute inset-0 bg-gradient-to-b from-black/85 via-black/10 to-black/85"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+          <div class="mb-16 md:mb-32 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
+            <div>
+              <span class="text-[10px] tracking-[1em] text-white/80 uppercase mb-4 block font-black">Arsenal.NeoSkin()</span>
+              <h2 class="text-4xl md:text-7xl font-black uppercase tracking-tighter text-[#4e6130]">Armas de <br class="md:hidden"/><span class="text-white">Defesa.</span></h2>
+            </div>
+            <div class="text-[10px] sm:text-xs font-mono text-white/80 text-left md:text-right uppercase tracking-[0.4em] md:tracking-[0.5em] leading-relaxed">
+              Authorized Access Only <br/>
+              Militech Division // Security Level 4
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-px bg-[#4e6130]/10 border border-[#4e6130]/10">
+            
+            <!-- Bunker 150 -->
+            <div class="bg-black/60 backdrop-blur-[2px] p-8 md:p-10 group hover:bg-[#4e6130] hover:text-black transition-all duration-500 cursor-pointer flex flex-col min-h-[400px] border border-white/10 hover:border-[#4e6130]">
+              <div class="flex justify-between items-start mb-12">
+                <span class="text-[10px] sm:text-[11px] font-black text-white/60 group-hover:text-black uppercase tracking-widest">BKR-150</span>
+                <div class="w-12 h-px bg-[#4e6130]/20 group-hover:bg-black/40"></div>
+              </div>
+              <h4 class="text-2xl font-black uppercase mb-2 tracking-tighter text-white group-hover:text-black">Bunker 150</h4>
+              <div class="text-white/60 group-hover:text-black/80 text-[10px] sm:text-xs font-black uppercase tracking-widest mb-6">150 Microns</div>
+              <p class="text-white/70 group-hover:text-black/90 text-[11px] sm:text-xs tracking-widest leading-relaxed uppercase mb-8 flex-1">Proteção urbana inflexível contra detritos e riscos com tecnologia de auto-cura estrutural.</p>
+              <div class="mt-auto pt-6 border-t border-[#4e6130]/5 group-hover:border-black/20 flex flex-col gap-4">
+                <a href="../bunker/" class="flex justify-center items-center gap-4 text-xs sm:text-sm font-black uppercase tracking-[0.3em] text-white/90 group-hover:text-black transition-colors border border-white/30 group-hover:border-black/30 px-3 py-3 rounded-sm">
+                  Analisar <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Apocalypse 190 -->
+            <div class="bg-black/60 backdrop-blur-[2px] p-8 md:p-10 group hover:bg-[#4e6130] hover:text-black transition-all duration-500 cursor-pointer flex flex-col min-h-[400px] border border-white/10 hover:border-[#4e6130]">
+              <div class="flex justify-between items-start mb-12">
+                <span class="text-[10px] sm:text-[11px] font-black text-white/60 group-hover:text-black uppercase tracking-widest">APX-190</span>
+                <div class="w-12 h-px bg-[#4e6130]/20 group-hover:bg-black/40"></div>
+              </div>
+              <h4 class="text-2xl font-black uppercase mb-2 tracking-tighter text-white group-hover:text-black">Apocalypse 190</h4>
+              <div class="text-white/60 group-hover:text-black/80 text-[10px] sm:text-xs font-black uppercase tracking-widest mb-6">190 Microns</div>
+              <p class="text-white/70 group-hover:text-black/90 text-[11px] sm:text-xs tracking-widest leading-relaxed uppercase mb-8 flex-1">A armadura definitiva para sobrevivência urbana. Resistência extrema com brilho impenetrável.</p>
+              <div class="mt-auto pt-6 border-t border-[#4e6130]/5 group-hover:border-black/20 flex flex-col gap-4">
+                <a href="../apocalypse/" class="flex justify-center items-center gap-4 text-xs sm:text-sm font-black uppercase tracking-[0.3em] text-white/90 group-hover:text-black transition-colors border border-white/30 group-hover:border-black/30 px-3 py-3 rounded-sm">
+                  Analisar <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Ghost Liquid -->
+            <div class="bg-black/60 backdrop-blur-[2px] p-8 md:p-10 group hover:bg-[#4e6130] hover:text-black transition-all duration-500 cursor-pointer flex flex-col min-h-[400px] border border-white/10 hover:border-[#4e6130]">
+              <div class="flex justify-between items-start mb-12">
+                <span class="text-[10px] sm:text-[11px] font-black text-white/60 group-hover:text-black uppercase tracking-widest">GHT-LIQ</span>
+                <div class="w-12 h-px bg-[#4e6130]/20 group-hover:bg-black/40"></div>
+              </div>
+              <h4 class="text-2xl font-black uppercase mb-2 tracking-tighter text-white group-hover:text-black">Ghost Liquid</h4>
+              <div class="text-white/60 group-hover:text-black/80 text-[10px] sm:text-xs font-black uppercase tracking-widest mb-6">Ceramic Liquid</div>
+              <p class="text-white/70 group-hover:text-black/90 text-[11px] sm:text-xs tracking-widest leading-relaxed uppercase mb-8 flex-1">Proteção nano-cerâmica fantasma. Sela os poros da superfície criando repelência absurda a líquidos e sujeira.</p>
+              <div class="mt-auto pt-6 border-t border-[#4e6130]/5 group-hover:border-black/20 flex flex-col gap-4">
+                <a href="../ghostliquid/" class="flex justify-center items-center gap-4 text-xs sm:text-sm font-black uppercase tracking-[0.3em] text-white/90 group-hover:text-black transition-colors border border-white/30 group-hover:border-black/30 px-3 py-3 rounded-sm">
+                  Analisar <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- NeoSkin Interactive Specs Matrix Table -->
+      <section class="py-24 md:py-32 bg-black border-t border-white/5 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
+          <div class="mb-16 md:mb-24 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+            <div>
+              <span class="text-xs sm:text-sm tracking-[1.2em] text-[#4e6130] uppercase mb-4 block font-black">DATAsheet.NeoSkin()</span>
+              <h2 class="text-4xl md:text-6xl font-black uppercase italic tracking-tighter text-[#4e6130]">
+                Especificações <br class="hidden md:block"/>
+                <span class="text-white/20">Técnicas Detalhadas</span>
+              </h2>
+            </div>
+            
+            <div class="flex flex-wrap gap-2 p-1.5 bg-white/[0.03] border border-white/10 w-full md:w-auto">
+              <button data-product="all" class="ns-tab-btn px-4 py-2.5 text-[10px] md:text-xs uppercase font-black tracking-widest bg-white text-black transition-all">Matriz Completa</button>
+              <button data-product="bkr" class="ns-tab-btn px-4 py-2.5 text-[10px] md:text-xs uppercase font-black tracking-widest text-white/50 hover:text-white transition-all">Bunker 150</button>
+              <button data-product="apx" class="ns-tab-btn px-4 py-2.5 text-[10px] md:text-xs uppercase font-black tracking-widest text-white/50 hover:text-white transition-all">Apocalypse 190</button>
+              <button data-product="ght" class="ns-tab-btn px-4 py-2.5 text-[10px] md:text-xs uppercase font-black tracking-widest text-white/50 hover:text-white transition-all">Ghost Liquid</button>
+            </div>
+          </div>
+
+          <div class="overflow-x-auto border border-white/10 bg-black">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="border-b border-white/10 bg-white/[0.02]">
+                  <th class="p-6 text-[10px] sm:text-xs uppercase font-bold text-white/40 tracking-[0.2em] w-1/4">Parâmetro</th>
+                  <th data-ns-col="bkr" class="p-6 text-[11px] uppercase font-black tracking-widest transition-opacity">
+                    <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#4e6130]"></span> BKR-150 Bunker</div>
+                  </th>
+                  <th data-ns-col="apx" class="p-6 text-[11px] uppercase font-black tracking-widest transition-opacity">
+                    <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#4e6130]"></span> APX-190 Apocalypse</div>
+                  </th>
+                  <th data-ns-col="ght" class="p-6 text-[11px] uppercase font-black tracking-widest transition-opacity">
+                    <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#4e6130]"></span> GHT-LIQ Ghost Liquid</div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-[#4e6130]/10">
+                <tr class="hover:bg-white/[0.02] transition-colors">
+                  <td class="p-6 text-xs font-medium text-white/90">Categoria de Defesa</td>
+                  <td data-ns-col="bkr" class="p-6 text-xs text-white/60 font-mono">TPU Elastomérico Premium</td>
+                  <td data-ns-col="apx" class="p-6 text-xs text-white/60 font-mono">TPU Blindado Militar</td>
+                  <td data-ns-col="ght" class="p-6 text-xs text-white/60 font-mono">Nano-Cerâmico Vitrificador</td>
+                </tr>
+                <tr class="hover:bg-white/[0.02] transition-colors">
+                  <td class="p-6 text-xs font-medium text-white/90">Espessura Nominal</td>
+                  <td data-ns-col="bkr" class="p-6 text-xs text-white/60 font-mono">150 Microns (6.0 mil)</td>
+                  <td data-ns-col="apx" class="p-6 text-xs text-white/60 font-mono">190 Microns (7.5 mil)</td>
+                  <td data-ns-col="ght" class="p-6 text-xs text-white/60 font-mono">Camada Nano (10-15 nm)</td>
+                </tr>
+                <tr class="hover:bg-white/[0.02] transition-colors">
+                  <td class="p-6 text-xs font-medium text-white/90">Tecnologia Primária</td>
+                  <td data-ns-col="bkr" class="p-6 text-xs text-white/60 font-mono">Auto-Cura Estrutural Térmica</td>
+                  <td data-ns-col="apx" class="p-6 text-xs text-white/60 font-mono">Auto-Cura Instantânea por Calor</td>
+                  <td data-ns-col="ght" class="p-6 text-xs text-white/60 font-mono">Cristalização Sílica 9H</td>
+                </tr>
+                <tr class="hover:bg-white/[0.02] transition-colors">
+                  <td class="p-6 text-xs font-medium text-white/90">Alongamento Máximo</td>
+                  <td data-ns-col="bkr" class="p-6 text-xs text-white/60 font-mono">400%</td>
+                  <td data-ns-col="apx" class="p-6 text-xs text-white/60 font-mono">450%</td>
+                  <td data-ns-col="ght" class="p-6 text-xs text-white/60 font-mono">N/A (Ligação Molecular)</td>
+                </tr>
+                <tr class="hover:bg-white/[0.02] transition-colors">
+                  <td class="p-6 text-xs font-medium text-white/90">Resistência Química</td>
+                  <td data-ns-col="bkr" class="p-6 text-xs text-white/60 font-mono">Alta (Ácidos Leves, Sal)</td>
+                  <td data-ns-col="apx" class="p-6 text-xs text-white/60 font-mono">Absoluta (Solventes, Combustíveis)</td>
+                  <td data-ns-col="ght" class="p-6 text-xs text-white/60 font-mono">Ultra-Hidrofóbica</td>
+                </tr>
+                <tr class="hover:bg-white/[0.02] transition-colors">
+                  <td class="p-6 text-xs font-medium text-white/90">Garantia Homologada</td>
+                  <td data-ns-col="bkr" class="p-6 text-xs text-[#4e6130] font-mono font-bold">8 Anos</td>
+                  <td data-ns-col="apx" class="p-6 text-xs text-[#4e6130] font-mono font-bold">Vitalícia (Lifetime)</td>
+                  <td data-ns-col="ght" class="p-6 text-xs text-[#4e6130] font-mono font-bold">3 Anos</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="py-24 px-8 bg-[#050505]">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl font-light uppercase tracking-[0.3em] mb-16 text-center">Dúvidas Táticas</h2>
+          
+          <div class="accordion-group w-full max-w-3xl mx-auto space-y-2">
+            <div class="accordion-item border-b border-white/10">
+              <button class="accordion-trigger w-full flex justify-between items-center py-6 text-left group cursor-pointer">
+                <span class="text-lg font-light tracking-widest group-hover:text-white/70 transition-colors">Como funciona a tecnologia de auto-cura?</span>
+                <i data-lucide="chevron-down" class="accordion-icon w-5 h-5 transition-transform duration-300 text-white/40"></i>
+              </button>
+              <div class="accordion-content hidden pb-6 text-white/50 tracking-widest leading-relaxed text-sm">
+                Nossa película utiliza polímeros elastoméricos de memória avançada que, sob exposição ao calor, rearranjam sua estrutura molecular para eliminar arranhões e marcas superficiais, mantendo a integridade estética da superfície.
+              </div>
+            </div>
+
+            <div class="accordion-item border-b border-white/10">
+              <button class="accordion-trigger w-full flex justify-between items-center py-6 text-left group cursor-pointer">
+                <span class="text-lg font-light tracking-widest group-hover:text-white/70 transition-colors">A blindagem NeoSkin é resistente a impactos de alta energia?</span>
+                <i data-lucide="chevron-down" class="accordion-icon w-5 h-5 transition-transform duration-300 text-white/40"></i>
+              </button>
+              <div class="accordion-content hidden pb-6 text-white/50 tracking-widest leading-relaxed text-sm">
+                Definitivamente. Desenvolvida para aplicações militares e industriais, a NeoSkin oferece uma barreira física excepcional contra detritos, abrasão severa e impactos de baixa a média energia, protegendo a estrutura original do seu ativo.
+              </div>
+            </div>
+
+            <div class="accordion-item border-b border-white/10">
+              <button class="accordion-trigger w-full flex justify-between items-center py-6 text-left group cursor-pointer">
+                <span class="text-lg font-light tracking-widest group-hover:text-white/70 transition-colors">Este revestimento altera a aparência original do ativo?</span>
+                <i data-lucide="chevron-down" class="accordion-icon w-5 h-5 transition-transform duration-300 text-white/40"></i>
+              </button>
+              <div class="accordion-content hidden pb-6 text-white/50 tracking-widest leading-relaxed text-sm">
+                Nossa missão é a proteção invisível. A NeoSkin é projetada para manter o brilho e a tonalidade originais, ou conferir um acabamento fosco premium, conforme sua escolha, sem comprometer a fidelidade estética do projeto.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Video Section -->
+      <section class="relative h-[60vh] md:h-[80vh] overflow-hidden border-t border-white/10 bg-black">
+        <video autoPlay loop muted playsInline class="absolute inset-0 w-full h-full object-cover opacity-100 brightness-75 contrast-120 saturate-150">
+          <source src="../Porsche_911_driving_dirt_roads_202606262017.mp4" type="video/mp4" />
+        </video>
+        <div class="absolute inset-0 bg-black/5"></div>
+      </section>
+
+      <!-- Contact Form -->
+      <section class="py-24 bg-black border-t border-white/5 px-4">
+        <div class="w-full max-w-4xl mx-auto mb-16">
+          <div class="text-center mb-16">
+            <span class="text-[10px] tracking-[0.8em] text-white/40 uppercase block mb-6 font-light">
+              Protocolo de Contato // Canal Seguro
+            </span>
+            <h2 class="text-4xl md:text-5xl font-light tracking-tight text-white/90 font-serif">
+              Fale <span class="italic text-white/60">Conosco.</span>
+            </h2>
+          </div>
+
+          <form class="contact-form-component grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
+            <div class="relative group">
+              <label class="text-[9px] uppercase tracking-[0.4em] text-white/50 block mb-2">Identificação</label>
+              <input type="text" name="name" placeholder="NOME COMPLETO" class="w-full bg-transparent border-b border-white/10 py-3 text-xs md:text-sm tracking-widest text-white placeholder:text-white/20 focus:outline-none focus:border-white transition-all font-light" />
+            </div>
+
+            <div class="relative group">
+              <label class="text-[9px] uppercase tracking-[0.4em] text-white/50 block mb-2">Sinal Profissional</label>
+              <input type="email" name="email" placeholder="E-MAIL" class="w-full bg-transparent border-b border-white/10 py-3 text-xs md:text-sm tracking-widest text-white placeholder:text-white/20 focus:outline-none focus:border-white transition-all font-light" />
+            </div>
+
+            <div class="md:col-span-2 relative group">
+              <label class="text-[9px] uppercase tracking-[0.4em] text-white/50 block mb-2">Escopo do Projeto</label>
+              <select name="interest" class="w-full bg-black border-b border-white/10 py-3 text-xs md:text-sm tracking-widest text-white focus:outline-none focus:border-white transition-all font-light">
+                <option value="ppf" selected>NEOSKIN TACTICAL PPF</option>
+                <option value="windowfilm">WINDOWFILM AEROCORE</option>
+                <option value="arquitetura">WINF SELECT (ARQUITETURA)</option>
+                <option value="autorizado">SER UM AUTORIZADO</option>
+              </select>
+            </div>
+
+            <div class="md:col-span-2 flex flex-col sm:flex-row justify-center gap-6 pt-6">
+              <button type="button" class="contact-send-btn group relative flex items-center justify-center gap-6 px-16 py-6 border border-white/10 hover:border-white/40 transition-all duration-500 overflow-hidden cursor-pointer bg-white/[0.02]">
+                <span class="relative z-10 text-[10px] uppercase tracking-[0.6em] text-white group-hover:text-black font-bold transition-colors">Enviar</span>
+                <i data-lucide="send" class="relative z-10 w-3.5 h-3.5 text-white/40 group-hover:text-black transition-colors"></i>
+                <div class="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+              </button>
+
+              <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20blindagem%20NeoSkin." target="_blank" rel="noopener noreferrer" class="contact-whatsapp-btn group relative flex items-center justify-center gap-6 px-16 py-6 border border-[#25D366]/30 hover:border-[#25D366] transition-all duration-500 overflow-hidden bg-[#25D366]/5">
+                <span class="relative z-10 text-[10px] uppercase tracking-[0.6em] text-[#25D366] group-hover:text-black font-bold transition-colors">WhatsApp</span>
+                <i data-lucide="arrow-right" class="relative z-10 w-3.5 h-3.5 text-[#25D366]/60 group-hover:text-black transition-colors"></i>
+                <div class="absolute inset-0 bg-[#25D366] translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+              </a>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- NeoSkin Brutal Footer -->
+      <footer class="py-24 md:py-32 bg-black border-t border-white/10 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto flex flex-col items-center text-center">
+          <h3 class="text-3xl font-black uppercase tracking-[0.5em] mb-4 text-[#4e6130]">NEOSKIN</h3>
+          <div class="text-[#4e6130]/60 text-[10px] font-black uppercase tracking-[1em] mb-16 animate-pulse">
+            Protocolo de Defesa Ativado.
+          </div>
+          <div class="flex flex-col md:flex-row gap-6 md:gap-16 text-[8px] font-mono text-[#4e6130]/40 uppercase tracking-[0.2em] md:tracking-[0.4em] items-center">
+            <span>(c) 2026 NeoSkin Ind.</span>
+            <span>Militech Division</span>
+            <span>All Rights Reserved</span>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>

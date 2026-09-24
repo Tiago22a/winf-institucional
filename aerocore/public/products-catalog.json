@@ -1,0 +1,410 @@
+{
+  "system": "Aerocore Surface Preservation Ecosystem",
+  "version": "1.0.0",
+  "extractedAt": "2026-07-24T07:05:00.000Z",
+  "brandHierarchy": {
+    "AEROCORE™ Windowfilm": {
+      "type": "High-Performance Architectural & Automotive Solar Control Films",
+      "lines": [
+        {
+          "line": "Ghost Series",
+          "technology": "High-Performance Dyed / Non-Pigmented Optical Entry Film",
+          "products": ["Ghost 05 (HP05)", "Ghost 15 (HP15)", "Ghost 35 (HP35)"]
+        },
+        {
+          "line": "Phantom Series",
+          "technology": "Structural Carbon Infusion",
+          "products": ["Phantom 05 (TTA05)", "Phantom 15 (TTA15)", "Phantom 35 (TTA35)"]
+        },
+        {
+          "line": "Spectre Series",
+          "technology": "Advanced Nano-Ceramic",
+          "products": ["Spectre 05 (HT05100)", "Spectre 15 (HT15100)", "Spectre 35 (HT35100)"]
+        },
+        {
+          "line": "Wraith Series",
+          "technology": "Ionic Sputtering Transparency",
+          "products": ["Wraith 70 (TOP70)"]
+        }
+      ]
+    },
+    "NEOSKIN™ PPF": {
+      "type": "Paint Protection Film & Surface Armor",
+      "lines": [
+        {
+          "line": "Bunker Series",
+          "technology": "Self-Healing Polymeric TPU Shield (150 Microns)",
+          "products": ["Bunker 150 (BKR-150)"]
+        },
+        {
+          "line": "Apocalypse Series",
+          "technology": "Military Grade Armor TPU (190 Microns)",
+          "products": ["Apocalypse 190 (APX-190)"]
+        }
+      ]
+    },
+    "CERAMIC ARMORING™": {
+      "type": "Nano-Ceramic Vitrification & Surface Sealants",
+      "lines": [
+        {
+          "line": "Liquid Shield",
+          "technology": "Nano-Coat Liquid Ceramic",
+          "products": ["Ghost Liquid (GHT-LIQ)"]
+        },
+        {
+          "line": "Structural Coat",
+          "technology": "9H Hardness Base Coat",
+          "products": ["Titanium Pulse (TIT-PLS)"]
+        },
+        {
+          "line": "Top Finish",
+          "technology": "High Gloss Hydrophobic Top Coat",
+          "products": ["Mirror Velocity (MIR-VEL)"]
+        }
+      ]
+    },
+    "WINF SELECT™": {
+      "type": "Structural Safety & Anti-Vandalism Films",
+      "lines": [
+        {
+          "line": "Securyt Series",
+          "technology": "Incolor Structural Retention Film",
+          "products": ["SecurytBlind (SEC-CLR)"]
+        }
+      ]
+    }
+  },
+  "products": [
+    {
+      "sku": "HP05",
+      "brand": "AEROCORE™ Windowfilm",
+      "line": "Ghost Series",
+      "name": "Ghost 05",
+      "type": "Performance Essencial",
+      "specifications": {
+        "irRejection": "58%",
+        "uvProtection": "99%",
+        "vlt": "05%",
+        "warranty": "3 Anos"
+      },
+      "technologies": ["Processo sem pigmentação", "Clareza óptica essencial"],
+      "categories": ["auto"],
+      "applications": ["Veículos de luxo urbanos", "Controle de visibilidade e privacidade"],
+      "variants": ["HP05 (05% VLT)", "HP15 (15% VLT)", "HP35 (35% VLT)"],
+      "description": "Película essencial de entrada superior ao mercado. Proteção solar equilibrada com clareza óptica impecável, sem o uso de pigmentação.",
+      "image": "https://images.unsplash.com/photo-1503376713180-87a419cce080?auto=format&fit=crop&q=80&w=800",
+      "route": "./ghost/",
+            "status": "Implementado"
+    },
+    {
+      "sku": "HP15",
+      "brand": "AEROCORE™ Windowfilm",
+      "line": "Ghost Series",
+      "name": "Ghost 15",
+      "type": "Performance Essencial / Tingida Anti-Sal / Alta Altitude",
+      "specifications": {
+        "irRejection": "58%",
+        "uvProtection": "99%",
+        "vlt": "15%",
+        "warranty": "3 Anos"
+      },
+      "technologies": ["Anti-Sal", "Filtro UV de Alta Altitude", "Tratamento não-pigmentado"],
+      "categories": ["auto", "aerospace", "heavy", "navy"],
+      "applications": ["Automotivo de luxo", "Aviação executiva", "Máquinas de mineração e logística", "Embarcações oceânicas"],
+      "variants": ["HP05 (05% VLT)", "HP15 (15% VLT)", "HP35 (35% VLT)"],
+      "description": "Película essencial de entrada superior ao mercado. Certificada para alta altitude, operações industriais e marinhas contra corrosão salina.",
+      "image": "https://images.unsplash.com/photo-1555353540-64fd8b0ebd36?auto=format&fit=crop&q=80&w=800",
+      "route": "./ghost/",
+            "status": "Implementado"
+    },
+    {
+      "sku": "HP35",
+      "brand": "AEROCORE™ Windowfilm",
+      "line": "Ghost Series",
+      "name": "Ghost 35",
+      "type": "Performance Essencial",
+      "specifications": {
+        "irRejection": "58%",
+        "uvProtection": "99%",
+        "vlt": "35%",
+        "warranty": "3 Anos"
+      },
+      "technologies": ["Película não-pigmentada", "Clareza óptica"],
+      "categories": ["auto"],
+      "applications": ["Veículos automotivos", "Privacidade moderada"],
+      "variants": ["HP05 (05% VLT)", "HP15 (15% VLT)", "HP35 (35% VLT)"],
+      "description": "Película essencial de entrada superior ao mercado. Proteção solar equilibrada com clareza óptica impecável.",
+      "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=800",
+      "route": "./ghost/",
+            "status": "Implementado"
+    },
+    {
+      "sku": "TTA05",
+      "brand": "AEROCORE™ Windowfilm",
+      "line": "Phantom Series",
+      "name": "Phantom 05",
+      "type": "Carbono Estrutural",
+      "specifications": {
+        "irRejection": "73%",
+        "uvProtection": "99%",
+        "vlt": "05%",
+        "warranty": "10 Anos"
+      },
+      "technologies": ["Injeção de Carbono Estrutural", "Acabamento Matte Negro Profundo"],
+      "categories": ["auto"],
+      "applications": ["Privacidade absoluta em veículos executivos e esportivos"],
+      "variants": ["TTA05 (05% VLT)", "TTA15 (15% VLT)", "TTA35 (35% VLT)"],
+      "description": "Privacidade absoluta e estilo matte negro profundo, com impressionante rejeição térmica.",
+      "image": "https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&q=80&w=800",
+      "route": "./phantom/",
+            "status": "Implementado"
+    },
+    {
+      "sku": "TTA15",
+      "brand": "AEROCORE™ Windowfilm",
+      "line": "Phantom Series",
+      "name": "Phantom 15",
+      "type": "Carbono Estrutural / Carbono de Voo / Carbono Naval / Robusto",
+      "specifications": {
+        "irRejection": "73%",
+        "uvProtection": "99%",
+        "vlt": "15%",
+        "warranty": "10 Anos"
+      },
+      "technologies": ["Injeção de Carbono Estrutural Anti-Vibração", "Filtro Anti-Ofuscamento"],
+      "categories": ["auto", "aerospace", "heavy", "navy"],
+      "applications": ["Supercarros", "Cockpits de aviação", "Cabines industriais e embarcações"],
+      "variants": ["TTA05 (05% VLT)", "TTA15 (15% VLT)", "TTA35 (35% VLT)"],
+      "description": "Fusão de carbono estrutural para rejeição térmica avançada, absorção de vibrações e ocultamento visual nas águas e estradas.",
+      "image": "https://images.unsplash.com/photo-1556800572-1b8aeef2c54f?auto=format&fit=crop&q=80&w=800",
+      "route": "./phantom/",
+            "status": "Implementado"
+    },
+    {
+      "sku": "TTA35",
+      "brand": "AEROCORE™ Windowfilm",
+      "line": "Phantom Series",
+      "name": "Phantom 35",
+      "type": "Carbono Estrutural",
+      "specifications": {
+        "irRejection": "73%",
+        "uvProtection": "99%",
+        "vlt": "35%",
+        "warranty": "10 Anos"
+      },
+      "technologies": ["Carbono Estrutural Elegante"],
+      "categories": ["auto"],
+      "applications": ["Veículos executivos e esportivos de luxo"],
+      "variants": ["TTA05 (05% VLT)", "TTA15 (15% VLT)", "TTA35 (35% VLT)"],
+      "description": "Visual esportivo sóbrio. Redução térmica estrutural mantendo um ambiente interior claro e elegante.",
+      "image": "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&q=80&w=800",
+      "route": "./phantom/",
+            "status": "Implementado"
+    },
+    {
+      "sku": "HT05100",
+      "brand": "AEROCORE™ Windowfilm",
+      "line": "Spectre Series",
+      "name": "Spectre 05",
+      "type": "Nano-Cerâmica",
+      "specifications": {
+        "irRejection": "95%",
+        "uvProtection": "99%",
+        "vlt": "05%",
+        "warranty": "10 Anos"
+      },
+      "technologies": ["Nano-Cerâmica de Extrema Rejeição IR"],
+      "categories": ["auto"],
+      "applications": ["Supercarros e veículos de altíssima segurança e privacidade"],
+      "variants": ["HT05100 (05% VLT)", "HT15100 (15% VLT)", "HT35100 (35% VLT)"],
+      "description": "Bloqueio infravermelho extremo de 95% aliado à maior privacidade disponível no mercado.",
+      "image": "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&q=80&w=800",
+      "route": "./spectre/",
+            "status": "Implementado"
+    },
+    {
+      "sku": "HT15100",
+      "brand": "AEROCORE™ Windowfilm",
+      "line": "Spectre Series",
+      "name": "Spectre 15",
+      "type": "Nano-Cerâmica / Nano Térmico / Cerâmica Pesada / Nano Naval",
+      "specifications": {
+        "irRejection": "95%",
+        "uvProtection": "99%",
+        "vlt": "15%",
+        "warranty": "10 Anos"
+      },
+      "technologies": ["Nano-Cerâmica Stratospheric Grade", "Thermal Barrier 95% IR"],
+      "categories": ["auto", "aerospace", "heavy", "navy"],
+      "applications": ["Supercarros", "Aviação militar/privada", "Maquinário de mineração", "Iates e patrulhas marotas"],
+      "variants": ["HT05100 (05% VLT)", "HT15100 (15% VLT)", "HT35100 (35% VLT)"],
+      "description": "O ápice da tecnologia nano-cerâmica. Rejeição térmica inigualável de 95% para o máximo conforto sob insolação extrema.",
+      "image": "https://images.unsplash.com/photo-1503376713180-87a419cce080?auto=format&fit=crop&q=80&w=800",
+      "route": "./spectre/",
+            "status": "Implementado"
+    },
+    {
+      "sku": "HT35100",
+      "brand": "AEROCORE™ Windowfilm",
+      "line": "Spectre Series",
+      "name": "Spectre 35",
+      "type": "Nano-Cerâmica",
+      "specifications": {
+        "irRejection": "95%",
+        "uvProtection": "99%",
+        "vlt": "35%",
+        "warranty": "10 Anos"
+      },
+      "technologies": ["Nano-Cerâmica de Visibilidade Elevada"],
+      "categories": ["auto"],
+      "applications": ["Automotivo de alta gama"],
+      "variants": ["HT05100 (05% VLT)", "HT15100 (15% VLT)", "HT35100 (35% VLT)"],
+      "description": "O perfeito equilíbrio térmico. O ambiente interno mais fresco possível com a máxima segurança de visibilidade.",
+      "image": "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=800",
+      "route": "./spectre/",
+            "status": "Implementado"
+    },
+    {
+      "sku": "TOP70",
+      "brand": "AEROCORE™ Windowfilm",
+      "line": "Wraith Series",
+      "name": "Wraith 70",
+      "type": "Sputtering Iônico / Radar Transparente / Anti-Névoa",
+      "specifications": {
+        "irRejection": "98%",
+        "uvProtection": "99%",
+        "vlt": "70%",
+        "warranty": "10 Anos"
+      },
+      "technologies": ["Deposição Sputtering Iônica", "Zero Interferência RF/Radar", "Película Transparente Ativa"],
+      "categories": ["auto", "aerospace", "heavy", "navy"],
+      "applications": ["Para-brisas automotivos", "Aeronaves e telemetria", "Maquinário pesado sob regulação", "Passadiço de embarcações"],
+      "variants": ["TOP70 (70% VLT)"],
+      "description": "Blindagem térmica invisível com 98% de bloqueio IR e 70% de transparência. Mantém telemetria e sensores sem interferências.",
+      "image": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&q=80&w=800",
+      "route": "./wraith/",
+            "status": "Implementado"
+    },
+    {
+      "sku": "SEC-CLR",
+      "brand": "WINF SELECT™",
+      "line": "Securyt Series",
+      "name": "SecurytBlind",
+      "type": "Segurança Incolor / Anti-Vandalismo",
+      "specifications": {
+        "irRejection": "15%",
+        "uvProtection": "99%",
+        "vlt": "89%",
+        "warranty": "5 Anos"
+      },
+      "technologies": ["Polímero de Retenção Estrutural", "Tratamento de Absorção de Impacto"],
+      "categories": ["auto"],
+      "applications": ["Vidros automotivos laterais e traseiros para prevenção de intrusão"],
+      "variants": ["SEC-CLR (Incolor)"],
+      "description": "Película de retenção estrutural incolor (Anti-Vandalismo). O up-sell essencial que transforma o vidro automotivo em um escudo de alta resistência a impactos.",
+      "image": "https://images.unsplash.com/photo-1588636440263-54737cf006a8?auto=format&fit=crop&q=80&w=800",
+      "route": "./product-catalog/",
+            "status": "Implementado"
+    },
+    {
+      "sku": "BKR-150",
+      "brand": "NEOSKIN™ PPF",
+      "line": "Bunker Series",
+      "name": "Bunker 150",
+      "type": "Escudo de Impacto / Escudo Mach / Escudo de Carga / Escudo de Casco",
+      "specifications": {
+        "thickness": "150 Microns",
+        "uvProtection": "99%",
+        "warranty": "8 Anos"
+      },
+      "technologies": ["TPU com Auto-cura Estrutural", "Resistência Hidrofóbica", "Proteção Balística Leve"],
+      "categories": ["auto", "aerospace", "heavy", "navy"],
+      "applications": ["Pintura automotiva", "Fuselagem supersônica", "Frotas rodoviárias", "Cascos marítimos"],
+      "variants": ["BKR-150 (150 Microns)"],
+      "description": "Proteção física de 150 microns contra impactos, abrasão e corrosão química com regeneração térmica da superfície.",
+      "image": "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&q=80&w=800",
+      "route": "./bunker/",
+            "status": "Implementado"
+    },
+    {
+      "sku": "APX-190",
+      "brand": "NEOSKIN™ PPF",
+      "line": "Apocalypse Series",
+      "name": "Apocalypse 190",
+      "type": "Grau Militar / TPU Furtivo / TPU Blindado / TPU Abissal",
+      "specifications": {
+        "thickness": "190 Microns",
+        "uvProtection": "99%",
+        "warranty": "Lifetime (Vitalícia)"
+      },
+      "technologies": ["TPU Termoplástico Militar 190 Microns", "Self-Healing Instantâneo", "Resistência Extrema a Punção"],
+      "categories": ["auto", "aerospace", "heavy", "navy"],
+      "applications": ["Supercarros e blindados urbanos", "Aviação de caça/ataque", "Maquinário pesado", "Superiates"],
+      "variants": ["APX-190 (190 Microns)"],
+      "description": "A armadura polimérica definitiva de 190 microns para sobrevivência em ambientes de desgaste e destruição extremos.",
+      "image": "https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&q=80&w=800",
+      "route": "./apocalypse/",
+            "status": "Implementado"
+    },
+    {
+      "sku": "GHT-LIQ",
+      "brand": "CERAMIC ARMORING™",
+      "line": "Liquid Shield",
+      "name": "Ghost Liquid",
+      "type": "Ceramic Liquid / Industrial Ceramic / Marine Ceramic / Aero Ceramic",
+      "specifications": {
+        "thickness": "Nano-Coat",
+        "uvProtection": "99%",
+        "warranty": "3 Anos"
+      },
+      "technologies": ["Nano-Vitrificação de Dióxido de Silício/Titânio", "Efeito Lótus de Repelência Extrema"],
+      "categories": ["auto", "aerospace", "heavy", "navy"],
+      "applications": ["Carrocerias de luxo", "Asas de aeronaves", "Maquinário de mineração", "Cascos e conveses de iates"],
+      "variants": ["GHT-LIQ (Nano-Coat Liquid)"],
+      "description": "Revestimento vitrificador líquido invisível que sela poros de superfícies, impedindo acúmulo de sujeira, lama, água e gelo.",
+      "image": "https://images.unsplash.com/photo-1555353540-64fd8b0ebd36?auto=format&fit=crop&q=80&w=800",
+      "route": "./ghostliquid/",
+            "status": "Implementado"
+    },
+    {
+      "sku": "TIT-PLS",
+      "brand": "CERAMIC ARMORING™",
+      "line": "Structural Coat",
+      "name": "Titanium Pulse",
+      "type": "Ceramic Base Coat",
+      "specifications": {
+        "hardness": "9H Dureza",
+        "uvProtection": "99%",
+        "warranty": "5 Anos"
+      },
+      "technologies": ["Matriz Cerâmica de Titânio Dureza 9H"],
+      "categories": ["auto", "aerospace", "heavy", "navy"],
+      "applications": ["Camada de base rígida para pintura, verniz, metais e gelcoats"],
+      "variants": ["TIT-PLS (Base Coat 9H)"],
+      "description": "Blindagem de base super rígida. A fundação de dureza para qualquer superfície que requer máxima ancoragem.",
+      "image": "https://images.unsplash.com/photo-1555353540-64fd8b0ebd36?auto=format&fit=crop&q=80&w=800",
+      "route": "./ceramic-armoring/",
+            "status": "Implementado"
+    },
+    {
+      "sku": "MIR-VEL",
+      "brand": "CERAMIC ARMORING™",
+      "line": "Top Finish",
+      "name": "Mirror Velocity",
+      "type": "Ceramic Top Coat",
+      "specifications": {
+        "finish": "Alto Brilho & Profundidade",
+        "uvProtection": "99%",
+        "warranty": "2 Anos"
+      },
+      "technologies": ["Top Coat Hidrofóbico Espelhado"],
+      "categories": ["auto", "aerospace", "heavy", "navy"],
+      "applications": ["Acabamento final sobre Titanium Pulse ou pintura direta"],
+      "variants": ["MIR-VEL (Top Coat Espelhado)"],
+      "description": "Acabamento de alto brilho para máxima repelência a água, poeira e óleos com nitidez de reflexo espelhada.",
+      "image": "https://images.unsplash.com/photo-1555353540-64fd8b0ebd36?auto=format&fit=crop&q=80&w=800",
+      "route": "./ceramic-armoring/",
+            "status": "Implementado"
+    }
+  ]
+}

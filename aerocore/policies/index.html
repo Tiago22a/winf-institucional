@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compliance & Standards | Políticas e Certificações AeroCore</title>
+    <meta name="description" content="A fundação do ecossistema AeroCore: certificações internacionais, governança de licenciamento, P&D e privacidade." />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Mr+Dafoe&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              aerocore: ['Outfit', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>body { background-color: #000000; color: #f0f0f0; font-family: 'Inter', sans-serif; }</style>
+  </head>
+  <body class="antialiased bg-black text-white">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-[60] transition-all duration-700 bg-transparent py-8">
+      <div class="max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center">
+        <a href="../" class="flex items-center group cursor-pointer">
+          <span class="text-base md:text-xl tracking-[0.5em] font-light text-white font-aerocore">
+            AEROCORE<span class="text-white/60 text-[10px] md:text-xs align-top ml-1 font-sans">™</span>
+          </span>
+        </a>
+        <button id="menu-toggle" aria-label="Abrir Menu" class="relative w-10 h-10 flex flex-col justify-center items-center gap-[6px] text-white/70 hover:text-white z-[60] cursor-pointer">
+          <span id="ham-line-1" class="block w-6 h-[1px] bg-current transition-transform duration-500 ease-in-out"></span>
+          <span id="ham-line-2" class="block w-6 h-[1px] bg-current transition-transform duration-500 ease-in-out"></span>
+        </button>
+      </div>
+    </nav>
+
+    <div id="nav-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-md z-[45] opacity-0 pointer-events-none transition-opacity duration-500"></div>
+    <div id="nav-drawer" class="fixed top-0 right-0 h-screen w-full md:w-96 bg-black/85 backdrop-blur-2xl border-l border-white/10 z-[55] flex flex-col justify-center items-center translate-x-full transition-transform duration-500">
+      <div class="flex flex-col items-center gap-4 w-full max-h-[85vh] overflow-y-auto pt-20 pb-12 px-6">
+        <a href="../" class="w-full p-3.5 bg-white/[0.03] border border-white/10 rounded-sm hover:bg-white/[0.08] transition-all flex flex-col items-center gap-1.5"><i data-lucide="home" class="w-5 h-5 text-white/70"></i><span class="text-[12px] uppercase tracking-[0.2em] text-white">Nexus</span></a>
+        <a href="../aerocore/" class="w-full p-3.5 bg-white/[0.03] border border-white/10 rounded-sm hover:bg-white/[0.08] transition-all flex flex-col items-center gap-1.5"><i data-lucide="cloud" class="w-5 h-5 text-white/70"></i><span class="text-[12px] uppercase tracking-[0.2em] text-white">AeroCore</span></a>
+        <a href="../contato/" class="w-full p-3.5 bg-white/[0.03] border border-white/10 rounded-sm hover:bg-white/[0.08] transition-all flex flex-col items-center gap-1.5"><i data-lucide="message-square" class="w-5 h-5 text-white/70"></i><span class="text-[12px] uppercase tracking-[0.2em] text-white">Contato</span></a>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-24">
+      <div class="max-w-4xl mx-auto px-8 mb-24">
+        <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tighter italic">Compliance & Standards</h1>
+        <p class="text-xl text-white/50 mt-8 tracking-widest uppercase italic font-light">A fundação do nosso ecossistema.</p>
+      </div>
+
+      <!-- Certificações -->
+      <section id="certificacoes" class="py-24 border-b border-white/5">
+        <div class="max-w-4xl mx-auto px-8">
+          <h2 class="text-3xl md:text-5xl font-light uppercase tracking-[0.3em] mb-12">Certificações</h2>
+          <div class="text-white/70 space-y-6 leading-relaxed tracking-wide text-sm md:text-base">
+            <p>A excelência não é uma meta, mas um estado de operação contínuo.</p>
+            <p>Nossas películas e sistemas de proteção passam pelos mais rigorosos testes globais de durabilidade, resistência térmica e clareza óptica. Certificados ISO 9001, conformidade com normas automotivas internacionais (AS) e testes de laboratórios independentes asseguram que cada micron aplicado atenda ao padrão AEROCORE™.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Licenciamento -->
+      <section id="licenciamento" class="py-24 border-b border-white/5">
+        <div class="max-w-4xl mx-auto px-8">
+          <h2 class="text-3xl md:text-5xl font-light uppercase tracking-[0.3em] mb-12">Licenciamento</h2>
+          <div class="text-white/70 space-y-6 leading-relaxed tracking-wide text-sm md:text-base">
+            <p>O licenciamento AEROCORE™ é reservado a aplicadores táticos que compartilham nossa visão de perfeição absoluta.</p>
+            <p>Ser um licenciado significa operar sob nosso protocolo exclusivo de instalação, garantindo que o investimento do cliente final receba a proteção premium que promete. O processo de habilitação exige certificação técnica presencial, conformidade estética e compromisso com o suporte pós-aplicação.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- P&D -->
+      <section id="pd" class="py-24 border-b border-white/5">
+        <div class="max-w-4xl mx-auto px-8">
+          <h2 class="text-3xl md:text-5xl font-light uppercase tracking-[0.3em] mb-12">P&D</h2>
+          <div class="text-white/70 space-y-6 leading-relaxed tracking-wide text-sm md:text-base">
+            <p>Pesquisa, Desenvolvimento e o Além do Visível.</p>
+            <p>Nossa divisão de P&D não projeta produtos; nós arquitetamos soluções moleculares. O foco é a integração definitiva entre ciência dos materiais, eficiência energética e estética minimalista. Exploramos polímeros autossuportáveis e nanotecnologia cerâmica para que a performance térmica seja o novo padrão do mercado.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Jurídico -->
+      <section id="juridico" class="py-24 border-b border-white/5">
+        <div class="max-w-4xl mx-auto px-8">
+          <h2 class="text-3xl md:text-5xl font-light uppercase tracking-[0.3em] mb-12">Jurídico</h2>
+          <div class="text-white/70 space-y-6 leading-relaxed tracking-wide text-sm md:text-base">
+            <p>Compliance, Ética e Integridade Estrutural.</p>
+            <p>A conformidade jurídica é a estrutura invisível que sustenta a confiança em nossas operações. Todos os contratos, parcerias e protocolos de garantia são regidos por cláusulas de proteção mútua e transparência comercial, assegurando que o ecossistema opere de forma robusta e previsível para todas as partes envolvidas.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Privacidade -->
+      <section id="privacidade" class="py-24 border-b border-white/5">
+        <div class="max-w-4xl mx-auto px-8">
+          <h2 class="text-3xl md:text-5xl font-light uppercase tracking-[0.3em] mb-12">Privacidade</h2>
+          <div class="text-white/70 space-y-6 leading-relaxed tracking-wide text-sm md:text-base">
+            <p>Sua privacidade é custodiada com a mesma precisão que nossas soluções de blindagem.</p>
+            <p>Operamos sob políticas rigorosas de tratamento de dados, garantindo que qualquer informação coletada durante o processo de homologação ou atendimento seja criptografada e utilizada estritamente para o propósito de melhorar a sua experiência dentro de nosso universo. Transparência total, dados minimizados e custódia absoluta.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-24 bg-black border-t border-white/5 px-4 md:px-8 text-center">
+      <div class="text-3xl tracking-[0.6em] font-light text-white mb-6 font-aerocore">AEROCORE</div>
+      <p class="text-[8px] text-white/60 tracking-[0.4em] uppercase">© 2025 AEROCORE. TODOS OS DIREITOS RESERVADOS.</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>
