@@ -5,21 +5,14 @@
     <!-- WINF -->
     <url>
         <loc>https://winf.com.br/</loc>
-        <lastmod>2026-09-23</lastmod>
+        <lastmod>2026-09-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
-   <url>
-        <loc>https://winf.com.br/</loc>
-        <lastmod>2026-09-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
     <url>
         <loc>https://winf.com.br/winf-home/</loc>
-        <lastmod>2026-09-23</lastmod>
+        <lastmod>2026-09-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -28,58 +21,163 @@
     <!-- AEROCORE -->
     <url>
         <loc>https://winf.com.br/aerocore/</loc>
-        <lastmod>2026-09-23</lastmod>
+        <lastmod>2026-09-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://winf.com.br/aerocore/ghost/</loc>
-        <lastmod>2026-09-23</lastmod>
+        <lastmod>2026-09-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <url>
         <loc>https://winf.com.br/aerocore/phantom/</loc>
-        <lastmod>2026-09-23</lastmod>
+        <lastmod>2026-09-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <url>
         <loc>https://winf.com.br/aerocore/spectre/</loc>
-        <lastmod>2026-09-23</lastmod>
+        <lastmod>2026-09-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <url>
         <loc>https://winf.com.br/aerocore/wraith/</loc>
-        <lastmod>2026-09-23</lastmod>
+        <lastmod>2026-09-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://winf.com.br/aerocore/aeronautica/</loc>
+        <lastmod>2026-09-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://winf.com.br/aerocore/apocalypse/</loc>
+        <lastmod>2026-09-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://winf.com.br/aerocore/bunker/</loc>
+        <lastmod>2026-09-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://winf.com.br/aerocore/ceramic-armoring/</loc>
+        <lastmod>2026-09-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://winf.com.br/aerocore/contato/</loc>
+        <lastmod>2026-09-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://winf.com.br/aerocore/ghostliquid/</loc>
+        <lastmod>2026-09-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://winf.com.br/aerocore/licenciamento/</loc>
+        <lastmod>2026-09-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://winf.com.br/aerocore/luxo/</loc>
+        <lastmod>2026-09-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://winf.com.br/aerocore/marine/</loc>
+        <lastmod>2026-09-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://winf.com.br/aerocore/motorsports/</loc>
+        <lastmod>2026-09-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://winf.com.br/aerocore/neoskin/</loc>
+        <lastmod>2026-09-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://winf.com.br/aerocore/policies/</loc>
+        <lastmod>2026-09-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <url>
+        <loc>https://winf.com.br/aerocore/supermaquinas/</loc>
+        <lastmod>2026-09-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://winf.com.br/aerocore/supermotos/</loc>
+        <lastmod>2026-09-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://winf.com.br/aerocore/winf-select/</loc>
+        <lastmod>2026-09-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
     </url>
 
 
     <!-- NEOSKIN -->
     <url>
         <loc>https://winf.com.br/neoskin/</loc>
-        <lastmod>2026-09-23</lastmod>
+        <lastmod>2026-09-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://winf.com.br/neoskin/bunker/</loc>
-        <lastmod>2026-09-23</lastmod>
+        <lastmod>2026-09-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <url>
         <loc>https://winf.com.br/neoskin/apocalypse/</loc>
-        <lastmod>2026-09-23</lastmod>
+        <lastmod>2026-09-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -88,86 +186,137 @@
     <!-- WINF SELECT / PROTEÇÃO -->
     <url>
         <loc>https://winf.com.br/ceramic/</loc>
-        <lastmod>2026-09-23</lastmod>
+        <lastmod>2026-09-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://winf.com.br/invisible/</loc>
-        <lastmod>2026-09-23</lastmod>
+        <lastmod>2026-09-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://winf.com.br/dual-reflect/</loc>
-        <lastmod>2026-09-23</lastmod>
+        <lastmod>2026-09-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://winf.com.br/blackpro/</loc>
-        <lastmod>2026-09-23</lastmod>
+        <lastmod>2026-09-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://winf.com.br/securityblind/</loc>
-        <lastmod>2026-09-23</lastmod>
+        <lastmod>2026-09-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://winf.com.br/miniblind-venetian/</loc>
-        <lastmod>2026-09-23</lastmod>
+        <lastmod>2026-09-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
 
+    <!-- CIDADES (SEO local) -->
+    <url>
+        <loc>https://winf.com.br/cidades/santos-sp/</loc>
+        <lastmod>2026-09-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://winf.com.br/cidades/sorocaba-sp/</loc>
+        <lastmod>2026-09-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+
     <!-- ECOSSISTEMA WINF -->
     <url>
-        <loc>https://winf.com.br/shop/</loc>
-        <lastmod>2026-09-23</lastmod>
+        <loc>https://winf.com.br/blog/</loc>
+        <lastmod>2026-09-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://winf.com.br/blog/</loc>
-        <lastmod>2026-09-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <loc>https://winf.com.br/blog/blindagem-transparente/</loc>
+        <lastmod>2026-09-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://winf.com.br/blog/ceramica-nanometrica/</loc>
+        <lastmod>2026-09-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://winf.com.br/blog/persianas-no-vidro/</loc>
+        <lastmod>2026-09-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://winf.com.br/blog/ppf-armadura-invisivel/</loc>
+        <lastmod>2026-09-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://winf.com.br/blog/privacidade-arquitetonica/</loc>
+        <lastmod>2026-09-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://winf.com.br/blog/rejeicao-infravermelha/</loc>
+        <lastmod>2026-09-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
     </url>
 
     <url>
         <loc>https://winf.com.br/partners/</loc>
-        <lastmod>2026-09-23</lastmod>
+        <lastmod>2026-09-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://winf.com.br/catalogo/</loc>
-        <lastmod>2026-09-23</lastmod>
+        <lastmod>2026-09-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://winf.com.br/cliente/</loc>
-        <lastmod>2026-09-23</lastmod>
+        <lastmod>2026-09-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://winf.com.br/briefing/</loc>
-        <lastmod>2026-09-23</lastmod>
+        <lastmod>2026-09-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
