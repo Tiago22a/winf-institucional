@@ -3,18 +3,19 @@
 
 Requirements:
   - ffmpeg
-  - ImageMagick (magick or convert)
+  - ImageMagick (`magick`; on Unix, `convert` is accepted as fallback)
 
 Usage:
   python scripts/optimize_media.py
   python scripts/optimize_media.py --dry-run
 
-Only replaces files when the optimized output is at least 5% smaller.
+Quality-first defaults: H.264 CRF 22, JPEG 90 and WebP 88.\nOnly replaces files when the optimized output is at least 5% smaller.
 Existing paths/URLs are preserved so no HTML references need to change.
 """
 from __future__ import annotations
 
 import argparse
+import os
 import re
 import shutil
 import subprocess
@@ -33,6 +34,16 @@ def tool(*names: str) -> str | None:
         found = shutil.which(name)
         if found:
             return found
+    return None
+
+
+def imagemagick_tool() -> str | None:
+    # On Windows, convert.exe is a native filesystem utility, not ImageMagick.
+    magick = shutil.which("magick")
+    if magick:
+        return magick
+    if os.name != "nt":
+        return shutil.which("convert")
     return None
 
 
@@ -87,11 +98,14 @@ def optimize_video(src: Path, ffmpeg: str, dry_run: bool) -> tuple[bool, int, in
         run([
             ffmpeg, "-y", "-i", str(src),
             "-map_metadata", "-1",
-            "-an",
+            "-map", "0:v:0",
+            "-map", "0:a?",
             "-c:v", "libx264",
             "-preset", "medium",
-            "-crf", "25",
+            "-crf", "22",
             "-pix_fmt", "yuv420p",
+            "-c:a", "aac",
+            "-b:a", "128k",
             "-movflags", "+faststart",
             str(out),
         ])
@@ -115,9 +129,9 @@ def optimize_image(src: Path, magick: str, dry_run: bool) -> tuple[bool, int, in
                  "-define", "png:compression-strategy=1",
                  str(out)])
         elif suffix in {".jpg", ".jpeg"}:
-            run([magick, str(src), "-strip", "-interlace", "Plane", "-quality", "86", str(out)])
+            run([magick, str(src), "-strip", "-interlace", "Plane", "-quality", "90", str(out)])
         elif suffix == ".webp":
-            run([magick, str(src), "-strip", "-quality", "82", str(out)])
+            run([magick, str(src), "-strip", "-quality", "88", str(out)])
         else:
             return False, before, before
         return maybe_replace(src, out, dry_run)
@@ -136,7 +150,7 @@ def main() -> int:
     args = parser.parse_args()
 
     ffmpeg = tool("ffmpeg")
-    magick = tool("magick", "convert")
+    magick = imagemagick_tool()
     media = referenced_media()
 
     print(f"Found {len(media)} referenced media files.")
