@@ -9,6 +9,10 @@
   const formSuccess = document.getElementById('form-success');
   const whatsappNumber = '5513997815375';
 
+  document.querySelectorAll('[data-current-year]').forEach((element) => {
+    element.textContent = new Date().getFullYear();
+  });
+
   const openMenu = () => {
     if (!menu) return;
     menu.classList.remove('hidden');
