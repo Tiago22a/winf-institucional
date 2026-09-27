@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="WINF™ — tecnologia aplicada ao vidro para controle térmico, proteção UV, privacidade e segurança." />
-    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
     <link rel="canonical" href="https://winf.com.br/" />
+    <link rel="alternate" hreflang="pt-BR" href="https://winf.com.br/" />
+    <link rel="alternate" hreflang="x-default" href="https://winf.com.br/" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:site_name" content="WINF™" />
@@ -14,13 +16,16 @@
     <meta property="og:description" content="Tecnologia aplicada ao vidro para controle térmico, proteção UV, privacidade e segurança." />
     <meta property="og:url" content="https://winf.com.br/" />
     <meta property="og:image" content="https://winf.com.br/images/og/og-winf-select.png" />
+    <meta property="og:image:alt" content="WINF™ — tecnologia e engenharia aplicada ao vidro" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="WINF™ — Engenharia Invisível em Vidro" />
     <meta name="twitter:description" content="Tecnologia aplicada ao vidro para controle térmico, proteção UV, privacidade e segurança." />
     <meta name="twitter:image" content="https://winf.com.br/images/og/og-winf-select.png" />
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"WINF Partners™","url":"https://winf.com.br/","logo":"https://winf.com.br/winf-logo.svg","sameAs":["https://www.instagram.com/winfpartners/"]}</script>
-    <title>WINF™ — Engenharia Invisível em Vidro</title>
+    <meta name="twitter:image:alt" content="WINF™ — tecnologia e engenharia aplicada ao vidro" />
+        <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://winf.com.br/#organization","name":"WINF™","alternateName":"WINF Partners™","url":"https://winf.com.br/","logo":{"@type":"ImageObject","url":"https://winf.com.br/winf-logo.svg"},"sameAs":["https://www.instagram.com/winfpartners/"]},{"@type":"WebSite","@id":"https://winf.com.br/#website","url":"https://winf.com.br/","name":"WINF™","inLanguage":"pt-BR","publisher":{"@id":"https://winf.com.br/#organization"}},{"@type":"WebPage","@id":"https://winf.com.br/#webpage","url":"https://winf.com.br/","name":"WINF™ — Engenharia Invisível em Vidro","description":"WINF™ — tecnologia aplicada ao vidro para controle térmico, proteção UV, privacidade e segurança.","inLanguage":"pt-BR","isPartOf":{"@id":"https://winf.com.br/#website"},"about":{"@id":"https://winf.com.br/#organization"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://winf.com.br/images/og/og-winf-select.png"}}]}</script>
+<title>WINF™ — Engenharia Invisível em Vidro</title>
     <link rel="icon" type="image/svg+xml" href="/winf-logo.svg" />
+    <link rel="preload" as="image" href="/images/dualreflect-poster-1.webp" type="image/webp" fetchpriority="high" />
     <link rel="preload" href="/fonts/gustavo-light.otf" as="font" type="font/otf" crossorigin />
     <link rel="preload" href="/fonts/gustavo-regular.otf" as="font" type="font/otf" crossorigin />
     <link rel="preload" href="/fonts/jetbrains-mono-var.woff2" as="font" type="font/woff2" crossorigin />
@@ -92,7 +97,7 @@
       <main id="conteudo" class="w-full min-h-screen bg-black text-white">
         <section id="topo" class="hero-section relative z-10 flex min-h-screen w-full select-none flex-col justify-between overflow-hidden p-6 sm:p-10 md:p-14">
           <div class="hero-media absolute inset-0 z-0 overflow-hidden pointer-events-none">
-            <video id="hero-video" class="h-full w-full scale-105 object-cover opacity-75 mix-blend-screen" playsinline muted loop autoplay preload="auto" poster="/images/dualreflect-poster-1.webp">
+            <video id="hero-video" class="h-full w-full scale-105 object-cover opacity-75 mix-blend-screen" playsinline muted loop autoplay preload="metadata" poster="/images/dualreflect-poster-1.webp">
               <source src="/videos/dualreflect-hero.mp4" type="video/mp4" />
             </video>
             <div class="absolute inset-0 bg-black/20"></div>
@@ -102,7 +107,7 @@
 
           <header class="relative z-30 flex w-full items-center justify-between">
             <a href="#topo" aria-label="WINF — início" class="flex items-center transition-opacity hover:opacity-80">
-              <img loading="eager" src="/winf-logo.svg" width="128" height="32" alt="WINF™" class="h-6 w-auto object-contain drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)] sm:h-7 md:h-8" />
+              <img loading="eager" decoding="async" fetchpriority="high" src="/winf-logo.svg" width="128" height="32" alt="WINF™" class="h-6 w-auto object-contain drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)] sm:h-7 md:h-8" />
             </a>
             <button type="button" data-action="open-menu" aria-label="Abrir Menu de Navegação" class="menu-trigger group relative z-50 flex flex-col items-end justify-center gap-2 p-2.5 transition-opacity hover:opacity-80">
               <span class="block h-[1.5px] w-7 bg-white shadow-[0_1px_4px_rgba(0,0,0,0.8)] transition-all duration-300 group-hover:w-8"></span>
