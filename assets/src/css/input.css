@@ -1,0 +1,8 @@
+@import "tailwindcss/theme.css" layer(theme);
+@theme {
+  --font-sans: "Gustavo", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@import "tailwindcss/utilities.css" layer(utilities);
+@source "../../../pelicula-de-controle-solar-santos-sp/index.html";
+@source "../../../insulfilm-residencial-sorocaba-sp/index.html";
