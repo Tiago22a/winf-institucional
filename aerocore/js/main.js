@@ -74,6 +74,32 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape') closeMenu();
   });
 
+  // AEROCORE_LAZY_MEDIA: defer offscreen video downloads until they approach the viewport
+  const lazyVideos = document.querySelectorAll('video.lazy-video');
+  const hydrateVideo = (video) => {
+    if (video.dataset.src && !video.src) video.src = video.dataset.src;
+    video.querySelectorAll('source[data-src]').forEach((source) => {
+      source.src = source.dataset.src;
+      source.removeAttribute('data-src');
+    });
+    video.removeAttribute('data-src');
+    video.load();
+    video.play().catch(() => {});
+  };
+
+  if ('IntersectionObserver' in window) {
+    const mediaObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        hydrateVideo(entry.target);
+        observer.unobserve(entry.target);
+      });
+    }, { rootMargin: '300px 0px' });
+    lazyVideos.forEach((video) => mediaObserver.observe(video));
+  } else {
+    lazyVideos.forEach(hydrateVideo);
+  }
+
   // 4. Accordion Toggle
   const accordions = document.querySelectorAll('.accordion-item');
   accordions.forEach((item) => {
