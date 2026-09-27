@@ -1,0 +1,11 @@
+{
+  "name": "winf-institucional",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i ./assets/src/css/input.css -o ./assets/src/css/output.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.10",
+    "tailwindcss": "^4.1.10"
+  }
+}
