@@ -52,7 +52,7 @@
       : path.startsWith('/aerocore/') ? 'aero' : 'select';
     const data = groups[type];
     const oldFooter = document.querySelector('footer');
-    if (!oldFooter && !document.querySelector('main')) return;
+    if (!oldFooter && !document.body) return;
     const style = document.createElement('style');
     style.textContent = `
       .winf-signature-footer{position:relative;isolation:isolate;background:#080a0b!important;color:#e8eae8!important;border-top:1px solid rgba(255,255,255,.14);padding:76px clamp(20px,5vw,72px) 30px;font-family:inherit;line-height:1.5;text-transform:none}
@@ -89,7 +89,7 @@
       '<div class="wf-grid">' + columns + '<nav aria-label="Redes oficiais"><p class="wf-label">ACOMPANHE</p><div class="wf-links">' + data.social.map(makeLink).join('') + '</div></nav></div>' +
       '<div class="wf-bottom"><span>© <span data-current-year></span> WINF GROUP. DO BRASIL PARA O MUNDO.</span><span><a href="/partners/">WINF PARTNERS™</a> &nbsp; / &nbsp; <a href="/aerocore/policies/">POLÍTICAS</a></span></div></div>';
     if (oldFooter) oldFooter.replaceWith(footer);
-    else document.querySelector('main').insertAdjacentElement('afterend', footer);
+    else document.body.appendChild(footer);
   }
   function init() { upgradeFooter(); renderYear(); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, {once:true});
