@@ -94,3 +94,9 @@ git push origin main
 ```
 
 No Windows o script usa apenas o comando `magick` para ImageMagick, evitando confundir com o `convert.exe` nativo do sistema.
+
+## Hub oficial — `/hub/`
+
+Diretório de marcas, redes sociais, unidades e soluções Partners. Usa logo e fontes locais, sem dependências de CDN. As três unidades regionais direcionam ao WhatsApp comercial central +55 13 98111-3001, conforme definido para o hub. Produtos sem página própria direcionam ao contato Partners.
+
+A página fica fora do sitemap e traz `noindex, nofollow, noarchive, nosnippet, noimageindex` para robots, Googlebot e Bingbot. O cabeçalho `X-Robots-Tag` está configurado em `_headers` (hosts compatíveis) e `hub/.htaccess` (Apache com mod_headers). Em outros servidores, configure o mesmo cabeçalho para `/hub` e `/hub/*` e valide após o deploy. Não bloquear o crawling no robots.txt: buscadores precisam ler o `noindex`. Essas diretivas impedem indexação por buscadores compatíveis, mas não são controle de acesso; a URL continua pública.
