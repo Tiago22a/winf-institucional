@@ -95,6 +95,14 @@
       .font-serif-quote {
         font-family: 'Playfair Display', serif;
       }
+      .aerocore-hero-title { opacity: 0; transition: opacity 280ms ease; }
+      .aerocore-hero-title.is-ready { opacity: 1; }
+      @media (min-width: 768px) {
+        .aerocore-porsche-video { transform: scale(1.25); transform-origin: center center; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .aerocore-hero-title { transition: none; }
+      }
     </style>
   </head>
   <body class="antialiased bg-black text-white/90">
@@ -225,7 +233,7 @@
         <div class="relative z-10 text-center flex flex-col items-center w-full">
           <div class="flex flex-col md:flex-row gap-10 md:gap-12 justify-center items-center mb-16 max-w-6xl px-4 w-full mt-16 md:mt-28">
             <div class="w-full max-w-xl border-b md:border-b-0 border-r-0 md:border-r border-white/20 pb-8 md:pb-0 pr-0 md:pr-12 text-center md:text-right flex flex-col items-center md:items-end justify-center">
-              <h1 class="text-5xl sm:text-6xl md:text-7xl font-light tracking-[0.2em] md:tracking-[0.3em] leading-none select-none text-white uppercase font-aerocore-title">
+              <h1 class="aerocore-hero-title text-5xl sm:text-6xl md:text-7xl font-light tracking-[0.2em] md:tracking-[0.3em] leading-none select-none text-white uppercase font-aerocore-title">
                 AEROCORE
               </h1>
               <span class="text-xs sm:text-sm md:text-base tracking-[0.4em] md:tracking-[0.6em] opacity-65 mt-4 font-sans font-light uppercase text-center md:text-right block w-full max-w-full">
@@ -461,7 +469,7 @@
 <div class="mb-24 md:mb-32 w-full h-[60vh] border border-white/5 rounded-sm overflow-hidden">
   <video
     src="./white-porsche.mp4"
-    class="w-full h-full object-cover brightness-75"
+    class="aerocore-porsche-video w-full h-full object-cover brightness-75"
     preload="metadata"
     autoplay
     muted
@@ -610,6 +618,35 @@
 
     </main>
 
+    <!-- Aguarda a fonte do título e evita salto visual no carregamento. -->
+    <script>
+      (function () {
+        function init() {
+          var title = document.querySelector('.aerocore-hero-title');
+          if (!title) return;
+          var shown = false;
+          function reveal() {
+            if (shown) return;
+            shown = true;
+            title.classList.add('is-ready');
+          }
+          var fallback = setTimeout(reveal, 1600);
+          if (document.fonts && document.fonts.load) {
+            document.fonts.load('300 72px Outfit').then(function () {
+              clearTimeout(fallback);
+              reveal();
+            }).catch(reveal);
+          } else {
+            clearTimeout(fallback);
+            reveal();
+          }
+        }
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', init, { once: true });
+        } else { init(); }
+      }());
+    </script>
+    <noscript><style>.aerocore-hero-title{opacity:1}</style></noscript>
     <!-- Main Vanilla JavaScript -->
     <script src="./js/main.js"></script>
     <script src="/js/current-year.js" defer></script>
