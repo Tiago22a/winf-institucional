@@ -1,0 +1,28 @@
+/* WINF footer — estilo institucional compartilhado */
+.wf-footer,.wf-footer *{box-sizing:border-box}
+.wf-footer{position:relative;isolation:isolate;overflow:hidden;background:#08090b;color:#f2f3f4;border-top:1px solid rgba(255,255,255,.12);font-family:"Gustavo","Inter",Arial,sans-serif;text-align:left}
+.wf-footer:before{content:"";position:absolute;inset:0 0 auto;height:270px;pointer-events:none;background:radial-gradient(ellipse 55% 85% at 8% 0%,rgba(255,255,255,.055),transparent 78%)}
+.wf-footer a{color:inherit;text-decoration:none}
+.wf-footer a:focus-visible{outline:2px solid #dadde0;outline-offset:4px}
+.wf-footer__wrap{position:relative;width:min(calc(100% - 64px),1240px);margin:0 auto}
+.wf-footer__top{display:grid;grid-template-columns:minmax(200px,1.6fr) repeat(3,minmax(145px,1fr));gap:clamp(24px,4vw,68px);padding:80px 0 72px}
+.wf-footer__eyebrow{margin:0 0 26px;font-size:10px;letter-spacing:.25em;font-weight:500;text-transform:uppercase;color:#a0a4a8}
+.wf-footer__brand{display:inline-block;font-size:clamp(30px,3.7vw,50px);line-height:1;letter-spacing:.12em;font-weight:500;color:#fff!important}
+.wf-footer__brand sup{font-size:10px;letter-spacing:0;vertical-align:super}
+.wf-footer__description{max-width:330px;margin:22px 0 26px;font-size:14px;line-height:1.8;font-weight:300;color:#adb0b5}
+.wf-footer__primary{display:inline-flex;align-items:center;gap:14px;min-height:44px;border-bottom:1px solid #a1a4a7;font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;transition:color .2s}
+.wf-footer__primary:hover{color:#fff}
+.wf-footer__primary span{font-size:18px}
+.wf-footer__title{margin:7px 0 28px;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#fff}
+.wf-footer__list{display:flex;flex-direction:column;align-items:flex-start;gap:15px;padding:0;margin:0;list-style:none}
+.wf-footer__list li{padding:0;margin:0;list-style:none}
+.wf-footer__link{display:inline-block;font-size:13px;line-height:1.55;font-weight:300;color:#adb1b7!important;transition:color .2s,transform .2s}
+.wf-footer__link:hover{color:#fff!important;transform:translateX(2px)}
+.wf-footer__link--accent{color:#fff!important}
+.wf-footer__bottom{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:26px 0 31px;border-top:1px solid rgba(255,255,255,.12)}
+.wf-footer__bottom small,.wf-footer__bottom a{font-size:10px;line-height:1.6;font-weight:400;letter-spacing:.08em;color:#90939a}
+.wf-footer__bottom a:hover{color:#fff}
+.wf-footer__bottom-right{display:flex;align-items:center;flex-wrap:wrap;gap:12px 22px}
+.wf-footer__sig{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#7f8288}
+@media(max-width:1000px){.wf-footer__top{grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 30px}.wf-footer__intro{grid-column:1/-1}.wf-footer__description{max-width:520px}}
+@media(max-width:620px){.wf-footer__wrap{width:calc(100% - 42px)}.wf-footer__top{grid-template-columns:repeat(2,minmax(0,1fr));gap:38px 20px;padding:55px 0 49px}.wf-footer__intro{grid-column:1/-1}.wf-footer__connect{grid-column:1/-1}.wf-footer__bottom{align-items:flex-start;flex-direction:column;gap:15px}.wf-footer__list{gap:12px}.wf-footer__sig{font-size:9px}}
