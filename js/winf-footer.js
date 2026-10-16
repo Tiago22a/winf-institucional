@@ -92,7 +92,7 @@
       '<div class="wf-footer__top">' +
       '<div class="wf-footer__intro">' +
       '<div class="wf-footer__eyebrow">'+v.label+'</div>' +
-      '<a class="wf-footer__brand" href="'+v.url+'" aria-label="'+v.brand+' — página principal">'+v.brand+'<sup>™</sup></a>' +
+      (v.brand==="WINF" ? '<a class="wf-footer__brand wf-footer__brand--logo" href="'+v.url+'" aria-label="WINF — página principal"><img class="wf-footer__brand-logo" src="/winf-logo.svg" alt="WINF™" width="109" height="36" loading="lazy" decoding="async" /></a>' : '<a class="wf-footer__brand" href="'+v.url+'" aria-label="'+v.brand+' — página principal">'+v.brand+'<sup>™</sup></a>') +
       '<p class="wf-footer__description">'+v.description+'</p>' +
       '<a class="wf-footer__primary" href="'+link.contact+'">Fale com um especialista <span aria-hidden="true">↗</span></a>' +
       '</div>' +
