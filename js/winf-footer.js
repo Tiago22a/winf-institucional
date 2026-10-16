@@ -87,6 +87,7 @@
     footer.className = "wf-footer";
     footer.setAttribute("aria-label","Rodapé institucional WINF");
     footer.innerHTML =
+      '<div id="privacy" aria-hidden="true"></div><div id="politica-de-privacidade" aria-hidden="true"></div>' +
       '<div class="wf-footer__wrap">' +
       '<div class="wf-footer__top">' +
       '<div class="wf-footer__intro">' +
