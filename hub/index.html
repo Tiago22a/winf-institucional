@@ -69,13 +69,13 @@ footer{padding:38px 0 44px}footer p{color:#b9b9c2}footer .eyebrow{font-size:9px;
 .quick .quick-primary:hover{background:#fff;color:#000;border-color:#fff}
 .portals .card{display:flex;flex-direction:column;align-items:flex-start}
 .portals .card .card-title{width:100%}
-.portal-cta{display:inline-flex;align-items:center;gap:15px;margin-top:auto;padding-top:25px;color:#e5e6e8;font:400 10px/1.5 'JetBrains Mono',monospace;letter-spacing:.12em}
+.portal-cta{display:inline-flex;align-items:center;justify-content:space-between;gap:15px;align-self:flex-start;margin-top:24px;min-height:43px;padding:11px 14px;border:1px solid #4c4c55;color:#e5e6e8;font:400 10px/1.5 'JetBrains Mono',monospace;letter-spacing:.1em;transition:border-color .2s ease,background .2s ease}
 .portal-cta:after{content:'↗';font-size:15px;line-height:1;transition:transform .2s ease}
-.portals .card:hover .portal-cta:after{transform:translate(3px,-3px)}
+.portals .card:hover .portal-cta{border-color:#a4a5ae;background:#1c1d22}.portals .card:hover .portal-cta:after{transform:translate(3px,-3px)}
 .region a.region-lp{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:19px;padding:14px 16px;min-height:49px;background:#eceef0;color:#131416;border:1px solid #eceef0;font:500 10px/1.5 'JetBrains Mono',monospace;letter-spacing:.1em;transition:background .2s ease,border-color .2s ease}
 .region a.region-lp:hover{background:#fff;color:#000;border-color:#fff}
 .region a.region-lp span{font-size:17px}
-@media(max-width:640px){.quick .quick-primary{grid-column:1/-1;min-height:48px}.portal-cta{padding-top:18px}.region a.region-lp{margin-top:16px}}
+@media(max-width:640px){.quick .quick-primary{grid-column:1/-1;min-height:48px}.portal-cta{margin-top:20px}.region a.region-lp{margin-top:16px}}
 
 </style>
     <link rel="stylesheet" href="/css/winf-footer.css" />
