@@ -1,204 +1,65 @@
-
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />\n  <meta name="robots" content="noindex,nofollow" />
-  <title>WINF™ PARTNERS</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800;900&display=swap" rel="stylesheet" />
-  <style>
-    * { font-family: 'Inter', sans-serif; box-sizing: border-box; }
-    html, body { width: 100%; overflow-x: hidden; }
-
-    body {
-      background: linear-gradient(to bottom, #fcfcfd 0%, #f6f6f9 50%, #eff0f4 100%);
-      min-height: 100vh;
-      margin: 0; padding: 0;
-    }
-
-    .dot-grid {
-      background-image: radial-gradient(#131314 1px, transparent 1px);
-      background-size: 24px 24px;
-    }
-
-    .btn-dark {
-      background: linear-gradient(135deg, rgba(23,23,26,0.98) 0%, rgba(13,13,15,0.99) 50%, rgba(5,5,6,1) 100%);
-      box-shadow: inset 0 1px 1px 0 rgba(255,255,255,0.16), inset 0 -1.5px 1px 0 rgba(0,0,0,0.9), 0 8px 32px -4px rgba(0,0,0,0.35), 0 0 0 1px rgba(255,255,255,0.05);
-    }
-
-    .btn-glass {
-      background: linear-gradient(135deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0.15) 100%);
-      box-shadow: inset 0 1.5px 2px 0 rgba(255,255,255,0.85), inset 0 -1px 1px 0 rgba(0,0,0,0.04), 0 8px 24px -4px rgba(0,0,0,0.05), 0 0 0 1px rgba(0,0,0,0.06);
-      backdrop-filter: blur(12px);
-    }
-
-    .btn-dark:hover, .btn-glass:hover { transform: translateY(-1px); }
-
-    .synth-left {
-      background: linear-gradient(135deg, rgba(23,23,26,0.98) 0%, rgba(13,13,15,0.99) 50%, rgba(5,5,6,1) 100%);
-      box-shadow: inset 0 1px 1px 0 rgba(255,255,255,0.16), inset 0 -1.5px 1px 0 rgba(0,0,0,0.9), 0 8px 32px -4px rgba(0,0,0,0.35), 0 0 0 1px rgba(255,255,255,0.05);
-      clip-path: polygon(0% 0%, 100% 0%, calc(100% - 14px) 100%, 0% 100%);
-      border-radius: 4px 0 0 4px;
-    }
-
-    .synth-right {
-      background: linear-gradient(135deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0.15) 100%);
-      box-shadow: inset 0 1.5px 2px 0 rgba(255,255,255,0.85), inset 0 -1px 1px 0 rgba(0,0,0,0.04), 0 8px 24px -4px rgba(0,0,0,0.05), 0 0 0 1px rgba(0,0,0,0.06);
-      backdrop-filter: blur(12px);
-      clip-path: polygon(15.5px 0%, 100% 0%, 100% 100%, 1.5px 100%);
-      border-radius: 0 4px 4px 0;
-    }
-
-    .synth-wrapper:hover { transform: translateY(-1px); }
-    .synth-wrapper:hover .arrow-icon { transform: translateX(6px); }
-    .btn-dark:hover .arrow-icon, .btn-glass:hover .arrow-icon { transform: translateX(8px); }
-    .arrow-icon { transition: transform 0.2s ease; }
-
-    .wave-bar {
-      width: 2px;
-      background: white;
-      border-radius: 0.5px;
-      animation: wave 1s ease-in-out infinite;
-    }
-    .wave-bar:nth-child(1) { animation-duration: 1.1s; animation-delay: 0.1s; }
-    .wave-bar:nth-child(2) { animation-duration: 0.85s; animation-delay: 0.3s; }
-    .wave-bar:nth-child(3) { animation-duration: 1.25s; animation-delay: 0.5s; }
-    .wave-bar:nth-child(4) { animation-duration: 0.95s; animation-delay: 0.2s; }
-
-    @keyframes wave {
-      0%, 100% { height: 40%; }
-      50% { height: 90%; }
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    .fade-up { animation: fadeUp 0.8s ease forwards; }
-
-    .hero-heading {
-      font-size: clamp(2.5rem, 13vw, 7rem);
-      line-height: 0.9;
-      font-weight: 900;
-      letter-spacing: -0.04em;
-      text-transform: uppercase;
-      word-break: break-word;
-    }
-
-    .cta-btn {
-      width: 100%;
-      min-width: 0;
-    }
-    .cta-btn span.label-text {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    .synth-wrapper {
-      width: 100%;
-      max-width: 100%;
-      overflow: hidden;
-    }
-  </style>
-    <link rel="stylesheet" href="/css/winf-footer.css?v=20261021-footer-utf8-4" />
-  </head>
-<body class="text-black relative">
-
-  <div class="dot-grid absolute inset-0 pointer-events-none z-0 opacity-[0.03]"></div>
-  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(600px,100vw)] h-[min(600px,100vw)] rounded-full pointer-events-none z-0"
-    style="background: rgba(180,180,200,0.2); filter: blur(130px);"></div>
-
-  <header class="px-5 py-6 sm:px-8 sm:py-10 w-full relative z-10">
-    <h1 class="text-lg sm:text-2xl font-black italic tracking-tighter text-black">
-      WINF™ PARTNERS
-    </h1>
-  </header>
-
-  <main class="px-2 sm:px-8 pb-16 sm:pb-20 max-w-4xl mx-auto w-full relative z-10">
-    <div class="max-w-3xl fade-up">
-
-      <div class="text-[9px] sm:text-xs font-bold uppercase text-black/40 mb-5 sm:mb-6 tracking-[0.3em] sm:tracking-[0.4em]">
-        ACESSO EXCLUSIVO PARA LÍDERES
-      </div>
-
-      <div class="hero-heading mb-6 sm:mb-8  md:text-8xl">
-        <span class="text-black block">CONSTRUÍMOS</span>
-        <span class="text-zinc-400 italic block mt-1">O PADRÃO.</span>
-      </div>
-
-      <p class="text-base sm:text-xl font-light text-black/60 mb-10 sm:mb-12 leading-relaxed max-w-xl">
-        O acesso ao ecossistema WINF™ não é uma questão de escolha, mas de qualificação. Você não nos encontra, você é selecionado.
-      </p>
-
-      <div class="flex flex-col gap-3 sm:gap-4 w-full">
-
-        <!-- CTA 1 — Ativar Território -->
-        <a href="https://winf.com.br/partners"
-          class="btn-dark cta-btn text-white flex items-center justify-between px-5 sm:px-8 py-4 sm:py-6 rounded-[4px] transition-all duration-300 ease-out group relative overflow-hidden"
-          style="text-decoration: none;">
-          <div class="absolute inset-0 bg-gradient-to-tr from-white/[0.01] via-white/[0.04] to-transparent pointer-events-none"></div>
-          <div class="flex items-center gap-3 sm:gap-4 relative z-10 min-w-0">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-60 shrink-0"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
-            <span class="font-bold text-[10px] sm:text-sm uppercase text-left label-text" style="letter-spacing: 0.2em;">
-              Ativar Território
-              <span class="block text-[8px] sm:text-[9px] text-white/50 tracking-widest mt-0.5 sm:mt-1 font-mono font-normal normal-case">Acesso WINF OS™</span>
-            </span>
-          </div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon shrink-0 relative z-10 ml-2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </a>
-
-        <!-- CTA 2 — Universo Dark -->
-
-
-        <!-- CTA 2 — Portal do Cliente -->
-        <a href="https://winf.com.br/cliente"
-          class="btn-glass cta-btn text-zinc-900 flex items-center justify-between px-5 sm:px-8 py-4 sm:py-6 transition-all duration-300 ease-out group relative overflow-hidden"
-          style="border-radius: 4px; text-decoration: none;">
-          <div class="absolute inset-0 bg-gradient-to-tr from-white/[0.1] via-white/[0.2] to-transparent pointer-events-none"></div>
-          <div class="flex items-center gap-3 sm:gap-4 relative z-10 min-w-0">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-60 text-zinc-800 shrink-0"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
-            <span class="font-bold text-[10px] sm:text-sm uppercase text-left label-text" style="letter-spacing: 0.2em;">
-              Portal do Cliente &amp; Arquitetos
-              <span class="block text-[8px] sm:text-[9px] text-zinc-500 tracking-widest mt-0.5 sm:mt-1 font-mono font-normal normal-case">Blockchain &amp; Validação</span>
-            </span>
-          </div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon shrink-0 text-zinc-800 relative z-10 ml-2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </a>
-
-
-        <!-- CTA 3 — Landing Page Oficial -->
-        <a href="https://winf.com.br/"
-          class="btn-glass cta-btn text-zinc-900 flex items-center justify-between px-5 sm:px-8 py-4 sm:py-6 transition-all duration-300 ease-out group relative overflow-hidden"
-          style="border-radius: 4px; text-decoration: none;">
-          <div class="absolute inset-0 bg-gradient-to-tr from-white/[0.1] via-white/[0.2] to-transparent pointer-events-none"></div>
-          <div class="flex items-center gap-3 sm:gap-4 relative z-10 min-w-0">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-60 text-zinc-800 shrink-0">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M2 12h20"/>
-              <path d="M12 2a15.3 15.3 0 0 1 0 20"/>
-              <path d="M12 2a15.3 15.3 0 0 0 0 20"/>
-            </svg>
-            <span class="font-bold text-[10px] sm:text-sm uppercase text-left label-text" style="letter-spacing: 0.2em;">
-              Conhecer a WINF™
-              <span class="block text-[8px] sm:text-[9px] text-zinc-500 tracking-widest mt-0.5 sm:mt-1 font-mono font-normal normal-case">
-                Acessar Landing Page Oficial
-              </span>
-            </span>
-          </div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon shrink-0 text-zinc-800 relative z-10 ml-2">
-            <path d="M5 12h14"/>
-            <path d="m12 5 7 7-7 7"/>
-          </svg>
-        </a>
-
+<!doctype html>
+<html lang="pt-BR"><head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#070709">
+  <title>WINF&#8482; PARTNERS &#8212; Constru&#237;mos o padr&#227;o.</title>
+  <meta name="description" content="Acesso ao ecossistema WINF Partners. Conhe&#231;a a marca, consulte seu territ&#243;rio e acesse o portal do cliente.">
+  <link rel="icon" href="/winf-logo.svg"><link rel="preload" href="/briefing/media/briefing-poster.webp" as="image" fetchpriority="high">
+  <link rel="preload" href="/fonts/gustavo-bold.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="/fonts/jetbrains-mono-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/briefing/briefing.css?v=20261021-cinematic1">
+  <link rel="stylesheet" href="/css/winf-footer.css?v=20261021-footer-utf8-4">
+</head><body class="min-h-screen bg-[#070709] font-sans text-white antialiased selection:bg-white/20">
+<a href="#conteudo" class="briefing-skip">Pular para o conte&#250;do</a>
+<!-- Upload the future video to /briefing/media/briefing-bg.mp4; the poster remains until then. -->
+<div class="briefing-backdrop pointer-events-none fixed inset-0 z-0" aria-hidden="true">
+  <video id="briefing-background-video" class="h-full w-full object-cover brightness-105 contrast-110" autoplay muted loop playsinline preload="none" poster="/briefing/media/briefing-poster.webp" data-video-src="/briefing/media/briefing-bg.mp4">
+    <source src="/briefing/media/briefing-bg.mp4" type="video/mp4">
+  </video>
+  <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/35 to-[#070709]"></div>
 </div>
+<div class="relative z-10">
+  <header class="relative z-20 flex w-full flex-wrap items-center justify-between gap-4 px-6 py-6 md:px-12 md:py-[50px]">
+    <a href="https://winf.com.br/" class="flex items-baseline gap-3 text-white" aria-label="WINF Partners &#8212; conhecer a WINF">
+      <span class="font-brand text-[23px] font-black sm:text-[27px] italic leading-none tracking-[-.08em] md:text-[30px]">WINF<sup class="ml-0.5 text-[13px] tracking-normal">TM</sup></span>
+      <span class="font-mono text-[9px] font-bold uppercase tracking-widest text-zinc-300 sm:text-[10px] md:text-xs">PARTNERS</span>
+    </a>
+    <a href="https://winf.com.br/partners" class="group flex min-h-[44px] items-center gap-2.5 rounded-[4px] border border-white/25 bg-white/10 px-3 py-2 text-white shadow-access backdrop-blur-md transition hover:border-white/50 hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:px-4 md:px-6 md:py-3.5">
+      <span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-[2px] bg-white text-black shadow-icon"><svg xmlns="http://www.w3.org/2000/svg" class="h-[13px] w-[13px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z"/></svg></span>
+      <span class="font-mono text-[8px] font-bold uppercase tracking-[.12em] sm:text-[10px] md:text-sm md:tracking-[.3em]">Acesso ao WINF OS</span><span class="ml-0.5 h-1.5 w-1.5 shrink-0 animate-soft-pulse rounded-full bg-white/80" aria-hidden="true"></span>
+    </a>
+  </header>
+  <main id="conteudo" class="relative mx-auto w-full max-w-[1440px] px-6 pb-16 pt-14 sm:pt-20 md:px-12 md:pb-24 md:pt-[102px]">
+    <div class="briefing-copy">
+      <p class="briefing-eyebrow mb-9 flex items-center gap-3 text-[8px] font-bold uppercase leading-[2.2] tracking-[.3em] text-white/90 sm:text-[10px] sm:tracking-[.5em] md:mb-[52px] md:text-xs md:tracking-[1.2em] lg:tracking-[1.9em]">
+        <span class="h-2 w-2 shrink-0 animate-soft-pulse rounded-full bg-white/60 md:h-3 md:w-3" aria-hidden="true"></span><span>Acesso exclusivo para l&#237;deres</span>
+      </p>
+      <h1 class="briefing-heading mb-8 font-heading font-black uppercase tracking-[-.055em] text-white md:mb-12"><span class="block">Constru&#237;mos</span><span class="mt-1 block italic md:mt-2">O padr&#227;o.</span></h1>
+      <p class="mb-10 max-w-[830px] text-base font-light leading-relaxed text-white/90 sm:text-lg md:mb-14 md:text-[28px]">O acesso ao ecossistema WINF&#8482; n&#227;o &#233; uma quest&#227;o de escolha, mas de qualifica&#231;&#227;o. Voc&#234; n&#227;o nos encontra, voc&#234; &#233; selecionado.</p>
+      <nav class="flex w-full max-w-lg flex-col gap-4 md:gap-5" aria-label="Acessos WINF Partners">
+<a href="https://winf.com.br/partners" class="briefing-cta group flex min-h-[82px] w-full items-center justify-between gap-3 rounded-[4px] border border-white/20 bg-white/5 px-5 py-4 text-white shadow-glass backdrop-blur-md transition duration-300 hover:-translate-y-px hover:border-white/40 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:px-8 sm:py-5">
+  <span class="flex min-w-0 items-center gap-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-[22px] w-[22px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a18 18 0 0 1 0 18 18 18 0 0 1 0-18"/></svg><span class="min-w-0 text-left"><span class="block text-[11px] font-bold uppercase tracking-[.16em] sm:text-sm sm:tracking-[.2em]">Ativar Territ&#243;rio</span><span class="mt-1 block font-mono text-[9px] leading-relaxed tracking-[.04em] text-white/70 sm:text-[10px] sm:tracking-widest">Escolha a escala da sua presen&#231;a</span></span></span><svg xmlns="http://www.w3.org/2000/svg" class="h-[18px] w-[18px] shrink-0 transition-transform group-hover:translate-x-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a><a href="https://winf.com.br/cliente" class="briefing-cta group flex min-h-[82px] w-full items-center justify-between gap-3 rounded-[4px] border border-white/20 bg-white/5 px-5 py-4 text-white shadow-glass backdrop-blur-md transition duration-300 hover:-translate-y-px hover:border-white/40 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:px-8 sm:py-5">
+  <span class="flex min-w-0 items-center gap-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-[22px] w-[22px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c3 2 6 3 8 3v7c0 4-4 7-8 9-4-2-8-5-8-9V6c2 0 5-1 8-3Z"/><path d="m8 12 3 3 5-6"/></svg><span class="min-w-0 text-left"><span class="block text-[11px] font-bold uppercase tracking-[.16em] sm:text-sm sm:tracking-[.2em]">Portal do Cliente &amp; Arquitetos</span><span class="mt-1 block font-mono text-[9px] leading-relaxed tracking-[.04em] text-white/70 sm:text-[10px] sm:tracking-widest">Blockchain &amp; Valida&#231;&#227;o</span></span></span><svg xmlns="http://www.w3.org/2000/svg" class="h-[18px] w-[18px] shrink-0 transition-transform group-hover:translate-x-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a><a href="https://winf.com.br/" class="briefing-cta group flex min-h-[82px] w-full items-center justify-between gap-3 rounded-[4px] border border-white/20 bg-white/5 px-5 py-4 text-white shadow-glass backdrop-blur-md transition duration-300 hover:-translate-y-px hover:border-white/40 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:px-8 sm:py-5">
+  <span class="flex min-w-0 items-center gap-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-[22px] w-[22px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a18 18 0 0 1 0 18 18 18 0 0 1 0-18"/></svg><span class="min-w-0 text-left"><span class="block text-[11px] font-bold uppercase tracking-[.16em] sm:text-sm sm:tracking-[.2em]">Conhecer a WINF&#8482;</span><span class="mt-1 block font-mono text-[9px] leading-relaxed tracking-[.04em] text-white/70 sm:text-[10px] sm:tracking-widest">Acessar Landing Page Oficial</span></span></span><svg xmlns="http://www.w3.org/2000/svg" class="h-[18px] w-[18px] shrink-0 transition-transform group-hover:translate-x-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </nav>
     </div>
   </main>
-
-    <script charset="utf-8" src="/js/winf-footer.js?v=20261021-footer-utf8-4" defer></script>
-  <footer aria-label="Rodap&#233; institucional WINF" class="wf-footer" data-footer-version="20261021-footer-utf8-4" id="winf-global-footer"><div aria-hidden="true" id="privacy"></div><div aria-hidden="true" id="politica-de-privacidade"></div><section aria-labelledby="wf-expansion-title" class="wf-footer__callout"><div class="wf-footer__callout-inner"><div><span class="wf-footer__eyebrow">WINF PARTNERS&#8482; / EXPANS&#195;O</span><h2 id="wf-expansion-title">Pronto para fazer parte do ecossistema?</h2><p>Expans&#227;o territorial homologada e tecnologia propriet&#225;ria para a sua opera&#231;&#227;o.</p></div><div class="wf-footer__actions"><a class="wf-footer__button" href="/#contato">Falar com Partners&#8482; <span aria-hidden="true">&#8594;</span></a><a class="wf-footer__button wf-footer__button--outline" href="/partners/">Seja parceiro WINF <span aria-hidden="true">&#8594;</span></a></div></div></section><div class="wf-footer__wrap"><div class="wf-footer__top"><div class="wf-footer__intro"><div class="wf-footer__eyebrow">WINF PARTNERS&#8482; / EXPANS&#195;O</div><div class="wf-footer__brand-row"><a aria-label="WINF&#8482; &#8212; p&#225;gina principal" class="wf-footer__brand wf-footer__brand--logo" href="/partners/"><img alt="WINF&#8482;" class="wf-footer__brand-logo" decoding="async" height="36" loading="eager" src="/winf-logo.svg" width="109"/></a><span class="wf-footer__badge">ECOSYSTEM</span></div><p class="wf-footer__description">Um ecossistema de marcas, tecnologia e oportunidades. Conhe&#231;a as frentes de atua&#231;&#227;o da WINF&#8482;.</p><a class="wf-footer__primary" href="/#contato">Fale com um especialista <span aria-hidden="true">&#8599;</span></a></div><nav aria-label="Linhas e pel&#237;culas" class="wf-footer__group"><h2 class="wf-footer__title">Linhas &amp; pel&#237;culas</h2><ul class="wf-footer__list"><li><a class="wf-footer__link" href="/partners/">WINF Asset Light&#8482;</a></li><li><a class="wf-footer__link" href="/">WINF Select&#8482; &#8212; Arquitetura</a></li><li><a class="wf-footer__link" href="/aerocore/">AeroCore&#8482; &#8212; Mobilidade</a></li><li><a class="wf-footer__link" href="/aerocore/neoskin/">NeoSkin&#8482; &#8212; PPF</a></li><li><a class="wf-footer__link" href="/aerocore/ceramic-armoring/">Ceramic Armoring&#8482;</a></li></ul></nav><nav aria-label="Ecossistema WINF" class="wf-footer__group"><h2 class="wf-footer__title">Ecossistema</h2><ul class="wf-footer__list"><li><a class="wf-footer__link" href="/">WINF Select&#8482;</a></li><li><a class="wf-footer__link" href="/aerocore/">AeroCore&#8482;</a></li><li><a class="wf-footer__link" href="/aerocore/neoskin/">NeoSkin&#8482;</a></li><li><a class="wf-footer__link" href="/partners/">WINF Partners&#8482;</a></li><li><a class="wf-footer__link" href="/blog/">WINF Journal&#8482;</a></li></ul></nav><nav aria-label="Redes e contato" class="wf-footer__group wf-footer__connect"><h2 class="wf-footer__title">Conex&#245;es</h2><ul class="wf-footer__list"><li><a class="wf-footer__link wf-footer__link--accent" href="/catalogo/">Cat&#225;logo digital &#8599;</a></li><li><a class="wf-footer__link" href="https://www.instagram.com/winfpartners/" rel="noopener noreferrer" target="_blank">Instagram @winfpartners &#8599;</a></li><li><a class="wf-footer__link" href="/#contato">Contato comercial</a></li><li><a class="wf-footer__link" href="/partners/">Seja parceiro WINF</a></li></ul></nav></div><div class="wf-footer__bottom"><small>&#169; <span data-current-year="">2026</span> WINF&#8482;. Todos os direitos reservados.</small><div class="wf-footer__bottom-right"><span class="wf-footer__sig">Do Brasil para o mundo.</span><a href="/partners/">winf.com.br/partners/</a><a href="/aerocore/policies/#privacidade">Pol&#237;ticas &amp; privacidade</a><button class="wf-footer__back-top" type="button">&#8593; Voltar ao topo</button></div></div><div aria-label="Conex&#245;es globais: China, Estados Unidos e Brasil" class="wf-footer__union"><div class="wf-footer__flags"><img alt="China" height="18" loading="lazy" src="/images/flags/cn.svg" width="27"/><span aria-hidden="true"></span><img alt="Estados Unidos" height="18" loading="lazy" src="/images/flags/us.svg" width="34"/><span aria-hidden="true"></span><img alt="Brasil" height="18" loading="lazy" src="/images/flags/br.svg" width="25"/></div><span>Conex&#245;es que aproximam o mundo.</span></div></div></footer>
-</body>
-</html>
+  <section class="relative mx-auto w-full max-w-[1440px] border-t border-white/10 px-6 py-14 md:px-10" aria-labelledby="briefing-verticals-title">
+    <div class="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-center">
+      <div><h2 id="briefing-verticals-title" class="font-mono text-[10px] font-bold uppercase leading-relaxed tracking-[.25em] text-white/70 sm:text-xs">Verticais de engenharia &amp; especialidades</h2><p class="mt-2 text-xs font-light leading-relaxed text-zinc-300 sm:text-sm">AeroCore&#8482; &#8226; NeoSkin&#8482; &#8226; Ceramic Armoring &#8226; Linhas de alta performance</p></div>
+      <a href="https://winf.com.br/partners" class="flex min-h-11 items-center gap-2 self-start font-mono text-[10px] uppercase tracking-[.14em] text-white/70 hover:text-white md:self-auto">Acessar WINF OS Terminal <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+    </div>
+    <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-6">
+<a href="https://winf.com.br/aerocore/marine/" class="group flex min-h-[108px] flex-col justify-between rounded-[3px] border border-white/10 bg-white/[.03] p-3.5 transition hover:border-white/25 hover:bg-white/[.08] sm:p-4"><span><span class="mb-2 block font-mono text-[9px] uppercase text-white/50">Vertical</span><span class="block text-xs font-bold uppercase leading-relaxed tracking-wider text-white">Marine</span></span><span class="mt-2 block font-mono text-[9px] tracking-tight text-zinc-300">N&#225;utica de luxo</span></a>
+<a href="https://winf.com.br/aerocore/ceramic-armoring/" class="group flex min-h-[108px] flex-col justify-between rounded-[3px] border border-white/10 bg-white/[.03] p-3.5 transition hover:border-white/25 hover:bg-white/[.08] sm:p-4"><span><span class="mb-2 block font-mono text-[9px] uppercase text-white/50">Vertical</span><span class="block text-xs font-bold uppercase leading-relaxed tracking-wider text-white">Ceramic Armoring</span></span><span class="mt-2 block font-mono text-[9px] tracking-tight text-zinc-300">Blindagem cer&#226;mica</span></a>
+<a href="https://winf.com.br/aerocore/motorsports/" class="group flex min-h-[108px] flex-col justify-between rounded-[3px] border border-white/10 bg-white/[.03] p-3.5 transition hover:border-white/25 hover:bg-white/[.08] sm:p-4"><span><span class="mb-2 block font-mono text-[9px] uppercase text-white/50">Vertical</span><span class="block text-xs font-bold uppercase leading-relaxed tracking-wider text-white">Motorsports</span></span><span class="mt-2 block font-mono text-[9px] tracking-tight text-zinc-300">Superesportivos</span></a>
+<a href="https://winf.com.br/aerocore/aeronautica/" class="group flex min-h-[108px] flex-col justify-between rounded-[3px] border border-white/10 bg-white/[.03] p-3.5 transition hover:border-white/25 hover:bg-white/[.08] sm:p-4"><span><span class="mb-2 block font-mono text-[9px] uppercase text-white/50">Vertical</span><span class="block text-xs font-bold uppercase leading-relaxed tracking-wider text-white">Aeron&#225;utica</span></span><span class="mt-2 block font-mono text-[9px] tracking-tight text-zinc-300">Aviation Spec</span></a>
+<a href="https://winf.com.br/aerocore/supermaquinas/" class="group flex min-h-[108px] flex-col justify-between rounded-[3px] border border-white/10 bg-white/[.03] p-3.5 transition hover:border-white/25 hover:bg-white/[.08] sm:p-4"><span><span class="mb-2 block font-mono text-[9px] uppercase text-white/50">Vertical</span><span class="block text-xs font-bold uppercase leading-relaxed tracking-wider text-white">Superm&#225;quinas</span></span><span class="mt-2 block font-mono text-[9px] tracking-tight text-zinc-300">Hipercarros</span></a>
+<a href="https://winf.com.br/aerocore/luxo/" class="group flex min-h-[108px] flex-col justify-between rounded-[3px] border border-white/10 bg-white/[.03] p-3.5 transition hover:border-white/25 hover:bg-white/[.08] sm:p-4"><span><span class="mb-2 block font-mono text-[9px] uppercase text-white/50">Vertical</span><span class="block text-xs font-bold uppercase leading-relaxed tracking-wider text-white">Residencial Luxo</span></span><span class="mt-2 block font-mono text-[9px] tracking-tight text-zinc-300">Arquitetura Triple-A</span></a>
+    </div>
+  </section>
+</div>
+<footer aria-label="Rodap&#233; institucional WINF" class="wf-footer" data-footer-version="20261021-footer-utf8-4" id="winf-global-footer"><div aria-hidden="true" id="privacy"></div><div aria-hidden="true" id="politica-de-privacidade"></div><section aria-labelledby="wf-expansion-title" class="wf-footer__callout"><div class="wf-footer__callout-inner"><div><span class="wf-footer__eyebrow">WINF PARTNERS&#8482; / EXPANS&#195;O</span><h2 id="wf-expansion-title">Pronto para fazer parte do ecossistema?</h2><p>Expans&#227;o territorial homologada e tecnologia propriet&#225;ria para a sua opera&#231;&#227;o.</p></div><div class="wf-footer__actions"><a class="wf-footer__button" href="/#contato">Falar com Partners&#8482; <span aria-hidden="true">&#8594;</span></a><a class="wf-footer__button wf-footer__button--outline" href="/partners/">Seja parceiro WINF <span aria-hidden="true">&#8594;</span></a></div></div></section><div class="wf-footer__wrap"><div class="wf-footer__top"><div class="wf-footer__intro"><div class="wf-footer__eyebrow">WINF PARTNERS&#8482; / EXPANS&#195;O</div><div class="wf-footer__brand-row"><a aria-label="WINF&#8482; &#8212; p&#225;gina principal" class="wf-footer__brand wf-footer__brand--logo" href="/partners/"><img alt="WINF&#8482;" class="wf-footer__brand-logo" decoding="async" height="36" loading="eager" src="/winf-logo.svg" width="109"/></a><span class="wf-footer__badge">ECOSYSTEM</span></div><p class="wf-footer__description">Um ecossistema de marcas, tecnologia e oportunidades. Conhe&#231;a as frentes de atua&#231;&#227;o da WINF&#8482;.</p><a class="wf-footer__primary" href="/#contato">Fale com um especialista <span aria-hidden="true">&#8599;</span></a></div><nav aria-label="Linhas e pel&#237;culas" class="wf-footer__group"><h2 class="wf-footer__title">Linhas &amp; pel&#237;culas</h2><ul class="wf-footer__list"><li><a class="wf-footer__link" href="/partners/">WINF Asset Light&#8482;</a></li><li><a class="wf-footer__link" href="/">WINF Select&#8482; &#8212; Arquitetura</a></li><li><a class="wf-footer__link" href="/aerocore/">AeroCore&#8482; &#8212; Mobilidade</a></li><li><a class="wf-footer__link" href="/aerocore/neoskin/">NeoSkin&#8482; &#8212; PPF</a></li><li><a class="wf-footer__link" href="/aerocore/ceramic-armoring/">Ceramic Armoring&#8482;</a></li></ul></nav><nav aria-label="Ecossistema WINF" class="wf-footer__group"><h2 class="wf-footer__title">Ecossistema</h2><ul class="wf-footer__list"><li><a class="wf-footer__link" href="/">WINF Select&#8482;</a></li><li><a class="wf-footer__link" href="/aerocore/">AeroCore&#8482;</a></li><li><a class="wf-footer__link" href="/aerocore/neoskin/">NeoSkin&#8482;</a></li><li><a class="wf-footer__link" href="/partners/">WINF Partners&#8482;</a></li><li><a class="wf-footer__link" href="/blog/">WINF Journal&#8482;</a></li></ul></nav><nav aria-label="Redes e contato" class="wf-footer__group wf-footer__connect"><h2 class="wf-footer__title">Conex&#245;es</h2><ul class="wf-footer__list"><li><a class="wf-footer__link wf-footer__link--accent" href="/catalogo/">Cat&#225;logo digital &#8599;</a></li><li><a class="wf-footer__link" href="https://www.instagram.com/winfpartners/" rel="noopener noreferrer" target="_blank">Instagram @winfpartners &#8599;</a></li><li><a class="wf-footer__link" href="/#contato">Contato comercial</a></li><li><a class="wf-footer__link" href="/partners/">Seja parceiro WINF</a></li></ul></nav></div><div class="wf-footer__bottom"><small>&#169; <span data-current-year="">2026</span> WINF&#8482;. Todos os direitos reservados.</small><div class="wf-footer__bottom-right"><span class="wf-footer__sig">Do Brasil para o mundo.</span><a href="/partners/">winf.com.br/partners/</a><a href="/aerocore/policies/#privacidade">Pol&#237;ticas &amp; privacidade</a><button class="wf-footer__back-top" type="button">&#8593; Voltar ao topo</button></div></div><div aria-label="Conex&#245;es globais: China, Estados Unidos e Brasil" class="wf-footer__union"><div class="wf-footer__flags"><img alt="China" height="18" loading="lazy" src="/images/flags/cn.svg" width="27"/><span aria-hidden="true"></span><img alt="Estados Unidos" height="18" loading="lazy" src="/images/flags/us.svg" width="34"/><span aria-hidden="true"></span><img alt="Brasil" height="18" loading="lazy" src="/images/flags/br.svg" width="25"/></div><span>Conex&#245;es que aproximam o mundo.</span></div></div></footer>
+<script charset="utf-8" src="/js/winf-footer.js?v=20261021-footer-utf8-4" defer></script>
+<script src="/briefing/briefing.js?v=20261021-cinematic1" defer></script>
+</body></html>

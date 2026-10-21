@@ -121,3 +121,21 @@ As mídias do anexo estão em `partners/media/`, sem dependência de URLs tempor
 Os dois vídeos passaram de 19,32 MB para 2,97 MB. O conjunto de mídias utilizado, incluindo versões para celular e pôsteres, ocupa aproximadamente 3,9 MB. O sitemap mantém as URLs anteriores, atualiza `lastmod` e inclui imagens e manifesto de Partners. Hub, cliente, briefing e 404 continuam fora do sitemap; os redirecionamentos de cidades foram preservados.
 
 Os caracteres não ASCII do footer estático são gravados como entidades HTML numéricas; o script declara `charset="utf-8"`. O texto deve ser validado após a renderização, incluindo “Expansão”, “Conexões”, “Políticas”, ™ e setas.
+
+## Tela inicial do ZIP aplicada ao briefing
+
+`/briefing/` adapta a tela inicial com “CONSTRUÍMOS O PADRÃO.” do projeto anexado: fundo cinematográfico fixo, sobreposição escura, header branco, acesso ao WINF OS translúcido, botões de vidro e grade de verticais. Mantém os três destinos anteriores (`https://winf.com.br/partners`, `https://winf.com.br/cliente`, `https://winf.com.br/`) e o rodapé institucional já corrigido. O acesso no topo usa o mesmo destino atual do CTA de território/WINF OS. A página permanece `noindex,nofollow` e fora do sitemap.
+
+### Subir o vídeo depois
+
+Copie seu MP4 para **`briefing/media/briefing-bg.mp4`**. A referência já está no `<source>` do vídeo de fundo e em `briefing/briefing.js`; não é preciso alterar o HTML para ativá-lo. Nenhum vídeo foi incluído neste commit. Enquanto o arquivo não existir, o fundo usa `briefing/media/briefing-poster.webp`, um frame do vídeo do ZIP comprimido em WebP. O erro 404 desse único MP4 é esperado até o upload. Não há mensagem de erro para o visitante. O vídeo usa autoplay mudo, loop, playsinline e object-cover; redução de movimento e economia de dados mantêm a imagem estática.
+
+### Tailwind local, sem React ou TypeScript
+
+O CSS minificado já está versionado em `briefing/briefing.css`; o site não depende de CDN nem de build em produção. As classes estão em `briefing/index.html`, com configuração em `briefing/tailwind.config.cjs` e entrada em `briefing/tailwind.input.css`. Para recompilar a tela, execute na raiz do repositório:
+
+```bash
+npx --yes --package tailwindcss@3.4.17 tailwindcss -c briefing/tailwind.config.cjs -i briefing/tailwind.input.css -o briefing/briefing.css --minify
+```
+
+Essa compilação é isolada do CSS existente das páginas locais. As fontes Gustavo e JetBrains Mono do projeto são servidas localmente. Interações opcionais do vídeo usam apenas JavaScript nativo.
