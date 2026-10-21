@@ -94,7 +94,7 @@
     var footer = document.createElement("footer");
     footer.id = "winf-global-footer";
     footer.className = "wf-footer";
-    footer.setAttribute("data-footer-version", "20261021-footer-static3");
+    footer.setAttribute("data-footer-version", "20261021-footer-utf8-4");
     footer.setAttribute("aria-label","Rodapé institucional WINF");
     footer.innerHTML =
       '<div id="privacy" aria-hidden="true"></div><div id="politica-de-privacidade" aria-hidden="true"></div>' +
