@@ -101,11 +101,11 @@ Diretório de marcas, redes sociais, unidades e soluções Partners. Usa logo e 
 
 A página fica fora do sitemap e traz `noindex, nofollow, noarchive, nosnippet, noimageindex` para robots, Googlebot e Bingbot. O cabeçalho `X-Robots-Tag` está configurado em `_headers` (hosts compatíveis) e `hub/.htaccess` (Apache com mod_headers). Em outros servidores, configure o mesmo cabeçalho para `/hub` e `/hub/*` e valide após o deploy. Não bloquear o crawling no robots.txt: buscadores precisam ler o `noindex`. Essas diretivas impedem indexação por buscadores compatíveis, mas não são controle de acesso; a URL continua pública.
 
-## Navegação global e Partners — outubro de 2026
+## Rodapé e Partners — outubro de 2026
 
-O header do projeto de referência foi adaptado para as 44 páginas de conteúdo, com barra flutuante grafite, bordas finas, fontes locais e menu expansível. O HTML de navegação está em cada página; os estilos e interações compartilhados ficam em `css/winf-header.css` e `js/winf-header.js`. Ao criar uma nova página, copie o header e carregue esses dois arquivos. Mantenha os links específicos no bloco `.wh-context` e use URLs reais, sem rotas SPA. Os atalhos antigos continuam disponíveis; os filtros Arch/Auto do catálogo ficam em uma barra própria.
+Os headers e menus originais foram preservados em todas as páginas, incluindo o catálogo e o hub. O visual do rodapé adapta `WinfPartnersFooter` do anexo para CSS e JavaScript nativos: faixa de expansão, grade de quatro colunas, identificação de ecossistema, links institucionais e retorno ao topo. Os destinos de links e os perfis de Instagram por marca continuam os atuais do site. Não há React, TypeScript ou migração de framework.
 
-O menu aceita teclado, fecha com Escape, restaura o foco e limita a navegação por Tab enquanto está aberto. O rodapé é renderizado somente por `js/winf-footer.js`, com estilos em `css/winf-footer.css`; `js/current-year.js` deixou de ser carregado porque também substituía o rodapé. O ano é atualizado pelo header e pelo rodapé canônico. As bandeiras vetoriais de China, Estados Unidos e Brasil ficam em `images/flags/`.
+O rodapé é renderizado por `js/winf-footer.js`, com estilos em `css/winf-footer.css`. O antigo `js/current-year.js` não é carregado porque também substituía o rodapé; a atualização do ano fica no script canônico do footer. As bandeiras vetoriais de China, Estados Unidos e Brasil permanecem em `images/flags/`.
 
 `/partners/` usa HTML, CSS e JavaScript nativos, sem React, TypeScript, Tailwind CDN ou etapa de build. O visual adapta a landing do anexo: hero cinematográfico, manifesto, modelos de operação, pilares, arquitetura, galeria e contato. As ações apontam para âncoras e páginas existentes. O formulário apenas prepara uma mensagem no WhatsApp comercial já usado na home (`5513997815375`); o usuário conclui o envio no WhatsApp. Não há gravação em banco nem simulação de envio. As imagens dos modelos são identificadas como conceituais.
 

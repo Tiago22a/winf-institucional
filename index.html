@@ -44,41 +44,56 @@
     </script>
     <link rel="stylesheet" href="./styles.css" />
       <link rel="stylesheet" href="/css/winf-footer.css" />
-  <link rel="stylesheet" href="/css/winf-header.css?v=20261021">
-</head>
+  </head>
   <body class="bg-black text-white antialiased selection:bg-white/20 selection:text-white">
-<header id="winf-site-header" class="wh-header" style="--wh-accent:#c5c5ca">
-  <div class="wh-frame">
-    <div class="wh-bar">
-      <a class="wh-brand" href="/" aria-label="WINF — página inicial"><img src="/winf-logo.svg" alt="WINF™" width="109" height="36"><span class="wh-family">WINF SELECT™</span></a>
-      <div class="wh-actions"><a class="wh-quick" href="/catalogo/">Catálogo ↗</a><a class="wh-access" href="/partners/">Seja licenciado <span aria-hidden="true">↗</span></a><button class="wh-toggle" type="button" aria-controls="winf-site-menu" aria-expanded="false" aria-label="Abrir menu de navegação"><span></span><span></span><span></span></button></div>
-    </div>
-    <div id="winf-site-menu" class="wh-menu" hidden>
-      <div class="wh-menu-heading"><span>WINF™ / ECOSSISTEMA</span><span>ESCOLHA SEU DESTINO</span></div>
-      <nav class="wh-links" aria-label="Navegação principal"><a href="/">WINF Select™<span aria-hidden="true">↗</span></a>
-<a href="/aerocore/">AeroCore™<span aria-hidden="true">↗</span></a>
-<a href="/aerocore/neoskin/">NeoSkin™<span aria-hidden="true">↗</span></a>
-<a href="/winf-home/">Sobre a WINF<span aria-hidden="true">↗</span></a>
-<a href="/catalogo/">Catálogo<span aria-hidden="true">↗</span></a>
-<a href="/partners/">WINF Partners™<span aria-hidden="true">↗</span></a>
-<a href="/invisible/">Invisible™<span aria-hidden="true">↗</span></a>
-<a href="/dual-reflect/">DualReflect™<span aria-hidden="true">↗</span></a>
-<a href="/blackpro/">BlackPro™<span aria-hidden="true">↗</span></a>
-<a href="/securityblind/">SecurityBlinder™<span aria-hidden="true">↗</span></a>
-<a href="/miniblind-venetian/">Miniblind &amp; Venetian™<span aria-hidden="true">↗</span></a>
-<a href="/aerocore/ceramic-armoring/">Ceramic Armoring™<span aria-hidden="true">↗</span></a>
-<a href="/blog/">Journal<span aria-hidden="true">↗</span></a>
-<a href="/#contato">Contato<span aria-hidden="true">↗</span></a></nav>
-      <nav class="wh-context" aria-label="Links desta página"><span class="wh-context-label">NESTA PÁGINA / EXPLORE</span><a href="#topo">WINF — início<span aria-hidden="true">↗</span></a>
-<a href="#contato">Dealer Locator<span aria-hidden="true">↗</span></a></nav>
-      <div class="wh-menu-bottom"><span>Do Brasil para o mundo.</span><a href="/cliente/">Portal do cliente ↗</a></div>
-    </div>
-  </div>
-</header>
     <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
 
     <div id="site-shell" class="min-h-screen overflow-x-hidden bg-black">
+      <div id="menu-overlay" class="fixed inset-0 z-[80] hidden overflow-y-auto bg-[#121214] p-6 sm:p-12 md:p-20" aria-hidden="true">
+        <div class="flex w-full justify-end">
+          <button type="button" data-action="close-menu" aria-label="Fechar menu" class="menu-close-button group flex h-10 w-10 items-center justify-center border border-white/15 text-zinc-400 transition-colors hover:bg-white/5 hover:text-white">
+            <span class="menu-close-x" aria-hidden="true"></span>
+          </button>
+        </div>
 
+        <div class="mx-auto my-auto grid w-full max-w-7xl grid-cols-1 items-end gap-12 py-8 lg:grid-cols-12">
+          <nav class="flex select-none flex-col items-start space-y-1 sm:space-y-2 lg:col-span-7" aria-label="Navegação principal">
+            <a href="#topo" data-action="menu-link" class="menu-primary-link">WINF SELECT™</a>
+            <a href="/aerocore/" data-action="menu-link" class="menu-primary-link">AEROCORE™</a>
+            <a href="/winf-home/" data-action="menu-link" class="menu-primary-link">ABOUT US</a>
+            <a href="/aerocore/neoskin/" data-action="menu-link" class="menu-primary-link">PPF</a>
+          </nav>
+
+          <div class="grid grid-cols-2 gap-8 font-sans text-base font-normal text-zinc-300 lg:col-span-5 lg:grid-cols-3 lg:text-lg">
+            <div class="space-y-4">
+              <span class="menu-label">// WINF SELECT™</span>
+              <a href="/invisible/" data-action="menu-link" class="menu-secondary-link hover:text-cyan-300">Invisible™</a>
+              <a href="/miniblind-venetian/" data-action="menu-link" class="menu-secondary-link hover:text-teal-300">Miniblind &amp; Venetian™</a>
+              <a href="/dual-reflect/" data-action="menu-link" class="menu-secondary-link hover:text-amber-300">Dual-Reflect™</a>
+              <a href="/blackpro/" data-action="menu-link" class="menu-secondary-link hover:text-indigo-300">BlackPro™</a>
+              <a href="/securityblind/" data-action="menu-link" class="menu-secondary-link hover:text-red-400">SecurityBlinder™</a>
+            </div>
+            <div class="space-y-4">
+              <span class="menu-label">// AEROCORE™</span>
+              <a href="/aerocore/" data-action="menu-link" class="menu-secondary-link hover:text-sky-300">AeroCore™</a>
+              <a href="/aerocore/neoskin/" data-action="menu-link" class="menu-secondary-link hover:text-emerald-300">NeoSkin™</a>
+              <a href="/aerocore/ceramic-armoring/" data-action="menu-link" class="menu-secondary-link hover:text-white">Ceramic Armoring™</a>
+            </div>
+            <div class="col-span-2 space-y-4 lg:col-span-1">
+              <span class="menu-label">// SERVICES</span>
+              <a href="#contato" data-action="menu-link" class="menu-secondary-link hover:text-white">Dealer Locator</a>
+              <a href="/blog/" data-action="menu-link" class="menu-secondary-link hover:text-white">Journal</a>
+              <a href="/partners/" data-action="menu-link" class="menu-secondary-link font-mono font-bold hover:text-amber-300">Partners™</a>
+              <a href="#contato" data-action="menu-link" class="menu-secondary-link hover:text-white">Contact</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex w-full items-center justify-between pt-4 text-xs font-mono text-zinc-400">
+          <span>WINF SELECT™ &amp; AEROCORE™ // ECOSYSTEM</span>
+          <a href="#topo" data-action="menu-link" class="hidden text-[10px] uppercase hover:text-zinc-300 sm:inline">PORTAL GLOBAL WINF-HOME →</a>
+        </div>
+      </div>
 
       <main id="conteudo" class="w-full min-h-screen bg-black text-white">
         <section id="topo" class="hero-section relative z-10 flex min-h-screen w-full select-none flex-col justify-between overflow-hidden p-6 sm:p-10 md:p-14">
@@ -91,7 +106,15 @@
             <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(255,255,255,.08),transparent_38%)]"></div>
           </div>
 
-
+          <header class="relative z-30 flex w-full items-center justify-between">
+            <a href="#topo" aria-label="WINF — início" class="flex items-center transition-opacity hover:opacity-80">
+              <img loading="eager" decoding="async" fetchpriority="high" src="/winf-logo.svg" width="128" height="32" alt="WINF™" class="h-6 w-auto object-contain drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)] sm:h-7 md:h-8" />
+            </a>
+            <button type="button" data-action="open-menu" aria-label="Abrir Menu de Navegação" class="menu-trigger group relative z-50 flex flex-col items-end justify-center gap-2 p-2.5 transition-opacity hover:opacity-80">
+              <span class="block h-[1.5px] w-7 bg-white shadow-[0_1px_4px_rgba(0,0,0,0.8)] transition-all duration-300 group-hover:w-8"></span>
+              <span class="block h-[1.5px] w-5 bg-white shadow-[0_1px_4px_rgba(0,0,0,0.8)] transition-all duration-300 group-hover:w-8"></span>
+            </button>
+          </header>
 
           <div class="relative z-20 my-auto flex w-full flex-1 items-center justify-center px-4">
             <div class="hero-copy text-center">
@@ -345,6 +368,5 @@
     <script src="./script.js"></script>
 
     <script src="/js/winf-footer.js" defer></script>
-  <script src="/js/winf-header.js?v=20261021" defer></script>
-</body>
+  </body>
 </html>

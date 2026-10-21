@@ -88,12 +88,18 @@
     footer.setAttribute("aria-label","Rodapé institucional WINF");
     footer.innerHTML =
       '<div id="privacy" aria-hidden="true"></div><div id="politica-de-privacidade" aria-hidden="true"></div>' +
+      '<section class="wf-footer__callout" aria-labelledby="wf-expansion-title"><div class="wf-footer__callout-inner">' +
+      '<div><span class="wf-footer__eyebrow">WINF PARTNERS™ / EXPANSÃO</span>' +
+      '<h2 id="wf-expansion-title">Pronto para fazer parte do ecossistema?</h2>' +
+      '<p>Expansão territorial homologada e tecnologia proprietária para a sua operação.</p></div>' +
+      '<div class="wf-footer__actions"><a class="wf-footer__button" href="'+link.contact+'">Falar com Partners™ <span aria-hidden="true">→</span></a>' +
+      '<a class="wf-footer__button wf-footer__button--outline" href="'+link.partners+'">Seja parceiro WINF <span aria-hidden="true">→</span></a></div></div></section>' +
       '<div class="wf-footer__wrap">' +
       '<div class="wf-footer__top">' +
       '<div class="wf-footer__intro">' +
-      '<div class="wf-footer__eyebrow">'+v.label+'</div>' +
+      '<div class="wf-footer__eyebrow">'+v.label+'</div><div class="wf-footer__brand-row">' +
       (v.brand==="WINF" ? '<a class="wf-footer__brand wf-footer__brand--logo" href="'+v.url+'" aria-label="WINF™ — página principal"><img class="wf-footer__brand-logo" src="/winf-logo.svg" alt="WINF™" width="109" height="36" loading="eager" decoding="async" /></a>' : '<a class="wf-footer__brand" href="'+v.url+'" aria-label="'+v.brand+' — página principal">'+v.brand+'<sup>™</sup></a>') +
-      '<p class="wf-footer__description">'+v.description+'</p>' +
+      '<span class="wf-footer__badge">ECOSYSTEM</span></div><p class="wf-footer__description">'+v.description+'</p>' +
       '<a class="wf-footer__primary" href="'+link.contact+'">Fale com um especialista <span aria-hidden="true">↗</span></a>' +
       '</div>' +
       '<nav class="wf-footer__group" aria-label="Linhas e películas">' +
@@ -111,13 +117,18 @@
       '<div class="wf-footer__bottom">' +
       '<small>© '+new Date().getFullYear()+' WINF™. Todos os direitos reservados.</small>' +
       '<div class="wf-footer__bottom-right"><span class="wf-footer__sig">Do Brasil para o mundo.</span>' +
-      '<a href="'+link.privacy+'">Políticas &amp; privacidade</a></div></div>' +
+      '<a href="'+link.partners+'">winf.com.br/partners/</a><a href="'+link.privacy+'">Políticas &amp; privacidade</a>' +
+      '<button class="wf-footer__back-top" type="button">↑ Voltar ao topo</button></div></div>' +
       '<div class="wf-footer__union" aria-label="Conexões globais: China, Estados Unidos e Brasil">' +
       '<div class="wf-footer__flags"><img src="/images/flags/cn.svg" alt="China" width="27" height="18" loading="lazy">' +
       '<span aria-hidden="true"></span><img src="/images/flags/us.svg" alt="Estados Unidos" width="34" height="18" loading="lazy">' +
       '<span aria-hidden="true"></span><img src="/images/flags/br.svg" alt="Brasil" width="25" height="18" loading="lazy"></div>' +
       '<span>Conexões que aproximam o mundo.</span></div>' +
       '</div>';
+    footer.querySelector('.wf-footer__back-top').addEventListener('click', function () {
+      window.scrollTo({top:0, behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
+    });
+    document.querySelectorAll('[data-current-year]').forEach(function (element) { element.textContent = new Date().getFullYear(); });
     var existing = Array.prototype.slice.call(document.querySelectorAll("footer"));
     if (existing.length) {
       existing[0].replaceWith(footer);
