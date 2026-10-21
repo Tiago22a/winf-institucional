@@ -59,4 +59,40 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .partners-page #menu-overlay>div:nth-child(2)>div{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
 .partners-page .menu-secondary-link{padding:6px 0}.partners-page #menu-overlay>div:last-child{display:flex;justify-content:space-between;gap:20px;font:10px 'JetBrains Mono',monospace;color:#a1a1aa;padding-top:20px}
 @media(max-width:760px){.partners-page #menu-overlay{padding:24px}.partners-page #menu-overlay>div:nth-child(2){grid-template-columns:1fr;gap:36px;align-items:start}.partners-page #menu-overlay>div:last-child>a{display:none}.partners-page .menu-primary-link{font-size:clamp(32px,8vw,48px)}}
+/* Keep room for the original header without stretching the mobile introduction. */
 .partners-page .partners-hero{min-height:100svh;padding-top:120px}
+.partners-hero-copy,.partners-plan-top>div,.partners-model>div,.partners-contact-grid>*,.partners-form-row>*{min-width:0}
+@media(min-width:1024px){
+  /* Crop the generated mark at the bottom right; leave the mobile framing intact. */
+  .partners-hero-media video{transform:scale(1.16);transform-origin:top left}
+}
+@media(min-width:761px) and (max-width:1023px){
+  .partners-page .partners-hero{min-height:0;padding:140px 32px 36px;flex-direction:column;gap:48px}
+  .partners-hero-bottom{position:static;width:100%;line-height:1.8}
+}
+@media(max-width:760px){
+  .partners-page .partners-hero{min-height:0;padding:124px 20px 32px;flex-direction:column;justify-content:flex-start;gap:36px}
+  .partners-page .partners-hero>header{padding:16px 20px}
+  .partners-hero .partners-badge{margin-bottom:28px;max-width:100%;padding:10px 16px;gap:12px;line-height:1.6}
+  .partners-hero .partners-eyebrow{margin-bottom:20px;line-height:1.8}
+  .partners-hero h1{font-size:clamp(32px,8.7vw,60px);letter-spacing:.025em;line-height:1.12;overflow-wrap:normal}
+  .partners-hero-signature{margin:22px 0 28px}
+  .partners-hero-bottom{position:static;width:100%;align-items:flex-end;gap:16px;line-height:1.8}
+  .partners-hero-bottom>span{max-width:70%}
+  .partners-hero-bottom>a{flex-shrink:0;padding:10px 0}
+  .partners-section{padding:64px 0}
+  .partners-section-head h2,.partners-editorial h2,.partners-architects h2,.partners-contact h2{font-size:clamp(29px,8.2vw,48px)}
+  .partners-section-head h2{margin:20px 0 24px}
+  .partners-btn{overflow-wrap:anywhere}
+  .partners-form-row{grid-template-columns:1fr}
+  .partners-page #menu-overlay{padding:20px}
+}
+@media(max-width:380px){
+  .partners-page .partners-hero{padding:116px 16px 28px;gap:28px}
+  .partners-page .partners-hero>header{padding:14px 16px}
+  .partners-hero h1{font-size:clamp(30px,8.7vw,34px)}
+  .partners-hero .partners-eyebrow{font-size:7px;letter-spacing:.08em}
+  .partners-hero .partners-badge{font-size:8px;letter-spacing:.16em}
+  .partners-model>div{padding:24px 20px}
+  .partners-architects{padding:24px 20px}
+}
