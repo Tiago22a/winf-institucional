@@ -80,11 +80,21 @@
       return '<li><a class="wf-footer__link" href="'+item[1]+'">'+item[0]+'</a></li>';
     }).join("");
   }
+  function enhanceFooter(footer) {
+    if (footer.dataset.enhanced) return;
+    footer.dataset.enhanced = 'true';
+    footer.querySelector('.wf-footer__back-top').addEventListener('click', function () {
+      window.scrollTo({top:0, behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
+    });
+    document.querySelectorAll('[data-current-year]').forEach(function (element) { element.textContent = new Date().getFullYear(); });
+  }
   function render() {
-    if (document.getElementById("winf-global-footer")) return;
+    var present = document.getElementById("winf-global-footer");
+    if (present) { enhanceFooter(present); return; }
     var footer = document.createElement("footer");
     footer.id = "winf-global-footer";
     footer.className = "wf-footer";
+    footer.setAttribute("data-footer-version", "20261021-footer-static3");
     footer.setAttribute("aria-label","Rodapé institucional WINF");
     footer.innerHTML =
       '<div id="privacy" aria-hidden="true"></div><div id="politica-de-privacidade" aria-hidden="true"></div>' +
@@ -125,10 +135,7 @@
       '<span aria-hidden="true"></span><img src="/images/flags/br.svg" alt="Brasil" width="25" height="18" loading="lazy"></div>' +
       '<span>Conexões que aproximam o mundo.</span></div>' +
       '</div>';
-    footer.querySelector('.wf-footer__back-top').addEventListener('click', function () {
-      window.scrollTo({top:0, behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
-    });
-    document.querySelectorAll('[data-current-year]').forEach(function (element) { element.textContent = new Date().getFullYear(); });
+    enhanceFooter(footer);
     var existing = Array.prototype.slice.call(document.querySelectorAll("footer"));
     if (existing.length) {
       existing[0].replaceWith(footer);
