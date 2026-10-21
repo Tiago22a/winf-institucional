@@ -496,21 +496,38 @@
     }
   </style>
     <link rel="stylesheet" href="/css/winf-footer.css" />
-  </head>
+  <link rel="stylesheet" href="/css/winf-header.css?v=20261021">
+</head>
 <body>
-  <div class="page">
-    <header class="topbar">
-      <a class="brand" href="/" aria-label="Voltar para a página inicial da WINF">
-        <img
-          src="/assets/src/img/LOGO%20BRANCO.png"
-          alt="WINF™"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';"
-        />
-        <span class="brand-wordmark">WINF™</span>
-      </a>
+<header id="winf-site-header" class="wh-header" style="--wh-accent:#c5c5ca">
+  <div class="wh-frame">
+    <div class="wh-bar">
+      <a class="wh-brand" href="/" aria-label="WINF — página inicial"><img src="/winf-logo.svg" alt="WINF™" width="109" height="36"><span class="wh-family">WINF SELECT™</span></a>
+      <div class="wh-actions"><a class="wh-quick" href="/catalogo/">Catálogo ↗</a><a class="wh-access" href="/partners/">Seja licenciado <span aria-hidden="true">↗</span></a><button class="wh-toggle" type="button" aria-controls="winf-site-menu" aria-expanded="false" aria-label="Abrir menu de navegação"><span></span><span></span><span></span></button></div>
+    </div>
+    <div id="winf-site-menu" class="wh-menu" hidden>
+      <div class="wh-menu-heading"><span>WINF™ / ECOSSISTEMA</span><span>ESCOLHA SEU DESTINO</span></div>
+      <nav class="wh-links" aria-label="Navegação principal"><a href="/">WINF Select™<span aria-hidden="true">↗</span></a>
+<a href="/aerocore/">AeroCore™<span aria-hidden="true">↗</span></a>
+<a href="/aerocore/neoskin/">NeoSkin™<span aria-hidden="true">↗</span></a>
+<a href="/winf-home/">Sobre a WINF<span aria-hidden="true">↗</span></a>
+<a href="/catalogo/">Catálogo<span aria-hidden="true">↗</span></a>
+<a href="/partners/">WINF Partners™<span aria-hidden="true">↗</span></a>
+<a href="/invisible/">Invisible™<span aria-hidden="true">↗</span></a>
+<a href="/dual-reflect/">DualReflect™<span aria-hidden="true">↗</span></a>
+<a href="/blackpro/">BlackPro™<span aria-hidden="true">↗</span></a>
+<a href="/securityblind/">SecurityBlinder™<span aria-hidden="true">↗</span></a>
+<a href="/miniblind-venetian/">Miniblind &amp; Venetian™<span aria-hidden="true">↗</span></a>
+<a href="/aerocore/ceramic-armoring/">Ceramic Armoring™<span aria-hidden="true">↗</span></a>
+<a href="/blog/">Journal<span aria-hidden="true">↗</span></a>
+<a href="/#contato">Contato<span aria-hidden="true">↗</span></a></nav>
 
-      <span class="system-label">WINF™ / ROUTE CONTROL / ERROR 404</span>
-    </header>
+      <div class="wh-menu-bottom"><span>Do Brasil para o mundo.</span><a href="/cliente/">Portal do cliente ↗</a></div>
+    </div>
+  </div>
+</header>
+  <div class="page">
+
 
     <main>
       <section class="error-shell" aria-labelledby="error-title">
@@ -579,7 +596,8 @@
       pathElement.textContent = requestedPath || '/';
     })();
   </script>
-  <script src="/js/current-year.js" defer></script>
+
     <script src="/js/winf-footer.js" defer></script>
-  </body>
+  <script src="/js/winf-header.js?v=20261021" defer></script>
+</body>
 </html>
