@@ -107,18 +107,15 @@ Os headers e menus originais foram preservados em todas as páginas, incluindo o
 
 O rodapé está incluído diretamente no HTML das 44 páginas de conteúdo, com estilos em `css/winf-footer.css`, e aparece mesmo com JavaScript desativado. `js/winf-footer.js` atualiza o ano e ativa o retorno ao topo; mantém um renderer de fallback para páginas novas sem o markup estático. Ao mudar o conteúdo do rodapé, sincronize também o HTML das páginas. As URLs de CSS e JavaScript usam a versão `20261021-footer-utf8-4`; `_headers` solicita revalidação desses dois arquivos em hosts compatíveis. O antigo `js/current-year.js` não é carregado porque também substituía o rodapé; a atualização do ano fica no script canônico do footer. As bandeiras vetoriais de China, Estados Unidos e Brasil permanecem em `images/flags/`.
 
-`/partners/` usa HTML, CSS e JavaScript nativos, sem React, TypeScript, Tailwind CDN ou etapa de build. O visual adapta a landing do anexo: hero cinematográfico, manifesto, modelos de operação, pilares, arquitetura, galeria e contato. As ações apontam para âncoras e páginas existentes. O formulário apenas prepara uma mensagem no WhatsApp comercial já usado na home (`5513997815375`); o usuário conclui o envio no WhatsApp. Não há gravação em banco nem simulação de envio. As imagens dos modelos são identificadas como conceituais.
+`/partners/` reproduz a estrutura de `src/components/LandingPage.tsx` e `LicensingPlans.tsx` do ZIP: hero, manifesto, card Asset Light sem foto, bloco corporativo com dois botões, bloco de especificadores, quatro pilares, certificado, ferramentas para arquitetos, painel financeiro, galeria e soluções avançadas. Mantém os textos, as classes Tailwind e as fontes Gustavo/JetBrains Mono do original. Header, menu e rodapé institucionais conservam os links existentes. O formulário de WhatsApp atual abre em uma janela modal a partir dos CTAs, sem acrescentar uma seção à composição original.
+
+A implementação entregue é HTML, CSS e JavaScript nativos. O CSS Tailwind 4.2.2 está compilado em `partners/partners.css`; a entrada é `partners/tailwind.input.css`. Não há React ou TypeScript no site nem build em produção. Para recompilar com Tailwind 4.2.2 e `@tailwindcss/cli` instalados localmente, execute `npx tailwindcss -i partners/tailwind.input.css -o partners/partners.css --minify`.
 
 ### Mídias da Partners
 
-As mídias do anexo estão em `partners/media/`, sem dependência de URLs temporárias:
+Os MP4 comprimidos de hero e manifesto correspondem a `intro1.mp4` e `intro2.mp4` do ZIP. O hero tem um recorte extra de 16% somente em telas a partir de 1024 px. O manifesto mantém a prévia muda do original; o botão de reprodução ativa áudio e controles. Redução de movimento/economia de dados preservam os pôsteres.
 
-- Imagens WebP, qualidade 83, com versões de 640 e 1280 px, `srcset`, dimensões declaradas e carregamento lazy.
-- Hero: MP4 H.264, 1280 × 720, 24 fps, CRF 26, sem áudio, `faststart`.
-- Manifesto: MP4 H.264, 1280 × 720, 24 fps, CRF 25, áudio AAC 96 kbps preservado, `faststart` e controles nativos.
-- Pôsteres WebP para ambos os vídeos. O hero pausa fora da tela, em aba oculta e com redução de movimento; economia de dados e redução de movimento evitam seu download. O manifesto carrega próximo à área visível e só reproduz por ação do usuário.
-
-Os dois vídeos passaram de 19,32 MB para 2,97 MB. O conjunto de mídias utilizado, incluindo versões para celular e pôsteres, ocupa aproximadamente 3,9 MB. O sitemap mantém as URLs anteriores, atualiza `lastmod` e inclui imagens e manifesto de Partners. Hub, cliente, briefing e 404 continuam fora do sitemap; os redirecionamentos de cidades foram preservados.
+As três imagens `reference-*.webp` são versões comprimidas das URLs exatas usadas pela galeria de `LandingPage.tsx`/`constants.ts`; cada `<img>` conserva sua origem em `data-reference-source`. O quarto card, Lifestyle, permanece com a estrutura e legenda originais, sem imagem substituta: o endereço de anexo do ZIP retorna 404. As fotos conceituais anteriormente acrescentadas aos cards de licenciamento, garantia e arquitetura foram removidas do HTML. O sitemap lista somente as imagens efetivamente usadas pela página e o manifesto. Os arquivos de mídia antigos permanecem disponíveis para não quebrar URLs já compartilhadas.
 
 Os caracteres não ASCII do footer estático são gravados como entidades HTML numéricas; o script declara `charset="utf-8"`. O texto deve ser validado após a renderização, incluindo “Expansão”, “Conexões”, “Políticas”, ™ e setas.
 

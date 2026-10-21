@@ -20,11 +20,12 @@
   reduceMotion.addEventListener('change', syncHero);
   syncHero();
 
-  // The manifesto remains under user control; fetch it only near the viewport.
+  // Match the original muted preview, with controls after an explicit play action.
   const manifesto = document.getElementById('partners-manifesto');
   function loadManifesto() {
     const source = manifesto?.querySelector('source[data-src]');
     if (source) { source.src = source.dataset.src; source.removeAttribute('data-src'); manifesto.load(); }
+    if (manifesto && !reduceMotion.matches && !saveData && !manifesto.controls) manifesto.play().catch(() => {});
   }
   if (manifesto && 'IntersectionObserver' in window) {
     new IntersectionObserver((entries, observer) => {
@@ -33,6 +34,25 @@
   } else loadManifesto();
   manifesto?.addEventListener('play', loadManifesto, { once: true });
 
+  document.querySelector('[data-play-manifesto]')?.addEventListener('click', () => {
+    loadManifesto();
+    manifesto.controls = true;
+    manifesto.muted = false;
+    manifesto.loop = false;
+    manifesto.play().catch(() => {});
+  });
+  const contact = document.getElementById('contact');
+  document.querySelectorAll('a[href="#contact"]').forEach(link => {
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      if (!contact.open) contact.showModal();
+    });
+  });
+  document.querySelector('[data-close-contact]')?.addEventListener('click', () => contact.close());
+  contact?.addEventListener('click', event => { if (event.target === contact) {
+    const box = contact.getBoundingClientRect();
+    if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) contact.close();
+  }});
   const form = document.getElementById('partners-form');
   const model = document.getElementById('partner-model');
   document.querySelectorAll('[data-model]').forEach(link => {

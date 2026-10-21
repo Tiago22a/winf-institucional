@@ -235,10 +235,9 @@
         <lastmod>2026-10-21</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
-        <image:image><image:loc>https://winf.com.br/partners/media/asset-light.webp</image:loc><image:title>Modelo Asset Light Select</image:title></image:image>
-        <image:image><image:loc>https://winf.com.br/partners/media/kiosk.webp</image:loc><image:title>Conceito Kiosk Arquitetônico</image:title></image:image>
-        <image:image><image:loc>https://winf.com.br/partners/media/studio.webp</image:loc><image:title>Conceito Flagship Studio</image:title></image:image>
-        <image:image><image:loc>https://winf.com.br/partners/media/aplicacao.webp</image:loc><image:title>Aplicação profissional WINF</image:title></image:image>
+        <image:image><image:loc>https://winf.com.br/partners/media/reference-supercars.webp</image:loc><image:title>Supercars — galeria original</image:title></image:image>
+        <image:image><image:loc>https://winf.com.br/partners/media/reference-arquitetura.webp</image:loc><image:title>Arquitetura — galeria original</image:title></image:image>
+        <image:image><image:loc>https://winf.com.br/partners/media/reference-detailing.webp</image:loc><image:title>Detailing — galeria original</image:title></image:image>
         <video:video>
             <video:thumbnail_loc>https://winf.com.br/partners/media/manifesto-poster.webp</video:thumbnail_loc>
             <video:title>Manifesto WINF Partners</video:title>
