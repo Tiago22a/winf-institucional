@@ -31,3 +31,10 @@
 .wf-footer__brand--logo{display:inline-flex;align-items:center;justify-content:flex-start;width:max-content;max-width:100%;min-height:60px;line-height:0;flex-shrink:0}
 .wf-footer__brand-logo{display:block;width:clamp(154px,16vw,192px);max-width:100%;height:auto;aspect-ratio:109 / 36;object-fit:contain;object-position:left center}
 @media(max-width:620px){.wf-footer__brand--logo{min-height:50px}.wf-footer__brand-logo{width:158px}}
+
+/* Three connected flags: a quiet global signature. */
+.wf-footer__union{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:14px 22px;padding:0 0 28px;color:#94949d;font:9px WinfMono,"JetBrains Mono",monospace;letter-spacing:.1em;text-transform:uppercase}
+.wf-footer__flags{display:flex;align-items:center;gap:8px}
+.wf-footer__flags img{display:block;height:14px;width:auto;max-width:none;opacity:.85}
+.wf-footer__flags span{height:1px;width:18px;background:#52525b}
+@media(max-width:420px){.wf-footer__union{flex-direction:column;gap:12px;text-align:center}.wf-footer__union>span{font-size:8px}}

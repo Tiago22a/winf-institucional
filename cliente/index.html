@@ -89,40 +89,40 @@
     }
   </style>
     <link rel="stylesheet" href="/css/winf-footer.css" />
-  </head>
+  <link rel="stylesheet" href="/css/winf-header.css?v=20261021">
+</head>
 
 <body class="min-h-screen bg-[#131314] text-white font-sans antialiased">
+<header id="winf-site-header" class="wh-header" style="--wh-accent:#c5c5ca">
+  <div class="wh-frame">
+    <div class="wh-bar">
+      <a class="wh-brand" href="/" aria-label="WINF — página inicial"><img src="/winf-logo.svg" alt="WINF™" width="109" height="36"><span class="wh-family">WINF SELECT™</span></a>
+      <div class="wh-actions"><a class="wh-quick" href="/catalogo/">Catálogo ↗</a><a class="wh-access" href="/partners/">Seja licenciado <span aria-hidden="true">↗</span></a><button class="wh-toggle" type="button" aria-controls="winf-site-menu" aria-expanded="false" aria-label="Abrir menu de navegação"><span></span><span></span><span></span></button></div>
+    </div>
+    <div id="winf-site-menu" class="wh-menu" hidden>
+      <div class="wh-menu-heading"><span>WINF™ / ECOSSISTEMA</span><span>ESCOLHA SEU DESTINO</span></div>
+      <nav class="wh-links" aria-label="Navegação principal"><a href="/">WINF Select™<span aria-hidden="true">↗</span></a>
+<a href="/aerocore/">AeroCore™<span aria-hidden="true">↗</span></a>
+<a href="/aerocore/neoskin/">NeoSkin™<span aria-hidden="true">↗</span></a>
+<a href="/winf-home/">Sobre a WINF<span aria-hidden="true">↗</span></a>
+<a href="/catalogo/">Catálogo<span aria-hidden="true">↗</span></a>
+<a href="/partners/">WINF Partners™<span aria-hidden="true">↗</span></a>
+<a href="/invisible/">Invisible™<span aria-hidden="true">↗</span></a>
+<a href="/dual-reflect/">DualReflect™<span aria-hidden="true">↗</span></a>
+<a href="/blackpro/">BlackPro™<span aria-hidden="true">↗</span></a>
+<a href="/securityblind/">SecurityBlinder™<span aria-hidden="true">↗</span></a>
+<a href="/miniblind-venetian/">Miniblind &amp; Venetian™<span aria-hidden="true">↗</span></a>
+<a href="/aerocore/ceramic-armoring/">Ceramic Armoring™<span aria-hidden="true">↗</span></a>
+<a href="/blog/">Journal<span aria-hidden="true">↗</span></a>
+<a href="/#contato">Contato<span aria-hidden="true">↗</span></a></nav>
+      <nav class="wh-context" aria-label="Links desta página"><span class="wh-context-label">NESTA PÁGINA / EXPLORE</span><a href="https://api.whatsapp.com/send/?phone=5513997815375">Suporte Técnico Suporte<span aria-hidden="true">↗</span></a></nav>
+      <div class="wh-menu-bottom"><span>Do Brasil para o mundo.</span><a href="/cliente/">Portal do cliente ↗</a></div>
+    </div>
+  </div>
+</header>
 
   <!-- SYSTEM COMMAND BAR -->
-  <nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[92%] max-w-[1400px] z-[80]">
-    <div class="relative w-full border border-[#444746] glass h-16 md:h-20 flex items-center px-6 md:px-10 shadow-[0_20px_40px_rgba(0,0,0,0.3)]">
-      <div class="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-transparent pointer-events-none"></div>
 
-      <div class="relative w-full flex justify-between items-center z-10">
-        <div class="flex items-center gap-4 md:gap-8">
-          <button onclick="goBack()" class="text-zinc-500 hover:text-white transition-colors p-2 hover:bg-white/5" aria-label="Voltar">
-            <i data-lucide="chevron-left" class="w-5 h-5"></i>
-          </button>
-
-          <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="flex items-center gap-3 group">
-            <span class="font-black tracking-tighter text-lg md:text-xl uppercase italic">WINF™</span>
-            <span class="hidden sm:flex items-center gap-2 px-2 py-0.5 border border-zinc-800 bg-white/5">
-              <span class="w-1 h-1 bg-white/40"></span>
-              <span class="text-[7px] font-black text-white/40 uppercase tracking-widest">Portal Cliente</span>
-            </span>
-          </button>
-        </div>
-
-        <a href="https://api.whatsapp.com/send/?phone=5513997815375"
-           target="_blank" rel="noopener noreferrer"
-           class="flex items-center gap-3 bg-white/5 border border-[#444746] px-4 md:px-6 py-2.5 text-[10px] md:text-[11px] font-black uppercase tracking-widest text-white/40 hover:text-white hover:border-zinc-500 transition-all shadow-xl">
-          <i data-lucide="message-square" class="w-3.5 h-3.5"></i>
-          <span class="hidden sm:inline">Suporte Técnico</span>
-          <span class="sm:hidden">Suporte</span>
-        </a>
-      </div>
-    </div>
-  </nav>
 
   <main class="max-w-4xl mx-auto px-6 pt-36 pb-10 md:pt-48 md:pb-24">
     <section class="text-center mb-10 md:mb-16 rise-in">
@@ -254,7 +254,7 @@
       <p class="text-[10px] font-bold text-gray-600 uppercase tracking-[0.5em] text-center">
         WINF™ ENGINEERING // PROTEÇÃO MOLECULAR
       </p>
-     
+
     </div>
   </footer>
 
@@ -835,5 +835,6 @@ ${shareUrl}`);
 </script>
 
     <script src="/js/winf-footer.js" defer></script>
-  </body>
+  <script src="/js/winf-header.js?v=20261021" defer></script>
+</body>
 </html>

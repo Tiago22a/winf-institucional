@@ -112,6 +112,11 @@
       '<small>© '+new Date().getFullYear()+' WINF™. Todos os direitos reservados.</small>' +
       '<div class="wf-footer__bottom-right"><span class="wf-footer__sig">Do Brasil para o mundo.</span>' +
       '<a href="'+link.privacy+'">Políticas &amp; privacidade</a></div></div>' +
+      '<div class="wf-footer__union" aria-label="Conexões globais: China, Estados Unidos e Brasil">' +
+      '<div class="wf-footer__flags"><img src="/images/flags/cn.svg" alt="China" width="27" height="18" loading="lazy">' +
+      '<span aria-hidden="true"></span><img src="/images/flags/us.svg" alt="Estados Unidos" width="34" height="18" loading="lazy">' +
+      '<span aria-hidden="true"></span><img src="/images/flags/br.svg" alt="Brasil" width="25" height="18" loading="lazy"></div>' +
+      '<span>Conexões que aproximam o mundo.</span></div>' +
       '</div>';
     var existing = Array.prototype.slice.call(document.querySelectorAll("footer"));
     if (existing.length) {
