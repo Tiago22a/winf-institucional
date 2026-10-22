@@ -60,6 +60,9 @@
     <style>
       body { background-color: #050505; color: #f0f0f0; font-family: 'Inter', sans-serif; overflow-x: hidden; }
       ::selection { background-color: #ffffff; color: #000000; }
+      @media (min-width: 1024px) {
+        .ceramic-hero-video { transform: scale(1.22); transform-origin: center; }
+      }
     </style>
       <link rel="stylesheet" href="/css/winf-footer.css?v=20261021-footer-utf8-4" />
   </head>
@@ -114,7 +117,7 @@
       <!-- Hero Section -->
       <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
         <div class="absolute inset-0 z-0">
-          <video autoPlay loop muted playsInline class="absolute inset-0 w-full h-full object-cover opacity-60 brightness-75 contrast-120" preload="metadata" poster="/images/aerocore-hero.webp">
+          <video autoPlay loop muted playsInline class="ceramic-hero-video absolute inset-0 w-full h-full object-cover opacity-60 brightness-75 contrast-120" preload="metadata" poster="/images/aerocore-hero.webp">
             <source src="../quero_uma_porche_rebaixada.mp4" type="video/mp4" />
           </video>
           <div class="absolute inset-0 bg-black/40"></div>
