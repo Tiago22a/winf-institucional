@@ -130,9 +130,11 @@
       '<a href="'+link.partners+'">winf.com.br/partners/</a><a href="'+link.privacy+'">Políticas &amp; privacidade</a>' +
       '<button class="wf-footer__back-top" type="button">↑ Voltar ao topo</button></div></div>' +
       '<div class="wf-footer__union" aria-label="Conexões globais: China, Estados Unidos e Brasil">' +
-      '<div class="wf-footer__flags"><img src="/images/flags/cn.svg" alt="China" width="27" height="18" loading="lazy">' +
+      (path === '/aerocore' || path.indexOf('/aerocore/') === 0 ?
+        '<div class="wf-footer__flags"><img src="/images/flags/cn.svg" alt="China" width="27" height="18" loading="lazy">' +
       '<span aria-hidden="true"></span><img src="/images/flags/us.svg" alt="Estados Unidos" width="34" height="18" loading="lazy">' +
-      '<span aria-hidden="true"></span><img src="/images/flags/br.svg" alt="Brasil" width="25" height="18" loading="lazy"></div>' +
+      '<span aria-hidden="true"></span><img src="/images/flags/br.svg" alt="Brasil" width="25" height="18" loading="lazy"></div>'
+        : '<div class="wf-footer__countries" role="group" aria-label="Brasil, Estados Unidos e China"><span class="wf-footer__country wf-footer__country--br" aria-label="Brasil">BR</span><span class="wf-footer__country wf-footer__country--us" aria-label="Estados Unidos">US</span><span class="wf-footer__country wf-footer__country--cn" aria-label="China">CN</span></div>') +
       '<span>Conexões que aproximam o mundo.</span></div>' +
       '</div>';
     enhanceFooter(footer);
