@@ -46,45 +46,33 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>body { background-color: #050505; color: #f0f0f0; font-family: 'Inter', sans-serif; }</style>
       <link rel="stylesheet" href="/css/winf-footer.css?v=20261021-footer-utf8-4" />
-    <link rel="stylesheet" href="/aerocore/css/header.css?v=20261029" />
-    <script src="/aerocore/js/header.js?v=20261029" defer></script>
   </head>
   <body class="antialiased bg-[#050505] text-[#f0f0f0]">
 
     <!-- Navbar -->
-    <header class="ac-header" aria-label="AeroCore">
-      <a class="ac-header__brand" href="/aerocore/" aria-label="AeroCore — página principal">AEROCORE</a>
-      <button class="ac-header__toggle" type="button" aria-expanded="false" aria-controls="ac-header-navigation">Menu <span aria-hidden="true">+</span></button>
-      <div class="ac-header__navigation" id="ac-header-navigation">
-        <nav class="ac-header__links ac-header__links--0" aria-label="Tecnologias e ecossistema">
-          <a href="/aerocore/neoskin/">NeoSkin™</a>
-          <a href="/aerocore/aerocore/">AeroCore™</a>
-          <a href="/aerocore/ceramic-armoring/">Ceramic Armoring™</a>
-          <a href="/">WINF Select™ · Arquitetura</a>
-          <a href="/partners/">WINF Partners™</a>
-        </nav>
-        <nav class="ac-header__links ac-header__links--1" aria-label="Soluções AeroCore">
-          <a href="/aerocore/aeronautica/">Aeronaves</a>
-          <a href="/aerocore/supermaquinas/">Caminhões</a>
-          <a href="/aerocore/luxo/">Carros</a>
-          <a href="/aerocore/marine/">Iates</a>
-          <a href="/aerocore/motorsports/">Motorsports</a>
-          <a href="/aerocore/supermotos/">Motos</a>
-        </nav>
-        <div class="ac-header__global" aria-label="Conexões globais: Brasil, Estados Unidos e China"><span><i class="ac-header__dot--br" aria-hidden="true"></i>BR</span><span><i class="ac-header__dot--us" aria-hidden="true"></i>US</span><span><i class="ac-header__dot--cn" aria-hidden="true"></i>CN</span></div>
-        <nav class="ac-header__links ac-header__links--2" aria-label="Institucional">
-          <a href="/aerocore/">Nexus</a>
-          <a href="/catalogo/">Catálogo</a>
-          <a href="/aerocore/licenciamento/">Licenciamento</a>
-          <a href="/aerocore/contato/">Contato</a>
-          <a href="/aerocore/policies/#privacidade">Políticas e privacidade</a>
-        </nav>
-        <nav class="ac-header__social" aria-label="Redes sociais AeroCore">
-          <a href="https://www.instagram.com/aerocoreofc/" target="_blank" rel="noopener noreferrer" aria-label="AeroCore no Instagram (abre em nova aba)"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg><span>@aerocoreofc</span></a>
-        </nav>
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-[60] transition-all duration-700 bg-transparent py-8">
+      <div class="max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center">
+        <a href="../" class="flex items-center group cursor-pointer">
+          <span class="text-base md:text-xl tracking-[0.5em] font-light text-white font-aerocore">
+            AEROCORE<span class="text-white/60 text-[10px] md:text-xs align-top ml-1 font-sans">™</span>
+          </span>
+        </a>
+        <button id="menu-toggle" aria-label="Abrir Menu" class="relative w-10 h-10 flex flex-col justify-center items-center gap-[6px] text-white/70 hover:text-white z-[60] cursor-pointer">
+          <span id="ham-line-1" class="block w-6 h-[1px] bg-current transition-transform duration-500 ease-in-out"></span>
+          <span id="ham-line-2" class="block w-6 h-[1px] bg-current transition-transform duration-500 ease-in-out"></span>
+        </button>
       </div>
-    </header>
+    </nav>
 
+    <div id="nav-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-md z-[45] opacity-0 pointer-events-none transition-opacity duration-500"></div>
+    <div id="nav-drawer" class="fixed top-0 right-0 h-screen w-full md:w-96 bg-black/85 backdrop-blur-2xl border-l border-white/10 z-[55] flex flex-col justify-center items-center translate-x-full transition-transform duration-500">
+      <div class="flex flex-col items-center gap-4 w-full max-h-[85vh] overflow-y-auto pt-20 pb-12 px-6">
+        <a href="../" class="w-full p-3.5 bg-white/[0.03] border border-white/10 rounded-sm hover:bg-white/[0.08] transition-all flex flex-col items-center gap-1.5"><i data-lucide="home" class="w-5 h-5 text-white/70"></i><span class="text-[12px] uppercase tracking-[0.2em] text-white">Nexus</span></a>
+        <a href="../aerocore/" class="w-full p-3.5 bg-white/[0.03] border border-white/10 rounded-sm hover:bg-white/[0.08] transition-all flex flex-col items-center gap-1.5"><i data-lucide="cloud" class="w-5 h-5 text-white/70"></i><span class="text-[12px] uppercase tracking-[0.2em] text-white">AeroCore</span></a>
+      </div>
+    </div>
+
+    <!-- Product Main View -->
     <main>
       <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-black pt-32">
         <div class="absolute top-32 left-8 right-8 flex justify-between items-center z-20">
