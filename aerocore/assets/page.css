@@ -11,9 +11,6 @@ details[open] summary svg { transform: rotate(180deg); }
 #aerocore-header.is-scrolled { background: rgb(0 0 0 / .9); backdrop-filter: blur(12px); border-bottom: 1px solid rgb(255 255 255 / .08); padding-block: 1rem; }
 #aerocore-header.is-hidden { transform: translateY(-100%); opacity: 0; }
 body.menu-open { overflow: hidden; }
-#technical-specifications.is-filtered [data-spec-product]:not([hidden]) { grid-column: span 4 / span 4; }
-[data-product-filter][aria-pressed="false"] { background: transparent; color: rgb(255 255 255 / .5); }
-[data-product-filter][aria-pressed="true"] { background: white; color: black; }
 .glitch-hover-effect { position: relative; display: inline-block; transition: color .15s ease, transform .2s ease; }
 .glitch-hover-effect::before, .glitch-hover-effect::after { content: attr(data-text); position: absolute; inset: 0; opacity: 0; pointer-events: none; }
 .glitch-hover-effect:hover { animation: glitch-skew .3s both; }
@@ -22,7 +19,15 @@ body.menu-open { overflow: hidden; }
 @keyframes glitch-skew { 20% { transform: skew(-2.5deg) translateX(-2px); } 40% { transform: skew(2deg) translateX(2px); } 60% { transform: skew(-1deg) translateX(-1px); } 80% { transform: skew(1.5deg) translateX(1px); } }
 @keyframes glitch-slice { 0% { clip-path: inset(40% 0 61%); transform: translate(-2px,-1px); } 50% { clip-path: inset(10% 0 86%); transform: translate(-1px,2px); } 100% { clip-path: inset(25% 0 58%); transform: none; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
-/* Keep the reference wordmark within narrow and intermediate viewports. */
-main > section:first-child h1 { font-size: clamp(1.75rem, 9.5vw, 8rem); }
-@media (max-width: 767px) { main > section:first-child h1 { letter-spacing: .16em; } }
 @media (max-width: 479px) { #contact-channels { width: min(320px, calc(100vw - 40px)); } }
+@keyframes homepage-ticker { to { transform: translateX(-50%); } }
+.homepage-ticker { animation: homepage-ticker 60s linear infinite; }
+@keyframes scroll-cue { 50% { transform: translateY(10px); } }
+.scroll-cue { animation: scroll-cue 2s ease-in-out infinite; }
+[data-ghost-protocol].ghost-selected { transform: scale(3.5); filter: drop-shadow(0 0 30px rgb(255 255 255 / .8)); }
+[data-ghost-protocol]:hover { transform: scale(1.2); }
+[data-ghost-protocol].ghost-selected:hover { transform: scale(4); }
+[data-ghost-protocol].ghost-selected img { opacity: 1; }
+svg ellipse[stroke-dasharray] { animation: orbit-dash 15s linear infinite; }
+@keyframes orbit-dash { to { stroke-dashoffset: 100; } }
+@media (prefers-reduced-motion: reduce) { .homepage-ticker,.scroll-cue,svg ellipse[stroke-dasharray] { animation: none; } }

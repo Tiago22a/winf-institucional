@@ -1,15 +1,14 @@
-# AeroCore — página institucional estática
+# AeroCore — página inicial estática
 
-A rota `/aerocore/` reproduz a página AeroCore do ZIP de referência, sem React, roteador, hidratação ou etapa de build.
+A rota `/aerocore/` reproduz a **primeira página (HomePage/HomeView)** do ZIP de referência: abertura AeroCore + NeoSkin, faixa animada, Engineering de Proteção Definitiva, manifesto, divisões, Sobre, pilares, identidade e footer completo. O header e o menu também seguem a página inicial, sem botão Voltar.
 
-- `index.html`: conteúdo completo, menu, cartões, matriz técnica, FAQ nativo (`details`/`summary`) e canais de atendimento. SVGs dos ícones Lucide incluídos diretamente no HTML.
-- `assets/page.css`: ajustes da página, estados de navegação, acessibilidade e preferência por movimento reduzido.
-- `assets/page.js`: menu com teclado e Escape, canais de atendimento, filtro das colunas da matriz e comportamento do cabeçalho. Não gera conteúdo nem renderiza componentes.
-- `assets/ghost-symbol.png`: símbolo original do ZIP.
-- `assets/porsche-racing.mp4`: vídeo original do ZIP; o arquivo antigo permanece disponível para as outras páginas.
+- `index.html`: conteúdo completo em HTML; ícones SVG originais incluídos diretamente no documento.
+- `assets/page.css`: efeitos de menu, faixa contínua, ícone Ghost, foco acessível e movimento reduzido.
+- `assets/page.js`: abre e fecha menu/canais, controla o cabeçalho e o Ghost Protocol. Não renderiza componentes nem gera conteúdo.
+- `assets/ghost-symbol.png`: símbolo original.
+- `assets/gemini_generated_video_404693f3.mp4`: vídeo original do manifesto.
+- `public/quero_uma_porche_rebaixada.mp4` e `public/white-porsche.mp4`: vídeos originais já existentes, reutilizados sem alteração.
 
-Tailwind CSS 4.1.14 carrega via CDN. Inter, Montserrat, Outfit e Rock Salt carregam pelo Google Fonts. A hospedagem precisa permitir esses recursos externos. Não é necessário executar `npm install` ou compilar para publicar esta página.
+Tailwind CSS 4.1.14 via CDN; fontes Inter, Montserrat, Outfit e Rock Salt pelo Google Fonts. HTML, CSS e JavaScript vanilla: sem React, roteador, hidratação, instalação de dependências ou etapa de build.
 
-Para visualizar, sirva a raiz do repositório com qualquer servidor HTTP estático e abra `/aerocore/`. Os caminhos absolutos dos recursos e links seguem a estrutura existente de `winf-institucional`.
-
-O restante do site e as subpáginas da AeroCore mantêm seus arquivos e scripts atuais. Esta página não carrega o JavaScript compartilhado antigo da AeroCore.
+Sirva a raiz do repositório com qualquer servidor HTTP estático e abra `/aerocore/`. Os links seguem a estrutura existente: “Explorar Arsenal” aponta para `/aerocore/aerocore/`, e NeoSkin para `/aerocore/neoskin/`. As demais páginas e seus arquivos compartilhados permanecem independentes desta página inicial.

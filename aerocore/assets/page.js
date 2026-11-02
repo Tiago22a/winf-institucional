@@ -44,15 +44,6 @@ document.addEventListener('keydown', event => {
   if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
   else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
 });
-const specifications = document.getElementById('technical-specifications');
-specifications.querySelectorAll('[data-product-filter]').forEach(button => {
-  button.addEventListener('click', () => {
-    const product = button.dataset.productFilter;
-    specifications.classList.toggle('is-filtered', product !== 'all');
-    specifications.querySelectorAll('[data-product-filter]').forEach(tab => tab.setAttribute('aria-pressed', String(tab === button)));
-    specifications.querySelectorAll('[data-spec-product]').forEach(cell => { cell.hidden = product !== 'all' && cell.dataset.specProduct !== product; });
-  });
-});
 let previousY = window.scrollY;
 let scheduled = false;
 window.addEventListener('scroll', () => {
@@ -66,11 +57,18 @@ window.addEventListener('scroll', () => {
     scheduled = false;
   });
 }, { passive: true });
-const video = document.querySelector('video');
+const videos = document.querySelectorAll('video');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 function updateVideoPreference() {
-  if (reducedMotion.matches) video.pause();
-  else video.play().catch(() => {});
+  videos.forEach(video => {
+    if (reducedMotion.matches) video.pause();
+    else video.play().catch(() => {});
+  });
 }
 reducedMotion.addEventListener('change', updateVideoPreference);
 updateVideoPreference();
+const ghost = document.querySelector('[data-ghost-protocol]');
+ghost.addEventListener('click', () => {
+  const selected = ghost.classList.toggle('ghost-selected');
+  ghost.setAttribute('aria-pressed', String(selected));
+});
