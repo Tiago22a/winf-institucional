@@ -2,10 +2,10 @@
 #about-us .home-hero { position:relative; min-height:84vh; overflow:hidden; background:radial-gradient(circle at 70% 25%,rgba(90,90,90,.22),transparent 30%),linear-gradient(135deg,#171717,#020202 70%); }
 #about-us h1, #about-us h2, #about-us h3 { font-family:Outfit,Inter,sans-serif; }
 #about-us .section-label { color:#a1a1aa; font-size:13px; letter-spacing:.14em; text-transform:uppercase; font-family:ui-monospace,monospace; }
-#about-us .about-wordmark { display:flex; align-items:flex-start; width:fit-content; max-width:100%; margin:1.6rem 0 0; color:#f0f0f0; font-size:clamp(2rem,7.5vw,7rem); font-weight:300; line-height:1.15; }
+#about-us .about-wordmark { display:flex; align-items:flex-start; width:fit-content; max-width:100%; margin:1.6rem 0 0; color:#f0f0f0; font-size:clamp(2rem,6.6vw,6.2rem); font-weight:300; line-height:1.15; }
 #about-us .about-wordmark>span { letter-spacing:.17em; margin-right:-.17em; }
 #about-us .about-wordmark>sup { position:static; margin:.28em 0 0 .3em; font-size:.16em; line-height:1; letter-spacing:0; font-weight:400; }
-#about-us .about-signature { margin:1.4rem 0 0; font-family:Outfit,Inter,sans-serif; font-size:clamp(1.7rem,3.5vw,3.25rem); font-weight:300; line-height:1.08; letter-spacing:-.035em; text-transform:none; }
+#about-us .about-signature { margin:1.4rem 0 0; font-family:Outfit,Inter,sans-serif; font-size:clamp(2rem,4.2vw,3.9rem); font-weight:300; line-height:1.08; letter-spacing:-.035em; text-transform:none; }
 #about-us .about-signature span, #about-us .internal-h2 span { color:#a1a1aa; font-weight:200; }
 #about-us .internal-lede { margin-top:2rem; max-width:720px; color:#d4d4d8; font-size:clamp(1rem,1.5vw,1.35rem); font-weight:300; line-height:1.6; }
 #about-us .internal-section { border-top:1px solid rgba(255,255,255,.1); padding:8rem 1.5rem; background:#080808; }
