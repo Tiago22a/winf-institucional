@@ -1,3 +1,29 @@
+// Keep the AeroCore family on the same institutional footer as the WINF ecosystem.
+// WINF Select intentionally retains its own, separately designed footer.
+(() => {
+  const currentPath = window.location.pathname.toLowerCase().replace(/\/+/g, '/');
+  if (/^\/aerocore\/winf-select(?:\/|$)/.test(currentPath)) return;
+
+  const cssFiles = [
+    '/css/winf-footer.css?v=20261103-aerocore-unified-1',
+    '/css/winf-signoff.css?v=20261103-aerocore-unified-1'
+  ];
+  cssFiles.forEach(href => {
+    const path = href.split('?')[0];
+    if (document.querySelector('link[rel="stylesheet"][href^="' + path + '"]')) return;
+    const stylesheet = document.createElement('link');
+    stylesheet.rel = 'stylesheet';
+    stylesheet.href = href;
+    document.head.appendChild(stylesheet);
+  });
+
+  if (!document.querySelector('script[src^="/js/winf-footer.js"]')) {
+    const script = document.createElement('script');
+    script.src = '/js/winf-footer.js?v=20261103-aerocore-unified-1';
+    document.head.appendChild(script);
+  }
+})();
+
 'use strict';
 
 // The floating dock is independent of the copy inside the navigation menu.
