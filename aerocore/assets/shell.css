@@ -21,3 +21,17 @@
 .ac-whatsapp-official svg { color:#fff; }
 @media (max-width:767px) { .ac-menu-signature-row { flex-direction:column; align-items:stretch; gap:2.5rem; } .ac-menu-contact-dock { align-self:flex-end; } }
 
+
+/* Readable supporting copy at normal browser zoom, without enlarging trademark marks. */
+:is(main,footer,#menu-overlay,#contact-channels,#floating-contact-channels) :is([class~="text-[8px]"],[class~="text-[9px]"],[class~="text-[9.5px]"],[class~="text-[10px]"],[class~="text-[11px]"],[class~="text-[12px]"],[class~="text-[13px]"],[class~="text-xs"]):not(sup):not([class~="align-top"]):not([class~="absolute"]):not(svg) { font-size:.875rem !important; line-height:1.65 !important; letter-spacing:.055em !important; }
+:is(main,footer,#menu-overlay,#contact-channels,#floating-contact-channels) :is([class~="text-[8px]"],[class~="text-[9px]"],[class~="text-[9.5px]"],[class~="text-[10px]"],[class~="text-[11px]"],[class~="text-[12px]"],[class~="text-[13px]"],[class~="text-xs"]):not(sup):not([class~="align-top"]):not([class~="absolute"]):not(svg):is(.text-zinc-500,.text-zinc-600,[class~="text-white/30"],[class~="text-white/40"],[class~="text-white/50"]) { color:#aaaab3 !important; }
+main p.text-sm { font-size:1rem; line-height:1.75; }
+#menu-overlay .ac-menu-signature-row { padding-top:3.5rem; }
+#menu-overlay .grid[class~="lg:col-span-6"] { font-size:.9375rem !important; letter-spacing:.055em !important; line-height:1.7; min-width:0; }
+#menu-overlay .grid[class~="lg:col-span-6"] a { min-height:44px; gap:12px; padding-block:10px; }
+#menu-overlay .grid[class~="lg:col-span-6"] a span { overflow-wrap:anywhere; }
+#menu-overlay .menu-primary-link { max-width:100%; flex-wrap:wrap; overflow-wrap:anywhere; }
+#menu-overlay .ac-menu-signature [class*="font-mono"] { letter-spacing:.14em !important; }
+footer a { min-height:32px; display:inline-flex; align-items:center; }
+@media(min-width:1024px) { #menu-overlay .grid[class~="lg:col-span-6"] { grid-template-columns:repeat(2,minmax(0,1fr)); } #menu-overlay .menu-primary-link { font-size:clamp(2rem,3.15vw,3.25rem); } }
+@media(max-width:479px) { #menu-overlay .grid[class~="lg:col-span-6"] { grid-template-columns:1fr; } }

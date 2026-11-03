@@ -1,7 +1,7 @@
 /* Presentation structure follows /winf-home/; scoped to the AeroCore About page. */
 #about-us .home-hero { position:relative; min-height:84vh; overflow:hidden; background:radial-gradient(circle at 70% 25%,rgba(90,90,90,.22),transparent 30%),linear-gradient(135deg,#171717,#020202 70%); }
 #about-us h1, #about-us h2, #about-us h3 { font-family:Outfit,Inter,sans-serif; }
-#about-us .section-label { color:#a1a1aa; font-size:10px; letter-spacing:.28em; text-transform:uppercase; font-family:ui-monospace,monospace; }
+#about-us .section-label { color:#a1a1aa; font-size:13px; letter-spacing:.14em; text-transform:uppercase; font-family:ui-monospace,monospace; }
 #about-us .about-wordmark { display:flex; align-items:flex-start; width:fit-content; max-width:100%; margin:1.6rem 0 0; color:#f0f0f0; font-size:clamp(2rem,7.5vw,7rem); font-weight:300; line-height:1.15; }
 #about-us .about-wordmark>span { letter-spacing:.17em; margin-right:-.17em; }
 #about-us .about-wordmark>sup { position:static; margin:.28em 0 0 .3em; font-size:.16em; line-height:1; letter-spacing:0; font-weight:400; }
@@ -24,7 +24,7 @@
 #about-us .home-model div>span:last-child { color:#d4d4d8; font:10px ui-monospace,monospace; letter-spacing:.2em; }
 #about-us .contact-strip { border-top:1px solid rgba(255,255,255,.1); background:#050505; padding:8rem 1.5rem; text-align:center; }
 #about-us .contact-strip h2 { margin:1.5rem auto 2.5rem; max-width:900px; color:#fff; font-size:clamp(2.4rem,5vw,5.5rem); font-weight:300; letter-spacing:-.045em; line-height:.95; text-transform:uppercase; }
-#about-us .about-button { display:inline-flex; align-items:center; justify-content:center; padding:1rem 1.5rem; border:1px solid rgba(255,255,255,.3); color:white; font-size:10px; letter-spacing:.15em; transition:background .2s,color .2s; }
+#about-us .about-button { display:inline-flex; align-items:center; justify-content:center; padding:1rem 1.5rem; border:1px solid rgba(255,255,255,.3); color:white; font-size:14px; letter-spacing:.08em; transition:background .2s,color .2s; }
 #about-us .about-button:hover { background:white; color:black; }
 @media(max-width:700px) { #about-us .home-model-grid { grid-template-columns:1fr; } #about-us .internal-section { padding:5rem 1.25rem; } #about-us .home-model div { padding:1.5rem; } }
 @media(prefers-reduced-motion:reduce) { #about-us .home-model img { transition:none; } }
