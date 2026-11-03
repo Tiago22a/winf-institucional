@@ -32,3 +32,38 @@ body.brand-menu-open .brand-menu-panel { animation:brand-menu-in .25s ease-out b
 @keyframes brand-menu-in { from { transform:translateX(100%); } to { transform:translateX(0); } }
 @media(max-width:480px) { #brand-header { padding:20px; } .brand-header-logo { font-size:17px; letter-spacing:.4em; } .brand-menu-panel { padding-inline:24px; } }
 @media(prefers-reduced-motion:reduce) { body.brand-menu-open .brand-menu-panel { animation:none; } #brand-header,.brand-menu-card { transition:none; } }
+
+/* Compact, readable navigation shared by the three technologies. */
+.brand-menu-panel { display:flex; flex-direction:column; padding:24px; width:min(440px,100%); overflow:hidden; background:#090909; }
+.brand-menu-heading { flex-shrink:0; margin:0; padding-bottom:18px; border-bottom:1px solid #ffffff1c; }
+.brand-menu-heading>span { color:#c3c3c3; font-size:12px; letter-spacing:.08em; }
+.brand-menu-close { width:44px; height:44px; cursor:pointer; }
+.brand-menu-panel nav { flex:1; min-height:0; overflow:auto; overscroll-behavior:contain; padding:20px 4px 20px 0; scrollbar-width:thin; scrollbar-color:#444 #090909; }
+.brand-menu-primary { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.brand-menu-primary a { display:flex; align-items:center; justify-content:center; min-height:46px; padding:10px; border:1px solid #ffffff26; color:#f0f0f0; font:500 15px/1.4 Inter,sans-serif; }
+.brand-menu-section { margin-top:24px; }
+.brand-menu-section h2 { text-align:left; color:#aaa; font:500 11px/1.5 Inter,sans-serif; letter-spacing:.1em; margin-bottom:10px; }
+.brand-menu-card { flex-direction:row; justify-content:flex-start; min-height:46px; margin:0; padding:11px 14px; gap:12px; border:0; border-bottom:1px solid #ffffff14; background:transparent; font:500 14px/1.5 Inter,sans-serif; letter-spacing:.02em; text-transform:none; }
+.brand-menu-card.is-current { border-left:2px solid #d1d1d1; background:#1b1b1b; }
+.brand-menu-dot { width:6px; height:6px; border-radius:50%; background:#bcbcbc; flex-shrink:0; }
+.brand-menu-card[href*="neoskin"] .brand-menu-dot { background:#a3b899; }
+.brand-menu-line { min-height:46px; padding:12px 2px; gap:12px; color:#ddd; font:400 14px/1.5 Inter,sans-serif; letter-spacing:0; }
+.brand-menu-line>span:last-child { color:#aaa; }
+.brand-menu-applications { margin-top:24px; border-block:1px solid #ffffff26; }
+.brand-menu-applications summary { display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:64px; padding:14px 2px; cursor:pointer; list-style:none; color:#eee; font:500 15px/1.5 Inter,sans-serif; }
+.brand-menu-applications summary::-webkit-details-marker { display:none; }
+.brand-menu-applications summary small { display:block; color:#aaa; font:400 12px/1.6 Inter,sans-serif; margin-top:2px; }
+.brand-menu-expand { font-size:24px; font-weight:300; transition:transform .2s; }
+.brand-menu-applications[open] .brand-menu-expand { transform:rotate(45deg); }
+.brand-menu-application-links { padding:0 8px 12px; }
+.brand-menu-footer { flex-shrink:0; border-top:1px solid #ffffff1c; padding-top:16px; }
+.brand-menu-find { display:flex; align-items:center; justify-content:space-between; min-height:48px; padding:12px 16px; background:#d6e5cc; color:#111; font:600 14px/1.5 Inter,sans-serif; border:1px solid #d6e5cc; }
+.brand-menu-find:hover { background:white; }
+.brand-menu-shortcuts { justify-content:space-between; margin-top:14px; padding-top:0; border:0; gap:16px; }
+.brand-menu-shortcuts>a { flex-direction:row; min-height:44px; gap:10px; font:500 11px/1.4 Inter,sans-serif; letter-spacing:.02em; text-transform:none; }
+.brand-menu-shortcuts img { width:24px; height:32px; }
+.brand-menu-whatsapp>span:first-child { width:36px; height:36px; }
+.brand-menu-whatsapp svg { width:26px; height:26px; }
+.brand-menu-panel :is(a,button,summary):focus-visible { outline:2px solid #d6e5cc; outline-offset:3px; }
+.brand-menu-primary a:hover { background:#1b1b1b; }
+@media(max-width:480px) { .brand-menu-panel { padding:18px 20px; } }

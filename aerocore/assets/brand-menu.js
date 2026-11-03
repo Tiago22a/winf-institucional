@@ -21,7 +21,10 @@
    if (layer.hidden) return;
    if (event.key === 'Escape') { event.preventDefault(); setOpen(false); return; }
    if (event.key !== 'Tab') return;
-   const focusable = [...panel.querySelectorAll('a[href],button')];
+   const focusable = [...panel.querySelectorAll('a[href],button,summary')].filter(el => {
+     const details = el.closest('details');
+     return !details || details.open || el === details.querySelector('summary');
+   });
    const first = focusable[0], last = focusable[focusable.length-1];
    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
    else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
