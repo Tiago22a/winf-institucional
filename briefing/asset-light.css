@@ -24,7 +24,7 @@
 .al-note strong{color:#fff}
 .al-button{display:inline-flex;align-items:center;justify-content:space-between;gap:20px;min-height:48px;padding:16px 22px;border:1px solid #7d7f7f;color:#fff;font-size:14px;line-height:1.5;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:background .2s,color .2s;max-width:100%}
 .al-button:hover{background:#fff;color:#131314}
-.al-button:focus-visible,.al-gallery a:focus-visible,.al-faq summary:focus-visible{outline:2px solid #fff;outline-offset:5px}
+.al-button:focus-visible,.al-faq summary:focus-visible{outline:2px solid #fff;outline-offset:5px}
 .al-grid{display:grid;gap:24px;margin:36px 0}
 .al-grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
 .al-grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
@@ -40,18 +40,19 @@
 .al-faq details:last-child{border-bottom:1px solid #444746}
 .al-faq summary{cursor:pointer;font-size:19px;line-height:1.5;font-weight:600;padding-right:20px}
 .al-faq details p{margin:20px 0 0}
-.al-gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
-.al-gallery figure{margin:0;min-width:0;border:1px solid #444746;background:#131314}
-.al-gallery a{display:block}
-.al-gallery img{position:static;display:block;width:100%;height:auto;aspect-ratio:1122/1402;object-fit:contain;filter:none;transform:none}
-.al-gallery figcaption{padding:20px;font-size:16px;line-height:1.5;color:#fff}
-.al-gallery figcaption span{display:block;font-size:12px;line-height:1.6;color:#b8babb;margin-top:8px}
+
+
+
+
+
+
 .al-form-note{font-size:15px;line-height:1.6;color:#c4c5c6;margin:0 0 20px}
-@media(max-width:1000px){.al-grid-3{grid-template-columns:1fr}.al-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:650px){.al-feature,.al-grid-2,.al-kit ul,.al-steps{grid-template-columns:1fr}.al-feature{gap:24px}.al-section{padding:64px 20px}.al-gallery{gap:16px;grid-template-columns:1fr}.al-gallery figcaption{padding:18px}.al-section .al-note{padding:20px}.al-price{padding:24px}}
+@media(max-width:1000px){.al-grid-3{grid-template-columns:1fr}}
+@media(max-width:650px){.al-feature,.al-grid-2,.al-kit ul,.al-steps{grid-template-columns:1fr}.al-feature{gap:24px}.al-section{padding:64px 20px}.al-section .al-note{padding:20px}.al-price{padding:24px}}
 @media(prefers-reduced-motion:reduce){.al-button{transition:none}}
-/* Keep the lettering embedded in the approved artwork readable without cropping. */
-.al-gallery{grid-template-columns:repeat(2,minmax(0,1fr));max-width:1120px;margin-inline:auto}
-#social>div>div:first-child>p{color:#c4c5c6;font-size:17px;line-height:1.75;letter-spacing:.035em;text-transform:none}
-#social h2{font-size:12px;color:#b8babb;letter-spacing:.2em;line-height:1.6}
-@media(max-width:650px){.al-gallery{grid-template-columns:1fr}}
+
+
+
+
+
+

@@ -18,7 +18,7 @@ Data: 03/11/2026. Escopo implementado: página comercial `/briefing/`; preservad
 
 - `/briefing/index.html`: apresentação dos modelos, operação, kit, exclusividade, ativação, preços, FAQ, galeria e contexto do formulário.
 - `/briefing/asset-light.css`: estilos restritos à página, tipografia herdada, contraste e adaptação a celular.
-- Quatro WebPs locais em `/briefing/media/`: arquitetura, aplicação, lifestyle e tecnologia. Conversão de formato de artes da biblioteca autorizada pelo usuário, sem recortar ou redesenhar o conteúdo. Sem carregamento de fotografias do Google/Unsplash nesta seção; galeria identificada como conceitual, não como obra executada.
+- Quatro WebPs locais em `/briefing/media/`: supercars, arquitetura, lifestyle e detailing. Imagens conceituais criadas para os formatos do mosaico original. Layout, textos, sobreposições e classes responsivas originais restaurados; imagens sem frases ou logotipos embutidos, sem carregamento de Google/Unsplash nesta seção.
 - Nenhum módulo autenticado do WINF OS foi modificado ou simulado.
 
 ## Fluxos efetivamente mantidos e verificados
@@ -27,7 +27,7 @@ Data: 03/11/2026. Escopo implementado: página comercial `/briefing/`; preservad
 - Validação dos campos obrigatórios antes de preparar mensagem para o WhatsApp da central (5513997815375).
 - Mensagem contém nome, cidade/UF, WhatsApp, modelo e descrição opcional. Link persistente permite continuar se a nova janela for bloqueada.
 - Fechamento do diálogo e reprodução manual do manifesto preservados.
-- FAQ com expansão nativa por teclado; galeria com links para imagem integral, lazy loading e dimensões explícitas.
+- FAQ com expansão nativa por teclado; galeria com os quatro espaços originais, object-fit cover, lazy loading e efeitos originais preservados.
 - Consulta comercial não confirma adesão, reserva território ou inicia ativação.
 
 ## Integrações pendentes: WINF OS
@@ -59,9 +59,6 @@ Módulos previstos: Meu Território; Central de Ativação; MAW — Arsenal de M
 
 Testes de DOM e comportamento com jsdom: nomenclatura, valores, kit, ausência de promessas antigas, preservação de vídeos/rodapé, imagens locais, links e modelos válidos, formulário/WhatsApp e manifesto. CSS analisado e imagens WebP decodificadas. A revisão visual em navegador não estava disponível neste ambiente; não se declara teste visual ou conclusão das integrações pendentes.
 
-## Proveniência das artes
+## Imagens e composição do portfólio
 
-- Arquitetura em vidro, luz e privacidade.png — `libfile_d7f24cc3bd84819182f669c665b3f2db`.
-- Instalação precisa em vidro arquitetônico.png — `libfile_929483fbe56481918caf3a6eca33b834`.
-- Refúgio em vidro ao entardecer.png — `libfile_6486f3333300819186dc01f818056e23`.
-- Película arquitetônica em detalhe.png — `libfile_cd758052ad4c81918249cdd1508c723c`.
+O mosaico original foi restaurado a pedido do usuário. Os arquivos e os prompts das quatro novas imagens estão em [briefing-portfolio-images.md](briefing-portfolio-images.md). Somente os atributos src e alt das imagens diferem do portfólio original.
