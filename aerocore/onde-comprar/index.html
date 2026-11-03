@@ -24,12 +24,12 @@
 }
 </style>
 <link rel="stylesheet" href="/aerocore/assets/page.css"><link rel="stylesheet" href="/aerocore/assets/shell.css">
-<link rel="stylesheet" href="/aerocore/assets/onde-comprar.css">
+<link rel="stylesheet" href="/aerocore/assets/onde-comprar.css?v=20261103-unidades-1">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Onde comprar | Unidades e territórios WINF — AeroCore","description":"Encontre unidades de atendimento AeroCore, NeoSkin e Ceramic Armoring por cidade e segmento. Consulte também territórios para ativação WINF Partners.","url":"https://winf.com.br/aerocore/onde-comprar/","inLanguage":"pt-BR"}</script>
 <script src="/aerocore/assets/shell.js" defer></script>
 <script src="/aerocore/assets/contact-dock.js" defer></script>
-<script src="/js/cidades.js" defer></script>
-<script src="/aerocore/assets/onde-comprar.js" defer></script>
+<script src="/js/cidades.js?v=20261103-unidades-1" defer></script>
+<script src="/aerocore/assets/onde-comprar.js?v=20261103-unidades-1" defer></script>
 <link rel="stylesheet" href="/css/winf-signoff.css">
 </head><body id="top"><a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 <header class="fixed top-0 left-0 w-full z-[70] transition-all duration-500 bg-transparent py-6 md:py-8 translate-y-0 opacity-100 ac-shell" id="aerocore-header">
@@ -446,14 +446,15 @@
 </section>
 <section class="directory-content" aria-labelledby="directory-title">
   <div class="directory-wrap">
-    <div class="directory-intro"><div><p class="directory-eyebrow" id="directory-kicker">ENCONTRE ATENDIMENTO</p><h2 id="directory-title">Onde você está?</h2></div><p id="directory-count" role="status" aria-live="polite"></p></div>
+    <div class="directory-intro"><div><p class="directory-eyebrow" id="directory-kicker">ENCONTRE ATENDIMENTO</p><h2 id="directory-title">Relação de territórios</h2></div><div class="directory-view-controls"><p id="directory-count" role="status" aria-live="polite"></p><label class="directory-active-toggle"><input id="directory-active-only" type="checkbox" checked>Mostrar apenas as ativas</label></div></div>
     <form class="directory-filters" id="directory-search" role="search" aria-label="Buscar cidades">
       <label class="directory-search-field"><span>Cidade ou estado</span><input id="directory-query" type="search" placeholder="Digite sua cidade…" autocomplete="off"></label>
       <label><span>Estado</span><select id="directory-state"><option value="">Todos os estados</option></select></label>
-      <label><span>Atendimento</span><select id="directory-service"><option value="">Todos os tipos</option><option value="automotivo">Automotivo</option><option value="residencial">Residencial</option><option value="ambos">Automotivo + residencial</option></select></label>
+      <label><span>Atendimento</span><select id="directory-service"><option value="">Todos os tipos</option><option value="automotivo">Automotivo</option><option value="residencial">Residencial</option><option value="ambos">Automotivo + residencial</option><option value="nao_informado">Segmento a confirmar</option></select></label>
       <button type="reset" class="directory-reset">Limpar filtros</button>
     </form>
     <div class="directory-results" id="directory-results" aria-label="Resultado da busca"></div>
+    <section id="directory-extras" class="directory-extras" aria-labelledby="directory-extras-title" hidden><h3 id="directory-extras-title">Unidade extra ativa</h3><p>Atendimento adicional, fora da relação de 100 territórios.</p><div class="directory-results" id="directory-extra-results"></div></section>
     <div class="directory-empty" id="directory-empty" hidden>
       <span class="directory-empty-mark" aria-hidden="true">↗</span>
       <h3 id="directory-empty-title">Vamos encontrar seu atendimento.</h3>
@@ -470,7 +471,7 @@
       </form>
     </div>
     <noscript><div class="directory-empty"><h3>Fale com a central WINF.</h3><p>Ative o JavaScript para buscar unidades ou consulte nossa equipe diretamente.</p><a class="directory-button" href="https://wa.me/5513981113001" target="_blank" rel="noopener noreferrer">Consultar atendimento →</a></div></noscript>
-    <p class="directory-footnote">Os segmentos atendidos podem variar por unidade. Confirme a solução e a disponibilidade de agenda antes da visita.</p>
+    <p class="directory-footnote">O status não ativo não confirma disponibilidade para ativação. Os segmentos e contatos locais estão sob consulta; confirme o atendimento com a central antes da visita.</p>
   </div>
 </section>
 <template id="directory-card">
