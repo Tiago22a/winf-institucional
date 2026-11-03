@@ -1,0 +1,16 @@
+/* AeroCore social channels sit below the two official link columns. */
+.ac-menu-networks { box-sizing:border-box; grid-column:1/-1; width:100%; padding:28px 0 8px; border-top:1px solid #ffffff20; text-align:center; }
+.ac-menu-networks>p { margin:0 0 20px; color:#c4c4cc; font:500 12px/1.7 Inter,Arial,sans-serif; letter-spacing:.12em; text-transform:uppercase; }
+.ac-network-links { display:grid; grid-template-columns:repeat(4,56px); justify-content:center; gap:14px; list-style:none; padding:0; margin:0; }
+.ac-network-links li { display:flex; align-items:center; justify-content:center; margin:0; padding:0; }
+.ac-network-links .ac-network-icon { box-sizing:border-box; display:inline-flex; align-items:center; justify-content:center; width:56px; height:56px; min-height:56px; padding:0; border:1px solid #ffffff3b; border-radius:11px; background:#1a1a1a; color:#fff; text-decoration:none; box-shadow:0 0 22px #ffffff08; }
+.ac-network-links a.ac-network-icon:hover { background:#2a2a2a; border-color:#ffffff88; }
+.ac-network-links a.ac-network-icon:focus-visible { outline:2px solid white; outline-offset:4px; }
+.ac-network-icon svg { display:block; width:25px; height:25px; flex-shrink:0; }
+.ac-network-links .ac-network-pending { color:#999; background:#111; border-color:#ffffff20; box-shadow:none; cursor:help; }
+.ac-menu-networks>p.ac-networks-note { margin:16px 0 0; color:#999; font-size:12px; letter-spacing:.02em; text-transform:none; }
+#menu-overlay .grid[class~="lg:col-span-6"] .ac-network-links a { min-height:56px; padding:0; gap:0; }
+#brand-menu-layer .ac-menu-networks { margin-top:24px; }
+#nav-drawer .ac-menu-networks { margin-top:20px; flex-shrink:0; }
+@media(min-width:1700px) { #menu-overlay .ac-network-links { grid-template-columns:repeat(8,52px); gap:10px; } #menu-overlay .ac-network-icon { width:52px; height:52px; } }
+@media(max-width:359px) { .ac-network-links { grid-template-columns:repeat(4,48px); gap:10px; } .ac-network-links .ac-network-icon { width:48px; height:48px; min-height:48px; } }
