@@ -16,9 +16,9 @@
 .ac-menu-signature-row { display:flex; align-items:center; justify-content:space-between; gap:clamp(3rem,8vw,10rem); width:100%; padding-block:2.5rem; }
 .ac-menu-signature { flex:1 1 auto; min-width:0; max-width:640px; }
 .ac-menu-contact-dock { flex:0 0 auto; align-self:center; }
-.ac-whatsapp-official { background:#25D366 !important; border-color:#25D366 !important; color:#fff !important; box-shadow:0 0 25px rgb(37 211 102 / .2) !important; }
-.ac-whatsapp-official:hover { background:#1EBE5D !important; border-color:#1EBE5D !important; box-shadow:0 0 35px rgb(37 211 102 / .35) !important; }
-.ac-whatsapp-official svg { color:#fff; }
+.ac-whatsapp-official { background:#18181b !important; border-color:#ffffff33 !important; color:#25D366 !important; box-shadow:0 0 25px #0009 !important; }
+.ac-whatsapp-official:hover { background:#27272a !important; border-color:#ffffff66 !important; box-shadow:0 0 25px #0009 !important; }
+.ac-whatsapp-official svg { color:#25D366; }
 @media (max-width:767px) { .ac-menu-signature-row { flex-direction:column; align-items:stretch; gap:2.5rem; } .ac-menu-contact-dock { align-self:flex-end; } }
 
 
@@ -53,8 +53,8 @@ footer a { min-height:32px; display:inline-flex; align-items:center; }
 .ac-menu-social-column .ac-menu-contact-dock { align-self:flex-end; }
 @media(max-width:767px) { .ac-menu-social-column { width:100%; flex-basis:auto; align-items:stretch; } }
 
-/* Contact shortcuts follow the approved ghost / green speech-bubble reference. */
-:is(#menu-overlay,#floating-contact-dock) .ac-whatsapp-official { background:#25d366 !important; border-color:#68eb9b !important; box-shadow:0 0 28px #25d36655 !important; }
-:is(#menu-overlay,#floating-contact-dock) .ac-contact-bubble { width:30px; height:30px; color:white; fill:white; }
+/* Dark contact circles with the green WhatsApp emblem at the center. */
+:is(#menu-overlay,#floating-contact-dock,#nav-drawer) .ac-whatsapp-official { background:#18181b !important; border-color:#ffffff33 !important; box-shadow:0 0 25px #0009 !important; }
+:is(#menu-overlay,#floating-contact-dock,#nav-drawer,#brand-menu-layer) .ac-contact-whatsapp { width:30px; height:30px; color:#25d366; fill:none; stroke:currentColor; }
 :is(#menu-overlay,#floating-contact-dock) .ac-partners-caption { max-width:72px; text-align:left; font:700 10px/1.5 ui-monospace,monospace !important; letter-spacing:.12em !important; }
-:is(#menu-overlay,#floating-contact-dock) .ac-whatsapp-caption { color:#25d366 !important; font:700 10px/1.5 ui-monospace,monospace !important; letter-spacing:.12em !important; }
+:is(#menu-overlay,#floating-contact-dock) .ac-whatsapp-caption { color:#fff !important; font:700 10px/1.5 ui-monospace,monospace !important; letter-spacing:.12em !important; }
