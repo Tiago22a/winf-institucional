@@ -52,7 +52,8 @@
       body { background-color: #050505; color: #f0f0f0; font-family: 'Inter', sans-serif; overflow-x: hidden; }
       ::selection { background-color: #ffffff; color: #000000; }
     </style>
-<link href="/aerocore/assets/page.css" rel="stylesheet"/><script defer="" src="/aerocore/assets/shell.js"></script><link href="/aerocore/assets/shell.css" rel="stylesheet"/></head>
+<link href="/aerocore/assets/page.css" rel="stylesheet"/><script defer="" src="/aerocore/assets/shell.js"></script><link href="/aerocore/assets/shell.css" rel="stylesheet"/><script src="/aerocore/assets/contact-dock.js" defer></script>
+</head>
 <body class="antialiased bg-[#050505] text-[#f0f0f0]" id="top"><header class="fixed top-0 left-0 w-full z-[70] transition-all duration-500 bg-transparent py-6 md:py-8 translate-y-0 opacity-100 ac-shell" id="aerocore-header">
 <div class="max-w-7xl mx-auto px-5 sm:px-8 md:px-12 flex justify-between items-center">
 <div class="flex items-center">
@@ -954,14 +955,130 @@
 <div class="h-[1px] w-28 bg-white/15 mb-8">
 </div>
 <p class="text-[10px] sm:text-[11px] text-white/70 tracking-[0.65em] uppercase mb-4 text-center font-light">Engenharia Invisível. Performance Inabalável.</p>
-<div class="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-[10px] sm:text-[11px] text-zinc-500 tracking-[0.12em] sm:tracking-[0.18em] text-center font-light leading-relaxed max-w-4xl px-4">
-<span>© 2026 NEXA BLUE™  / MAW™ . Todos os direitos reservados. Marcas de terceiros pertencem aos respectivos titulares.</span>
-<span class="text-zinc-600 hidden sm:inline">•</span>
-<a class="text-zinc-400 hover:text-white underline underline-offset-2 transition-colors cursor-pointer" href="/aerocore/policies/#privacidade">Privacidade</a>
+<div class="flex flex-col items-center gap-3 max-w-4xl px-4 text-center font-light">
+  <div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[10px] sm:text-[11px] tracking-[0.12em] text-white/50">
+    <span>© 2026 WINF™. Todos os direitos reservados.</span>
+    <a href="/aerocore/policies/#privacidade" class="text-white/50 hover:text-white transition-colors underline underline-offset-4">Privacidade</a>
+  </div>
+  <p class="text-[9px] sm:text-[10px] tracking-[0.16em] text-white/40 leading-relaxed">
+    Design e desenvolvimento por
+    <a href="https://www.instagram.com/nexablue.agencia/" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-white transition-colors">NEXA BLUE™</a>
+    <span aria-hidden="true" class="mx-1 text-white/25">/</span>
+    <a href="https://www.instagram.com/maw.winf/" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-white transition-colors">MAW™</a>.
+  </p>
+  <p class="text-[9px] tracking-[0.06em] text-white/30 leading-relaxed">Marcas de terceiros pertencem aos respectivos titulares.</p>
 </div>
 </div>
 </footer>
 <script src="/aerocore/js/main.js"></script>
+<aside id="floating-contact-dock" aria-label="Atendimento oficial WINF" class="fixed bottom-5 right-5 sm:bottom-7 sm:right-7 z-[85] select-none ac-shell">
+<div class="absolute bottom-20 right-0 w-[320px] sm:w-[380px] bg-[#080c0a]/95 backdrop-blur-xl border border-teal-500/30 p-5 sm:p-6 rounded-lg shadow-[0_20px_60px_rgba(0,0,0,0.95)] z-[90] text-left text-white" hidden="" id="floating-contact-channels">
+<div class="absolute top-2 left-2 w-2 h-2 border-t border-l border-teal-400/80">
+</div>
+<div class="absolute top-2 right-2 w-2 h-2 border-t border-r border-teal-400/80">
+</div>
+<div class="absolute bottom-2 left-2 w-2 h-2 border-b border-l border-teal-400/80">
+</div>
+<div class="absolute bottom-2 right-2 w-2 h-2 border-b border-r border-teal-400/80">
+</div>
+<div class="flex items-start justify-between pb-3 mb-4 border-b border-white/10">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-teal-500/20 border border-teal-400/40 flex items-center justify-center text-teal-400">
+<svg aria-hidden="true" class="lucide lucide-shield" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+</path>
+</svg>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h4 class="font-mono text-xs font-bold tracking-[0.2em] text-white uppercase">WINF WHATSAPP</h4>
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse">
+</span>
+</div>
+<span class="text-[10px] text-zinc-400 font-light tracking-wide block">Central de Atendimento Online WINF • AeroCore, NeoSkin, Select, Ceramic &amp; Armoring</span>
+</div>
+</div>
+<button aria-label="Fechar canais de atendimento" class="text-zinc-400 hover:text-white p-1 rounded-sm transition-colors cursor-pointer" data-floating-contact-close="" title="Fechar" type="button">
+<svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 6 6 18">
+</path>
+<path d="m6 6 12 12">
+</path>
+</svg>
+</button>
+</div>
+<div class="space-y-2.5 mb-5">
+<span class="text-[9px] font-mono uppercase tracking-[0.25em] text-zinc-400 block mb-1">SELECIONE O CANAL DE INTERESSE:</span>
+<a class="w-full text-left p-3.5 bg-white/[0.04] hover:bg-teal-500/10 border border-white/10 hover:border-teal-400/50 rounded-md transition-all group cursor-pointer flex items-center justify-between" href="https://wa.me/5513981113001" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded bg-black/60 border border-white/10 text-white group-hover:text-teal-400 transition-colors">
+<svg aria-hidden="true" class="lucide lucide-shield" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+</path>
+</svg>
+</div>
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-white block group-hover:text-teal-300">CENTRAL DE ATENDIMENTO WINF™</span>
+<span class="text-[10px] text-zinc-400 font-light block leading-snug">AeroCore™, NeoSkin PPF, WINF Select™, Ceramic &amp; Armoring™ (Automotivo, Arquitetura &amp; Náutica)</span>
+</div>
+</div>
+<svg aria-hidden="true" class="lucide lucide-external-link text-zinc-500 group-hover:text-teal-400 shrink-0" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 3h6v6">
+</path>
+<path d="M10 14 21 3">
+</path>
+<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6">
+</path>
+</svg>
+</a>
+<a class="w-full text-left p-3.5 bg-white/[0.04] hover:bg-teal-500/10 border border-white/10 hover:border-teal-400/50 rounded-md transition-all group cursor-pointer flex items-center justify-between" href="https://wa.me/5513997815375" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded bg-black/60 border border-white/10 text-white group-hover:text-teal-400 transition-colors">
+<svg aria-hidden="true" class="lucide lucide-briefcase" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16">
+</path>
+<rect height="14" rx="2" width="20" x="2" y="6">
+</rect>
+</svg>
+</div>
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-white block group-hover:text-teal-300">WINF PARTNERS™ // 100 UNIDADES ASSET-LIGHT</span>
+<span class="text-[10px] text-zinc-400 font-light block leading-snug">MAW (+55 13 99781-5375) • Licenciamento de estúdios &amp; expansão 2026</span>
+</div>
+</div>
+<svg aria-hidden="true" class="lucide lucide-external-link text-zinc-500 group-hover:text-teal-400 shrink-0" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 3h6v6">
+</path>
+<path d="M10 14 21 3">
+</path>
+<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6">
+</path>
+</svg>
+</a>
+</div>
+<span class="text-[9px] font-mono uppercase tracking-widest text-zinc-500 text-center block mt-3">WINF Partners™ • Ecossistema Homologado</span>
+</div>
+<div class="relative flex items-center gap-3">
+<div class="flex flex-col items-center justify-center">
+<button aria-controls="floating-contact-channels" aria-expanded="false" aria-label="Abrir canais WINF Partners" class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-black/80 border border-white/20 hover:border-white/60 shadow-[0_0_20px_rgba(0,0,0,0.8)] backdrop-blur-md flex items-center justify-center p-2.5 transition-all duration-300 group cursor-pointer" data-floating-contact-toggle="" title="AeroCore / WINF Partners Hub" type="button">
+<img alt="AeroCore Ghost" class="w-full h-full object-contain filter drop-shadow-[0_2px_10px_rgba(255,255,255,0.4)] transition-transform group-hover:scale-110" height="1043" src="/aerocore/assets/ghost-symbol.png" width="784"/>
+</button>
+<span class="text-[9px] font-mono font-bold tracking-[0.2em] text-white uppercase mt-1.5 drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">WINF PARTNERS</span>
+</div>
+<div class="relative flex items-center justify-center">
+<a aria-label="WhatsApp Oficial AeroCore" class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-zinc-900 border border-white/20 hover:border-white/60 flex items-center justify-center shadow-[0_0_25px_rgba(0,0,0,0.65)] hover:shadow-[0_0_35px_rgba(255,255,255,0.1)] transition-all duration-300 cursor-pointer overflow-hidden z-10" href="https://wa.me/5513981113001?text=Ol%C3%A1!%20Gostaria%20de%20atendimento%20na%20Central%20Online%20WINF%E2%84%A2%20(AeroCore%E2%84%A2%2C%20NeoSkin%20PPF%2C%20WINF%20Select%E2%84%A2%2C%20Ceramic%20%26%20Armoring%E2%84%A2)." rel="noopener noreferrer" target="_blank" title="Conversar no WhatsApp Oficial">
+<div class="absolute top-1 inset-x-2 h-4 bg-gradient-to-b from-white/10 to-transparent rounded-t-full pointer-events-none">
+</div>
+<svg class="w-7 h-7 sm:w-8 sm:h-8 text-white fill-current drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]" viewbox="0 0 24 24">
+<path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.044c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-10.416c-4.432 0-8.031 3.599-8.031 8.03 0 1.416.369 2.793 1.07 4.008l-1.139 4.162 4.259-1.117c1.169.638 2.49 1.002 3.841 1.002 4.432 0 8.032-3.6 8.032-8.032s-3.601-8.053-8.032-8.053z">
+</path>
+</svg>
+</a>
+<span class="absolute -bottom-5 text-[9px] font-mono font-bold tracking-[0.2em] text-white uppercase drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)] whitespace-nowrap">WHATSAPP</span>
+</div>
+</div>
+</aside>
 </body>
 </html>
+
 

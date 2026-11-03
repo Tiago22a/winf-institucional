@@ -8,3 +8,6 @@
 .ac-shell .shadow-sm { box-shadow: 0 1px 3px 0 rgb(0 0 0 / .1), 0 1px 2px -1px rgb(0 0 0 / .1); }
 .ac-shell .shadow-md { box-shadow: 0 4px 6px -1px rgb(0 0 0 / .1), 0 2px 4px -2px rgb(0 0 0 / .1); }
 @media (min-width: 768px) { .ac-shell .md\:h-22 { height: 5.5rem; } }
+
+@media (max-width: 479px) { #floating-contact-channels { width: min(320px, calc(100vw - 40px)); } }
+
