@@ -10,6 +10,10 @@ const channelsTrigger = document.querySelector('[data-toggle-channels]');
 let previousFocus;
 function toggleMenu(open) {
   if (open) previousFocus = document.activeElement;
+  if (!open && !channels.hidden) {
+    channels.hidden = true;
+    channelsTrigger.setAttribute('aria-expanded', 'false');
+  }
   menu.hidden = !open;
   menu.setAttribute('aria-hidden', String(!open));
   menuTrigger.setAttribute('aria-expanded', String(open));
@@ -37,7 +41,7 @@ document.addEventListener('keydown', event => {
     if (!channels.hidden) toggleChannels(false);
   }
   if (event.key !== 'Tab') return;
-  const panel = !menu.hidden ? menu : !channels.hidden ? channels : null;
+  const panel = !channels.hidden ? channels : !menu.hidden ? menu : null;
   if (!panel) return;
   const focusable = [...panel.querySelectorAll('a[href], button')].filter(el => !el.hidden);
   const first = focusable[0];
@@ -59,3 +63,4 @@ window.addEventListener('scroll', () => {
   });
 }, { passive: true });
 })();
+

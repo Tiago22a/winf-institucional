@@ -1,0 +1,28 @@
+/* Presentation structure follows /winf-home/; scoped to the AeroCore About page. */
+#about-us .home-hero { position:relative; min-height:84vh; overflow:hidden; background:radial-gradient(circle at 70% 25%,rgba(90,90,90,.22),transparent 30%),linear-gradient(135deg,#171717,#020202 70%); }
+#about-us h1, #about-us h2, #about-us h3 { font-family:Outfit,Inter,sans-serif; }
+#about-us .section-label { color:#a1a1aa; font-size:10px; letter-spacing:.28em; text-transform:uppercase; font-family:ui-monospace,monospace; }
+#about-us .internal-title { margin-top:1.3rem; max-width:1000px; font-size:clamp(3.2rem,8vw,8.5rem); font-weight:300; letter-spacing:-.055em; line-height:.88; text-transform:uppercase; }
+#about-us .internal-title span, #about-us .internal-h2 span { color:#a1a1aa; font-weight:200; }
+#about-us .internal-lede { margin-top:2rem; max-width:720px; color:#d4d4d8; font-size:clamp(1rem,1.5vw,1.35rem); font-weight:300; line-height:1.6; }
+#about-us .internal-section { border-top:1px solid rgba(255,255,255,.1); padding:8rem 1.5rem; background:#080808; }
+#about-us .internal-h2 { font-size:clamp(2.2rem,5vw,5.4rem); font-weight:300; letter-spacing:-.045em; line-height:.95; text-transform:uppercase; }
+#about-us .internal-copy { max-width:680px; color:#a1a1aa; font-size:1.05rem; font-weight:300; line-height:1.75; }
+#about-us .internal-copy p + p { margin-top:1.5rem; }
+#about-us .home-model-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; }
+#about-us .home-model { position:relative; min-height:480px; overflow:hidden; border:1px solid rgba(255,255,255,.12); background:#121212; }
+#about-us .home-model-wide { grid-column:1/-1; }
+#about-us .home-model img { position:absolute; inset:0; height:100%; width:100%; object-fit:cover; opacity:.6; transition:transform .7s ease,opacity .7s ease; }
+#about-us .home-model:hover img { transform:scale(1.05); opacity:.9; }
+#about-us .home-model:after { position:absolute; inset:0; content:''; background:linear-gradient(to top,#000,transparent 90%); }
+#about-us .home-model div { position:relative; z-index:1; display:flex; flex-direction:column; justify-content:end; min-height:480px; padding:2rem; }
+#about-us .home-model h3 { margin:.7rem 0 1.4rem; color:#fff; font-size:clamp(1.5rem,3vw,3rem); font-weight:300; letter-spacing:-.04em; line-height:1; text-transform:uppercase; }
+#about-us .home-model p { max-width:480px; margin-bottom:1.5rem; color:#d4d4d8; font-size:.875rem; font-weight:300; line-height:1.6; }
+#about-us .home-model div>span:last-child { color:#d4d4d8; font:10px ui-monospace,monospace; letter-spacing:.2em; }
+#about-us .contact-strip { border-top:1px solid rgba(255,255,255,.1); background:#050505; padding:8rem 1.5rem; text-align:center; }
+#about-us .contact-strip h2 { margin:1.5rem auto 2.5rem; max-width:900px; color:#fff; font-size:clamp(2.4rem,5vw,5.5rem); font-weight:300; letter-spacing:-.045em; line-height:.95; text-transform:uppercase; }
+#about-us .about-button { display:inline-flex; align-items:center; justify-content:center; padding:1rem 1.5rem; border:1px solid rgba(255,255,255,.3); color:white; font-size:10px; letter-spacing:.15em; transition:background .2s,color .2s; }
+#about-us .about-button:hover { background:white; color:black; }
+@media(max-width:700px) { #about-us .home-model-grid { grid-template-columns:1fr; } #about-us .internal-section { padding:5rem 1.25rem; } #about-us .home-model div { padding:1.5rem; } }
+@media(prefers-reduced-motion:reduce) { #about-us .home-model img { transition:none; } }
+
