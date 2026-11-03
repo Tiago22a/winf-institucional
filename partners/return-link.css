@@ -1,0 +1,6 @@
+.partners-header-brand { display:flex; align-items:center; flex-wrap:wrap; gap:16px 24px; min-width:0; }
+.partners-return-link { display:inline-flex; align-items:center; justify-content:center; gap:9px; min-height:44px; padding:10px 14px; border:1px solid #ffffff40; border-radius:4px; color:#fff; background:#ffffff0a; font:500 14px/1.4 Inter,Arial,sans-serif; text-decoration:none; transition:background .2s,border-color .2s; }
+.partners-return-link:hover { background:#ffffff18; border-color:#ffffff80; }
+.partners-return-link:focus-visible { outline:2px solid white; outline-offset:4px; }
+@media(max-width:479px) { .partners-header-brand { width:100%; justify-content:space-between; gap:12px; } }
+@media(prefers-reduced-motion:reduce) { .partners-return-link { transition:none; } }
