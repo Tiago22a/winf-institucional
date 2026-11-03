@@ -60,9 +60,9 @@
     <style>
       body { background-color: #050505; color: #f0f0f0; font-family: 'Inter', sans-serif; overflow-x: hidden; }
       ::selection { background-color: #ffffff; color: #000000; }
-      @media (min-width: 1024px) {
-        .ceramic-hero-video { transform: scale(1.22); transform-origin: center; }
-      }
+      .ceramic-hero-video { object-fit:contain; object-position:center; transform:none; }
+      .ceramic-hero-ambient { object-fit:cover; filter:blur(28px) brightness(.55); transform:scale(1.08); opacity:.6; }
+      @media (prefers-reduced-motion:reduce) { .ceramic-hero-video, .ceramic-hero-ambient { display:none; } }
     </style>
       
   <link rel="stylesheet" href="/aerocore/assets/page.css">
@@ -99,8 +99,12 @@
       <!-- Hero Section -->
       <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
         <div class="absolute inset-0 z-0">
-          <video autoPlay loop muted playsInline class="ceramic-hero-video absolute inset-0 w-full h-full object-cover opacity-60 brightness-75 contrast-120" preload="metadata" poster="/images/ceramic-hero.webp">
-            <source src="/aerocore/assets/ceramic-armoring-wheel.mp4" type="video/mp4" />
+          <img src="/images/ceramic-hero.webp" alt="" class="absolute inset-0 w-full h-full object-cover opacity-40">
+          <video autoplay loop muted playsinline aria-hidden="true" tabindex="-1" class="ceramic-hero-ambient absolute inset-0 w-full h-full" preload="metadata">
+            <source src="/aerocore/assets/ceramic-armoring-detailing.mp4" type="video/mp4">
+          </video>
+          <video autoplay loop muted playsinline aria-hidden="true" tabindex="-1" class="ceramic-hero-video absolute inset-0 w-full h-full opacity-80" preload="metadata" poster="/images/ceramic-hero.webp">
+            <source src="/aerocore/assets/ceramic-armoring-detailing.mp4" type="video/mp4">
           </video>
           <div class="absolute inset-0 bg-black/40"></div>
         </div>
@@ -130,45 +134,6 @@
                   <span>PROTEÇÃO QUÍMICA</span><span class="text-white/20">//</span>
                 </span>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Features Section -->
-      <section class="relative py-24 px-4 bg-black" id="servicos">
-        <div class="max-w-7xl mx-auto">
-          <h2 class="text-3xl md:text-5xl font-light uppercase tracking-[0.2em] text-white text-center mb-20">Performance Tática</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="p-8 border border-white/10 bg-white/[0.02] hover:bg-[#e5e5e5]/5 transition-colors group">
-              <i data-lucide="shield" class="w-10 h-10 mb-6 text-[#e5e5e5] group-hover:text-white transition-colors"></i>
-              <h3 class="text-xl font-light uppercase tracking-widest text-white mb-4">Dureza 9H Superior</h3>
-              <p class="text-white/60 text-sm leading-relaxed font-light">Estrutura vitrificada de altíssima densidade contra riscos e abrasão.</p>
-            </div>
-            <div class="p-8 border border-white/10 bg-white/[0.02] hover:bg-[#e5e5e5]/5 transition-colors group">
-              <i data-lucide="droplets" class="w-10 h-10 mb-6 text-[#e5e5e5] group-hover:text-white transition-colors"></i>
-              <h3 class="text-xl font-light uppercase tracking-widest text-white mb-4">Hidrofobia Tática</h3>
-              <p class="text-white/60 text-sm leading-relaxed font-light">Ângulo de contato extremo que oblitera água, lama e contaminantes.</p>
-            </div>
-            <div class="p-8 border border-white/10 bg-white/[0.02] hover:bg-[#e5e5e5]/5 transition-colors group">
-              <i data-lucide="sun" class="w-10 h-10 mb-6 text-[#e5e5e5] group-hover:text-white transition-colors"></i>
-              <h3 class="text-xl font-light uppercase tracking-widest text-white mb-4">Blindagem UV</h3>
-              <p class="text-white/60 text-sm leading-relaxed font-light">Bloqueio permanente contra oxidação e degradação por radiação solar.</p>
-            </div>
-            <div class="p-8 border border-white/10 bg-white/[0.02] hover:bg-[#e5e5e5]/5 transition-colors group">
-              <i data-lucide="target" class="w-10 h-10 mb-6 text-[#e5e5e5] group-hover:text-white transition-colors"></i>
-              <h3 class="text-xl font-light uppercase tracking-widest text-white mb-4">Resistência Química</h3>
-              <p class="text-white/60 text-sm leading-relaxed font-light">Imunidade contra ácidos, solventes e detritos químicos corrosivos.</p>
-            </div>
-            <div class="p-8 border border-white/10 bg-white/[0.02] hover:bg-[#e5e5e5]/5 transition-colors group">
-              <i data-lucide="sparkles" class="w-10 h-10 mb-6 text-[#e5e5e5] group-hover:text-white transition-colors"></i>
-              <h3 class="text-xl font-light uppercase tracking-widest text-white mb-4">Brilho Estrutural</h3>
-              <p class="text-white/60 text-sm leading-relaxed font-light">Profundidade de cor e espelhamento (wet look) de alto nível.</p>
-            </div>
-            <div class="p-8 border border-white/10 bg-white/[0.02] hover:bg-[#e5e5e5]/5 transition-colors group">
-              <i data-lucide="zap" class="w-10 h-10 mb-6 text-[#e5e5e5] group-hover:text-white transition-colors"></i>
-              <h3 class="text-xl font-light uppercase tracking-widest text-white mb-4">Auto-limpeza</h3>
-              <p class="text-white/60 text-sm leading-relaxed font-light">Superfície energeticamente carregada que repele poeira e sujidade.</p>
             </div>
           </div>
         </div>
@@ -222,6 +187,45 @@
                   Especificar <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
                 </a>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="relative py-24 px-4 bg-black" id="servicos">
+        <div class="max-w-7xl mx-auto">
+          <h2 class="text-3xl md:text-5xl font-light uppercase tracking-[0.2em] text-white text-center mb-20">Performance Tática</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="p-8 border border-white/10 bg-white/[0.02] hover:bg-[#e5e5e5]/5 transition-colors group">
+              <i data-lucide="shield" class="w-10 h-10 mb-6 text-[#e5e5e5] group-hover:text-white transition-colors"></i>
+              <h3 class="text-xl font-light uppercase tracking-widest text-white mb-4">Dureza 9H Superior</h3>
+              <p class="text-white/60 text-sm leading-relaxed font-light">Estrutura vitrificada de altíssima densidade contra riscos e abrasão.</p>
+            </div>
+            <div class="p-8 border border-white/10 bg-white/[0.02] hover:bg-[#e5e5e5]/5 transition-colors group">
+              <i data-lucide="droplets" class="w-10 h-10 mb-6 text-[#e5e5e5] group-hover:text-white transition-colors"></i>
+              <h3 class="text-xl font-light uppercase tracking-widest text-white mb-4">Hidrofobia Tática</h3>
+              <p class="text-white/60 text-sm leading-relaxed font-light">Ângulo de contato extremo que oblitera água, lama e contaminantes.</p>
+            </div>
+            <div class="p-8 border border-white/10 bg-white/[0.02] hover:bg-[#e5e5e5]/5 transition-colors group">
+              <i data-lucide="sun" class="w-10 h-10 mb-6 text-[#e5e5e5] group-hover:text-white transition-colors"></i>
+              <h3 class="text-xl font-light uppercase tracking-widest text-white mb-4">Blindagem UV</h3>
+              <p class="text-white/60 text-sm leading-relaxed font-light">Bloqueio permanente contra oxidação e degradação por radiação solar.</p>
+            </div>
+            <div class="p-8 border border-white/10 bg-white/[0.02] hover:bg-[#e5e5e5]/5 transition-colors group">
+              <i data-lucide="target" class="w-10 h-10 mb-6 text-[#e5e5e5] group-hover:text-white transition-colors"></i>
+              <h3 class="text-xl font-light uppercase tracking-widest text-white mb-4">Resistência Química</h3>
+              <p class="text-white/60 text-sm leading-relaxed font-light">Imunidade contra ácidos, solventes e detritos químicos corrosivos.</p>
+            </div>
+            <div class="p-8 border border-white/10 bg-white/[0.02] hover:bg-[#e5e5e5]/5 transition-colors group">
+              <i data-lucide="sparkles" class="w-10 h-10 mb-6 text-[#e5e5e5] group-hover:text-white transition-colors"></i>
+              <h3 class="text-xl font-light uppercase tracking-widest text-white mb-4">Brilho Estrutural</h3>
+              <p class="text-white/60 text-sm leading-relaxed font-light">Profundidade de cor e espelhamento (wet look) de alto nível.</p>
+            </div>
+            <div class="p-8 border border-white/10 bg-white/[0.02] hover:bg-[#e5e5e5]/5 transition-colors group">
+              <i data-lucide="zap" class="w-10 h-10 mb-6 text-[#e5e5e5] group-hover:text-white transition-colors"></i>
+              <h3 class="text-xl font-light uppercase tracking-widest text-white mb-4">Auto-limpeza</h3>
+              <p class="text-white/60 text-sm leading-relaxed font-light">Superfície energeticamente carregada que repele poeira e sujidade.</p>
             </div>
           </div>
         </div>
