@@ -4,6 +4,9 @@
  * EXEMPLOS: substitua os dados abaixo pelos cadastros reais antes de usar no site.
  * O status de um exemplo não indica uma operação real ativa.
  *
+ * A página pública ignora cadastros com exemplo: true.
+ * Um território só aparece disponível se status for "nao_ativa" e disponivelParaAtivacao for true.
+ *
  * Status permitidos: "ativa" | "nao_ativa".
  * Tipos de atendimento: "automotivo" | "residencial" | "ambos".
  * Número: telefone/WhatsApp com país e DDD, somente dígitos (ex.: 55 + DDD + número).
@@ -39,6 +42,7 @@
  * @property {string|null} url URL da página da cidade, ou null.
  * @property {string|null} instagram URL do perfil oficial local, ou null.
  * @property {string} observacoes Informações adicionais sobre o atendimento.
+ * @property {boolean} [disponivelParaAtivacao] Disponibilidade explicitamente confirmada; não é inferida do status.
  * @property {boolean} exemplo true para dados demonstrativos; false para cadastros reais.
  */
 
@@ -54,6 +58,7 @@ globalThis.WINF_CIDADES = [
     url: "https://example.com/cidades/automotivo/",
     instagram: null,
     observacoes: "Exemplo de cadastro que atende apenas o segmento automotivo.",
+    disponivelParaAtivacao: false,
     exemplo: true,
   },
   {
@@ -66,6 +71,7 @@ globalThis.WINF_CIDADES = [
     url: "https://example.com/cidades/residencial/",
     instagram: null,
     observacoes: "Exemplo de cadastro residencial ainda não ativo.",
+    disponivelParaAtivacao: false,
     exemplo: true,
   },
   {
@@ -78,6 +84,8 @@ globalThis.WINF_CIDADES = [
     url: "https://example.com/cidades/ambos/",
     instagram: null,
     observacoes: "Exemplo de cadastro que atende automotivo e residencial.",
+    disponivelParaAtivacao: false,
     exemplo: true,
   },
 ];
+

@@ -11,3 +11,13 @@
 
 @media (max-width: 479px) { #floating-contact-channels { width: min(320px, calc(100vw - 40px)); } }
 
+
+/* Align menu contact shortcuts with the signature and the right-hand action area. */
+.ac-menu-signature-row { display:flex; align-items:center; justify-content:space-between; gap:clamp(3rem,8vw,10rem); width:100%; padding-block:2.5rem; }
+.ac-menu-signature { flex:1 1 auto; min-width:0; max-width:640px; }
+.ac-menu-contact-dock { flex:0 0 auto; align-self:center; }
+.ac-whatsapp-official { background:#25D366 !important; border-color:#25D366 !important; color:#fff !important; box-shadow:0 0 25px rgb(37 211 102 / .2) !important; }
+.ac-whatsapp-official:hover { background:#1EBE5D !important; border-color:#1EBE5D !important; box-shadow:0 0 35px rgb(37 211 102 / .35) !important; }
+.ac-whatsapp-official svg { color:#fff; }
+@media (max-width:767px) { .ac-menu-signature-row { flex-direction:column; align-items:stretch; gap:2.5rem; } .ac-menu-contact-dock { align-self:flex-end; } }
+

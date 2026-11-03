@@ -26,7 +26,8 @@
       setOpen(false);
     }
   });
-  document.querySelectorAll('[data-action="open-menu"], #menu-toggle').forEach(button => {
+  document.querySelectorAll('[data-action="open-menu"], [data-brand-menu-open], #menu-toggle').forEach(button => {
     button.addEventListener('click', () => setOpen(false, false));
   });
 })();
+
