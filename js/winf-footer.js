@@ -83,7 +83,15 @@
   function enhanceFooter(footer) {
     if (footer.dataset.enhanced) return;
     footer.dataset.enhanced = 'true';
-    footer.querySelector('.wf-footer__back-top').addEventListener('click', function () {
+    if (!footer.querySelector('.winf-footer-signoff')) {
+      var legal = footer.querySelector('.wf-footer__bottom');
+      if (legal) legal.outerHTML = "<div class=\"winf-footer-signoff\">\n<p class=\"winf-footer-motto\">Engenharia Invisível. Performance Inabalável.</p>\n<p class=\"winf-footer-credit\"><span>Desenvolvido por</span> <a href=\"https://www.instagram.com/nexablue.agencia/\" target=\"_blank\" rel=\"noopener noreferrer\" title=\"NEXA BLUE™ no Instagram\">NEXA BLUE™</a><span aria-hidden=\"true\">/</span><a href=\"https://www.instagram.com/maw.winf/\" target=\"_blank\" rel=\"noopener noreferrer\" title=\"MAW™ — Marketing Advanced Windowfilm no Instagram\">MAW™</a> <span class=\"winf-footer-maw-description\">(Marketing Advanced Windowfilm)</span></p>\n<p class=\"winf-footer-legal\">© <span data-current-year>2026</span>. Todos os direitos reservados. Marcas de terceiros pertencem aos respectivos titulares. <span aria-hidden=\"true\">•</span> <a href=\"/aerocore/policies/#privacidade\">Privacidade</a></p>\n</div>";
+    }
+    var union = footer.querySelector('.wf-footer__union');
+    var signature = footer.querySelector('.winf-footer-signoff');
+    if (union && signature && union.parentNode === signature.parentNode) signature.before(union);
+    var backTop = footer.querySelector('.wf-footer__back-top');
+    if (backTop) backTop.addEventListener('click', function () {
       window.scrollTo({top:0, behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
     });
     document.querySelectorAll('[data-current-year]').forEach(function (element) { element.textContent = new Date().getFullYear(); });
@@ -151,3 +159,4 @@
   if (document.readyState==="loading") document.addEventListener("DOMContentLoaded",render,{once:true});
   else render();
 }());
+
