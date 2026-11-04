@@ -79,8 +79,9 @@
 <script defer src="/js/winf-return.js?v=20261103-2"></script>
 <link rel="stylesheet" href="/aerocore/assets/ghost-menu-trigger.css?v=20261103-1">
 <link rel="stylesheet" href="/aerocore/assets/connection-section.css?v=20261103-1">
+<link rel="stylesheet" href="/aerocore/assets/device-responsive.css?v=20261104-1">
 </head>
-<body class="antialiased bg-[#050505] text-[#f0f0f0]" id="top">
+<body class="antialiased bg-[#050505] text-[#f0f0f0] ac-device-ready" id="top">
 <a class="winf-return-link" data-winf-return href="/aerocore/" aria-label="Voltar ao início da seção"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 5-7 7 7 7M5 12h14"></path></svg></a>
 <header id="brand-header" class="ac-shell"><a class="brand-header-logo" href="/aerocore/" aria-label="AeroCore — Home">AEROCORE<span>™</span></a><button type="button" data-brand-menu-open="" aria-label="Abrir menu de NeoSkin™" aria-controls="brand-menu-layer" aria-expanded="false" class="winf-ghost-trigger menu-trigger"><div class="winf-ghost-lines" aria-hidden="true"><span></span><span></span></div><div class="winf-ghost-symbol" aria-hidden="true"><img src="/aerocore/assets/ghost-symbol.png" alt="" width="784" height="1043" decoding="async"></div></button></header><div id="brand-menu-layer" class="ac-shell" role="dialog" aria-modal="true" aria-label="Navegação NeoSkin™" hidden>
 <button type="button" class="brand-menu-backdrop" data-brand-menu-close aria-label="Fechar menu"></button>
@@ -99,7 +100,7 @@
 <!-- Main View -->
 <main>
 <!-- Hero Section -->
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-black ac-device-hero">
 <div class="absolute inset-0 z-0">
 <video autoplay="" class="absolute inset-0 w-full h-full object-cover opacity-100 brightness-75 contrast-120 saturate-150" loop="" muted="" playsinline="" poster="/images/neoskin-hero.webp" preload="metadata">
 <source src="/videos/neoskin/neoskin-hero.mp4" type="video/mp4"/>
@@ -176,7 +177,7 @@
               Militech Division // Security Level 4
             </div>
 </div>
-<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-px bg-transparent border border-[#7B8C64]/10">
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-px bg-transparent border border-[#7B8C64]/10 ac-product-grid ac-product-grid-3">
 <!-- Bunker 150 -->
 <div class="bg-black/65 p-8 md:p-10 group hover:bg-[#7B8C64]/50 hover:text-white transition-all duration-500 cursor-pointer flex flex-col min-h-[400px] border border-white/10 hover:border-[#7B8C64]">
 <div class="flex justify-between items-start mb-12">
@@ -228,7 +229,7 @@
 <section id="riscos" class="py-24 md:py-32 px-4 sm:px-8 bg-black border-y border-white/10">
 <div class="max-w-7xl mx-auto">
 <p class="text-[10px] tracking-[0.35em] uppercase text-[#A2B18D] mb-6 font-mono">O QUE A ROTINA COBRA</p>
-<h2 class="text-3xl md:text-5xl font-black tracking-tight uppercase max-w-4xl mb-8">O próximo trajeto não avisa<br><span class="text-white/40">onde vai deixar uma marca.</span></h2>
+<h2 class="text-3xl md:text-5xl font-black tracking-tight uppercase max-w-4xl mb-8">O próximo trajeto não avisa<br><span class="text-[#7B8C64]">onde vai deixar uma marca.</span></h2>
 <p class="text-white/55 max-w-2xl mb-14 ac-editorial-copy">A pintura está exposta mesmo quando o cuidado é constante. Entender os desafios do seu uso é o primeiro passo para escolher a proteção.</p>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
 <article class="border-l border-white/20 pl-6"><span class="text-[10px] font-mono text-[#A2B18D] tracking-widest">01 // NO CAMINHO</span><h3 class="text-lg font-bold uppercase mt-5 mb-3">Pedras e detritos</h3><p class="text-sm text-white/55 leading-relaxed">Pequenos impactos da estrada podem marcar áreas expostas da pintura e comprometer o acabamento.</p></article>
@@ -371,7 +372,7 @@
 <button class="ns-tab-btn px-4 py-2.5 text-[10px] md:text-xs uppercase font-black tracking-widest text-white/50 hover:text-white transition-all" data-product="ght">Ghost Liquid</button>
 </div>
 </div>
-<div class="overflow-x-auto border border-white/10 bg-black">
+<div class="overflow-x-auto border border-white/10 bg-black" tabindex="0">
 <table class="w-full text-left border-collapse">
 <thead>
 <tr class="border-b border-white/10 bg-white/[0.02]">

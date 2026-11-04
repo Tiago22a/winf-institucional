@@ -73,8 +73,9 @@
 <link rel="stylesheet" href="/aerocore/assets/thermal-heading.css?v=20261103-2">
 <link rel="stylesheet" href="/aerocore/assets/arsenal-heading.css?v=20261103-2">
 <link rel="stylesheet" href="/aerocore/assets/aerocore-typography.css?v=20261103-1">
+<link rel="stylesheet" href="/aerocore/assets/device-responsive.css?v=20261104-1">
 </head>
-<body class="antialiased bg-[#050505] text-[#f0f0f0] ac-aerocore-type" id="top">
+<body class="antialiased bg-[#050505] text-[#f0f0f0] ac-aerocore-type ac-device-ready" id="top">
 <a class="winf-return-link" data-winf-return href="/aerocore/" aria-label="Voltar ao início da seção"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 5-7 7 7 7M5 12h14"></path></svg></a>
 <header id="brand-header" class="ac-shell"><a class="brand-header-logo" href="/aerocore/" aria-label="AeroCore — Home">AEROCORE<span>™</span></a><button type="button" data-brand-menu-open="" aria-label="Abrir menu de AeroCore™" aria-controls="brand-menu-layer" aria-expanded="false" class="winf-ghost-trigger menu-trigger"><div class="winf-ghost-lines" aria-hidden="true"><span></span><span></span></div><div class="winf-ghost-symbol" aria-hidden="true"><img src="/aerocore/assets/ghost-symbol.png" alt="" width="784" height="1043" decoding="async"></div></button></header><div id="brand-menu-layer" class="ac-shell" role="dialog" aria-modal="true" aria-label="Navegação AeroCore™" hidden>
 <button type="button" class="brand-menu-backdrop" data-brand-menu-close aria-label="Fechar menu"></button>
@@ -93,7 +94,7 @@
 <!-- Main View -->
 <main>
 <!-- Hero Section -->
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-black ac-device-hero">
 <div class="absolute inset-0 z-0">
 <video autoplay="" class="absolute inset-0 w-full h-full object-cover" loop="" muted="" playsinline="" poster="/aerocore/public/porsche-911-highway-20261103-poster.webp" preload="metadata">
 <source src="/aerocore/public/porsche-911-highway-20261103.mp4" type="video/mp4"/>
@@ -174,7 +175,7 @@
 <p class="ac-arsenal-eyebrow">Arsenal.AeroCore()</p>
 <h2 class="ac-arsenal-title">Soluções de Películas.</h2>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ac-product-grid ac-product-grid-4">
 <!-- Ghost -->
 <div class="bg-black/65 p-8 md:p-9 group hover:bg-[#3b82f6]/50 transition-all duration-500 flex flex-col justify-between border border-white/10 hover:border-[#3b82f6] rounded-sm relative">
 <div>
@@ -349,7 +350,7 @@
 <button class="wf-tab-btn px-4 py-3 text-xs uppercase font-bold tracking-[0.2em] text-white/50 hover:text-white transition-all" data-product="wraith">Wraith 70</button>
 </div>
 </div>
-<div class="overflow-x-auto pb-8 ac-specs-scroll">
+<div class="overflow-x-auto pb-8 ac-specs-scroll" tabindex="0">
 <div class="min-w-[900px] ac-specs-table">
 <!-- Table Header -->
 <div class="grid grid-cols-6 gap-6 border-b border-white/20 pb-6 mb-6 ac-specs-table-head">

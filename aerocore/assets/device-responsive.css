@@ -1,0 +1,62 @@
+/* Responsive refinements: brand artwork, fonts and desktop composition are preserved. */
+.ac-device-ready main,.ac-device-ready main :is(.grid,.flex)>*{min-width:0}
+.ac-device-ready main section[id]{scroll-margin-top:100px}
+.ac-device-ready :is(img,video){max-width:100%}
+.ac-device-ready .ac-device-hero{min-height:100svh}
+.ac-device-ready .ac-device-hero h1:not(.winf-select-page h1){font-size:clamp(2rem,8vw,8rem)}
+.ac-device-ready #aerocore-header~main .ac-device-hero h1{font-size:clamp(2rem,7vw,4.5rem)}
+.ac-device-ready .ac-product-grid{display:grid;grid-template-columns:minmax(0,1fr)}
+.ac-device-ready .ac-product-grid>div{min-width:0;overflow-wrap:break-word}
+.ac-device-ready .ac-product-grid a{min-height:44px;letter-spacing:.12em}
+.ac-device-ready :is(.ac-specs-scroll,main .overflow-x-auto){max-width:100%;overscroll-behavior-x:contain;scrollbar-width:thin}
+.ac-device-ready :is(.ac-specs-scroll,main .overflow-x-auto):focus-visible{outline:2px solid #fff;outline-offset:4px}
+.ac-device-ready main table{min-width:640px}
+.ac-device-ready .brand-menu-panel{padding-top:max(20px,env(safe-area-inset-top));padding-bottom:max(20px,env(safe-area-inset-bottom));max-height:100dvh;box-sizing:border-box}
+.ac-device-ready #menu-overlay{max-height:100dvh;overscroll-behavior:contain}
+.ac-device-ready #floating-contact-channels{max-width:calc(100vw - 32px);max-height:calc(100dvh - 120px);overflow:auto}
+.ac-device-ready :is(a,button,summary){touch-action:manipulation}
+.ac-device-ready :is(a,button,summary):focus{outline:none}
+.ac-device-ready :is(a,button,summary):focus-visible{outline:2px solid #fff;outline-offset:4px}
+@media(min-width:640px){.ac-device-ready .ac-product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:1280px){.ac-device-ready .ac-product-grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}.ac-device-ready .ac-product-grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:1279px){.ac-device-ready .ac-product-grid>div{padding:28px}}
+@media(max-width:767px){
+.ac-device-ready .ac-device-hero{padding-top:100px;padding-bottom:48px}
+.ac-device-ready .ac-device-hero h1{margin-top:16px}
+.ac-device-ready .ac-specs-title h2{font-size:clamp(28px,7.5vw,44px)}
+.ac-device-ready .ac-thermal-title{font-size:clamp(21px,6.4vw,48px)}
+.ac-device-ready .ac-arsenal-title{font-size:clamp(28px,7vw,52px)}
+.ac-device-ready .ac-arsenal-heading{margin-bottom:40px}
+.ac-device-ready .ac-specs-tabs{gap:4px}
+.ac-device-ready .ac-specs-tabs .wf-tab-btn{min-height:44px;letter-spacing:.08em;padding-inline:10px}
+.ac-device-ready .select-actions{flex-wrap:wrap}
+.ac-device-ready .select-actions a{min-height:48px}
+}
+@media(max-width:480px){
+.ac-device-ready #brand-header{padding-inline:16px}
+.ac-device-ready .winf-return-row{column-gap:8px}
+.ac-device-ready .winf-return-row>.winf-return-inline{width:40px;min-width:40px;padding:8px}
+.ac-device-ready .winf-return-row .winf-return-logo{font-size:clamp(12px,3.4vw,16px);letter-spacing:.28em}
+.ac-device-ready .winf-return-row>.winf-return-logo>a>span{font-size:clamp(12px,3.4vw,16px);letter-spacing:.28em}
+.ac-device-ready :is(#aerocore-header .menu-trigger,.winf-ghost-trigger.menu-trigger){gap:8px;padding:6px;min-height:44px}
+.ac-device-ready :is(#aerocore-header .menu-trigger,.winf-ghost-trigger) img{height:28px;width:auto}
+.ac-device-ready .winf-ghost-symbol{padding-left:0}
+.ac-device-ready .winf-ghost-lines>span{width:24px}
+.ac-device-ready .winf-ghost-lines>span:last-child{width:18px}
+.ac-device-ready #aerocore-header .menu-trigger>div:first-child>span:first-child{width:24px}
+.ac-device-ready #aerocore-header .menu-trigger>div:first-child>span:last-child{width:18px}
+.ac-device-ready .ac-product-grid>div{padding:24px 20px}
+.ac-device-ready .ac-product-grid a{gap:8px}
+.ac-device-ready .select-actions a{width:100%}
+.ac-device-ready .brand-menu-panel{padding-inline:16px}
+.ac-device-ready .brand-menu-primary a{font-size:13px}
+.ac-device-ready .brand-menu-shortcuts{gap:8px}
+.ac-device-ready .brand-menu-shortcuts>a{font-size:12px;min-width:0}
+}
+@media(max-height:500px) and (orientation:landscape){
+.ac-device-ready .brand-menu-panel{overflow-y:auto}
+.ac-device-ready .brand-menu-panel nav{flex:none;overflow:visible}
+.ac-device-ready .brand-menu-heading{position:sticky;top:0;z-index:2;background:#090909}
+.ac-device-ready .ac-device-hero{padding-top:120px;padding-bottom:48px}
+}
+@media(prefers-reduced-motion:reduce){.ac-device-ready *, .ac-device-ready *::before,.ac-device-ready *::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}

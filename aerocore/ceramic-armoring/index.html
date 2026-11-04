@@ -75,8 +75,9 @@
 <link rel="stylesheet" href="/css/winf-return.css?v=20261104-5">
 <script defer src="/js/winf-return.js?v=20261103-2"></script>
 <link rel="stylesheet" href="/aerocore/assets/ghost-menu-trigger.css?v=20261103-1">
+<link rel="stylesheet" href="/aerocore/assets/device-responsive.css?v=20261104-1">
 </head>
-  <body class="antialiased bg-[#050505] text-[#f0f0f0]" id="top">
+  <body class="antialiased bg-[#050505] text-[#f0f0f0] ac-device-ready" id="top">
 <a class="winf-return-link" data-winf-return href="/aerocore/" aria-label="Voltar ao início da seção"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 5-7 7 7 7M5 12h14"></path></svg></a>
 <header id="brand-header" class="ac-shell"><a class="brand-header-logo" href="/aerocore/" aria-label="AeroCore — Home">AEROCORE<span>™</span></a><button type="button" data-brand-menu-open="" aria-label="Abrir menu de Ceramic Armoring™" aria-controls="brand-menu-layer" aria-expanded="false" class="winf-ghost-trigger menu-trigger"><div class="winf-ghost-lines" aria-hidden="true"><span></span><span></span></div><div class="winf-ghost-symbol" aria-hidden="true"><img src="/aerocore/assets/ghost-symbol.png" alt="" width="784" height="1043" decoding="async"></div></button></header><div id="brand-menu-layer" class="ac-shell" role="dialog" aria-modal="true" aria-label="Navegação Ceramic Armoring™" hidden>
 <button type="button" class="brand-menu-backdrop" data-brand-menu-close aria-label="Fechar menu"></button>
@@ -101,7 +102,7 @@
     <!-- Main View -->
     <main>
       <!-- Hero Section -->
-      <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+      <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-black ac-device-hero">
         <div class="absolute inset-0 z-0">
           <img src="/images/ceramic-hero.webp" alt="" class="absolute inset-0 w-full h-full object-cover opacity-40">
           <video autoplay loop muted playsinline aria-hidden="true" tabindex="-1" class="ceramic-hero-ambient absolute inset-0 w-full h-full" preload="metadata">
@@ -147,7 +148,7 @@
       <section class="relative py-24 bg-[#050505] px-4 sm:px-8 overflow-hidden" id="arsenal">
         <div class="max-w-7xl mx-auto">
           <h2 class="text-3xl md:text-5xl font-light uppercase tracking-[0.2em] text-white text-center mb-20">Arsenal Tático</h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-px bg-[#e5e5e5]/10 border border-[#e5e5e5]/10">
+          <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-px bg-[#e5e5e5]/10 border border-[#e5e5e5]/10 ac-product-grid ac-product-grid-3">
             <div class="bg-black/60 backdrop-blur-[2px] p-8 md:p-10 group hover:bg-[#e5e5e5] hover:text-black transition-all duration-500 cursor-pointer flex flex-col min-h-[400px] border border-white/10 hover:border-[#e5e5e5]">
               <div class="flex justify-between items-start mb-12">
                 <span class="text-[10px] sm:text-[11px] font-black text-white/60 group-hover:text-black uppercase tracking-widest">GHT-LIQ</span>
