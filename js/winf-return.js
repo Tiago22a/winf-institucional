@@ -13,6 +13,26 @@
         normalize(referrer.pathname) !== normalize(location.pathname)) previous = referrer;
   } catch (_) { /* A direct visit keeps the section-home link in the HTML. */ }
 
+  // Place return, wordmark and menu on the same header row in the AeroCore family.
+  const header = document.querySelector('#brand-header, #aerocore-header, #navbar');
+  let row = null;
+  if (header && !header.querySelector('.select-header-logo')) {
+    row = header.id === 'brand-header' ? header : header.firstElementChild;
+  } else if (/^\/(neoskin|ceramic)\//.test(location.pathname)) {
+    row = document.querySelector('header');
+  }
+  if (row && !row.contains(link)) {
+    const menu = row.querySelector('[data-brand-menu-open], [data-action="open-menu"], #menu-toggle');
+    const logo = row.firstElementChild;
+    if (menu && logo && logo !== menu) {
+      row.classList.add('winf-return-row');
+      logo.classList.add('winf-return-logo');
+      menu.classList.add('winf-return-menu');
+      link.classList.add('winf-return-inline');
+      row.prepend(link);
+    }
+  }
+
   if (!previous) return;
   link.hidden = false;
   link.href = previous.href;
