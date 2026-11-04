@@ -1,0 +1,6 @@
+/* AeroCore type roles: display, brand, reading and tactical signatures. */
+body.ac-aerocore-type main{font-family:Inter,ui-sans-serif,system-ui,sans-serif}
+body.ac-aerocore-type main .font-black,body.ac-aerocore-type .ac-thermal-title,body.ac-aerocore-type .ac-arsenal-title,body.ac-aerocore-type .ac-thermal-eyebrow,body.ac-aerocore-type .ac-arsenal-eyebrow{font-family:Montserrat,Inter,sans-serif;font-weight:900}
+body.ac-aerocore-type main h1,body.ac-aerocore-type #brand-header .brand-header-logo{font-family:Outfit,Inter,sans-serif}
+body.ac-aerocore-type .font-rock-salt{font-family:'Rock Salt',cursive}
+body.ac-aerocore-type .font-permanent-marker{font-family:'Permanent Marker',cursive}

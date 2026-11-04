@@ -58,3 +58,6 @@ footer a { min-height:32px; display:inline-flex; align-items:center; }
 :is(#menu-overlay,#floating-contact-dock,#nav-drawer,#brand-menu-layer) .ac-contact-whatsapp { width:30px; height:30px; color:#25d366; fill:none; stroke:currentColor; }
 :is(#menu-overlay,#floating-contact-dock) .ac-partners-caption { max-width:72px; text-align:left; font:700 10px/1.5 ui-monospace,monospace !important; letter-spacing:.12em !important; }
 :is(#menu-overlay,#floating-contact-dock) .ac-whatsapp-caption { color:#fff !important; font:700 10px/1.5 ui-monospace,monospace !important; letter-spacing:.12em !important; }
+
+/* Large ecosystem menu titles use the official display weight. */
+#menu-overlay.ac-shell .menu-primary-link,#menu-overlay.ac-shell h2.font-black,#menu-overlay.ac-shell h3.font-black{font-family:Montserrat,Inter,sans-serif;font-weight:900}

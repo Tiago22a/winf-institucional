@@ -1,5 +1,5 @@
-.ac-thermal-eyebrow{display:block;width:100%;margin:0 0 38px;padding-left:.85em;color:#3b82f6;font-family:Inter,sans-serif;font-size:11px;font-weight:900;line-height:1.6;letter-spacing:.85em;text-align:center;text-transform:uppercase}
-.ac-thermal-title{width:100%;margin:0 0 48px;color:#fff;font-family:Inter,sans-serif;font-size:clamp(23px,7.1vw,72px);font-weight:900;font-style:normal;line-height:.98;letter-spacing:-.045em;text-align:center;text-transform:uppercase}
+.ac-thermal-eyebrow{display:block;width:100%;margin:0 0 38px;padding-left:.85em;color:#3b82f6;font-family:Montserrat,Inter,sans-serif;font-size:11px;font-weight:900;line-height:1.6;letter-spacing:.85em;text-align:center;text-transform:uppercase}
+.ac-thermal-title{width:100%;margin:0 0 48px;color:#fff;font-family:Montserrat,Inter,sans-serif;font-size:clamp(23px,7.1vw,72px);font-weight:900;font-style:normal;line-height:.98;letter-spacing:-.045em;text-align:center;text-transform:uppercase}
 .ac-thermal-title>.ac-thermal-line{display:block;white-space:nowrap}
 .ac-thermal-title .ac-thermal-accent{color:#3b82f6}
 @media(max-width:480px){.ac-thermal-eyebrow{margin-bottom:28px;font-size:9px;letter-spacing:.55em;padding-left:.55em}.ac-thermal-title{margin-bottom:36px}}
