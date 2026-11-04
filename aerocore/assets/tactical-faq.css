@@ -1,0 +1,15 @@
+.ac-tactical-faq .accordion-trigger{gap:24px;min-height:64px}
+.ac-tactical-faq .accordion-trigger>span{line-height:1.55;letter-spacing:.045em}
+.ac-tactical-faq .accordion-icon{flex-shrink:0}
+.ac-tactical-faq .accordion-content{font-size:15px;line-height:1.8;letter-spacing:.015em;color:#bfc0c5}
+.ac-tactical-faq .accordion-content.hidden,.ac-tactical-faq .tactical-faq-more[hidden]{display:none!important}
+.ac-tactical-faq .tactical-faq-more>.accordion-item+.accordion-item{margin-top:8px}
+.ac-tactical-faq .tactical-faq-control{display:flex;justify-content:center;margin-top:36px}
+.ac-tactical-faq .tactical-faq-toggle{display:inline-flex;align-items:center;justify-content:center;gap:24px;min-height:48px;padding:14px 24px;border:1px solid #ffffff40;background:transparent;color:#ddd;font-family:inherit;font-size:12px;font-weight:600;letter-spacing:.14em;line-height:1.5;text-transform:uppercase;cursor:pointer;transition:border-color .2s,color .2s}
+.ac-tactical-faq .tactical-faq-toggle:hover{border-color:#aaa;color:#fff}
+.ac-tactical-faq [data-faq-toggle-icon]{font-size:21px;line-height:1;font-weight:300}
+.ac-tactical-faq :is(button,a):focus-visible{outline:2px solid #fff;outline-offset:4px}
+.ac-tactical-faq .tactical-faq-action{margin-top:20px}
+.ac-tactical-faq .tactical-faq-action a{display:inline-block;color:#fff;min-height:44px;padding-block:10px;text-decoration:underline;text-underline-offset:5px}
+@media(max-width:480px){.ac-tactical-faq .accordion-trigger{gap:16px}.ac-tactical-faq .accordion-trigger>span{font-size:17px;letter-spacing:.02em}.ac-tactical-faq .accordion-content{font-size:15px}.ac-tactical-faq .tactical-faq-toggle{font-size:11px;letter-spacing:.1em}}
+@media(prefers-reduced-motion:reduce){.ac-tactical-faq .tactical-faq-toggle{transition:none}}
