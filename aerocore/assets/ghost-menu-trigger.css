@@ -1,0 +1,14 @@
+/* Same two-line and Ghost treatment used by the AeroCore home menu trigger. */
+.winf-ghost-trigger.menu-trigger,.winf-ghost-trigger[data-brand-menu-open]{position:relative;display:flex;flex-direction:row;align-items:center;justify-content:center;gap:14px;width:auto;height:auto;min-width:44px;min-height:44px;padding:10px;border:0;border-radius:0;background:transparent;color:#fff;cursor:pointer;transition:opacity .3s;flex-shrink:0}
+.winf-ghost-trigger .winf-ghost-lines{display:flex;flex-direction:column;align-items:flex-end;justify-content:center;gap:8px}
+.winf-ghost-trigger .winf-ghost-lines>span{display:block;width:32px;height:2px;margin:0;border:0;background:#fff;box-shadow:0 1px 6px rgba(0,0,0,.9);transform:none;transition:width .3s}
+.winf-ghost-trigger .winf-ghost-lines>span:last-child{width:24px}
+.winf-ghost-trigger .winf-ghost-symbol{display:flex;align-items:center;justify-content:center;padding-left:4px}
+.winf-ghost-trigger .winf-ghost-symbol img{display:block;width:auto;height:32px;max-width:none;object-fit:contain;opacity:.95;filter:drop-shadow(0 0 15px rgba(255,255,255,.5));transition:transform .3s,opacity .3s}
+.winf-ghost-trigger:hover{opacity:.9}
+.winf-ghost-trigger:hover .winf-ghost-lines>span,.winf-ghost-trigger:focus-visible .winf-ghost-lines>span{width:44px}
+.winf-ghost-trigger:hover .winf-ghost-symbol img,.winf-ghost-trigger:focus-visible .winf-ghost-symbol img{transform:scale(1.1);opacity:1}
+.winf-ghost-trigger:focus-visible{outline:2px solid #fff;outline-offset:4px}
+@media(min-width:640px){.winf-ghost-trigger.menu-trigger,.winf-ghost-trigger[data-brand-menu-open]{gap:16px}.winf-ghost-trigger .winf-ghost-lines{gap:10px}.winf-ghost-trigger .winf-ghost-lines>span{width:40px;height:2.5px}.winf-ghost-trigger .winf-ghost-lines>span:last-child{width:28px}.winf-ghost-trigger .winf-ghost-symbol{padding-left:6px}.winf-ghost-trigger .winf-ghost-symbol img{height:40px}.winf-ghost-trigger:hover .winf-ghost-lines>span,.winf-ghost-trigger:focus-visible .winf-ghost-lines>span{width:44px}}
+@media(min-width:768px){.winf-ghost-trigger .winf-ghost-symbol img{height:44px}}
+@media(prefers-reduced-motion:reduce){.winf-ghost-trigger.menu-trigger,.winf-ghost-trigger[data-brand-menu-open],.winf-ghost-trigger .winf-ghost-lines>span,.winf-ghost-trigger .winf-ghost-symbol img{transition:none}}
