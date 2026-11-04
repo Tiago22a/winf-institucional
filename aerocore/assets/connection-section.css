@@ -23,3 +23,10 @@
 @media(max-width:760px){.ac-return-protocol{grid-template-columns:1fr;padding:24px;gap:24px}.ac-return-actions{justify-content:flex-start}.ac-official-channels{padding-top:48px}.ac-connection-eyebrow{letter-spacing:.16em}.ac-official-channels h2{gap:8px}}
 @media(max-width:480px){.ac-connection{padding:48px 20px 64px}.ac-return-protocol{padding:20px}.ac-return-copy h2{font-size:11px;letter-spacing:.08em}.ac-return-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.ac-return-actions a:last-child{grid-column:1/-1}.ac-official-links{grid-template-columns:repeat(2,minmax(0,1fr))}.ac-official-channels h2{flex-wrap:wrap;font-size:30px;column-gap:7px}.ac-official-channels h2 svg{width:22px;height:22px}.ac-connection-eyebrow{font-size:11px}}
 @media(prefers-reduced-motion:reduce){.ac-return-actions a,.ac-official-links>a{transition:none}}
+
+/* Each official-channel component carries its brand color on hover. */
+.ac-official-links>a[href*="/aerocoreofc/"]:is(:hover,:focus-visible){background:#3b82f6;border-color:#3b82f6;color:#050505}
+.ac-official-links>a[href*="/neoskinofc/"]:is(:hover,:focus-visible){background:#7b8c64;border-color:#7b8c64;color:#050505}
+.ac-official-links>a[href*="/winf.ofc/"]:is(:hover,:focus-visible){background:#000;border-color:#bbb;color:#fff}
+.ac-official-links>.ac-official-pending:hover{background:#9ca3af;border-color:#9ca3af;color:#111}
+.ac-official-links>.ac-official-pending:hover small{color:#222}
