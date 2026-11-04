@@ -40,7 +40,7 @@ body.brand-menu-open .brand-menu-panel { animation:brand-menu-in .25s ease-out b
 .brand-menu-close { width:44px; height:44px; cursor:pointer; }
 .brand-menu-panel nav { flex:1; min-height:0; overflow:auto; overscroll-behavior:contain; padding:20px 4px 20px 0; scrollbar-width:thin; scrollbar-color:#444 #090909; }
 .brand-menu-primary { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
-.brand-menu-primary a { display:flex; align-items:center; justify-content:center; min-height:46px; padding:10px; border:1px solid #ffffff26; color:#f0f0f0; font:500 15px/1.4 Inter,sans-serif; }
+.brand-menu-primary a { display:flex; align-items:center; justify-content:center; min-height:46px; padding:10px; border:1px solid #ffffff26; color:#f0f0f0; font:900 15px/1.4 Montserrat,sans-serif; }
 .brand-menu-section { margin-top:24px; }
 .brand-menu-section h2 { text-align:left; color:#aaa; font:500 13px/1.5 Inter,sans-serif; letter-spacing:.1em; margin-bottom:10px; }
 .brand-menu-card { flex-direction:row; justify-content:flex-start; min-height:46px; margin:0; padding:11px 14px; gap:12px; border:0; border-bottom:1px solid #ffffff14; background:transparent; font:500 14px/1.5 Inter,sans-serif; letter-spacing:.02em; text-transform:none; }
