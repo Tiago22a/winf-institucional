@@ -1,0 +1,30 @@
+#ficha-tecnica.ac-specs-matrix{padding:64px 0 48px;background-color:#000;background-image:linear-gradient(#ffffff06 1px,transparent 1px),linear-gradient(90deg,#ffffff06 1px,transparent 1px);background-size:32px 32px;border-top:1px solid #ffffff0d;color:#fff}
+.ac-specs-matrix .ac-specs-wrap{max-width:1280px;padding-inline:clamp(24px,4.7vw,64px);margin-inline:auto}
+.ac-specs-matrix .ac-specs-heading{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:end;gap:40px;margin-bottom:76px}
+.ac-specs-matrix .ac-specs-title>span{display:block;margin:0 0 24px;color:#929292;font-family:Montserrat,Inter,sans-serif;font-size:12px;font-weight:900;line-height:1.6;letter-spacing:.58em;text-transform:uppercase}
+.ac-specs-matrix .ac-specs-title h2{margin:0;font-family:Outfit,Inter,sans-serif;font-size:clamp(38px,4.4vw,60px);font-weight:200;line-height:1.2;letter-spacing:-.045em;text-transform:uppercase;color:#e3e3e3}
+.ac-specs-matrix .ac-specs-title h2>span{display:block;margin-top:4px;font-style:italic;font-weight:200;color:#737373}
+.ac-specs-matrix .ac-specs-tabs{display:flex;flex-wrap:wrap;gap:4px;width:100%;padding:6px;border:1px solid #ffffff26;background:#0b0b0bb3;box-sizing:border-box}
+.ac-specs-matrix .wf-tab-btn{min-height:42px;padding:12px 16px;font-family:Montserrat,Inter,sans-serif;font-size:12px;font-weight:900;line-height:1.5;letter-spacing:.26em;text-transform:uppercase;cursor:pointer;border:0;transition:background .2s,color .2s}
+.ac-specs-matrix .wf-tab-btn.bg-white{background:#fff;color:#080808}
+.ac-specs-matrix .wf-tab-btn:not(.bg-white){background:transparent;color:#8e8e8e}
+.ac-specs-matrix .wf-tab-btn:not(.bg-white):hover{color:#fff;background:#ffffff0a}
+.ac-specs-matrix .wf-tab-btn:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.ac-specs-matrix .ac-specs-scroll{overflow-x:auto;padding-bottom:0;scrollbar-width:thin;scrollbar-color:#666 #111}
+.ac-specs-matrix .ac-specs-table{min-width:900px}
+.ac-specs-matrix .ac-specs-table-head{padding-bottom:28px;margin-bottom:16px;border-bottom:1px solid #ffffff30;gap:24px;align-items:start}
+.ac-specs-matrix .ac-specs-table-head>.col-span-2>span{color:#909090;font-family:Montserrat,Inter,sans-serif;font-size:12px;font-weight:800;letter-spacing:.28em}
+.ac-specs-matrix [data-wf-col]>span:first-child{font-family:ui-monospace,monospace;font-size:11px;font-weight:600;line-height:1.5;letter-spacing:.02em;color:#929292}
+.ac-specs-matrix [data-wf-col]>span:last-child{font-family:Montserrat,Inter,sans-serif;font-size:15px;font-weight:900;line-height:1.5;letter-spacing:.25em;color:#fff}
+.ac-specs-matrix [data-wf-col="ghost"]>span:last-child{color:#c1c1c1}
+.ac-specs-matrix .ac-specs-table-body>.grid{min-height:70px;padding-block:22px;gap:24px;border-bottom:1px solid #ffffff0d;align-items:center}
+.ac-specs-matrix .ac-specs-table-body .col-span-2{gap:14px}
+.ac-specs-matrix .ac-specs-table-body .col-span-2>span{color:#aaa;font-family:Montserrat,Inter,sans-serif;font-size:12px;font-weight:800;line-height:1.5;letter-spacing:.035em;text-transform:uppercase}
+.ac-specs-matrix .ac-specs-table-body .col-span-2>svg{width:14px;height:14px;color:#777;flex:none}
+.ac-specs-matrix [data-wf-cell]{position:relative;padding-left:13px;font-family:Inter,sans-serif;font-size:13px;font-weight:700;line-height:1.4;letter-spacing:0;text-transform:uppercase;color:#fff}
+.ac-specs-matrix [data-wf-cell]::before{content:"";position:absolute;left:0;top:.48em;width:4px;height:4px;background:currentColor}
+.ac-specs-matrix [data-wf-cell="ghost"]{color:#999}
+.ac-specs-matrix [data-wf-cell="phantom"]{color:#bcbcbc}
+@media(max-width:900px){.ac-specs-matrix .ac-specs-heading{grid-template-columns:1fr;gap:32px;margin-bottom:48px}.ac-specs-matrix .ac-specs-tabs{max-width:600px}.ac-specs-matrix .ac-specs-title h2{font-size:clamp(36px,7vw,54px)}}
+@media(max-width:480px){#ficha-tecnica.ac-specs-matrix{padding-block:48px 32px}.ac-specs-matrix .ac-specs-wrap{padding-inline:20px}.ac-specs-matrix .ac-specs-title>span{font-size:10px;letter-spacing:.27em}.ac-specs-matrix .wf-tab-btn{padding:11px 12px;font-size:11px;letter-spacing:.12em}.ac-specs-matrix .ac-specs-title h2{font-size:36px}}
+@media(prefers-reduced-motion:reduce){.ac-specs-matrix .wf-tab-btn{transition:none}}
