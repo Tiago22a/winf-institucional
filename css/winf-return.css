@@ -6,7 +6,7 @@
 @media(max-width:640px){.winf-return-link{top:calc(80px + env(safe-area-inset-top,0px));left:max(16px,env(safe-area-inset-left,0px));font-size:14px;padding:10px 13px}}
 @media(prefers-reduced-motion:reduce){.winf-return-link{transition:none}}
 
-/* One common baseline: return on the left, AeroCore wordmark in the middle, menu on the right. */
+/* Desktop: original left-hand wordmark, return arrow beside it, menu on the right. */
 .winf-return-row{display:grid!important;grid-template-columns:auto auto minmax(0,1fr);align-items:center;column-gap:24px}
 .winf-return-row>.winf-return-logo{grid-column:1;grid-row:1;justify-self:start;min-width:0;display:flex;align-items:center;justify-content:center;white-space:nowrap}
 .winf-return-row>.winf-return-menu{grid-column:3;grid-row:1;justify-self:end}
@@ -17,3 +17,17 @@
 
 /* Keep the original left-hand wordmark on desktop; center it only on smaller screens. */
 @media(max-width:767px){.winf-return-row{grid-template-columns:auto minmax(0,1fr) auto}.winf-return-row>.winf-return-logo{grid-column:2;justify-self:center}.winf-return-row>.winf-return-inline{grid-column:1}}
+
+/* Icon-only return; the accessible name remains on the link. */
+.winf-return-link,.winf-return-row>.winf-return-inline{min-width:44px;width:44px;min-height:44px;padding:10px;border:0;border-radius:0;background:transparent;box-shadow:none}
+.winf-return-link>span{display:none}
+.winf-return-link svg{width:20px;height:20px}
+/* Remove the mouse-focus blue rectangle, retaining a white keyboard focus indicator. */
+#aerocore-header .menu-trigger{border:0;box-shadow:none;outline:none}
+#aerocore-header .menu-trigger:focus-visible{outline:2px solid #fff;outline-offset:4px}
+
+/* The official ghost follows the animated menu bars across the AeroCore family. */
+:is(#aerocore-header .menu-trigger,.winf-ghost-trigger) img{transition:transform .3s ease,opacity .3s ease;transform-origin:center}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+:is(#aerocore-header .menu-trigger,.winf-ghost-trigger):hover img{transform:translateY(-3px) rotate(-8deg) scale(1.1)}
+}
