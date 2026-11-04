@@ -6,11 +6,11 @@
 @media(max-width:640px){.winf-return-link{top:calc(80px + env(safe-area-inset-top,0px));left:max(16px,env(safe-area-inset-left,0px));font-size:14px;padding:10px 13px}}
 @media(prefers-reduced-motion:reduce){.winf-return-link{transition:none}}
 
-/* Desktop: original left-hand wordmark, return arrow beside it, menu on the right. */
-.winf-return-row{display:grid!important;grid-template-columns:auto auto minmax(0,1fr);align-items:center;column-gap:24px}
-.winf-return-row>.winf-return-logo{grid-column:1;grid-row:1;justify-self:start;min-width:0;display:flex;align-items:center;justify-content:center;white-space:nowrap}
+/* Desktop: return arrow immediately left of the wordmark, menu at the right. */
+.winf-return-row{display:grid!important;grid-template-columns:auto auto minmax(0,1fr);align-items:center;column-gap:12px}
+.winf-return-row>.winf-return-logo{grid-column:2;grid-row:1;justify-self:start;min-width:0;display:flex;align-items:center;justify-content:center;white-space:nowrap}
 .winf-return-row>.winf-return-menu{grid-column:3;grid-row:1;justify-self:end}
-.winf-return-row>.winf-return-inline{position:static;inset:auto;grid-column:2;grid-row:1;justify-self:start;z-index:auto;flex:none;background:transparent;box-shadow:none}
+.winf-return-row>.winf-return-inline{position:static;inset:auto;grid-column:1;grid-row:1;justify-self:start;z-index:auto;flex:none;background:transparent;box-shadow:none}
 [data-partners-return]{background:transparent!important;box-shadow:none!important;backdrop-filter:none!important}
 @media(max-width:640px){.winf-return-row{column-gap:12px}.winf-return-row>.winf-return-inline{min-width:76px;min-height:44px;padding:8px;font-size:13px;gap:6px}.winf-return-inline svg{width:16px;height:16px}}
 @media(max-width:380px){.winf-return-row{column-gap:8px}#brand-header.winf-return-row>.brand-header-logo,.winf-return-row>.winf-return-logo>a>span,.winf-return-row>.winf-return-logo>span.font-aerocore{font-size:12.5px;letter-spacing:.28em}}
