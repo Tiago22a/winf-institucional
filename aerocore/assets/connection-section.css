@@ -7,7 +7,7 @@
 .ac-return-actions{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:10px}
 .ac-return-actions a,.ac-official-links>a,.ac-official-pending{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 16px;border:1px solid #ffffff30;color:#e7e7e7;text-decoration:none;font-family:Montserrat,Inter,sans-serif;font-size:11px;font-weight:700;line-height:1.4;letter-spacing:.08em;text-transform:uppercase;box-sizing:border-box;transition:border-color .2s,color .2s,background .2s}
 .ac-return-actions a:hover,.ac-official-links>a:hover{border-color:#bbb;background:#151515;color:#fff}
-.ac-return-actions a.is-current{color:#a2b18d;border-color:#7b8c6470}
+.ac-return-actions a.is-current,.ac-return-actions a.ac-brand-neo{color:#a2b18d;border-color:#7b8c6470}
 .ac-return-actions a.ac-protocol-top{color:#aaa;background:#111}
 .ac-protocol-top>span{font-size:18px;line-height:1;font-weight:400}
 .ac-official-channels{margin-top:44px;padding-top:72px;border-top:1px solid #ffffff20;text-align:center}
