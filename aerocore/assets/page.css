@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Montserrat:wght@400;700;800;900&family=Outfit:wght@300;400;500;600&family=Permanent+Marker&family=Rock+Salt&display=swap');
 html { scroll-behavior: smooth; overflow-x: hidden; }
 body { overflow-x: hidden; }
 [hidden] { display: none !important; }
@@ -93,3 +94,39 @@ svg ellipse[stroke-dasharray] { animation: orbit-dash 15s linear infinite; }
 body.menu-open #menu-overlay { animation: menu-enter .25s ease; }
 body.menu-open .menu-primary-link { animation: menu-link-enter .3s ease both; animation-delay: calc(.05s + var(--menu-index) * .03s); }
 @media (prefers-reduced-motion: reduce) { body.menu-open #menu-overlay, body.menu-open .menu-primary-link { animation: none; } }
+
+
+/* AEROCORE / WINF | Official typography system (Nov 2026).
+   Montserrat Black = editorial headlines + large navigation.
+   Outfit = AeroCore signature, Inter = reading/UI.
+   Rock Salt / Permanent Marker = tactical scribbles only.
+   Keep the branded wordmark, layout, alignment and responsive sizes intact. */
+:root {
+  --ac-font-display: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+  --ac-font-brand: 'Outfit', ui-sans-serif, system-ui, sans-serif;
+  --ac-font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --ac-font-scribble: 'Rock Salt', cursive;
+  --ac-font-marker: 'Permanent Marker', cursive;
+}
+body { font-family: var(--ac-font-body); }
+main :is(h1,h2,h3):not([style*="Outfit"]):not([style*="font-aerocore"]):not(.font-aerocore):not(.ac-brand-wordmark) {
+  font-family: var(--ac-font-display) !important;
+  font-weight: 900 !important;
+}
+#menu-overlay .menu-primary-link,
+.brand-menu-primary a {
+  font-family: var(--ac-font-display) !important;
+  font-weight: 900 !important;
+}
+.brand-header-logo,
+.ac-brand-wordmark { font-family: var(--ac-font-brand) !important; }
+.ac-scribble, .ac-handwritten, [data-ac-scribble] {
+  font-family: var(--ac-font-scribble) !important;
+  text-transform: uppercase;
+  letter-spacing: normal;
+}
+.ac-marker, .ac-tactical-marker, [data-ac-marker] {
+  font-family: var(--ac-font-marker) !important;
+  text-transform: uppercase;
+  letter-spacing: normal;
+}
