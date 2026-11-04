@@ -1,0 +1,11 @@
+.ac-hero-brand-row{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);align-items:center;gap:48px;width:min(1200px,100%);box-sizing:border-box;margin-inline:auto;padding:32px}
+.ac-hero-brand-copy{min-width:0;border-right:1px solid #ffffff30;padding:8px 48px 8px 0}
+.ac-hero-brand-row :is(#aerocore-hero-wordmark,#neoskin-hero-wordmark){font-size:clamp(44px,5.2vw,72px)!important;font-weight:300!important;letter-spacing:.35em;line-height:1.1;margin:0 0 16px;text-align:left;white-space:nowrap;padding-left:0;width:auto}
+.ac-hero-brand-row :is(#aerocore-hero-tagline,#neoskin-hero-tagline){font-family:Inter,sans-serif!important;font-size:12px!important;font-weight:300!important;letter-spacing:.4em!important;text-align:right;line-height:1.8!important;padding-left:0;margin:0}
+.ac-hero-brand-action{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;min-width:0}
+.ac-hero-arsenal-button{display:flex;align-items:center;justify-content:center;width:100%;max-width:365px;min-height:72px;padding:20px 24px;box-sizing:border-box;border:1px solid #ffffff40;background:transparent;color:#fff;font-family:Inter,sans-serif;font-size:14px;font-weight:500;letter-spacing:.45em;line-height:1.5;text-transform:uppercase;text-align:center;transition:background .25s,border-color .25s}
+.ac-hero-arsenal-button:hover{background:#ffffff0d;border-color:#ffffff80}
+.ac-hero-secondary-link{font:300 12px/1.5 Inter,sans-serif;color:#bbb;text-decoration:none}
+.ac-hero-secondary-link:hover{color:#fff}
+@media(max-width:959px){.ac-hero-brand-row{grid-template-columns:minmax(0,1fr);gap:32px;padding:24px}.ac-hero-brand-copy{border-right:0;border-bottom:1px solid #ffffff30;padding:0 0 28px}.ac-hero-brand-row :is(#aerocore-hero-wordmark,#neoskin-hero-wordmark){font-size:clamp(32px,9vw,64px)!important;text-align:center;padding-left:.35em}.ac-hero-brand-row :is(#aerocore-hero-tagline,#neoskin-hero-tagline){font-size:clamp(10px,1.7vw,12px)!important;letter-spacing:.3em!important;text-align:center;padding-left:.3em}.ac-hero-arsenal-button{min-height:60px;font-size:12px;letter-spacing:.35em}}
+@media(prefers-reduced-motion:reduce){.ac-hero-arsenal-button{transition:none}}
