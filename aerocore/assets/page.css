@@ -130,3 +130,10 @@ main :is(h1,h2,h3):not([style*="Outfit"]):not([style*="font-aerocore"]):not(.fon
   text-transform: uppercase;
   letter-spacing: normal;
 }
+
+/* NeoSkin technical tabs: understated default, olive selection, matching AeroCore behavior. */
+.ns-tab-btn{background:transparent;color:#f1f1f1;transition:background-color .2s ease,color .2s ease}
+.ns-tab-btn.bg-white{background:#4e6130!important;color:#fff!important}
+.ns-tab-btn:not(.bg-white):hover{background:#4e613024;color:#fff}
+.ns-tab-btn:focus-visible{outline:2px solid #4e6130;outline-offset:2px}
+@media(prefers-reduced-motion:reduce){.ns-tab-btn{transition:none}}
