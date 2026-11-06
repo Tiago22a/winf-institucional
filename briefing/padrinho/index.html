@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#0c0c0e">
+<meta name="description" content="Programa Padrinho WINF Partners. Interesse privado para empresários que desejam apoiar operações WINF Asset Light e avaliar Quiosque.">
+<title>Programa Padrinho™ — WINF Partners™</title><link rel="icon" href="/winf-logo.svg">
+<style>
+@font-face{font-family:WinfDisplay;src:url("/fonts/gustavo-bold.otf") format("opentype");font-display:swap}
+:root{color-scheme:dark;--bg:#0c0c0e;--surface:#18191b;--line:#454647;--mute:#b6b8b9;--white:#fff;font-family:Inter,Arial,Helvetica,sans-serif}
+*{box-sizing:border-box}[hidden]{display:none!important}body{margin:0;background:var(--bg);color:var(--white);min-height:100vh}
+a{color:#fff}button,input,select,textarea{font:inherit}
+header{border-bottom:1px solid #393b3d;background:#111214}
+.nav{max-width:1060px;padding:20px 22px;display:flex;gap:24px;align-items:center;justify-content:space-between;margin:auto}
+.brand{font-family:WinfDisplay,Arial,sans-serif;font-weight:900;letter-spacing:.06em;text-decoration:none;font-size:24px}
+.nav a:last-child{font-size:13px;text-decoration:none;color:#c3c3c3}
+main{max-width:1060px;margin:0 auto;padding:62px 22px 100px}
+.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:11px;color:#b7b9ba;font-weight:700}
+h1,h2{font-family:WinfDisplay,Arial,sans-serif;text-transform:uppercase;line-height:1.06;letter-spacing:-.018em}
+h1{font-size:clamp(40px,7vw,77px);max-width:900px;margin:16px 0 18px}h2{font-size:clamp(25px,4vw,36px);margin:0 0 16px}
+.lead{color:#c0c2c3;max-width:720px;line-height:1.7;font-size:17px;margin-bottom:30px}
+.pill{padding:9px 14px;border:1px solid #535557;color:#e0e0e0;font-size:12px;display:inline-block;margin-bottom:12px}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:28px;margin-top:32px;align-items:start}
+.panel{background:var(--surface);border:1px solid var(--line);padding:clamp(24px,4vw,42px)}
+.info{border:1px solid var(--line);padding:28px;color:#c6c7c8;line-height:1.7}
+.info h2{font-size:25px;color:#fff}
+.info li{margin:0 0 10px}.info ol{padding-left:19px;margin-top:0}
+.progress{display:flex;gap:7px;margin-bottom:30px}.progress span{height:5px;background:#464748;flex:1}.progress span.active{background:#fff}
+.step{display:block}.step[hidden],.receipt[hidden],.errors[hidden],.invitation[hidden]{display:none}
+.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:19px}
+.field{display:flex;flex-direction:column;gap:9px;font-size:13px;color:#c7c9c9}
+.field.full{grid-column:1/-1}
+.field input,.field select,.field textarea{width:100%;border:1px solid #656769;border-radius:0;background:#0d0e0f;color:#fff;padding:14px 15px;min-height:49px;outline:none}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:#fff}
+.field input::placeholder,.field textarea::placeholder{color:#8d8f90}
+.field textarea{min-height:110px;resize:vertical}
+.field select{appearance:auto}
+.check{margin-top:24px;display:flex;align-items:flex-start;gap:12px;font-size:13px;line-height:1.6;color:#c8c9ca}
+.check input{margin-top:4px;width:18px;height:18px;accent-color:#fff}
+.actions{display:flex;justify-content:space-between;gap:12px;margin-top:30px;flex-wrap:wrap}
+.btn{border:1px solid #fff;background:#fff;color:#101010;min-height:50px;padding:13px 22px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;cursor:pointer;font-size:12px}
+.btn.secondary{color:#fff;background:transparent;border-color:#67696b}
+.btn:focus-visible,a:focus-visible{outline:2px solid #fff;outline-offset:3px}.btn:disabled{cursor:wait;opacity:.55}
+.status{font-size:13px;margin:17px 0 0;color:#d4d4d4;min-height:20px;line-height:1.65}
+.errors{padding:14px;border:1px solid #aa6b6b;color:#ffe5e5;margin:15px 0}
+.receipt{background:#151618;border:1px solid #717374;padding:32px}
+.receipt p{line-height:1.7;color:#c5c6c6}
+.code{font-family:monospace;overflow-wrap:anywhere;padding:15px;border:1px solid #545657;color:#fff;margin:15px 0}
+.note{font-size:12px;line-height:1.55;color:#adb0b0}
+footer{padding:30px 22px;text-align:center;font-size:12px;color:#aaa;border-top:1px solid #343536}
+.hp{position:absolute;left:-9999px;opacity:0;pointer-events:none}
+@media(max-width:850px){.layout{grid-template-columns:1fr}.info{order:2}}
+@media(max-width:540px){main{padding-top:36px}.panel{padding:23px 19px}.form-grid{grid-template-columns:1fr}.nav a:last-child{font-size:12px}.actions .btn{flex:1}.info{padding:22px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+
+.profile-note{border:1px solid #55585a;padding:16px;margin:22px 0;color:#c7c9c9;font-size:14px;line-height:1.65}
+</style><script defer src="/briefing/padrinho/app.js?v=20261106-1"></script>
+</head><body>
+<header><nav class="nav"><a class="brand" href="/briefing/">WINF PARTNERS™</a><a href="/briefing/">← CONHECER OS MODELOS</a></nav></header>
+<main>
+<p class="eyebrow">WINF PARTNERS™ // PROGRAMA PADRINHO</p>
+<h1>VOCÊ ENTENDE DE NEGÓCIOS.<br>ELE DOMINA A TÉCNICA.</h1>
+<p class="lead">O Padrinho é um empresário-investidor que pode se associar a um instalador qualificado. Juntos, avaliam uma operação WINF Asset Light™ — com possibilidade de implantação de Quiosque arquitetônico no território, conforme estudo e aprovação.</p>
+<p class="pill">Manifestação de interesse privada · Não é oferta pública de investimento</p>
+<div class="layout">
+<section class="panel">
+<p class="eyebrow">PERFIL DE EMPRESÁRIO-INVESTIDOR</p>
+<form id="padrinho-form">
+<h2>VAMOS CONHECER VOCÊ.</h2>
+<div class="form-grid">
+<label class="field full">Seu nome completo<input name="nome" minlength="2" maxlength="120" autocomplete="name" required placeholder="Nome completo"></label>
+<label class="field">Cidade de interesse<input name="cidade" minlength="2" maxlength="120" required placeholder="Ex.: Sorocaba"></label>
+<label class="field">UF<select name="uf" required><option value="">Selecione</option><option value="AC">AC</option><option value="AL">AL</option><option value="AP">AP</option><option value="AM">AM</option><option value="BA">BA</option><option value="CE">CE</option><option value="DF">DF</option><option value="ES">ES</option><option value="GO">GO</option><option value="MA">MA</option><option value="MT">MT</option><option value="MS">MS</option><option value="MG">MG</option><option value="PA">PA</option><option value="PB">PB</option><option value="PR">PR</option><option value="PE">PE</option><option value="PI">PI</option><option value="RJ">RJ</option><option value="RN">RN</option><option value="RS">RS</option><option value="RO">RO</option><option value="RR">RR</option><option value="SC">SC</option><option value="SP">SP</option><option value="SE">SE</option><option value="TO">TO</option></select></label>
+<label class="field">WhatsApp com DDD<input name="whatsapp" minlength="10" maxlength="24" inputmode="tel" autocomplete="tel" required placeholder="(15) 99999-9999"></label>
+<label class="field">Seu ramo de atuação (opcional)<input name="empresa" maxlength="150" placeholder="Empresa ou segmento"></label>
+<label class="field">Sua experiência empresarial<select name="experienciaEmpresarial" required><option value="">Selecione</option><option value="primeiro-negocio">Estou iniciando</option><option value="1-5">1 a 5 anos</option><option value="6-15">6 a 15 anos</option><option value="16-mais">Mais de 15 anos</option></select></label>
+<label class="field">Como você gostaria de participar?<select name="formaParticipacao" required><option value="">Selecione</option><option value="socio-gestor">Investidor e gestor da unidade</option><option value="socio-investidor">Investidor sem gestão diária</option><option value="avaliar">Quero avaliar as alternativas</option></select></label>
+<label class="field full">Qual estrutura deseja avaliar?<select name="estruturaDesejada" required><option value="">Selecione</option><option value="asset-light">Padrinhar uma operação Asset Light</option><option value="asset-light-kiosk">Asset Light + Quiosque arquitetônico</option><option value="avaliar">Avaliar qual formato é viável</option></select></label>
+<label class="field full">Faixa indicativa de capital para analisar a proposta<select name="faixaAporte" required><option value="">Selecione</option><option value="a-avaliar">Preciso conhecer os custos primeiro</option><option value="ate-15000">Até R$ 15 mil</option><option value="15000-50000">Entre R$ 15 mil e R$ 50 mil</option><option value="50000-150000">Entre R$ 50 mil e R$ 150 mil</option><option value="acima-150000">Acima de R$ 150 mil</option></select></label>
+<label class="field full">O que você gostaria de construir com o operador?<textarea name="objetivo" minlength="10" maxlength="500" required placeholder="Conte sua experiência, objetivos e como imagina a parceria."></textarea></label>
+</div>
+<div class="profile-note">A WINF poderá apresentar profissionais e oportunidades após avaliação. A candidatura não constitui reserva territorial, promessa de retorno, aprovação societária ou direito ao conselho. O orçamento do Quiosque deve discriminar se a adesão Asset Light está ou não incluída no valor anunciado.</div>
+<label class="check"><input type="checkbox" name="consentimento" required><span>Autorizo o tratamento de meus dados para avaliação do Programa Padrinho e contato da equipe WINF, conforme a <a href="/aerocore/policies/#privacidade" target="_blank" rel="noopener noreferrer">Política de Privacidade</a>.</span></label>
+<div class="hp" aria-hidden="true"><label>Não preencha<input name="website" type="text" tabindex="-1" autocomplete="off"></label></div>
+<div class="actions"><button type="submit" class="btn" id="send">Enviar interesse →</button></div>
+<p class="errors" id="form-errors" role="alert" hidden></p>
+<p class="status" id="send-status" role="status" aria-live="polite"></p>
+</form>
+<section id="receipt" class="receipt" hidden aria-live="polite">
+<p class="eyebrow">INTERESSE RECEBIDO</p><h2>OBRIGADO POR CONSTRUIR COM A WINF.</h2>
+<p>Recebemos seus dados para análise. A Central avaliará a compatibilidade com operações disponíveis e poderá entrar em contato.</p>
+<div class="code" id="ticket-text"></div><div class="actions"><button type="button" class="btn" id="copy-receipt">Copiar comprovante</button><button type="button" class="btn secondary" id="check-status">Consultar andamento</button></div>
+<p class="status" id="receipt-status"></p><p class="note">Guarde a chave de consulta em local privado. Este cadastro não constitui contrato ou oferta de investimento.</p>
+</section>
+</section>
+<aside class="info">
+<p class="eyebrow">COMO FUNCIONA</p><h2>DOIS TALENTOS.<br>UMA OPERAÇÃO.</h2>
+<ol><li>Conhecemos o perfil do empresário-investidor.</li><li>Avaliamos operadores técnicos e territórios.</li><li>As partes conhecem custos, responsabilidades e riscos.</li><li>Avaliam a participação societária e eventual ponto físico.</li><li>Formalizam a parceria apenas após aprovação e documentação.</li></ol>
+<p class="note"><strong>Asset Light:</strong> modelo operacional de entrada, atualmente anunciado por R$ 15.000.</p>
+<p class="note"><strong>Quiosque:</strong> evolução física sujeita a aprovação, atualmente anunciada a partir de R$ 95.000. Esses preços não devem ser simplesmente somados sem verificar a composição do orçamento.</p>
+<p class="note">Prefere falar com a Central? <a href="https://wa.me/5513997815375" target="_blank" rel="noopener noreferrer">WhatsApp WINF Partners</a>.</p>
+</aside>
+</div></main><footer>WINF Partners™ · Do Brasil para o Mundo. · <a href="/aerocore/policies/#privacidade">Privacidade</a></footer>
+</body></html>
