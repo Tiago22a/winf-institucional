@@ -60,3 +60,16 @@ test("styles are responsive, scoped and respect reduced motion",()=>{
  assert.match(css,/:focus-visible/);
  assert.doesNotMatch(css,/#D4AF37|#F2D272/i);
 });
+
+
+test("briefing and Partners share abstract logo-free hero media",()=>{
+ const motion=read("briefing/clean-hero-animation.css");
+ for(const [name,html] of [["briefing",brief],["Partners",partners]]){
+  assert.match(html,/class="wb-clean-motion" aria-hidden="true"/,name);
+  assert.match(html,/\/briefing\/clean-hero-animation\.css\?v=20261106-logo-free-1/,name);
+ }
+ assert.doesNotMatch(partners,/id="briefing-background-video"/);
+ assert.doesNotMatch(partners,/\/briefing\/media\/briefing-bg\.mp4/);
+ assert.doesNotMatch(motion,/url\(/);
+ assert.match(motion,/prefers-reduced-motion/);
+});
