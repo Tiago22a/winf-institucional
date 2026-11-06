@@ -56,3 +56,24 @@
 
 
 
+
+/* 2026-11-06: narrativa comercial e comparação detalhada dos modelos */
+.al-muted-title{color:#a6a8a7}
+.al-strategy-section{background:#111214}
+.al-story-card{min-height:270px}
+.al-story-card h3{font-size:clamp(23px,2.6vw,34px)}
+.al-model-deepdive{background:#111214}
+.al-model-stack{display:grid;gap:24px;margin:44px 0}
+.al-model-detail{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(250px,0.8fr);gap:40px;border:1px solid #5a5c5b;background:#18191a;padding:clamp(24px,4vw,48px)}
+.al-model-detail>div:first-child{min-width:0}
+.al-model-detail h3{font-size:clamp(26px,3.5vw,48px)}
+.al-section .al-model-detail p{font-size:16px;line-height:1.7;max-width:82ch;margin-bottom:16px}
+.al-section .al-model-for{color:#f0f0f0}
+.al-model-detail p strong{color:#fff}
+.al-model-aside{border-left:1px solid #505251;padding-left:32px;display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.al-model-aside>span{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#b8babb}
+.al-model-aside>strong{font-size:clamp(31px,3.2vw,45px);letter-spacing:-.04em;color:#fff;line-height:1.15}
+.al-model-aside strong small{display:block;font-size:14px;font-weight:400;letter-spacing:0;margin-bottom:7px;color:#c2c4c3}
+.al-section .al-model-aside p{font-size:14px;color:#c2c4c3}
+.al-model-aside .al-button{margin-top:auto;width:100%;font-size:12px;letter-spacing:.03em}
+@media(max-width:750px){.al-model-detail{grid-template-columns:1fr;gap:18px}.al-model-aside{border-left:0;border-top:1px solid #505251;padding-left:0;padding-top:22px}.al-story-card{min-height:0}}
