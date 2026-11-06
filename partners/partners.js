@@ -62,15 +62,39 @@
     event.preventDefault();
     if (!form.reportValidity()) return;
     const fields = new FormData(form);
+    const interest = String(fields.get('model') || '').trim();
+    // A mesma página recebe licenciados, investidores e importadores.
+    // NUNCA prometer licença, preço, fornecimento ou participação já aprovados.
+    const audience = interest === 'Investimento societário / parceria estratégica'
+      ? {
+          opening: 'Olá! Gostaria de conhecer uma possível parceria de investimento com a WINF.inc®.',
+          subject: 'Assunto: investimento estratégico',
+          closing: 'Gostaria de conhecer a apresentação institucional, o estágio atual do projeto e conversar sobre condições e riscos de uma eventual participação.'
+        }
+      : interest === 'Parceria industrial / importação'
+        ? {
+            opening: 'Olá! Gostaria de avaliar uma parceria de importação, fornecimento ou distribuição com a WINF.inc®.',
+            subject: 'Assunto: parceria industrial / importação',
+            closing: 'Gostaria de conversar sobre linhas de produtos, capacidade de fornecimento, logística e condições comerciais possíveis.'
+          }
+        : {
+            opening: 'Olá! Gostaria de conhecer os modelos da WINF Partners™.',
+            subject: 'Assunto: licenciamento territorial',
+            closing: 'Gostaria de consultar a disponibilidade territorial e receber informações sobre as condições comerciais aplicáveis.'
+          };
+    // Limites defensivos e uma linha por campo no texto para o WhatsApp.
+    const oneLine = (value, limit = 120) => String(value || '').replace(/[\r\n\t]+/g, ' ').trim().slice(0, limit);
+    const extra = String(fields.get('message') || '').trim().slice(0, 1500);
     const message = [
-      'Olá! Quero conhecer o licenciamento WINF Partners.',
+      audience.opening,
       '',
-      `Nome: ${fields.get('name')}`,
-      `Cidade / UF: ${fields.get('city')}`,
-      `WhatsApp: ${fields.get('phone')}`,
-      `Modelo de interesse: ${fields.get('model')}`,
-      ...(String(fields.get('message') || '').trim() ? [`Sobre minha operação: ${fields.get('message')}`] : []),
-      '', 'Gostaria de consultar a disponibilidade da minha cidade e receber o dossiê.'
+      audience.subject,
+      `Nome: ${oneLine(fields.get('name'))}`,
+      `Cidade / UF / País: ${oneLine(fields.get('city'))}`,
+      `WhatsApp: ${oneLine(fields.get('phone'), 24)}`,
+      `Interesse: ${oneLine(interest)}`,
+      ...(extra ? [`Contexto da proposta: ${extra}`] : []),
+      '', audience.closing
     ].join('\n');
     const url = `https://wa.me/5513997815375?text=${encodeURIComponent(message)}`;
     // A persistent link also works if the browser blocks the new window.
