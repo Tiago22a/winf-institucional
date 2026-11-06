@@ -13,30 +13,82 @@
     element.textContent = new Date().getFullYear();
   });
 
-  const openMenu = () => {
-    if (!menu) return;
+  // Accessible overlay navigation: focus trap, state, and focus restoration.
+  // Applied only when a page actually contains the legacy menu-overlay.
+  const menuTriggers = [...document.querySelectorAll('[data-action="open-menu"]')];
+  let menuLastTrigger = null;
+  let menuHideTimeout = null;
+  const motionReduced = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const menuOpen = () => Boolean(menu && menu.getAttribute('aria-hidden') === 'false');
+  const focusableMenu = () => menu ? [...menu.querySelectorAll(
+    'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+  )].filter((node) => !node.hidden && node.getClientRects().length > 0) : [];
+
+  const openMenu = (event) => {
+    if (!menu || menuOpen()) return;
+    if (menuHideTimeout) window.clearTimeout(menuHideTimeout);
+    menuLastTrigger = event?.currentTarget || document.activeElement;
     menu.classList.remove('hidden');
-    requestAnimationFrame(() => menu.classList.add('is-open'));
+    menu.removeAttribute('inert');
     menu.setAttribute('aria-hidden', 'false');
+    menuTriggers.forEach((button) => button.setAttribute('aria-expanded', 'true'));
     body.classList.add('menu-open');
-    menu.querySelector('[data-action="close-menu"]')?.focus();
+    requestAnimationFrame(() => menu.classList.add('is-open'));
+    const firstControl = menu.querySelector('[data-action="close-menu"]');
+    (firstControl || focusableMenu()[0] || menu).focus();
   };
 
-  const closeMenu = () => {
-    if (!menu) return;
+  const closeMenu = ({restoreFocus = true} = {}) => {
+    if (!menu || !menuOpen()) return;
+    // Focus must leave the overlay BEFORE applying aria-hidden/inert.
+    if (restoreFocus) {
+      const trigger = menuLastTrigger?.isConnected ? menuLastTrigger : menuTriggers[0];
+      trigger?.focus();
+    }
     menu.classList.remove('is-open');
     menu.setAttribute('aria-hidden', 'true');
+    menu.setAttribute('inert', '');
+    menuTriggers.forEach((button) => button.setAttribute('aria-expanded', 'false'));
     body.classList.remove('menu-open');
-    window.setTimeout(() => menu.classList.add('hidden'), 300);
+    menuHideTimeout = window.setTimeout(() => menu.classList.add('hidden'), motionReduced() ? 0 : 300);
   };
 
-  document.querySelectorAll('[data-action="open-menu"]').forEach((button) => button.addEventListener('click', openMenu));
-  document.querySelectorAll('[data-action="close-menu"]').forEach((button) => button.addEventListener('click', closeMenu));
+  menuTriggers.forEach((button) => {
+    if (menu) {
+      button.setAttribute('aria-controls', menu.id);
+      button.setAttribute('aria-expanded', 'false');
+    }
+    button.addEventListener('click', openMenu);
+  });
+  if (menu) {
+    menu.setAttribute('inert', '');
+    menu.setAttribute('aria-hidden', 'true');
+  }
+  document.querySelectorAll('[data-action="close-menu"]').forEach((button) => {
+    if (!button.getAttribute('aria-label')) button.setAttribute('aria-label', 'Fechar navegação');
+    button.addEventListener('click', () => closeMenu());
+  });
   menu?.addEventListener('click', (event) => {
     if (event.target === menu) closeMenu();
   });
   document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') closeMenu();
+    if (!menuOpen()) return;
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      closeMenu();
+      return;
+    }
+    if (event.key !== 'Tab') return;
+    const controls = focusableMenu();
+    if (!controls.length) { event.preventDefault(); return; }
+    const first = controls[0], last = controls[controls.length - 1];
+    if (event.shiftKey && (document.activeElement === first || !menu.contains(document.activeElement))) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && (document.activeElement === last || !menu.contains(document.activeElement))) {
+      event.preventDefault();
+      first.focus();
+    }
   });
 
   document.querySelectorAll('[data-action="menu-link"]').forEach((link) => {
@@ -45,7 +97,7 @@
 
   const scrollToHash = (hash) => {
     const target = document.querySelector(hash);
-    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (target) target.scrollIntoView({ behavior: motionReduced() ? 'instant' : 'smooth', block: 'start' });
   };
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
     link.addEventListener('click', (event) => {
