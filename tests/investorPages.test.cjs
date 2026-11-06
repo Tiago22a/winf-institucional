@@ -62,3 +62,15 @@ test("no duplicate static HTML ids in changed pages",()=>{
   assert.equal(new Set(ids).size,ids.length,path);
  }
 });
+
+
+test("WhatsApp and social shares present the WINF Partners investment/industrial context accurately",()=>{
+ assert.match(brief,/property="og:title"/);
+ assert.match(brief,/WINF Partners™ — Expansão e parcerias estratégicas/);
+ assert.match(brief,/oportunidades de parceria industrial e empresarial/);
+ assert.match(brief,/WINF Partners — arquitetura e expansão territorial/);
+ assert(!brief.includes("cena do vídeo original"));
+ assert.match(home,/WINF Partners™/);
+ assert(fs.existsSync(path.join(root,"partners/media/hero-poster.webp")));
+ assert(fs.existsSync(path.join(root,"images/og/og-winf-select.png")));
+});
