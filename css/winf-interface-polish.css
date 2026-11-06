@@ -1,0 +1,92 @@
+/* WINF Interface Polish v1 — navigation, hero hierarchy and CTAs.
+   Intentionally scoped to Partners briefing + Partners entry, with no
+   visual overrides to AeroCore / NeoSkin product pages. */
+:root{--winf-ui-line:#ffffff36;--winf-ui-text:#f3f4f6;--winf-ui-muted:#b6b8bc}
+.partners-page .partners-site-header{
+  background:linear-gradient(180deg,rgba(8,9,11,.66),rgba(8,9,11,.10));
+  border-bottom:1px solid rgba(255,255,255,.1);
+  min-height:76px;
+}
+.partners-page .partners-site-header img{max-width:138px;max-height:42px;object-fit:contain}
+.partners-page .partners-site-header .menu-trigger{
+  min-width:48px;min-height:48px;padding:12px;
+  border:1px solid #ffffff57;background:#08090c66;
+  border-radius:2px;backdrop-filter:blur(8px);
+}
+.partners-page .partners-site-header .menu-trigger:hover{background:#fff2;border-color:#fff9}
+.partners-page #menu-overlay{background:#0d0e10!important;overscroll-behavior:contain}
+.partners-page #menu-overlay .menu-primary-link{
+  font-size:clamp(28px,4vw,56px);line-height:1.14;letter-spacing:-.045em;
+  text-transform:uppercase;font-weight:700;text-decoration:none;color:#f7f7f7;
+}
+.partners-page #menu-overlay .menu-primary-link:hover,
+.partners-page #menu-overlay .menu-secondary-link:hover{color:#fff;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:6px}
+.partners-page #menu-overlay .menu-label{font-family:'JetBrains Mono',monospace;letter-spacing:.16em;color:#9d9fa4}
+.partners-page #menu-overlay .menu-secondary-link{min-height:30px;display:inline-flex;align-items:center;color:#c3c4c8;text-decoration:none}
+.partners-page #menu-overlay button:focus-visible,.partners-page #menu-overlay a:focus-visible{
+  outline:2px solid #fff;outline-offset:6px
+}
+.partners-page #menu-overlay .menu-close-button{width:48px;height:48px;display:inline-flex;align-items:center;justify-content:center;border:1px solid #ffffff55}
+.partners-page .reference-hero-copy{padding-top:clamp(125px,17vh,185px);padding-bottom:clamp(65px,9vh,125px);width:100%}
+.partners-page .reference-hero-badge{
+  gap:13px!important;letter-spacing:.17em!important;font-size:clamp(10px,1vw,13px)!important;
+  padding:10px 21px!important;margin-bottom:clamp(36px,5vw,63px)!important;
+  max-width:calc(100vw - 44px);white-space:normal;text-align:center
+}
+.partners-page #partners-title{
+  font-size:clamp(42px,6vw,91px)!important;
+  letter-spacing:.045em!important;line-height:1.09!important;
+  max-width:100%;overflow-wrap:normal
+}
+.partners-page #partners-title + p{
+  margin-top:clamp(22px,3vw,38px)!important;
+  letter-spacing:.115em!important;line-height:1.75!important;
+  font-size:clamp(12px,1.25vw,17px)!important;color:#c2c3c8!important;
+  max-width:750px;margin-left:auto;margin-right:auto;
+}
+.partners-page .reference-hero-copy > .mb-20{margin-bottom:clamp(30px,5vw,65px)!important}
+.partners-page .reference-hero-copy a[href="#licensing-plans"],
+.partners-page .reference-hero-copy a[href="/winf-home/"]{
+  min-height:54px;padding:15px clamp(21px,3vw,37px)!important;
+  font-size:11px!important;letter-spacing:.12em!important;
+  font-family:'JetBrains Mono',ui-monospace,monospace!important;
+  font-weight:600!important;border:1px solid #ffffff75!important;
+  transition:background .2s ease,color .2s ease,border-color .2s ease;
+  line-height:1.55;white-space:normal
+}
+.partners-page .reference-hero-copy a[href="#licensing-plans"]{background:#f2f2f2!important;color:#090a0c!important;backdrop-filter:none!important}
+.partners-page .reference-hero-copy a[href="#licensing-plans"]:hover{background:#d1d3d6!important}
+.partners-page .reference-hero-copy a[href="/winf-home/"]{color:#f0f0f0!important;background:rgba(13,14,16,.46)!important}
+.partners-page .reference-hero-copy a[href="/winf-home/"]:hover{border-color:#fff!important;background:#ffffff17!important}
+.partners-page .reference-hero-copy a:focus-visible{outline:2px solid #fff;outline-offset:5px}
+
+.winf-partners-entry header a:focus-visible,
+.winf-partners-entry nav a:focus-visible{outline:2px solid white;outline-offset:5px}
+.winf-partners-entry header{border-bottom:1px solid #ffffff13}
+.winf-partners-entry .briefing-cta{
+  border-radius:2px!important;border-color:#ffffff36!important;
+  background:rgba(18,19,22,.70)!important;
+  min-height:82px;backdrop-filter:blur(15px);
+  transition:background .2s ease,border-color .2s ease,transform .2s ease!important
+}
+.winf-partners-entry .briefing-cta:hover{border-color:#ffffff8a!important;background:#ffffff12!important}
+.winf-partners-entry .briefing-cta > span{max-width:100%}
+.winf-partners-entry .briefing-cta .font-mono{letter-spacing:.06em}
+.winf-partners-entry .winf-ui-secondary-link{font:600 10px/1.5 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.1em;text-transform:uppercase;color:#c0c2c7}
+.winf-partners-entry .winf-ui-secondary-link:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:760px){
+  .partners-page .partners-site-header{min-height:66px;padding:14px 20px}
+  .partners-page #partners-title{letter-spacing:.015em!important}
+  .partners-page .reference-hero-badge{letter-spacing:.09em!important;padding:10px 14px!important;gap:9px!important}
+  .partners-page .reference-hero-copy{padding-top:118px;padding-bottom:66px}
+  .partners-page #partners-title + p{letter-spacing:.045em!important;font-size:13px!important;margin-top:25px!important}
+  .partners-page .reference-hero-copy a[href="#licensing-plans"],
+  .partners-page .reference-hero-copy a[href="/winf-home/"]{width:100%;max-width:360px}
+  .partners-page #menu-overlay{padding:25px 20px}
+  .winf-partners-entry .briefing-cta{min-height:75px}
+}
+@media(prefers-reduced-motion:reduce){
+  .partners-page .partners-site-header .menu-trigger,
+  .partners-page .reference-hero-copy a,
+  .winf-partners-entry .briefing-cta{transition:none!important;transform:none!important}
+}
