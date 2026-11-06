@@ -1,0 +1,26 @@
+name: WINF Brand Navigation Integrity
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'briefing/index.html'
+      - 'winf-home/index.html'
+      - 'aerocore/index.html'
+      - 'tests/winfBrandNavigation.test.cjs'
+      - '.github/workflows/winf-brand-navigation.yml'
+  push:
+    branches: ['fix/winf-global-menu-brand-names-20261106']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  brands:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check brand menus and href targets
+        run: node --test tests/winfBrandNavigation.test.cjs
