@@ -74,10 +74,28 @@ test("responsive design, accessibility, dark palette and reduced motion",()=>{
 });
 test("all image tags have descriptions and no invalid placeholder preview links",()=>{
  const tags=[...page.matchAll(/<img\b[^>]*>/g)].map(x=>x[0]);
- assert(tags.length>=4);
+ assert(tags.length>=3);
  for(const tag of tags)assert(/\balt="[^"]+"/.test(tag),tag);
  assert(!page.includes("aistudio.google.com"));
  assert(!page.includes("preview-aurel"));
  assert(!page.includes("private_key"));
  assert(!page.includes("apiKey"));
+});
+
+test("WINF Partners logo follows official AeroCore menu wordmark, without loose WINF logo assembly",()=>{
+ const wordmarks=[...page.matchAll(/<strong>WINF PARTNERS<sup>™<\/sup><\/strong>/g)];
+ assert.equal(wordmarks.length,2,"header and footer must use matching wordmarks");
+ assert.match(page,/class="brand partners-wordmark"/);
+ assert.match(page,/class="partners-wordmark footer-wordmark"/);
+ assert(!page.includes('class="brand" href="/" aria-label="WINF — site institucional"'));
+ assert.match(css,/\.partners-wordmark strong/);
+});
+test("ecosystem menus present NeoSkin and WINF Select clearly, including on mobile",()=>{
+ assert.match(page,/aria-label="WINF Partners: navegação principal"/);
+ assert.match(page,/aria-label="Menu para dispositivos móveis"/);
+ assert.match(page,/class="ecosystem-menu"/);
+ assert(page.includes('<a href="/aerocore/neoskin/">NeoSkin™'));
+ assert(page.includes('<a href="/aerocore/winf-select/">WINF Select™'));
+ assert.match(page,/ECOSSISTEMA WINF/);
+ assert.match(page,/class="footer-legal"/);
 });
