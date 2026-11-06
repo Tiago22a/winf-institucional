@@ -1,0 +1,26 @@
+/* WINF Partners™ / movimento abstrato premium, SEM logos, textos ou vídeo externo.
+   O texto comercial permanece na camada HTML à frente, independente da animação. */
+.wb-clean-motion{position:absolute;inset:0;overflow:hidden;isolation:isolate;pointer-events:none;background:
+ radial-gradient(ellipse 68% 70% at 76% 43%,#30333c 0%,#121318 41%,transparent 78%),
+ linear-gradient(128deg,#050607 0%,#17191d 49%,#07080a 100%);filter:saturate(.18)}
+.wb-clean-motion::before,.wb-clean-motion::after{content:"";position:absolute;display:block;pointer-events:none}
+.wb-clean-motion::before{width:90vmax;height:90vmax;right:-32vmax;top:-35vmax;border-radius:50%;
+ background:conic-gradient(from 42deg,transparent 0deg,#ffffff08 32deg,#ffffff20 43deg,transparent 63deg,transparent 190deg,#c1c8d00a 225deg,transparent 261deg);
+ filter:blur(1.5rem);animation:wb-arc-orbit 38s linear infinite;will-change:transform}
+.wb-clean-motion::after{inset:0;opacity:.48;background:
+ repeating-linear-gradient(90deg,transparent 0 120px,#ffffff05 121px,transparent 122px),
+ linear-gradient(95deg,transparent 20%,#ffffff0c 52%,transparent 83%);
+ animation:wb-sweep 18s ease-in-out infinite alternate}
+.wb-clean-motion__plane{position:absolute;inset:auto -15% -32%;height:80%;transform:rotate(-16deg);
+ background:linear-gradient(0deg,transparent 28%,#ffffff12 49%,transparent 52%),linear-gradient(90deg,transparent,#ffffff0d 60%,transparent);filter:blur(38px);opacity:.8;
+ animation:wb-plane 14s ease-in-out infinite alternate;will-change:transform}
+.wb-clean-motion__halo{position:absolute;right:4%;top:0;width:min(64vw,860px);height:min(64vw,860px);border-radius:50%;
+ border:1px solid #ffffff18;box-shadow:0 0 0 72px #ffffff04,0 0 0 180px #ffffff03,0 0 0 330px #ffffff01;
+ transform:translateY(-14%);animation:wb-halo 12s ease-in-out infinite alternate}
+.wb-clean-motion__shade{position:absolute;inset:0;background:linear-gradient(180deg,#0002 0%,transparent 27%,#0006 78%,#090a0d 100%)}
+@keyframes wb-arc-orbit{to{transform:rotate(360deg)}}
+@keyframes wb-sweep{0%{transform:translateX(-8%);opacity:.22}100%{transform:translateX(9%);opacity:.48}}
+@keyframes wb-plane{0%{transform:translateY(4%) rotate(-17deg)}100%{transform:translateY(-4%) rotate(-11deg)}}
+@keyframes wb-halo{0%{transform:translateY(-14%) scale(1)}100%{transform:translateY(-10%) scale(1.055)}}
+@media(max-width:720px){.wb-clean-motion__halo{right:-30%;top:14%;width:95vw;height:95vw}.wb-clean-motion__plane{height:70%;filter:blur(27px)}}
+@media(prefers-reduced-motion:reduce){.wb-clean-motion::before,.wb-clean-motion::after,.wb-clean-motion__plane,.wb-clean-motion__halo{animation:none!important;will-change:auto!important}}
