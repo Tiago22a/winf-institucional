@@ -1,0 +1,29 @@
+name: WINF Partners Premium Homepage
+on:
+  pull_request:
+    paths:
+      - 'partners/index.html'
+      - 'partners/premium-home.css'
+      - 'tests/partnersPremiumHome.test.cjs'
+      - '.github/workflows/partners-premium-home.yml'
+  push:
+    branches: ['feature/partners-main-premium-rebuild-20261106']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check assets, anchors, compliance copy and design
+        run: node --test tests/partnersPremiumHome.test.cjs
+      - name: Check investor and importer form routing
+        run: |
+          if [ -f tests/partnersLeadRouting.test.cjs ]; then
+            node --test tests/partnersLeadRouting.test.cjs
+          fi
