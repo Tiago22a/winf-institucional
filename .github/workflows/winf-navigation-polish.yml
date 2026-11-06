@@ -1,0 +1,29 @@
+name: WINF Navigation & CTA Checks
+on:
+  pull_request:
+    paths:
+      - 'script.js'
+      - 'briefing/index.html'
+      - 'partners/index.html'
+      - 'css/winf-interface-polish.css'
+      - 'tests/winf-interface-polish.test.cjs'
+      - '.github/workflows/winf-navigation-polish.yml'
+  push:
+    branches:
+      - 'feature/winf-interface-polish-stacked-20261106'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  navigation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check syntax of shared menu
+        run: node --check script.js
+      - name: Verify links, accessibility hooks and styles
+        run: node --test tests/winf-interface-polish.test.cjs
