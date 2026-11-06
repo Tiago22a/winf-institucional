@@ -69,3 +69,35 @@ test("rodapé é responsivo e mantém foco visível no teclado",()=>{
  assert.match(css,/prefers-reduced-motion/);
  assert.match(css,/wf-ref-brand-logo/);
 });
+
+
+function discoverIndexPages(dir){
+ const result=[];
+ for(const ent of fs.readdirSync(dir,{withFileTypes:true})){
+  if(ent.name.startsWith(".")||ent.name==="node_modules")continue;
+  const absolute=path.join(dir,ent.name);
+  if(ent.isDirectory())result.push(...discoverIndexPages(absolute));
+  else if(ent.isFile()&&ent.name==="index.html")result.push(path.relative(root,absolute).replaceAll(path.sep,"/"));
+ }
+ return result;
+}
+test("todas as páginas do site com rodapé global usam a mesma versão editorial",()=>{
+ const pages=discoverIndexPages(root);
+ const global=pages.filter(file=>read(file).includes('id="winf-global-footer"'));
+ assert.equal(global.length,48,"Esperadas 48 páginas com rodapé global; revisar inventário se mudar");
+ for(const file of global){
+  const html=read(file),foot=getFooter(html);
+  assert(foot, "rodapé global incorreto em "+file);
+  assert.match(foot,/data-footer-version="20261106-editorial1"/,file);
+  assert.match(html,/\/css\/winf-footer-reference\.css\?v=20261106-editorial1/,file);
+  const ids=[...html.matchAll(/\bid=["']([^"']+)["']/g)].map(x=>x[1]);
+  assert.equal(ids.length,new Set(ids).size,"IDs duplicados em "+file);
+ }
+});
+test("links jurídicos do rodapé resolvem nos anchors existentes",()=>{
+ const policies=read("aerocore/policies/index.html");
+ for(const anchor of ["certificacoes","juridico","privacidade"]){
+  assert.match(policies,new RegExp('id="'+anchor+'"'));
+  assert(getFooter(read("briefing/index.html")).includes("/aerocore/policies/#"+anchor));
+ }
+});
