@@ -1,0 +1,35 @@
+name: WINF Footer & Briefing Design Checks
+on:
+  pull_request:
+    paths:
+      - 'css/winf-footer-reference.css'
+      - 'briefing/**'
+      - 'partners/index.html'
+      - 'aerocore/**'
+      - 'index.html'
+      - 'winf-home/index.html'
+      - 'neoskin/index.html'
+      - 'blog/index.html'
+      - 'catalogo/index.html'
+      - 'partials/winf-footer.html'
+      - 'tests/winf-footer-master.test.cjs'
+      - '.github/workflows/winf-footer-master.yml'
+  push:
+    branches:
+      - 'feature/briefing-footer-master-motion-20261106'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  design-checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Rodapé, animação e consistência de links
+        run: node --test tests/winf-footer-master.test.cjs
+      - name: JavaScript de controle do rodapé
+        run: node --check js/winf-footer.js
