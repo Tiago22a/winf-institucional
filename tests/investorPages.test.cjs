@@ -10,8 +10,8 @@ const brief=read("briefing/index.html");
 const partners=read("partners/index.html");
 const partnerJs=read("partners/partners.js");
 
-test("homepage sends potential investors to active briefing instead of circular landing",()=>{
- assert(!home.includes('href="/partners/"'));
+test("homepage presents WINF Partners as the main entrance and briefing as deep-dive",()=>{
+ assert(home.includes('href="/partners/"'),"WINF Partners must have a principal home");
  assert.match(home,/href="\/briefing\/">Conhecer WINF Partners™/);
  assert.match(home,/id="expansao-winf"/);
  assert.match(home,/id="expansao-title"/);
