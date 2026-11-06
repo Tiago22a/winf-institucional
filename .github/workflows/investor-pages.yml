@@ -1,0 +1,30 @@
+name: WINF Investor Pages Hotfix
+
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'briefing/index.html'
+      - 'partners/index.html'
+      - 'tests/investorPages.test.cjs'
+      - '.github/workflows/investor-pages.yml'
+  push:
+    branches: ['feature/investor-readiness-hotfix-20261106']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  investor-pages:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check presentation and investor contact routes
+        run: node --test tests/investorPages.test.cjs
+      - name: Validate presentation JS syntax
+        run: node --check partners/partners.js
