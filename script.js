@@ -92,7 +92,7 @@
   });
 
   document.querySelectorAll('[data-action="menu-link"]').forEach((link) => {
-    link.addEventListener('click', () => closeMenu({restoreFocus: !link.getAttribute('href')?.startsWith('#')}));
+    link.addEventListener('click', () => closeMenu());
   });
 
   const scrollToHash = (hash) => {
@@ -106,7 +106,7 @@
       const target = document.querySelector(hash);
       if (!target) return;
       event.preventDefault();
-      closeMenu({restoreFocus:false});
+      closeMenu();
       history.replaceState(null, '', hash);
       scrollToHash(hash);
     });
