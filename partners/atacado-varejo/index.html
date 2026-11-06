@@ -88,7 +88,7 @@ footer{padding:30px 26px;text-align:center;color:#b5b5b5;font-size:12px}
 <section class="section" id="proposta"><div class="container">
 <div class="grid2">
 <div><p class="eyebrow">04 / PRIMEIRO CONTATO CORPORATIVO</p><h2>VAMOS ENTENDER SUA OPERAÇÃO.</h2><p class="lead">Descreva o tipo de parceiro, cidade, porte e a proposta. A mensagem será preparada para envio pelo WhatsApp oficial da WINF.</p>
-<p class="help">Este formulário **não grava dados no CRM** e não envia automaticamente: ao continuar, você revisará uma mensagem no WhatsApp e decidirá se deseja enviá-la. O cadastro B2B integrado ao CRM é uma etapa futura.</p>
+<p class="help">Este formulário não grava dados no CRM e não envia automaticamente: ao continuar, você revisará uma mensagem no WhatsApp e decidirá se deseja enviá-la. O cadastro B2B integrado ao CRM é uma etapa futura.</p>
 </div>
 <form id="trade-form" class="form">
 <p class="eyebrow">SOLICITAÇÃO DE CONTATO B2B</p>
@@ -115,7 +115,7 @@ const msg=["Olá, equipe WINF Partners. Gostaria de apresentar uma proposta para
 const link="https://wa.me/5513981113001?text="+encodeURIComponent(msg);
 document.getElementById("form-status").textContent="Abrindo o WhatsApp para você revisar e enviar sua mensagem.";
 const w=window.open(link,"_blank","noopener,noreferrer");
-if(!w){document.getElementById("form-status").textContent="A janela foi bloqueada. Use o link abaixo.";const a=document.createElement("a");a.href=link;a.target="_blank";a.rel="noopener noreferrer";a.textContent="Abrir mensagem no WhatsApp";document.getElementById("form-status").append(" ",a);}
+if(!w){document.getElementById("form-status").textContent="Se a janela não abrir, use este link.";const a=document.createElement("a");a.href=link;a.target="_blank";a.rel="noopener noreferrer";a.textContent="Abrir mensagem no WhatsApp";document.getElementById("form-status").append(" ",a);}
 });})();
 </script>
 </body></html>
