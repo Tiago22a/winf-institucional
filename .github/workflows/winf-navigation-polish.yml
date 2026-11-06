@@ -7,6 +7,7 @@ on:
       - 'partners/index.html'
       - 'css/winf-interface-polish.css'
       - 'tests/winf-interface-polish.test.cjs'
+      - 'tests/winf-menu-runtime.test.cjs'
       - '.github/workflows/winf-navigation-polish.yml'
   push:
     branches:
@@ -26,4 +27,4 @@ jobs:
       - name: Check syntax of shared menu
         run: node --check script.js
       - name: Verify links, accessibility hooks and styles
-        run: node --test tests/winf-interface-polish.test.cjs
+        run: node --test tests/winf-interface-polish.test.cjs tests/winf-menu-runtime.test.cjs
