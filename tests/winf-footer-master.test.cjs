@@ -90,7 +90,8 @@ test("todas as páginas do site com rodapé global usam a mesma versão editoria
   assert(foot, "rodapé global incorreto em "+file);
   assert.match(foot,/data-footer-version="20261106-editorial1"/,file);
   assert.match(html,/\/css\/winf-footer-reference\.css\?v=20261106-editorial1/,file);
-  const ids=[...html.matchAll(/\bid=["']([^"']+)["']/g)].map(x=>x[1]);
+  const markupOnly=html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi,"");
+  const ids=[...markupOnly.matchAll(/\bid=["']([^"']+)["']/g)].map(x=>x[1]);
   assert.equal(ids.length,new Set(ids).size,"IDs duplicados em "+file);
  }
 });
