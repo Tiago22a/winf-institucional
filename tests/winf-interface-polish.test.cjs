@@ -46,6 +46,8 @@ test("Partners homepage links to real briefing models, not itself",()=>{
  assert.match(main,/href="\/briefing\/#licensing-plans"/);
  assert.match(brief,/id="licensing-plans"/);
  assert.doesNotMatch(main,/Acessar WINF OS Terminal/);
+ assert.doesNotMatch(main,/Conhecer a Expansão OS/);
+ assert.match(main,/Conhecer a Expansão/);
 });
 
 test("header uses official WINF logo and keeps the AeroCore brand intact",()=>{
