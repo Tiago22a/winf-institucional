@@ -60,6 +60,8 @@
 .partners-page .reference-hero-copy a[href="/winf-home/"]:hover{border-color:#fff!important;background:#ffffff17!important}
 .partners-page .reference-hero-copy a:focus-visible{outline:2px solid #fff;outline-offset:5px}
 
+.winf-partners-entry .winf-partners-logo{display:block;width:clamp(102px,11vw,119px);height:auto;max-height:46px;object-fit:contain;object-position:left center}
+.winf-partners-entry .partners-header-brand{min-width:0}
 .winf-partners-entry header a:focus-visible,
 .winf-partners-entry nav a:focus-visible{outline:2px solid white;outline-offset:5px}
 .winf-partners-entry header{border-bottom:1px solid #ffffff13}
