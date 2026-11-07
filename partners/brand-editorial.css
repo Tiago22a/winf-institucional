@@ -1,0 +1,58 @@
+/* WINF Partners™ — identidade editorial piloto. Escopo: /partners/ e /briefing/ apenas.
+ * A marca WINF é sempre a logomarca oficial; Anton é uma opção editorial provisória,
+ * não substitui o arquivo original da marca.
+ */
+:root{--partners-headline:"Anton",Impact,"Arial Narrow",sans-serif}
+.partners-page .partners-site-header .briefing-partners-lockup{gap:12px;align-items:center}
+.partners-page .partners-site-header .briefing-partners-wordmark{
+  font-family:var(--partners-headline);font-size:clamp(17px,1.8vw,23px);
+  letter-spacing:.075em;font-weight:400;line-height:1.05;border-left:1px solid #ffffff80;
+  padding-left:14px
+}
+.partners-page .partners-site-header .briefing-partners-wordmark sup{font:600 .43em/1 Inter,Arial,sans-serif;letter-spacing:0;vertical-align:super;margin-left:3px}
+.partners-page .reference-hero h1{
+  font-family:var(--partners-headline);font-size:clamp(3.4rem,10vw,8.5rem);
+  font-weight:400;line-height:1.06;letter-spacing:.012em!important;text-wrap:balance;
+  max-width:min(1100px,100%);overflow-wrap:normal
+}
+.partners-page .reference-hero h1 span{font-family:inherit;font-weight:400}
+.partners-page #manifesto h3{
+  font-family:var(--partners-headline);font-weight:400;
+  font-size:clamp(2.6rem,6vw,5.9rem);letter-spacing:.005em!important;line-height:1.06;text-wrap:balance
+}
+.partners-page .al-section h2,
+.partners-page #social h3,
+.partners-page .al-feature h3{
+  font-family:var(--partners-headline);font-weight:400;
+  line-height:1.08;letter-spacing:.008em!important;text-wrap:balance
+}
+.partners-page .al-section h2{font-size:clamp(2.8rem,6vw,5.6rem)}
+.partners-page .al-feature h3{font-size:clamp(2.2rem,4vw,4.2rem)}
+.partners-page .al-section p,
+.partners-page .al-card p,
+.partners-page .al-section .al-lead{font-family:Inter,Arial,sans-serif}
+.partners-landing .partners-landing-lockup{display:inline-flex;align-items:center;gap:12px;min-height:44px;color:#fff;text-decoration:none}
+.partners-landing .partners-landing-lockup img{display:block;height:30px;width:auto;max-width:38vw;object-fit:contain}
+.partners-landing .partners-landing-lockup .partners-lockup-wordmark{
+  display:inline-flex;align-items:flex-start;border-left:1px solid #ffffff80;
+  padding-left:13px;font-family:var(--partners-headline);font-size:clamp(17px,1.9vw,24px);
+  font-weight:400;line-height:1.05;letter-spacing:.07em;white-space:nowrap
+}
+.partners-landing .partners-lockup-wordmark sup{
+  font:600 .43em/1 Inter,Arial,sans-serif;letter-spacing:0;vertical-align:super;margin-left:3px
+}
+.partners-landing .briefing-heading{
+  font-family:var(--partners-headline);font-weight:400;letter-spacing:.012em!important;
+  font-size:clamp(3.3rem,10.8vw,10rem);line-height:1.06;text-wrap:balance
+}
+.partners-landing .briefing-heading .italic{font-style:normal}
+.partners-landing .partners-landing-lockup:focus-visible{outline:2px solid #fff;outline-offset:6px}
+@media(max-width:520px){
+ .partners-page .partners-site-header .briefing-partners-lockup{gap:9px}
+ .partners-page .partners-site-header .briefing-partners-wordmark{font-size:16px;padding-left:10px;letter-spacing:.055em}
+ .partners-page .reference-hero h1{font-size:clamp(3rem,13vw,5rem);line-height:1.1}
+ .partners-landing .partners-landing-lockup{gap:9px}
+ .partners-landing .partners-landing-lockup img{height:26px}
+ .partners-landing .partners-landing-lockup .partners-lockup-wordmark{padding-left:9px;font-size:16px}
+ .partners-landing .briefing-heading{font-size:clamp(3.2rem,12vw,6rem);line-height:1.07}
+}
