@@ -7,7 +7,6 @@
   // Demonstration records are never advertised as real units or available territories.
   const cities = source.filter(city => city && city.exemplo === false && ['ativa', 'nao_ativa'].includes(city.status));
   const extras = Array.isArray(globalThis.WINF_UNIDADES_EXTRAS) ? globalThis.WINF_UNIDADES_EXTRAS.filter(city => city && city.exemplo === false && city.status === 'ativa') : [];
-  const activeOnly = document.getElementById('directory-active-only');
   const extrasSection = document.getElementById('directory-extras');
   const extraResults = document.getElementById('directory-extra-results');
   const query = document.getElementById('directory-query');
@@ -22,7 +21,7 @@
   let mode = 'ativas';
   const names = { automotivo: 'Automotivo', residencial: 'Residencial', ambos: 'Automotivo + residencial' };
   const normalize = value => String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
-  const eligible = city => mode === 'ativas' ? (!activeOnly.checked || city.status === 'ativa') : city.status === 'nao_ativa' && city.disponivelParaAtivacao === true;
+  const eligible = city => mode === 'ativas' ? city.status === 'ativa' : city.status === 'nao_ativa' && city.disponivelParaAtivacao === true;
   function safeUrl(value) {
     if (!value) return null;
     try {
@@ -74,10 +73,11 @@
     extrasSection.hidden = extraMatched.length === 0;
     empty.hidden = matched.length + extraMatched.length !== 0;
     enquiry.hidden = mode !== 'territorios';
-    count.textContent = mode === 'ativas' ? matched.length + ' de ' + cities.length : matched.length + (matched.length === 1 ? ' território confirmado' : ' territórios confirmados');
-    activeOnly.closest('label').hidden = mode !== 'ativas';
-    document.getElementById('directory-kicker').textContent = mode === 'ativas' ? 'REDE WINF // UNIDADES E TERRITÓRIOS' : 'CONSULTE A EXPANSÃO';
-    document.getElementById('directory-title').textContent = mode === 'ativas' ? 'Relação de territórios' : 'Onde você quer começar?';
+    count.textContent = mode === 'ativas' ? (matched.length + extraMatched.length) + (matched.length + extraMatched.length === 1 ? ' unidade ativa' : ' unidades ativas') : matched.length + (matched.length === 1 ? ' território confirmado' : ' territórios confirmados');
+    const activeNotice = document.querySelector('.directory-active-toggle');
+    if (activeNotice) activeNotice.hidden = mode !== 'ativas';
+    document.getElementById('directory-kicker').textContent = mode === 'ativas' ? 'LOCATOR WINF // UNIDADES ATIVAS' : 'WINF PARTNERS // CONSULTA DE EXPANSÃO';
+    document.getElementById('directory-title').textContent = mode === 'ativas' ? 'Unidades em operação' : 'Onde você quer começar?';
     document.getElementById('directory-empty-title').textContent = mode === 'ativas' ? 'Vamos encontrar seu atendimento.' : 'Consulte a cidade que você tem em mente.';
     document.getElementById('directory-empty-copy').textContent = mode === 'ativas' ? 'Ainda não há unidades cadastradas que correspondam à sua busca. Fale com a central para confirmar o atendimento na sua região.' : 'A lista de territórios disponíveis será exibida conforme as confirmações da equipe. Você também pode informar uma cidade abaixo e solicitar uma consulta.';
     const contact = document.getElementById('directory-empty-contact');
@@ -86,7 +86,6 @@
     empty.querySelector('button[data-directory-mode]').hidden = mode === 'territorios';
     modes.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.directoryMode === mode)));
   }
-  activeOnly.addEventListener('change', render);
   query.addEventListener('input', render);
   state.addEventListener('change', render);
   service.addEventListener('change', render);
