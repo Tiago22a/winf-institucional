@@ -133,3 +133,22 @@ test("briefing remains a separate, unmodified deep dive with all critical anchor
   assert(brief.includes('id="'+anchor+'"'),anchor);
  assert.match(page,/WINF Partners™/);
 });
+
+
+test("subtle gallery-inspired card lighting is opt-in, accessible and does not change functionality",()=>{
+ assert.match(css, /\/\* WINF Partners — refined interaction lighting v1 \*\//);
+ assert.match(css, /@media \(hover:hover\) and \(pointer:fine\)/);
+ for(const sel of [
+  ".visual-duo figure:hover", ".pillar-grid article:hover", ".model:hover",
+  ".model.featured:hover", ".partner-options article:hover",
+  ".guided-discovery__steps > a:hover", ".ecosystem-explore__item:hover"
+ ])assert(css.includes(sel),sel);
+ assert.match(css, /\.model:focus-within/);
+ assert.match(css, /\.partner-options article:focus-within/);
+ assert.match(css, /\.guided-discovery__steps > a:focus-visible/);
+ assert.match(css, /\.ecosystem-explore__item:focus-visible/);
+ assert.match(css, /@media \(prefers-reduced-motion:reduce\)[\s\S]*transition: none !important/);
+ assert.match(css, /transform: none !important/);
+ assert(!css.includes("cursor:pointer!important"),"cards are not accidentally made clickable");
+ for(const id of ["ecossistema","modelos","parcerias"])assert(page.includes('id="'+id+'"'));
+});
