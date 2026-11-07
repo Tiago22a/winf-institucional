@@ -16,7 +16,7 @@ test("Partners is a real, indexable flagship homepage, not a login placeholder",
  assert.match(page,/og:title/);
  assert.match(page,/name="description"/);
  assert.match(page,/id="hero-title"/);
- assert.match(page,/NÓS ESTRUTURAMOS/);
+ assert.match(page,/UMA NOVA FORMA/);
  assert(!page.includes('href="https://winf.com.br/partners"'));
  assert(!page.includes("Acessar WINF OS Terminal"));
  assert(!page.includes("Acesso exclusivo para líderes"));
@@ -93,9 +93,43 @@ test("WINF Partners logo follows official AeroCore menu wordmark, without loose 
 test("ecosystem menus present NeoSkin and WINF Select clearly, including on mobile",()=>{
  assert.match(page,/aria-label="WINF Partners: navegação principal"/);
  assert.match(page,/aria-label="Menu para dispositivos móveis"/);
- assert.match(page,/class="ecosystem-menu"/);
+ assert.match(page,/href="#ecossistema">Ecossistema/);
  assert(page.includes('<a href="/aerocore/neoskin/">NeoSkin™'));
  assert(page.includes('<a href="/aerocore/winf-select/">WINF Select™'));
- assert.match(page,/ECOSSISTEMA WINF/);
+ assert.match(page,/WINF PARTNERS™ \/ FRANQUIA TECNOLÓGICA/);
  assert.match(page,/class="footer-legal"/);
+ assert(!page.includes('class="wf-reference-footer"'));
+ assert.match(page,/aria-label="Rodapé institucional WINF Partners"/);
+});
+
+
+test("cinematic Partners homepage preserves real video with static poster fallback",()=>{
+ assert.match(page,/<video class="hero-video" autoplay muted loop playsinline preload="metadata"/);
+ assert.match(page,/<source src="\/partners\/media\/hero\.mp4" type="video\/mp4">/);
+ assert.match(page,/poster="\/partners\/media\/hero-poster\.webp"/);
+ assert(fs.existsSync(path.join(root,"partners/media/hero.mp4")));
+ assert(fs.existsSync(path.join(root,"partners/media/hero-poster.webp")));
+ assert.match(css,/\.hero-media\{/);
+ assert.match(css,/\.hero-video\{/);
+ assert.match(css,/prefers-reduced-motion:reduce/);
+ assert.match(css,/\.hero-media\{display:none\}/);
+});
+test("Partners navigation is its own discovery funnel, not AeroCore product menu",()=>{
+ const nav=page.match(/<nav class="desktop-nav"[\s\S]+?<\/nav>/)?.[0];
+ assert(nav);
+ for(const id of ["#visao","#ecossistema","#aurel","#modelos","#processo"])assert(nav.includes('href="'+id+'"'),id);
+ assert(!nav.includes("/aerocore/"));
+ assert(!nav.includes("WINF SELECT™"));
+ assert.match(page,/class="header-cta" href="\/briefing\/#contact">QUERO PARTICIPAR/);
+ assert.match(brief,/id="contact"/);
+ assert.match(page,/class="mobile-participate" href="\/briefing\/#contact"/);
+ assert.match(page,/id="discovery-title"/);
+ assert.match(page,/class="guided-discovery__steps"/);
+ assert.match(page,/class="ecosystem-explore__grid"/);
+});
+test("briefing remains a separate, unmodified deep dive with all critical anchors",()=>{
+ assert.match(page,/href="\/briefing\/">ACESSAR O BRIEFING COMPLETO/);
+ for(const anchor of ["contact","asset-light-investment","kiosk","studio"])
+  assert(brief.includes('id="'+anchor+'"'),anchor);
+ assert.match(page,/WINF Partners™/);
 });
