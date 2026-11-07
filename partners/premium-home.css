@@ -240,3 +240,111 @@ img{display:block;max-width:100%;height:auto}a{color:inherit;text-decoration:non
  .hero-media{display:none}
  .guided-discovery__steps>a{transition:none}
 }
+
+
+/* WINF Partners — refined interaction lighting v1
+   Inspired by the photo-gallery hover: subtle borders, localized light,
+   restrained contrast and accessible keyboard equivalents.
+   Purely visual: no elements are made clickable and no JS is required. */
+:root {
+  --partners-glow-white: rgba(235,240,255,.16);
+  --partners-glow-blue: rgba(54,113,225,.18);
+  --partners-glow-coral: rgba(255,107,95,.13);
+}
+@media (hover:hover) and (pointer:fine) {
+  /* Editorial photos light up, without becoming fake buttons. */
+  .visual-duo figure {
+    transition: box-shadow .25s ease;
+  }
+  .visual-duo figure:hover {
+    box-shadow: inset 0 0 0 1px rgba(244,246,252,.30),
+                0 0 27px rgba(198,204,220,.065);
+  }
+  .visual-duo figure:hover img {
+    filter: grayscale(.75) brightness(.88) contrast(1.06);
+    transform: scale(1.018);
+  }
+
+  /* Content cards: an outline and a little reflected light, not color blocks. */
+  .pillar-grid article,
+  .model,
+  .partner-options article,
+  .guided-discovery__steps > a,
+  .ecosystem-explore__item {
+    transition: box-shadow .24s ease, border-color .24s ease,
+                background-color .24s ease, transform .24s ease;
+  }
+  .pillar-grid article:hover {
+    background: #1b1d21;
+    box-shadow: inset 0 0 0 1px rgba(232,234,242,.25),
+                inset 0 28px 50px -48px var(--partners-glow-white);
+  }
+  .model:hover {
+    border-color: #8a8f9d;
+    box-shadow: inset 0 0 0 1px rgba(247,248,252,.10),
+                0 12px 34px rgba(0,0,0,.14);
+  }
+  .model.featured:hover {
+    border-color: #9ba2af;
+    box-shadow: inset 0 0 0 2px rgba(17,32,56,.16),
+                0 12px 34px rgba(0,0,0,.12);
+  }
+  .partner-options article:hover {
+    border-color: #8d97a8;
+    background: #1b1d23;
+    box-shadow: inset 2px 0 0 var(--partners-coral),
+                0 0 28px var(--partners-glow-coral);
+  }
+  .guided-discovery__steps > a:hover {
+    border-color: #a5afc2;
+    background: linear-gradient(155deg,#1d2637,#13171f);
+    box-shadow: inset 0 0 0 1px rgba(232,237,250,.08),
+                0 0 23px var(--partners-glow-blue);
+    transform: translateY(-2px);
+  }
+  .ecosystem-explore__item:hover {
+    background: #20252c;
+    box-shadow: inset 0 0 0 1px rgba(223,231,246,.20),
+                inset 0 32px 45px -40px var(--tile-accent);
+  }
+  /* A minimal accent where the user is actually about to navigate. */
+  .model-cta:hover,
+  .text-link:hover {
+    border-color: var(--partners-royal);
+    text-decoration-color: var(--partners-royal);
+  }
+}
+
+/* Keyboard highlighting is independent of hover; doesn't need a mouse. */
+.model:focus-within {
+  border-color: #afb6c4;
+  box-shadow: inset 0 0 0 1px rgba(250,250,255,.12);
+}
+.model.featured:focus-within {
+  border-color: #697384;
+  box-shadow: inset 0 0 0 2px rgba(17,32,56,.18);
+}
+.partner-options article:focus-within {
+  border-color: #b0bac8;
+  box-shadow: inset 2px 0 0 var(--partners-coral);
+}
+.guided-discovery__steps > a:focus-visible,
+.ecosystem-explore__item:focus-visible {
+  outline: 2px solid #e4e7ed;
+  outline-offset: -4px;
+  box-shadow: inset 0 0 0 1px rgba(245,246,252,.23),
+              0 0 22px var(--partners-glow-blue);
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .visual-duo figure,
+  .visual-duo figure img,
+  .pillar-grid article,
+  .model,
+  .partner-options article,
+  .guided-discovery__steps > a,
+  .ecosystem-explore__item {
+    transition: none !important;
+    transform: none !important;
+  }
+}
