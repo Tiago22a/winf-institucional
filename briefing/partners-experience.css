@@ -1,0 +1,60 @@
+/* WINF Partners™ Briefing — premium lifestyle narrative & dedicated roadmap footer.
+   Scoped to this page. Design follows the editorial rhythm of the expansion journey. */
+.partners-page #social .pb-lifestyle-heading{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.partners-page #social .pb-lifestyle-heading h3{font-family:"Gustavo",Inter,Arial,sans-serif;font-weight:400!important;letter-spacing:-.052em!important;line-height:1.01!important;text-wrap:balance;max-width:840px}
+.partners-page #social .pb-lifestyle-heading h3 span{color:#b3b5ba}
+.partners-page #social .pb-lifestyle-intro{color:#dbdcde!important;max-width:430px;font:400 clamp(16px,1.3vw,20px)/1.6 "Gustavo",Inter,sans-serif!important;text-align:left!important;letter-spacing:-.018em!important;text-transform:none!important}
+.partners-page #social .pb-lifestyle-intro strong{font-weight:600;color:#fff}
+.partners-page #social .pb-lifestyle-detail{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(26px,4vw,65px);padding:clamp(35px,5vw,78px) 0;border-top:1px solid #ffffff3d;border-bottom:1px solid #ffffff3d;margin-top:clamp(46px,7vw,86px)}
+.partners-page #social .pb-lifestyle-detail .pb-lifestyle-eyebrow{display:block;font:700 10px/1.6 "JetBrains Mono",monospace;letter-spacing:.17em;color:#b7b9be;margin-bottom:18px}
+.partners-page #social .pb-lifestyle-detail h3{color:#fff;font:400 clamp(30px,3.7vw,58px)/1.05 "Gustavo",Inter,sans-serif;letter-spacing:-.042em;text-transform:uppercase;max-width:690px;margin:0}
+.partners-page #social .pb-lifestyle-detail h3 span{font-weight:100;color:#a5a8ad}
+.partners-page #social .pb-lifestyle-detail .pb-lifestyle-description{color:#bfc1c6;font:400 clamp(15px,1.15vw,18px)/1.7 "Gustavo",Inter,sans-serif;max-width:560px}
+.partners-page #social .pb-lifestyle-detail .pb-lifestyle-description strong{color:#fff}
+.partners-page #social .pb-lifestyle-detail .pb-lifestyle-link{display:inline-flex;align-items:center;gap:25px;margin-top:18px;padding:15px 21px;min-height:51px;border:1px solid #ffffff69;color:#fff;text-decoration:none;font:700 11px/1.45 Inter,sans-serif;letter-spacing:.13em;text-transform:uppercase}
+.partners-page #social .pb-lifestyle-detail .pb-lifestyle-link:is(:hover,:focus-visible){background:#fff;color:#131314}
+.partners-page #social .pb-lifestyle-caption{color:#d4d4d4;font-family:Inter,sans-serif;font-weight:600;text-transform:uppercase}
+.partners-page #social .pb-lifestyle-card-name{font-family:"Gustavo",Inter,sans-serif;font-weight:400!important;text-transform:uppercase;letter-spacing:-.025em}
+.partners-page .al-model-hero-media img{height:100%;width:100%;object-fit:cover;display:block}
+.partners-page .al-model-hero-media span{z-index:2}
+/* Own footer: no AeroCore reference header or AeroCore copyright headline. */
+.partners-page .pb-partners-footer,.partners-page .pb-partners-footer *{box-sizing:border-box}
+.partners-page .pb-partners-footer{display:block!important;position:relative;z-index:2;clear:both;width:100%;background:linear-gradient(164deg,#1b1b1d 0%,#0c0c0e 55%,#040405 100%);color:#e6e6e8;border-top:1px solid #ffffff3a;padding:0!important;margin:0!important;text-align:left!important;font-family:"Gustavo",Inter,Arial,sans-serif;line-height:1.65}
+.partners-page .pb-partners-footer a{text-decoration:none;color:inherit}
+.partners-page .pb-partners-footer a:focus-visible{outline:2px solid #fff;outline-offset:4px}
+.partners-page .pb-footer-container{width:min(calc(100% - 64px),1360px);margin:0 auto}
+.partners-page .pb-footer-feature{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(280px,.7fr);gap:clamp(40px,7vw,100px);padding:clamp(70px,9vw,140px) 0 80px;align-items:end}
+.partners-page .pb-footer-eyebrow{margin:0 0 21px;display:block;font:750 10px/1.6 "JetBrains Mono",monospace;letter-spacing:.2em;color:#aeb0b5;text-transform:uppercase}
+.partners-page .pb-footer-feature h2{font:400 clamp(43px,6.3vw,92px)/.98 "Gustavo",Inter,sans-serif;letter-spacing:-.065em;text-transform:uppercase;color:#fff;margin:0 0 28px;text-wrap:balance}
+.partners-page .pb-footer-feature h2 span{color:#8f9196;font-weight:100}
+.partners-page .pb-footer-feature p{font:400 clamp(17px,1.5vw,21px)/1.55 "Gustavo",Inter,sans-serif;color:#bfc1c6;max-width:670px;margin:0}
+.partners-page .pb-footer-buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.partners-page .pb-footer-buttons a{display:inline-flex;align-items:center;justify-content:space-between;gap:23px;min-height:52px;padding:15px 20px;font:750 11px/1.35 Inter,sans-serif;letter-spacing:.07em;border:1px solid #ffffff72}
+.partners-page .pb-footer-buttons a:first-child{color:#131314;background:#f8f8f7}
+.partners-page .pb-footer-buttons a:is(:hover,:focus-visible){background:#ddd;color:#111}
+.partners-page .pb-footer-guide{padding:27px;border:1px solid #ffffff37;background:#ffffff08}
+.partners-page .pb-footer-guide strong{display:block;color:#fff;font:500 clamp(25px,2.6vw,38px)/1.07 "Gustavo",Inter,sans-serif;letter-spacing:-.04em;margin-bottom:18px}
+.partners-page .pb-footer-guide nav{display:grid;gap:0}
+.partners-page .pb-footer-guide nav a{display:flex;align-items:center;gap:13px;min-height:52px;padding:13px 0;border-top:1px solid #ffffff23;font:450 14px/1.45 Inter,sans-serif;color:#c8c9cc;transition:color .2s,transform .2s}
+.partners-page .pb-footer-guide nav a span{color:#92959c;font:700 11px "JetBrains Mono",monospace}
+.partners-page .pb-footer-guide nav a svg{width:13px;height:13px;margin-left:auto;flex-shrink:0}
+.partners-page .pb-footer-guide nav a:is(:hover,:focus-visible){color:#fff;transform:translateX(3px)}
+.partners-page .pb-footer-crossroads{border-top:1px solid #ffffff32;border-bottom:1px solid #ffffff32;padding:42px 0;display:grid;grid-template-columns:minmax(0,1.35fr) repeat(3,minmax(0,1fr));gap:clamp(22px,4vw,57px)}
+.partners-page .pb-footer-identity{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.partners-page .pb-footer-lockup{display:inline-flex;align-items:center;gap:12px;min-height:45px}
+.partners-page .pb-footer-lockup img{height:29px;width:auto;max-width:100px;object-fit:contain}
+.partners-page .pb-footer-lockup span{border-left:1px solid #ffffff69;padding-left:13px;font:400 clamp(18px,2vw,26px)/1.2 "Gustavo",Inter,sans-serif;letter-spacing:.04em;color:#fff}
+.partners-page .pb-footer-lockup sup{font-size:.4em;vertical-align:super;margin-left:2px}
+.partners-page .pb-footer-identity p{margin:0;max-width:265px;color:#aeb0b5;font:400 15px/1.65 "Gustavo",Inter,sans-serif}
+.partners-page .pb-footer-col h3{font:700 10px/1.5 "JetBrains Mono",monospace;letter-spacing:.13em;color:#aaaeb5;text-transform:uppercase;margin:0 0 20px}
+.partners-page .pb-footer-col nav{display:grid;gap:11px}
+.partners-page .pb-footer-col nav a{font:400 14px/1.5 "Gustavo",Inter,sans-serif;color:#c4c6ca;transition:color .15s}
+.partners-page .pb-footer-col nav a:is(:hover,:focus-visible){color:#fff;text-decoration:underline;text-underline-offset:5px}
+.partners-page .pb-footer-strip{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:30px 0 43px}
+.partners-page .pb-footer-strip p{font:600 10px/1.6 "JetBrains Mono",monospace;letter-spacing:.075em;color:#92949a;margin:0}
+.partners-page .pb-footer-strip .pb-footer-strip-links{display:flex;flex-wrap:wrap;gap:22px}
+.partners-page .pb-footer-strip a{color:#c0c0c4;text-decoration:underline;text-underline-offset:5px}
+@media(max-width:1020px){.partners-page .pb-footer-feature{grid-template-columns:1fr}.partners-page .pb-footer-guide{max-width:700px}.partners-page .pb-footer-crossroads{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){.partners-page .pb-footer-container{width:calc(100% - 40px)}.partners-page #social .pb-lifestyle-detail{grid-template-columns:1fr}.partners-page #social .pb-lifestyle-heading{gap:22px}.partners-page .pb-footer-feature{padding:75px 0 55px;gap:36px}.partners-page .pb-footer-feature h2{font-size:clamp(41px,11vw,65px)}.partners-page .pb-footer-crossroads{gap:35px 20px}.partners-page .pb-footer-buttons a{flex:1 1 100%}}
+@media(max-width:460px){.partners-page .pb-footer-crossroads{grid-template-columns:1fr}.partners-page .pb-footer-feature h2{font-size:clamp(36px,10.6vw,52px)}.partners-page .pb-footer-guide{padding:20px}.partners-page .pb-footer-strip{align-items:flex-start;flex-direction:column}}
+@media(prefers-reduced-motion:reduce){.partners-page .pb-footer-guide nav a{transition:none!important;transform:none!important}}
