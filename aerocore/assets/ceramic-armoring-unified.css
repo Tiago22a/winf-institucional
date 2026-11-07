@@ -44,3 +44,43 @@ body.ca-page .ca-social-end a{color:#fff;text-decoration:underline;text-underlin
 @media(max-width:800px){body.ca-page .ca-proof-wrap{grid-template-columns:1fr}body.ca-page .ca-proof-section{padding:70px 20px}}
 @media(max-width:600px){body.ca-page .ca-hero-copy{padding-block:135px 90px}body.ca-page .ca-hero-copy h1{font-size:clamp(38px,11vw,65px)!important;letter-spacing:.065em!important}body.ca-page .ca-hero-copy .ca-hero-actions a{width:100%}body.ca-page .ca-section-title{font-size:clamp(31px,8vw,45px)}}
 @media(prefers-reduced-motion:reduce){body.ca-page #arsenal .ac-product-grid>div{transition:none!important}}
+
+
+/* Animated film backdrop + same button-only interaction system as AeroCore and NeoSkin.
+   Pale alloy is the Ceramic brand accent; the card itself never turns white on hover. */
+body.ca-page #arsenal.ca-arsenal{isolation:isolate;background:#060608!important;position:relative}
+body.ca-page #arsenal .ca-arsenal-motion{position:absolute;z-index:0;inset:0;overflow:hidden;pointer-events:none}
+body.ca-page #arsenal .ca-arsenal-motion video{display:block;width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(.7) brightness(.65);opacity:.85}
+body.ca-page #arsenal .ca-arsenal-motion:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.84) 0%,rgba(0,0,0,.23) 42%,rgba(0,0,0,.83) 100%);pointer-events:none}
+body.ca-page #arsenal .ca-arsenal-content{position:relative;z-index:2}
+body.ca-page #arsenal .ac-product-grid{background:rgba(255,255,255,.08)!important}
+body.ca-page #arsenal .ac-product-grid>div{
+  background:rgba(4,4,6,.58)!important;
+  backdrop-filter:blur(1.5px)!important;
+  -webkit-backdrop-filter:blur(1.5px)!important;
+  border-color:rgba(255,255,255,.25)!important;
+  color:#f6f6f8!important;
+  transition:border-color .23s ease,background .23s ease!important
+}
+body.ca-page #arsenal .ac-product-grid>div:is(:hover,:focus-within){
+  background:rgba(4,4,6,.62)!important;
+  border-color:rgba(232,232,239,.65)!important;
+}
+body.ca-page #arsenal .ac-product-grid>div :is(h4,p,span){color:#f0f0f3!important}
+body.ca-page #arsenal .ac-product-grid>div .group-hover\:border-black\/20{border-color:rgba(255,255,255,.2)!important}
+body.ca-page #arsenal .ac-product-grid>div a{
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.025)!important;
+  border:1px solid rgba(255,255,255,.5)!important;
+  color:#f4f4f6!important;
+  transition:background .2s ease,color .2s ease,border-color .2s ease!important;
+}
+body.ca-page #arsenal .ac-product-grid>div a:is(:hover,:focus-visible){
+  background:#dadbe0!important;border-color:#dadbe0!important;color:#08090b!important
+}
+body.ca-page #arsenal .ac-product-grid>div a:focus-visible{outline:2px solid #f2f3f5;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){
+  body.ca-page #arsenal .ca-arsenal-motion video{display:none}
+  body.ca-page #arsenal .ca-arsenal-motion{background:linear-gradient(145deg,#18181b,#050505)}
+  body.ca-page #arsenal .ac-product-grid>div{transition:none!important}
+}
