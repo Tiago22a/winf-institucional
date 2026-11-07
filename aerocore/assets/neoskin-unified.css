@@ -1,0 +1,40 @@
+/* NeoSkin™ | direção editorial unificada com a família WINF, sem alterar o wordmark.
+   Somente /aerocore/neoskin/. O corpo preserva a leitura em Inter.
+   Hierarquia editorial: branco + verde-oliva, nunca cinza para a mensagem principal. */
+:root{--ns-olive:#A2B18D;--ns-olive-deep:#7B8C64}
+body.ns-page #brand-header .ns-header-brand{font-family:Outfit,Inter,sans-serif!important;font-weight:300!important;letter-spacing:.33em!important;color:#fff;font-size:clamp(17px,2vw,24px)}
+body.ns-page #brand-header .ns-header-brand span{font-size:.48em;letter-spacing:0;vertical-align:super;margin-left:1px}
+body.ns-page #brand-header .ns-header-brand:hover{color:#fff}
+body.ns-page main :is(h2,h3).ns-display-title{
+  font-family:Montserrat,Inter,sans-serif!important;font-weight:900!important;
+  font-style:normal!important;letter-spacing:-.055em!important;
+  line-height:1.07!important;text-transform:uppercase;color:#f8f8f6!important;
+  text-wrap:balance;
+}
+body.ns-page main .ns-display-title .ns-accent{color:var(--ns-olive)!important}
+body.ns-page main .ns-display-title .ns-muted{color:#f8f8f6!important}
+body.ns-page main .ns-display-title.ns-display-center{text-align:center}
+body.ns-page main h2.ns-display-title{font-size:clamp(32px,4.65vw,70px)}
+body.ns-page main h2.ns-display-title.ns-title-compact{font-size:clamp(27px,3.2vw,48px)}
+body.ns-page main .ns-section-eyebrow{font-family:Inter,Arial,sans-serif!important;font-size:11px!important;letter-spacing:.22em!important;color:var(--ns-olive)!important;font-weight:700!important;text-transform:uppercase}
+body.ns-page main .ns-product-grid h3{font-family:Montserrat,Inter,sans-serif!important;font-weight:800!important;letter-spacing:-.025em!important}
+body.ns-page .ac-return-protocol .ac-return-copy h2{color:#fff}
+body.ns-page .ac-return-protocol .ac-protocol-dot{background:var(--ns-olive)}
+body.ns-page .ac-return-actions a.is-current{color:var(--ns-olive);border-color:var(--ns-olive)}
+body.ns-page .ac-return-actions a.ns-return-home{border-color:#ffffff50}
+body.ns-page .ac-return-actions a.ns-return-home:hover{background:#f2f2f0;color:#111}
+body.ns-page .ac-official-channels h2{font-family:Montserrat,Inter,sans-serif!important;font-style:normal;font-weight:900;letter-spacing:-.055em}
+body.ns-page .ac-official-channels h2 em{font:inherit!important;color:var(--ns-olive)}
+body.ns-page .ac-official-links{max-width:990px;grid-template-columns:repeat(4,minmax(0,1fr))}
+body.ns-page .ac-official-links>a,body.ns-page .ac-official-pending{min-height:75px;padding:13px 12px;gap:9px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+body.ns-page .ac-official-links>a svg,body.ns-page .ac-official-pending svg{height:24px;width:24px;flex:none}
+body.ns-page .ac-official-links>a:hover svg{transform:scale(1.08);transition:transform .2s}
+body.ns-page .ns-social-directory{display:inline-flex;align-items:center;gap:10px;margin-top:22px;color:var(--ns-olive);border-bottom:1px solid var(--ns-olive);text-decoration:none;font:800 11px/1.6 Inter,sans-serif;letter-spacing:.12em;padding-bottom:7px}
+body.ns-page .ns-social-directory:hover{color:#fff;border-color:#fff}
+body.ns-page footer .wf-ref-brand{font-family:Outfit,Inter,sans-serif;letter-spacing:.22em;font-weight:300}
+body.ns-page footer .ns-footer-social-note{font:500 12px/1.8 Inter,Arial,sans-serif;color:#b2b2b6;text-align:center;padding-top:20px}
+body.ns-page footer .ns-footer-social-note a{color:#eee;border-bottom:1px solid #ffffff5b;text-decoration:none}
+body.ns-page footer .ns-footer-social-note a:hover{color:var(--ns-olive);border-color:var(--ns-olive)}
+@media(max-width:760px){body.ns-page .ac-official-links{grid-template-columns:repeat(2,minmax(0,1fr))}body.ns-page .ac-return-protocol{gap:20px}}
+@media(max-width:480px){body.ns-page #brand-header .ns-header-brand{letter-spacing:.2em!important;font-size:18px}body.ns-page main h2.ns-display-title{font-size:clamp(29px,8vw,43px)}body.ns-page main h2.ns-display-title.ns-title-compact{font-size:clamp(27px,7.5vw,39px)}body.ns-page .ac-official-channels h2{font-size:clamp(28px,8vw,38px)}}
+@media(prefers-reduced-motion:reduce){body.ns-page .ac-official-links>a svg{transition:none!important;transform:none!important}}
