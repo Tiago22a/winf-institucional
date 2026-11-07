@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap');
+/* WINF.inc® / institutional-home-only roadmap. Not the Partners footer. */
+.winf-home-roadmap,.winf-home-roadmap *{box-sizing:border-box}
+.winf-home-roadmap{position:relative;isolation:isolate;clear:both;background:#08090a;color:#f4f4f4;border-top:1px solid #ffffff24;padding:0;font-family:Inter,Arial,sans-serif;letter-spacing:0;text-align:left;line-height:1.6}
+.winf-home-roadmap a{color:inherit;text-decoration:none;transition:color .2s ease,border-color .2s ease,background .2s ease}
+.winf-home-roadmap a:hover{color:#fff}
+.winf-home-roadmap a:focus-visible{outline:2px solid #fff;outline-offset:5px}
+.winf-home-roadmap .whr-shell{width:min(1330px,calc(100% - 100px));margin:0 auto}
+.winf-home-roadmap .whr-head{padding:105px 0 70px;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);gap:70px;align-items:end}
+.winf-home-roadmap .whr-eyebrow{display:flex;align-items:center;gap:12px;color:#a6a6ab;font:800 10px/1.5 Inter,Arial,sans-serif;letter-spacing:.25em;margin:0 0 23px;text-transform:uppercase}
+.winf-home-roadmap .whr-eyebrow:before{content:"";width:28px;height:1px;background:#ccc}
+.winf-home-roadmap h2{margin:0;font:900 clamp(42px,6.4vw,94px)/1.01 Montserrat,Inter,Arial,sans-serif;letter-spacing:-.07em;text-transform:uppercase;max-width:890px}
+.winf-home-roadmap h2 span{color:#8d8f94}
+.winf-home-roadmap .whr-head>p{margin:0 0 5px;color:#b6b7bd;font:400 clamp(15px,1.3vw,18px)/1.85 Inter,Arial,sans-serif}
+.winf-home-roadmap .whr-partners-feature{background:linear-gradient(120deg,#f1f1ee,#dddeda);color:#111;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.6fr);gap:24px;align-items:center;padding:clamp(28px,4.3vw,58px);margin-bottom:60px}
+.winf-home-roadmap .whr-feature-eyebrow{color:#505055;font:800 10px/1.5 Inter,Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;margin:0 0 14px}
+.winf-home-roadmap .whr-partners-feature h3{font:900 clamp(28px,3.2vw,50px)/1.1 Montserrat,Inter,sans-serif;letter-spacing:-.055em;margin:0 0 14px}
+.winf-home-roadmap .whr-partners-feature p:not(.whr-feature-eyebrow){color:#52535a;font-size:14px;line-height:1.7;margin:0;max-width:630px}
+.winf-home-roadmap .whr-feature-actions{display:flex;flex-direction:column;align-items:stretch;gap:9px}
+.winf-home-roadmap .whr-feature-actions a{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:51px;padding:13px 17px;border:1px solid #1119;color:#111;background:transparent;font:800 11px/1.4 Inter,Arial,sans-serif;letter-spacing:.05em}
+.winf-home-roadmap .whr-feature-actions a:first-child{background:#111;color:#fff}
+.winf-home-roadmap .whr-feature-actions a:hover{background:#333;color:#fff}
+.winf-home-roadmap .whr-columns{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(18px,3.2vw,56px);padding:42px 0 66px;border-top:1px solid #ffffff36}
+.winf-home-roadmap .whr-column{display:flex;flex-direction:column;align-items:flex-start;gap:13px;min-width:0}
+.winf-home-roadmap .whr-column .whr-column-title{display:block;margin:0 0 11px;font:800 11px/1.6 Inter,Arial,sans-serif;color:#fff;letter-spacing:.13em;text-transform:uppercase}
+.winf-home-roadmap .whr-column a,.winf-home-roadmap .whr-column .whr-pending{font:500 13px/1.55 Inter,Arial,sans-serif;color:#b9babf}
+.winf-home-roadmap .whr-column a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}
+.winf-home-roadmap .whr-column .whr-pending{color:#73747c;cursor:default}
+.winf-home-roadmap .whr-social-feature{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:center;border-top:1px solid #ffffff35;border-bottom:1px solid #ffffff35;padding:29px 0}
+.winf-home-roadmap .whr-social-feature strong{font:800 clamp(18px,2vw,27px)/1.3 Montserrat,Inter,sans-serif;letter-spacing:-.04em;display:block}
+.winf-home-roadmap .whr-social-feature p{margin:7px 0 0;font-size:13px;line-height:1.7;color:#a4a5ab}
+.winf-home-roadmap .whr-social-feature>a{display:inline-flex;align-items:center;justify-content:space-between;gap:22px;border:1px solid #ffffff62;padding:15px 18px;min-height:54px;color:#fff;font:800 11px/1.5 Inter,Arial,sans-serif;letter-spacing:.08em}
+.winf-home-roadmap .whr-social-feature>a:hover{background:white;color:#111}
+.winf-home-roadmap .whr-signoff{display:flex;align-items:center;justify-content:space-between;gap:35px;padding:43px 0 18px}
+.winf-home-roadmap .whr-official-logo{display:inline-flex;align-items:center;flex-shrink:0;flex-direction:column;gap:4px}
+.winf-home-roadmap .whr-official-logo img{width:123px;height:auto;max-height:46px;object-fit:contain}
+.winf-home-roadmap .whr-official-logo span{font:700 8px/1.3 Inter,Arial,sans-serif;letter-spacing:.07em;color:#b8b8be}
+.winf-home-roadmap .whr-signoff-center{font:800 10px/1.6 Inter,Arial,sans-serif;letter-spacing:.2em;color:#c6c6c8;text-transform:uppercase}
+.winf-home-roadmap .whr-regions{display:flex;gap:17px;font:800 10px/1.5 Inter,Arial,sans-serif;letter-spacing:.1em;color:#bfc0c3}
+.winf-home-roadmap .whr-regions span{display:flex;gap:6px;align-items:center}
+.winf-home-roadmap .whr-regions i{width:5px;height:5px;border-radius:50%;background:#b9b9bd;display:block}
+.winf-home-roadmap .whr-legal{display:flex;gap:22px;flex-wrap:wrap;justify-content:space-between;padding:18px 0 33px;margin-top:18px;border-top:1px solid #ffffff1c;color:#878892;font:500 10px/1.8 Inter,Arial,sans-serif}
+.winf-home-roadmap .whr-legal a{color:#c7c7ca}
+.winf-home-roadmap .whr-legal-links{display:flex;gap:18px;flex-wrap:wrap}
+.winf-home-roadmap .whr-legal-links a:hover{text-decoration:underline}
+.winf-home-roadmap .whr-legal .whr-by{white-space:nowrap}
+.winf-home-roadmap .whr-legal .whr-by a{color:#ccc}
+@media(max-width:1000px){.winf-home-roadmap .whr-shell{width:calc(100% - 62px)}.winf-home-roadmap .whr-head{grid-template-columns:1fr;gap:28px;padding-top:83px}.winf-home-roadmap .whr-head>p{max-width:700px}.winf-home-roadmap .whr-columns{grid-template-columns:repeat(2,minmax(0,1fr));gap:35px}.winf-home-roadmap .whr-partners-feature{grid-template-columns:1fr}.winf-home-roadmap .whr-feature-actions{flex-direction:row;flex-wrap:wrap}.winf-home-roadmap .whr-feature-actions a{flex:1;min-width:180px}}
+@media(max-width:640px){.winf-home-roadmap .whr-shell{width:calc(100% - 36px)}.winf-home-roadmap .whr-head{padding:70px 0 42px}.winf-home-roadmap h2{font-size:clamp(36px,10vw,60px);letter-spacing:-.06em}.winf-home-roadmap .whr-partners-feature{padding:26px 22px;margin-bottom:42px}.winf-home-roadmap .whr-feature-actions{flex-direction:column}.winf-home-roadmap .whr-columns{grid-template-columns:1fr;padding:40px 0 45px;gap:30px}.winf-home-roadmap .whr-column{border-bottom:1px solid #ffffff16;padding-bottom:22px}.winf-home-roadmap .whr-social-feature{grid-template-columns:1fr}.winf-home-roadmap .whr-social-feature>a{width:100%}.winf-home-roadmap .whr-signoff{flex-wrap:wrap;gap:24px}.winf-home-roadmap .whr-signoff-center{order:3;width:100%}.winf-home-roadmap .whr-legal{flex-direction:column;gap:10px}}
+@media(prefers-reduced-motion:reduce){.winf-home-roadmap a{transition:none}}
+/* Top header access — compact WINF OS icon, leave global hamburger unchanged. */
+.winf-home-os-link{display:inline-flex;align-items:center;gap:9px;min-height:43px;padding:8px 13px;border:1px solid #ffffff66;background:#08090b75;color:#fff;text-decoration:none;font:800 11px/1.3 Inter,Arial,sans-serif;letter-spacing:.1em;white-space:nowrap;backdrop-filter:blur(10px);transition:background .2s,border-color .2s}
+.winf-home-os-link:hover{background:#ffffff2a;border-color:#fff}
+.winf-home-os-link:focus-visible{outline:2px solid white;outline-offset:4px}
+.winf-home-os-link img{width:22px;height:25px;object-fit:contain;filter:drop-shadow(0 0 5px #ffffff66)}
+.winf-home-os-link .whr-os-mark{font-size:10px;color:#b7b7bc}
+@media(max-width:500px){.winf-home-os-link{min-height:40px;gap:6px;padding:7px 10px;font-size:10px}.winf-home-os-link img{width:18px;height:22px}.winf-home-os-link .whr-os-mark{display:none}}
