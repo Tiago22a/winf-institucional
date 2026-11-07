@@ -348,3 +348,124 @@ img{display:block;max-width:100%;height:auto}a{color:inherit;text-decoration:non
     transform: none !important;
   }
 }
+
+
+/* Partners 2026.11 — final editorial footer and usability adjustments
+   This is the franchise footer, NOT the shared AeroCore/product footer. */
+.site-footer {
+  background:#111418;
+  border-top:1px solid #ffffff35;
+}
+.site-footer .footer-intro {
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  max-width:none;
+  padding:clamp(85px,10vw,145px) max(clamp(24px,6vw,105px),calc((100vw - 1430px)/2));
+  border-bottom:1px solid #ffffff30;
+  background:linear-gradient(110deg,#152c40,#536b7c 55%,#252b2f);
+}
+.site-footer .footer-intro::before {
+  content:"";
+  position:absolute;
+  z-index:-2;
+  inset:-35px;
+  background:url('/partners/media/hero-poster.webp') center / cover no-repeat;
+  filter:blur(27px) grayscale(.65) brightness(.80);
+  opacity:.55;
+  transform:scale(1.07);
+  pointer-events:none;
+}
+.site-footer .footer-intro::after {
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:0;
+  background:linear-gradient(90deg,rgba(11,21,30,.88),rgba(19,34,47,.64) 75%,rgba(15,22,31,.76));
+  pointer-events:none;
+}
+.footer-intro-inner {
+  width:100%;
+  max-width:1430px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:minmax(0,1.25fr) minmax(265px,.65fr);
+  gap:clamp(35px,6vw,100px);
+  align-items:end;
+}
+.site-footer .footer-intro h2{
+  margin:21px 0 22px;
+  font-size:clamp(37px,5vw,72px);
+  line-height:1.075;
+}
+.site-footer .footer-intro h2 em{
+  color:#e9eef5;
+  font-style:normal;
+}
+.site-footer .footer-intro p{
+  font-size:15px;
+  line-height:1.85;
+  max-width:690px;
+  color:#e1e4e9;
+}
+.footer-intro-actions{
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  gap:12px;
+  max-width:340px;
+  width:100%;
+}
+.footer-intro-actions .btn{width:100%;justify-content:space-between}
+.site-footer .footer-main{
+  max-width:1640px;
+  margin:0 auto;
+  padding-top:clamp(66px,6.5vw,103px);
+  padding-bottom:clamp(66px,6.5vw,100px);
+  background:transparent;
+}
+.site-footer .footer-brand .partners-wordmark strong{
+  color:#fafbfc;
+  letter-spacing:-.075em;
+}
+.site-footer .footer-brand p{max-width:310px}
+.footer-brand-ig {
+  display:inline-flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:22px;
+  font:700 11px/1.6 var(--mono);
+  letter-spacing:.04em;
+  margin-top:7px;
+  padding-bottom:6px;
+  border-bottom:1px solid #ffffff45;
+}
+.footer-brand-ig:hover{border-color:#fff;color:#fff}
+.site-footer nav a,
+.site-footer .footer-contact p{color:#c5cad1}
+.site-footer .footer-contact a:not(.footer-social){
+  background:transparent;
+  color:#f7f8fa;
+  border-color:#929daa;
+}
+.site-footer .footer-contact a:not(.footer-social):hover{
+  color:#080c12;
+  background:#ecf0f4;
+  border-color:#ecf0f4;
+}
+.site-footer .footer-bottom{background:transparent}
+.site-footer .footer-bottom span{max-width:100%}
+@media(max-width:1050px){
+ .footer-intro-inner{grid-template-columns:minmax(0,1fr) minmax(240px,.7fr)}
+}
+@media(max-width:740px){
+ .site-footer .footer-intro{padding:80px 22px 72px}
+ .footer-intro-inner{grid-template-columns:1fr;gap:28px}
+ .footer-intro-actions{max-width:100%;flex-direction:row;flex-wrap:wrap}
+ .footer-intro-actions .btn{flex:1 1 250px}
+ .site-footer .footer-intro h2{font-size:clamp(33px,7.8vw,52px)}
+}
+@media(max-width:440px){
+ .site-footer .footer-intro{padding:70px 22px 65px}
+ .footer-intro-actions .btn{flex-basis:100%}
+}
