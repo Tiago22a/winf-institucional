@@ -1,0 +1,40 @@
+/* WINF Partners™ — mesma identidade de roadmap em /partners/ e /briefing/.
+   Estrutura compartilhada sem interferir com conteúdos de outras marcas. */
+footer.wp-roadmap{--wp-font:"Anton",Impact,"Arial Narrow",sans-serif;background:#111113;color:#fff;border-top:1px solid #ffffff38;padding:90px 0 33px;font:400 15px/1.7 Inter,Arial,sans-serif;scroll-margin-top:88px}
+footer.wp-roadmap *{box-sizing:border-box}
+footer.wp-roadmap .wp-container{width:min(1320px,calc(100% - 80px));margin-inline:auto}
+footer.wp-roadmap a{color:inherit;text-decoration:none}
+footer.wp-roadmap a:hover{text-decoration:underline;text-underline-offset:4px}
+footer.wp-roadmap a:focus-visible{outline:2px solid #fff;outline-offset:5px}
+footer.wp-roadmap h2{font:400 clamp(3.5rem,7.4vw,8.5rem)/1.08 var(--wp-font);letter-spacing:.006em;margin:12px 0 0;text-transform:uppercase}
+footer.wp-roadmap h2 span{color:#aaa}
+footer.wp-roadmap p{margin:0}
+footer.wp-roadmap .wp-kicker{font:800 10px/1.7 Inter,Arial,sans-serif;letter-spacing:.19em;color:#b9b9c0;text-transform:uppercase}
+footer.wp-roadmap .wp-roadmap-heading{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(240px,.6fr);gap:clamp(35px,5vw,85px);align-items:end;margin-bottom:56px}
+footer.wp-roadmap .wp-roadmap-heading>p{font-size:14px;line-height:1.8;color:#adaeb2;padding-bottom:9px}
+footer.wp-roadmap .wp-roadmap-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px;padding-top:30px;border-top:1px solid #ffffff55}
+footer.wp-roadmap .wp-roadmap-col{display:flex;flex-direction:column;align-items:flex-start;gap:11px;min-width:0}
+footer.wp-roadmap .wp-roadmap-col>span{font:800 10px/1.6 Inter,Arial,sans-serif;letter-spacing:.14em;color:#fff;margin-bottom:12px}
+footer.wp-roadmap .wp-roadmap-col a{font-size:13px;line-height:1.5;color:#c0c0c4;transition:color .2s,transform .2s}
+footer.wp-roadmap .wp-roadmap-col a:hover{color:#fff;transform:translateX(3px)}
+footer.wp-roadmap .wp-roadmap-flow{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:70px 0 43px;padding:23px 0;border-block:1px solid #ffffff35}
+footer.wp-roadmap .wp-roadmap-flow span{font:800 10px/1.5 Inter,Arial,sans-serif;letter-spacing:.1em;white-space:nowrap}
+footer.wp-roadmap .wp-roadmap-flow i{height:1px;min-width:10px;flex:1;background:linear-gradient(90deg,#ffffff88,#ffffff25)}
+footer.wp-roadmap .wp-footer-base{display:flex;align-items:end;justify-content:space-between;gap:30px}
+footer.wp-roadmap .wp-footer-base>div{text-align:right}
+footer.wp-roadmap .partners-landing-lockup{display:inline-flex;align-items:center;gap:13px;text-decoration:none}
+footer.wp-roadmap .wp-parent-logo{display:flex;align-items:center;flex-direction:column;gap:2px}
+footer.wp-roadmap .wp-parent-logo img{height:30px;width:auto;object-fit:contain}
+footer.wp-roadmap .wp-parent-logo small{font:700 7px/1.3 Inter,Arial,sans-serif;letter-spacing:.04em;text-align:center;color:#bdbdc1;max-width:110px}
+footer.wp-roadmap .partners-lockup-wordmark{font:400 clamp(17px,1.8vw,23px)/1.2 var(--wp-font);letter-spacing:.07em;border-left:1px solid #ffffff7a;padding-left:13px}
+footer.wp-roadmap .partners-lockup-wordmark sup{font:800 9px Inter,Arial,sans-serif;vertical-align:super;margin-left:2px}
+footer.wp-roadmap .wp-footer-base>div p{font-size:10px;letter-spacing:.14em;font-weight:800;margin-bottom:8px}
+footer.wp-roadmap .wp-footer-base small{font:500 11px/1.65 Inter,Arial,sans-serif;color:#9da0a4}
+footer.wp-roadmap .wp-roadmap-spotlight{display:flex;align-items:center;justify-content:space-between;gap:24px;background:#f2f2ef;color:#111;padding:24px 28px;margin-top:54px}
+footer.wp-roadmap .wp-roadmap-spotlight p{font-size:13px;line-height:1.65;max-width:480px}
+footer.wp-roadmap .wp-roadmap-spotlight strong{display:block;font:400 clamp(22px,2.4vw,36px)/1.1 var(--wp-font);text-transform:uppercase;margin-bottom:8px}
+footer.wp-roadmap .wp-roadmap-spotlight a{display:inline-flex;align-items:center;gap:24px;border:1px solid #333;padding:13px 16px;white-space:nowrap;font:800 11px/1.4 Inter,Arial,sans-serif;letter-spacing:.08em;color:#111}
+footer.wp-roadmap .wp-roadmap-spotlight a:hover{background:#e1e1e0}
+@media(max-width:900px){footer.wp-roadmap .wp-roadmap-grid{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:35px}footer.wp-roadmap .wp-roadmap-heading{grid-template-columns:1fr;gap:20px}footer.wp-roadmap .wp-roadmap-heading>p{max-width:600px}}
+@media(max-width:600px){footer.wp-roadmap{padding:70px 0 27px}footer.wp-roadmap .wp-container{width:calc(100% - 40px)}footer.wp-roadmap .wp-roadmap-grid{grid-template-columns:1fr;row-gap:30px}footer.wp-roadmap .wp-roadmap-col{padding-bottom:20px;border-bottom:1px solid #ffffff23}footer.wp-roadmap .wp-roadmap-spotlight{flex-direction:column;align-items:stretch;padding:20px}footer.wp-roadmap .wp-roadmap-spotlight a{justify-content:space-between;white-space:normal}footer.wp-roadmap .wp-roadmap-flow{flex-wrap:wrap;justify-content:flex-start;gap:12px 18px;margin:42px 0 30px}footer.wp-roadmap .wp-roadmap-flow i{flex:0 0 26px}footer.wp-roadmap .wp-footer-base{flex-direction:column;align-items:flex-start}footer.wp-roadmap .wp-footer-base>div{text-align:left}}
+@media(prefers-reduced-motion:reduce){footer.wp-roadmap .wp-roadmap-col a{transition:none}}
