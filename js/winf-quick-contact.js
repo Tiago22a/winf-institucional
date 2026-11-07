@@ -22,16 +22,21 @@
     ['AeroCore™ — Películas','/aerocore/aerocore/'],
     ['NeoSkin™ — PPF','/aerocore/neoskin/'],
     ['Ceramic Armoring™','/aerocore/ceramic-armoring/'],
-    ['WINF Partners™ — Expansão','/partners/']
+    ['WINF Partners™ — Expansão','/partners/'],
+    ['Redes sociais oficiais — Todas as marcas','/redes/?origem=' + encodeURIComponent(location.pathname)],
+    ['Locator — Unidades ativas','/aerocore/onde-comprar/']
   ];
   const partnerHelp = [
     ['Como funciona o Asset Light™?','/partners/#asset-light'],
     ['Quais são os formatos de licenciamento?','/partners/#modalidades'],
     ['Como é a seleção territorial?','/partners/#jornada'],
+    ['Conhecer todos os Instagrams da WINF','/redes/?origem=' + encodeURIComponent(location.pathname)],
+    ['Ver unidades ativas no Locator','/aerocore/onde-comprar/'],
     ['Quero falar com a expansão', whatsapp(partnerPhone,'Olá! Quero entender os modelos WINF Partners e consultar meu território.')]
   ];
   const generalHelp = [
     ['Onde comprar ou solicitar aplicação?','/aerocore/onde-comprar/'],
+    ['Conhecer as redes sociais da WINF','/redes/?origem=' + encodeURIComponent(location.pathname)],
     ['Películas arquitetônicas WINF Select™','/aerocore/winf-select/'],
     ['Proteção automotiva AeroCore™','/aerocore/aerocore/'],
     ['Quero falar com um consultor', whatsapp(salesPhone,'Olá! Preciso de orientação para escolher uma solução WINF.')]
