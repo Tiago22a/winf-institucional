@@ -176,10 +176,10 @@ body.wp-menu-open{overflow:hidden}
 /* Assinatura da marca-mãe dentro dos lockups Partners, sem redesenho da WINF. */
 .winf-partners-site .wp-parent-logo{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-width:0;flex-shrink:0}
 .winf-partners-site .wp-parent-logo img{display:block;width:auto;height:30px;max-width:35vw}
-.winf-partners-site .wp-parent-logo small{display:block;color:#ddd;font:700 clamp(5px,.45vw,6px)/1.15 Inter,Arial,sans-serif;letter-spacing:.12em;white-space:nowrap}
+.winf-partners-site .wp-parent-logo small{display:block;color:#ddd;font:700 7px/1.2 Inter,Arial,sans-serif;letter-spacing:.025em;max-width:115px;text-align:center;text-wrap:balance}
 .winf-partners-site .wp-family-card .wp-family-name{overflow-wrap:break-word;hyphens:auto}
 .winf-partners-site .wp-family-card .wp-family-name sup{font-size:10px}
 @media(max-width:760px){
 .winf-partners-site .wp-parent-logo img{height:25px}
-.winf-partners-site .wp-parent-logo small{font-size:4.5px;letter-spacing:.075em}
+.winf-partners-site .wp-parent-logo small{font-size:6px;max-width:85px;letter-spacing:.01em}
 }
