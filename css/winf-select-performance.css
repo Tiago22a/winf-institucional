@@ -1,0 +1,25 @@
+/* WINF Select Glass + Home™ | Product performance instrument panel.
+   A metric bar is filled only when that exact product value has been supplied.
+   Undefined metrics use a clearly labeled verification state, not invented percentages. */
+.ws-select-detail .sp-performance-card{position:relative;margin-top:18px;border:1px solid rgba(255,255,255,.24);background:linear-gradient(150deg,rgba(27,29,32,.97),rgba(8,9,11,.96));padding:clamp(20px,3vw,28px);box-shadow:0 14px 35px rgba(0,0,0,.32);overflow:hidden}
+.ws-select-detail .sp-performance-card::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.65),transparent)}
+.ws-select-detail .sp-perf-heading{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-bottom:19px;border-bottom:1px solid rgba(255,255,255,.17);margin-bottom:21px}
+.ws-select-detail .sp-perf-heading p{margin:0;color:#aeb2b6;font:650 10px/1.5 "JetBrains Mono",monospace;letter-spacing:.15em;text-transform:uppercase}
+.ws-select-detail .sp-perf-heading h3{margin:6px 0 0;color:#fff;font:400 clamp(18px,2vw,26px)/1.13 "Gustavo",system-ui,sans-serif!important;letter-spacing:.01em;text-transform:uppercase}
+.ws-select-detail .sp-perf-mark{display:grid;place-items:center;flex:none;width:38px;height:38px;border:1px solid rgba(255,255,255,.29);border-radius:50%;color:#ececec;font:500 12px/1 "JetBrains Mono",monospace;letter-spacing:.07em}
+.ws-select-detail .sp-perf-metrics{display:grid;gap:18px}
+.ws-select-detail .sp-perf-row{display:block}
+.ws-select-detail .sp-perf-caption{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:9px}
+.ws-select-detail .sp-perf-label{color:#e9ebee;font:550 12px/1.5 "Gustavo",system-ui,sans-serif;letter-spacing:.025em}
+.ws-select-detail .sp-perf-value{color:#fff;font:700 12px/1.5 "JetBrains Mono",monospace;white-space:nowrap;letter-spacing:-.015em}
+.ws-select-detail .sp-perf-row.is-pending .sp-perf-value{font-size:10px;color:#aeb2b8;font-weight:500;letter-spacing:0}
+.ws-select-detail .sp-perf-track{height:9px;width:100%;overflow:hidden;border-radius:999px;background:#25282d;border:1px solid #ffffff22;position:relative}
+.ws-select-detail .sp-perf-fill{display:block;height:100%;width:var(--sp-perf-width,0%);border-radius:999px;background:linear-gradient(90deg,#707883,#d8dee5);box-shadow:0 0 15px #cfd9e52d}
+.ws-select-detail .sp-perf-row.is-pending .sp-perf-track{background:repeating-linear-gradient(105deg,#282b30 0,#282b30 12px,#363a41 12px,#363a41 16px);border-color:#ffffff16}
+.ws-select-detail .sp-perf-row.is-pending .sp-perf-track::after{content:"";position:absolute;top:0;bottom:0;left:0;width:3px;background:#a5afb9;opacity:.55}
+.ws-select-detail .sp-perf-notice{margin:22px 0 0!important;padding-top:15px;border-top:1px solid #ffffff1e;font:400 11px/1.65 "Gustavo",system-ui,sans-serif!important;color:#a8adb3!important}
+.ws-select-detail .sp-perf-cta{display:inline-flex;gap:9px;align-items:center;margin-top:14px;color:#f0f0f0!important;font:700 10px/1.5 "JetBrains Mono",monospace;letter-spacing:.09em;text-decoration:none!important;border-bottom:1px solid #ffffff65;padding-bottom:4px}
+.ws-select-detail .sp-perf-cta:hover{color:#fff!important;border-color:#fff}
+@media(max-width:800px){.ws-select-detail .sp-performance-card{margin-top:16px}}
+@media(max-width:480px){.ws-select-detail .sp-perf-heading h3{font-size:22px!important}.ws-select-detail .sp-perf-label{font-size:12px}.ws-select-detail .sp-perf-value{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.ws-select-detail .sp-perf-fill{transition:none!important}}
