@@ -41,3 +41,18 @@ body.select-page .select-actions .select-button{min-height:52px}
 @media(max-width:980px){body.select-page .select-line-grid{grid-template-columns:repeat(2,minmax(0,1fr))}body.select-page .select-decision-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:640px){body.select-page .select-line-grid,body.select-page .select-decision-grid,body.select-page .select-highlights{grid-template-columns:1fr}body.select-page .select-line-image{aspect-ratio:16/10}body.select-page .select-decision{padding:70px 0}body.select-page .select-hero h1{font-size:clamp(32px,8vw,54px)!important}}
 @media(prefers-reduced-motion:reduce){body.select-page :is(.select-line-card,.select-line-image video,.select-line-image img){transition:none!important;transform:none!important}}
+
+/* Select product vector wordmarks: exact existing assets from the institutional home.
+   Video has its own motion; do not animate or stretch the static brand marks. */
+body.select-page .select-line-image .select-card-visual-title{display:flex;align-items:center;justify-content:flex-start;pointer-events:none;position:absolute;bottom:16px;left:17px;right:17px;z-index:3;min-height:56px}
+body.select-page .select-line-image .select-card-visual-title img{
+  display:block!important;width:auto!important;height:auto!important;
+  max-width:min(90%,285px)!important;max-height:70px!important;
+  object-fit:contain!important;object-position:left center!important;
+  opacity:1!important;transform:none!important;
+  filter:drop-shadow(0 3px 10px rgba(0,0,0,.75));
+  transition:none!important;
+}
+body.select-page .select-line-image .select-card-visual-title img.select-miniblind-mark{max-height:83px!important;max-width:220px!important}
+body.select-page .select-line-card:is(:hover,:focus-within) .select-card-visual-title img{opacity:1!important;transform:none!important}
+@media(max-width:600px){body.select-page .select-line-image .select-card-visual-title img{max-width:min(88%,260px)!important;max-height:59px!important}}
