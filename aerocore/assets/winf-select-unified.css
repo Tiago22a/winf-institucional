@@ -1,0 +1,48 @@
+/* WINF Select™ | experiência arquitetônica na mesma família AeroCore / NeoSkin
+   Editorial: Montserrat Black para grandes headlines, Outfit leve para marcas,
+   Inter para leitura. Assinatura WINF mãe permanece em /winf-logo.svg. */
+:root{--select-offwhite:#f4f3ef;--select-metal:#c8cac6;--select-silver:#9fa29f}
+body.select-page #brand-header .select-header-logo{
+  display:inline-flex;align-items:baseline;gap:0;color:white;
+  font:300 clamp(17px,2vw,25px)/1.2 Outfit,Inter,sans-serif!important;
+  letter-spacing:.19em!important;text-decoration:none
+}
+body.select-page #brand-header .select-header-logo .select-trademark{font:500 .46em/1 Outfit,sans-serif;margin-left:3px;letter-spacing:0;vertical-align:super}
+body.select-page .select-hero h1{
+  font:300 clamp(42px,6.2vw,88px)/1.12 Outfit,Inter,sans-serif!important;
+  letter-spacing:.15em!important;color:#fff!important;text-transform:uppercase;
+  text-shadow:0 4px 26px #0009
+}
+body.select-page .select-hero .select-signature{
+  font:400 clamp(26px,3.4vw,48px)/1.18 Outfit,Inter,sans-serif!important;
+  color:#f2f2f0;text-wrap:balance
+}
+body.select-page .select-section h2{
+  font:900 clamp(35px,5vw,75px)/1.07 Montserrat,Inter,sans-serif!important;
+  letter-spacing:-.06em!important;text-transform:uppercase!important;color:#f3f3f3!important;
+  text-wrap:balance
+}
+body.select-page .select-section h2 span{color:var(--select-silver)!important}
+body.select-page .select-section .select-eyebrow{font:700 10px/1.6 Inter,Arial,sans-serif!important;letter-spacing:.22em!important;color:var(--select-metal)!important}
+body.select-page .select-line-card h3{font:800 clamp(22px,2.3vw,29px)/1.15 Montserrat,Inter,sans-serif!important;letter-spacing:-.04em!important;text-transform:uppercase!important}
+body.select-page .select-line-grid .select-line-image img{transition:transform .55s ease,opacity .55s ease}
+body.select-page .select-line-card:hover .select-line-image img{transform:scale(1.04);opacity:.96}
+body.select-page .select-benefits h3,body.select-page .select-applications h3{font:800 clamp(17px,2vw,23px)/1.28 Montserrat,Inter,sans-serif!important;letter-spacing:-.04em!important}
+body.select-page .select-button,body.select-page .select-line-link{transition:background .2s,border-color .2s,color .2s}
+body.select-page .ac-connection{background:#070808}
+body.select-page .ac-protocol-dot{background:#cdd1d0}
+body.select-page .ac-return-actions a.is-current{color:white;background:#252726;border-color:#b1b2b0}
+body.select-page .ac-official-channels h2{font:900 clamp(31px,4.4vw,56px)/1.08 Montserrat,Inter,sans-serif;letter-spacing:-.055em}
+body.select-page .ac-official-channels h2 em{font:inherit;color:var(--select-metal)}
+body.select-page .ac-official-links{grid-template-columns:repeat(4,minmax(0,1fr));max-width:990px}
+body.select-page .ac-official-links>a,body.select-page .ac-official-pending{min-height:78px;display:flex;flex-direction:column;gap:9px;text-align:center}
+body.select-page .ac-official-links svg{height:23px;width:23px}
+body.select-page .select-directory-link{display:inline-flex;margin-top:27px;align-items:center;gap:12px;border-bottom:1px solid #cdd1d0;color:white;font:800 11px/1.6 Inter,sans-serif;letter-spacing:.12em;text-decoration:none;padding-bottom:7px}
+body.select-page .select-directory-link:hover{color:#ddd}
+body.select-page footer .wf-ref-brand{font:300 clamp(24px,3vw,37px)/1.3 Outfit,Inter,sans-serif;letter-spacing:.18em}
+body.select-page footer .select-footer-connect{text-align:center;font:500 12px/1.6 Inter,sans-serif;color:#acafb0}
+body.select-page footer .select-footer-connect a{color:white;text-decoration:underline;text-underline-offset:5px}
+body.select-page .ac-connection a:focus-visible{outline-color:#e6e8e6}
+@media(max-width:760px){body.select-page .ac-official-links{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){body.select-page #brand-header .select-header-logo{font-size:17px!important;letter-spacing:.12em!important}body.select-page .select-hero h1{font-size:clamp(34px,9.2vw,63px)!important;letter-spacing:.08em!important}body.select-page .select-section h2{font-size:clamp(34px,8.5vw,49px)!important}}
+@media(prefers-reduced-motion:reduce){body.select-page .select-line-grid .select-line-image img{transition:none}}
