@@ -56,3 +56,12 @@
 
 
 
+
+/* Briefing: identity lockup and lightweight video-free hero. */
+.partners-page .partners-site-header .briefing-partners-lockup{display:inline-flex;align-items:center;gap:14px;min-height:44px;color:#fff;text-decoration:none}
+.partners-page .partners-site-header .briefing-partners-lockup img{display:block;width:auto;height:28px;max-width:35vw;object-fit:contain}
+.briefing-partners-wordmark{display:inline-flex;align-items:flex-start;border-left:1px solid rgba(255,255,255,.38);padding-left:14px;font-family:Inter,Arial,sans-serif;font-size:clamp(13px,1.3vw,18px);font-weight:800;letter-spacing:.16em;line-height:1.2;white-space:nowrap}
+.briefing-partners-wordmark sup{font-size:.55em;letter-spacing:0;margin-left:2px;line-height:1.1}
+.partners-page .partners-site-header .briefing-partners-lockup:focus-visible{outline:2px solid white;outline-offset:6px}
+.briefing-hero-static-background{background:radial-gradient(ellipse at 50% 40%,#303033 0%,#212123 34%,#141416 68%,#0c0c0d 100%)}
+@media(max-width:480px){.partners-page .partners-site-header .briefing-partners-lockup{gap:10px}.partners-page .partners-site-header .briefing-partners-lockup img{height:25px}.briefing-partners-wordmark{padding-left:10px;letter-spacing:.12em;font-size:13px}}
