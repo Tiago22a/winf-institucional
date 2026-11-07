@@ -1,0 +1,11 @@
+/* NeoSkin | only the call-to-action switches olive; the arsenal cards stay transparent over video. */
+body.ns-page #arsenal .ac-product-grid>div{background:rgb(0 0 0 /.62)!important;border-color:rgb(255 255 255 /.20)!important;color:#fff;transition:border-color .25s,background .25s}
+body.ns-page #arsenal .ac-product-grid>div:is(:hover,:focus-within){background:rgb(0 0 0 /.74)!important;border-color:#A2B18D77!important}
+body.ns-page #arsenal .ac-product-grid>div a{background:transparent;border-color:#ffffff55!important;color:#fff!important;transition:background .25s,color .25s,border-color .25s}
+body.ns-page #arsenal .ac-product-grid>div a:is(:hover,:focus-visible){background:#A2B18D!important;border-color:#A2B18D!important;color:#071007!important}
+body.ns-page #arsenal .ac-product-grid>div :is(h4,p){color:inherit}
+body.ns-page .ns-tab-btn.bg-white{background:#A2B18D!important;color:#060a04!important}
+body.ns-page .ns-tab-btn:not(.bg-white):is(:hover,:focus-visible){background:#A2B18D24!important;color:#d8eac9!important}
+body.ns-page .accordion-icon{color:#A2B18D!important}
+body.ns-page .accordion-trigger:hover{color:#A2B18D}
+body.ns-page .ac-return-actions a:not(.is-current):not(.ac-protocol-top):hover{color:#fff;border-color:#ffffff70}
