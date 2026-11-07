@@ -1,0 +1,46 @@
+/* WINF Partners™ / Briefing: menu por jornada, alinhado ao /partners/. */
+.partners-page .briefing-partners-lockup{display:inline-flex;align-items:center;gap:12px;text-decoration:none}
+.partners-page .briefing-partners-lockup .wp-parent-logo{display:flex;align-items:center;flex-direction:column;flex-shrink:0;gap:1px}
+.partners-page .briefing-partners-lockup .wp-parent-logo img{width:auto;height:29px;max-width:106px;object-fit:contain}
+.partners-page .briefing-partners-lockup .wp-parent-logo small{font:700 7px/1.2 Inter,Arial,sans-serif;letter-spacing:.02em;color:#d7d7d7;text-align:center;max-width:110px}
+.partners-page .partners-site-header .bp-menu-trigger{display:flex;align-items:center;gap:10px;cursor:pointer;border:0;background:transparent;color:white;min-width:86px;min-height:50px;padding:5px}
+.partners-page .partners-site-header .bp-menu-trigger .bp-menu-bars{display:flex;flex-direction:column;align-items:flex-end;gap:7px}
+.partners-page .partners-site-header .bp-menu-trigger .bp-menu-bars span{width:37px;height:2px;background:white;transition:width .2s}
+.partners-page .partners-site-header .bp-menu-trigger .bp-menu-bars span+span{width:24px}
+.partners-page .partners-site-header .bp-menu-trigger:hover .bp-menu-bars span+span{width:37px}
+.partners-page .partners-site-header .bp-menu-trigger img{width:auto;height:42px;object-fit:contain}
+.partners-page .bp-menu-overlay{position:fixed;inset:0;z-index:300;display:flex;flex-direction:column;overflow:auto;background:#080809;color:white;opacity:1}
+.partners-page .bp-menu-overlay.hidden{display:none!important}
+.partners-page .bp-menu-shell{display:flex;flex-direction:column;min-height:100%;width:min(calc(100% - 80px),1360px);margin:auto;padding:30px 0}
+.partners-page .bp-menu-header{display:flex;align-items:center;justify-content:space-between;gap:25px;border-bottom:1px solid #ffffff42;padding:0 0 20px}
+.partners-page .bp-menu-brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:white}
+.partners-page .bp-menu-brand img{width:auto;height:32px}
+.partners-page .bp-menu-brand strong{border-left:1px solid #fff7;padding-left:11px;font:400 25px/1.2 "Anton",Impact,Arial,sans-serif;letter-spacing:.07em}
+.partners-page .bp-menu-brand strong sup{font:800 9px Inter,Arial,sans-serif;vertical-align:super}
+.partners-page .bp-menu-close{min-height:46px;display:flex;align-items:center;gap:14px;border:1px solid #ffffff5c;background:#ffffff0e;color:white;padding:11px 14px;cursor:pointer;font:800 11px/1.2 Inter,Arial,sans-serif;letter-spacing:.13em}
+.partners-page .bp-menu-close:hover{background:white;color:#111}
+.partners-page .bp-menu-close span{font-size:24px;font-weight:400}
+.partners-page .bp-menu-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(260px,.6fr);gap:clamp(45px,9vw,135px);align-items:center;flex:1;padding:70px 0}
+.partners-page .bp-menu-eyebrow{font:800 10px/1.5 Inter,Arial,sans-serif;letter-spacing:.23em;color:#aaa;text-transform:uppercase}
+.partners-page .bp-menu-main nav{display:flex;flex-direction:column;gap:4px;margin-top:25px}
+.partners-page .bp-menu-main nav a{font:400 clamp(2.15rem,4.4vw,4.9rem)/1.16 "Anton",Impact,Arial,sans-serif;color:#f2f2f2;text-decoration:none;transition:transform .2s,color .2s}
+.partners-page .bp-menu-main nav a:hover{color:#bbb;transform:translateX(6px)}
+.partners-page .bp-menu-main nav a span{font:700 11px Inter,Arial,sans-serif;color:#999;margin-left:10px}
+.partners-page .bp-menu-aside{display:flex;flex-direction:column;align-items:flex-start;gap:11px;border-left:1px solid #ffffff38;padding-left:30px}
+.partners-page .bp-menu-aside h2{font:400 clamp(2rem,3vw,3rem)/1.1 "Anton",Impact,Arial,sans-serif;margin:16px 0 12px}
+.partners-page .bp-menu-aside a{font:700 12px/1.5 Inter,Arial,sans-serif;color:#c3c3c6;text-decoration:none;padding:4px 0}
+.partners-page .bp-menu-aside a:hover{text-decoration:underline;color:white}
+.partners-page .bp-menu-aside a.bp-menu-aside-cta{border:1px solid #ffffff62;padding:12px;margin-top:14px;color:white}
+.partners-page .bp-menu-global{display:flex;align-items:center;justify-content:space-between;gap:25px;background:#f0f0ed;color:#111;padding:23px 27px;text-decoration:none}
+.partners-page .bp-menu-global strong{display:block;font:400 clamp(1.6rem,3vw,3.8rem)/1.1 "Anton",Impact,Arial,sans-serif}
+.partners-page .bp-menu-global small{display:block;font:800 10px Inter,Arial,sans-serif;letter-spacing:.17em;margin-top:7px}
+.partners-page .bp-menu-global>span{font-size:32px}
+.partners-page .bp-menu-global:hover{background:#dededc}
+.partners-page .bp-menu-bottom{padding:21px 0 0;display:flex;flex-wrap:wrap;gap:20px;font:800 10px/1.5 Inter,Arial,sans-serif;letter-spacing:.15em;color:#a0a0a0}
+.partners-page .bp-menu-bottom a{color:#a5a5a5;text-decoration:none}
+.partners-page .bp-menu-bottom a:hover{color:white}
+.partners-page.menu-open{overflow:hidden}
+.partners-page .bp-menu-overlay a:focus-visible,.partners-page .bp-menu-overlay button:focus-visible{outline:2px solid white;outline-offset:5px}
+@media(max-width:800px){.partners-page .bp-menu-shell{width:calc(100% - 38px);padding:20px 0}.partners-page .bp-menu-layout{grid-template-columns:1fr;gap:45px;padding:45px 0}.partners-page .bp-menu-main nav a{font-size:clamp(2.2rem,7.5vw,4.5rem)}.partners-page .bp-menu-aside{padding-left:22px}.partners-page .bp-menu-global{padding:20px}}
+@media(max-width:530px){.partners-page .partners-site-header .bp-menu-trigger img{height:35px}.partners-page .briefing-partners-lockup .wp-parent-logo img{height:24px}.partners-page .briefing-partners-lockup .wp-parent-logo small{font-size:5.6px}.partners-page .bp-menu-brand strong{font-size:18px}.partners-page .bp-menu-main nav a{font-size:clamp(1.9rem,8.8vw,3.8rem)}.partners-page .bp-menu-bottom{gap:12px}.partners-page .bp-menu-global strong{font-size:1.9rem}.partners-page .bp-menu-global small{font-size:8px}}
+@media(prefers-reduced-motion:reduce){.partners-page .bp-menu-main nav a,.partners-page .partners-site-header .bp-menu-trigger .bp-menu-bars span{transition:none}}
