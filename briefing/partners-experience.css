@@ -171,3 +171,15 @@
  .partners-page #flagship-detail .al-model-index{display:inline-block;animation:wp-editorial-float 7s ease-in-out infinite}
  .partners-page #social .pb-lifestyle-heading{animation:wp-soft-arrive 1.2s ease-out both}
 }
+
+/* Refinamento de enquadramentos: mesmas imagens oficiais em três perspectivas. */
+.partners-page .al-model-kiosk .al-mosaic-main img{object-position:48% 50%}
+.partners-page .al-model-kiosk .al-mosaic-detail img{object-position:76% 58%;transform:scale(1.45)}
+.partners-page .al-model-kiosk .al-mosaic-context img{object-position:23% 62%;transform:scale(1.28)}
+.partners-page .al-model-flagship .al-mosaic-main img{object-position:49% 50%}
+.partners-page .al-model-flagship .al-mosaic-detail img{object-position:77% 43%;transform:scale(1.38)}
+.partners-page .al-model-flagship .al-mosaic-context img{object-position:19% 61%;transform:scale(1.27)}
+@media(hover:hover){
+ .partners-page .al-model-kiosk .al-mosaic-context:hover img{filter:grayscale(0);transform:scale(1.35)}
+ .partners-page .al-model-flagship .al-mosaic-context:hover img{filter:grayscale(0);transform:scale(1.34)}
+}
