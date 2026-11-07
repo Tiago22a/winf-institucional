@@ -67,31 +67,114 @@
   }});
   const form = document.getElementById('partners-form');
   const model = document.getElementById('partner-model');
+  const phone = document.getElementById('partner-phone');
+  const ghost = document.getElementById('partners-modal-ghost');
+  const whatsapp = document.getElementById('partners-modal-whatsapp');
+  const helpPanel = document.getElementById('partners-modal-help-panel');
+  const helpClose = document.getElementById('partners-modal-help-close');
+  const unlockHint = document.getElementById('partners-form-unlock-hint');
+  const status = document.getElementById('partners-form-status');
+  const phoneDigitsValid = () => {
+    const digits = (phone?.value || '').replace(/\D/g, '');
+    return digits.length >= 10 && digits.length <= 13;
+  };
+  const prepareMessage = () => {
+    const fields = new FormData(form);
+    const info = [
+      'Olá! Gostaria de conversar com a equipe WINF Partners™ sobre uma proposta.',
+      '',
+      'Nome: ' + String(fields.get('name') || '').trim(),
+      'Cidade / UF: ' + String(fields.get('city') || '').trim(),
+      'WhatsApp: ' + String(fields.get('phone') || '').trim(),
+      'Modelo ou parceria: ' + String(fields.get('model') || '').trim(),
+      ...(String(fields.get('message') || '').trim() ? ['Sobre a operação: ' + String(fields.get('message') || '').trim()] : []),
+      '',
+      'Gostaria de entender as condições e próximos passos.'
+    ];
+    return 'https://wa.me/5513997815375?text=' + encodeURIComponent(info.join('\n'));
+  };
+  const isReady = () => Boolean(form && form.checkValidity() && phoneDigitsValid());
+  const closeHelp = (restoreFocus = false) => {
+    if (!helpPanel) return;
+    helpPanel.hidden = true;
+    ghost?.setAttribute('aria-expanded', 'false');
+    if (restoreFocus && !ghost?.disabled) ghost.focus();
+  };
+  function syncContactGate() {
+    if (!form || !ghost || !whatsapp) return;
+    const ready = isReady();
+    ghost.disabled = !ready;
+    ghost.setAttribute('aria-label', ready ? 'Abrir guia WINF Partners' : 'Preencha os campos para liberar o guia WINF Partners');
+    whatsapp.setAttribute('aria-disabled', String(!ready));
+    whatsapp.setAttribute('aria-label', ready ? 'Abrir WhatsApp com sua proposta preenchida' : 'WhatsApp disponível após preencher os campos');
+    whatsapp.tabIndex = ready ? 0 : -1;
+    whatsapp.classList.toggle('is-ready', ready);
+    if (ready) {
+      whatsapp.href = prepareMessage();
+      whatsapp.target = '_blank';
+      whatsapp.rel = 'noopener noreferrer';
+    } else {
+      whatsapp.removeAttribute('href');
+      closeHelp();
+    }
+    if (unlockHint) {
+      unlockHint.classList.toggle('is-ready', ready);
+      unlockHint.textContent = ready
+        ? 'Pronto! O fantasma e o WhatsApp verde estão liberados. Escolha como deseja continuar.'
+        : 'Preencha nome, cidade, WhatsApp e tipo de parceria para liberar os canais rápidos.';
+    }
+  }
   document.querySelectorAll('[data-model]').forEach(link => {
-    link.addEventListener('click', () => { model.value = link.dataset.model; });
+    link.addEventListener('click', () => {
+      if (model) model.value = link.dataset.model;
+      syncContactGate();
+    });
   });
+  form?.addEventListener('input', () => {
+    phone?.setCustomValidity('');
+    syncContactGate();
+  });
+  form?.addEventListener('change', syncContactGate);
+  form?.addEventListener('reset', () => requestAnimationFrame(syncContactGate));
+  ghost?.addEventListener('click', () => {
+    if (ghost.disabled || !helpPanel) return;
+    const opening = helpPanel.hidden;
+    helpPanel.hidden = !opening;
+    ghost.setAttribute('aria-expanded', String(opening));
+    if (opening) helpClose?.focus();
+  });
+  helpClose?.addEventListener('click', () => closeHelp(true));
+  document.addEventListener('click', e => {
+    if (!helpPanel?.hidden && !e.target.closest('.partners-modal-contact-dock')) closeHelp();
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && !helpPanel?.hidden && contact?.open) {
+      e.preventDefault();
+      e.stopPropagation();
+      closeHelp(true);
+    }
+  }, true);
+  contact?.addEventListener('close', () => closeHelp());
   form?.addEventListener('submit', event => {
     event.preventDefault();
-    if (!form.reportValidity()) return;
-    const fields = new FormData(form);
-    const message = [
-      'Olá! Quero conhecer o licenciamento WINF Partners.',
-      '',
-      `Nome: ${fields.get('name')}`,
-      `Cidade / UF: ${fields.get('city')}`,
-      `WhatsApp: ${fields.get('phone')}`,
-      `Modelo de interesse: ${fields.get('model')}`,
-      ...(String(fields.get('message') || '').trim() ? [`Sobre minha operação: ${fields.get('message')}`] : []),
-      '', 'Gostaria de consultar a disponibilidade da minha cidade e receber o dossiê.'
-    ].join('\n');
-    const url = `https://wa.me/5513997815375?text=${encodeURIComponent(message)}`;
-    // A persistent link also works if the browser blocks the new window.
-    const status = document.getElementById('partners-form-status');
-    status.replaceChildren(document.createTextNode('Mensagem preparada. '));
+    if (!phoneDigitsValid()) {
+      phone?.setCustomValidity('Informe um WhatsApp válido com DDD.');
+    } else {
+      phone?.setCustomValidity('');
+    }
+    if (!form.reportValidity()) {
+      syncContactGate();
+      return;
+    }
+    const url = prepareMessage();
+    status?.replaceChildren(document.createTextNode('Mensagem pronta. '));
     const link = document.createElement('a');
     link.href = url; link.target = '_blank'; link.rel = 'noopener noreferrer';
-    link.className = 'partners-form-status-link'; link.textContent = 'Continuar no WhatsApp ↗';
-    status.append(link);
+    link.className = 'partners-form-status-link';
+    link.textContent = 'Continuar no WhatsApp ↗';
+    status?.append(link);
+    syncContactGate();
     window.open(url, '_blank', 'noopener,noreferrer');
   });
+  syncContactGate();
 })();
