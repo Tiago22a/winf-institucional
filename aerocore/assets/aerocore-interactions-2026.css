@@ -1,0 +1,20 @@
+/* AeroCore | institutional blue interaction system */
+:root{--ac-action:#3B82F6}
+body.ac-aerocore-type #arsenal .ac-product-grid>div{background:rgb(0 0 0 /.65)!important;border-color:rgb(255 255 255 /.14)!important}
+body.ac-aerocore-type #arsenal .ac-product-grid>div:is(:hover,:focus-within){background:rgb(0 0 0 /.73)!important;border-color:rgb(255 255 255 /.30)!important}
+body.ac-aerocore-type #arsenal .ac-product-grid>div a{background:transparent;color:#f8faff;border-color:#ffffff55}
+body.ac-aerocore-type #arsenal .ac-product-grid>div a:is(:hover,:focus-visible){background:var(--ac-action)!important;border-color:var(--ac-action)!important;color:#060c15!important}
+body.ac-aerocore-type .ac-specs-matrix .wf-tab-btn.bg-white{background:var(--ac-action)!important;color:#020915!important;box-shadow:0 0 0 1px #3b82f650 inset}
+body.ac-aerocore-type .ac-specs-matrix .wf-tab-btn:not(.bg-white){background:transparent!important;color:#c3c6cc!important}
+body.ac-aerocore-type .ac-specs-matrix .wf-tab-btn:not(.bg-white):is(:hover,:focus-visible){background:#3b82f622!important;color:#9fc5ff!important}
+body.ac-aerocore-type .ac-specs-matrix .wf-tab-btn:focus-visible{outline:2px solid var(--ac-action);outline-offset:2px}
+body.ac-aerocore-type .ac-specs-matrix .ac-specs-title h2>span{color:#c2c4c8}
+body.ac-aerocore-type .ac-tactical-faq .tactical-faq-toggle{background:#0f1827;border-color:#3b82f6a6;color:#f0f5ff}
+body.ac-aerocore-type .ac-tactical-faq .tactical-faq-toggle:is(:hover,:focus-visible){background:#3b82f62c;border-color:var(--ac-action);color:#fff}
+body.ac-aerocore-type .ac-tactical-faq [data-faq-toggle-icon]{color:var(--ac-action);font-weight:700}
+body.ac-aerocore-type .ac-tactical-faq .accordion-icon{color:var(--ac-action)!important}
+body.ac-aerocore-type .ac-tactical-faq .accordion-item:focus-within{border-color:#3b82f677}
+body.ac-aerocore-type .ac-return-actions a[aria-current="page"]{color:#9bc2ff;border-color:var(--ac-action);background:#3b82f617}
+body.ac-aerocore-type .ac-return-actions a.ac-brand-neo{color:#eaeaec;border-color:#ffffff42}
+body.ac-aerocore-type .ac-return-actions a.ac-brand-neo:hover{color:#fff;border-color:#ffffff8a}
+@media(prefers-reduced-motion:reduce){body.ac-aerocore-type :is(.wf-tab-btn,.accordion-icon){transition:none!important}}
