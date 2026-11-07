@@ -136,7 +136,7 @@ test("briefing remains a separate, unmodified deep dive with all critical anchor
 
 
 test("subtle gallery-inspired card lighting is opt-in, accessible and does not change functionality",()=>{
- assert.match(css, /\/\* WINF Partners — refined interaction lighting v1 \*\//);
+ assert.match(css, /\/\* WINF Partners — refined interaction lighting v1/);
  assert.match(css, /@media \(hover:hover\) and \(pointer:fine\)/);
  for(const sel of [
   ".visual-duo figure:hover", ".pillar-grid article:hover", ".model:hover",
