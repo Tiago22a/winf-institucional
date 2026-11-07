@@ -10,8 +10,7 @@ const brief=read("briefing/index.html");
 const partners=read("partners/index.html");
 const partnerJs=read("partners/partners.js");
 
-test("homepage sends potential investors to active briefing instead of circular landing",()=>{
- assert(!home.includes('href="/partners/"'));
+test("corporate homepage keeps an investor briefing link while Partners is the main entrance",()=>{
  assert.match(home,/href="\/briefing\/">Conhecer WINF Partners™/);
  assert.match(home,/id="expansao-winf"/);
  assert.match(home,/id="expansao-title"/);
@@ -22,12 +21,15 @@ test("corporate landing avoids unsupported nationwide/24h claims",()=>{
  assert(!home.includes("Licenciados em todo o Brasil · Atendimento via WhatsApp 24h"));
  assert.match(home,/Consulte a disponibilidade em sua cidade/);
 });
-test("Partners gateway does not direct investor to itself or suggest fake OS activation",()=>{
- assert(!partners.includes('href="https://winf.com.br/partners"'));
+test("Partners is the primary homepage with briefing and commercial qualification routes",()=>{
+ assert.match(partners,/id="hero-title"/);
+ assert.match(partners,/id="modelos"/);
  assert.match(partners,/href="\/briefing\/"/);
- assert.match(partners,/href="\/briefing\/#licensing-plans"/);
- assert.match(partners,/Conhecer modelos/);
- assert.match(partners,/Consultar Modalidades/);
+ assert.match(partners,/href="\/briefing\/#asset-light-investment"/);
+ assert.match(partners,/href="\/briefing\/#kiosk"/);
+ assert.match(partners,/href="\/briefing\/#studio"/);
+ assert.match(partners,/SOU INVESTIDOR/);
+ assert.match(partners,/SOU IMPORTADOR/);
  assert(!partners.includes("Acessar WINF OS Terminal"));
 });
 test("investment options and potential industrial partners can reach appropriate contact form",()=>{
