@@ -58,3 +58,52 @@
 @media(max-width:720px){.partners-page .pb-footer-container{width:calc(100% - 40px)}.partners-page #social .pb-lifestyle-detail{grid-template-columns:1fr}.partners-page #social .pb-lifestyle-heading{gap:22px}.partners-page .pb-footer-feature{padding:75px 0 55px;gap:36px}.partners-page .pb-footer-feature h2{font-size:clamp(41px,11vw,65px)}.partners-page .pb-footer-crossroads{gap:35px 20px}.partners-page .pb-footer-buttons a{flex:1 1 100%}}
 @media(max-width:460px){.partners-page .pb-footer-crossroads{grid-template-columns:1fr}.partners-page .pb-footer-feature h2{font-size:clamp(36px,10.6vw,52px)}.partners-page .pb-footer-guide{padding:20px}.partners-page .pb-footer-strip{align-items:flex-start;flex-direction:column}}
 @media(prefers-reduced-motion:reduce){.partners-page .pb-footer-guide nav a{transition:none!important;transform:none!important}}
+
+
+/* Briefing Partners: same compact Ghost navigation as the Partners home.
+   Keep the original WINF asset; no reinterpretation of the symbol. */
+.partners-page .partners-site-header .pb-menu-ghost-trigger{
+  display:inline-flex!important;flex-direction:row!important;align-items:center!important;
+  justify-content:center!important;gap:10px!important;width:auto!important;
+  min-width:82px!important;min-height:54px!important;height:54px!important;
+  padding:7px 5px!important;transform:none;opacity:1;
+}
+.partners-page .pb-menu-ghost-trigger .pb-menu-lines{
+  display:flex;flex-direction:column;align-items:flex-end;justify-content:center;gap:7px;
+  flex:0 0 36px;width:36px;height:auto;box-shadow:none;background:transparent;
+}
+.partners-page .pb-menu-ghost-trigger .pb-menu-lines i{
+  height:2px;width:34px;background:#fff;display:block;border-radius:2px;
+  box-shadow:0 1px 7px #0009;transition:width .23s;
+}
+.partners-page .pb-menu-ghost-trigger .pb-menu-lines i:last-child{width:23px}
+.partners-page .pb-menu-ghost-trigger .pb-menu-ghost-img{
+  display:block;height:43px;width:36px;object-fit:contain;flex:0 0 auto;
+  filter:drop-shadow(0 0 9px #ffffff60);
+  transform-origin:50% 75%;
+}
+.partners-page .pb-menu-ghost-trigger:hover .pb-menu-lines i{width:36px}
+.partners-page .pb-menu-ghost-trigger:is(:hover,:focus-visible) .pb-menu-ghost-img{
+  animation:pb-ghost-fly .85s cubic-bezier(.2,.8,.2,1) both;
+  filter:drop-shadow(0 0 14px #ffffff90);
+}
+.partners-page .pb-menu-ghost-trigger:focus-visible{outline:2px solid #fff;outline-offset:4px}
+@keyframes pb-ghost-fly{
+  0%{transform:translate(0,0) rotate(0deg) scale(1)}
+  35%{transform:translate(2px,-8px) rotate(6deg) scale(1.04)}
+  70%{transform:translate(-1px,-13px) rotate(-4deg) scale(1.08)}
+  100%{transform:translate(0,-7px) rotate(0deg) scale(1.04)}
+}
+.partners-page #menu-overlay .pb-menu-current{
+  color:#fff!important;text-decoration:underline;text-underline-offset:7px;
+}
+@media(max-width:620px){
+  .partners-page .partners-site-header .pb-menu-ghost-trigger{min-width:74px!important;gap:7px!important}
+  .partners-page .pb-menu-ghost-trigger .pb-menu-lines{flex-basis:29px;width:29px}
+  .partners-page .pb-menu-ghost-trigger .pb-menu-lines i{width:29px}
+  .partners-page .pb-menu-ghost-trigger .pb-menu-lines i:last-child{width:20px}
+  .partners-page .pb-menu-ghost-trigger .pb-menu-ghost-img{height:36px;width:31px}
+}
+@media(prefers-reduced-motion:reduce){
+  .partners-page .pb-menu-ghost-trigger:is(:hover,:focus-visible) .pb-menu-ghost-img{animation:none}
+}
