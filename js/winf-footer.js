@@ -13,6 +13,24 @@
     var footer = document.getElementById('winf-global-footer');
     if (!footer) return;
     footer.dataset.enhanced = 'true';
+    // Central única de redes e localizador de unidades ativas em toda a rede.
+    var nav = footer.querySelector('.wf-ref-primary');
+    if (nav && !nav.querySelector('[data-winf-social-hub]')) {
+      var origin = encodeURIComponent(window.location.pathname);
+      var social = document.createElement('a');
+      social.href = '/redes/?origem=' + origin;
+      social.textContent = 'REDES SOCIAIS WINF™';
+      social.setAttribute('data-winf-social-hub', 'true');
+      nav.appendChild(social);
+      var locator = document.createElement('a');
+      locator.href = '/aerocore/onde-comprar/';
+      locator.textContent = 'LOCATOR — UNIDADES ATIVAS';
+      nav.appendChild(locator);
+    }
+    footer.querySelectorAll('a[href*="instagram.com/maw.winf/"]').forEach(function (link) {
+      link.href = 'https://www.instagram.com/maw.partners/';
+      link.title = 'M.A.W.™ — Marketing Advanced Windowfilm';
+    });
     footer.querySelectorAll('[data-current-year]').forEach(function (item) {
       item.textContent = String(new Date().getFullYear());
     });
