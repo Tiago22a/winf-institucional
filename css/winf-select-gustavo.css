@@ -29,3 +29,23 @@ body.ws-select-detail main .select-proof h2 em{font-family:inherit!important;fon
 body.ws-select-detail main .select-proof h3{font-family:"Gustavo",system-ui,sans-serif!important;font-size:18px!important;font-weight:400!important}
 body.ws-select-detail main :is(.inv-criterion,.inv-industrial-card) h3{font-weight:500!important}
 @media(max-width:620px){body.ws-select-detail main :is(.inv-section,.inv-arsenal) h2{font-size:clamp(30px,8vw,48px)!important}}
+
+/* Architectural priority: override the shared AeroCore Montserrat Black selector
+   without touching logos or the rest of the WINF family. */
+html body#top.select-page main#conteudo :is(.select-hero,.select-section) :is(h1,h2,h3),
+html body#top.select-page main#conteudo :is(.select-hero,.select-section) :is(h1,h2,h3) span{
+  font-family:"Gustavo",system-ui,sans-serif!important;
+  font-weight:300!important;
+  text-transform:uppercase!important;
+}
+html body#top.select-page main#conteudo .select-section h2 span{
+  font-weight:100!important;color:#b8b8bc!important;
+}
+html body#top.select-page main#conteudo .select-section .select-line-card h3,
+html body#top.select-page main#conteudo .select-section .select-benefits h3,
+html body#top.select-page main#conteudo .select-section .select-applications h3{
+  font-weight:400!important;
+}
+html body#top.select-page main#conteudo .select-section .select-hero h1{
+  font-weight:300!important;
+}
