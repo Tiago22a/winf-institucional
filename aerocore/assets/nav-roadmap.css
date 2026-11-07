@@ -1,0 +1,74 @@
+/* AeroCore™ — menu orientado à jornada; saída clara para WINF Premium Quality Windowfilm. */
+#ac-menu-anchor{scroll-margin-top:90px}
+.ac-roadmap-menu,.ac-roadmap-menu *{box-sizing:border-box}
+.ac-roadmap-menu[hidden]{display:none!important}
+.ac-roadmap-menu{position:fixed;inset:0;z-index:9999;overflow-y:auto;overscroll-behavior:contain;background:#070708;color:#fff;font-family:Inter,Arial,sans-serif;line-height:1.5;scrollbar-color:#5d5d60 #111}
+.ac-roadmap-shell{min-height:100%;display:flex;flex-direction:column;width:min(100% - 96px,1480px);margin:0 auto;padding:28px 0 30px}
+.ac-roadmap-menu a{color:inherit;text-decoration:none}
+.ac-roadmap-menu button{cursor:pointer;color:inherit}
+.ac-roadmap-menu a:focus-visible,.ac-roadmap-menu button:focus-visible{outline:2px solid #fff;outline-offset:4px}
+.ac-roadmap-top{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-bottom:20px;border-bottom:1px solid #ffffff30}
+.ac-roadmap-brand{display:inline-flex;align-items:baseline;gap:8px;font:700 clamp(20px,2vw,29px)/1.15 Outfit,Inter,Arial,sans-serif;letter-spacing:.1em;white-space:nowrap}
+.ac-roadmap-brand sup{font-size:10px}.ac-roadmap-brand small{font:600 9px Inter,Arial,sans-serif;letter-spacing:.12em;color:#a8a8ad}
+.ac-roadmap-context,.ac-roadmap-label{font:600 10px/1.5 Inter,Arial,sans-serif;letter-spacing:.2em;color:#a9a9ae;text-transform:uppercase}
+.ac-roadmap-close{display:flex;align-items:center;gap:14px;padding:8px 12px;min-height:44px;border:1px solid #ffffff52;background:#ffffff0b;font:700 10px Inter,Arial,sans-serif;letter-spacing:.17em}
+.ac-roadmap-close:hover{background:#fff;color:#111}.ac-roadmap-close span{font-size:27px;line-height:1;font-weight:400}
+.ac-roadmap-content{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(320px,.8fr);align-items:start;gap:clamp(38px,7vw,108px);flex:1;padding:clamp(34px,5.5vw,75px) 0 65px}
+.ac-roadmap-left h2{font:700 clamp(3.6rem,6vw,7.8rem)/.99 Outfit,Inter,Arial,sans-serif;letter-spacing:-.065em;margin:25px 0 42px;text-transform:uppercase}
+.ac-roadmap-left h2 span{color:#919197}
+.ac-roadmap-hero-links{display:grid;max-width:750px}
+.ac-roadmap-hero-links a{display:grid;grid-template-columns:32px minmax(0,1fr) 20px;align-items:center;gap:10px;border-top:1px solid #ffffff30;padding:12px 0;font:600 12px/1.2 Inter,Arial,sans-serif;color:#a3a3a9;transition:color .2s,transform .2s}
+.ac-roadmap-hero-links a:last-child{border-bottom:1px solid #ffffff30}
+.ac-roadmap-hero-links a strong{font:700 clamp(20px,2.25vw,33px)/1.1 Outfit,Inter,Arial,sans-serif;letter-spacing:-.035em;color:#fff}
+.ac-roadmap-hero-links a:hover{transform:translateX(5px);color:#fff}
+.ac-roadmap-hero-links a span:last-child{text-align:right;font-size:18px}
+.ac-roadmap-right{display:flex;flex-direction:column;gap:25px}
+.ac-roadmap-cluster{border-top:1px solid #ffffff30;padding-top:12px}
+.ac-roadmap-mini-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:20px}
+.ac-roadmap-mini-grid a{display:flex;align-items:center;min-height:44px;border:1px solid #ffffff28;padding:11px 12px;color:#d9d9da;font:700 11px/1.4 Inter,Arial,sans-serif;letter-spacing:.07em;transition:background .2s}
+.ac-roadmap-mini-grid a:hover{background:#ffffff21}
+.ac-roadmap-paths{display:grid;margin-top:12px}
+.ac-roadmap-paths a{display:grid;grid-template-columns:28px 1fr 15px;align-items:center;gap:10px;border-bottom:1px solid #ffffff24;padding:12px 0;font-size:10px;color:#999}
+.ac-roadmap-paths a strong{font:700 12px/1.45 Inter,Arial,sans-serif;letter-spacing:.06em;color:#e1e1e1}
+.ac-roadmap-paths a:hover strong{color:#fff}
+.ac-roadmap-caveat{color:#929299;font-size:11px;line-height:1.65;margin:15px 0 0}
+.ac-roadmap-help{position:relative;margin-top:12px;border:1px solid #ffffff47}
+.ac-roadmap-help-trigger{width:100%;min-height:52px;padding:13px 17px;background:#ffffff17;display:flex;justify-content:space-between;align-items:center;font:700 11px Inter,Arial,sans-serif;letter-spacing:.12em}
+.ac-roadmap-help-trigger:hover{background:#ffffff26}
+.ac-roadmap-help-trigger span{font-size:20px;font-weight:400}
+.ac-roadmap-help #contact-channels{padding:20px;position:absolute;z-index:3;right:0;left:0;top:100%;border:1px solid #ffffff55;background:#101012;box-shadow:0 25px 60px #000c;display:flex;flex-direction:column;gap:10px}
+.ac-roadmap-help #contact-channels[hidden]{display:none!important}
+.ac-roadmap-help #contact-channels a{padding:12px;border:1px solid #ffffff38;font:700 11px Inter,Arial,sans-serif;letter-spacing:.07em}
+.ac-roadmap-help #contact-channels a:hover{background:#ffffff21}
+.ac-roadmap-help-close{align-self:flex-end;background:transparent;border:0;font-size:22px}
+.ac-roadmap-global{display:flex;align-items:center;justify-content:space-between;gap:34px;padding:30px;background:#f1f1ef;color:#111}
+.ac-roadmap-global>div{max-width:450px}
+.ac-roadmap-global>div>span{font:800 10px Inter,Arial,sans-serif;letter-spacing:.18em}
+.ac-roadmap-global>div>p{font-size:13px;line-height:1.6;color:#444;margin:8px 0 0}
+.ac-roadmap-global>a{min-width:min(100%,390px);padding:13px 15px;display:grid;grid-template-columns:1fr 20px;column-gap:20px;align-items:center;border:1px solid #555}
+.ac-roadmap-global>a:hover{background:#dededb}
+.ac-roadmap-global>a strong{font:700 clamp(18px,2.1vw,30px)/1.2 Outfit,Inter,Arial,sans-serif;grid-column:1;letter-spacing:-.03em}
+.ac-roadmap-global>a small{font:700 10px/1.5 Inter,Arial,sans-serif;letter-spacing:.15em;grid-column:1;color:#555}
+.ac-roadmap-global>a span{grid-column:2;grid-row:1/3;font-size:25px}
+.ac-roadmap-footer{display:flex;flex-wrap:wrap;gap:14px 25px;padding-top:22px;font:700 10px Inter,Arial,sans-serif;letter-spacing:.12em;color:#a0a0a0}
+.ac-roadmap-footer a:hover{color:#fff}
+@media(max-width:960px){
+ .ac-roadmap-context{display:none}
+ .ac-roadmap-content{grid-template-columns:1fr;gap:40px}
+ .ac-roadmap-left h2{font-size:clamp(3.7rem,9vw,7rem)}
+ .ac-roadmap-right{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+ .ac-roadmap-help{grid-column:1/-1}
+}
+@media(max-width:600px){
+ .ac-roadmap-shell{width:calc(100% - 36px);padding:16px 0 22px}
+ .ac-roadmap-brand{font-size:19px}.ac-roadmap-brand small{display:none}
+ .ac-roadmap-content{padding:30px 0 42px}
+ .ac-roadmap-left h2{font-size:clamp(3rem,11.2vw,4.7rem);margin:20px 0 27px}
+ .ac-roadmap-hero-links a strong{font-size:clamp(20px,5.1vw,27px)}
+ .ac-roadmap-right{grid-template-columns:1fr}
+ .ac-roadmap-help{grid-column:auto}
+ .ac-roadmap-global{flex-direction:column;align-items:stretch;padding:20px;gap:22px}
+ .ac-roadmap-global>a{min-width:0}
+ .ac-roadmap-footer{gap:12px 20px}
+}
+@media(prefers-reduced-motion:reduce){.ac-roadmap-menu *{transition:none!important}}
