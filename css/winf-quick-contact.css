@@ -1,0 +1,42 @@
+/* Atendimento rápido WINF™ em páginas públicas; Hermes será integrado separadamente. */
+#winf-quick-contact,#winf-quick-contact *{box-sizing:border-box}
+#winf-quick-contact{position:fixed;z-index:140;right:max(18px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));font:400 13px/1.45 Inter,Arial,sans-serif;color:#fff;max-width:calc(100vw - 26px);-webkit-font-smoothing:antialiased}
+#winf-quick-contact [hidden]{display:none!important}
+#winf-quick-contact button,#winf-quick-contact a{cursor:pointer}
+#winf-quick-contact button:focus-visible,#winf-quick-contact a:focus-visible{outline:2px solid #fff;outline-offset:4px}
+#winf-quick-contact .wqc-launchers{display:flex;justify-content:flex-end;align-items:flex-end;gap:12px}
+#winf-quick-contact .wqc-item{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:4px;min-width:53px;text-align:center}
+#winf-quick-contact .wqc-circle{position:relative;display:flex;justify-content:center;align-items:center;width:54px;height:54px;border-radius:50%;padding:10px;border:1px solid #ffffff59;background:#111115e8;color:#fff;box-shadow:0 6px 22px #0008;transition:transform .18s,border-color .18s;text-decoration:none;backdrop-filter:blur(10px)}
+#winf-quick-contact .wqc-circle:hover{transform:translateY(-3px);border-color:#fff}
+#winf-quick-contact .wqc-circle[aria-expanded="true"]{border-color:#fff;background:#232326}
+#winf-quick-contact .wqc-circle img{display:block;width:auto;max-height:35px;max-width:32px;object-fit:contain;filter:drop-shadow(0 0 5px #fff5)}
+#winf-quick-contact .wqc-whatsapp{background:#187c49;border-color:#75c798}
+#winf-quick-contact .wqc-whatsapp:hover{background:#208d55}
+#winf-quick-contact .wqc-circle svg{width:27px;height:27px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+#winf-quick-contact .wqc-whatsapp svg{width:28px;height:28px}
+#winf-quick-contact .wqc-label{font-size:9px;line-height:1.4;color:#fff;font-weight:800;letter-spacing:.045em;text-shadow:0 1px 5px #000;text-transform:uppercase;white-space:nowrap}
+#winf-quick-contact .wqc-panel{position:absolute;right:0;bottom:81px;width:min(360px,calc(100vw - 36px));border:1px solid #ffffff42;background:#101012f5;color:#fff;padding:18px;box-shadow:0 25px 65px #000c;backdrop-filter:blur(18px);border-radius:10px;max-height:min(65vh,560px);overflow:auto}
+#winf-quick-contact .wqc-panel-head{display:flex;justify-content:space-between;align-items:start;gap:16px;padding-bottom:14px;border-bottom:1px solid #ffffff30}
+#winf-quick-contact .wqc-panel-head strong{font-size:13px;line-height:1.35;letter-spacing:.08em;text-transform:uppercase}
+#winf-quick-contact .wqc-panel-head p{font-size:11px;color:#a9a9af;margin:5px 0 0}
+#winf-quick-contact .wqc-close{border:0;background:transparent;color:#fff;font-size:24px;line-height:1;min-width:30px;min-height:30px}
+#winf-quick-contact .wqc-options{display:flex;flex-direction:column;gap:8px;margin-top:15px}
+#winf-quick-contact .wqc-options a{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:12px;text-decoration:none;border:1px solid #ffffff30;color:#eee;font-size:12px;font-weight:650}
+#winf-quick-contact .wqc-options a:hover{background:#ffffff17;border-color:#ffffff77}
+#winf-quick-contact .wqc-options a span:last-child{font-size:17px}
+#winf-quick-contact .wqc-note{margin:13px 0 0;color:#a4a4a9;font-size:11px;line-height:1.6}
+html.winf-quick-dock-active #floating-contact-dock{display:none!important}
+body.wp-menu-open #winf-quick-contact,body.menu-open #winf-quick-contact,body.brand-menu-open #winf-quick-contact{display:none!important}
+body:has(#menu-overlay[aria-hidden="false"]) #winf-quick-contact,
+body:has(#brand-menu-layer[aria-hidden="false"]) #winf-quick-contact,
+body:has(dialog[open]) #winf-quick-contact{display:none!important}
+@media(max-width:580px){
+ #winf-quick-contact{right:13px;bottom:max(13px,env(safe-area-inset-bottom))}
+ #winf-quick-contact .wqc-launchers{gap:7px}
+ #winf-quick-contact .wqc-item{min-width:47px;gap:3px}
+ #winf-quick-contact .wqc-circle{width:48px;height:48px;padding:9px}
+ #winf-quick-contact .wqc-circle img{max-height:29px}
+ #winf-quick-contact .wqc-label{font-size:8px}
+ #winf-quick-contact .wqc-panel{bottom:72px}
+}
+@media(prefers-reduced-motion:reduce){#winf-quick-contact .wqc-circle{transition:none}}
