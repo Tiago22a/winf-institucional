@@ -20,26 +20,38 @@
   reduceMotion.addEventListener('change', syncHero);
   syncHero();
 
-  // Match the original muted preview, with controls after an explicit play action.
+  // Briefing VSL remains a poster until clicked; other pages keep their muted preview.
   const manifesto = document.getElementById('partners-manifesto');
-  function loadManifesto() {
+  const isBriefingVsl = manifesto?.hasAttribute('data-vsl-player') ?? false;
+  function loadManifesto(preview = false) {
     const source = manifesto?.querySelector('source[data-src]');
     if (source) { source.src = source.dataset.src; source.removeAttribute('data-src'); manifesto.load(); }
-    if (manifesto && !reduceMotion.matches && !saveData && !manifesto.controls) manifesto.play().catch(() => {});
+    if (preview && manifesto && !reduceMotion.matches && !saveData && !manifesto.controls) {
+      manifesto.play().catch(() => {});
+    }
   }
-  if (manifesto && 'IntersectionObserver' in window) {
-    new IntersectionObserver((entries, observer) => {
-      if (entries[0].isIntersecting) { loadManifesto(); observer.disconnect(); }
-    }, { rootMargin: '200px' }).observe(manifesto);
-  } else loadManifesto();
-  manifesto?.addEventListener('play', loadManifesto, { once: true });
+  if (manifesto && !isBriefingVsl) {
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver((entries, observer) => {
+        if (entries[0].isIntersecting) { loadManifesto(true); observer.disconnect(); }
+      }, { rootMargin: '200px' }).observe(manifesto);
+    } else loadManifesto(true);
+    manifesto.addEventListener('play', () => loadManifesto(true), { once: true });
+  }
 
   document.querySelector('[data-play-manifesto]')?.addEventListener('click', () => {
-    loadManifesto();
+    if (!manifesto) return;
+    loadManifesto(false);
     manifesto.controls = true;
     manifesto.muted = false;
     manifesto.loop = false;
-    manifesto.play().catch(() => {});
+    const playback = manifesto.play();
+    if (playback?.catch) playback.catch(() => {
+      // Return the play affordance and expose a direct video link if playback fails.
+      manifesto.controls = false;
+      const fallback = document.querySelector('[data-vsl-fallback]');
+      if (fallback) fallback.hidden = false;
+    });
   });
   const contact = document.getElementById('contact');
   document.querySelectorAll('a[href="#contact"]').forEach(link => {
