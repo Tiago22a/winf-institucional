@@ -4,7 +4,9 @@ on:
     paths:
       - 'partners/index.html'
       - 'partners/premium-home.css'
+      - 'partners/premium-home.js'
       - 'tests/partnersPremiumHome.test.cjs'
+      - 'tests/partnersPremiumInteractions.test.cjs'
       - '.github/workflows/partners-premium-home.yml'
   push:
     branches: ['feature/partners-main-premium-rebuild-20261106']
@@ -21,7 +23,9 @@ jobs:
         with:
           node-version: '22'
       - name: Check assets, anchors, compliance copy and design
-        run: node --test tests/partnersPremiumHome.test.cjs
+        run: node --test tests/partnersPremiumHome.test.cjs tests/partnersPremiumInteractions.test.cjs
+      - name: Validate enhancement JavaScript
+        run: node --check partners/premium-home.js
       - name: Check investor and importer form routing
         run: |
           if [ -f tests/partnersLeadRouting.test.cjs ]; then
