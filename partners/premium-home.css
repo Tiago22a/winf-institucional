@@ -155,27 +155,3 @@ img{display:block;max-width:100%;height:auto}a{color:inherit;text-decoration:non
 @media(max-width:740px){.footer-intro{padding:72px 22px 48px}.partners-wordmark strong{font-size:25px}.partners-wordmark small{font-size:8px}.footer-intro h2{font-size:clamp(36px,8vw,65px)}}
 @media(max-width:630px){.site-header .header-cta{display:none}.nav-wrap{gap:14px}.partners-wordmark strong{font-size:24px}.footer-wordmark strong{font-size:29px}}
 @media(max-width:440px){.partners-wordmark strong{font-size:clamp(18px,5.8vw,23px)}.partners-wordmark small{font-size:7px;letter-spacing:.08em}.footer-wordmark strong{font-size:27px}.footer-main{gap:29px 17px}}
-
-/* Official brand architecture: WINF products | WINF Partners franchise | M.A.W. agency */
-.winf-brand-family{margin:40px 0 0;border:1px solid #ffffff34;background:#111215}
-.winf-brand-parent{text-align:center;padding:39px 20px 32px;border-bottom:1px solid #ffffff2b}
-.winf-brand-parent strong{display:block;font:800 clamp(43px,5vw,70px)/1.15 var(--display);letter-spacing:-.065em;color:white;margin:10px 0}
-.winf-brand-parent strong sup{font:600 11px var(--mono);letter-spacing:0;vertical-align:top}
-.winf-brand-parent p{margin:0;color:#c0c2c7;font-size:13px}
-.winf-brand-lines{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
-.winf-brand-line{min-width:0;padding:26px 24px 30px;border-right:1px solid #ffffff27;position:relative;background:#16171a;transition:background .18s ease}
-.winf-brand-line:last-child{border-right:0}
-.winf-brand-line:before{content:"";position:absolute;left:24px;right:24px;top:0;height:3px;background:var(--line-color)}
-.winf-brand-line:hover{background:#202125}
-.winf-brand-line>span{font:600 10px/1.5 var(--mono);letter-spacing:.12em;color:#babcc1}
-.winf-brand-line strong{display:block;margin:30px 0 10px;font:800 clamp(19px,2.1vw,28px)/1.2 var(--display);letter-spacing:-.045em;color:#fafafb}
-.winf-brand-line p{margin:0;font-size:13px;line-height:1.8;color:#bcbec3}
-.winf-brand-line--aero{--line-color:#3b82f6}
-.winf-brand-line--neo{--line-color:#a2b18d}
-.winf-brand-line--ceramic{--line-color:#c7c9ce}
-.winf-brand-operations{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid #ffffff31}
-.winf-brand-operations>div{display:flex;flex-wrap:wrap;align-items:center;gap:7px 23px;justify-content:space-between;padding:20px 24px}
-.winf-brand-operations>div+div{border-left:1px solid #ffffff31}
-.winf-brand-operations strong{font:800 16px/1.35 var(--display);letter-spacing:-.02em;color:white}
-.winf-brand-operations span{font:600 9px/1.5 var(--mono);letter-spacing:.06em;color:#bfc0c6}
-@media(max-width:750px){.winf-brand-lines{grid-template-columns:1fr}.winf-brand-line{border-right:0;border-bottom:1px solid #ffffff2b;padding:25px 22px}.winf-brand-line strong{margin-top:20px}.winf-brand-operations{grid-template-columns:1fr}.winf-brand-operations>div+div{border-left:0;border-top:1px solid #ffffff31}}
