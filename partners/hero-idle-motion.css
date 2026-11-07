@@ -1,0 +1,21 @@
+/* WINF Partners™ / subtle cinematic idle motion while awaiting the approved Flow video.
+   This is NOT the requested POV door-opening video; it keeps the current poster alive.
+   The actual 16:9 footage will replace this treatment once approved and hosted. */
+@media (prefers-reduced-motion: no-preference) {
+  .winf-partners-site .wp-hero { overflow: hidden; isolation: isolate; }
+  .winf-partners-site .wp-hero-background {
+    transform-origin: 52% 50%;
+    animation: wp-hero-cinematic-drift 24s ease-in-out infinite alternate;
+    will-change: transform;
+  }
+}
+@keyframes wp-hero-cinematic-drift {
+  0% { transform: scale(1.025) translate3d(0,0,0); }
+  100% { transform: scale(1.09) translate3d(-.85%,.2%,0); }
+}
+@media (max-width: 680px) and (prefers-reduced-motion: no-preference) {
+  .winf-partners-site .wp-hero-background { animation-duration: 28s; transform-origin: 70% 50%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .winf-partners-site .wp-hero-background { animation: none!important; transform: none!important; }
+}
