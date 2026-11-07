@@ -48,3 +48,33 @@
   .ws-select-detail .sp-perf-brand img{max-height:70px;max-width:min(100%,260px)}
   .ws-select-detail .sp-perf-heading .sp-perf-mark{margin-top:12px}
 }
+
+/* Product color tokens are taken from the official wordmarks, never a generic theme.
+   Incomplete technical data has no filled bar: a tinted outline is not a performance claim. */
+body.ws-select-detail.ws-brand-blackpro{--sp-brand-accent:#B2FF00;--sp-brand-glow:rgba(178,255,0,.23)}
+body.ws-select-detail.ws-brand-dual-reflect{--sp-brand-accent:#01E4F1;--sp-brand-glow:rgba(1,228,241,.22)}
+body.ws-select-detail.ws-brand-invisible{--sp-brand-accent:#EDEFF0;--sp-brand-glow:rgba(237,239,240,.15)}
+body.ws-select-detail.ws-brand-securityblind{--sp-brand-accent:#C5C8CE;--sp-brand-glow:rgba(197,200,206,.15)}
+body.ws-select-detail.ws-brand-miniblind{--sp-brand-accent:#D0D3CF;--sp-brand-glow:rgba(208,211,207,.15)}
+body.ws-select-detail .sp-performance-card{--sp-brand-accent:#d8dee5;--sp-brand-glow:rgba(216,222,229,.16)}
+body.ws-select-detail.ws-brand-blackpro .sp-performance-card{--sp-brand-accent:#B2FF00;--sp-brand-glow:rgba(178,255,0,.23)}
+body.ws-select-detail.ws-brand-dual-reflect .sp-performance-card{--sp-brand-accent:#01E4F1;--sp-brand-glow:rgba(1,228,241,.22)}
+body.ws-select-detail.ws-brand-invisible .sp-performance-card{--sp-brand-accent:#EDEFF0;--sp-brand-glow:rgba(237,239,240,.15)}
+body.ws-select-detail.ws-brand-securityblind .sp-performance-card{--sp-brand-accent:#C5C8CE;--sp-brand-glow:rgba(197,200,206,.15)}
+body.ws-select-detail.ws-brand-miniblind .sp-performance-card{--sp-brand-accent:#D0D3CF;--sp-brand-glow:rgba(208,211,207,.15)}
+body.ws-select-detail .sp-perf-fill{
+  background:var(--sp-brand-accent)!important;
+  box-shadow:0 0 14px var(--sp-brand-glow)!important;
+}
+body.ws-select-detail .sp-perf-row:not(.is-pending) .sp-perf-track{
+  border-color:var(--sp-brand-glow);
+}
+body.ws-select-detail .sp-perf-row:not(.is-pending) .sp-perf-value{color:var(--sp-brand-accent)}
+body.ws-select-detail .sp-perf-row.is-pending .sp-perf-track::after{
+  background:var(--sp-brand-accent)!important;opacity:.85
+}
+body.ws-select-detail .sp-perf-row.is-pending .sp-perf-value{color:#adb0b6}
+body.ws-select-detail .sp-perf-heading .sp-perf-mark{border-color:var(--sp-brand-glow);color:var(--sp-brand-accent)}
+body.ws-select-detail .sp-perf-cta:is(:hover,:focus-visible){
+  border-color:var(--sp-brand-accent);color:var(--sp-brand-accent)!important;
+}
