@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="/css/winf-signoff.css">
 <link rel="stylesheet" href="/css/winf-footer-reference.css?v=20261103-reference-2">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap">
-<link rel="stylesheet" href="/briefing/asset-light.css?v=20261107-vsl">
+<link rel="stylesheet" href="/briefing/asset-light.css?v=20261107-contact-gate-2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&display=swap">
@@ -32,9 +32,23 @@
 <div class="partners-form-row"><label for="partner-city">Cidade / UF<input autocomplete="address-level2" id="partner-city" maxlength="120" name="city" placeholder="Ex.: Sorocaba / SP" required=""/></label><label for="partner-phone">WhatsApp<input autocomplete="tel" id="partner-phone" maxlength="24" minlength="10" name="phone" placeholder="DDD + número" required="" type="tel"/></label></div>
 <label for="partner-model">Modelo ou tipo de parceria<select id="partner-model" name="model" required=""><option value="">Selecione um modelo</option><option>WINF Asset Light™</option><option>Kiosk Arquitetônico</option><option>Flagship Studio &amp; Hub Regional</option><option>Parceria para arquitetos</option><option>Investimento societário / parceria estratégica</option><option>Parceria industrial / importação</option><option>Quero orientação para escolher</option></select></label>
 <label for="partner-message">Sobre sua operação <span>(opcional)</span><textarea id="partner-message" maxlength="1500" name="message" placeholder="Conte sua experiência e o que deseja construir." rows="3"></textarea></label>
-<button class="partners-btn partners-btn-light" type="submit">Solicitar conversa <span aria-hidden="true">↗</span></button><p aria-live="polite" id="partners-form-status" role="status"></p>
+<div class="partners-form-action"><button class="partners-btn partners-btn-light" type="submit">Solicitar conversa <span aria-hidden="true">↗</span></button><p class="partners-form-unlock-hint" id="partners-form-unlock-hint" aria-live="polite">Preencha os campos obrigatórios para liberar o acesso rápido ao WhatsApp e ao guia WINF.</p></div><p aria-live="polite" id="partners-form-status" role="status"></p>
 <noscript><p>Para consultar uma modalidade ou parceria, <a href="https://api.whatsapp.com/send/?phone=5513997815375" rel="noopener noreferrer" target="_blank">fale com a equipe de expansão</a>.</p></noscript>
-</form></dialog><footer id="winf-global-footer" class="wf-reference-footer" aria-label="Rodapé do ecossistema WINF" data-footer-version="20261103-reference-2">
+</form>
+<div class="partners-modal-contact-dock" aria-label="Acesso rápido após preencher a proposta">
+  <div class="partners-modal-help-panel" id="partners-modal-help-panel" hidden>
+    <div class="partners-modal-help-head"><strong>WINF PARTNERS™ / SUA JORNADA</strong><button type="button" id="partners-modal-help-close" aria-label="Fechar guia de dúvidas">×</button></div>
+    <p>Suas informações estão prontas. Escolha como continuar:</p>
+    <a href="/partners/#asset-light" target="_blank" rel="noopener noreferrer">Entender WINF Asset Light™ <span aria-hidden="true">↗</span></a>
+    <a href="/partners/#jornada" target="_blank" rel="noopener noreferrer">Conhecer a jornada territorial <span aria-hidden="true">↗</span></a>
+    <a href="/briefing/#budget" target="_blank" rel="noopener noreferrer">Consultar os modelos de negócio <span aria-hidden="true">↗</span></a>
+    <p class="partners-modal-help-caption">O assistente Hermes será integrado futuramente. Para dúvidas individuais, utilize o WhatsApp.</p>
+  </div>
+  <div class="partners-modal-launchers">
+    <div class="partners-modal-launch-item"><button type="button" class="partners-modal-circle" id="partners-modal-ghost" aria-label="Abrir guia WINF Partners após preencher formulário" aria-controls="partners-modal-help-panel" aria-expanded="false" title="Guia WINF Partners" disabled><img src="/aerocore/assets/ghost-symbol.png" alt="" width="32" height="42" loading="lazy"></button><small>WINF</small></div>
+    <div class="partners-modal-launch-item"><a class="partners-modal-circle partners-modal-whatsapp" id="partners-modal-whatsapp" aria-label="WhatsApp liberado após preencher formulário" aria-disabled="true" tabindex="-1" title="WhatsApp WINF Partners"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.7 7.7L3 21l1.5-4.9A8.5 8.5 0 1 1 20.5 11.6Z"/><path d="M8.2 7.4c.3-.3.7-.2.8.1l1 2c.1.3 0 .5-.5 1 .7 1.5 1.7 2.5 3.2 3.2.5-.5.7-.9 1-.8l2 .9c.4.2.4.5.2.9-.4.9-1.1 1.3-2 1.1-3.7-.8-6.6-3.7-7.1-6.5-.1-.8.5-1.6 1.4-1.9Z"/></svg></a><small>WHATSAPP</small></div>
+  </div>
+</div></dialog><footer id="winf-global-footer" class="wf-reference-footer" aria-label="Rodapé do ecossistema WINF" data-footer-version="20261103-reference-2">
 <span id="privacy" aria-hidden="true"></span><span id="politica-de-privacidade" aria-hidden="true"></span>
 <div class="wf-ref-wrap">
 <a href="/aerocore/" class="wf-ref-brand" aria-label="AeroCore — página principal"><span>AEROCORE</span><sup>™</sup></a>
@@ -72,7 +86,7 @@
 <p class="winf-footer-legal">© <span data-current-year>2026</span>. Todos os direitos reservados. Marcas de terceiros pertencem aos respectivos titulares. <span aria-hidden="true">•</span> <a href="/aerocore/policies/#privacidade">Privacidade</a></p>
 </div>
 </div>
-</footer><script defer="" src="/script.js"></script><script charset="utf-8" defer="" src="/js/winf-footer.js?v=20261103-reference-2"></script><script defer="" src="/partners/partners.js?v=20261107-vsl"></script></body></html>
+</footer><script defer="" src="/script.js"></script><script charset="utf-8" defer="" src="/js/winf-footer.js?v=20261103-reference-2"></script><script defer="" src="/partners/partners.js?v=20261107-contact-gate-2"></script></body></html>
 
 
 
