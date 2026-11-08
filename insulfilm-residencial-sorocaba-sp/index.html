@@ -34,6 +34,7 @@
     tailwind.config = { theme: { extend: { fontFamily: { sans: ['Gustavo','system-ui','sans-serif'], mono: ['JetBrains Mono','ui-monospace','monospace'] } } } };
   </script>
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/css/winf-territory-menu.css?v=20261108-territorios-1" />
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://winf.com.br/#organization","name":"WINF™","alternateName":"WINF Partners™","url":"https://winf.com.br/","logo":{"@type":"ImageObject","url":"https://winf.com.br/winf-logo.svg"},"sameAs":["https://www.instagram.com/winfpartners/"]},{"@type":"WebPage","@id":"https://winf.com.br/insulfilm-residencial-sorocaba-sp/#webpage","url":"https://winf.com.br/insulfilm-residencial-sorocaba-sp/","name":"Insulfilm Residencial em Sorocaba SP | WINF™","description":"Insulfilm residencial e película para vidro em Sorocaba. Controle de calor, proteção UV, privacidade e instalação especializada WINF™.","inLanguage":"pt-BR","isPartOf":{"@type":"WebSite","@id":"https://winf.com.br/#website","url":"https://winf.com.br/","name":"WINF™"},"about":{"@id":"https://winf.com.br/#organization"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://winf.com.br/images/og/og-winf-select.png"}},{"@type":"Service","@id":"https://winf.com.br/insulfilm-residencial-sorocaba-sp/#service","name":"Insulfilm Residencial em Sorocaba SP","serviceType":"Instalação de películas arquitetônicas para vidros","provider":{"@id":"https://winf.com.br/#organization"},"areaServed":[{"@type":"City","name":"Sorocaba"},{"@type":"City","name":"Votorantim"},{"@type":"City","name":"Araçoiaba da Serra"}],"url":"https://winf.com.br/insulfilm-residencial-sorocaba-sp/","description":"Insulfilm residencial e película para vidro em Sorocaba. Controle de calor, proteção UV, privacidade e instalação especializada WINF™."},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"WINF™","item":"https://winf.com.br/"},{"@type":"ListItem","position":2,"name":"Insulfilm Residencial em Sorocaba SP","item":"https://winf.com.br/insulfilm-residencial-sorocaba-sp/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Insulfilm residencial reduz o calor dentro de casa?","acceptedAnswer":{"@type":"Answer","text":"Películas arquitetônicas de controle solar podem reduzir a entrada de energia solar pelo vidro e melhorar o conforto térmico. O resultado depende da orientação, área envidraçada e solução escolhida."}},{"@type":"Question","name":"Qual insulfilm usar em janela de apartamento em Sorocaba?","acceptedAnswer":{"@type":"Answer","text":"A escolha depende de transparência, privacidade, calor e regras de fachada. Existem opções transparentes nano cerâmicas, refletivas e escurecidas."}},{"@type":"Question","name":"Existe película para vidro que não escurece o ambiente?","acceptedAnswer":{"@type":"Answer","text":"Sim. Existem linhas de alta transparência desenvolvidas para controle térmico e UV com baixa alteração visual."}},{"@type":"Question","name":"A WINF atende Sorocaba e região?","acceptedAnswer":{"@type":"Answer","text":"O atendimento é direcionado a projetos residenciais, comerciais e arquitetônicos em Sorocaba e região, conforme agenda e características do projeto."}}]}]}</script>
     <link rel="stylesheet" href="/css/winf-footer.css?v=20261029-country-dots-2" />
   <link rel="stylesheet" href="/css/winf-signoff.css">
@@ -43,33 +44,55 @@
 <script defer src="/js/winf-return.js?v=20261104-scroll-3"></script>
 <link rel="stylesheet" href="/css/winf-home-roadmap.css?v=20261108-select-1">
 </head>
-<body class="bg-black text-white antialiased selection:bg-white/20 selection:text-white">
+<body class="bg-black text-white antialiased selection:bg-white/20 selection:text-white winf-territory-page" data-winf-territory-name="Sorocaba / SP" data-winf-territory-slug="sorocaba-sp">
 <a class="winf-return-link" data-winf-return href="/" aria-label="Voltar ao início da seção"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 5-7 7 7 7M5 12h14"></path></svg></a>
 
   <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
   <div id="site-shell" class="min-h-screen overflow-x-hidden bg-black">
 
-    <div id="menu-overlay" class="fixed inset-0 z-[80] hidden overflow-y-auto bg-[#121214] p-6 sm:p-12 md:p-20" aria-hidden="true">
-      <div class="flex w-full justify-end">
-        <button type="button" data-action="close-menu" aria-label="Fechar menu" class="menu-close-button group flex h-10 w-10 items-center justify-center border border-white/15 text-zinc-400 transition-colors hover:bg-white/5 hover:text-white"><span class="menu-close-x" aria-hidden="true"></span></button>
-      </div>
-      <div class="mx-auto my-auto grid w-full max-w-7xl grid-cols-1 items-end gap-12 py-8 lg:grid-cols-12">
-        <nav class="flex select-none flex-col items-start space-y-1 sm:space-y-2 lg:col-span-7" aria-label="Navegação principal">
-          <a href="/" data-action="menu-link" class="menu-primary-link">WINF SELECT™</a>
-          <a href="/aerocore/" data-action="menu-link" class="menu-primary-link">AEROCORE™</a>
-          <a href="/winf-home/" data-action="menu-link" class="menu-primary-link">ABOUT US</a>
-          <a href="/aerocore/neoskin/" data-action="menu-link" class="menu-primary-link">PPF</a>
-        </nav>
-        <div class="grid grid-cols-2 gap-8 font-sans text-base font-normal text-zinc-300 lg:col-span-5 lg:grid-cols-3 lg:text-lg">
-          <div class="space-y-4"><span class="menu-label">// WINF SELECT™</span><a href="/invisible/" class="menu-secondary-link">Invisible™</a><a href="/miniblind-venetian/" class="menu-secondary-link">Miniblind &amp; Venetian™</a><a href="/dual-reflect/" class="menu-secondary-link">Dual-Reflect™</a><a href="/blackpro/" class="menu-secondary-link">BlackPro™</a><a href="/securityblind/" class="menu-secondary-link">SecurityBlinder™</a></div>
-          <div class="space-y-4"><span class="menu-label">// AEROCORE™</span><a href="/aerocore/" class="menu-secondary-link">AeroCore™</a><a href="/aerocore/neoskin/" class="menu-secondary-link">NeoSkin™</a><a href="/aerocore/ceramic-armoring/" class="menu-secondary-link">Ceramic Armoring™</a></div>
-          <div class="col-span-2 space-y-4 lg:col-span-1"><span class="menu-label">// LOCAL</span><a href="/pelicula-de-controle-solar-santos-sp/" class="menu-secondary-link">Santos</a><a href="/insulfilm-residencial-sorocaba-sp/" class="menu-secondary-link">Sorocaba</a><a href="/blog/" class="menu-secondary-link">Journal</a><a href="#orcamento" data-action="menu-link" class="menu-secondary-link">Contato</a></div>
+    <div id="menu-overlay" class="winf-territory-menu hidden" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="wt-menu-title">
+      <div class="wt-menu-shell">
+        <div class="wt-menu-top">
+          <a class="wt-menu-wordmark" href="/aerocore/winf-select/" data-action="menu-link" aria-label="WINF Select Glass + Home"><img src="/winf-logo.svg" alt="WINF™" width="91" height="31"><span>SELECT™ / GLASS + HOME</span></a>
+          <button type="button" data-action="close-menu" class="wt-menu-close" aria-label="Fechar menu WINF Select">FECHAR <span aria-hidden="true">×</span></button>
         </div>
+        <div class="wt-menu-content">
+          <nav class="wt-menu-primary" aria-label="Navegação principal WINF Select Sorocaba">
+            <p class="wt-kicker">/ WINF SELECT™ — SOROCABA / SP</p>
+            <a id="wt-menu-title" href="/aerocore/winf-select/" data-action="menu-link">WINF SELECT™</a>
+            <a href="#solucoes" data-action="menu-link">TECNOLOGIAS.</a>
+            <a href="/catalogo/?marca=select" data-action="menu-link">CATÁLOGO.</a>
+            <a href="#orcamento" data-action="menu-link">ORÇAMENTO.</a>
+          </nav>
+          <div class="wt-menu-aside">
+            <section class="wt-menu-group" aria-label="Linhas de películas para vidro">
+              <p>/ TECNOLOGIAS ARQUITETÔNICAS</p>
+              <div class="wt-tech-grid">
+                <a href="/invisible/" data-action="menu-link">INVISIBLE™ <span aria-hidden="true">↗</span></a>
+                <a href="/blackpro/" data-action="menu-link">BLACKPRO™ <span aria-hidden="true">↗</span></a>
+                <a href="/dual-reflect/" data-action="menu-link">DUALREFLECT™ <span aria-hidden="true">↗</span></a>
+                <a href="/securityblind/" data-action="menu-link">SECURITYBLINDER™ <span aria-hidden="true">↗</span></a>
+                <a href="/miniblind-venetian/" data-action="menu-link">MINIBLIND &amp; VENETIAN™ <span aria-hidden="true">↗</span></a>
+                <a href="/onde-comprar/" data-action="menu-link">OUTROS TERRITÓRIOS <span aria-hidden="true">↗</span></a>
+              </div>
+            </section>
+            <section class="wt-menu-group" aria-label="Outras marcas do universo WINF">
+              <p>/ DEPOIS, EXPLORE O UNIVERSO WINF</p>
+              <div class="wt-more-brands">
+                <a href="/aerocore/" data-action="menu-link">AEROCORE™ ↗</a>
+                <a href="/aerocore/neoskin/" data-action="menu-link">NEOSKIN™ ↗</a>
+                <a href="/aerocore/ceramic-armoring/" data-action="menu-link">CERAMIC ARMORING™ ↗</a>
+                <a href="/" data-action="menu-link">WINF GLOBAL ↗</a>
+              </div>
+            </section>
+            <a class="wt-menu-cta" href="https://wa.me/5513981113001?text=Ol%C3%A1!%20Estou%20na%20p%C3%A1gina%20WINF%20Select%20de%20Sorocaba%2FSP%20e%20gostaria%20de%20consultar%20instala%C3%A7%C3%A3o%20de%20pel%C3%ADcula%20arquitet%C3%B4nica." target="_blank" rel="noopener noreferrer" data-action="menu-link">CONSULTAR ATENDIMENTO PELA CENTRAL <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="wt-menu-bottom"><span>SOROCABA / SP · GLASS + HOME · DO BRASIL PARA O MUNDO.</span><a href="/onde-comprar/" data-action="menu-link">ENCONTRAR OUTRA UNIDADE ↗</a></div>
       </div>
-      <div class="flex w-full items-center justify-between pt-4 text-xs font-mono text-zinc-400"><span>WINF SELECT™ &amp; AEROCORE™ // ECOSYSTEM</span><span class="hidden text-[10px] uppercase sm:inline">SOROCABA / SP</span></div>
     </div>
 
-    <main id="conteudo" class="w-full min-h-screen bg-black text-white">
+<main id="conteudo" class="w-full min-h-screen bg-black text-white">
       <section id="topo" class="hero-section relative z-10 flex min-h-screen w-full select-none flex-col justify-between overflow-hidden p-6 sm:p-10 md:p-14">
         <div class="hero-media absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <video id="hero-video" class="h-full w-full scale-105 object-cover opacity-75 mix-blend-screen" playsinline muted loop autoplay preload="metadata" poster="/images/dualreflect-poster-1.webp"><source src="/videos/dualreflect-hero.mp4" type="video/mp4" /></video>
@@ -78,9 +101,19 @@
           <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(255,255,255,.08),transparent_38%)]"></div>
         </div>
 
-        <header class="relative z-30 flex w-full items-center justify-between">
-          <a href="/" aria-label="WINF — início" class="flex items-center transition-opacity hover:opacity-80"><img loading="eager" decoding="async" fetchpriority="high" src="/winf-logo.svg" width="128" height="32" alt="WINF™" class="h-6 w-auto object-contain drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)] sm:h-7 md:h-8" /></a>
-          <button type="button" data-action="open-menu" aria-label="Abrir Menu de Navegação" class="menu-trigger group relative z-50"><span></span><span></span></button>
+        <header class="winf-territory-header relative z-30 flex w-full items-center justify-between" aria-label="WINF Select Sorocaba — navegação">
+          <a href="/" class="wt-lockup" aria-label="Voltar à WINF global">
+            <img src="/winf-logo.svg" width="109" height="36" alt="WINF™" loading="eager" decoding="async" fetchpriority="high">
+            <span class="wt-lockup-divider" aria-hidden="true"></span>
+            <span class="wt-lockup-label"><strong>SELECT™</strong><small>GLASS + HOME</small></span>
+          </a>
+          <div class="wt-header-right">
+            <span class="wt-current-city">SOROCABA / SP</span>
+            <button type="button" data-action="open-menu" class="menu-trigger wt-ghost-trigger" aria-controls="menu-overlay" aria-expanded="false" aria-label="Abrir menu WINF Select Sorocaba">
+              <span class="wt-menu-lines" aria-hidden="true"><span></span><span></span></span>
+              <img src="/aerocore/assets/ghost-symbol.png" width="30" height="41" alt="" aria-hidden="true" decoding="async">
+            </button>
+          </div>
         </header>
 
         <div class="relative z-20 my-auto flex w-full flex-1 items-center justify-center px-2 sm:px-4">
@@ -156,12 +189,7 @@
         </div>
       </section>
 
-      <a href="https://wa.me/5513981113001" target="_blank" rel="noopener noreferrer" aria-label="Falar com a WINF pelo WhatsApp" class="fixed bottom-6 right-6 z-[65] flex h-14 w-14 items-center justify-center rounded-full bg-white text-black shadow-[0_10px_35px_rgba(0,0,0,.45)] transition-transform duration-300 hover:scale-105 sm:h-16 sm:w-16">
-        <svg viewBox="0 0 32 32" aria-hidden="true" class="h-7 w-7 sm:h-8 sm:w-8" fill="currentColor">
-          <path d="M19.11 17.58c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.19-1.35-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.47.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.47-.07-.14-.61-1.47-.84-2.02-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27 0 1.34.97 2.63 1.11 2.81.14.18 1.91 2.91 4.63 4.08.65.28 1.15.44 1.55.56.65.21 1.24.18 1.71.11.52-.08 1.6-.65 1.83-1.29.23-.63.23-1.18.16-1.29-.07-.11-.25-.18-.52-.32Z"/>
-          <path d="M16.03 3.2A12.72 12.72 0 0 0 5.16 22.56L3.2 28.8l6.42-1.89A12.73 12.73 0 1 0 16.03 3.2Zm0 22.93a10.1 10.1 0 0 1-5.15-1.41l-.37-.22-3.81 1.12 1.16-3.71-.24-.38A10.13 10.13 0 1 1 16.03 26.13Z"/>
-        </svg>
-      </a>
+      
 
       <footer id="winf-global-footer" class="winf-home-roadmap" aria-labelledby="whr-title" data-footer-version="20261108-select-global-1">
           <span id="privacy" aria-hidden="true"></span><span id="politica-de-privacidade" aria-hidden="true"></span>
