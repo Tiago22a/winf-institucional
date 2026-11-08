@@ -36,3 +36,17 @@
  .winf-locator-page .winf-locator-footer-inner{align-items:flex-start;flex-direction:column}
 }
 @media(prefers-reduced-motion:reduce){.winf-locator-page .directory-card{transition:none}}
+
+/* Back to global WINF + city-unit commercial links. */
+.winf-locator-page .winf-locator-back{position:absolute;z-index:12;top:112px;left:max(24px,calc((100% - 1200px)/2));display:inline-flex;align-items:center;gap:10px;color:#dedee3;text-decoration:none;font:700 10px/1.5 Inter,Arial,sans-serif;letter-spacing:.15em;border-bottom:1px solid #ffffff45;padding:7px 2px}
+.winf-locator-page .winf-locator-back:hover{color:white;border-color:white}
+.winf-locator-page .winf-locator-back span{font-size:18px;font-weight:300}
+.winf-locator-page .winf-locator-breadcrumb{top:165px}
+.winf-locator-page .winf-directory .directory-hero{padding-top:218px}
+.winf-locator-page .directory-card-links{display:flex;flex-wrap:wrap;gap:8px}
+.winf-locator-page .directory-card-links a{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:10px 13px;min-height:42px;border:1px solid #ffffff42;color:white;transition:background .2s,border-color .2s}
+.winf-locator-page .directory-card-links a:hover{border-color:#fff;background:#ffffff1c}
+.winf-locator-page .directory-card-links a.directory-city-site{background:#eeeeee;color:#101012;font-weight:700}
+.winf-locator-page .directory-card-links a.directory-city-site:hover{background:white}
+.winf-locator-page .directory-card .directory-card-note{margin-top:13px;color:#9fa0a7;font-size:12px;line-height:1.6}
+@media(max-width:700px){.winf-locator-page .winf-locator-back{top:87px;left:20px;font-size:9px}.winf-locator-page .winf-locator-breadcrumb{top:133px}.winf-locator-page .winf-directory .directory-hero{padding-top:183px}}
