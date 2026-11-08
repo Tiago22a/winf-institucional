@@ -1,5 +1,5 @@
 /* WINF Partners — ponto seguro para ativar o filme cinematográfico da home.
- * Não carregar o arquivo de referência com esquadrias distorcidas.
+ * Usar apenas a edição curta e revisada; a referência original não deve ser exibida.
  * Para habilitar depois da aprovação: data-film-src="/partners/media/partners-glass-approved.mp4"
  * e opcionalmente data-film-poster="/partners/media/partners-glass-poster.webp"
  * no elemento [data-wp-hero-film]. A página funciona sem vídeo.
@@ -19,7 +19,7 @@
   film.muted = true;
   film.defaultMuted = true;
   film.autoplay = false;
-  film.loop = true;
+  film.loop = false;
   film.playsInline = true;
   film.setAttribute('playsinline', '');
   film.setAttribute('muted', '');
@@ -46,6 +46,7 @@
   };
   const pause = () => { film.pause(); stage.classList.remove('wp-film-playing'); };
   film.addEventListener('playing', () => stage.classList.add('wp-film-playing'));
+  film.addEventListener('ended', () => stage.classList.remove('wp-film-playing'));
   film.addEventListener('error', pause);
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) pause();

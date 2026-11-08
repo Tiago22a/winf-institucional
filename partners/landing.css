@@ -41,7 +41,7 @@ body.winf-partners-site{margin:0;min-width:320px;background:var(--wp-bg);color:#
 .wp-menu-bottom{border-top:1px solid #fff3;border-bottom:0;padding:18px 0 0}.wp-menu-bottom a{text-decoration:none;color:#fff}
 body.wp-menu-open{overflow:hidden}
 .wp-hero{position:relative;min-height:790px;display:flex;justify-content:center;flex-direction:column;overflow:hidden;background:#13171a;border-bottom:1px solid #fff3}
-.wp-hero-background{position:absolute;inset:0;background:linear-gradient(90deg,#0b0b0de8 0%,#0b0b0dcc 46%,#0b0b0d80 100%),linear-gradient(0deg,#0b0b0d,transparent 32%),url(/briefing/media/briefing-poster.webp) center/cover no-repeat}
+.wp-hero-background{position:absolute;inset:0;background:linear-gradient(90deg,#0b0b0de8 0%,#0b0b0dcc 46%,#0b0b0d80 100%),linear-gradient(0deg,#0b0b0d,transparent 32%),url(/partners/media/partners-varanda-20261108.webp) center/cover no-repeat}
 .wp-hero-layout{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(245px,.5fr);align-items:end;gap:40px;padding:165px 0 80px}
 .wp-hero h1{font-size:clamp(4rem,7.2vw,8rem);margin:28px 0 26px;max-width:1000px}
 .wp-hero h1 em{font-style:normal;color:#eaeaea}

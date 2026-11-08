@@ -73,3 +73,9 @@
   .winf-partners-site .wp-hero-glass-ghost{animation:none!important;transform:none!important}
   .winf-partners-site .wp-hero-approved-video{display:none!important}
 }
+
+/* Edição curta: Ghost oficial menor e integrado ao vidro, inclusive durante o filme. */
+.winf-partners-site .wp-hero-cinematic-stage.wp-film-playing .wp-hero-glass-ghost{z-index:2;opacity:.19!important;animation:none!important;transition:opacity .7s}
+.winf-partners-site .wp-hero-glass-ghost{right:14%;top:32%;width:clamp(14px,1.35vw,21px)}
+@media(max-width:760px){.winf-partners-site .wp-hero-glass-ghost{right:8%;top:25%;width:16px}.winf-partners-site .wp-hero-approved-video{object-position:50% 50%}}
+@media(prefers-reduced-motion:reduce){.winf-partners-site .wp-hero-glass-ghost{display:none}}
