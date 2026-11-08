@@ -8,6 +8,10 @@ const root = path.resolve(__dirname, '..');
 const read = (p) => fs.readFileSync(path.join(root, p), 'utf8');
 const pages = [
   'partners/index.html',
+  'partners/distribuidores/index.html',
+  'partners/varejistas/index.html',
+  'partners/ecossistema/index.html',
+  'partners/cuidar-e-conectar/index.html',
   'briefing/index.html',
   'briefing/asset-light/index.html',
   'briefing/quiosque/index.html',
@@ -105,4 +109,17 @@ test('logo oficial e CSS touch/hover sao preservados', () => {
     assert.match(css, /pointer:coarse/, p);
     assert.equal((css.match(/\{/g)||[]).length, (css.match(/\}/g)||[]).length, p);
   }
+});
+
+test('Partners apresenta parceiros B2B e projetos distintos do licenciamento', () => {
+ const main = read('partners/index.html');
+ for (const url of ['/partners/distribuidores/','/partners/varejistas/','/partners/ecossistema/','/partners/cuidar-e-conectar/']) {
+   assert.match(main, new RegExp('href="'+url.replaceAll('/','\\/')+'"'));
+ }
+ assert.match(read('partners/distribuidores/index.html'), /proposta.*avaliação|sujeita.*análise/i);
+ assert.match(read('partners/varejistas/index.html'), /não é automaticamente uma franquia|não equivale ao Quiosque/i);
+ assert.match(read('partners/ecossistema/index.html'), /SYNTHWAVE.*fm/i);
+ assert.match(read('partners/ecossistema/index.html'), /CARRO MÍDIA/i);
+ assert.match(read('partners/ecossistema/index.html'), /GHOST SHOP/i);
+ assert.match(read('partners/cuidar-e-conectar/index.html'), /projeto em estruturação|em planejamento/i);
 });
