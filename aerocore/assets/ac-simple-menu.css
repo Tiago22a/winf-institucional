@@ -4,69 +4,69 @@
 @font-face{font-family:Gustavo;src:url('/fonts/gustavo-light.otf') format('opentype');font-style:normal;font-weight:300;font-display:swap}
 @font-face{font-family:Gustavo;src:url('/fonts/gustavo-bold.otf') format('opentype');font-style:normal;font-weight:700;font-display:swap}
 #ac-menu-anchor{scroll-margin-top:90px}
-#ac-simple-menu,#ac-simple-menu *{box-sizing:border-box}
-#ac-simple-menu[hidden],#ac-simple-menu #contact-channels[hidden]{display:none!important}
-#ac-simple-menu{position:fixed;inset:0;z-index:9999;overflow:auto;overscroll-behavior:contain;background:#111113;color:#fff;font-family:Gustavo,Inter,Arial,sans-serif;-webkit-font-smoothing:antialiased}
-#ac-simple-menu a{text-decoration:none;color:inherit}
-#ac-simple-menu button{cursor:pointer}
-#ac-simple-menu :is(a,button):focus-visible{outline:2px solid #fff;outline-offset:4px}
-#ac-simple-menu .ac-simple-shell{width:min(100% - 90px,1280px);min-height:100%;margin:0 auto;display:flex;flex-direction:column;padding:35px 0 24px}
-#ac-simple-menu .ac-simple-top{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-bottom:24px;border-bottom:1px solid #ffffff2b}
-#ac-simple-menu .ac-simple-brand{display:flex;align-items:center;gap:15px;min-width:0}
-#ac-simple-menu .ac-simple-brand-word{font:300 clamp(22px,2.3vw,32px)/1.05 Outfit,Inter,sans-serif;letter-spacing:.14em;white-space:nowrap}
-#ac-simple-menu .ac-simple-brand-word sup{font:500 10px/1 Outfit,Inter,sans-serif;vertical-align:top;letter-spacing:0}
-#ac-simple-menu .ac-simple-brand-small{border-left:1px solid #ffffff50;padding-left:14px;color:#aaaab1;font:600 9px/1.5 Inter,sans-serif;letter-spacing:.12em;white-space:nowrap}
-#ac-simple-menu .ac-simple-close{border:1px solid #ffffff49;background:transparent;color:#f0f0f0;padding:10px 13px;min-height:44px;display:flex;align-items:center;gap:12px;font:700 11px/1 Gustavo,Inter,sans-serif;letter-spacing:.12em}
-#ac-simple-menu .ac-simple-close:hover{background:#ffffff16}
-#ac-simple-menu .ac-simple-close span{font:300 24px/1 Arial,sans-serif}
-#ac-simple-menu .ac-simple-content{flex:1;display:grid;grid-template-columns:minmax(0,1.12fr) minmax(360px,.88fr);gap:clamp(35px,7.2vw,108px);align-items:center;padding:clamp(38px,6vw,80px) 0}
-#ac-simple-menu .ac-simple-main{display:flex;flex-direction:column;gap:0}
-#ac-simple-menu .ac-simple-kicker{display:block;color:#aaaab2;font:600 10px/1.5 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.17em;margin-bottom:25px}
-#ac-simple-menu .ac-simple-main>a{display:block;padding:7px 0;font:700 clamp(39px,5.6vw,82px)/.98 Gustavo,Montserrat,Inter,sans-serif;letter-spacing:-.052em;overflow-wrap:anywhere;transition:color .25s,transform .25s}
-#ac-simple-menu .ac-simple-main>a:hover{color:#ababaf;transform:translateX(5px)}
-#ac-simple-menu .ac-simple-main>a:first-of-type{color:#f6f6f7}
-#ac-simple-menu .ac-simple-main>a small{font:500 .26em/1 Outfit,Inter,sans-serif;vertical-align:top;letter-spacing:0}
-#ac-simple-menu .ac-simple-side{display:flex;flex-direction:column;gap:34px;align-self:center}
-#ac-simple-menu .ac-simple-group{padding-top:14px;border-top:1px solid #ffffff2e}
-#ac-simple-menu .ac-simple-group>p{margin:0 0 18px;color:#a8a8b0;font:600 10px/1.5 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.15em}
-#ac-simple-menu .ac-simple-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
-#ac-simple-menu .ac-simple-grid a{border:1px solid #ffffff28;min-height:46px;padding:12px;display:flex;align-items:center;font:700 12px/1.3 Gustavo,Inter,sans-serif;letter-spacing:.03em}
-#ac-simple-menu .ac-simple-grid a:hover{background:#ffffff16}
-#ac-simple-menu .ac-simple-list{display:grid}
-#ac-simple-menu .ac-simple-list a{min-height:47px;padding:11px 0;display:flex;align-items:center;justify-content:space-between;gap:15px;border-bottom:1px solid #ffffff27;font:500 14px/1.3 Gustavo,Inter,sans-serif}
-#ac-simple-menu .ac-simple-list a:hover{color:#bbb}
-#ac-simple-menu .ac-simple-list a span{font-size:11px;color:#aaa}
-#ac-simple-menu .ac-simple-contact{position:relative;border:1px solid #ffffff36}
-#ac-simple-menu .ac-simple-contact>button{width:100%;background:#ffffff10;color:#fff;min-height:49px;padding:13px 15px;display:flex;align-items:center;justify-content:space-between;font:700 12px/1.2 Gustavo,Inter,sans-serif;letter-spacing:.05em}
-#ac-simple-menu .ac-simple-contact>button:hover{background:#ffffff1b}
-#ac-simple-menu .ac-simple-contact>button span{font-size:20px;font-weight:300}
-#ac-simple-menu .ac-simple-contact-panel{position:absolute;top:100%;left:0;right:0;z-index:2;display:flex;flex-direction:column;gap:7px;padding:13px;background:#141416;border:1px solid #ffffff44;box-shadow:0 15px 45px #000a}
-#ac-simple-menu .ac-simple-contact-panel>a{display:block;padding:11px;font:600 12px/1.5 Gustavo,Inter,sans-serif;border:1px solid #ffffff2b}
-#ac-simple-menu .ac-simple-contact-panel>a:hover{background:#ffffff13}
-#ac-simple-menu .ac-simple-contact-panel>button{align-self:flex-end;background:transparent;color:white;border:0;padding:5px;font-size:20px}
-#ac-simple-menu .ac-simple-bottom{border-top:1px solid #ffffff2a;padding-top:20px;display:flex;align-items:center;justify-content:space-between;gap:25px}
-#ac-simple-menu .ac-simple-bottom p{margin:0;font:500 10px/1.6 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.08em;color:#a4a4ab;text-transform:uppercase}
-#ac-simple-menu .ac-simple-global{display:flex;align-items:center;gap:12px;padding:10px 13px;min-height:48px;border:1px solid #ffffff3d;background:#ffffff08}
-#ac-simple-menu .ac-simple-global:hover{background:#ffffff16}
-#ac-simple-menu .ac-simple-global img{width:42px;height:auto;max-height:19px;object-fit:contain}
-#ac-simple-menu .ac-simple-global span{font:600 10px/1.3 Gustavo,Inter,sans-serif;letter-spacing:.08em}
+#menu-overlay.ac-simple-menu,#menu-overlay.ac-simple-menu *{box-sizing:border-box}
+#menu-overlay.ac-simple-menu[hidden],#menu-overlay.ac-simple-menu #contact-channels[hidden]{display:none!important}
+#menu-overlay.ac-simple-menu{position:fixed;inset:0;z-index:9999;overflow:auto;overscroll-behavior:contain;background:#111113;color:#fff;font-family:Gustavo,Inter,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+#menu-overlay.ac-simple-menu a{text-decoration:none;color:inherit}
+#menu-overlay.ac-simple-menu button{cursor:pointer}
+#menu-overlay.ac-simple-menu :is(a,button):focus-visible{outline:2px solid #fff;outline-offset:4px}
+#menu-overlay.ac-simple-menu .ac-simple-shell{width:min(100% - 90px,1280px);min-height:100%;margin:0 auto;display:flex;flex-direction:column;padding:35px 0 24px}
+#menu-overlay.ac-simple-menu .ac-simple-top{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-bottom:24px;border-bottom:1px solid #ffffff2b}
+#menu-overlay.ac-simple-menu .ac-simple-brand{display:flex;align-items:center;gap:15px;min-width:0}
+#menu-overlay.ac-simple-menu .ac-simple-brand-word{font:300 clamp(22px,2.3vw,32px)/1.05 Outfit,Inter,sans-serif;letter-spacing:.14em;white-space:nowrap}
+#menu-overlay.ac-simple-menu .ac-simple-brand-word sup{font:500 10px/1 Outfit,Inter,sans-serif;vertical-align:top;letter-spacing:0}
+#menu-overlay.ac-simple-menu .ac-simple-brand-small{border-left:1px solid #ffffff50;padding-left:14px;color:#aaaab1;font:600 9px/1.5 Inter,sans-serif;letter-spacing:.12em;white-space:nowrap}
+#menu-overlay.ac-simple-menu .ac-simple-close{border:1px solid #ffffff49;background:transparent;color:#f0f0f0;padding:10px 13px;min-height:44px;display:flex;align-items:center;gap:12px;font:700 11px/1 Gustavo,Inter,sans-serif;letter-spacing:.12em}
+#menu-overlay.ac-simple-menu .ac-simple-close:hover{background:#ffffff16}
+#menu-overlay.ac-simple-menu .ac-simple-close span{font:300 24px/1 Arial,sans-serif}
+#menu-overlay.ac-simple-menu .ac-simple-content{flex:1;display:grid;grid-template-columns:minmax(0,1.12fr) minmax(360px,.88fr);gap:clamp(35px,7.2vw,108px);align-items:center;padding:clamp(38px,6vw,80px) 0}
+#menu-overlay.ac-simple-menu .ac-simple-main{display:flex;flex-direction:column;gap:0}
+#menu-overlay.ac-simple-menu .ac-simple-kicker{display:block;color:#aaaab2;font:600 10px/1.5 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.17em;margin-bottom:25px}
+#menu-overlay.ac-simple-menu .ac-simple-main>a{display:block;padding:7px 0;font:700 clamp(39px,5.6vw,82px)/.98 Gustavo,Montserrat,Inter,sans-serif;letter-spacing:-.052em;overflow-wrap:anywhere;transition:color .25s,transform .25s}
+#menu-overlay.ac-simple-menu .ac-simple-main>a:hover{color:#ababaf;transform:translateX(5px)}
+#menu-overlay.ac-simple-menu .ac-simple-main>a:first-of-type{color:#f6f6f7}
+#menu-overlay.ac-simple-menu .ac-simple-main>a small{font:500 .26em/1 Outfit,Inter,sans-serif;vertical-align:top;letter-spacing:0}
+#menu-overlay.ac-simple-menu .ac-simple-side{display:flex;flex-direction:column;gap:34px;align-self:center}
+#menu-overlay.ac-simple-menu .ac-simple-group{padding-top:14px;border-top:1px solid #ffffff2e}
+#menu-overlay.ac-simple-menu .ac-simple-group>p{margin:0 0 18px;color:#a8a8b0;font:600 10px/1.5 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.15em}
+#menu-overlay.ac-simple-menu .ac-simple-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+#menu-overlay.ac-simple-menu .ac-simple-grid a{border:1px solid #ffffff28;min-height:46px;padding:12px;display:flex;align-items:center;font:700 12px/1.3 Gustavo,Inter,sans-serif;letter-spacing:.03em}
+#menu-overlay.ac-simple-menu .ac-simple-grid a:hover{background:#ffffff16}
+#menu-overlay.ac-simple-menu .ac-simple-list{display:grid}
+#menu-overlay.ac-simple-menu .ac-simple-list a{min-height:47px;padding:11px 0;display:flex;align-items:center;justify-content:space-between;gap:15px;border-bottom:1px solid #ffffff27;font:500 14px/1.3 Gustavo,Inter,sans-serif}
+#menu-overlay.ac-simple-menu .ac-simple-list a:hover{color:#bbb}
+#menu-overlay.ac-simple-menu .ac-simple-list a span{font-size:11px;color:#aaa}
+#menu-overlay.ac-simple-menu .ac-simple-contact{position:relative;border:1px solid #ffffff36}
+#menu-overlay.ac-simple-menu .ac-simple-contact>button{width:100%;background:#ffffff10;color:#fff;min-height:49px;padding:13px 15px;display:flex;align-items:center;justify-content:space-between;font:700 12px/1.2 Gustavo,Inter,sans-serif;letter-spacing:.05em}
+#menu-overlay.ac-simple-menu .ac-simple-contact>button:hover{background:#ffffff1b}
+#menu-overlay.ac-simple-menu .ac-simple-contact>button span{font-size:20px;font-weight:300}
+#menu-overlay.ac-simple-menu .ac-simple-contact-panel{position:absolute;top:100%;left:0;right:0;z-index:2;display:flex;flex-direction:column;gap:7px;padding:13px;background:#141416;border:1px solid #ffffff44;box-shadow:0 15px 45px #000a}
+#menu-overlay.ac-simple-menu .ac-simple-contact-panel>a{display:block;padding:11px;font:600 12px/1.5 Gustavo,Inter,sans-serif;border:1px solid #ffffff2b}
+#menu-overlay.ac-simple-menu .ac-simple-contact-panel>a:hover{background:#ffffff13}
+#menu-overlay.ac-simple-menu .ac-simple-contact-panel>button{align-self:flex-end;background:transparent;color:white;border:0;padding:5px;font-size:20px}
+#menu-overlay.ac-simple-menu .ac-simple-bottom{border-top:1px solid #ffffff2a;padding-top:20px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+#menu-overlay.ac-simple-menu .ac-simple-bottom p{margin:0;font:500 10px/1.6 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.08em;color:#a4a4ab;text-transform:uppercase}
+#menu-overlay.ac-simple-menu .ac-simple-global{display:flex;align-items:center;gap:12px;padding:10px 13px;min-height:48px;border:1px solid #ffffff3d;background:#ffffff08}
+#menu-overlay.ac-simple-menu .ac-simple-global:hover{background:#ffffff16}
+#menu-overlay.ac-simple-menu .ac-simple-global img{width:42px;height:auto;max-height:19px;object-fit:contain}
+#menu-overlay.ac-simple-menu .ac-simple-global span{font:600 10px/1.3 Gustavo,Inter,sans-serif;letter-spacing:.08em}
 @media(max-width:990px){
- #ac-simple-menu .ac-simple-content{grid-template-columns:1fr;align-items:start;gap:45px}
- #ac-simple-menu .ac-simple-main>a{font-size:clamp(37px,6.8vw,70px)}
- #ac-simple-menu .ac-simple-side{display:grid;grid-template-columns:1fr 1fr;align-items:start}
- #ac-simple-menu .ac-simple-contact{grid-column:1/-1}
+ #menu-overlay.ac-simple-menu .ac-simple-content{grid-template-columns:1fr;align-items:start;gap:45px}
+ #menu-overlay.ac-simple-menu .ac-simple-main>a{font-size:clamp(37px,6.8vw,70px)}
+ #menu-overlay.ac-simple-menu .ac-simple-side{display:grid;grid-template-columns:1fr 1fr;align-items:start}
+ #menu-overlay.ac-simple-menu .ac-simple-contact{grid-column:1/-1}
 }
 @media(max-width:600px){
- #ac-simple-menu .ac-simple-shell{width:calc(100% - 34px);padding:17px 0 18px}
- #ac-simple-menu .ac-simple-top{padding-bottom:16px}
- #ac-simple-menu .ac-simple-brand{gap:9px}
- #ac-simple-menu .ac-simple-brand-word{font-size:19px}
- #ac-simple-menu .ac-simple-brand-small{font-size:7px;padding-left:9px;letter-spacing:.01em}
- #ac-simple-menu .ac-simple-content{padding:30px 0 34px;gap:33px}
- #ac-simple-menu .ac-simple-main>a{font-size:clamp(31px,9.5vw,52px);padding:8px 0}
- #ac-simple-menu .ac-simple-kicker{margin-bottom:14px}
- #ac-simple-menu .ac-simple-side{display:flex;gap:24px}
- #ac-simple-menu .ac-simple-bottom{align-items:flex-start;flex-direction:column;gap:12px}
+ #menu-overlay.ac-simple-menu .ac-simple-shell{width:calc(100% - 34px);padding:17px 0 18px}
+ #menu-overlay.ac-simple-menu .ac-simple-top{padding-bottom:16px}
+ #menu-overlay.ac-simple-menu .ac-simple-brand{gap:9px}
+ #menu-overlay.ac-simple-menu .ac-simple-brand-word{font-size:19px}
+ #menu-overlay.ac-simple-menu .ac-simple-brand-small{font-size:7px;padding-left:9px;letter-spacing:.01em}
+ #menu-overlay.ac-simple-menu .ac-simple-content{padding:30px 0 34px;gap:33px}
+ #menu-overlay.ac-simple-menu .ac-simple-main>a{font-size:clamp(31px,9.5vw,52px);padding:8px 0}
+ #menu-overlay.ac-simple-menu .ac-simple-kicker{margin-bottom:14px}
+ #menu-overlay.ac-simple-menu .ac-simple-side{display:flex;gap:24px}
+ #menu-overlay.ac-simple-menu .ac-simple-bottom{align-items:flex-start;flex-direction:column;gap:12px}
 }
-@media(max-width:350px){#ac-simple-menu .ac-simple-brand-small{display:none}#ac-simple-menu .ac-simple-grid{grid-template-columns:1fr}}
-@media(prefers-reduced-motion:reduce){#ac-simple-menu .ac-simple-main>a{transition:none}}
+@media(max-width:350px){#menu-overlay.ac-simple-menu .ac-simple-brand-small{display:none}#menu-overlay.ac-simple-menu .ac-simple-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){#menu-overlay.ac-simple-menu .ac-simple-main>a{transition:none}}
