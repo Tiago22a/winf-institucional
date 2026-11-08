@@ -226,3 +226,7 @@ body.wp-menu-open{overflow:hidden}
 @media(max-width:767px){.wp-model-card{padding:clamp(17px,5vw,27px);min-height:0}.wp-model-visual{margin-top:14px;aspect-ratio:16/10}.wp-model-card h3{font-size:clamp(2.8rem,10vw,5rem);margin-top:18px}.wp-model-card p{max-width:none}}
 @media(max-width:390px){.wp-model-visual{aspect-ratio:4/3}}
 @media(prefers-reduced-motion:reduce){.wp-model-visual img{transition:none}}
+
+.winf-partners-site .wp-kiosk-stage{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:-8px 0 13px;font:700 11px/1.5 Inter,sans-serif;letter-spacing:.14em;color:#ddd}
+.winf-partners-site .wp-kiosk-stage span{font-size:9px;letter-spacing:.075em;color:#9d9da5;border:1px solid #ffffff40;padding:5px 8px}
+@media(max-width:850px){.winf-partners-site .wp-model-card .wp-model-visual img{filter:none!important}}

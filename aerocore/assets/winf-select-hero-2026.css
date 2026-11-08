@@ -1,0 +1,25 @@
+/* WINF SELECT™: primeiro impacto minimalista, mantendo fonte Gustavo e marca oficial WINF no header.
+   Somente /aerocore/winf-select/; não interfere no arsenal nem nas páginas AeroCore/NeoSkin. */
+body.select-page .select-hero-2026{position:relative;isolation:isolate;min-height:100svh}
+body.select-page .select-hero-2026 .select-hero-media{position:absolute;inset:0;overflow:hidden}
+body.select-page .select-hero-2026 .select-hero-media video{width:100%;height:100%;object-fit:cover;object-position:center center}
+body.select-page .select-hero-2026 .select-hero-media:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.6),rgba(0,0,0,.38) 35%,rgba(0,0,0,.75) 100%);pointer-events:none}
+html body#top.select-page .select-hero-2026 .select-hero-content{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100svh;width:min(100% - 32px,1050px);margin-inline:auto;padding:clamp(125px,15vh,175px) 0 95px;text-align:center}
+html body#top.select-page .select-hero-2026 .select-eyebrow{margin:0 0 clamp(18px,3vw,30px);font:600 10px/1.6 Inter,Arial,sans-serif!important;letter-spacing:.32em!important;color:#dadada!important}
+html body#top.select-page .select-hero-2026 h1{margin:0;font-family:Gustavo,Outfit,Inter,sans-serif!important;font-size:clamp(67px,14vw,174px)!important;font-weight:300!important;line-height:.94!important;letter-spacing:-.035em!important;text-transform:uppercase;color:white;text-shadow:0 4px 32px #000a}
+html body#top.select-page .select-hero-2026 h1 sup{font:500 .13em/1 Inter,sans-serif;vertical-align:super;margin-left:5px;letter-spacing:0}
+html body#top.select-page .select-hero-2026 .select-signature{margin:clamp(23px,4vw,42px) 0 0;font:300 clamp(23px,3.3vw,45px)/1.08 Gustavo,Outfit,Inter,sans-serif!important;letter-spacing:-.015em!important;text-transform:uppercase!important;color:#f2f2f2!important}
+html body#top.select-page .select-hero-2026 .select-signature span{color:#b9babb}
+html body#top.select-page .select-hero-2026 .select-hero-copy{max-width:540px;margin:16px auto 0;font:400 clamp(14px,1.5vw,17px)/1.7 Inter,Arial,sans-serif!important;color:#e0e0e1!important;text-wrap:pretty}
+html body#top.select-page .select-hero-2026 .select-actions{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;margin-top:clamp(25px,4vw,38px)}
+html body#top.select-page .select-hero-2026 .select-actions a{min-height:51px;padding:14px 23px;font:700 10px/1.4 Inter,sans-serif!important;letter-spacing:.095em!important;text-transform:uppercase}
+html body#top.select-page .select-hero-2026 .select-actions a:focus-visible{outline:2px solid #fff;outline-offset:4px}
+@media(max-width:650px){
+ html body#top.select-page .select-hero-2026 .select-hero-content{min-height:100svh;padding:115px 0 90px}
+ html body#top.select-page .select-hero-2026 h1{font-size:clamp(61px,17vw,110px)!important;letter-spacing:-.04em!important}
+ html body#top.select-page .select-hero-2026 .select-signature{font-size:clamp(23px,6.6vw,34px)!important}
+ html body#top.select-page .select-hero-2026 .select-hero-copy{max-width:360px;padding-inline:8px}
+ html body#top.select-page .select-hero-2026 .select-actions{width:min(100%,360px);flex-direction:column}
+ html body#top.select-page .select-hero-2026 .select-actions a{width:100%;max-width:360px;justify-content:center}
+}
+@media(prefers-reduced-motion:reduce){body.select-page .select-hero-2026 video{display:none}}

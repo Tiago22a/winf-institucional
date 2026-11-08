@@ -251,3 +251,16 @@ a:focus-visible{outline:2px solid #fff;outline-offset:4px}
 /* QUIOSQUE 2026: perspectivas independentes sem recorte ampliado */
 .page-kiosk .mosaic .tile:nth-child(2) img,.page-kiosk .mosaic .tile:nth-child(3) img{object-position:center center!important;transform:scale(1)!important}
 @media(hover:hover) and (pointer:fine){.page-kiosk .mosaic .tile:nth-child(2):hover img,.page-kiosk .mosaic .tile:nth-child(3):hover img{transform:scale(1.04)!important}}
+
+/* Quiosque: lugar reservado para o vídeo do Flow, sem reproduzir mídia não aprovada. */
+.page-kiosk .kiosk-film-section{background:#0d0d0f}
+.page-kiosk .kiosk-film-poster{position:relative;isolation:isolate;overflow:hidden;aspect-ratio:16/9;width:100%;margin:26px 0 0;border:1px solid #ffffff40;background:#171719}
+.page-kiosk .kiosk-film-poster>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 48%;filter:none!important}
+.page-kiosk .kiosk-film-poster:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#000c,transparent 63%);pointer-events:none}
+.page-kiosk .kiosk-film-poster figcaption{position:absolute;z-index:2;left:clamp(18px,4vw,45px);bottom:clamp(20px,5vw,49px);right:20px;display:grid;gap:9px;text-shadow:0 2px 12px #000e}
+.page-kiosk .kiosk-film-poster figcaption span,.page-kiosk .kiosk-film-poster figcaption small{font:700 10px/1.5 Inter,Arial,sans-serif;letter-spacing:.19em;color:#d4d4d7}
+.page-kiosk .kiosk-film-poster figcaption strong{font:300 clamp(29px,5vw,69px)/1 Gustavo,Inter,sans-serif;letter-spacing:-.03em;color:#fff}
+.page-kiosk .kiosk-film-footer{display:flex;justify-content:space-between;align-items:center;gap:23px;margin-top:20px;flex-wrap:wrap}
+.page-kiosk .kiosk-film-footer p{margin:0;max-width:620px;color:#c2c2c9;line-height:1.7;font-size:13px}
+@media(max-width:700px){.page-kiosk .kiosk-film-poster{aspect-ratio:4/3}.page-kiosk .kiosk-film-footer .btn{width:100%}}
+@media(hover:none),(pointer:coarse){.page-kiosk .mosaic .tile img{filter:none!important;transform:none!important}}

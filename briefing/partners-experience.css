@@ -314,3 +314,7 @@
 /* QUIOSQUE 2026: perspectivas independentes sem recorte ampliado */
 .partners-page .al-model-kiosk .al-mosaic-detail img,.partners-page .al-model-kiosk .al-mosaic-context img{object-position:center center!important;transform:scale(1)!important}
 @media(hover:hover) and (pointer:fine){.partners-page .al-model-kiosk .al-mosaic-detail:hover img,.partners-page .al-model-kiosk .al-mosaic-context:hover img{transform:scale(1.04)!important;filter:none}}
+
+/* Acesso discreto ao futuro filme do Quiosque; destino já tem poster e formatos completos. */
+.partners-page .al-kiosk-film-link{display:inline-flex;align-items:center;min-height:44px;margin:11px 0 0;color:#d7d7dc;font:700 10px/1.5 Inter,sans-serif;letter-spacing:.095em;text-decoration:none;border-bottom:1px solid #ffffff66}
+.partners-page .al-kiosk-film-link:is(:hover,:focus-visible){color:white;border-color:white}
