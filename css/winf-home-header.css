@@ -17,3 +17,33 @@
 @media(max-width:710px){.winf-home-header{min-height:62px;padding:0 1px;gap:9px}.winf-home-brand{gap:8px}.winf-home-brand>img{width:89px}.winf-home-brand-signature{font-size:7.5px;line-height:1.5;letter-spacing:.02em;padding-left:7px}.winf-home-header-actions{gap:4px}.winf-home-header .winf-home-os-only{font-size:10px;min-height:37px;padding:7px 9px}.winf-home-ghost-trigger{min-width:54px;min-height:40px;gap:4px;padding:4px}.winf-home-ghost-trigger>img{width:23px;height:29px}.winf-home-ghost-lines{gap:6px}.winf-home-ghost-lines>span{width:19px;height:1.5px}.winf-home-ghost-lines>span:last-child{width:14px}}
 @media(max-width:375px){.winf-home-brand>img{width:79px}.winf-home-brand-signature{font-size:7px}.winf-home-header .winf-home-os-only{padding:7px 6px;font-size:9px}.winf-home-ghost-trigger{min-width:44px}.winf-home-ghost-lines{display:none}}
 @media(prefers-reduced-motion:reduce){.winf-home-ghost-lines>span,.winf-home-ghost-trigger>img{transition:none}}
+
+
+/* Barra institucional = geometria do header WINF SELECT. Assinatura sempre AO LADO no topo. */
+.winf-home-header{width:min(100%,1200px);max-width:1200px;margin:0 auto;padding:5px 0;min-height:64px}
+.winf-home-brand{min-height:45px;gap:clamp(9px,1.2vw,15px)}
+.winf-home-brand>img{width:clamp(70px,7.3vw,94px);height:auto;max-height:35px;flex:none}
+.winf-home-brand-divider{display:inline-block;height:24px;flex:none;width:1px;background:rgba(255,255,255,.5)}
+.winf-home-brand-signature{display:inline-block;border:0;padding:0;margin:0;white-space:nowrap;font:500 clamp(9px,.9vw,13px)/1.28 Gustavo,Arial,sans-serif;letter-spacing:.1em;color:#d9d9dd;text-transform:uppercase;text-align:left}
+.winf-home-header .winf-home-ghost-trigger{min-height:48px}
+.winf-home-header .winf-home-ghost-trigger>img{height:clamp(30px,3.2vw,40px);width:auto;max-width:34px}
+@media(max-width:650px){
+ .winf-home-header{min-height:58px;padding:0 1px;gap:5px}
+ .winf-home-brand{gap:7px}
+ .winf-home-brand>img{width:69px}
+ .winf-home-brand-divider{height:19px}
+ .winf-home-brand-signature{font-size:clamp(7px,2.2vw,10px);letter-spacing:.01em}
+ .winf-home-header-actions{gap:3px}
+ .winf-home-header .winf-home-os-only{font-size:10px;min-height:37px;padding:7px 8px}
+ .winf-home-header .winf-home-ghost-trigger{min-height:40px;min-width:49px;gap:4px;padding:4px}
+ .winf-home-header .winf-home-ghost-trigger>img{height:30px}
+ .winf-home-header .winf-home-ghost-lines{gap:7px}
+ .winf-home-header .winf-home-ghost-lines>span{width:17px;height:1.5px}
+ .winf-home-header .winf-home-ghost-lines>span:last-child{width:13px}
+}
+@media(max-width:390px){
+ .winf-home-brand>img{width:60px}
+ .winf-home-brand-signature{font-size:7px}
+ .winf-home-header .winf-home-os-only{font-size:9px;padding:6px 6px}
+ .winf-home-header .winf-home-ghost-lines{display:none}
+}
