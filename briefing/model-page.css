@@ -15,3 +15,24 @@
 .lifestyle-principles span{font:400 13px/1.6 Inter,Arial,sans-serif;color:#bcbfc3}
 .intro h1{overflow-wrap:anywhere;max-width:100%}
 @media(max-width:760px){.lifestyle-principles{grid-template-columns:repeat(2,minmax(0,1fr))}.lifestyle-principles div:nth-child(2){border-right:0}.lifestyle-principles div:nth-child(-n+2){border-bottom:1px solid #56565a}.model-brand-rail{gap:11px;letter-spacing:.1em;font-size:9px}}
+
+/* WINF Partners — três percursos visuais distintos, identidade editorial preservada. */
+.page-asset-light .mosaic .tile:first-child img{object-position:70% 46%;transform:scale(1.12)}
+.page-asset-light .mosaic .tile:nth-child(2) img{object-position:68% 52%;transform:scale(1.16)}
+.page-asset-light .mosaic .tile:nth-child(3) img{object-position:center 45%;transform:scale(1)}
+.page-asset-light .statement img{object-position:center 46%;filter:grayscale(.7)}
+.page-kiosk .mosaic .tile:first-child img{object-position:48% center;transform:scale(1)}
+.page-kiosk .mosaic .tile:nth-child(2) img{object-position:76% 58%;transform:scale(1.42)}
+.page-kiosk .mosaic .tile:nth-child(3) img{object-position:25% 60%;transform:scale(1.3)}
+.page-flagship .mosaic .tile:first-child img{object-position:center 40%;transform:scale(1)}
+.page-flagship .mosaic .tile:nth-child(2) img{object-position:center 50%;transform:scale(1)}
+.page-flagship .mosaic .tile:nth-child(3) img{object-position:center 48%;transform:scale(1)}
+.model-brand-rail .model-brand-winf{width:82px;height:auto;max-height:30px;object-fit:contain}
+@media(hover:hover){
+.page-asset-light .tile:nth-child(3):hover img{transform:scale(1.06)}
+.page-kiosk .tile:nth-child(2):hover img{transform:scale(1.49)}
+.page-kiosk .tile:nth-child(3):hover img{transform:scale(1.38)}
+.page-flagship .tile:nth-child(2):hover img,.page-flagship .tile:nth-child(3):hover img{transform:scale(1.07)}
+}
+@media(max-width:700px){.page-asset-light .mosaic,.page-flagship .mosaic,.page-kiosk .mosaic{height:430px}.model-brand-rail .model-brand-winf{width:66px}}
+@media(prefers-reduced-motion:reduce){.page-asset-light .tile img,.page-kiosk .tile img,.page-flagship .tile img{transition:none}}
