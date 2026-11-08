@@ -15,6 +15,8 @@
 - [x] Botões fixos de universos WINF e WhatsApp, com contexto de marca e produto.
 - [x] Preservar `?partner=5513981113001` para Santos e incluir suporte a `?territorio=santos-sp`.
 - [x] Restringir números arbitrários de `?partner`: somente contatos homologados podem redirecionar.
+- [x] Criar registro público `catalogo/territorios.json` com unidades ativas homologadas e carregamento seguro com fallback para Santos.
+- [x] Criar testes específicos para rota territorial e monograma W™ oficial.
 - [x] Metadados e JSON-LD consistentes com as marcas; URL canônica global sem `?partner`.
 - [ ] Homologar visualmente no navegador real, em desktop, tablet e smartphone (menu, cartões, rolagem, overlays, seleção, imagem e fontes).
 - [ ] Conferir todas as fichas de materiais com ensaios oficiais, SKUs, VLT, TSER, IRER, UV, garantia, espessura, fotos e aplicações autorizadas.
