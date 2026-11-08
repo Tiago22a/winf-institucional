@@ -20,7 +20,7 @@
     ? 'Olá! Estou na página WINF Partners e gostaria de consultar as oportunidades de licenciamento na minha cidade.'
     : 'Olá! Estou no site WINF e gostaria de conhecer os produtos e serviços.';
   const commonBrandLinks = [
-    ['WINF — Premium Quality Windowfilm','/'],
+    ['WINF — Premium Quality Window Film','/'],
     ['WINF Select™ — Arquitetura','/aerocore/winf-select/'],
     ['AeroCore™ — Películas','/aerocore/aerocore/'],
     ['NeoSkin™ — PPF','/aerocore/neoskin/'],
@@ -49,7 +49,7 @@
     if (document.querySelector('link[href^="/css/winf-quick-contact.css"]')) return;
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = '/css/winf-quick-contact.css?v=20261107-1';
+    link.href = '/css/winf-quick-contact.css?v=20261108-unified-2';
     document.head.appendChild(link);
   }
   function addLink(label,href) {
@@ -74,7 +74,6 @@
       + '<div class="wqc-launchers">'
       + '<div class="wqc-item"><button type="button" data-wqc="brands" class="wqc-circle" aria-controls="wqc-panel" aria-expanded="false" aria-label="Abrir universo WINF" title="Universo WINF"><img src="/aerocore/assets/ghost-symbol.png" width="31" height="40" alt=""></button><span class="wqc-label">WINF</span></div>'
       + '<div class="wqc-item"><a class="wqc-circle wqc-whatsapp" href="' + whatsapp(chosenPhone,directMessage) + '" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp: ' + pageName + '" title="Falar no WhatsApp">' + whatsappSymbol + '</a><span class="wqc-label">WHATSAPP</span></div>'
-      + '<div class="wqc-item"><button type="button" data-wqc="help" class="wqc-circle" aria-controls="wqc-panel" aria-expanded="false" aria-label="Abrir guia de dúvidas rápidas" title="Dúvidas rápidas">' + helpSymbol + '</button><span class="wqc-label">AJUDA</span></div>'
       + '</div>';
     document.body.appendChild(dock);
     document.documentElement.classList.add('winf-quick-dock-active');
@@ -87,12 +86,12 @@
       panel.hidden=!type;
       triggers.forEach(btn=>btn.setAttribute('aria-expanded',String(btn.dataset.wqc===type)));
       if (!type) {
-        if (restoreFocus) dock.querySelector('button[data-wqc="help"]')?.focus();
+        if (restoreFocus) dock.querySelector('button[data-wqc="brands"]')?.focus();
         return;
       }
       const isBrands=type==='brands';
       title.textContent=isBrands?'UNIVERSO WINF™':(forPartners?'GUIA WINF PARTNERS™':'GUIA RÁPIDO WINF™');
-      description.textContent=isBrands?'PREMIUM QUALITY WINDOWFILM':'Escolha uma dúvida ou fale com uma pessoa.';
+      description.textContent=isBrands?'PREMIUM QUALITY WINDOW FILM':'Escolha uma dúvida ou fale com uma pessoa.';
       note.textContent=isBrands?'Você está navegando pelas marcas do ecossistema WINF.':
         'Orientações rápidas disponíveis nesta versão. O Hermes será integrado futuramente; para atendimento personalizado, utilize o WhatsApp.';
       options.replaceChildren();
