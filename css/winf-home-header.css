@@ -44,3 +44,21 @@
 .winf-home-header .winf-home-brand>img.winf-home-w-mark{display:block;width:clamp(43px,4.2vw,55px);height:auto;max-height:55px;object-fit:contain;filter:drop-shadow(0 2px 10px #000b)}
 @media(max-width:640px){.winf-home-header .winf-home-brand>img.winf-home-w-mark{width:45px;max-height:49px}}
 @media(max-width:380px){.winf-home-header .winf-home-brand>img.winf-home-w-mark{width:42px}}
+
+/* WINF™ | lockup final: marca vetorial à esquerda, divisor e assinatura ao lado.
+   A assinatura faz parte do topo (não altera o logo principal no centro). */
+.winf-home-header .winf-home-brand.winf-home-brand-lockup{display:inline-flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:clamp(10px,1.1vw,16px);min-height:50px;max-width:min(65vw,420px);text-decoration:none;color:#fff}
+.winf-home-header .winf-home-brand-lockup>img.winf-home-wordmark{display:block;width:clamp(92px,9.5vw,139px);max-height:46px;max-width:100%;height:auto;object-fit:contain;filter:drop-shadow(0 2px 10px #000a)}
+.winf-home-header .winf-home-brand-divider{display:block;align-self:center;height:33px;flex:none;width:1px;background:#ffffff7d}
+.winf-home-header .winf-home-brand-tagline{font-family:Gustavo,Arial,sans-serif;font-weight:500;font-size:clamp(8px,.83vw,11px);line-height:1.35;letter-spacing:.09em;white-space:nowrap;color:#e1e1e5;text-shadow:0 2px 12px #0009}
+@media(max-width:640px){
+ .winf-home-header .winf-home-brand.winf-home-brand-lockup{gap:9px;max-width:calc(100vw - 128px)}
+ .winf-home-header .winf-home-brand-lockup>img.winf-home-wordmark{width:clamp(76px,21vw,112px)}
+ .winf-home-header .winf-home-brand-divider{height:29px}
+ .winf-home-header .winf-home-brand-tagline{font-size:clamp(7px,1.85vw,9px);letter-spacing:.015em}
+}
+@media(max-width:350px){
+ .winf-home-header .winf-home-brand.winf-home-brand-lockup{gap:7px}
+ .winf-home-header .winf-home-brand-lockup>img.winf-home-wordmark{width:76px}
+ .winf-home-header .winf-home-brand-tagline{font-size:7px;letter-spacing:0}
+}
