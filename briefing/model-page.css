@@ -210,3 +210,15 @@ a:focus-visible{outline:2px solid #fff;outline-offset:4px}
 .model-editorial-copy p:last-child{margin-bottom:0;color:#95959c}
 @media(max-width:800px){.model-editorial-grid{grid-template-columns:1fr;gap:23px}.model-editorial h2{font-size:clamp(35px,8vw,60px);margin-top:14px}.model-editorial-copy p{font-size:16px}}
 @media(max-width:390px){.model-editorial h2{font-size:clamp(31px,8.1vw,42px)}}
+
+/* Kiosk WINF Select — escalas de presença, editorial responsivo sem imagens inventadas. */
+.kiosk-formats{background:#101011}
+.kiosk-format-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:34px}
+.kiosk-format-card{min-width:0;min-height:280px;padding:clamp(18px,2.3vw,34px);border:1px solid #ffffff37;background:#161617;display:flex;flex-direction:column;justify-content:space-between;gap:28px}
+.kiosk-format-letter{font:400 clamp(72px,10vw,140px)/.8 Gustavo,Anton,Inter,sans-serif;letter-spacing:-.09em;color:#f4f4f5}
+.kiosk-format-card .eyebrow{color:#bbb}
+.kiosk-format-card h3{font:400 clamp(21px,2.3vw,30px)/1.05 Gustavo,Anton,Inter,sans-serif;margin:10px 0 13px;letter-spacing:-.025em}
+.kiosk-format-card p{font:400 14px/1.7 Inter,Arial,sans-serif;color:#c0c0c4;margin:0}
+.kiosk-formats-note{font-size:12px;line-height:1.65;color:#98989e;margin:22px 0 0;max-width:780px}
+@media(max-width:760px){.kiosk-format-grid{grid-template-columns:1fr;gap:10px}.kiosk-format-card{min-height:0;display:grid;grid-template-columns:74px 1fr;gap:22px;align-items:start}.kiosk-format-letter{font-size:85px}.kiosk-format-card p{font-size:13px}}
+@media(max-width:420px){.kiosk-format-card{grid-template-columns:53px 1fr;padding:20px;gap:15px}.kiosk-format-letter{font-size:65px}}
