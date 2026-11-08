@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "description": "Registro público de roteamento comercial do catálogo WINF™. Não colocar senhas, tokens ou dados pessoais neste arquivo.",
+  "territories": {
+    "santos-sp": {
+      "name": "Santos / SP",
+      "status": "active",
+      "phone": "5513981113001",
+      "page": "/pelicula-de-controle-solar-santos-sp/",
+      "brand": "select"
+    }
+  }
+}
