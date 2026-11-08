@@ -48,6 +48,7 @@
 <link rel="stylesheet" href="/aerocore/assets/menu-social.css">
 <link rel="stylesheet" href="/css/winf-footer-reference.css?v=20261103-reference-2">
 <link rel="stylesheet" href="/css/winf-home-roadmap.css?v=20261107-1">
+<link rel="stylesheet" href="/css/winf-home-header.css?v=20261108-1">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap">
 <link rel="stylesheet" href="/css/winf-return.css?v=20261104-5">
 <script defer src="/js/winf-return.js?v=20261104-scroll-3"></script>
@@ -117,15 +118,16 @@
             <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(255,255,255,.08),transparent_38%)]"></div>
           </div>
 
-          <header class="relative z-30 flex w-full items-center justify-between">
-            <a href="#topo" aria-label="WINF — início" class="flex items-center transition-opacity hover:opacity-80">
-              <img loading="eager" decoding="async" fetchpriority="high" src="/winf-logo.svg" width="128" height="32" alt="WINF™" class="h-6 w-auto object-contain drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)] sm:h-7 md:h-8" />
+          <header class="winf-home-header relative z-30 flex w-full items-center justify-between">
+            <a href="#topo" aria-label="WINF — início" class="winf-home-brand">
+              <img loading="eager" decoding="async" fetchpriority="high" src="/winf-logo.svg" width="128" height="32" alt="WINF™" />
+              <span class="winf-home-brand-signature">PREMIUM QUALITY<br>WINDOWFILM</span>
             </a>
-            <div class="flex items-center gap-3 sm:gap-5">
-              <a href="https://painel-os.winf.com.br/login/" class="winf-home-os-link" aria-label="Acessar WINF OS — login"><img src="/aerocore/assets/ghost-symbol.png" alt="" width="22" height="25" aria-hidden="true" decoding="async"/><span>WINF OS™</span><span class="whr-os-mark" aria-hidden="true">↗</span></a>
-              <button type="button" data-action="open-menu" aria-label="Abrir Menu de Navegação" class="menu-trigger group relative z-50 flex flex-col items-end justify-center gap-2 p-2.5 transition-opacity hover:opacity-80">
-              <span class="block h-[1.5px] w-7 bg-white shadow-[0_1px_4px_rgba(0,0,0,0.8)] transition-all duration-300 group-hover:w-8"></span>
-              <span class="block h-[1.5px] w-5 bg-white shadow-[0_1px_4px_rgba(0,0,0,0.8)] transition-all duration-300 group-hover:w-8"></span>
+            <div class="winf-home-header-actions">
+              <a href="https://painel-os.winf.com.br/login/" class="winf-home-os-link winf-home-os-only" aria-label="Acessar WINF OS — login"><span>WINF OS™</span><span class="whr-os-mark" aria-hidden="true">↗</span></a>
+              <button type="button" data-action="open-menu" aria-label="Abrir menu de navegação WINF" aria-haspopup="true" aria-expanded="false" class="menu-trigger winf-home-ghost-trigger">
+                <span class="winf-home-ghost-lines" aria-hidden="true"><span></span><span></span></span>
+                <img src="/aerocore/assets/ghost-symbol.png" width="29" height="36" alt="" decoding="async" aria-hidden="true">
               </button>
             </div>
           </header>
