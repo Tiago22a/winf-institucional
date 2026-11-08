@@ -36,3 +36,8 @@
 }
 @media(max-width:700px){.page-asset-light .mosaic,.page-flagship .mosaic,.page-kiosk .mosaic{height:430px}.model-brand-rail .model-brand-winf{width:66px}}
 @media(prefers-reduced-motion:reduce){.page-asset-light .tile img,.page-kiosk .tile img,.page-flagship .tile img{transition:none}}
+
+/* Assinatura institucional: logomarca WINF sempre visível nas páginas dos três modelos. */
+.foot-brand{display:flex;align-items:center;flex-wrap:wrap;gap:16px}
+.foot-brand img{display:block;width:109px;height:auto;flex:none;object-fit:contain}
+@media(max-width:700px){.foot-brand{align-items:flex-start;gap:12px}.foot-brand img{width:95px}}
