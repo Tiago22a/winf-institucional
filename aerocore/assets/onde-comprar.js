@@ -19,6 +19,9 @@
   const template = document.getElementById('directory-card');
   const modes = root.querySelectorAll('[data-directory-mode]');
   let mode = 'ativas';
+  // Permite links diretos à busca de cidades pelo portal WINF global.
+  const initialCity = new URLSearchParams(location.search).get('cidade');
+  if (initialCity) query.value = initialCity.slice(0,120);
   const names = { automotivo: 'Automotivo', residencial: 'Residencial', ambos: 'Automotivo + residencial' };
   const normalize = value => String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
   const eligible = city => mode === 'ativas' ? city.status === 'ativa' : city.status === 'nao_ativa' && city.disponivelParaAtivacao === true;
