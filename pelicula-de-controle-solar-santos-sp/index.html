@@ -39,6 +39,8 @@
   <link rel="stylesheet" href="/css/winf-signoff.css">
 <link rel="stylesheet" href="/css/winf-footer-reference.css?v=20261103-reference-2">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap">
+<link rel="stylesheet" href="/aerocore/assets/ghost-menu-trigger.css?v=20261103-1">
+<link rel="stylesheet" href="/css/winf-territory-santos.css?v=20261108-1">
 <link rel="stylesheet" href="/css/winf-return.css?v=20261104-5">
 <script defer src="/js/winf-return.js?v=20261104-scroll-3"></script>
 </head>
@@ -54,7 +56,7 @@
       </div>
       <div class="mx-auto my-auto grid w-full max-w-7xl grid-cols-1 items-end gap-12 py-8 lg:grid-cols-12">
         <nav class="flex select-none flex-col items-start space-y-1 sm:space-y-2 lg:col-span-7" aria-label="Navegação principal">
-          <a href="/" data-action="menu-link" class="menu-primary-link">WINF SELECT™</a>
+          <a href="/aerocore/winf-select/" data-action="menu-link" class="menu-primary-link">WINF SELECT™</a>
           <a href="/aerocore/" data-action="menu-link" class="menu-primary-link">AEROCORE™</a>
           <a href="/winf-home/" data-action="menu-link" class="menu-primary-link">ABOUT US</a>
           <a href="/aerocore/neoskin/" data-action="menu-link" class="menu-primary-link">PPF</a>
@@ -77,9 +79,16 @@
           <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(255,255,255,.08),transparent_38%)]"></div>
         </div>
 
-        <header class="relative z-30 flex w-full items-center justify-between">
-          <a href="/" aria-label="WINF — início" class="flex items-center transition-opacity hover:opacity-80"><img loading="eager" decoding="async" fetchpriority="high" src="/winf-logo.svg" width="128" height="32" alt="WINF™" class="h-6 w-auto object-contain drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)] sm:h-7 md:h-8" /></a>
-          <button type="button" data-action="open-menu" aria-label="Abrir Menu de Navegação" class="menu-trigger group relative z-50"><span></span><span></span></button>
+        <header class="winf-territory-header relative z-30 flex w-full items-center justify-between" aria-label="WINF Select Glass + Home — unidade Santos">
+          <a href="/" aria-label="WINF™ — voltar ao portal institucional" class="winf-territory-lockup">
+            <img loading="eager" decoding="async" fetchpriority="high" src="/winf-logo.svg" width="94" height="31" alt="WINF™" class="winf-territory-winf-logo" />
+            <span class="winf-territory-brand-divider" aria-hidden="true"></span>
+            <span class="winf-territory-brand-name">SELECT<sup>™</sup><small>GLASS + HOME</small></span>
+          </a>
+          <button type="button" data-action="open-menu" aria-label="Abrir menu WINF Select — Santos" aria-haspopup="true" aria-expanded="false" class="winf-ghost-trigger menu-trigger winf-territory-menu">
+            <span class="winf-ghost-lines" aria-hidden="true"><span></span><span></span></span>
+            <span class="winf-ghost-symbol"><img src="/aerocore/assets/ghost-symbol.png" width="32" height="40" alt="" decoding="async" aria-hidden="true" /></span>
+          </button>
         </header>
 
         <div class="relative z-20 my-auto flex w-full flex-1 items-center justify-center px-2 sm:px-4">
@@ -139,6 +148,32 @@
             <a href="https://winf.com.br/catalogo/?partner=5513981113001&amp;territorio=santos-sp&amp;produto=select-blackpro" class="brand-card reveal-group"><div class="brand-card-media"><video class="lazy-video" data-src="/videos/blackpro-hero.mp4" poster="/images/blackpro-poster-1.webp" muted loop playsinline preload="none"></video><div class="brand-shade"></div><img loading="lazy" src="/logo-blackpro.svg" alt="BlackPro™" class="brand-logo brand-logo-wide" decoding="async" /></div><div class="brand-card-footer"><div><span class="brand-category">PRIVACIDADE</span><span class="brand-name">BlackPro™</span></div><span class="brand-visit">VER NO CATÁLOGO <span>→</span></span></div></a>
             <a href="https://winf.com.br/catalogo/?partner=5513981113001&amp;territorio=santos-sp&amp;produto=select-securityblinder" class="brand-card reveal-group"><div class="brand-card-media"><video class="lazy-video" data-src="/videos/securityblind/sbv-impact.mp4" poster="/images/securityblind/scene-07.webp" muted loop playsinline preload="none"></video><div class="brand-shade"></div><span class="brand-wordmark">SECURITYBLINDER™</span></div><div class="brand-card-footer"><div><span class="brand-category">SAFETY & SECURITY</span><span class="brand-name">SecurityBlinder™</span></div><span class="brand-visit">VER NO CATÁLOGO <span>→</span></span></div></a>
           </div>
+        </div>
+      </section>
+
+      <section id="ecossistema-santos" class="winf-territory-ecosystem relative z-10 border-t border-white/10 bg-[#0b0b0d] px-6 py-24 sm:px-12 md:px-20" aria-labelledby="ecossistema-santos-title">
+        <div class="mx-auto max-w-6xl">
+          <p class="section-label mb-6">WINF SELECT™ / SOLUÇÕES COMPLEMENTARES</p>
+          <h2 id="ecossistema-santos-title">GLASS + HOME.<br><span>UM ECOSSISTEMA DE PROTEÇÃO.</span></h2>
+          <p class="winf-territory-ecosystem-intro">A WINF Select é o ponto de partida do atendimento arquitetônico em Santos. Quando o projeto exige outra especialidade, o catálogo também reúne tecnologias AeroCore™, películas de proteção NeoSkin™ e revestimentos Ceramic Armoring™. A marca de origem é preservada e a compatibilidade é avaliada caso a caso.</p>
+          <div class="winf-territory-ecosystem-grid">
+            <article class="winf-territory-ecosystem-card">
+              <div class="winf-territory-ecosystem-art"><img src="/images/aerocore-hero.webp" width="720" height="400" loading="lazy" decoding="async" alt="Conceito visual AeroCore: proteção térmica de vidros" /><span class="winf-territory-ecosystem-brand"><img src="/aerocore/assets/ghost-symbol.png" width="24" height="29" alt="" loading="lazy" /> AEROCORE™</span></div>
+              <div class="winf-territory-ecosystem-copy"><span>TECNOLOGIA DE ORIGEM / AEROCORE</span><h3>Controle térmico e soluções especiais.</h3><p>Películas para vidros e projetos de mobilidade. No contexto arquitetônico, conheça também o InfiSpectre™ by AeroCore™ — sujeito à avaliação do vidro e da aplicação.</p>
+              <a href="/catalogo/?partner=5513981113001&amp;territorio=santos-sp&amp;produto=select-invisible-spectre">CONHECER INFISPECTRE ↗</a><a href="/catalogo/?partner=5513981113001&amp;territorio=santos-sp&amp;marca=aerocore">EXPLORAR AEROCORE ↗</a></div>
+            </article>
+            <article class="winf-territory-ecosystem-card">
+              <div class="winf-territory-ecosystem-art"><img src="/images/neoskin-hero.webp" width="720" height="400" loading="lazy" decoding="async" alt="Conceito visual NeoSkin: proteção de pintura e superfícies" /><span class="winf-territory-ecosystem-brand"><img src="/aerocore/assets/ghost-symbol.png" width="24" height="29" alt="" loading="lazy" /> NEOSKIN™</span></div>
+              <div class="winf-territory-ecosystem-copy"><span>TECNOLOGIA DE ORIGEM / NEOSKIN</span><h3>PPF e proteção para superfícies.</h3><p>Uma solução de proteção desenvolvida para pintura e superfícies. Aplicações em acabamentos residenciais de alto padrão dependem de teste e homologação do substrato.</p>
+              <a href="/catalogo/?partner=5513981113001&amp;territorio=santos-sp&amp;marca=neoskin">EXPLORAR NEOSKIN ↗</a></div>
+            </article>
+            <article class="winf-territory-ecosystem-card">
+              <div class="winf-territory-ecosystem-art"><img src="/images/ceramic-hero.webp" width="720" height="400" loading="lazy" decoding="async" alt="Conceito visual Ceramic Armoring: revestimento cerâmico de proteção" /><span class="winf-territory-ecosystem-brand">CERAMIC ARMORING™</span></div>
+              <div class="winf-territory-ecosystem-copy"><span>TECNOLOGIA DE ORIGEM / CERAMIC ARMORING</span><h3>Revestimentos para alto padrão.</h3><p>Tratamentos de superfícies e revestimentos líquidos sob especificação. Bancadas, acabamentos e ambientes exigem compatibilidade comprovada com o material de base.</p>
+              <a href="/catalogo/?partner=5513981113001&amp;territorio=santos-sp&amp;marca=ceramic">EXPLORAR CERAMIC ARMORING ↗</a></div>
+            </article>
+          </div>
+          <p class="winf-territory-ecosystem-note">Atendimento WINF Select Santos • O catálogo apresenta portfólios das marcas, não uma confirmação de disponibilidade ou homologação de todos os serviços na unidade.</p>
         </div>
       </section>
 
