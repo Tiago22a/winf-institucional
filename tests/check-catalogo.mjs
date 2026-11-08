@@ -149,4 +149,43 @@ check('A marca principal é SVG com paths e sem bitmap incorporado', () => {
   assert.match(monogram, /™/);
 });
 
+check('Menus WINF global e AeroCore têm identidades trocadas corretamente', () => {
+  const aerocoreHome = read('aerocore/index.html');
+  const aeroCss = read('aerocore/assets/ac-simple-menu.css');
+  const winfCss = read('css/winf-global-menu.css');
+  assert.match(home, /id="menu-overlay" class="ac-roadmap-menu winf-global-roadmap hidden"/);
+  assert.match(home, /WINF™ \/ UNIVERSO GLOBAL/);
+  assert.match(home, /href="\/aerocore\/" data-action="menu-link">02/);
+  assert.match(home, /src="\/winf-logo.svg"/);
+  assert.match(winfCss, /#menu-overlay\.winf-global-roadmap/);
+  assert.match(aerocoreHome, /id="menu-overlay" class="ac-simple-menu ac-shell"/);
+  assert.match(aerocoreHome, /href="\/" class="ac-simple-global"/);
+  assert.match(aerocoreHome, /href="\/catalogo\/\?marca=aerocore"/);
+  assert.match(aeroCss, /#menu-overlay\.ac-simple-menu/);
+  assert.doesNotMatch(aeroCss, /#ac-simple-menu/);
+  assert.doesNotMatch(aerocoreHome, /id="menu-overlay" class="ac-roadmap-menu/);
+});
+check('AeroCore mantém controles de menu e canais necessários ao shell', () => {
+  const aero = read('aerocore/index.html');
+  const aeroShell = read('aerocore/assets/shell.js');
+  assert.match(aero, /data-action="open-menu"/);
+  assert.match(aero, /data-action="close-menu"/);
+  assert.match(aero, /data-toggle-channels/);
+  assert.match(aero, /id="contact-channels"/);
+  assert.match(aero, /data-close-channels/);
+  assert.match(aero, /data-close-menu="true"/);
+  assert.match(aeroShell, /menu\.hidden = !open/);
+  assert.match(aeroShell, /event\.key === 'Escape'/);
+  new vm.Script(aeroShell, {filename:'aerocore/assets/shell.js'});
+});
+check('Menu global suporta foco, escape, ARIA e fechamento seguro', () => {
+  const globalScript = read('script.js');
+  new vm.Script(globalScript, {filename:'script.js'});
+  assert.match(globalScript, /menuCloseTimer/);
+  assert.match(globalScript, /aria-expanded/);
+  assert.match(globalScript, /lastMenuTrigger/);
+  assert.match(globalScript, /event\.key === 'Escape'/);
+  assert.match(globalScript, /event\.key !== 'Tab'/);
+});
+
 console.log('\n' + count + ' verificações estáticas concluídas.');
