@@ -231,3 +231,10 @@
  .partners-page .al-model-asset-light .al-mosaic-detail img,
  .partners-page .al-model-asset-light .al-mosaic-context img{transition:none}
 }
+
+/* WINF Partners / 08.11.2026 — mobile: mídias coloridas desde o primeiro toque. */
+@media (hover:none), (pointer:coarse), (max-width:820px){
+  .partners-page .al-editorial-mosaic .al-mosaic-tile img,
+  .partners-page #budget .al-model-card-photo img,
+  .partners-page .pb-lifestyle-gallery img{filter:grayscale(0)!important;opacity:1!important}
+}

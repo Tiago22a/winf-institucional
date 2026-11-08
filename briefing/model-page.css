@@ -72,3 +72,17 @@
  .page-kiosk .mosaic .tile:first-child img{object-position:51% 49%}
  .page-flagship .mosaic .tile:first-child img{object-position:51% 40%}
 }
+
+/* WINF Partners / 08.11.2026 — fotografias sempre coloridas em telas de toque.
+   Desktop conserva o mosaico monocromático com revelação de cor no hover. */
+@media (hover:none), (pointer:coarse), (max-width:820px){
+  .page-asset-light .mosaic .tile img,
+  .page-kiosk .mosaic .tile img,
+  .page-flagship .mosaic .tile img,
+  .page-asset-light .statement img,
+  .page-kiosk .statement img,
+  .page-flagship .statement img{filter:grayscale(0)!important;opacity:1!important}
+}
+/* PNG oficial (enviado pela WINF): não redesenhar a logomarca. */
+.lockup img{object-fit:contain;object-position:left center}
+.model-brand-rail .model-brand-winf{object-fit:contain}
