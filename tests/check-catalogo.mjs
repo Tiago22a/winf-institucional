@@ -12,6 +12,8 @@ const santos = read('pelicula-de-controle-solar-santos-sp/index.html');
 const journal = read('blog/peliculas-para-sacadas-santos/index.html');
 const journalIndex = read('blog/index.html');
 const sitemap = read('sitemap.xml');
+const territoryRegistry = JSON.parse(read('catalogo/territorios.json'));
+
 let count = 0;
 function check(name, callback) {
   callback();
@@ -89,5 +91,22 @@ check('Home com assinatura e um acesso WINF OS', () => {
   assert.match(home, /winf-home-brand-signature/);
   assert.match(home, /winf-home-ghost-trigger/);
   assert.equal((home.match(/href="https:\/\/painel-os\.winf\.com\.br\/login\//g)||[]).length,1);
+});
+check('Registro de unidades ativas valida código, telefone e status', () => {
+  assert.equal(territoryRegistry.schemaVersion, 1);
+  assert.match(app, /fetch\("/catalogo/territorios\.json"/);
+  assert.match(app, /item\.status !== "active"/);
+  for (const [slug, unit] of Object.entries(territoryRegistry.territories)) {
+    assert.match(slug, /^[a-z0-9-]{4,60}$/);
+    assert.equal(unit.status, 'active');
+    assert.match(unit.phone, /^55[1-9][0-9]{9,10}$/);
+    assert.ok(unit.name && unit.page.startsWith('/'));
+  }
+});
+check('A landing ativa é conectada ao catálogo sem criar cópias por cidade', () => {
+  assert.match(santos, /territorio=santos-sp/);
+  assert.equal(territoryRegistry.territories['santos-sp'].page, '/pelicula-de-controle-solar-santos-sp/');
+  assert.match(catalog, /https:\/\/winf\.com\.br\/catalogo\//);
+  assert.ok(existsSync('brand/winf-monogram.svg'));
 });
 console.log('\n' + count + ' verificações estáticas concluídas.');
