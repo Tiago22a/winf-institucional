@@ -1,0 +1,39 @@
+name: WINF Localizadores - QA
+on:
+  pull_request:
+    paths:
+      - "index.html"
+      - "onde-comprar/**"
+      - "js/cidades.js"
+      - "js/winf-home-territories.js"
+      - "js/winf-global-locator-nav.js"
+      - "aerocore/onde-comprar/index.html"
+      - "aerocore/assets/onde-comprar.css"
+      - "aerocore/assets/onde-comprar.js"
+      - "css/winf-global-locator.css"
+      - "css/winf-home-territories.css"
+      - "tests/check-locators.mjs"
+      - ".github/workflows/winf-locators.yml"
+  push:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "onde-comprar/**"
+      - "js/cidades.js"
+      - "aerocore/onde-comprar/index.html"
+      - "aerocore/assets/onde-comprar.css"
+      - "aerocore/assets/onde-comprar.js"
+      - "css/winf-global-locator.css"
+      - "tests/check-locators.mjs"
+jobs:
+  locator-smoke:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validate WINF & AeroCore locators and active territories
+        run: node tests/check-locators.mjs
