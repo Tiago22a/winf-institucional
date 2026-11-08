@@ -273,7 +273,8 @@
     const detail=document.getElementById('wc-product-detail');detail.hidden=false;
     renderDetail(product);
     document.title=product.name+' | Catálogo WINF™';
-    scrollTo({top:0,behavior:'instant'});
+    updateDockWhats(product);
+    scrollTo({top:0,behavior:'auto'});
     return true;
   }
   function hideDetail(historyChange){
@@ -283,7 +284,7 @@
     document.getElementById('catalog-products').hidden=false;
     document.getElementById('wc-product-detail').hidden=true;
     document.title='Catálogo WINF™ | Glass + Home, AeroCore, NeoSkin e Ceramic Armoring';
-    renderSim();scrollTo({top:0,behavior:'instant'});
+    renderSim();updateDockWhats();scrollTo({top:0,behavior:'auto'});
   }
   function openDetail(id,push) {return showDetail(id,push);}
   function closeDetail(push) {hideDetail(push);}
@@ -295,8 +296,9 @@
     document.getElementById('division-label').textContent=SECTIONS[id].label;
     document.getElementById('hero-title').innerHTML=SECTIONS[id].title;
     document.getElementById('hero-desc').textContent=SECTIONS[id].desc;
-    if(currentDetail)hideDetail(false);
+    if(currentDetail)hideDetail(true);
     renderFilters();window.renderGrid();refreshSelect();
+    updateDockWhats();
   }
   function renderGrid() {
     const grid=document.getElementById('product-grid');
@@ -305,6 +307,12 @@
     const notice=document.getElementById('application-note');notice.textContent=filterNotice();
   }
   function openWhats(product) {window.open(whats(contactText(product)),'_blank','noopener,noreferrer');}
+  function updateDockWhats(product) {
+    const link=document.querySelector('#wc-dock .wc-dock-wa');
+    if(link)link.href=whats(contactText(product||null));
+    const panelLink=document.querySelector('#wc-dock .wc-contact-action');
+    if(panelLink)panelLink.href=whats(contactText(product||null));
+  }
   function createDock(){
     const dock=document.createElement('aside');dock.id='wc-dock';dock.setAttribute('aria-label','Atendimento e navegação WINF');
     const panel=document.createElement('div');panel.className='wc-dock-panel';panel.hidden=true;
