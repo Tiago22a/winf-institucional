@@ -1,0 +1,34 @@
+name: WINF Catalog - Smoke Test
+on:
+  pull_request:
+    paths:
+      - "catalogo/**"
+      - "pelicula-de-controle-solar-santos-sp/**"
+      - "blog/**"
+      - "index.html"
+      - "sitemap.xml"
+      - "tests/check-catalogo.mjs"
+      - ".github/workflows/catalogo-smoke.yml"
+  push:
+    branches: [main]
+    paths:
+      - "catalogo/**"
+      - "pelicula-de-controle-solar-santos-sp/**"
+      - "blog/**"
+      - "index.html"
+      - "sitemap.xml"
+      - "tests/check-catalogo.mjs"
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Static catalogue checks
+        run: node tests/check-catalogo.mjs
