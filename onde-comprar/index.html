@@ -18,27 +18,29 @@
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/aerocore/assets/nav-roadmap.css?v=20261107-1">
   <link rel="stylesheet" href="/css/winf-global-menu.css?v=20261108-published-1">
-  <link rel="stylesheet" href="/css/winf-home-header.css?v=20261108-monograma-w-1">
+  <link rel="stylesheet" href="/css/winf-home-header.css?v=20261108-select-header-4">
   <link rel="stylesheet" href="/aerocore/assets/onde-comprar.css?v=20261103-unidades-1">
-  <link rel="stylesheet" href="/css/winf-locator.css?v=20261108-1">
+  <link rel="stylesheet" href="/css/winf-home-roadmap.css?v=20261107-1">
+  <link rel="stylesheet" href="/css/winf-locator.css?v=20261108-sites-2">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Onde comprar WINF — unidades e atendimento","url":"https://winf.com.br/onde-comprar/","description":"Diretório oficial de unidades cadastradas e consulta de atendimento WINF no Brasil.","inLanguage":"pt-BR","isPartOf":{"@type":"WebSite","url":"https://winf.com.br/","name":"WINF"}}</script>
   <script defer src="/js/cidades.js?v=20261108-1"></script>
-  <script defer src="/aerocore/assets/onde-comprar.js?v=20261108-1"></script>
+  <script defer src="/aerocore/assets/onde-comprar.js?v=20261108-sites-2"></script>
   <script defer src="/js/winf-locator-menu.js?v=20261108-1"></script>
 </head>
 <body class="winf-locator-page">
   <div class="winf-locator-header-wrap">
-    <header class="winf-home-header" aria-label="Navegação WINF global">
-      <a href="/" class="winf-home-brand" aria-label="Voltar ao portal WINF">
-        <img class="winf-home-w-mark" src="/brand/winf-monogram.svg" alt="W™ — monograma WINF" width="44" height="40" decoding="async">
-      </a>
-      <div class="winf-home-header-actions">
-        <button type="button" data-action="open-menu" aria-controls="menu-overlay" aria-expanded="false" aria-label="Abrir menu WINF" class="winf-home-ghost-trigger">
-          <span class="winf-home-ghost-lines" aria-hidden="true"><span></span><span></span></span>
-          <img src="/aerocore/assets/ghost-symbol.png" width="28" height="34" alt="" decoding="async" aria-hidden="true">
-        </button>
-      </div>
-    </header>
+    <header class="winf-home-header relative z-30 flex items-center justify-between" aria-label="Navegação principal WINF">
+            <a href="/" class="winf-home-brand" aria-label="WINF™ — página inicial">
+              <img class="winf-home-official-logo" src="/winf-logo.svg" alt="WINF™ — logomarca oficial" width="109" height="36" decoding="async" fetchpriority="high"><span class="winf-home-brand-divider" aria-hidden="true"></span><span class="winf-home-brand-signature">PREMIUM QUALITY WINDOW FILM™</span>
+            </a>
+            <div class="winf-home-header-actions">
+              
+              <button type="button" data-action="open-menu" aria-controls="menu-overlay" aria-expanded="false" aria-label="Abrir universo WINF" class="menu-trigger winf-home-ghost-trigger">
+                <span class="winf-home-ghost-lines" aria-hidden="true"><span></span><span></span></span>
+                <img src="/aerocore/assets/ghost-symbol.png" width="28" height="34" alt="" aria-hidden="true" decoding="async">
+              </button>
+            </div>
+          </header>
   </div>
       <!-- WINF GLOBAL: menu editorial inspirado na organização da navegação AeroCore. -->
       <div id="menu-overlay" class="ac-roadmap-menu winf-global-roadmap hidden" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="winf-global-menu-title">
@@ -46,7 +48,7 @@
           <div class="ac-roadmap-top">
             <a href="/" data-action="menu-link" class="ac-roadmap-brand" aria-label="WINF — portal global">
               <img src="/winf-logo.svg" width="109" height="36" alt="WINF™">
-              <small>PREMIUM QUALITY WINDOWFILM</small>
+              <small>PREMIUM QUALITY WINDOW FILM</small>
             </a>
             <span class="ac-roadmap-context">WINF™ / UNIVERSO GLOBAL</span>
             <button type="button" data-action="close-menu" class="ac-roadmap-close" aria-label="Fechar menu global WINF">FECHAR <span aria-hidden="true">×</span></button>
@@ -106,13 +108,14 @@
       </div>
 
 
+  <a class="winf-locator-back" href="/" aria-label="Voltar ao site global WINF"><span aria-hidden="true">←</span> VOLTAR À WINF</a>
   <div class="winf-locator-breadcrumb"><a href="/">WINF™</a><span aria-hidden="true">/</span><span>Onde comprar</span></div>
 <main id="conteudo" class="ac-directory winf-directory">
 <section class="directory-hero">
   <div class="directory-wrap">
     <p class="directory-eyebrow">WINF™ // REDE NACIONAL DE ATENDIMENTO</p>
     <h1>Encontre a WINF.<br><span>Perto de você.</span></h1>
-    <p class="directory-lede">Encontre as unidades cadastradas da WINF™ e consulte atendimento por cidade. Explore WINF Select™, AeroCore™, NeoSkin™ e Ceramic Armoring™ conforme a disponibilidade e a especialidade de cada operação.</p>
+    <p class="directory-lede">Encontre sua cidade, conheça o site da unidade e peça um orçamento. Películas para sua casa, varanda ou empresa, com atendimento direcionado ao território.</p>
     <div class="directory-tabs" role="group" aria-label="Escolher consulta">
       <button type="button" data-directory-mode="ativas" aria-pressed="true">Unidades ativas <span aria-hidden="true">↗</span></button>
       <button type="button" data-directory-mode="territorios" aria-pressed="false">Verificar outros territórios <span aria-hidden="true">→</span></button>
@@ -146,7 +149,7 @@
       </form>
     </div>
     <noscript><div class="directory-empty"><h3>Fale com a central WINF.</h3><p>Ative o JavaScript para buscar unidades ou consulte nossa equipe diretamente.</p><a class="directory-button" href="https://wa.me/5513981113001" target="_blank" rel="noopener noreferrer">Consultar atendimento →</a></div></noscript>
-    <p class="directory-footnote">O status não ativo não confirma disponibilidade para ativação. Os segmentos e contatos locais estão sob consulta; confirme o atendimento com a central antes da visita.</p>
+    <p class="directory-footnote">Sites e contatos identificados por cidade. Onde não houver WhatsApp ou Instagram local confirmado, o atendimento é encaminhado à central WINF.</p>
   </div>
 </section>
 <template id="directory-card">
@@ -160,18 +163,89 @@
 </template>
 </main>
 
-  <footer class="winf-locator-footer" aria-label="Rodapé WINF">
-    <div class="winf-locator-footer-inner">
-      <a href="/" aria-label="WINF global"><img src="/winf-logo.svg" alt="WINF™" width="109" height="36" loading="lazy"></a>
-      <p>DO BRASIL PARA O MUNDO.</p>
-      <nav aria-label="Serviços relacionados">
-        <a href="/catalogo/">Catálogo global</a>
-        <a href="/aerocore/winf-select/">WINF Select™</a>
-        <a href="/aerocore/">AeroCore™</a>
-        <a href="/partners/">WINF Partners™</a>
-      </nav>
-    </div>
-    <small>Atendimento conforme especialidade e disponibilidade de cada unidade. Para localidades sem contato próprio publicado, consulte a central.</small>
-  </footer>
+  <footer id="winf-global-footer" class="winf-home-roadmap" aria-labelledby="whr-title" data-footer-version="20261107-home-roadmap-1">
+          <span id="privacy" aria-hidden="true"></span><span id="politica-de-privacidade" aria-hidden="true"></span>
+          <div class="whr-shell">
+            <div class="whr-head">
+              <div>
+                <p class="whr-eyebrow">WINF.inc® / MAPA DO ECOSSISTEMA</p>
+                <h2 id="whr-title">UMA MARCA.<br><span>MUITAS POSSIBILIDADES.</span></h2>
+              </div>
+              <p>Da proteção dos vidros à mobilidade. Da especificação arquitetônica à expansão territorial. Encontre as linhas, os canais e as oportunidades que conectam todo o universo WINF™.</p>
+            </div>
+            <section class="whr-partners-feature" aria-labelledby="whr-partners-title">
+              <div>
+                <p class="whr-feature-eyebrow">PORTA DE ENTRADA / WINF PARTNERS™</p>
+                <h3 id="whr-partners-title">VOCÊ DOMINA A TÉCNICA.<br>A GENTE CONECTA OS CAMINHOS.</h3>
+                <p>Conheça a expansão territorial WINF Asset Light™, o Quiosque para licenciados e o Flagship Studio &amp; Hub Regional. Entenda como cada modelo se conecta à estrutura da WINF™.</p>
+              </div>
+              <div class="whr-feature-actions">
+                <a href="/partners/">CONHECER WINF PARTNERS™ <span aria-hidden="true">↗</span></a>
+                <a href="/briefing/#jornada-modelos">COMPARAR OS MODELOS <span aria-hidden="true">↗</span></a>
+                <a href="/partners/#roadmap">ROADMAP DA EXPANSÃO <span aria-hidden="true">↗</span></a>
+              </div>
+            </section>
+            <nav class="whr-columns" aria-label="Roadmap de marcas e serviços do ecossistema WINF">
+              <div class="whr-column">
+                <span class="whr-column-title">01 / WINF SELECT™</span>
+                <a href="/aerocore/winf-select/">ARQUITETURA / GLASS + HOME™</a>
+                <a href="/invisible/">INVISIBLE™ / NANO CERÂMICA</a>
+                <a href="/blackpro/">BLACKPRO™</a>
+                <a href="/dual-reflect/">DUALREFLECT™</a>
+                <a href="/securityblind/">SECURITYBLINDER™</a>
+                <a href="/miniblind-venetian/">MINIBLIND &amp; VENETIAN™</a>
+              </div>
+              <div class="whr-column">
+                <span class="whr-column-title">02 / MOBILIDADE &amp; PROTEÇÃO</span>
+                <a href="/aerocore/">AEROCORE™ / ENGENHARIA TÉRMICA</a>
+                <a href="/aerocore/neoskin/">NEOSKIN™ / PPF</a>
+                <a href="/aerocore/ceramic-armoring/">CERAMIC ARMORING™</a>
+                <a href="/aerocore/motorsports/">MOTORSPORTS</a>
+                <a href="/aerocore/marine/">MARINE</a>
+                <a href="/onde-comprar/">LOCATOR / UNIDADES ATIVAS</a>
+              </div>
+              <div class="whr-column">
+                <span class="whr-column-title">03 / EXPANSÃO &amp; PARCERIAS</span>
+                <a href="/partners/">WINF PARTNERS™ / EXPANSÃO</a>
+                <a href="/briefing/#asset-light">WINF ASSET LIGHT™</a>
+                <a href="/briefing/#kiosk-detail">QUIOSQUE ARQUITETÔNICO</a>
+                <a href="/briefing/#flagship-detail">FLAGSHIP &amp; HUB REGIONAL</a>
+                <a href="/partners/#jornada">JORNADA DO LICENCIADO</a>
+                <a href="https://www.instagram.com/maw.partners/" target="_blank" rel="noopener noreferrer">M.A.W.™ / MARKETING ↗</a>
+              </div>
+              <div class="whr-column">
+                <span class="whr-column-title">04 / WINF.inc® / UNIVERSO</span>
+                <a href="/redes/?origem=%2F">REDES SOCIAIS DAS MARCAS</a>
+                <a href="/blog/">WINF JOURNAL™</a>
+                <a href="/catalogo/">CATÁLOGO DIGITAL</a>
+                <a href="https://painel-os.winf.com.br/login/" target="_blank" rel="noopener noreferrer">WINF OS™ / LOGIN ↗</a>
+                <a href="https://wa.me/5513981113001?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20com%20a%20WINF%20sobre%20solu%C3%A7%C3%B5es%20e%20instala%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer">ATENDIMENTO OFICIAL / WHATSAPP ↗</a>
+                <span class="whr-pending">GHOST SHOP™ / EM IMPLANTAÇÃO</span>
+                <span class="whr-pending">CUIDAR &amp; CONECTAR / EM ESTRUTURAÇÃO</span>
+              </div>
+            </nav>
+            <section class="whr-social-feature" aria-label="Descubra os canais oficiais WINF">
+              <div><strong>UMA REDE. TODOS OS CANAIS OFICIAIS.</strong><p>Um link para descobrir os perfis sociais da WINF™, WINF Select™, AeroCore™, NeoSkin™, WINF Partners™ e M.A.W.™.</p></div>
+              <a href="/redes/?origem=%2F">EXPLORAR REDES SOCIAIS <span aria-hidden="true">↗</span></a>
+            </section>
+            <div class="whr-signoff">
+              <a href="#topo" class="whr-official-logo" aria-label="WINF Premium Quality Windowfilm — voltar ao topo">
+                <img src="/winf-logo.svg" alt="WINF™" width="109" height="36" loading="lazy"/>
+                <span>PREMIUM QUALITY WINDOWFILM</span>
+              </a>
+              <span class="whr-signoff-center">DO BRASIL PARA O MUNDO.</span>
+              <div class="whr-regions" aria-label="Conexões globais"><span><i aria-hidden="true"></i> BR</span><span><i aria-hidden="true"></i> US</span><span><i aria-hidden="true"></i> CN</span></div>
+            </div>
+            <div class="whr-legal">
+              <span>© <span data-current-year>2026</span> WINF.inc® · Marcas e produtos sujeitos aos respectivos direitos.</span>
+              <nav class="whr-legal-links" aria-label="Informações e privacidade">
+                <a href="/aerocore/policies/#privacidade">PRIVACIDADE</a>
+                <a href="/aerocore/policies/#juridico">INFORMAÇÕES JURÍDICAS</a>
+                <a href="/aerocore/policies/#certificacoes">CERTIFICAÇÕES</a>
+              </nav>
+              <span class="whr-by">COMUNICAÇÃO: <a href="https://www.instagram.com/maw.partners/" target="_blank" rel="noopener noreferrer">M.A.W.™ ↗</a></span>
+            </div>
+          </div>
+        </footer>
 </body>
 </html>
