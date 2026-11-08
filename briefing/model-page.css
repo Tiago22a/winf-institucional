@@ -199,3 +199,14 @@ a:focus-visible{outline:2px solid #fff;outline-offset:4px}
 .model-faq-guide a{min-height:47px;border:1px solid #ffffff71;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;font:700 11px/1.4 Inter,Arial,sans-serif;letter-spacing:.06em}
 .model-faq-guide a:is(:hover,:focus-visible){background:#fff;color:#111}
 @media(max-width:700px){.model-faq{margin-top:18px}.model-faq-item summary{padding:20px 36px 20px 0;font-size:16px}.model-faq-item p{font-size:14px;padding-bottom:19px}.model-faq-guide a{flex:1 1 180px}}
+
+/* WINF Partners editorial final — transformacao, diferenciacao e valores reais. */
+.model-editorial{background:#09090b;border-top:1px solid #343438;border-bottom:1px solid #343438}
+.model-editorial-grid{display:grid;grid-template-columns:minmax(0,1.16fr) minmax(280px,.84fr);gap:clamp(24px,5vw,95px);align-items:center}
+.model-editorial h2{font-family:Anton,Impact,"Arial Narrow",sans-serif;font-weight:400;line-height:1.03;font-size:clamp(38px,5.4vw,82px);letter-spacing:0;max-width:800px;margin:24px 0 0;text-wrap:balance}
+.model-editorial h2 em{font-style:normal;color:#9f9fa4}
+.model-editorial-copy{min-width:0}
+.model-editorial-copy p{margin:0 0 20px;font:400 clamp(15px,1.4vw,18px)/1.72 Inter,Arial,sans-serif;color:#c6c6cb}
+.model-editorial-copy p:last-child{margin-bottom:0;color:#95959c}
+@media(max-width:800px){.model-editorial-grid{grid-template-columns:1fr;gap:23px}.model-editorial h2{font-size:clamp(35px,8vw,60px);margin-top:14px}.model-editorial-copy p{font-size:16px}}
+@media(max-width:390px){.model-editorial h2{font-size:clamp(31px,8.1vw,42px)}}
