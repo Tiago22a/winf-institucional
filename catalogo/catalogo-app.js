@@ -42,7 +42,7 @@
     }).catch(function(){ /* fallback homologado — sem erro crítico para o cliente */ });
   }
   resolveTerritory();
-  var section = "select", application = "all", selectedProduct = null, prevFocused = null;
+  var section = "select", application = "all", selectedProduct = null, prevFocused = null, detailPushed = false;
   var brandNames = {select:"WINF SELECT™",aerocore:"AEROCORE™",neoskin:"NEOSKIN™",ceramic:"CERAMIC ARMORING™"};
   var brandPages = {select:"/aerocore/winf-select/",aerocore:"/aerocore/aerocore/",neoskin:"/aerocore/neoskin/",ceramic:"/aerocore/ceramic-armoring/"};
   var sections = {
@@ -85,7 +85,7 @@
   }
   function note() {
     if(section==="select")return "Produtos de outras marcas aparecem como complementos arquitetônicos. Avalie o substrato, a homologação e a disponibilidade antes de especificar.";
-    if(application==="marine" || application==="aviation" || application==="home")return "Contexto especial para consulta: a presença do produto nesta lista não é homologação técnica para essa aplicação.";
+    if(application==="marine" || application==="aviation" || application==="home")return "Contexto para atendimento selecionado. O portfólio completo continua visível: nenhum item está automaticamente homologado para esta aplicação. O contexto escolhido será enviado no WhatsApp, para avaliação técnica.";
     return "Seleção de produtos " + brandNames[section] + ". Especificações e uso final sujeitos à ficha técnica do produto.";
   }
   function ghostMark(p) {
@@ -111,6 +111,7 @@
   function renderFilters(){
     var holder=document.getElementById("application-filters");
     if(!holder)return;
+    holder.setAttribute("aria-label", section==="select" ? "Filtrar produtos por aplicação arquitetônica" : "Escolher contexto da consulta comercial");
     holder.innerHTML=uses[section].map(function(entry){
       return '<button type="button" data-wc-use="'+escapeHtml(entry[0])+'" aria-pressed="'+String(entry[0]===application)+'">'+escapeHtml(entry[1])+'</button>';
     }).join("");
@@ -238,18 +239,25 @@
       else window.prompt("Copie o endereço:",url);
     });
     document.getElementById("wc-detail-close").focus();
+    detailPushed = !!recordHistory;
     if(recordHistory) history.pushState({wcProduct:id},"",catalogUrl(id).toString());
     updateDock();
   }
   function showCopyFeedback(){var b=document.getElementById("wc-detail-copy");if(b)b.textContent="LINK COPIADO ✓";}
-  function closeProduct(){
+  function hideProduct(){
     var dialog=document.getElementById("wc-product-detail");
     if(dialog)dialog.hidden=true;
     document.body.classList.remove("wc-detail-open");
-    selectedProduct=null;
-    var url=catalogUrl(null);history.replaceState({},"",url.pathname+url.search+url.hash);
-    if(prevFocused&&prevFocused.focus)prevFocused.focus();
+    selectedProduct=null;detailPushed=false;
+    if(prevFocused&&prevFocused.isConnected&&prevFocused.focus)prevFocused.focus();
     updateDock();
+  }
+  function closeProduct(){
+    // Respeita o histórico do navegador: voltar da ficha clicada retorna à grade.
+    if(detailPushed){detailPushed=false;history.back();hideProduct();return;}
+    var url=catalogUrl(null);
+    history.replaceState({},"",url.pathname+url.search+url.hash);
+    hideProduct();
   }
   function updateDock(){
     var wa=document.getElementById("wc-fixed-whatsapp"),assist=document.getElementById("wc-fixed-assist");
@@ -273,17 +281,27 @@
     trigger.addEventListener("click",function(){toggle(panel.hidden);});
     document.getElementById("wc-dock-close").addEventListener("click",function(){toggle(false);trigger.focus();});
     document.addEventListener("click",function(e){if(!panel.hidden&&!dock.contains(e.target))toggle(false);});
+    document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!panel.hidden){toggle(false);trigger.focus();}});
     updateDock();
   }
   function initDetail(){
     var overlay=document.createElement("section");overlay.id="wc-product-detail";overlay.className="wc-product-detail";overlay.hidden=true;
     overlay.setAttribute("role","dialog");overlay.setAttribute("aria-modal","true");overlay.setAttribute("aria-labelledby","wc-detail-title");
     document.body.appendChild(overlay);
-    document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!overlay.hidden){e.preventDefault();closeProduct();}});
+    document.addEventListener("keydown",function(e){
+      if(overlay.hidden)return;
+      if(e.key==="Escape"){e.preventDefault();closeProduct();return;}
+      if(e.key!=="Tab")return;
+      var focusable=[...overlay.querySelectorAll('a[href],button:not([disabled])')].filter(function(el){return el.getClientRects().length>0;});
+      if(!focusable.length)return;
+      var first=focusable[0],last=focusable[focusable.length-1];
+      if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+      else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+    });
     window.addEventListener("popstate",function(){
       var id=new URLSearchParams(location.search).get("produto");
-      if(id&&find(id))openProduct(id,false);
-      else {overlay.hidden=true;document.body.classList.remove("wc-detail-open");selectedProduct=null;updateDock();}
+      if(id&&find(id)){openProduct(id,false);}
+      else hideProduct();
     });
   }
   document.addEventListener("DOMContentLoaded",function(){
