@@ -265,10 +265,19 @@
     var spectre=find("select-invisible-spectre");if(spectre){spectre.name="InfiSpectre™ by AeroCore™";spectre.line="aerocore";spectre.category="arch";}
     var film=find("select-blackpro");if(film&&film.specs&&film.specs.vlt==="70%"){film.specs.vlt="N/A";} // não apresentar como comprovado VLT inconsistente
     initDetail();
-    window.setCategory("select");
+    // Link global compartilhável pode abrir diretamente uma das quatro marcas:
+    // /catalogo/?territorio=santos-sp&marca=neoskin
+    var params = new URLSearchParams(location.search);
+    var initialBrand = (params.get("marca") || "").toLowerCase();
+    window.setCategory(Object.prototype.hasOwnProperty.call(sections, initialBrand) ? initialBrand : "select");
     initSimulator();
     initDock();
-    var id=new URLSearchParams(location.search).get("produto");
-    if(id&&find(id)){var p=find(id);window.setCategory(p.category==="arch"?"select":(p.line in sections?p.line:"select"));openProduct(id,false);}
+    var id=params.get("produto");
+    if(id&&find(id)){
+      var p=find(id);
+      // A ficha enviada por link sempre prevalece sobre a aba, mantendo o território.
+      window.setCategory(p.category==="arch"?"select":(Object.prototype.hasOwnProperty.call(sections,p.line)?p.line:"select"));
+      openProduct(id,false);
+    }
   });
 })();
