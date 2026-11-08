@@ -109,4 +109,44 @@ check('A landing ativa é conectada ao catálogo sem criar cópias por cidade', 
   assert.match(catalog, /https:\/\/winf\.com\.br\/catalogo\//);
   assert.ok(existsSync('brand/winf-monogram.svg'));
 });
+check('Menu global e menu Santos usam marcas oficiais alinhadas', () => {
+  assert.match(home, /winf-home-brand-divider/);
+  assert.match(home, /PREMIUM QUALITY WINDOWFILM/);
+  assert.match(santos, /winf-territory-lockup/);
+  assert.match(santos, /GLASS \+ HOME/);
+  assert.match(santos, /winf-ghost-trigger/);
+  assert.ok(existsSync('css/winf-home-header.css'));
+  assert.ok(existsSync('css/winf-territory-santos.css'));
+});
+check('Todas as saídas para o catálogo na landing Santos preservam território', () => {
+  const links = [...santos.matchAll(/<a\b[^>]*href="([^"]*catalogo\/[^"]*)"[^>]*>/g)].map(x => x[1]);
+  assert.ok(links.length >= 15);
+  assert.ok(links.every(url => url.includes('territorio=santos-sp')), 'Existe link de Santos sem identificação territorial');
+});
+check('Guias por marca preservam o atendimento da unidade piloto', () => {
+  for(const name of ['aerocore', 'neoskin', 'ceramic']) {
+    assert.ok(santos.includes('marca=' + name), 'Falta link territorial ' + name);
+  }
+  assert.match(app, /params\.get\("marca"\)/);
+  assert.match(app, /params\.get\("produto"\)/);
+});
+check('Fichas possuem Escape, controle de foco e histórico do navegador', () => {
+  assert.match(app, /history\.back\(\)/);
+  assert.match(app, /e\.key!=="Tab"/);
+  assert.match(app, /e\.key==="Escape"/);
+  assert.match(app, /history\.pushState/);
+});
+check('Os contatos vêm de uma única fonte territorial pública', () => {
+  assert.ok(existsSync('catalogo/territorios.json'));
+  assert.ok(!existsSync('catalogo/territorios-publicos.js'));
+});
+check('A marca principal é SVG com paths e sem bitmap incorporado', () => {
+  const logo = read('winf-logo.svg');
+  const monogram = read('brand/winf-monogram.svg');
+  assert.match(logo, /<path\b/);
+  assert.doesNotMatch(logo, /data:image\/png/);
+  assert.match(monogram, /<path\b/);
+  assert.match(monogram, /™/);
+});
+
 console.log('\n' + count + ' verificações estáticas concluídas.');
