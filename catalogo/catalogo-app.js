@@ -188,7 +188,7 @@
   }
   function detailMarkup(p){
     var title=p.id==="select-invisible-spectre"?"InfiSpectre™ by AeroCore™":p.name;
-    return ['<div class="wc-detail-top"><button class="wc-back" id="wc-detail-close" type="button">← VOLTAR AO CATÁLOGO</button><span>WINF / FICHA DE PRODUTO</span></div>',
+    return ['<div class="wc-detail-top"><button class="wc-back" id="wc-detail-close" type="button"><img src="/brand/winf-monogram.svg" class="wc-mini-w" width="22" height="22" alt="" aria-hidden="true"> ← VOLTAR AO CATÁLOGO</button><span>WINF / FICHA DE PRODUTO</span></div>',
       '<div class="wc-detail-columns"><div class="wc-detail-visual"><img src="',escapeHtml(p.image),'" alt="',escapeHtml(title),'" loading="eager">',
       '<div class="wc-detail-origin">',ghostMark(p),'<span>',escapeHtml(origin(p)),'</span></div></div>',
       '<div class="wc-detail-content"><span class="wc-kicker">',escapeHtml(p.badge),'</span><h2 id="wc-detail-title">',escapeHtml(title),'</h2>',
