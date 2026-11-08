@@ -94,7 +94,7 @@ check('Home com assinatura e um acesso WINF OS', () => {
 });
 check('Registro de unidades ativas valida código, telefone e status', () => {
   assert.equal(territoryRegistry.schemaVersion, 1);
-  assert.match(app, /fetch\("/catalogo/territorios\.json"/);
+  assert.ok(app.includes('fetch("/catalogo/territorios.json"'));
   assert.match(app, /item\.status !== "active"/);
   for (const [slug, unit] of Object.entries(territoryRegistry.territories)) {
     assert.match(slug, /^[a-z0-9-]{4,60}$/);
