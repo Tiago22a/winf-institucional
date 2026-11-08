@@ -1,0 +1,39 @@
+
+/* Unidade Santos: institutional WINF header, roadmap menu and global footer. */
+.santos-header{padding-inline:0}
+.santos-hover-card{position:relative;isolation:isolate;overflow:hidden;padding:32px;min-height:240px;background:#050607;border:1px solid #ffffff2c;transition:border-color .3s,transform .3s}
+.santos-hover-card::before{content:"";position:absolute;z-index:-2;inset:0;background-image:var(--santos-image);background-size:cover;background-position:center;filter:grayscale(1);opacity:0;transform:scale(1.1);transition:opacity .6s,transform 1s}
+.santos-hover-card::after{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(105deg,#040506f0 0%,#040506ba 65%,#04050680 100%)}
+.santos-hover-card:is(:hover,:focus-within,.santos-visible){border-color:#ffffff84;transform:translateY(-2px)}
+.santos-hover-card:is(:hover,:focus-within,.santos-visible)::before{opacity:.72;transform:scale(1)}
+.santos-hover-card h3{color:#fff}.santos-hover-card p{color:#dadde1!important}
+.santos-footer-local{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:end;border-bottom:1px solid #ffffff32;padding:36px 0 56px}
+.santos-footer-local h3{font:300 clamp(35px,5vw,70px)/1.04 Gustavo,Arial,sans-serif;letter-spacing:-.045em;margin:10px 0 16px;color:white}
+.santos-footer-local p:not(.whr-eyebrow){max-width:520px;line-height:1.7;color:#b7b8bc;font-size:15px}
+.santos-footer-local nav{display:flex;flex-direction:column;gap:13px}
+.santos-footer-local nav a{font:600 11px/1.4 Inter,Arial,sans-serif;letter-spacing:.1em;color:white;text-decoration:none;border-bottom:1px solid #ffffff36;padding:8px 0}
+.santos-footer-local nav a:hover{border-color:white}
+@media(max-width:700px){.santos-footer-local{grid-template-columns:1fr}.santos-hover-card{min-height:220px}.santos-header .winf-home-brand-signature{font-size:clamp(7px,1.6vw,10px);letter-spacing:.07em}}
+@media(prefers-reduced-motion:reduce){.santos-hover-card,.santos-hover-card::before{transition:none;transform:none}}
+
+/* Twin commercial contact buttons, Santos-only, aligned with WINF brand ghost. */
+.santos-contact-dock{position:fixed;z-index:65;right:24px;bottom:20px;display:flex;align-items:center;gap:11px}
+.santos-contact-dock>a{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:3px;width:64px;height:64px;text-decoration:none;color:#fff;font:700 8px/1.2 Arial,sans-serif;letter-spacing:.05em;border:1px solid #ffffff5c;border-radius:50%;background:#0b0c0de8;backdrop-filter:blur(8px);box-shadow:0 6px 28px #000a;transition:transform .2s,border-color .2s}
+.santos-contact-dock>a:hover{transform:translateY(-3px);border-color:#fff}
+.santos-contact-ghost img{width:28px;height:33px;object-fit:contain}.santos-contact-whatsapp svg{width:27px;height:27px;fill:#fff}
+@media(max-width:620px){.santos-contact-dock{right:14px;bottom:14px;gap:8px}.santos-contact-dock>a{width:56px;height:56px;font-size:7px}}
+@media(prefers-reduced-motion:reduce){.santos-contact-dock>a{transition:none}}
+
+/* Conversão do site territorial: navegação rápida e orçamento do cliente final */
+.santos-other-brands{border-top:1px solid #ffffff28;margin-top:9px;padding-top:17px;color:#e8e8eb}.santos-other-brands summary{display:flex;justify-content:space-between;gap:18px;list-style:none;cursor:pointer;font:600 10px/1.5 Inter,Arial,sans-serif;letter-spacing:.12em}.santos-other-brands summary::-webkit-details-marker{display:none}
+.santos-other-brands div{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin-top:14px}
+.santos-other-brands a{padding:9px 8px;border:1px solid #ffffff2c;text-decoration:none;color:#ddd;font:500 11px/1.5 Inter,Arial,sans-serif}.santos-other-brands a:hover{border-color:#ffffffa0;color:#fff}
+.santos-quote-form{max-width:730px;margin:0 auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;text-align:left;padding:26px;background:#111216;border:1px solid #ffffff40}
+.santos-quote-form label{display:flex;flex-direction:column;gap:9px;font:600 11px/1.45 Inter,Arial,sans-serif;letter-spacing:.07em;color:#eee}.santos-quote-form label:first-child{grid-column:1/-1}
+.santos-quote-form :is(input,select){min-width:0;width:100%;height:54px;padding:14px;color:#fff;border:1px solid #ffffff45;background:#1d1e22;font:400 14px/1.4 Inter,Arial,sans-serif;letter-spacing:normal;border-radius:0}
+.santos-quote-form select option{background:#1d1e22}
+.santos-quote-form :is(input,select):focus-visible{outline:2px solid #fff;outline-offset:2px}
+.santos-quote-submit{grid-column:1/-1;background:#f0f0f0;color:#111;min-height:55px;font:700 11px/1.4 Inter,Arial,sans-serif;letter-spacing:.1em;padding:12px 20px;cursor:pointer}
+.santos-quote-submit:hover{background:white}.santos-quote-form p{grid-column:1/-1;color:#a6a6ab;font:400 12px/1.6 Inter,Arial,sans-serif;margin:0}
+.santos-direct-whatsapp{margin-top:18px;font:600 11px/1.6 Inter,Arial,sans-serif;letter-spacing:.05em}.santos-direct-whatsapp a{color:#eee;text-decoration:underline;text-underline-offset:5px}
+@media(max-width:640px){.santos-quote-form{grid-template-columns:1fr;padding:19px}.santos-quote-form label{grid-column:1/-1}.santos-other-brands div{grid-template-columns:1fr}}
