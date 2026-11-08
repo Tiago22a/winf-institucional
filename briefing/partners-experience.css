@@ -299,3 +299,14 @@
   .partners-page .pb-footer-feature{padding-top:44px;padding-bottom:42px}
 }
 @media(prefers-reduced-motion:reduce){.partners-page .al-editorial-mosaic img{transition:none!important}}
+
+/* WINF briefing video showcase 20261108 */
+.partners-page .briefing-model-film{background:#0b0b0d}
+.partners-page .briefing-model-film h2{font:400 clamp(35px,6vw,73px)/1.05 Gustavo,Inter,sans-serif;letter-spacing:-.04em;margin:14px 0 16px;text-transform:uppercase}
+.partners-page .briefing-model-film-lead{max-width:800px;font-size:15px;line-height:1.7;color:#c6c6cc}
+.partners-page .briefing-model-film .model-film-player{margin:25px auto 0;max-width:1040px;position:relative;aspect-ratio:16/9;background:#121214;overflow:hidden;border:1px solid #ffffff3d}
+.partners-page .briefing-model-film .model-film-video{width:100%;height:100%;display:block;object-fit:cover}
+.partners-page .briefing-model-film .model-film-trigger{cursor:pointer;position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:15px;text-align:center;background:#0005;border:0;color:#fff;font:800 11px Inter,sans-serif;letter-spacing:.16em}
+.partners-page .briefing-model-film .model-film-play{width:64px;height:64px;display:grid;place-items:center;border-radius:50%;background:white;color:#111;font-size:22px}
+.partners-page .briefing-model-film .model-film-player.is-playing .model-film-trigger{opacity:0;visibility:hidden;pointer-events:none}
+@media(hover:none),(pointer:coarse),(max-width:850px){.partners-page img.grayscale{filter:none!important}}

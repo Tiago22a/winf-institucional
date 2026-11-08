@@ -222,3 +222,28 @@ a:focus-visible{outline:2px solid #fff;outline-offset:4px}
 .kiosk-formats-note{font-size:12px;line-height:1.65;color:#98989e;margin:22px 0 0;max-width:780px}
 @media(max-width:760px){.kiosk-format-grid{grid-template-columns:1fr;gap:10px}.kiosk-format-card{min-height:0;display:grid;grid-template-columns:74px 1fr;gap:22px;align-items:start}.kiosk-format-letter{font-size:85px}.kiosk-format-card p{font-size:13px}}
 @media(max-width:420px){.kiosk-format-card{grid-template-columns:53px 1fr;padding:20px;gap:15px}.kiosk-format-letter{font-size:65px}}
+
+/* WINF kiosk P/M/G media 20261108 */
+.kiosk-format-visual{position:relative;display:block;width:100%;aspect-ratio:4/3;overflow:hidden;background:#1b1b1d;margin:0}
+.kiosk-format-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1);transition:filter .55s,transform .65s}
+.kiosk-format-visual:after{content:"";position:absolute;inset:55% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.65));pointer-events:none}
+.kiosk-format-visual .kiosk-format-letter{position:absolute;left:14px;bottom:15px;z-index:1;font:400 68px/.9 Gustavo,Anton,Inter,sans-serif;text-shadow:0 2px 14px #000;color:#fff}
+.kiosk-format-card{display:flex!important;flex-direction:column!important;gap:19px!important;justify-content:flex-start!important;padding:18px!important}
+.kiosk-format-card>div{padding:0 4px 10px}
+@media(hover:hover) and (pointer:fine){.kiosk-format-card:hover .kiosk-format-visual img{filter:none;transform:scale(1.035)}}
+@media(hover:none),(pointer:coarse),(max-width:850px){.kiosk-format-visual img{filter:none!important;transform:none!important}}
+@media(max-width:760px){.kiosk-format-card{display:flex!important;flex-direction:column!important;gap:16px!important}.kiosk-format-visual{aspect-ratio:16/10}.kiosk-format-visual .kiosk-format-letter{font-size:60px}}
+/* Filmes conceituais: player sob demanda, poster responsivo */
+.model-film-section{background:#0e0e10}
+.model-film-grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);align-items:start;gap:16px;margin-top:34px}
+.model-film-player{position:relative;aspect-ratio:16/9;width:100%;min-width:0;overflow:hidden;background:#151517;border:1px solid #ffffff30;margin:32px 0 0}
+.model-film-grid .model-film-player{margin:0}
+.model-film-video{display:block;width:100%;height:100%;object-fit:cover;filter:none}
+.model-film-trigger{cursor:pointer;position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;text-align:center;font:700 11px/1.5 Inter,Arial,sans-serif;letter-spacing:.17em;color:#fff;background:linear-gradient(0deg,#000a,transparent 65%),#0003;border:0;padding:24px;transition:opacity .3s}
+.model-film-play{width:70px;height:70px;border-radius:100%;display:grid;place-items:center;padding-left:4px;background:#fff;color:#111;font-size:23px;box-shadow:0 10px 35px #0007}
+.model-film-trigger:hover .model-film-play{transform:scale(1.07)}
+.model-film-trigger:focus-visible{outline:3px solid #fff;outline-offset:-7px}
+.model-film-player.is-playing .model-film-trigger{opacity:0;visibility:hidden;pointer-events:none}
+.model-film-disclaimer{font:400 12px/1.7 Inter,Arial,sans-serif;color:#a9a9b0;margin:16px 0 0;max-width:840px}
+@media(max-width:820px){.model-film-grid{grid-template-columns:1fr}.model-film-play{width:60px;height:60px}.model-film-trigger{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.model-film-trigger,.kiosk-format-visual img{transition:none!important}}
