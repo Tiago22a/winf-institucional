@@ -73,13 +73,11 @@ footer a { min-height:32px; display:inline-flex; align-items:center; }
   --ac-font-marker: "Permanent Marker", cursive;
 }
 
-/* The principal display titles use Montserrat Black; preserve inline brand lettering. */
+/* Preserve each editorial heading's own family and weight.
+   Only expressly marked display/black elements use the heavy title face. */
 body { font-family: var(--ac-font-body); }
-main :is(h1,h2,h3,.font-display,.font-black):not([style*="font-family"]):not(.font-aerocore):not(.ac-handwritten):not(.ac-marker) {
+main :is(.font-display,.font-black):not([style*="font-family"]):not(.font-aerocore):not(.ac-handwritten):not(.ac-marker) {
   font-family: var(--ac-font-title);
-}
-main :is(h1,h2,h3,.font-black):not([style*="font-family"]):not(.font-aerocore):not(.ac-handwritten):not(.ac-marker) {
-  font-weight: 900;
 }
 
 /* Large menu headlines; typography only, no change to size, layout or breakpoint. */
