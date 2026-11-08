@@ -41,3 +41,34 @@
 .foot-brand{display:flex;align-items:center;flex-wrap:wrap;gap:16px}
 .foot-brand img{display:block;width:109px;height:auto;flex:none;object-fit:contain}
 @media(max-width:700px){.foot-brand{align-items:flex-start;gap:12px}.foot-brand img{width:95px}}
+
+/* Ajustes 08/11: fotos sem a tipografia embutida no enquadramento, três modelos coerentes. */
+.page-asset-light .mosaic .tile:first-child img{object-position:78% 48%;transform:scale(1.25)}
+.page-asset-light .mosaic .tile:nth-child(2) img{object-position:83% 49%;transform:scale(1.3)}
+.page-asset-light .mosaic .tile:nth-child(3) img{object-position:50% 49%;transform:scale(1.025)}
+.page-asset-light .statement img{object-position:center 45%;filter:grayscale(.72)}
+.page-flagship .mosaic .tile:first-child img{object-position:47% 35%;transform:scale(1)}
+.page-flagship .mosaic .tile:nth-child(2) img{object-position:52% 52%;transform:scale(1.08)}
+.page-flagship .mosaic .tile:nth-child(3) img{object-position:72% 50%;transform:scale(1.17)}
+.page-kiosk .mosaic .tile:first-child img{object-position:48% 49%;transform:scale(1.025)}
+.page-kiosk .mosaic .tile:nth-child(2) img{object-position:75% 50%;transform:scale(1.37)}
+.page-kiosk .mosaic .tile:nth-child(3) img{object-position:27% 54%;transform:scale(1.37)}
+.page-asset-light .lifestyle-principles .season-note{
+ grid-column:1/-1;margin:0;border-top:1px solid #56565a;padding:19px 22px;
+ font:400 13px/1.75 Inter,Arial,sans-serif;color:#bfc0c4;
+}
+.page-asset-light .season-note strong{font-weight:750;color:#fff;margin-right:.45em}
+@media(hover:hover){
+ .page-asset-light .mosaic .tile:first-child:hover img{transform:scale(1.31)}
+ .page-asset-light .mosaic .tile:nth-child(2):hover img{transform:scale(1.37)}
+ .page-asset-light .mosaic .tile:nth-child(3):hover img{transform:scale(1.085)}
+ .page-flagship .mosaic .tile:nth-child(3):hover img{transform:scale(1.23)}
+ .page-kiosk .mosaic .tile:nth-child(2):hover img,.page-kiosk .mosaic .tile:nth-child(3):hover img{transform:scale(1.43)}
+}
+@media(max-width:760px){
+ .page-asset-light .mosaic .tile:first-child img{object-position:80% 50%}
+ .page-asset-light .mosaic .tile:nth-child(2) img{object-position:80% 48%}
+ .page-asset-light .lifestyle-principles .season-note{padding:17px 15px;line-height:1.65}
+ .page-kiosk .mosaic .tile:first-child img{object-position:51% 49%}
+ .page-flagship .mosaic .tile:first-child img{object-position:51% 40%}
+}
