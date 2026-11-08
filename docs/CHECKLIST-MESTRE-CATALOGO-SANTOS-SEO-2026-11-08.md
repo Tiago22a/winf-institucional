@@ -54,6 +54,10 @@
 - [x] Inserir seção de soluções complementares AeroCore, NeoSkin e Ceramic Armoring na página territorial de Santos, com links ao catálogo e WhatsApp local.
 - [x] Permitir abertura direta de aba do catálogo pelo parâmetro `?marca=` e manter `?produto=` com prioridade para a ficha escolhida.
 - [x] Menu com fantasminha e botão único visível **WINF OS™** no cabeçalho.
+- [x] Trocar as identidades dos menus sem copiar conteúdos: **WINF global** com layout editorial/jornada que era da AeroCore e acesso às quatro marcas; **AeroCore** com layout simplificado, produtos e aplicações próprios.
+- [x] Preservar da AeroCore o botão **Voltar ao Universo WINF™**, com destino à raiz `/` e sem links da WINF trocados por rotas indevidas.
+- [x] Corrigir controlador de menu global: `Escape`, `Tab`, estado `aria-expanded`, retorno de foco e fechamento sem disputa de timers.
+- [x] Acrescentar verificações de menu no smoke test da PR e caminhos AeroCore/JS/CSS ao workflow de CI.
 - [x] Remover link visual redundante do WINF OS no conjunto secundário da home.
 - [ ] Homologar espaçamentos e quebra de linha no desktop e mobile comparando com os prints aprovados.
 - [ ] Inspecionar títulos grandes e tipografia de todas as páginas, rodapés e páginas de carregamento.
