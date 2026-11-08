@@ -57,3 +57,9 @@
  .winf-home-statement+.winf-home-global-slogan{letter-spacing:.14em}
 }
 @media(max-width:380px){.winf-home-header .winf-home-brand-signature{font-size:7px;max-width:90px}.winf-home-statement{font-size:7.3vw}}
+
+/* 08 Nov: single-line editorial headline requested for WINF institutional home. */
+.winf-home-statement{display:block;max-width:100%;white-space:nowrap;font-size:clamp(17px,5.35vw,82px);letter-spacing:-.057em;line-height:1.1}
+.winf-home-statement-tm{vertical-align:top;font-size:.16em;margin:.32em 0 0 .12em}
+@media(max-width:640px){.winf-home-statement{font-size:clamp(13px,5.15vw,33px);letter-spacing:-.063em}}
+@media(max-width:380px){.winf-home-statement{font-size:5.05vw}}
