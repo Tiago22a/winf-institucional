@@ -27,6 +27,9 @@
       return res.json();
     }).then(function(data) {
       if(!data || data.schemaVersion !== 1 || !data.territories || typeof data.territories !== "object")return;
+      // Quando o cadastro oficial carregar, ele substitui integralmente o fallback.
+      // Um território suspenso/removido não deve continuar recebendo leads.
+      for(var previousKey of Object.keys(TERRITORIES))delete TERRITORIES[previousKey];
       for(var key of Object.keys(data.territories)){
         var item=data.territories[key];
         if(!/^[a-z0-9-]{4,60}$/.test(key) || !item || item.status !== "active" || !phoneValid(item.phone) ||
