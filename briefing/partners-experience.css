@@ -238,3 +238,64 @@
   .partners-page #budget .al-model-card-photo img,
   .partners-page .pb-lifestyle-gallery img{filter:grayscale(0)!important;opacity:1!important}
 }
+
+/* Responsive WINF Partners 2026-11-08 — phone/tablet/landscape browser.
+   Touch screens show full-color photography without hover. */
+.partners-page{max-width:100%;overflow-x:clip}
+.partners-page .al-section,.partners-page .al-wrap,.partners-page .al-model-hero,.partners-page .al-model-hero-copy,.partners-page .al-model-hero-media{min-width:0}
+.partners-page .al-model-hero-copy h2{max-width:100%;text-wrap:balance;overflow-wrap:anywhere}
+.partners-page .al-editorial-mosaic .al-mosaic-tile{isolation:isolate}
+.partners-page .al-button,.partners-page .al-details-link{touch-action:manipulation}
+.partners-page a:focus-visible,.partners-page button:focus-visible{outline:2px solid #fff;outline-offset:4px}
+@media(max-width:1024px){
+  .partners-page .al-model-hero-media.al-editorial-mosaic{height:clamp(350px,52vw,535px)}
+  .partners-page .al-model-hero-copy h2{font-size:clamp(39px,6.3vw,66px)}
+  .partners-page #budget .al-grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .partners-page #budget .al-grid-3>.al-card:last-child:nth-child(odd){grid-column:1/-1}
+}
+@media(max-width:720px){
+  .partners-page .al-section{padding:56px 16px}
+  .partners-page .al-wrap{width:100%}
+  .partners-page .al-model-hero-copy h2{font-size:clamp(37px,9.3vw,58px);line-height:1.08}
+  .partners-page .al-model-hero-media.al-editorial-mosaic{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    grid-template-rows:minmax(210px,1.3fr) minmax(150px,1fr);
+    height:clamp(385px,98vw,525px);gap:7px;margin-top:30px
+  }
+  .partners-page .al-editorial-mosaic .al-mosaic-main{grid-column:1/-1;grid-row:1}
+  .partners-page .al-editorial-mosaic .al-mosaic-detail{grid-column:1;grid-row:2}
+  .partners-page .al-editorial-mosaic .al-mosaic-context{grid-column:2;grid-row:2}
+  .partners-page .al-editorial-mosaic .al-mosaic-main figcaption{font-size:clamp(19px,5vw,25px)}
+  .partners-page .al-editorial-mosaic .al-mosaic-detail figcaption,
+  .partners-page .al-editorial-mosaic .al-mosaic-context figcaption{font-size:clamp(12px,3.2vw,16px);line-height:1.12}
+  .partners-page #budget .al-grid-3{grid-template-columns:1fr}
+  .partners-page #budget .al-grid-3>.al-card:last-child:nth-child(odd){grid-column:auto}
+  .partners-page .pb-footer-feature{grid-template-columns:1fr}
+}
+@media(max-width:390px){
+  .partners-page .al-model-hero-media.al-editorial-mosaic{
+    grid-template-columns:1fr;grid-template-rows:245px 180px 180px;height:auto
+  }
+  .partners-page .al-editorial-mosaic .al-mosaic-main,
+  .partners-page .al-editorial-mosaic .al-mosaic-detail,
+  .partners-page .al-editorial-mosaic .al-mosaic-context{grid-column:1;grid-row:auto}
+  .partners-page .al-editorial-mosaic .al-mosaic-detail figcaption,
+  .partners-page .al-editorial-mosaic .al-mosaic-context figcaption{font-size:18px}
+}
+@media(hover:none),(pointer:coarse),(max-width:850px){
+  .partners-page .al-editorial-mosaic .al-mosaic-tile img,
+  .partners-page #budget .al-model-card-photo img,
+  .partners-page .pb-lifestyle-gallery img{filter:none!important;opacity:1!important}
+  .partners-page .al-editorial-mosaic .al-mosaic-tile img{transform:scale(1.01)!important;transition:none}
+  .partners-page #budget .al-model-card-photo img{transform:scale(1.01)!important}
+  .partners-page .al-model-asset-light .al-mosaic-main img{object-position:50% 45%}
+  .partners-page .al-model-asset-light .al-mosaic-detail img{object-position:50% 50%}
+  .partners-page .al-model-kiosk .al-mosaic-detail img{object-position:50% 50%}
+  .partners-page .al-model-kiosk .al-mosaic-context img{object-position:50% 50%}
+}
+@media(max-height:560px) and (orientation:landscape){
+  .partners-page .al-section{padding-top:35px;padding-bottom:35px}
+  .partners-page .al-model-hero-media.al-editorial-mosaic{min-height:315px;height:auto}
+  .partners-page .pb-footer-feature{padding-top:44px;padding-bottom:42px}
+}
+@media(prefers-reduced-motion:reduce){.partners-page .al-editorial-mosaic img{transition:none!important}}

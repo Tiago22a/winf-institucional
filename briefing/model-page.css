@@ -86,3 +86,99 @@
 /* PNG oficial (enviado pela WINF): não redesenhar a logomarca. */
 .lockup img{object-fit:contain;object-position:left center}
 .model-brand-rail .model-brand-winf{object-fit:contain}
+
+/* WINF PARTNERS — responsive 2026-11-08: phone, tablet, landscape touch displays.
+   No native CarPlay/Android Auto integration is implied: this covers web browsers. */
+html{scroll-padding-top:72px}
+html,body{max-width:100%;overflow-x:clip}
+.wrap{width:min(1240px,calc(100% - clamp(28px,5vw,56px)))}
+.intro-layout>*,.section-head>*,.mosaic>*,.features>*{min-width:0}
+.intro h1,.section h2,.closing h2{max-width:100%;text-wrap:balance}
+.back,.btn,.floating a{touch-action:manipulation}
+.btn,.back{min-height:44px}
+a:focus-visible{outline:2px solid #fff;outline-offset:4px}
+@media(max-width:1100px){
+  .intro-layout{grid-template-columns:minmax(0,1fr) minmax(255px,.75fr);gap:32px}
+  .features{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .features>.feature:last-child:nth-child(odd){grid-column:1/-1}
+  .mosaic{height:clamp(400px,55vw,570px)}
+}
+@media(max-width:850px){
+  .intro{padding:clamp(35px,6vw,68px) 0 40px}
+  .intro-layout{grid-template-columns:1fr;gap:12px}
+  .intro h1{font-size:clamp(45px,9vw,85px)}
+  .intro p{max-width:660px}
+  .mosaic{margin-top:35px}
+  .section-head{display:block}
+  .section-head p{max-width:660px}
+  .model-brand-rail{flex-wrap:wrap;row-gap:14px}
+}
+@media(max-width:700px){
+  .wrap{width:calc(100% - 32px)}
+  .nav{min-height:68px;gap:8px}
+  .lockup{gap:9px;min-width:0}
+  .lockup img{width:clamp(65px,20vw,87px)}
+  .lockup span{padding-left:10px;letter-spacing:.08em;font-size:10px}
+  .back{font-size:10px;padding:10px;letter-spacing:0;white-space:normal;text-align:center}
+  .intro{padding:40px 0 33px}
+  .intro h1{font-size:clamp(38px,10vw,65px);line-height:1.05;letter-spacing:0;overflow-wrap:anywhere}
+  .intro p{font-size:16px;line-height:1.55}
+  .actions{gap:9px}
+  .actions .btn{flex:1 1 180px;text-align:center;padding:12px}
+  .mosaic,.page-asset-light .mosaic,.page-kiosk .mosaic,.page-flagship .mosaic{
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+    grid-template-rows:minmax(205px,1.3fr) minmax(155px,1fr);
+    height:clamp(385px,98vw,510px);gap:7px;margin-top:28px
+  }
+  .mosaic .tile:first-child{grid-column:1/-1;grid-row:1}
+  .mosaic .tile:nth-child(2){grid-column:1;grid-row:2}
+  .mosaic .tile:nth-child(3){grid-column:2;grid-row:2}
+  .tile figcaption{left:11px;right:9px;bottom:12px;font-size:clamp(12px,3vw,16px);line-height:1.12}
+  .mosaic .tile:first-child figcaption{font-size:clamp(18px,5vw,26px)}
+  .tile figcaption small{font-size:8px;letter-spacing:.07em;margin-bottom:4px}
+  .features{grid-template-columns:1fr}
+  .features>.feature:last-child:nth-child(odd){grid-column:auto}
+  .feature{padding:21px}
+  .section{padding:55px 0}
+  .statement{min-height:360px}
+  .statement .wrap{padding:42px 0}
+  .statement h2{font-size:clamp(31px,8vw,52px)}
+  .closing{padding:65px 0}
+  .closing h2{font-size:clamp(34px,9vw,58px)}
+  .foot{padding-bottom:90px}
+  .floating{right:max(10px,env(safe-area-inset-right));bottom:max(12px,env(safe-area-inset-bottom))}
+  .floating a{width:46px;height:46px}
+}
+@media(max-width:390px){
+  .nav{flex-wrap:wrap;padding:10px 0;justify-content:space-between}
+  .back{max-width:145px}
+  .mosaic,.page-asset-light .mosaic,.page-kiosk .mosaic,.page-flagship .mosaic{
+    grid-template-columns:1fr;grid-template-rows:235px 180px 180px;height:auto;gap:8px
+  }
+  .mosaic .tile:first-child,.mosaic .tile:nth-child(2),.mosaic .tile:nth-child(3){grid-column:1;grid-row:auto}
+  .tile figcaption{font-size:18px}
+  .lifestyle-principles{grid-template-columns:1fr}
+  .lifestyle-principles div{border-right:0;border-bottom:1px solid #56565a}
+  .lifestyle-principles div:nth-child(2){border-bottom:1px solid #56565a}
+  .model-brand-rail{gap:8px;font-size:9px;letter-spacing:0}
+}
+@media (hover:none),(pointer:coarse),(max-width:850px){
+  .page-asset-light .mosaic .tile img,.page-kiosk .mosaic .tile img,.page-flagship .mosaic .tile img,
+  .page-asset-light .statement img,.page-kiosk .statement img,.page-flagship .statement img{
+    filter:none!important;opacity:1!important
+  }
+  .mosaic .tile img{transform:scale(1.01)!important;transition:none}
+  .tile:nth-child(2) img,.tile:nth-child(3) img{object-position:center center}
+  .page-asset-light .tile:first-child img{object-position:57% 46%}
+  .page-kiosk .tile:first-child img{object-position:50% 50%}
+  .page-flagship .tile:first-child img{object-position:48% 35%}
+}
+@media (max-height:560px) and (orientation:landscape){
+  .intro{padding:26px 0}
+  .nav{min-height:58px}
+  .intro h1{font-size:clamp(36px,6vw,72px)}
+  .mosaic,.page-asset-light .mosaic,.page-kiosk .mosaic,.page-flagship .mosaic{height:auto;min-height:330px}
+  .closing{padding:42px 0}
+  .floating{right:max(10px,env(safe-area-inset-right));bottom:max(8px,env(safe-area-inset-bottom))}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.mosaic img{transition:none!important}}

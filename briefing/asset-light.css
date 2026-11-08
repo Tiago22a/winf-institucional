@@ -80,3 +80,19 @@
 #manifesto .briefing-vsl-fallback[hidden]{display:none}
 @media(hover:none){#manifesto .reference-film:not(:has(video[controls])) .briefing-vsl-video{filter:none;opacity:.88}}
 @media(prefers-reduced-motion:reduce){#manifesto .briefing-vsl-video,#manifesto .reference-film [data-play-manifesto],#manifesto .reference-film [data-manifesto-shade]{transition:none}#manifesto .reference-film:hover .briefing-vsl-video{transform:none}}
+
+/* Modelos do briefing — controles confortáveis no toque e larguras fluidas. */
+@media (max-width:850px){
+  .al-section{padding:clamp(45px,7vw,75px) clamp(16px,3vw,24px)}
+  .al-section h2{font-size:clamp(34px,7vw,55px);overflow-wrap:anywhere}
+  .al-card{min-width:0}
+  .al-card .al-button,.al-button{min-height:48px}
+  .al-note{overflow-wrap:break-word}
+  .al-model-highlights{min-width:0}
+}
+@media(max-width:390px){
+  .al-section{padding:46px 15px}
+  .al-section h2{font-size:clamp(30px,9vw,40px)}
+  .al-eyebrow{letter-spacing:.12em}
+  .al-button{padding:13px 15px;font-size:12px;letter-spacing:.035em}
+}

@@ -183,3 +183,31 @@ body.wp-menu-open{overflow:hidden}
 .winf-partners-site .wp-parent-logo img{height:25px}
 .winf-partners-site .wp-parent-logo small{font-size:6px;max-width:85px;letter-spacing:.01em}
 }
+
+/* WINF Partners / 2026-11-08: leitura e toque em tablets e telas horizontais. */
+.partners-landing{max-width:100%;overflow-x:clip}
+.wp-hero-layout>*,.wp-models-grid>*,.wp-roadmap-grid>*{min-width:0}
+.wp-header-action,.wp-menu-trigger,.wp-model-card a{touch-action:manipulation}
+@media (min-width:768px) and (max-width:1100px){
+  .wp-hero-layout{grid-template-columns:minmax(0,1.25fr) minmax(220px,.75fr);gap:24px}
+  .wp-models-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .wp-models-grid>.wp-model-card:first-child{grid-column:1/-1}
+}
+@media(max-width:767px){
+  .wp-header-inner,.wp-container{width:calc(100% - 32px)}
+  .wp-header-inner{min-height:72px;gap:12px}
+  .wp-hero-layout{grid-template-columns:1fr;gap:20px;padding-top:110px}
+  .wp-hero h1{font-size:clamp(44px,10vw,72px);overflow-wrap:anywhere}
+  .wp-models-grid{grid-template-columns:1fr}
+  .wp-models-grid>.wp-model-card:first-child{grid-column:auto}
+  .wp-menu-overlay{padding:clamp(15px,4vw,24px);padding-bottom:calc(24px + env(safe-area-inset-bottom))}
+}
+@media(max-height:560px) and (orientation:landscape){
+  .wp-header-inner{min-height:59px}
+  .wp-hero-layout{padding-top:94px;padding-bottom:34px}
+  .wp-menu-overlay{padding:15px 20px}
+  .wp-menu-content{gap:24px}
+}
+@media(hover:none),(pointer:coarse){
+  .wp-header-action,.wp-menu-trigger,.wp-model-card a{min-height:44px}
+}
