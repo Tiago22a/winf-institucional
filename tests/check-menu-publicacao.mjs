@@ -27,14 +27,16 @@ const checks = [
     }
     assert.match(globalMenuCss, /#menu-overlay\.winf-global-roadmap/);
   }],
-  ['global header uses official W trademark only, hamburger and ghost; full brand remains in hero', () => {
-    const header = home.match(/<header\b[\s\S]*?<\/header>/)?.[0]||'';
+  ['global header uses official WINF logo and customer-approved typographic headline', () => {
+    const header=home.match(/<header\b[\s\S]*?<\/header>/)?.[0]||'';
     assert.ok(header);
-    assert.match(header,/class="winf-home-w-mark"/);
-    assert.match(header,/src="\/brand\/winf-monogram\.svg"/);
-    assert.doesNotMatch(header,/winf-home-brand-signature|PREMIUM QUALITY WINDOWFILM/);
-    assert.match(home,/src="\/winf-logo-hd\.svg"/);
-    assert.match(read('brand/winf-monogram.svg'),/<path\b/);
+    assert.match(header,/class="winf-home-official-logo"/);
+    assert.match(header,/src="\/winf-logo\.svg"/);
+    assert.match(header,/class="winf-home-brand-divider"/);
+    assert.match(header,/PREMIUM QUALITY WINDOW FILM/);
+    assert.doesNotMatch(header,/winf-home-w-mark|winf-monogram/);
+    assert.match(home,/class="winf-home-statement"/);
+    assert.match(home,/PREMIUM QUALITY WINDOW FILM<\/h1>/);
     assert.match(header,/winf-home-ghost-lines/);
     assert.match(header,/ghost-symbol\.png/);
     assert.match(header,/aria-expanded="false"/);
