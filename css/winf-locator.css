@@ -1,0 +1,38 @@
+/* WINF GLOBAL | localizar unidades — identidade institucional Gustavo */
+.winf-locator-page{margin:0;background:#050505;color:#f5f5f5;font-family:Gustavo,Inter,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.winf-locator-page .winf-locator-header-wrap{position:absolute;top:0;left:0;right:0;z-index:80;padding:16px clamp(22px,5vw,90px)}
+.winf-locator-page .winf-home-header{width:min(100%,1280px);margin:0 auto}
+.winf-locator-page .winf-locator-breadcrumb{position:absolute;top:138px;left:max(24px,calc((100% - 1200px)/2));z-index:4;display:flex;gap:12px;align-items:center;font:600 11px/1.4 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.1em;color:#a4a4ae}
+.winf-locator-page .winf-locator-breadcrumb a{color:white;text-decoration:none}
+.winf-locator-page .winf-directory{font-family:Gustavo,Inter,Arial,sans-serif}
+.winf-locator-page .winf-directory .directory-hero{padding-top:200px;background:radial-gradient(ellipse at 65% 7%,#1d2222 0,transparent 50%),#070808}
+.winf-locator-page .winf-directory .directory-eyebrow{font:600 11px/1.55 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.18em;color:#bebec3}
+.winf-locator-page .winf-directory h1{font:700 clamp(48px,6.6vw,95px)/.99 Gustavo,Inter,Arial,sans-serif;letter-spacing:-.06em;margin:30px 0 30px}
+.winf-locator-page .winf-directory h1 span{color:#98999d}
+.winf-locator-page .winf-directory h2{font:700 clamp(27px,3.6vw,45px)/1.1 Gustavo,Inter,Arial,sans-serif;letter-spacing:-.035em;margin-top:10px}
+.winf-locator-page .winf-directory .directory-lede{font:400 16px/1.8 Gustavo,Inter,Arial,sans-serif;max-width:680px;color:#bfbfc3}
+.winf-locator-page .winf-directory .directory-tabs button{font-family:Gustavo,Inter,Arial,sans-serif;font-weight:600;letter-spacing:.04em}
+.winf-locator-page .winf-directory :is(.directory-filters input,.directory-filters select,#territory-form input){font-family:Gustavo,Inter,Arial,sans-serif}
+.winf-locator-page .winf-directory .directory-card{background:#0e0e11;border-color:#ffffff29}
+.winf-locator-page .winf-directory .directory-card h3{font:600 25px/1.2 Gustavo,Inter,Arial,sans-serif;letter-spacing:-.025em}
+.winf-locator-page .winf-directory .directory-card-status{font-size:12px;color:#b7d8c5}
+.winf-locator-page .winf-directory .directory-card-segment,.winf-locator-page .winf-directory .directory-card-links a{font:400 13px/1.6 Gustavo,Inter,Arial,sans-serif}
+.winf-locator-page .winf-directory .directory-active-toggle{font-family:Gustavo,Inter,Arial,sans-serif}
+.winf-locator-page .winf-directory :is(.directory-button,.directory-text-button,.directory-reset){font-family:Gustavo,Inter,Arial,sans-serif}
+.winf-locator-page .winf-locator-footer{border-top:1px solid #ffffff26;background:#060608;padding:50px clamp(24px,5vw,70px) 26px;color:#c7c7cf}
+.winf-locator-page .winf-locator-footer-inner{width:min(100%,1200px);margin:0 auto 25px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:25px}
+.winf-locator-page .winf-locator-footer-inner img{display:block;height:auto;width:100px}
+.winf-locator-page .winf-locator-footer-inner p{font:700 11px/1.5 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.2em;white-space:nowrap}
+.winf-locator-page .winf-locator-footer-inner nav{display:flex;flex-wrap:wrap;gap:10px 24px}
+.winf-locator-page .winf-locator-footer-inner nav a{color:#ddd;font:500 12px/1.5 Gustavo,Inter,Arial,sans-serif;text-decoration:none}
+.winf-locator-page .winf-locator-footer-inner nav a:hover{text-decoration:underline}
+.winf-locator-page .winf-locator-footer>small{width:min(100%,1200px);margin:auto;display:block;border-top:1px solid #ffffff1c;padding-top:20px;color:#929299;font:400 11px/1.7 Gustavo,Inter,Arial,sans-serif}
+@media(max-width:700px){
+ .winf-locator-page .winf-locator-header-wrap{padding:8px 18px}
+ .winf-locator-page .winf-locator-breadcrumb{top:100px;left:20px}
+ .winf-locator-page .winf-directory .directory-hero{padding-top:160px}
+ .winf-locator-page .winf-directory h1{font-size:clamp(42px,9.5vw,66px)}
+ .winf-locator-page .winf-locator-footer{padding:36px 22px 25px}
+ .winf-locator-page .winf-locator-footer-inner{align-items:flex-start;flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){.winf-locator-page .directory-card{transition:none}}
