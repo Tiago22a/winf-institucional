@@ -1,0 +1,37 @@
+/* WINF™ home hero/header alignment, approved 2026-11.
+   Scoped to the home masthead; preserves the site's menu script and official assets. */
+.winf-home-masthead{width:100%;max-width:1500px;margin-inline:auto;gap:24px;padding-inline:clamp(0px,1.2vw,28px)}
+.winf-home-brand{min-width:0;display:inline-flex;align-items:center;gap:clamp(8px,1.5vw,18px);text-decoration:none;color:#fff;flex-shrink:0}
+.winf-home-brand img{width:clamp(100px,12vw,155px)!important;max-height:40px!important;height:auto!important;object-fit:contain}
+.winf-home-brand-caption{max-width:145px;display:flex;align-items:flex-start;flex-direction:column;gap:1px;padding-left:clamp(9px,1vw,17px);border-left:1px solid #ffffff55;color:#e8e8e9;font-family:Gustavo,Arial,sans-serif;font-size:clamp(9px,1vw,11px);font-weight:400;line-height:1.26;letter-spacing:.032em;text-transform:uppercase;text-shadow:0 2px 14px #000;white-space:nowrap}
+.winf-home-actions{display:flex;align-items:center;justify-content:flex-end;flex-shrink:0;gap:clamp(8px,1.4vw,21px)}
+.winf-home-actions .winf-home-os-link{font:500 11px/1.2 Gustavo,Arial,sans-serif!important;letter-spacing:.04em!important;min-height:42px;gap:7px;padding:10px 15px}
+.winf-home-actions .winf-home-os-link img{display:none!important}
+.winf-home-actions .winf-home-os-link .whr-os-mark{display:inline!important}
+.winf-home-menu-trigger.menu-trigger{position:relative;display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:center!important;gap:clamp(7px,1.1vw,15px)!important;width:auto!important;min-width:48px;min-height:48px;height:auto!important;background:transparent;border:0;padding:8px!important;color:#fff;cursor:pointer}
+.winf-home-menu-trigger .winf-home-menu-lines{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+.winf-home-menu-trigger .winf-home-menu-lines>span{display:block!important;position:static!important;width:30px!important;height:2px!important;max-height:2px;border:0;border-radius:0;background:#fff!important;box-shadow:0 1px 6px #000!important;transform:none!important;opacity:1!important;transition:width .2s}
+.winf-home-menu-trigger .winf-home-menu-lines>span:last-child{width:22px!important}
+.winf-home-menu-trigger:hover .winf-home-menu-lines>span{width:34px!important}
+.winf-home-menu-ghost{display:block;width:auto;height:34px;max-width:32px;object-fit:contain;filter:drop-shadow(0 0 8px #fff8);transition:transform .2s}
+.winf-home-menu-trigger:hover .winf-home-menu-ghost{transform:scale(1.07)}
+.winf-home-menu-trigger:focus-visible{outline:2px solid #fff;outline-offset:4px}
+@media(min-width:920px){.winf-home-masthead{padding-inline:18px}}
+@media(max-width:640px){
+ .winf-home-masthead{gap:8px}
+ .winf-home-brand{gap:7px}
+ .winf-home-brand img{width:98px!important}
+ .winf-home-brand-caption{font-size:8px;line-height:1.25;letter-spacing:0;padding-left:8px;white-space:normal}
+ .winf-home-actions{gap:5px}
+ .winf-home-actions .winf-home-os-link{min-height:36px;font-size:9px!important;letter-spacing:0!important;padding:6px 8px}
+ .winf-home-menu-trigger.menu-trigger{gap:5px!important;min-width:42px;min-height:40px;padding:4px!important}
+ .winf-home-menu-trigger .winf-home-menu-lines{gap:6px}
+ .winf-home-menu-trigger .winf-home-menu-lines>span{width:20px!important;height:1.5px!important}
+ .winf-home-menu-trigger .winf-home-menu-lines>span:last-child{width:15px!important}
+ .winf-home-menu-ghost{height:25px;max-width:21px}
+}
+@media(max-width:370px){
+ .winf-home-brand-caption{display:none}
+ .winf-home-actions .winf-home-os-link{padding-inline:6px}
+}
+@media(prefers-reduced-motion:reduce){.winf-home-menu-trigger *, .winf-home-os-link{transition:none!important}}
