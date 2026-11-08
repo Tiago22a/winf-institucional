@@ -265,3 +265,7 @@ body.winf-catalogo .wc-dock-circle:focus-visible,body.winf-catalogo .wc-product-
 @media(prefers-reduced-motion:reduce){
  body.winf-catalogo .wc-product-card,body.winf-catalogo .wc-card-image img,body.winf-catalogo #wc-tint{transition:none!important}
 }
+
+/* O W™ oficial identifica fichas técnicas de forma discreta. */
+body.winf-catalogo .wc-back{display:inline-flex;align-items:center;gap:10px}
+body.winf-catalogo .wc-back .wc-mini-w{display:block;width:22px;height:22px;object-fit:contain;opacity:.78;flex:none}
