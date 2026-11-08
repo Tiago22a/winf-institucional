@@ -1,0 +1,36 @@
+name: WINF Locators - Smoke Test
+on:
+  pull_request:
+    paths:
+      - "index.html"
+      - "onde-comprar/**"
+      - "aerocore/onde-comprar/index.html"
+      - "aerocore/assets/onde-comprar.css"
+      - "aerocore/assets/onde-comprar.js"
+      - "js/cidades.js"
+      - "js/winf-locator-menu.js"
+      - "js/winf-active-territories.js"
+      - "css/winf-locator.css"
+      - "css/winf-active-territories.css"
+      - "tests/check-locators.mjs"
+      - ".github/workflows/winf-locators-smoke.yml"
+  push:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "onde-comprar/**"
+      - "aerocore/onde-comprar/index.html"
+      - "aerocore/assets/onde-comprar.css"
+      - "js/cidades.js"
+      - "tests/check-locators.mjs"
+jobs:
+  static-locator-check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node tests/check-locators.mjs
