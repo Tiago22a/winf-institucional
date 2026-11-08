@@ -1,0 +1,17 @@
+
+/* Unidade Santos: institutional WINF header, roadmap menu and global footer. */
+.santos-header{padding-inline:0}
+.santos-hover-card{position:relative;isolation:isolate;overflow:hidden;padding:32px;min-height:240px;background:#050607;border:1px solid #ffffff2c;transition:border-color .3s,transform .3s}
+.santos-hover-card::before{content:"";position:absolute;z-index:-2;inset:0;background-image:var(--santos-image);background-size:cover;background-position:center;filter:grayscale(1);opacity:0;transform:scale(1.1);transition:opacity .6s,transform 1s}
+.santos-hover-card::after{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(105deg,#040506f0 0%,#040506ba 65%,#04050680 100%)}
+.santos-hover-card:is(:hover,:focus-within,.santos-visible){border-color:#ffffff84;transform:translateY(-2px)}
+.santos-hover-card:is(:hover,:focus-within,.santos-visible)::before{opacity:.72;transform:scale(1)}
+.santos-hover-card h3{color:#fff}.santos-hover-card p{color:#dadde1!important}
+.santos-footer-local{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:end;border-bottom:1px solid #ffffff32;padding:36px 0 56px}
+.santos-footer-local h3{font:300 clamp(35px,5vw,70px)/1.04 Gustavo,Arial,sans-serif;letter-spacing:-.045em;margin:10px 0 16px;color:white}
+.santos-footer-local p:not(.whr-eyebrow){max-width:520px;line-height:1.7;color:#b7b8bc;font-size:15px}
+.santos-footer-local nav{display:flex;flex-direction:column;gap:13px}
+.santos-footer-local nav a{font:600 11px/1.4 Inter,Arial,sans-serif;letter-spacing:.1em;color:white;text-decoration:none;border-bottom:1px solid #ffffff36;padding:8px 0}
+.santos-footer-local nav a:hover{border-color:white}
+@media(max-width:700px){.santos-footer-local{grid-template-columns:1fr}.santos-hover-card{min-height:220px}.santos-header .winf-home-brand-signature{font-size:clamp(7px,1.6vw,10px);letter-spacing:.07em}}
+@media(prefers-reduced-motion:reduce){.santos-hover-card,.santos-hover-card::before{transition:none;transform:none}}
