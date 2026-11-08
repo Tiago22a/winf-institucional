@@ -1,21 +1,75 @@
-/* WINF Partners™ / subtle cinematic idle motion while awaiting the approved Flow video.
-   This is NOT the requested POV door-opening video; it keeps the current poster alive.
-   The actual 16:9 footage will replace this treatment once approved and hosted. */
-@media (prefers-reduced-motion: no-preference) {
-  .winf-partners-site .wp-hero { overflow: hidden; isolation: isolate; }
-  .winf-partners-site .wp-hero-background {
-    transform-origin: 52% 50%;
-    animation: wp-hero-cinematic-drift 24s ease-in-out infinite alternate;
-    will-change: transform;
+/* WINF Partners — cinema de abertura com geometria estável.
+ * IMPORTANTE: este é somente o tratamento de movimento do poster aprovado.
+ * Não simula abertura de portas; o vídeo POV real será produzido com geometria validada.
+ */
+.winf-partners-site .wp-hero{overflow:hidden;isolation:isolate}
+.winf-partners-site .wp-hero-cinematic-stage{
+  position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;
+}
+.winf-partners-site .wp-hero-cinematic-stage .wp-hero-background{
+  position:absolute;inset:-1%;background-position:center;
+  transform-origin:55% 52%;
+}
+.winf-partners-site .wp-hero-glass-reflection{
+  position:absolute;top:-28%;bottom:-28%;left:-50%;width:26%;
+  transform:translateX(-30vw) skewX(-19deg);
+  background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,.02) 35%,rgba(255,255,255,.14) 51%,rgba(255,255,255,.02) 66%,transparent 100%);
+  mix-blend-mode:screen;opacity:.55;
+}
+.winf-partners-site .wp-hero-glass-ghost{
+  position:absolute;right:13%;top:29%;width:clamp(19px,2vw,30px);height:auto;
+  opacity:.26;filter:grayscale(1) drop-shadow(0 0 8px rgba(255,255,255,.38));
+  transform:rotate(-2deg);
+}
+.winf-partners-site .wp-hero-approved-video{
+  position:absolute;inset:0;display:block;width:100%;height:100%;
+  object-fit:cover;object-position:center;z-index:0;opacity:0;transition:opacity 1s ease;
+}
+.winf-partners-site .wp-hero-cinematic-stage.wp-film-playing .wp-hero-approved-video{opacity:1}
+.winf-partners-site .wp-hero-cinematic-stage.wp-film-playing .wp-hero-background,
+.winf-partners-site .wp-hero-cinematic-stage.wp-film-playing .wp-hero-glass-reflection,
+.winf-partners-site .wp-hero-cinematic-stage.wp-film-playing .wp-hero-glass-ghost{opacity:0;animation:none!important;transition:opacity .8s ease}
+.winf-partners-site .wp-hero-cinematic-stage.wp-film-playing::after{
+  content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(90deg,rgba(7,8,10,.83),rgba(7,8,10,.52) 53%,rgba(7,8,10,.37)),linear-gradient(0deg,rgba(7,8,10,.63),transparent 36%);
+}
+@media (prefers-reduced-motion:no-preference){
+  .winf-partners-site .wp-hero-cinematic-stage .wp-hero-background{
+    animation:wp-hero-cinematic-drift 23s ease-in-out infinite alternate;
+    will-change:transform;
+  }
+  .winf-partners-site .wp-hero-glass-reflection{
+    animation:wp-hero-sheen 17s ease-in-out infinite;
+  }
+  .winf-partners-site .wp-hero-glass-ghost{
+    animation:wp-hero-mark-shimmer 13s ease-in-out infinite;
   }
 }
-@keyframes wp-hero-cinematic-drift {
-  0% { transform: scale(1.025) translate3d(0,0,0); }
-  100% { transform: scale(1.09) translate3d(-.85%,.2%,0); }
+@keyframes wp-hero-cinematic-drift{
+  0%{transform:scale(1.015) translate3d(0,0,0)}
+  100%{transform:scale(1.075) translate3d(-.65%,.25%,0)}
 }
-@media (max-width: 680px) and (prefers-reduced-motion: no-preference) {
-  .winf-partners-site .wp-hero-background { animation-duration: 28s; transform-origin: 70% 50%; }
+@keyframes wp-hero-sheen{
+  0%,11%{transform:translateX(-30vw) skewX(-19deg);opacity:0}
+  18%{opacity:.4}
+  43%{transform:translateX(155vw) skewX(-19deg);opacity:.18}
+  51%,100%{transform:translateX(155vw) skewX(-19deg);opacity:0}
 }
-@media (prefers-reduced-motion: reduce) {
-  .winf-partners-site .wp-hero-background { animation: none!important; transform: none!important; }
+@keyframes wp-hero-mark-shimmer{
+  0%,100%{opacity:.15;filter:grayscale(1) drop-shadow(0 0 4px rgba(255,255,255,.13))}
+  44%{opacity:.29;filter:grayscale(1) drop-shadow(0 0 9px rgba(255,255,255,.38))}
+}
+@media(max-width:760px){
+  .winf-partners-site .wp-hero-glass-ghost{right:8%;top:24%;width:21px;opacity:.16}
+  .winf-partners-site .wp-hero-glass-reflection{opacity:.2}
+  .winf-partners-site .wp-hero-approved-video{object-position:52% 50%}
+}
+@media(max-width:680px) and (prefers-reduced-motion:no-preference){
+  .winf-partners-site .wp-hero-cinematic-stage .wp-hero-background{animation-duration:28s;transform-origin:70% 50%}
+}
+@media(prefers-reduced-motion:reduce){
+  .winf-partners-site .wp-hero-cinematic-stage .wp-hero-background,
+  .winf-partners-site .wp-hero-glass-reflection,
+  .winf-partners-site .wp-hero-glass-ghost{animation:none!important;transform:none!important}
+  .winf-partners-site .wp-hero-approved-video{display:none!important}
 }

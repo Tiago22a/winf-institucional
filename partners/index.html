@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="/partners/landing.css?v=20261108-final4">
   <link rel="stylesheet" href="/partners/roadmap-shared.css?v=20261107-1">
   <link rel="stylesheet" href="/partners/menu-ghost-motion.css?v=20261107-1">
-  <link rel="stylesheet" href="/partners/hero-idle-motion.css?v=20261107-1">
+  <link rel="stylesheet" href="/partners/hero-idle-motion.css?v=20261108-glass2">
 </head>
 <body class="partners-landing winf-partners-site">
   <a class="wp-skip" href="#conteudo">Pular para o conteúdo</a>
@@ -81,7 +81,13 @@
 
   <main id="conteudo">
     <section class="wp-hero" aria-labelledby="wp-hero-title">
-      <div class="wp-hero-background" aria-hidden="true"></div>
+      <!-- O vídeo da varanda enviado é referência e NÃO deve ser publicado: a geometria está distorcida.
+           Após aprovar e publicar o filme corrigido, configurar data-film-src e data-film-poster neste elemento. -->
+      <div class="wp-hero-cinematic-stage" aria-hidden="true" data-wp-hero-film>
+        <div class="wp-hero-background"></div>
+        <div class="wp-hero-glass-reflection"></div>
+        <img class="wp-hero-glass-ghost" src="/aerocore/assets/ghost-symbol.png" alt="" width="30" height="40" decoding="async">
+      </div>
       <div class="wp-container wp-hero-layout">
         <div class="wp-hero-copy">
           <p class="wp-kicker"><span class="wp-point"></span> WINF PARTNERS™ / EXPANSÃO TERRITORIAL</p>
@@ -218,6 +224,7 @@
     </div>
   </footer>
   <script src="/partners/landing.js?v=20261107-roadmap-1" defer></script>
+  <script src="/partners/hero-film.js?v=20261108-1" defer></script>
   <script src="/js/winf-quick-contact.js?v=20261107-1" defer></script>
 </body>
 </html>
