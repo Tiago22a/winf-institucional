@@ -13,34 +13,74 @@
     element.textContent = new Date().getFullYear();
   });
 
+  // Controlador único do menu editorial global: visibilidade, histórico de foco,
+  // controles ARIA, Escape, Tab e fechamento sem corrida entre transições.
+  let menuCloseTimer = null;
+  let lastMenuTrigger = null;
+  const menuTriggers = [...document.querySelectorAll('[data-action="open-menu"]')];
+  const menuFocusables = () => menu
+    ? [...menu.querySelectorAll('a[href],button:not([disabled]),summary')]
+        .filter(element => element.getClientRects().length > 0)
+    : [];
+
   const openMenu = () => {
-    if (!menu) return;
+    if (!menu || menu.getAttribute('aria-hidden') === 'false') return;
+    if (menuCloseTimer !== null) {
+      window.clearTimeout(menuCloseTimer);
+      menuCloseTimer = null;
+    }
+    lastMenuTrigger = document.activeElement;
     menu.classList.remove('hidden');
-    requestAnimationFrame(() => menu.classList.add('is-open'));
     menu.setAttribute('aria-hidden', 'false');
     body.classList.add('menu-open');
+    menuTriggers.forEach(button => button.setAttribute('aria-expanded', 'true'));
+    window.requestAnimationFrame(() => {
+      if (menu.getAttribute('aria-hidden') === 'false') menu.classList.add('is-open');
+    });
     menu.querySelector('[data-action="close-menu"]')?.focus();
   };
 
   const closeMenu = () => {
-    if (!menu) return;
+    if (!menu || menu.getAttribute('aria-hidden') !== 'false') return;
     menu.classList.remove('is-open');
     menu.setAttribute('aria-hidden', 'true');
     body.classList.remove('menu-open');
-    window.setTimeout(() => menu.classList.add('hidden'), 300);
+    menuTriggers.forEach(button => button.setAttribute('aria-expanded', 'false'));
+    if (menuCloseTimer !== null) window.clearTimeout(menuCloseTimer);
+    menuCloseTimer = window.setTimeout(() => {
+      if (menu.getAttribute('aria-hidden') === 'true') menu.classList.add('hidden');
+      menuCloseTimer = null;
+    }, 270);
+    if (lastMenuTrigger?.isConnected && typeof lastMenuTrigger.focus === 'function') lastMenuTrigger.focus();
   };
 
-  document.querySelectorAll('[data-action="open-menu"]').forEach((button) => button.addEventListener('click', openMenu));
-  document.querySelectorAll('[data-action="close-menu"]').forEach((button) => button.addEventListener('click', closeMenu));
-  menu?.addEventListener('click', (event) => {
+  menuTriggers.forEach(button => button.addEventListener('click', openMenu));
+  document.querySelectorAll('[data-action="close-menu"]').forEach(button => button.addEventListener('click', closeMenu));
+  menu?.addEventListener('click', event => {
     if (event.target === menu) closeMenu();
   });
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') closeMenu();
+  document.addEventListener('keydown', event => {
+    if (!menu || menu.getAttribute('aria-hidden') !== 'false') return;
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      closeMenu();
+      return;
+    }
+    if (event.key !== 'Tab') return;
+    const items = menuFocusables();
+    if (!items.length) return;
+    const first = items[0], last = items[items.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
   });
 
-  document.querySelectorAll('[data-action="menu-link"]').forEach((link) => {
-    link.addEventListener('click', () => closeMenu());
+  document.querySelectorAll('[data-action="menu-link"]').forEach(link => {
+    link.addEventListener('click', closeMenu);
   });
 
   const scrollToHash = (hash) => {
