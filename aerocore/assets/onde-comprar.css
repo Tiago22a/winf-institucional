@@ -56,3 +56,21 @@
 .directory-extras>p { color:#aaa; font-size:14px; line-height:1.7; margin:10px 0 22px; }
 .directory-card[data-status="nao_ativa"] .directory-card-status { color:#aaa; }
 @media(max-width:600px) { .directory-intro { align-items:flex-start; flex-direction:column; } .directory-view-controls { align-items:flex-start; } }
+
+/* Tipografia aprovada AeroCore: impacto Montserrat Black, marcas em Outfit.
+   A página global WINF /onde-comprar/ tem override Gustavo próprio. */
+.ac-directory:not(.winf-directory) h1{
+  font-family:Montserrat,Inter,Arial,sans-serif;
+  font-weight:900;
+  font-size:clamp(45px,6.5vw,94px);
+  line-height:1.02;
+  letter-spacing:-.052em;
+  text-transform:none;
+}
+.ac-directory:not(.winf-directory) h2{
+  font-family:Montserrat,Inter,Arial,sans-serif;
+  font-weight:800;
+  letter-spacing:-.035em;
+  text-transform:none;
+}
+.ac-directory:not(.winf-directory) .directory-card h3{font-family:Outfit,Inter,Arial,sans-serif;font-weight:500}
