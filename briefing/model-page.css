@@ -182,3 +182,20 @@ a:focus-visible{outline:2px solid #fff;outline-offset:4px}
   .floating{right:max(10px,env(safe-area-inset-right));bottom:max(8px,env(safe-area-inset-bottom))}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.mosaic img{transition:none!important}}
+
+/* Finalização 2026-11-08: dúvidas do candidato e próxima etapa de avaliação. */
+.model-questions{background:#111113}
+.model-questions .section-head{align-items:start}
+.model-questions .section-head p{max-width:430px}
+.model-faq{max-width:940px;margin:30px 0 0;border-top:1px solid #55555b}
+.model-faq-item{border-bottom:1px solid #55555b}
+.model-faq-item summary{list-style:none;cursor:pointer;position:relative;color:#fff;padding:22px 45px 22px 0;min-height:53px;font:500 clamp(16px,1.8vw,22px)/1.45 Inter,Arial,sans-serif;touch-action:manipulation}
+.model-faq-item summary::-webkit-details-marker{display:none}
+.model-faq-item summary:after{content:"+";position:absolute;right:10px;top:19px;color:#bdbdc3;font:400 27px/1 Inter,Arial,sans-serif}
+.model-faq-item[open] summary:after{content:"−"}
+.model-faq-item summary:focus-visible{outline:2px solid #fff;outline-offset:4px}
+.model-faq-item p{padding:0 0 25px;margin:0;max-width:730px;color:#bcbcc3;font:400 15px/1.75 Inter,Arial,sans-serif}
+.model-faq-guide{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
+.model-faq-guide a{min-height:47px;border:1px solid #ffffff71;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;font:700 11px/1.4 Inter,Arial,sans-serif;letter-spacing:.06em}
+.model-faq-guide a:is(:hover,:focus-visible){background:#fff;color:#111}
+@media(max-width:700px){.model-faq{margin-top:18px}.model-faq-item summary{padding:20px 36px 20px 0;font-size:16px}.model-faq-item p{font-size:14px;padding-bottom:19px}.model-faq-guide a{flex:1 1 180px}}
