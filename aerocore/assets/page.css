@@ -109,9 +109,10 @@ body.menu-open .menu-primary-link { animation: menu-link-enter .3s ease both; an
   --ac-font-marker: 'Permanent Marker', cursive;
 }
 body { font-family: var(--ac-font-body); }
-main :is(h1,h2,h3):not([style*="Outfit"]):not([style*="font-aerocore"]):not(.font-aerocore):not(.ac-brand-wordmark) {
-  font-family: var(--ac-font-display) !important;
-  font-weight: 900 !important;
+/* Respect authored heading weights: do not force Montserrat Black onto all headings.
+   Explicit display/black classes retain the strong editorial treatment. */
+main :is(.font-display,.font-black):not(.font-aerocore):not(.ac-brand-wordmark):not(.ac-handwritten):not(.ac-marker) {
+  font-family: var(--ac-font-display);
 }
 #menu-overlay .menu-primary-link,
 .brand-menu-primary a {
