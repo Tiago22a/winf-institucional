@@ -76,3 +76,15 @@ body.select-page #brand-header .select-header-logo .select-header-name .select-t
   body.select-page #brand-header .select-header-logo .select-brand-divider{height:18px}
   body.select-page #brand-header .select-header-logo .select-header-name{font-size:14px!important;letter-spacing:.12em!important}
 }
+
+/* GLASS + HOME: assinatura editorial discreta, junto ao SELECT, mantendo o lockup oficial WINF. */
+body.select-page #brand-header .select-header-logo .select-header-glass-home{
+  display:inline-block;align-self:center;margin:0 0 0 clamp(4px,.85vw,10px);
+  color:rgba(255,255,255,.72);font:600 clamp(7px,.65vw,9px)/1.25 Inter,Arial,sans-serif!important;
+  letter-spacing:.12em!important;white-space:nowrap;text-transform:uppercase;
+}
+@media(max-width:480px){
+  body.select-page #brand-header .select-header-logo .select-header-glass-home{
+    margin-left:4px;font-size:7px!important;letter-spacing:.04em!important
+  }
+}
