@@ -123,3 +123,36 @@ test('Partners apresenta parceiros B2B e projetos distintos do licenciamento', (
  assert.match(read('partners/ecossistema/index.html'), /GHOST SHOP/i);
  assert.match(read('partners/cuidar-e-conectar/index.html'), /projeto em estruturação|em planejamento/i);
 });
+
+test('B2B e impacto social têm rotas de piloto e responsabilidades explícitas', () => {
+  const distributor = read('partners/distribuidores/index.html');
+  const retailer = read('partners/varejistas/index.html');
+  const social = read('partners/cuidar-e-conectar/index.html');
+  assert.match(distributor, /id="piloto-distribuicao"/);
+  assert.match(distributor, /FATURAMENTO E ENTREGA/);
+  assert.match(distributor, /comissões|remuneração por intermediação/i);
+  assert.match(retailer, /id="piloto-varejo"/);
+  assert.match(retailer, /VENDA OU INDICAÇÃO/);
+  assert.match(retailer, /INSTALAÇÃO/);
+  assert.match(social, /id="frentes"/);
+  assert.match(social, /ESCOLAS E ESPAÇOS EDUCATIVOS/);
+  assert.match(social, /INSTITUIÇÕES PARA IDOSOS/);
+  assert.match(social, /consentimento para imagens/);
+});
+test('Projetos em desenvolvimento não prometem serviços já lançados', () => {
+  const ecosystem = read('partners/ecossistema/index.html');
+  assert.match(ecosystem, /SYNTHWAVE.*fm/i);
+  assert.match(ecosystem, /licenças pertinentes/);
+  assert.match(ecosystem, /Não há promessa de streaming/);
+  assert.match(ecosystem, /CARRO MÍDIA/);
+  assert.match(ecosystem, /GHOST SHOP/);
+  assert.doesNotMatch(ecosystem, /Black Shop|MediaK|CityWave/);
+});
+test('Vídeo hero AeroCore não aponta para filme antigo de derrapagem', () => {
+  const h = read('aerocore/index.html');
+  assert.match(h, /porsche-911-highway-20261103\\.mp4/);
+  assert.doesNotMatch(h, /quero_uma_porche_rebaixada\\.mp4/);
+  const n = read('aerocore/assets/neoskin-actions-2026.css');
+  assert.match(n, /pointer:coarse/);
+  assert.match(n, /background:transparent!important/);
+});

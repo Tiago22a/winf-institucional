@@ -13,4 +13,4 @@ body.ns-page .ac-return-actions a:not(.is-current):not(.ac-protocol-top):hover{c
 /* PPF NeoSkin: vitrines transparentes; botão mantém cor olive sem colorir o card. */
 body.ns-page #arsenal .ac-product-grid>div{backdrop-filter:blur(1.5px);-webkit-backdrop-filter:blur(1.5px)}
 body.ns-page #arsenal .ac-product-grid>div :is(h3,h4,p){text-shadow:0 2px 8px rgba(0,0,0,.68)}
-@media(hover:none),(pointer:coarse){body.ns-page #arsenal .ac-product-grid>div{background:rgba(0,0,0,.12)!important}}
+@media(hover:none),(pointer:coarse){body.ns-page #arsenal .ac-product-grid>div{background:transparent!important;border-color:rgba(255,255,255,.28)!important}body.ns-page #arsenal .ac-product-grid>div :is(h3,h4,p){text-shadow:0 2px 12px rgba(0,0,0,.88)}}
