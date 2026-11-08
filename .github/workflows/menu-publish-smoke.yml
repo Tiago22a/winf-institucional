@@ -1,0 +1,41 @@
+name: WINF Menu - Smoke Test
+on:
+  pull_request:
+    paths:
+      - "index.html"
+      - "script.js"
+      - "styles.css"
+      - "winf-logo.svg"
+      - "partners/index.html"
+      - "partners/landing.css"
+      - "aerocore/index.html"
+      - "aerocore/assets/shell.js"
+      - "aerocore/assets/ac-simple-menu.css"
+      - "css/winf-home-header.css"
+      - "css/winf-global-menu.css"
+      - "tests/check-menu-publicacao.mjs"
+      - ".github/workflows/menu-publish-smoke.yml"
+  push:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "script.js"
+      - "winf-logo.svg"
+      - "partners/**"
+      - "aerocore/index.html"
+      - "aerocore/assets/ac-simple-menu.css"
+      - "css/winf-home-header.css"
+      - "css/winf-global-menu.css"
+      - "tests/check-menu-publicacao.mjs"
+jobs:
+  static-menu-check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validate WINF/AeroCore/Partners navigation
+        run: node tests/check-menu-publicacao.mjs
