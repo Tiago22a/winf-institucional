@@ -50,7 +50,8 @@
 <link rel="stylesheet" href="/css/winf-home-roadmap.css?v=20261107-1">
 <link rel="stylesheet" href="/aerocore/assets/nav-roadmap.css?v=20261107-1">
 <link rel="stylesheet" href="/css/winf-global-menu.css?v=20261108-published-1">
-<link rel="stylesheet" href="/css/winf-home-header.css?v=20261108-published-1">
+<link rel="stylesheet" href="/css/winf-home-header.css?v=20261108-monograma-w-1">
+<link rel="stylesheet" href="/css/winf-home-territories.css?v=20261108-1">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap">
 <link rel="stylesheet" href="/css/winf-return.css?v=20261104-5">
 <script defer src="/js/winf-return.js?v=20261104-scroll-3"></script>
@@ -97,7 +98,7 @@
                 <p class="ac-roadmap-label">/ DESCUBRA A WINF</p>
                 <nav class="ac-roadmap-paths" aria-label="Navegação comercial e institucional">
                   <a href="/catalogo/" data-action="menu-link"><span>01</span><strong>CATÁLOGO GLOBAL</strong><span>↗</span></a>
-                  <a href="/aerocore/onde-comprar/" data-action="menu-link"><span>02</span><strong>UNIDADES E INSTALAÇÃO</strong><span>↗</span></a>
+                  <a href="/onde-comprar/" data-action="menu-link"><span>02</span><strong>UNIDADES E INSTALAÇÃO</strong><span>↗</span></a>
                   <a href="/partners/" data-action="menu-link"><span>03</span><strong>WINF PARTNERS™</strong><span>↗</span></a>
                   <a href="/blog/" data-action="menu-link"><span>04</span><strong>WINF JOURNAL</strong><span>↗</span></a>
                 </nav>
@@ -121,7 +122,7 @@
             <a href="/winf-home/" data-action="menu-link">SOBRE NÓS</a>
             <a href="/partners/" data-action="menu-link">WINF PARTNERS</a>
             <a href="/redes/?origem=%2F" data-action="menu-link">CANAIS OFICIAIS</a>
-            <a href="/aerocore/onde-comprar/" data-action="menu-link">LOCALIZAR UNIDADE</a>
+            <a href="/onde-comprar/" data-action="menu-link">LOCALIZAR UNIDADE</a>
           </div>
         </div>
       </div>
@@ -138,9 +139,8 @@
           </div>
 
           <header class="winf-home-header relative z-30 flex items-center justify-between" aria-label="Navegação principal WINF">
-            <a href="#topo" class="winf-home-brand" aria-label="WINF — início">
-              <img src="/winf-logo.svg" alt="WINF™ — marca oficial" width="109" height="36" decoding="async" fetchpriority="high">
-              <span class="winf-home-brand-signature">PREMIUM QUALITY WINDOWFILM</span>
+            <a href="#topo" class="winf-home-brand" aria-label="WINF™ — voltar ao início">
+              <img class="winf-home-w-mark" src="/brand/winf-monogram.svg" alt="W™ — monograma oficial WINF" width="44" height="40" decoding="async" fetchpriority="high">
             </a>
             <div class="winf-home-header-actions">
               
@@ -343,6 +343,29 @@
         </section>
 
         <!-- Investor and partner path: commercial overview, not a promise of returns -->
+        <!-- Rede WINF: unidades ativas obtidas do cadastro compartilhado js/cidades.js. -->
+        <section id="unidades-ativas" class="winf-active-territories relative z-10 border-t border-white/10 bg-[#080809] px-6 py-24 sm:px-12 md:px-20" aria-labelledby="winf-active-territories-title">
+          <div class="mx-auto max-w-6xl">
+            <div class="winf-active-head">
+              <div>
+                <p class="winf-active-eyebrow">WINF™ / PRESENÇA TERRITORIAL</p>
+                <h2 id="winf-active-territories-title">Encontre a WINF.<br><span>Onde a proteção acontece.</span></h2>
+                <p class="winf-active-desc">Consulte as localidades registradas como ativas no cadastro da WINF. Cada operação tem serviços e disponibilidade próprios; confirme o atendimento antes de agendar.</p>
+              </div>
+              <div class="winf-active-callout">
+                <span id="winf-territories-count" role="status" aria-live="polite">Unidades em operação</span>
+                <a href="/onde-comprar/">ABRIR LOCALIZADOR COMPLETO <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+            <div id="winf-active-grid" class="winf-active-grid" aria-label="Cidades cadastradas como ativas">
+              <a class="winf-active-card" href="/pelicula-de-controle-solar-santos-sp/" aria-label="Conhecer a WINF Select Santos, São Paulo">
+                <span>WINF SELECT / PILOTO</span><strong>Santos <small>SP</small></strong><em>CONHECER UNIDADE ↗</em>
+              </a>
+            </div>
+            <p class="winf-active-note">Cidades e status provenientes do cadastro territorial WINF. As linhas AeroCore™, NeoSkin™ e Ceramic Armoring™ são especialidades adicionais, sujeitas à confirmação local.</p>
+          </div>
+        </section>
+
         <section id="expansao-winf" class="relative z-10 border-t border-white/10 bg-[#111215] px-6 py-20 sm:px-12 md:px-20" aria-labelledby="expansao-title">
           <div class="mx-auto grid max-w-6xl items-end gap-10 md:grid-cols-[1.45fr_.65fr]">
             <div>
@@ -439,7 +462,7 @@
                 <a href="/aerocore/ceramic-armoring/">CERAMIC ARMORING™</a>
                 <a href="/aerocore/motorsports/">MOTORSPORTS</a>
                 <a href="/aerocore/marine/">MARINE</a>
-                <a href="/aerocore/onde-comprar/">LOCATOR / UNIDADES ATIVAS</a>
+                <a href="/onde-comprar/">LOCATOR / UNIDADES ATIVAS</a>
               </div>
               <div class="whr-column">
                 <span class="whr-column-title">03 / EXPANSÃO &amp; PARCERIAS</span>
@@ -493,7 +516,9 @@
         </div>
       </section>
     </div>
-    <script src="./script.js"></script>
+    <script defer src="/js/cidades.js?v=20261108-active-1"></script>
+<script defer src="/js/winf-home-territories.js?v=20261108-1"></script>
+<script src="./script.js"></script>
 
     <script charset="utf-8" src="/js/winf-footer.js?v=20261103-reference-2" defer></script>
   </body>
