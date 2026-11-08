@@ -1,6 +1,6 @@
 /* NeoSkin | only the call-to-action switches olive; the arsenal cards stay transparent over video. */
-body.ns-page #arsenal .ac-product-grid>div{background:rgb(0 0 0 /.62)!important;border-color:rgb(255 255 255 /.20)!important;color:#fff;transition:border-color .25s,background .25s}
-body.ns-page #arsenal .ac-product-grid>div:is(:hover,:focus-within){background:rgb(0 0 0 /.74)!important;border-color:#A2B18D77!important}
+body.ns-page #arsenal .ac-product-grid>div{background:transparent!important;border-color:rgb(255 255 255 /.20)!important;color:#fff;transition:border-color .25s,background .25s}
+body.ns-page #arsenal .ac-product-grid>div:is(:hover,:focus-within){background:transparent!important;border-color:#A2B18D77!important}
 body.ns-page #arsenal .ac-product-grid>div a{background:transparent;border-color:#ffffff55!important;color:#fff!important;transition:background .25s,color .25s,border-color .25s}
 body.ns-page #arsenal .ac-product-grid>div a:is(:hover,:focus-visible){background:#A2B18D!important;border-color:#A2B18D!important;color:#071007!important}
 body.ns-page #arsenal .ac-product-grid>div :is(h4,p){color:inherit}
@@ -9,3 +9,8 @@ body.ns-page .ns-tab-btn:not(.bg-white):is(:hover,:focus-visible){background:#A2
 body.ns-page .accordion-icon{color:#A2B18D!important}
 body.ns-page .accordion-trigger:hover{color:#A2B18D}
 body.ns-page .ac-return-actions a:not(.is-current):not(.ac-protocol-top):hover{color:#fff;border-color:#ffffff70}
+
+/* PPF NeoSkin: vitrines transparentes; botão mantém cor olive sem colorir o card. */
+body.ns-page #arsenal .ac-product-grid>div{backdrop-filter:blur(1.5px);-webkit-backdrop-filter:blur(1.5px)}
+body.ns-page #arsenal .ac-product-grid>div :is(h3,h4,p){text-shadow:0 2px 8px rgba(0,0,0,.68)}
+@media(hover:none),(pointer:coarse){body.ns-page #arsenal .ac-product-grid>div{background:rgba(0,0,0,.12)!important}}
