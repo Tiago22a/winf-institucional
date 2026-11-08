@@ -84,3 +84,10 @@ body.ca-page #arsenal .ac-product-grid>div a:focus-visible{outline:2px solid #f2
   body.ca-page #arsenal .ca-arsenal-motion{background:linear-gradient(145deg,#18181b,#050505)}
   body.ca-page #arsenal .ac-product-grid>div{transition:none!important}
 }
+
+/* Ceramic proof feature: immersive crop focused on the wheel/detail instead of the source clip's UI/title edges. */
+body.ca-page .ca-proof-wheel-frame{position:relative;width:100%;aspect-ratio:16/10;overflow:hidden;background:#080808;border:1px solid rgba(255,255,255,.18);isolation:isolate}
+body.ca-page .ca-proof-wheel-frame .ca-proof-wheel-media{display:block;position:absolute;inset:0;width:100%;height:100%;border:0;aspect-ratio:auto;object-fit:cover;object-position:50% 70%;transform:scale(1.68);transform-origin:50% 70%;filter:saturate(.86) contrast(1.1) brightness(.82);pointer-events:none}
+body.ca-page .ca-proof-wheel-frame::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.1),transparent 46%,rgba(0,0,0,.2))}
+@media(max-width:600px){body.ca-page .ca-proof-wheel-frame .ca-proof-wheel-media{transform:scale(1.54)}}
+@media(prefers-reduced-motion:reduce){body.ca-page .ca-proof-wheel-frame .ca-proof-wheel-media{display:none}body.ca-page .ca-proof-wheel-frame{background:#101012 url('/images/ceramic-hero.webp') center/cover no-repeat}}
