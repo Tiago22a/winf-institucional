@@ -15,3 +15,11 @@
 .santos-footer-local nav a:hover{border-color:white}
 @media(max-width:700px){.santos-footer-local{grid-template-columns:1fr}.santos-hover-card{min-height:220px}.santos-header .winf-home-brand-signature{font-size:clamp(7px,1.6vw,10px);letter-spacing:.07em}}
 @media(prefers-reduced-motion:reduce){.santos-hover-card,.santos-hover-card::before{transition:none;transform:none}}
+
+/* Twin commercial contact buttons, Santos-only, aligned with WINF brand ghost. */
+.santos-contact-dock{position:fixed;z-index:65;right:24px;bottom:20px;display:flex;align-items:center;gap:11px}
+.santos-contact-dock>a{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:3px;width:64px;height:64px;text-decoration:none;color:#fff;font:700 8px/1.2 Arial,sans-serif;letter-spacing:.05em;border:1px solid #ffffff5c;border-radius:50%;background:#0b0c0de8;backdrop-filter:blur(8px);box-shadow:0 6px 28px #000a;transition:transform .2s,border-color .2s}
+.santos-contact-dock>a:hover{transform:translateY(-3px);border-color:#fff}
+.santos-contact-ghost img{width:28px;height:33px;object-fit:contain}.santos-contact-whatsapp svg{width:27px;height:27px;fill:#fff}
+@media(max-width:620px){.santos-contact-dock{right:14px;bottom:14px;gap:8px}.santos-contact-dock>a{width:56px;height:56px;font-size:7px}}
+@media(prefers-reduced-motion:reduce){.santos-contact-dock>a{transition:none}}
