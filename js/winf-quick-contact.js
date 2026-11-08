@@ -6,6 +6,9 @@
   if (window.__winfQuickContactV1) return;
   window.__winfQuickContactV1 = true;
   const path = location.pathname.toLowerCase().replace(/\/+/g, '/');
+  // Páginas territoriais possuem seu próprio widget local (fantasminha + WhatsApp).
+  // Evita duplicar ou sobrepor CTAs e mantém o cliente no atendimento da cidade.
+  if (/^\/(pelicula-de-controle-solar-santos-sp|insulfilm-residencial-sorocaba-sp)(?:\/|$)/.test(path)) return;
   // Não criar widgets comerciais em aplicativos internos, checkout ou painel de gestão.
   if (/^\/(admin|adm|app|apps|os|sistema|checkout|painel)(?:\/|$)/.test(path)) return;
   const forPartners = /^\/(partners|briefing)(?:\/|$)/.test(path);
