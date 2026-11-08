@@ -37,3 +37,18 @@
 .santos-quote-submit:hover{background:white}.santos-quote-form p{grid-column:1/-1;color:#a6a6ab;font:400 12px/1.6 Inter,Arial,sans-serif;margin:0}
 .santos-direct-whatsapp{margin-top:18px;font:600 11px/1.6 Inter,Arial,sans-serif;letter-spacing:.05em}.santos-direct-whatsapp a{color:#eee;text-decoration:underline;text-underline-offset:5px}
 @media(max-width:640px){.santos-quote-form{grid-template-columns:1fr;padding:19px}.santos-quote-form label{grid-column:1/-1}.santos-other-brands div{grid-template-columns:1fr}}
+
+/* Mesmo acabamento das duas ações flutuantes no Global e nas marcas:
+   base branca para Ghost, verde oficial de atendimento para WhatsApp. */
+.santos-contact-dock{bottom:max(31px,env(safe-area-inset-bottom));right:max(18px,env(safe-area-inset-right));gap:13px;z-index:140;align-items:flex-end}
+.santos-contact-dock>a{position:relative;width:60px;height:60px;flex:none;padding:11px;background:#f8f9f9;border:1px solid #f9fafb;border-radius:50%;color:#17191b;box-shadow:0 8px 29px #0008;transition:transform .2s ease,background .2s ease,box-shadow .2s ease}
+.santos-contact-dock>a:hover{background:#fff;transform:translateY(-3px);box-shadow:0 10px 32px #000a}
+.santos-contact-dock>a:focus-visible{outline:2px solid white;outline-offset:4px}
+.santos-contact-dock .santos-contact-ghost img{width:31px;height:36px;object-fit:contain;filter:brightness(0)}
+.santos-contact-dock .santos-contact-whatsapp{background:#16864c;border-color:#2ea866;color:#fff}
+.santos-contact-dock .santos-contact-whatsapp:hover{background:#1b9957;border-color:#50bd7b}
+.santos-contact-dock .santos-contact-whatsapp svg{width:28px;height:28px;fill:#fff}
+.santos-contact-dock small{position:absolute;top:calc(100% + 5px);left:50%;transform:translateX(-50%);white-space:nowrap;font:750 9px/1.35 Inter,Arial,sans-serif;letter-spacing:.05em;text-shadow:0 1px 5px #000;pointer-events:none;color:#fff}
+body.menu-open .santos-contact-dock,body:has(#menu-overlay[aria-hidden="false"]) .santos-contact-dock{display:none!important}
+@media(max-width:620px){.santos-contact-dock{right:13px;bottom:max(28px,env(safe-area-inset-bottom));gap:9px}.santos-contact-dock>a{width:52px;height:52px;padding:10px}.santos-contact-dock .santos-contact-ghost img{width:27px;height:31px}.santos-contact-dock .santos-contact-whatsapp svg{width:26px;height:26px}.santos-contact-dock small{font-size:8px}}
+@media(prefers-reduced-motion:reduce){.santos-contact-dock>a{transition:none}}
