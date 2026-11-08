@@ -91,6 +91,34 @@
   service.addEventListener('change', render);
   document.getElementById('directory-search').addEventListener('submit', event => event.preventDefault());
   document.getElementById('directory-search').addEventListener('reset', () => { query.value = ''; state.value = ''; service.value = ''; render(); });
+  // Resumo visível e navegável das unidades ativas; gerado da mesma fonte de dados
+  // em ambas as interfaces (WINF global e AeroCore). Sem duplicar a lista manualmente.
+  const summary = document.getElementById('active-city-summary');
+  if (summary) {
+    const activeCities = [...cities.filter(city => city.status === 'ativa'), ...extras]
+      .sort((a,b) => a.cidade.localeCompare(b.cidade,'pt-BR'));
+    const fragment = document.createDocumentFragment();
+    activeCities.forEach(city => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.textContent = city.cidade + ' / ' + city.uf;
+      button.setAttribute('aria-label', 'Encontrar atendimento cadastrado em ' + city.cidade + ', ' + city.uf);
+      button.addEventListener('click', () => {
+        mode = 'ativas';
+        query.value = city.cidade;
+        state.value = '';
+        service.value = '';
+        render();
+        document.getElementById('directory-results')?.scrollIntoView({
+          behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+          block: 'start'
+        });
+      });
+      fragment.append(button);
+    });
+    summary.replaceChildren(fragment);
+    if (!activeCities.length) summary.textContent = 'Consulte a central WINF para confirmar o atendimento em sua região.';
+  }
   modes.forEach(button => button.addEventListener('click', () => { mode = button.dataset.directoryMode; render(); }));
   document.getElementById('territory-form').addEventListener('submit', event => {
     event.preventDefault();
