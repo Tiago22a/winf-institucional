@@ -1,0 +1,60 @@
+/* WINF™ | Localizador global. Usa o cadastro js/cidades.js da rede. */
+@font-face{font-family:Gustavo;src:url('/fonts/gustavo-light.otf') format('opentype');font-style:normal;font-weight:300;font-display:swap}
+@font-face{font-family:Gustavo;src:url('/fonts/gustavo-regular.otf') format('opentype');font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:Gustavo;src:url('/fonts/gustavo-medium.otf') format('opentype');font-style:normal;font-weight:500;font-display:swap}
+@font-face{font-family:Gustavo;src:url('/fonts/gustavo-bold.otf') format('opentype');font-style:normal;font-weight:700;font-display:swap}
+@font-face{font-family:'JetBrains Mono';src:url('/fonts/jetbrains-mono-var.woff2') format('woff2');font-style:normal;font-weight:100 900;font-display:swap}
+html{scroll-behavior:smooth}
+body.winf-directory-page{margin:0;background:#060607;color:#f4f4f5;font-family:Gustavo,Arial,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+.winf-directory-page *, .winf-directory-page *::before,.winf-directory-page *::after{box-sizing:border-box}
+.winf-directory-page a{color:inherit;text-decoration:none}
+.winf-directory-page button,.winf-directory-page input,.winf-directory-page select{font:inherit}
+.winf-directory-page button{cursor:pointer}
+.winf-directory-page [hidden]{display:none!important}
+.winf-directory-page :is(a,button,input,select,summary):focus-visible{outline:2px solid #fff;outline-offset:3px}
+.winf-directory-skip{position:absolute;top:-100px;left:24px;z-index:10001;padding:10px 14px;background:white;color:black!important}
+.winf-directory-skip:focus{top:12px}
+.winf-directory-topbar{position:fixed;top:0;left:0;right:0;z-index:200;min-height:72px;background:#080808ef;border-bottom:1px solid #ffffff17;backdrop-filter:blur(16px)}
+.winf-directory .directory-hero{padding:clamp(145px,12vw,195px) 0 72px;background:radial-gradient(ellipse at 80% 6%,#17201b70,transparent 50%);}
+.winf-directory .directory-wrap{max-width:1200px}
+.winf-directory .directory-eyebrow{font-family:'JetBrains Mono',monospace;font-weight:500;letter-spacing:.18em;font-size:10px;color:#aeafb6}
+.winf-directory .directory-hero h1{font-family:Gustavo,Arial,sans-serif!important;font-weight:700!important;font-size:clamp(48px,7.6vw,105px)!important;line-height:1.02!important;letter-spacing:-.053em!important;text-transform:none!important;max-width:1100px;margin:26px 0}
+.winf-directory .directory-hero h1 span{color:#9e9ea5}
+.winf-directory .directory-lede{font:400 clamp(14px,1.32vw,17px)/1.75 Gustavo,Arial,sans-serif;max-width:760px;color:#bcbcc4}
+.winf-directory .directory-active-intro{display:flex;align-items:center;gap:10px;margin-top:42px;color:#d3d3d7;font:600 10px/1.3 'JetBrains Mono',monospace;letter-spacing:.12em}
+.winf-directory .directory-active-dot{height:7px;width:7px;flex:none;background:#97c8a5;border-radius:50%;box-shadow:0 0 9px #97c8a566}
+.winf-directory .directory-active-summary{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin-top:17px}
+.winf-directory .directory-active-summary button{color:#e9e9ed;border:1px solid #ffffff3f;background:#ffffff0b;min-height:39px;padding:10px 14px;font:600 12px/1.25 Gustavo,Arial,sans-serif;letter-spacing:.02em}
+.winf-directory .directory-active-summary button:hover{background:#fff;color:#111}
+.winf-directory .directory-tabs{margin-top:28px}
+.winf-directory .directory-tabs button{font:600 12px/1.35 Gustavo,Arial,sans-serif;letter-spacing:.08em;min-height:48px}
+.winf-directory .directory-tabs button:focus-visible{outline:2px solid #fff}
+.winf-directory .directory-intro{align-items:center}
+.winf-directory #directory-title,.winf-directory .directory-territory h2{font-family:Gustavo,Arial,sans-serif!important;font-weight:700!important;letter-spacing:-.035em;font-size:clamp(26px,4vw,44px);line-height:1.15}
+.winf-directory .directory-view-controls{text-align:right}
+.winf-directory .directory-active-toggle{font:400 11px/1.4 'JetBrains Mono',monospace;letter-spacing:.04em;color:#b9bdc1}
+.winf-directory :is(.directory-filters label,#territory-form label){font:500 12px/1.45 Gustavo,Arial,sans-serif;letter-spacing:.04em}
+.winf-directory :is(.directory-filters input,.directory-filters select,#territory-form input){font:400 14px/1.45 Gustavo,Arial,sans-serif}
+.winf-directory .directory-card h3{font:700 25px/1.2 Gustavo,Arial,sans-serif!important;letter-spacing:-.02em;text-transform:none}
+.winf-directory .directory-card{background:#101011}
+.winf-directory .directory-card-segment,.winf-directory .directory-footnote{font:400 13px/1.7 Gustavo,Arial,sans-serif}
+.winf-directory .directory-card-links a{font:600 12px/1.4 Gustavo,Arial,sans-serif}
+.winf-directory .directory-button{font:700 12px/1.4 Gustavo,Arial,sans-serif}
+.winf-directory .directory-empty h3{font:700 clamp(24px,3vw,32px)/1.2 Gustavo,Arial,sans-serif!important}
+.winf-directory-footer{border-top:1px solid #ffffff2c;background:#070708;padding:32px 24px;color:#ddd}
+.winf-directory-footer-inner{width:min(100%,1200px);margin:auto;display:flex;gap:26px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.winf-directory-footer img{display:block;width:100px;height:auto;max-height:40px}
+.winf-directory-footer p{font:600 10px/1.5 'JetBrains Mono',monospace;letter-spacing:.14em;white-space:nowrap}
+.winf-directory-footer nav{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.winf-directory-footer a{font:600 11px/1.5 Gustavo,Arial,sans-serif}
+.winf-directory-footer nav a:hover{text-decoration:underline;text-underline-offset:4px}
+@media(max-width:700px){
+ .winf-directory-topbar{min-height:63px}
+ .winf-directory .directory-hero{padding-top:135px}
+ .winf-directory .directory-hero h1{font-size:clamp(43px,9.2vw,64px)!important}
+ .winf-directory .directory-view-controls{text-align:left}
+ .winf-directory .directory-active-intro{margin-top:29px}
+ .winf-directory .directory-active-summary button{font-size:11px}
+ .winf-directory-footer-inner{align-items:flex-start;flex-direction:column;gap:18px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
