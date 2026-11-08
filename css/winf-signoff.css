@@ -1,12 +1,17 @@
+/* Shared WINF institutional signature typography. */
+@font-face{font-family:Gustavo;src:url('/fonts/gustavo-light.otf') format('opentype');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:Gustavo;src:url('/fonts/gustavo-regular.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:Gustavo;src:url('/fonts/gustavo-medium.otf') format('opentype');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:Gustavo;src:url('/fonts/gustavo-bold.otf') format('opentype');font-weight:700;font-style:normal;font-display:swap}
 /* Identical credit and legal signature on every public WINF footer. */
-.winf-footer-signoff { box-sizing:border-box; width:100%; max-width:1100px; margin:48px auto 0; padding:30px 20px 12px; text-align:center; color:#b6b6bf; font-family:Inter,Arial,sans-serif; font-weight:400; }
+.winf-footer-signoff { box-sizing:border-box; width:100%; max-width:1100px; margin:48px auto 0; padding:30px 20px 12px; text-align:center; color:#b6b6bf; font-family:Gustavo,Arial,sans-serif; font-weight:400; }
 .winf-footer-signoff::before { content:''; display:block; width:112px; height:1px; margin:0 auto 30px; background:#ffffff26; }
-.winf-footer-signoff .winf-footer-motto { margin:0 0 24px; color:#dddde2; font:400 13px/1.8 Inter,Arial,sans-serif; text-transform:uppercase; letter-spacing:.2em; }
-.winf-footer-signoff .winf-footer-credit { display:flex; align-items:baseline; justify-content:center; flex-wrap:wrap; gap:6px 10px; margin:0 0 18px; color:#b6b6bf; font:400 14px/1.7 Inter,Arial,sans-serif; letter-spacing:.02em; }
+.winf-footer-signoff .winf-footer-motto { margin:0 0 24px; color:#dddde2; font:400 13px/1.8 Gustavo,Arial,sans-serif; text-transform:uppercase; letter-spacing:.2em; }
+.winf-footer-signoff .winf-footer-credit { display:flex; align-items:baseline; justify-content:center; flex-wrap:wrap; gap:6px 10px; margin:0 0 18px; color:#b6b6bf; font:400 14px/1.7 Gustavo,Arial,sans-serif; letter-spacing:.02em; }
 .winf-footer-credit>span:first-child { text-transform:uppercase; font-size:12px; letter-spacing:.12em; }
-.winf-footer-signoff .winf-footer-credit a { display:inline; min-height:0; color:#f5f5f5; font:600 14px/1.7 Inter,Arial,sans-serif; letter-spacing:.1em; text-decoration:underline; text-underline-offset:5px; text-decoration-color:#ffffff66; }
+.winf-footer-signoff .winf-footer-credit a { display:inline; min-height:0; color:#f5f5f5; font:600 14px/1.7 Gustavo,Arial,sans-serif; letter-spacing:.1em; text-decoration:underline; text-underline-offset:5px; text-decoration-color:#ffffff66; }
 .winf-footer-maw-description { font-size:13px; }
-.winf-footer-signoff .winf-footer-legal { margin:0; color:#aaaab3; font:400 13px/1.9 Inter,Arial,sans-serif; letter-spacing:.02em; }
+.winf-footer-signoff .winf-footer-legal { margin:0; color:#aaaab3; font:400 13px/1.9 Gustavo,Arial,sans-serif; letter-spacing:.02em; }
 .winf-footer-signoff .winf-footer-legal a { display:inline; min-height:0; margin-left:6px; color:#c6c6ce; text-decoration:underline; text-underline-offset:4px; }
 .winf-footer-signoff a:hover { color:white; text-decoration-color:white; }
 .winf-footer-signoff a:focus-visible,.winf-social-button:focus-visible { outline:2px solid #d6e5cc; outline-offset:5px; }
