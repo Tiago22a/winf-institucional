@@ -1,0 +1,38 @@
+name: WINF Partners e Briefing — Integridade
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'partners/**'
+      - 'briefing/**'
+      - 'tests/partnersBriefing.test.cjs'
+      - '.github/workflows/partners-briefing.yml'
+  pull_request:
+    paths:
+      - 'partners/**'
+      - 'briefing/**'
+      - 'tests/partnersBriefing.test.cjs'
+      - '.github/workflows/partners-briefing.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  integridade:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Conferir arquivos, navegação, imagens e SEO
+        run: node --test tests/partnersBriefing.test.cjs
+      - name: Validar script da Partners
+        run: node --check partners/landing.js
+      - name: Validar scripts do Briefing
+        run: |
+          node --check briefing/briefing.js
+          node --check partners/partners.js
