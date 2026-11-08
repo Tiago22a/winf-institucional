@@ -1,0 +1,40 @@
+/* WINF™ GLOBAL — topo centralizado no mesmo ritmo do header AeroCore.
+   Somente logo oficial + assinatura abaixo + dois traços + fantasminha.
+   WINF OS é exclusivo do cabeçalho de WINF Partners. */
+.winf-home-header{width:min(100%,1280px);max-width:1280px;margin-inline:auto;min-height:72px;padding:4px clamp(0px,.6vw,12px);display:flex;align-items:center;justify-content:space-between;gap:18px}
+.winf-home-header .winf-home-brand{display:inline-flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:5px;text-decoration:none;color:#fff;min-width:0;flex-shrink:1}
+.winf-home-header .winf-home-brand>img{display:block;width:clamp(95px,8.8vw,131px);max-height:45px;height:auto;object-fit:contain;filter:drop-shadow(0 3px 14px #0009)}
+.winf-home-header .winf-home-brand-signature{display:block;font-family:Gustavo,Arial,sans-serif;font-size:clamp(7px,.71vw,10px);font-weight:400;line-height:1.25;letter-spacing:.11em;color:#dedee1;text-transform:uppercase;white-space:nowrap}
+.winf-home-header .winf-home-header-actions{display:flex;justify-content:flex-end;align-items:center;flex-shrink:0}
+.winf-home-header .winf-home-ghost-trigger{display:inline-flex!important;flex-direction:row!important;align-items:center!important;justify-content:center!important;gap:clamp(11px,1vw,17px)!important;padding:8px!important;width:auto!important;min-width:85px;height:56px;min-height:52px;border:0;background:transparent;color:#fff;cursor:pointer}
+.winf-home-header .winf-home-ghost-lines{display:flex!important;flex-direction:column!important;align-items:flex-end;justify-content:center;gap:10px!important;width:auto!important;height:auto!important;background:transparent!important;box-shadow:none!important;flex-shrink:0}
+.winf-home-header .winf-home-ghost-lines>span{display:block!important;height:2px!important;width:34px!important;background:#fff!important;box-shadow:0 1px 6px #000a!important;transition:width .2s ease}
+.winf-home-header .winf-home-ghost-lines>span:last-child{width:25px!important}
+.winf-home-header .winf-home-ghost-trigger:hover .winf-home-ghost-lines>span{width:39px!important}
+.winf-home-header .winf-home-ghost-trigger>img{width:auto;height:41px;max-width:34px;object-fit:contain;filter:drop-shadow(0 0 10px #ffffff5e);transition:transform .2s ease}
+.winf-home-header .winf-home-ghost-trigger:hover>img{transform:scale(1.05)}
+.winf-home-header :is(a,button):focus-visible{outline:2px solid #fff;outline-offset:4px}
+.winf-home-global-slogan{color:#b9b9bf;text-transform:uppercase;font:400 clamp(10px,1.1vw,13px)/1.5 Gustavo,Arial,sans-serif;letter-spacing:.26em;margin:21px 0 0;text-shadow:0 3px 12px #000b}
+.winf-home-hero-actions{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:22px}
+.winf-home-hero-actions a{display:inline-flex;justify-content:center;align-items:center;gap:19px;min-width:178px;min-height:43px;padding:11px 18px;border:1px solid #ffffff77;background:#0006;color:#f4f4f5;text-decoration:none;text-transform:uppercase;font:700 10px/1.4 Gustavo,Arial,sans-serif;letter-spacing:.12em;backdrop-filter:blur(5px);transition:background .2s,color .2s}
+.winf-home-hero-actions a:first-child{background:#fff;color:#111}
+.winf-home-hero-actions a:hover{background:#e7e7e9;color:#101011}
+.winf-home-hero-actions a:focus-visible{outline:2px solid #fff;outline-offset:3px}
+@media(max-width:640px){
+ .winf-home-header{min-height:66px;gap:10px;padding:0}
+ .winf-home-header .winf-home-brand>img{width:101px}
+ .winf-home-header .winf-home-brand-signature{font-size:8px;letter-spacing:.055em}
+ .winf-home-header .winf-home-ghost-trigger{min-height:49px;min-width:76px;gap:9px!important;padding:5px!important}
+ .winf-home-header .winf-home-ghost-lines{gap:8px!important}
+ .winf-home-header .winf-home-ghost-lines>span{width:27px!important}
+ .winf-home-header .winf-home-ghost-lines>span:last-child{width:19px!important}
+ .winf-home-header .winf-home-ghost-trigger>img{height:36px}
+ .winf-home-hero-actions a{min-width:min(45vw,185px);padding:10px 13px;font-size:9px;gap:9px}
+ .winf-home-global-slogan{font-size:10px;letter-spacing:.17em}
+}
+@media(max-width:380px){
+ .winf-home-header .winf-home-brand>img{width:91px}
+ .winf-home-header .winf-home-brand-signature{font-size:7px;letter-spacing:.01em}
+ .winf-home-header .winf-home-ghost-trigger{min-width:67px}
+}
+@media(prefers-reduced-motion:reduce){.winf-home-header .winf-home-ghost-lines>span,.winf-home-header .winf-home-ghost-trigger>img,.winf-home-hero-actions a{transition:none!important}}
