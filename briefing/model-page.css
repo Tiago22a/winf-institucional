@@ -2,3 +2,16 @@
 /* Alinhamento tipográfico com o briefing: Anton nos títulos editoriais, Gustavo na leitura premium, Inter no texto de apoio. */
 .intro h1,.section h2,.statement h2,.closing h2{font-family:"Anton",Impact,"Arial Narrow",sans-serif;font-weight:400;letter-spacing:.006em;line-height:1.06}
 .tile figcaption{font-family:"Gustavo",Inter,Arial,sans-serif}
+
+
+/* Identidade editorial da página do modelo: Anton + Gustavo + Inter. */
+.model-brand-rail{display:flex;align-items:center;gap:20px;border-top:1px solid #ffffff30;padding:19px 0 32px;color:#e4e4e5;font:700 11px Inter,Arial,sans-serif;letter-spacing:.2em}
+.model-brand-rail img{width:32px;height:39px;object-fit:contain}
+.model-brand-rail i{display:block;width:1px;height:27px;background:#777}
+.lifestyle-principles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:32px;border-top:1px solid #56565a;border-bottom:1px solid #56565a}
+.lifestyle-principles div{padding:24px 18px;border-right:1px solid #56565a;display:flex;flex-direction:column;gap:9px}
+.lifestyle-principles div:last-child{border-right:0}
+.lifestyle-principles strong{font:400 clamp(22px,2.5vw,34px)/1.08 "Anton",Impact,sans-serif;letter-spacing:.02em;color:#fff}
+.lifestyle-principles span{font:400 13px/1.6 Inter,Arial,sans-serif;color:#bcbfc3}
+.intro h1{overflow-wrap:anywhere;max-width:100%}
+@media(max-width:760px){.lifestyle-principles{grid-template-columns:repeat(2,minmax(0,1fr))}.lifestyle-principles div:nth-child(2){border-right:0}.lifestyle-principles div:nth-child(-n+2){border-bottom:1px solid #56565a}.model-brand-rail{gap:11px;letter-spacing:.1em;font-size:9px}}
