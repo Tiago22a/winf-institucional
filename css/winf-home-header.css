@@ -63,3 +63,21 @@
 .winf-home-statement-tm{vertical-align:top;font-size:.16em;margin:.32em 0 0 .12em}
 @media(max-width:640px){.winf-home-statement{font-size:clamp(13px,5.15vw,33px);letter-spacing:-.063em}}
 @media(max-width:380px){.winf-home-statement{font-size:5.05vw}}
+
+/* Header WINF institutional: visual rhythm matching Select, softened gray wordmark and vertical rule. */
+.winf-home-header .winf-home-brand{gap:clamp(10px,1.2vw,19px);white-space:nowrap}
+.winf-home-header .winf-home-brand>img.winf-home-official-logo{width:clamp(88px,7.5vw,112px);flex:none}
+.winf-home-header .winf-home-brand-divider{display:block;flex:none;width:1px;height:27px;background:rgba(238,238,241,.37)}
+.winf-home-header .winf-home-brand-signature{display:block;max-width:none;white-space:nowrap;font-family:Gustavo,Arial,sans-serif;font-weight:400;font-size:clamp(11px,1.18vw,17px);line-height:1.25;letter-spacing:.15em;color:rgba(232,232,236,.71)}
+@media(max-width:760px){
+ .winf-home-header .winf-home-brand{gap:9px}
+ .winf-home-header .winf-home-brand>img.winf-home-official-logo{width:clamp(67px,16vw,95px)}
+ .winf-home-header .winf-home-brand-divider{height:22px}
+ .winf-home-header .winf-home-brand-signature{max-width:none;font-size:clamp(7px,1.5vw,11px);letter-spacing:.055em;white-space:nowrap}
+}
+@media(max-width:400px){
+ .winf-home-header .winf-home-brand{gap:7px}
+ .winf-home-header .winf-home-brand>img.winf-home-official-logo{width:65px}
+ .winf-home-header .winf-home-brand-divider{height:19px}
+ .winf-home-header .winf-home-brand-signature{font-size:6.5px;letter-spacing:0}
+}
