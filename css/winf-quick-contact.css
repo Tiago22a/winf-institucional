@@ -40,3 +40,25 @@ body:has(dialog[open]) #winf-quick-contact{display:none!important}
  #winf-quick-contact .wqc-panel{bottom:72px}
 }
 @media(prefers-reduced-motion:reduce){#winf-quick-contact .wqc-circle{transition:none}}
+
+/* WINF 2026 — padrão aprovado para TODOS os CTAs flutuantes: Ghost branco + WhatsApp verde.
+   Mantém o iconografismo original, com apenas dois acessos, sem caixa cinza adicional. */
+#winf-quick-contact .wqc-launchers{gap:13px}
+#winf-quick-contact .wqc-item{gap:6px;min-width:62px}
+#winf-quick-contact .wqc-circle{width:60px;height:60px;padding:12px;border-radius:50%;border:1px solid #f9fafb;background:#f8f9f9;color:#15171a;box-shadow:0 8px 29px #0008,0 0 0 1px #ffffff20;transition:transform .2s ease,background .2s ease,box-shadow .2s ease}
+#winf-quick-contact .wqc-circle:hover{background:#fff;transform:translateY(-3px);box-shadow:0 10px 32px #000a}
+#winf-quick-contact .wqc-circle:focus-visible{outline:2px solid white;outline-offset:4px}
+#winf-quick-contact .wqc-circle[aria-expanded="true"]{background:#fff;border-color:#fff}
+#winf-quick-contact .wqc-circle img{filter:brightness(0);max-height:36px;max-width:33px}
+#winf-quick-contact .wqc-circle.wqc-whatsapp{background:#16864c;border-color:#2ea866;color:#fff}
+#winf-quick-contact .wqc-circle.wqc-whatsapp:hover{background:#1b9957;border-color:#50bd7b}
+#winf-quick-contact .wqc-label{font-size:9px;font-weight:750;letter-spacing:.08em;text-shadow:0 1px 5px #000c}
+#winf-quick-contact .wqc-panel{bottom:88px}
+@media(max-width:580px){
+ #winf-quick-contact .wqc-launchers{gap:9px}
+ #winf-quick-contact .wqc-item{min-width:52px;gap:5px}
+ #winf-quick-contact .wqc-circle{width:52px;height:52px;padding:10px}
+ #winf-quick-contact .wqc-circle img{max-height:31px;max-width:29px}
+ #winf-quick-contact .wqc-label{font-size:8px}
+ #winf-quick-contact .wqc-panel{bottom:77px}
+}
