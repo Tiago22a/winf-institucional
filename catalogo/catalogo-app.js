@@ -7,16 +7,38 @@
   var ROOT = "/catalogo/";
   var MAIN_PHONE = "5513981113001";
   var LEGACY = new URLSearchParams(location.search);
-  var TERRITORIES = Object.freeze({"santos-sp": {name:"Santos / SP",phone:"5513981113001"}});
+  // Fallback offline: Santos foi homologado. A configuração pública é carregada
+  // de /catalogo/territorios.json (mesma origem); nunca aceitar telefone livre via URL.
+  var TERRITORIES = Object.assign(Object.create(null), {"santos-sp": {name:"Santos / SP",phone:"5513981113001"}});
   function phoneValid(value) { return /^55[1-9][0-9]{9,10}$/.test(value || ""); }
   var territoryKey = (LEGACY.get("territorio") || "").toLowerCase();
-  var territory = Object.prototype.hasOwnProperty.call(TERRITORIES,territoryKey) ? TERRITORIES[territoryKey] : null;
   var legacyPhone = (LEGACY.get("partner") || "").replace(/[^0-9]/g,"");
-  // Não permitir desvio para qualquer telefone enviado por URL. Somente canais autorizados.
-  // Na ativação de uma nova praça, incluir seu registro no WINF OS e sincronizar este mapa.
-  var knownLegacy = phoneValid(legacyPhone) ? Object.keys(TERRITORIES).map(function (k) { return TERRITORIES[k]; }).find(function (p) { return p.phone === legacyPhone; }) : null;
-  var salesPhone = territory ? territory.phone : (knownLegacy ? knownLegacy.phone : MAIN_PHONE);
-  var partnerContext = territory ? territory.name : (knownLegacy ? knownLegacy.name : "central WINF");
+  var territory = null, knownLegacy = null, salesPhone = MAIN_PHONE, partnerContext = "central WINF";
+  function resolveTerritory() {
+    territory = Object.prototype.hasOwnProperty.call(TERRITORIES,territoryKey) ? TERRITORIES[territoryKey] : null;
+    knownLegacy = phoneValid(legacyPhone) ? Object.keys(TERRITORIES).map(function(k){return TERRITORIES[k];}).find(function(p){return p.phone === legacyPhone;}) : null;
+    salesPhone = territory ? territory.phone : (knownLegacy ? knownLegacy.phone : MAIN_PHONE);
+    partnerContext = territory ? territory.name : (knownLegacy ? knownLegacy.name : "central WINF");
+  }
+  function loadTerritories() {
+    if(typeof fetch !== "function")return;
+    fetch("/catalogo/territorios.json", {cache:"no-store"}).then(function(res){
+      if(!res.ok)throw new Error("Registro territorial indisponível");
+      return res.json();
+    }).then(function(data) {
+      if(!data || data.schemaVersion !== 1 || !data.territories || typeof data.territories !== "object")return;
+      for(var key of Object.keys(data.territories)){
+        var item=data.territories[key];
+        if(!/^[a-z0-9-]{4,60}$/.test(key) || !item || item.status !== "active" || !phoneValid(item.phone) ||
+          typeof item.name !== "string" || !item.name.trim())continue;
+        TERRITORIES[key]={name:item.name.trim(),phone:item.phone};
+      }
+      resolveTerritory();updateDock();
+      var wa=document.getElementById("wc-detail-whatsapp");
+      if(wa && selectedProduct)wa.href=waUrl(selectedProduct);
+    }).catch(function(){ /* fallback homologado — sem erro crítico para o cliente */ });
+  }
+  resolveTerritory();
   var section = "select", application = "all", selectedProduct = null, prevFocused = null;
   var brandNames = {select:"WINF SELECT™",aerocore:"AEROCORE™",neoskin:"NEOSKIN™",ceramic:"CERAMIC ARMORING™"};
   var brandPages = {select:"/aerocore/winf-select/",aerocore:"/aerocore/aerocore/",neoskin:"/aerocore/neoskin/",ceramic:"/aerocore/ceramic-armoring/"};
@@ -272,6 +294,7 @@
     window.setCategory(Object.prototype.hasOwnProperty.call(sections, initialBrand) ? initialBrand : "select");
     initSimulator();
     initDock();
+    loadTerritories();
     var id=params.get("produto");
     if(id&&find(id)){
       var p=find(id);
