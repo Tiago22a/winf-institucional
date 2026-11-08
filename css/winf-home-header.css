@@ -38,3 +38,9 @@
  .winf-home-header .winf-home-ghost-trigger{min-width:67px}
 }
 @media(prefers-reduced-motion:reduce){.winf-home-header .winf-home-ghost-lines>span,.winf-home-header .winf-home-ghost-trigger>img,.winf-home-hero-actions a{transition:none!important}}
+
+/* Lockup final autorizado 08/11/2026 — apenas W™ vetorial no topo. */
+.winf-home-header .winf-home-brand{flex-direction:row;align-items:center;justify-content:flex-start;min-height:51px;padding:0;gap:0}
+.winf-home-header .winf-home-brand>img.winf-home-w-mark{display:block;width:clamp(43px,4.2vw,55px);height:auto;max-height:55px;object-fit:contain;filter:drop-shadow(0 2px 10px #000b)}
+@media(max-width:640px){.winf-home-header .winf-home-brand>img.winf-home-w-mark{width:45px;max-height:49px}}
+@media(max-width:380px){.winf-home-header .winf-home-brand>img.winf-home-w-mark{width:42px}}
