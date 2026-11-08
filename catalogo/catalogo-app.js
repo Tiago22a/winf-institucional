@@ -12,8 +12,11 @@
   var territoryKey = (LEGACY.get("territorio") || "").toLowerCase();
   var territory = Object.prototype.hasOwnProperty.call(TERRITORIES,territoryKey) ? TERRITORIES[territoryKey] : null;
   var legacyPhone = (LEGACY.get("partner") || "").replace(/[^0-9]/g,"");
-  var salesPhone = territory ? territory.phone : (phoneValid(legacyPhone) ? legacyPhone : MAIN_PHONE);
-  var partnerContext = territory ? territory.name : (phoneValid(legacyPhone) ? "atendimento do link compartilhado" : "central WINF");
+  // Não permitir desvio para qualquer telefone enviado por URL. Somente canais autorizados.
+  // Na ativação de uma nova praça, incluir seu registro no WINF OS e sincronizar este mapa.
+  var knownLegacy = phoneValid(legacyPhone) ? Object.keys(TERRITORIES).map(function (k) { return TERRITORIES[k]; }).find(function (p) { return p.phone === legacyPhone; }) : null;
+  var salesPhone = territory ? territory.phone : (knownLegacy ? knownLegacy.phone : MAIN_PHONE);
+  var partnerContext = territory ? territory.name : (knownLegacy ? knownLegacy.name : "central WINF");
   var section = "select", application = "all", selectedProduct = null, prevFocused = null;
   var brandNames = {select:"WINF SELECT™",aerocore:"AEROCORE™",neoskin:"NEOSKIN™",ceramic:"CERAMIC ARMORING™"};
   var brandPages = {select:"/aerocore/winf-select/",aerocore:"/aerocore/aerocore/",neoskin:"/aerocore/neoskin/",ceramic:"/aerocore/ceramic-armoring/"};
