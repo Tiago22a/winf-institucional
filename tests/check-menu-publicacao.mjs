@@ -27,11 +27,14 @@ const checks = [
     }
     assert.match(globalMenuCss, /#menu-overlay\.winf-global-roadmap/);
   }],
-  ['global header is centered and has WINF logo, slogan below, hamburger and ghost', () => {
+  ['global header uses official W trademark only, hamburger and ghost; full brand remains in hero', () => {
     const header = home.match(/<header\b[\s\S]*?<\/header>/)?.[0]||'';
     assert.ok(header);
-    assert.match(header,/winf-home-brand-signature/);
-    assert.match(header,/PREMIUM QUALITY WINDOWFILM/);
+    assert.match(header,/class="winf-home-w-mark"/);
+    assert.match(header,/src="\/brand\/winf-monogram\.svg"/);
+    assert.doesNotMatch(header,/winf-home-brand-signature|PREMIUM QUALITY WINDOWFILM/);
+    assert.match(home,/src="\/winf-logo-hd\.svg"/);
+    assert.match(read('brand/winf-monogram.svg'),/<path\b/);
     assert.match(header,/winf-home-ghost-lines/);
     assert.match(header,/ghost-symbol\.png/);
     assert.match(header,/aria-expanded="false"/);
