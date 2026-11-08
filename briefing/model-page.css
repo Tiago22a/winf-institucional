@@ -247,3 +247,7 @@ a:focus-visible{outline:2px solid #fff;outline-offset:4px}
 .model-film-disclaimer{font:400 12px/1.7 Inter,Arial,sans-serif;color:#a9a9b0;margin:16px 0 0;max-width:840px}
 @media(max-width:820px){.model-film-grid{grid-template-columns:1fr}.model-film-play{width:60px;height:60px}.model-film-trigger{font-size:10px}}
 @media(prefers-reduced-motion:reduce){.model-film-trigger,.kiosk-format-visual img{transition:none!important}}
+
+/* QUIOSQUE 2026: perspectivas independentes sem recorte ampliado */
+.page-kiosk .mosaic .tile:nth-child(2) img,.page-kiosk .mosaic .tile:nth-child(3) img{object-position:center center!important;transform:scale(1)!important}
+@media(hover:hover) and (pointer:fine){.page-kiosk .mosaic .tile:nth-child(2):hover img,.page-kiosk .mosaic .tile:nth-child(3):hover img{transform:scale(1.04)!important}}

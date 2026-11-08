@@ -310,3 +310,7 @@
 .partners-page .briefing-model-film .model-film-play{width:64px;height:64px;display:grid;place-items:center;border-radius:50%;background:white;color:#111;font-size:22px}
 .partners-page .briefing-model-film .model-film-player.is-playing .model-film-trigger{opacity:0;visibility:hidden;pointer-events:none}
 @media(hover:none),(pointer:coarse),(max-width:850px){.partners-page img.grayscale{filter:none!important}}
+
+/* QUIOSQUE 2026: perspectivas independentes sem recorte ampliado */
+.partners-page .al-model-kiosk .al-mosaic-detail img,.partners-page .al-model-kiosk .al-mosaic-context img{object-position:center center!important;transform:scale(1)!important}
+@media(hover:hover) and (pointer:fine){.partners-page .al-model-kiosk .al-mosaic-detail:hover img,.partners-page .al-model-kiosk .al-mosaic-context:hover img{transform:scale(1.04)!important;filter:none}}
