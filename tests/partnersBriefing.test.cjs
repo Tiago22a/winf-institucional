@@ -64,11 +64,11 @@ test('Partners liga diretamente as tres paginas dos modelos', () => {
   }
 });
 
-test('mosaicos mostram as imagens aprovadas de cada modelo', () => {
+test('mosaicos mostram imagens independentes P, M e G do Quiosque e demais modelos', () => {
   const h = read('briefing/index.html');
   const imgs = [
     'asset-light-gestao-2026.webp','asset-light-mobilidade-2026.webp','asset-light-familia-2026.webp',
-    'quiosque-principal-2026.webp','quiosque-atendimento-2026.webp','quiosque-exposicao-2026.webp',
+    'quiosque-principal-2026.webp','quiosque-p-compacto-2026.webp','quiosque-g-consultoria-2026.webp',
     'flagship-equipe-2026.webp','flagship-showroom-2026.webp','flagship-operacoes-2026.webp'
   ];
   for (const img of imgs) {
@@ -77,6 +77,10 @@ test('mosaicos mostram as imagens aprovadas de cada modelo', () => {
   }
   assert.ok(read('briefing/asset-light/index.html').includes('asset-light-execucao-2026.webp'));
   assert.ok(read('briefing/flagship/index.html').includes('flagship-estrutura-2026.webp'));
+  const kiosk = read('briefing/quiosque/index.html');
+  for(const img of ['quiosque-p-compacto-2026.webp','quiosque-principal-2026.webp','quiosque-g-consultoria-2026.webp']) {
+    assert.ok(kiosk.includes(img), 'kiosk: '+img);
+  }
 });
 
 test('as tres paginas individuais tem FAQs e compartilhamento configurados', () => {
