@@ -46,6 +46,11 @@
 
 ## 4. Home WINF e identidade visual
 - [x] Aplicar à revisão do cabeçalho a marca oficial com assinatura **Premium Quality Windowfilm**.
+- [x] Trocar `/winf-logo.svg` rasterizado por caminhos vetoriais da marca já presentes no repositório; preservar logotipo central com assinatura abaixo.
+- [x] Criar `/brand/winf-monogram.svg` (W™) derivado da marca original e `/brand/README.md` com regras de uso e tipografia.
+- [x] Alinhar os cabeçalhos da home institucional e da unidade Santos ao padrão aprovado WINF Select Glass + Home.
+- [x] Inserir seção de soluções complementares AeroCore, NeoSkin e Ceramic Armoring na página territorial de Santos, com links ao catálogo e WhatsApp local.
+- [x] Permitir abertura direta de aba do catálogo pelo parâmetro `?marca=` e manter `?produto=` com prioridade para a ficha escolhida.
 - [x] Menu com fantasminha e botão único visível **WINF OS™** no cabeçalho.
 - [x] Remover link visual redundante do WINF OS no conjunto secundário da home.
 - [ ] Homologar espaçamentos e quebra de linha no desktop e mobile comparando com os prints aprovados.
