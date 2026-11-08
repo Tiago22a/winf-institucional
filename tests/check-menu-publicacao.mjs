@@ -5,6 +5,7 @@ import vm from 'node:vm';
 const read = name => readFileSync(name, 'utf8');
 const home = read('index.html');
 const aero = read('aerocore/index.html');
+const locator = read('aerocore/onde-comprar/index.html');
 const partners = read('partners/index.html');
 const globalJs = read('script.js');
 const aeroJs = read('aerocore/assets/shell.js');
@@ -68,6 +69,19 @@ const checks = [
     assert.match(aero,/data-action="close-menu"/);
     assert.match(aeroMenuCss,/#menu-overlay\.ac-simple-menu/);
     assert.doesNotMatch(aeroMenuCss,/#ac-simple-menu/);
+  }],
+  ['the AeroCore locator shares the official menu without Partners billboard', () => {
+    assert.match(locator,/id="menu-overlay" class="ac-simple-menu ac-shell"/);
+    assert.match(locator,/ac-simple-main/);
+    assert.match(locator,/ac-simple-global/);
+    assert.match(locator,/VOLTAR AO UNIVERSO WINF/);
+    assert.match(locator,/ac-simple-menu\.css/);
+    assert.doesNotMatch(locator,/ac-partners-banner/);
+    assert.match(locator,/href="\/partners\/" data-close-menu="true"/);
+    assert.match(locator,/js\/cidades\.js/);
+    assert.match(locator,/aerocore\/assets\/onde-comprar\.js/);
+    const ids = [...locator.matchAll(/id="([^"]+)"/g)].map(m => m[1]);
+    assert.equal(new Set(ids).size, ids.length, 'IDs duplicados no localizador');
   }],
   ['global/AeroCore menu scripts are valid', () => {
     new vm.Script(globalJs, {filename:'script.js'});
