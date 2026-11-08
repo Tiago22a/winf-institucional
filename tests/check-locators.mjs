@@ -63,12 +63,15 @@ const tests=[
  ['JS module syntax for both locators and home passes',()=>{
    for(const f of ['aerocore/assets/onde-comprar.js','js/winf-locator-menu.js','js/winf-active-territories.js','js/cidades.js'])new vm.Script(read(f),{filename:f});
  }],
- ['the WINF logo W monogram is preserved in home and global locator',()=>{
-   assert.match(home,/src="\/brand\/winf-monogram\.svg"/);
+ ['WINF global uses the official logo and the locator keeps its distinct identity',()=>{
+   assert.match(home,/class="winf-home-official-logo"/);
+   assert.match(home,/src="\/winf-logo\.svg"/);
+   assert.doesNotMatch(home,/src="\/brand\/winf-monogram\.svg"/);
    assert.match(winf,/src="\/brand\/winf-monogram\.svg"/);
    assert.ok(existsSync('brand/winf-monogram.svg'));
    assert.match(read('brand/winf-monogram.svg'),/<path/);
  }]
+
 ];
 for(const [name,run] of tests){run();console.log('✓ '+name)}
 console.log('\n'+tests.length+' WINF locator checks passed');
