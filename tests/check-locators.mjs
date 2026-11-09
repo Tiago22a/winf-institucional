@@ -11,7 +11,10 @@ const tests=[
   assert.match(winf,/WINF™ \/ UNIVERSO GLOBAL/);
   assert.equal((winf.match(/<h1\b/g)||[]).length,1);
   assert.doesNotMatch(winf,/href="\/aerocore\/onde-comprar\/"/);
-  assert.doesNotMatch(winf,/WINF OS™/);
+  // O rodapé global pode citar WINF OS™; a seção do localizador não deve oferecer esse serviço.
+  const locatorMain=winf.split('<main id="conteudo"')[1]?.split('</main>')[0]||'';
+  assert.ok(locatorMain.length>100,'localizador principal presente');
+  assert.doesNotMatch(locatorMain,/WINF OS™/);
  }],
  ['two locators depend on the SAME master register and script',()=>{
    for(const html of [winf,aero]){
