@@ -16,6 +16,7 @@ on:
       - 'scripts/check-winf-city-search-language.mjs'
       - 'scripts/winf-social-sitewide.mjs'
       - 'scripts/check-winf-social-sitewide.mjs'
+      - 'scripts/check-winf-city-images.mjs'
       - 'config/winf-social-content.json'
       - '.github/workflows/sync-winf-city-sites.yml'
       - 'index.html'
@@ -77,10 +78,12 @@ jobs:
           node scripts/winf-social-sitewide.mjs
           node --check scripts/check-winf-social-sitewide.mjs
           node scripts/check-winf-social-sitewide.mjs
+          node --check scripts/check-winf-city-images.mjs
+          node scripts/check-winf-city-images.mjs
       - name: Commitar capas sociais e HTML padronizado
         run: |
           git add -u -- .
-          git add -- images/og/winf-*.jpg docs/seo/winf-social-audit.json
+          git add -- images/og/winf-*.jpg docs/seo/winf-social-audit.json docs/media/winf-city-image-registry.json
           if ! git diff --cached --quiet; then
             git config user.name "WINF Social SEO"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

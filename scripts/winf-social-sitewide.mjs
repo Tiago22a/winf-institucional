@@ -43,9 +43,10 @@ function allIndexes(dir,acc=[]){
 }
 function details(route,html){
  const city=cities.find(c=>c.slug===route);
+ const cityScope=cities.find(c=>route===c.slug||route.startsWith(c.slug+'/'))||null;
  const hook=config.hooks[route]||{};
  if(city){
-  return {city,brand:'WINF SELECT™',photo:cityPhotos[city.origin],lines:config.cityHooks[city.origin],
+  return {city,cityScope:city,brand:'WINF SELECT™',photo:cityPhotos[city.origin],lines:config.cityHooks[city.origin],
    subtitle:'GLASS + HOME / PELÍCULAS PARA VIDROS',label:'SITE OFICIAL WINF SELECT™'};
  }
  if(route==='catalogo'){
@@ -61,7 +62,7 @@ function details(route,html){
   const mid=Math.max(1,title.lastIndexOf(' ',Math.ceil(title.length*.55)));
   lines=[title.slice(0,mid),title.slice(mid).trim()];
  }
- return {brand,photo,lines,subtitle:hook.subtitle||textTitle(html).split(/[|—]/)[0].trim().toUpperCase(),label:hook.label||'SITE OFICIAL WINF™'};
+ return {cityScope,brand:cityScope?'WINF SELECT™':brand,photo:cityScope?cityPhotos[cityScope.origin]:photo,lines,subtitle:hook.subtitle||textTitle(html).split(/[|—]/)[0].trim().toUpperCase(),label:hook.label||(cityScope?'SITE OFICIAL WINF SELECT™':'SITE OFICIAL WINF™')};
 }
 function filename(route,city){
  if(city)return 'winf-select-'+city.origin+'-1200x630.jpg';
@@ -100,11 +101,14 @@ async function renderCover(file,d){
  const dest=resolve(imgDir,file);
  const photo=await sharp(resolve(root,d.photo)).resize(1200,630,{fit:'cover',position:'attention'}).toBuffer();
  const composite=[{input:Buffer.from(svgContent(d)),left:0,top:0},{input:logo,left:70,top:53}];
- await sharp(photo).composite(composite).withMetadata({exif:{IFD0:{ImageDescription:'WINF™ '+d.brand+' — '+d.lines.join(' ')+' | fotografia ilustrativa',
+ const scope=d.cityScope||d.city||null;
+ const description=scope?'WINF_SELECT_CITY='+scope.id+' | WINF Select Glass + Home | '+scope.city+'/'+scope.uf+' | '+d.lines.join(' ')+' | Fotografia ilustrativa | '+file:'WINF™ '+d.brand+' — '+d.lines.join(' ')+' | fotografia ilustrativa';
+ await sharp(photo).composite(composite).withMetadata({exif:{IFD0:{ImageDescription:description,
    Artist:'WINF.inc®',Copyright:'© WINF.inc® — composição editorial; foto ilustrativa'}}})
  .jpeg({quality:84,mozjpeg:true,progressive:true}).toFile(dest);
  const info=await sharp(dest).metadata();
  if(info.width!==1200||info.height!==630||info.format!=='jpeg'||!info.exif)throw Error('Capa inválida: '+file);
+ if(scope&&!info.exif.includes(Buffer.from('WINF_SELECT_CITY='+scope.id)))throw Error('EXIF sem identificação regional: '+file);
 }
 const ogNames=['og:type','og:locale','og:site_name','og:title','og:description','og:url','og:image','og:image:secure_url','og:image:type','og:image:width','og:image:height','og:image:alt'];
 const twitterNames=['twitter:card','twitter:title','twitter:description','twitter:image','twitter:image:alt'];
@@ -124,7 +128,8 @@ function normalize(html,route,d,file){
  else head+='\n<link rel="canonical" href="'+canonical+'">';
  const originalImage=meta(head,'property','og:image');
  const image='https://winf.com.br/images/og/'+file;
- const alt='Imagem editorial WINF™ para '+(d.city?d.city.city+' / '+d.city.uf:d.brand)+': '+d.lines.join(' ')+'. Fotografia ilustrativa.';
+ const scope=d.cityScope||d.city||null;
+ const alt='Imagem editorial WINF™ para '+(scope?scope.city+' / '+scope.uf:d.brand)+': '+d.lines.join(' ')+'. Fotografia ilustrativa.';
  const isArticle=meta(head,'property','og:type')==='article'||route.startsWith('blog/')||route.startsWith('aplicacoes/');
  head=head.replace(/<meta\b[^>]*>/ig,t=>{
   const property=attr(t,'property'),name=attr(t,'name');
@@ -149,6 +154,7 @@ function normalize(html,route,d,file){
 }
 const files=allIndexes(root);
 const report={generatedAt:'2026-11-09',domain:'https://winf.com.br/',indexPages:[],excluded:[]};
+const cityRegistry={schema:'winf-city-media-v1',note:'Identidade regional e controle editorial; fotos de base podem ser ilustrativas. EXIF/IPTC pode ser removido por plataformas, por isso o arquivo e o cadastro definem a origem.',cities:cities.map(c=>({id:c.id,city:c.city,uf:c.uf,origin:c.origin,route:'/'+c.slug+'/',localStatus:c.origin==='campina-grande'?'pré-ativação':'atendimento a confirmar',folder:'assets/cidades/'+c.id+'/',images:[]}))};
 for(const path of files){
  const html=read(path);
  const route=domainRoute(path);
@@ -158,10 +164,15 @@ for(const path of files){
  const d=details(route,html);
  const file=filename(route,d.city);
  await renderCover(file,d);
+ const scope=d.cityScope||d.city||null;
+ if(scope){const record=cityRegistry.cities.find(c=>c.id===scope.id);
+ record.images.push({type:route===scope.slug?'capa-social-da-cidade':'guia-local',page:'https://winf.com.br/'+route+'/',image:'images/og/'+file,photoSource:d.photo,photoType:'imagem ilustrativa de arquitetura',cityTag:'WINF_SELECT_CITY='+scope.id,alt:'WINF Select '+scope.city+'/'+scope.uf+' — '+d.lines.join(' '),usage:['site','whatsapp-link-preview','redes-compartilhamento']});}
  const result=normalize(html,route,d,file);
  if(result!==html)writeFileSync(resolve(root,path),result,'utf8');
  report.indexPages.push({route:'/'+(route?route+'/':''),title:textTitle(result),ogImage:'/images/og/'+file,topic:d.brand,alt:d.lines.join(' ')});
  console.log('✓ PREVIEW:',path,'=>',file);
 }
 writeFileSync(resolve(root,'docs/seo/winf-social-audit.json'),JSON.stringify(report,null,2)+'\n','utf8');
+mkdirSync(resolve(root,'docs/media'),{recursive:true});
+writeFileSync(resolve(root,'docs/media/winf-city-image-registry.json'),JSON.stringify(cityRegistry,null,2)+'\n','utf8');
 console.log('✓ WINF: '+report.indexPages.length+' páginas publicáveis com imagem própria; '+report.excluded.length+' redirecionamentos/noindex preservados.');
