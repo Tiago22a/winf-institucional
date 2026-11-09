@@ -855,6 +855,15 @@ let toastTimer = null;
 
 // ===================== INIT =====================
 document.addEventListener('DOMContentLoaded', () => {
+  // A vitrine por família mantém o WhatsApp do território, assim como os cards dos produtos.
+  if(CATALOG_ORIGIN || (/^55\d{10,11}$/.test(partnerParam))){
+    document.querySelectorAll('.winf-catalog-paths a[href],.winf-catalog-brands a[href]').forEach(anchor=>{
+      const target=new URL(anchor.getAttribute('href'),location.origin);
+      if(CATALOG_ORIGIN)target.searchParams.set('origem',CATALOG_ORIGIN);
+      if(/^55\d{10,11}$/.test(partnerParam))target.searchParams.set('partner',partnerParam);
+      anchor.href=target.pathname+target.search+target.hash;
+    });
+  }
   if(ORIGIN_PAGE){
     const originLabel=CATALOG_ORIGIN==='santos'?'Santos':'Sorocaba / Região 015';
     const notice=document.getElementById('winf-catalog-return');
