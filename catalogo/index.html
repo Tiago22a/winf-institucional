@@ -7,7 +7,7 @@
 
   <!-- ===================== SEO BÁSICO ===================== -->
   <title>Catálogo WINF™ | Películas Arquitetônicas, Automotivas e PPF</title>
-  <meta name="description" content="Catálogo oficial WINF™: películas de controle solar arquitetônicas, AeroCore™ automotivas, PPF NeoSkin™ e Ceramic Armoring™. Veja specs, garantia e simule a redução de calor." />
+  <meta name="description" content="Catálogo institucional WINF™ com películas arquitetônicas, AeroCore™ automotivas, NeoSkin™ PPF e Ceramic Armoring™. Conheça produtos, fichas e visualizações ilustrativas de aplicação." />
   <meta name="keywords" content="película de controle solar, película arquitetônica, película automotiva, insulfilm nano cerâmica, PPF, proteção de pintura, blindagem cerâmica, película de segurança, WINF, AeroCore, NeoSkin" />
   <meta name="author" content="WINF™" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -52,7 +52,7 @@
   <!-- ===================== TWITTER / X CARD ===================== -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Catálogo WINF™ | Películas Arquitetônicas, Automotivas e PPF" />
-  <meta name="twitter:description" content="Explore as linhas WINF™ e simule a redução de calor em tempo real. Especificações técnicas, garantia e atendimento por consultor." />
+  <meta name="twitter:description" content="Explore as linhas WINF™, suas aplicações e fichas técnicas. Compare visualmente películas para arquitetura e automóveis e fale com um consultor." />
   <meta name="twitter:image" content="https://winf.com.br/images/og/og-artigo-ceramica-nanometrica.png" />
   <meta name="twitter:image:alt" content="Catálogo WINF™ com películas arquitetônicas, automotivas e PPF" />
   <!-- <meta name="twitter:site" content="@seuperfil" /> -->
@@ -249,6 +249,70 @@
   #product-grid .product-card:focus-visible{outline:2px solid white;outline-offset:4px}
   #product-grid .product-card{scroll-margin-top:90px}
   @media (max-width:680px){#product-grid .product-card .winf-catalog-ghost{width:13px;height:15px}}
+
+/* Identidade editorial do catálogo alinhada à WINF Global e unidades territoriais. */
+@font-face{font-family:Gustavo;src:url('/fonts/gustavo-light.otf') format('opentype');font-style:normal;font-weight:300;font-display:swap}
+@font-face{font-family:Gustavo;src:url('/fonts/gustavo-regular.otf') format('opentype');font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:Gustavo;src:url('/fonts/gustavo-medium.otf') format('opentype');font-style:normal;font-weight:500;font-display:swap}
+@font-face{font-family:Gustavo;src:url('/fonts/gustavo-bold.otf') format('opentype');font-style:normal;font-weight:700;font-display:swap}
+@font-face{font-family:'JetBrains Mono';src:url('/fonts/jetbrains-mono-var.woff2') format('woff2');font-weight:100 800;font-display:swap}
+body.winf-catalog-page{background:#08090a;font-family:Gustavo,Arial,sans-serif}
+body.winf-catalog-page #catalogo-navegacao,
+body.winf-catalog-page #catalogo-produtos,
+body.winf-catalog-page .winf-catalog-journeys{font-family:Gustavo,Arial,sans-serif}
+body.winf-catalog-page :is(#hero-title,#catalogo-navegacao h2,#catalogo-produtos h3,.winf-catalog-journeys h2,.winf-catalog-paths strong){
+ font-family:Gustavo,Arial,sans-serif!important;letter-spacing:-.047em;font-weight:300!important
+}
+body.winf-catalog-page #hero-title{line-height:1.06}
+body.winf-catalog-page #catalogo-produtos h3{font-size:clamp(21px,2vw,29px);line-height:1.18}
+body.winf-catalog-page #catalogo-produtos h4{font-family:Gustavo,Arial,sans-serif;font-style:normal}
+body.winf-catalog-page #catalogo-produtos p{font-family:Gustavo,Arial,sans-serif;font-weight:400}
+body.winf-catalog-page .winf-catalog-tabs button,
+body.winf-catalog-page .winf-catalog-eyebrow,
+body.winf-catalog-page .winf-catalog-paths small,
+body.winf-catalog-page .winf-catalog-deeplink{font-family:'JetBrains Mono',monospace}
+body.winf-catalog-page #catalogo-produtos .product-card{background:#0d0e10;transition:border-color .2s,transform .2s}
+body.winf-catalog-page #catalogo-produtos .product-card:hover{border-color:#ffffff9c;transform:translateY(-2px)}
+body.winf-catalog-page #catalogo-produtos .product-card .card-img-inner{filter:brightness(.86);transition:filter .3s}
+body.winf-catalog-page #catalogo-produtos .product-card:hover .card-img-inner{filter:brightness(1.08)}
+.winf-film-lab[hidden]{display:none!important}
+.winf-film-lab{background:#0b0d10;color:#f4f5f6;border-block:1px solid #ffffff2a;padding:85px clamp(20px,5vw,75px)}
+.winf-lab-container{max-width:1280px;margin:0 auto}
+.winf-lab-kicker{font:700 10px/1.5 'JetBrains Mono',monospace;letter-spacing:.2em;color:#acb0b7;margin:0 0 24px}
+.winf-lab-heading{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(260px,.7fr);gap:38px;align-items:end;margin-bottom:38px}
+.winf-lab-heading h2{font:300 clamp(36px,5vw,72px)/1.03 Gustavo,Arial,sans-serif!important;letter-spacing:-.055em;margin:0}
+.winf-lab-heading h2 span{color:#a3a7af}
+.winf-lab-heading>p{font:400 15px/1.7 Gustavo,Arial,sans-serif;color:#c8c9cd;max-width:480px}
+.winf-lab-layout{display:grid;grid-template-columns:minmax(260px,.36fr) minmax(0,.64fr);gap:20px}
+.winf-lab-controls{background:#121417;border:1px solid #ffffff33;padding:30px;display:flex;flex-direction:column;gap:13px;min-width:0}
+.winf-lab-controls label,.winf-lab-metrics dt{font:700 10px/1.5 'JetBrains Mono',monospace;letter-spacing:.11em;color:#b6b8be}
+.winf-lab-controls select{min-height:49px;background:#08090a;color:white;border:1px solid #ffffff43;padding:12px;font:400 15px/1.35 Gustavo,Arial,sans-serif;max-width:100%;border-radius:0}
+.winf-lab-controls select option{background:#141619;color:#fff}
+.winf-lab-metrics{display:grid;gap:0;margin:12px 0 10px}
+.winf-lab-metrics>div{padding:13px 0;border-bottom:1px solid #ffffff23;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.winf-lab-metrics dt{font-size:9px}
+.winf-lab-metrics dd{font:500 16px/1.25 Gustavo,Arial,sans-serif;text-align:right;min-width:70px}
+#winf-lab-page{display:flex;justify-content:space-between;align-items:center;gap:13px;padding:14px;background:#f4f5f6;color:#0c0d0e;text-decoration:none;font:700 10px/1.5 'JetBrains Mono',monospace;letter-spacing:.06em}
+#winf-lab-page:hover{background:#fff}
+.winf-lab-controls-note{font:400 12px/1.55 Gustavo,Arial,sans-serif;color:#a4a7af}
+.winf-lab-visual{display:flex;flex-direction:column;min-width:0}
+.winf-lab-panes{display:grid;grid-template-columns:1fr 1fr;min-height:430px;flex:1;border:1px solid #ffffff33;overflow:hidden}
+.winf-lab-pane{position:relative;overflow:hidden;background:#111318}
+.winf-lab-pane+.winf-lab-pane{border-left:1px solid #ffffff4d}
+.winf-lab-photo{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.82) saturate(.85)}
+.winf-lab-pane:nth-child(2) .winf-lab-photo{filter:brightness(.91) saturate(.9)}
+.winf-lab-tint{position:absolute;inset:0;background:#080d17;opacity:0;transition:opacity .35s}
+.winf-lab-pane-label{position:absolute;left:16px;top:18px;padding:8px 11px;border:1px solid #ffffff4d;background:#050505d6;color:white;font:700 10px/1.3 'JetBrains Mono',monospace;letter-spacing:.08em}
+.winf-lab-panes[data-mode="aerocore"] .winf-lab-tint{background:#06172d}
+.winf-lab-panes[data-mode="aerocore"] .winf-lab-pane-label{border-color:#5b91ed7c}
+.winf-lab-disclaimer{padding:17px 21px;border:1px solid #ffffff2e;border-top:none;background:#111318}
+.winf-lab-disclaimer strong{font:700 9px/1.4 'JetBrains Mono',monospace;color:#e7e8ea;letter-spacing:.12em}
+.winf-lab-disclaimer p{font:400 12px/1.55 Gustavo,Arial,sans-serif;color:#bfc1c7;margin-top:7px}
+@media(max-width:1000px){.winf-lab-layout{grid-template-columns:1fr}.winf-lab-heading{grid-template-columns:1fr}.winf-lab-panes{min-height:390px}}
+@media(max-width:560px){.winf-film-lab{padding:54px 18px}.winf-lab-controls{padding:19px}.winf-lab-panes{min-height:270px}.winf-lab-pane-label{font-size:8px;top:12px;left:10px;padding:6px 8px}.winf-lab-heading{gap:13px}.winf-lab-metrics dd{font-size:14px}}
+@media(hover:none){body.winf-catalog-page #catalogo-produtos .product-card .card-img-inner{filter:brightness(1)}}
+@media(prefers-reduced-motion:reduce){.winf-lab-tint,body.winf-catalog-page #catalogo-produtos .product-card,body.winf-catalog-page #catalogo-produtos .card-img-inner{transition:none;transform:none}}
+
 </style>
     <link rel="stylesheet" href="/css/winf-footer.css?v=20261029-country-dots-2" />
   <link rel="stylesheet" href="/css/winf-signoff.css">
@@ -294,7 +358,7 @@
 </style>
   <link rel="stylesheet" href="/css/winf-home-roadmap.css?v=20261107-1">
 </head>
-<body class="min-h-screen flex flex-col selection:bg-zinc-500/30">
+<body class="winf-catalog-page min-h-screen flex flex-col selection:bg-zinc-500/30">
 <a class="winf-return-link" data-winf-return href="/" aria-label="Voltar ao início da seção"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 5-7 7 7 7M5 12h14"></path></svg></a>
 
 
@@ -366,152 +430,42 @@
     <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"></div>
   </section>
 
-  <section class="relative z-10 py-24 px-6 md:px-12 w-full max-w-7xl mx-auto border-t border-[#444746]">
-    <div class="mb-12">
-      <h2 class="text-4xl md:text-5xl font-light mb-4 text-white">Simulador Termodinâmico.</h2>
-      <p class="text-sm text-white/40 max-w-2xl leading-relaxed">Selecione uma película do catálogo e um cenário base para visualizar a redução de calor e escurecimento (VLT) em tempo real.</p>
-    </div>
-
-    <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
-      <div class="lg:w-1/3 flex flex-col gap-6">
-        <div class="p-8 border border-[#444746] bg-[#131314]">
-          <div class="mb-6">
-            <label class="text-[10px] font-bold uppercase tracking-widest mb-3 block text-white/40">CENÁRIO (MODELO EM TESTE)</label>
-            <select id="sim-model-select" onchange="updateSimDisplay()" class="w-full bg-transparent border-b border-[#444746] pb-3 text-sm focus:outline-none appearance-none cursor-pointer text-white">
-              <option value="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2669&auto=format&fit=crop">Fachada Corporativa</option>
-              <option value="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop">Residência Luxo</option>
-              <option value="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop">Vista Panorâmica</option>
-            </select>
-          </div>
-          <div class="mb-6">
-            <label class="text-[10px] font-bold uppercase tracking-widest mb-3 block text-white/40">PELÍCULA APLICADA</label>
-            <select id="sim-film-select" onchange="updateSimDisplay()" class="w-full bg-transparent border-b border-[#444746] pb-3 text-sm focus:outline-none appearance-none cursor-pointer text-white">
-              <option value="">Selecione a Película...</option>
-            </select>
-          </div>
-          <div class="mt-8 flex flex-col gap-4">
-            <div class="flex justify-between items-center pb-4 border-b border-[#444746]">
-              <span class="text-[10px] uppercase font-bold tracking-widest text-white/40">Transmissão de Luz (VLT):</span>
-              <span id="sim-vlt" class="font-light text-xl">-</span>
-            </div>
-            <div class="flex justify-between items-center pb-4 border-b border-[#444746]">
-              <span class="text-[10px] uppercase font-bold tracking-widest text-white/40">Rejeição IR:</span>
-              <span id="sim-ir" class="font-light text-xl">-</span>
-            </div>
-            <div class="flex justify-between items-center">
-              <span class="text-[10px] uppercase font-bold tracking-widest text-white/40">Garantia:</span>
-              <span id="sim-warranty" class="font-light text-sm uppercase tracking-widest">-</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="p-8 border border-[#444746] bg-[#131314] flex flex-col gap-6">
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="text-[10px] font-bold uppercase tracking-widest text-white/40">Intensidade de Radiação Solar</span>
-              <span id="sun-label" class="text-sm font-bold bg-[#ef4444]/15 text-[#f57c00] border border-[#ef4444]/20 px-3 py-1 font-mono">85%</span>
-            </div>
-            <p class="text-[11px] opacity-70 mb-4 leading-relaxed">Ajuste a radiação térmica para simular condições climáticas reais e testar a barreira física sob altas temperaturas.</p>
-          </div>
-          <div class="relative">
-            <input type="range" min="0" max="100" value="85" id="sun-slider" class="premium-slider w-full cursor-pointer" oninput="onSunChange(this.value)" />
-            <div class="mt-2 flex items-center justify-between text-[9px] font-mono opacity-50 uppercase tracking-widest">
-              <span>0% Sombra</span><span>50% Sol Moderado</span><span>100% Extremo</span>
-            </div>
-          </div>
-          <div class="flex flex-col gap-2">
-            <span class="text-[9px] font-mono text-zinc-400 uppercase tracking-widest">Presets Rápidos de Clima:</span>
-            <div class="grid grid-cols-2 gap-2">
-              <button onclick="setSun(0)"   id="preset-0"   class="px-2 py-1.5 text-[9px] font-mono uppercase tracking-wider border border-zinc-800 text-zinc-400 hover:border-zinc-700 transition-all">0% Sombra</button>
-              <button onclick="setSun(40)"  id="preset-40"  class="px-2 py-1.5 text-[9px] font-mono uppercase tracking-wider border border-zinc-800 text-zinc-400 hover:border-zinc-700 transition-all">40% Nublado</button>
-              <button onclick="setSun(80)"  id="preset-80"  class="px-2 py-1.5 text-[9px] font-mono uppercase tracking-wider border border-zinc-800 text-zinc-400 hover:border-zinc-700 transition-all">80% Sol Forte</button>
-              <button onclick="setSun(100)" id="preset-100" class="px-2 py-1.5 text-[9px] font-mono uppercase tracking-wider border border-zinc-800 text-zinc-400 hover:border-zinc-700 transition-all">100% Extremo</button>
-            </div>
-          </div>
-        </div>
+  <section id="winf-film-lab" class="winf-film-lab" hidden aria-labelledby="winf-lab-title">
+    <div class="winf-lab-container">
+      <p class="winf-lab-kicker" id="winf-lab-kicker">WINF SELECT™ / GLASS + HOME</p>
+      <div class="winf-lab-heading">
+        <h2 id="winf-lab-title">VISUALIZE A <span>PELÍCULA.</span></h2>
+        <p id="winf-lab-description">Compare a aparência ilustrativa de um ambiente antes e depois da aplicação. Escolha a linha e explore suas informações técnicas.</p>
       </div>
-
-      <div class="lg:w-2/3 flex flex-col gap-6">
-        <div class="w-full h-[280px] md:h-[400px] border border-[#444746] relative overflow-hidden bg-neutral-950 shadow-2xl">
-          <div id="sim-bg" class="absolute inset-0 bg-cover bg-center transition-all duration-700 pointer-events-none" style="background-image:url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2669&auto=format&fit=crop')"></div>
-          <div class="absolute inset-0 bg-gradient-to-tr from-white/[0.01] via-white/[0.05] to-transparent pointer-events-none z-10"></div>
-
-          <div class="absolute inset-0 flex z-10">
-            <div class="w-1/2 h-full relative border-r border-dashed border-zinc-700/50 flex flex-col justify-between p-4 md:p-6 select-none overflow-hidden">
-              <div id="heat-glow" class="sim-heat-glow" style="opacity:0.3"></div>
-              <div class="absolute inset-0 bg-amber-500/10 pointer-events-none"></div>
-              <span class="text-[10px] uppercase tracking-widest font-black text-amber-500 bg-amber-500/10 border border-amber-500/20 px-2 py-0.5 self-start z-10 shadow-sm backdrop-blur-md">Sem Película</span>
-              <div class="absolute inset-x-0 top-1/4 bottom-1/4 pointer-events-none z-0">
-                <svg class="w-full h-full opacity-35" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M 10,-20 L 150,160" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6,4" fill="none" class="animate-thermal-dash"/>
-                  <path d="M 60,-20 L 200,160" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="8,5" fill="none" class="animate-thermal-dash"/>
-                </svg>
-              </div>
-              <div class="flex flex-col z-10 bg-black/45 backdrop-blur-sm p-2.5 border border-white/5 max-w-[170px] sm:max-w-none">
-                <span class="text-[8px] font-mono opacity-50 uppercase tracking-widest mb-0.5">ESTADO TÉRMICO:</span>
-                <span id="temp-common" class="text-xl md:text-2xl font-light text-red-500 font-mono tracking-widest">40°C</span>
-              </div>
-            </div>
-            <div class="w-1/2 h-full relative flex flex-col justify-between p-4 md:p-6 select-none overflow-hidden transition-all duration-700">
-              <div id="tint-overlay" class="absolute inset-0 bg-[#02050b] transition-all duration-700 pointer-events-none" style="opacity:0"></div>
-              <span id="film-badge" class="text-[10px] uppercase tracking-widest font-black self-start px-2 py-0.5 z-10 transition-all duration-300 shadow-sm backdrop-blur-md border text-zinc-400 bg-zinc-800/10 border-zinc-800/20">Sem Barreira</span>
-              <div class="absolute inset-x-0 top-1/4 bottom-1/4 pointer-events-none z-0">
-                <svg id="right-svg" class="w-full h-full opacity-45" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M 40,-20 L 180,160" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6,4" fill="none" class="animate-thermal-dash"/>
-                  <path d="M 90,-20 L 230,160" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="8,5" fill="none" class="animate-thermal-dash"/>
-                </svg>
-              </div>
-              <div class="flex flex-col z-10 bg-black/45 backdrop-blur-sm p-2.5 border border-white/5 max-w-[170px] sm:max-w-none transition-all duration-500">
-                <span class="text-[8px] font-mono opacity-50 uppercase tracking-widest mb-0.5">ESTADO TÉRMICO:</span>
-                <span id="temp-winf" class="text-xl md:text-2xl font-light font-mono tracking-widest text-amber-500 transition-colors duration-500">40°C</span>
-              </div>
-            </div>
-          </div>
-
-          <div id="sun-badge" class="absolute top-4 right-4 md:top-6 md:right-6 flex flex-col items-end pointer-events-none select-none z-20">
-            <div id="sun-orb" class="w-10 h-10 rounded-full blur-[6px] opacity-80 bg-amber-400 shadow-[0_0_15px_rgba(251,191,36,.4)]"></div>
-            <span id="sun-ext-temp" class="text-[7px] font-mono text-white tracking-[.35em] uppercase mt-2 text-right block drop-shadow-md bg-black/50 px-2 py-0.5">EXT: 38°C</span>
-          </div>
-          <div class="absolute inset-y-0 inset-x-4 md:inset-x-8 border-x border-zinc-800/15 pointer-events-none z-10"></div>
-          <div id="sim-bottom-label" class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-neutral-950/95 border border-zinc-800 backdrop-blur-md px-3 py-1.5 text-[8px] md:text-[9px] uppercase tracking-[.2em] font-black text-white z-20 shadow-xl whitespace-nowrap">
-            VISÃO DO INTERIOR • COMPLETAMENTE EXPOSTO
-          </div>
+      <div class="winf-lab-layout">
+        <div class="winf-lab-controls">
+          <label for="sim-model-select">01 / ESCOLHA O AMBIENTE</label>
+          <select id="sim-model-select" aria-label="Cenário de comparação visual"></select>
+          <label for="sim-film-select">02 / ESCOLHA A PELÍCULA</label>
+          <select id="sim-film-select" aria-label="Película para visualização"></select>
+          <dl class="winf-lab-metrics">
+            <div><dt>TRANSMISSÃO DE LUZ (VLT)</dt><dd id="sim-vlt">—</dd></div>
+            <div><dt>REJEIÇÃO IR INFORMADA</dt><dd id="sim-ir">—</dd></div>
+            <div><dt>GARANTIA INFORMADA</dt><dd id="sim-warranty">—</dd></div>
+          </dl>
+          <a id="winf-lab-page" href="/aerocore/winf-select/">CONHECER A PÁGINA DO PRODUTO <span aria-hidden="true">↗</span></a>
+          <p class="winf-lab-controls-note">Os dados apresentados são os informados no catálogo. Confirme ficha técnica, variante e aplicação com um especialista.</p>
         </div>
-
-        <div class="flex flex-col sm:flex-row border border-[#444746] bg-[#0c0c0e] divide-y sm:divide-y-0 sm:divide-x divide-zinc-800">
-          <div class="flex-1 p-6 md:p-8 flex flex-col gap-4 bg-zinc-950/20">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 flex items-center justify-center bg-red-500/10 text-red-500 border border-red-500/20">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
-                </div>
-                <div>
-                  <h4 class="text-[9px] font-black uppercase tracking-[.25em] text-red-400 mb-0.5">Vidro Comum (Sem Proteção)</h4>
-                  <p class="text-[8px] text-zinc-500 font-mono tracking-widest uppercase">Calor Livre e Raios IR</p>
-                </div>
-              </div>
-              <div id="bar-common-val" class="text-3xl font-light text-white tracking-widest font-mono">40°C</div>
+        <div class="winf-lab-visual">
+          <div class="winf-lab-panes" id="winf-lab-panes" data-mode="arch">
+            <div class="winf-lab-pane">
+              <div class="winf-lab-photo" id="sim-before" role="img" aria-label="Imagem ilustrativa antes da película"></div>
+              <span class="winf-lab-pane-label">SEM PELÍCULA</span>
             </div>
-            <div class="w-full h-1.5 bg-red-950/20 relative overflow-hidden">
-              <div id="bar-common" class="h-full bg-gradient-to-r from-amber-500 via-orange-500 to-red-500 motion-bar" style="width:66%"></div>
+            <div class="winf-lab-pane">
+              <div class="winf-lab-photo" id="sim-after" role="img" aria-label="Imagem ilustrativa com película"></div>
+              <div id="sim-tint" class="winf-lab-tint" aria-hidden="true"></div>
+              <span class="winf-lab-pane-label">COM PELÍCULA</span>
             </div>
           </div>
-          <div id="bar-winf-panel" class="flex-1 p-6 md:p-8 flex flex-col gap-4 transition-all duration-500 bg-zinc-950/10">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-3">
-                <div id="bar-winf-icon" class="w-10 h-10 flex items-center justify-center bg-zinc-800/10 text-zinc-500 border border-zinc-800/10 transition-all duration-500">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                </div>
-                <div>
-                  <h4 id="bar-winf-label" class="text-[9px] font-black uppercase tracking-[.25em] text-zinc-500 mb-0.5 transition-colors duration-500">Com Winf™ Protection</h4>
-                  <p class="text-[8px] text-zinc-500 font-mono tracking-widest uppercase">Blindagem Térmica Ativa</p>
-                </div>
-              </div>
-              <div id="bar-winf-val" class="text-3xl font-light text-white tracking-widest font-mono transition-colors duration-500">40°C</div>
-            </div>
-            <div class="w-full h-1.5 bg-zinc-900 relative overflow-hidden">
-              <div id="bar-winf" class="h-full bg-zinc-700 motion-bar" style="width:66%"></div>
-            </div>
+          <div class="winf-lab-disclaimer">
+            <strong>COMPARAÇÃO VISUAL ILUSTRATIVA</strong>
+            <p>É uma prévia estética aproximada, não uma fotografia de aplicação, teste térmico, medição de temperatura ou previsão certificada de desempenho. A aparência real muda conforme vidro, iluminação e modelo escolhido.</p>
           </div>
         </div>
       </div>
@@ -899,7 +853,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (['all','arch','aerocore','neoskin','ceramic'].includes(requestedLine)) setCategory(requestedLine);
   else {setCategory('all');}
   populateFilmSelect();
-  setSun(85);
   updateSimDisplay();
 
   document.addEventListener('keydown', (e) => {
@@ -912,7 +865,8 @@ function setCategory(cat, scrollToProducts=false) {
   if(!['all','arch','aerocore','neoskin','ceramic'].includes(cat)) return;
   activeCategory = cat;
   selectedFilmId = '';
-  document.getElementById('sim-film-select').value = '';
+  const selectedLabFilm=document.getElementById('sim-film-select');
+  if(selectedLabFilm)selectedLabFilm.value='';
 
   // tabs visual state
   ['all', 'arch', 'aerocore', 'neoskin', 'ceramic'].forEach(c => {
@@ -1007,158 +961,72 @@ function populateFilmSelect() {
   });
 }
 
-// ===================== SIMULATOR =====================
-function getVltNumber(vltStr) {
-  if (!vltStr) return 100;
-  const m = vltStr.match(/\d+/);
-  return m ? parseInt(m[0]) : 100;
+// ===================== VISUALIZADOR DE PELÍCULAS WINF =====================
+// Não estima temperaturas: VLT/IR/garantias são informações das fichas cadastradas.
+const WINF_LAB_SCENES = {
+  arch: [
+    {label:'Casa com janelas amplas',image:'/images/invisible-poster-1.webp'},
+    {label:'Fachada envidraçada',image:'/images/dualreflect-poster-1.webp'}
+  ],
+  aerocore: [
+    {label:'Porsche em movimento na estrada',image:'/aerocore/public/porsche-911-highway-20261103-poster.webp'},
+    {label:'Película automotiva AeroCore',image:'/images/aerocore-catalog/spectre-15.webp'}
+  ]
+};
+function populateFilmSelect() {
+  const select=document.getElementById('sim-film-select');
+  const scene=document.getElementById('sim-model-select');
+  if(!select||!scene)return;
+  const mode=activeCategory==='aerocore'?'aerocore':'arch';
+  const products=PRODUCT_CATALOG.filter(p=>mode==='arch'?p.category==='arch':p.line==='aerocore');
+  select.replaceChildren(new Option('Selecione uma película...', ''));
+  products.forEach(p=>select.add(new Option(p.name,p.id)));
+  const previousScene=scene.value;
+  scene.replaceChildren();
+  WINF_LAB_SCENES[mode].forEach(p=>scene.add(new Option(p.label,p.image)));
+  if(Array.from(scene.options).some(o=>o.value===previousScene))scene.value=previousScene;
+  selectedFilmId='';
 }
-
-// Corrigido typo na função para evitar warnings no console
-function getIrNumber(irStr) {
-  if (!irStr || irStr === 'N/A') return 0;
-  const m = irStr.replace(/[^\d.]/g,'');
-  return parseFloat(m) || 0;
-}
-
-function calcTemps(sun, film) {
-  const externalTemp = Math.round(25 + sun * 0.15);
-  const commonTemp   = Math.round(20 + sun * 0.21);
-  if (!film) return { externalTemp, commonTemp, winfTemp: commonTemp };
-  const irVal = getIrNumber(film.keyMetrics.ir);
-  const factor = (100 - irVal) / 100;
-  const winfTemp = Math.round(20 + sun * 0.21 * Math.max(0.05, factor));
-  return { externalTemp, commonTemp, winfTemp };
-}
-
 function updateSimDisplay() {
-  selectedFilmId = document.getElementById('sim-film-select').value;
-  const modelUrl  = document.getElementById('sim-model-select').value;
-  const film = selectedFilmId ? PRODUCT_CATALOG.find(p => p.id === selectedFilmId) : null;
-  const temps = calcTemps(sunIntensity, film);
-
-  // bg
-  document.getElementById('sim-bg').style.backgroundImage = `url('${modelUrl}')`;
-
-  // heat glow
-  document.getElementById('heat-glow').style.opacity = sunIntensity / 100 * 0.35;
-
-  // tint
-  const vlt = film ? getVltNumber(film.specs.vlt) : 100;
-  const tintOpacity = film ? (100 - vlt) / 100 : 0;
-  document.getElementById('tint-overlay').style.opacity = tintOpacity;
-
-  // film badge
-  const filmBadge = document.getElementById('film-badge');
-  if (film) {
-    filmBadge.textContent = 'Blindagem WINF™';
-    filmBadge.className = 'text-[10px] uppercase tracking-widest font-black self-start px-2 py-0.5 z-10 transition-all duration-300 shadow-sm backdrop-blur-md border text-blue-400 bg-blue-500/15 border-blue-400/20';
-  } else {
-    filmBadge.textContent = 'Sem Barreira';
-    filmBadge.className = 'text-[10px] uppercase tracking-widest font-black self-start px-2 py-0.5 z-10 transition-all duration-300 shadow-sm backdrop-blur-md border text-zinc-400 bg-zinc-800/10 border-zinc-800/20';
-  }
-
-  // right SVG
-  const rightSvg = document.getElementById('right-svg');
-  if (film) {
-    rightSvg.innerHTML = `
-      <path d="M 120,125 C 80,75 60,-15 160,-15" stroke="#3b82f6" stroke-width="3.5" stroke-dasharray="6,4" fill="none" class="animate-thermal-dash"/>
-      <path d="M 180,125 C 140,75 120,-15 220,-15" stroke="#60a5fa" stroke-width="2" fill="none" class="animate-pulse"/>
-    `;
-  } else {
-    rightSvg.innerHTML = `
-      <path d="M 40,-20 L 180,160" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6,4" fill="none" class="animate-thermal-dash"/>
-      <path d="M 90,-20 L 230,160" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="8,5" fill="none" class="animate-thermal-dash"/>
-    `;
-  }
-
-  // temps text
-  document.getElementById('temp-common').textContent = temps.commonTemp + '°C';
-  const winfTempEl = document.getElementById('temp-winf');
-  winfTempEl.textContent = (film ? temps.winfTemp : temps.commonTemp) + '°C';
-  winfTempEl.className = `text-xl md:text-2xl font-light font-mono tracking-widest transition-colors duration-500 ${film ? 'text-blue-400' : 'text-amber-500'}`;
-
-  // bottom label
-  document.getElementById('sim-bottom-label').textContent =
-    `VISÃO DO INTERIOR ${film ? `• VLT ${film.specs.vlt}` : '• COMPLETAMENTE EXPOSTO'}`;
-
-  // sun badge
-  const orb = document.getElementById('sun-orb');
-  document.getElementById('sun-ext-temp').textContent = `EXT: ${temps.externalTemp}°C`;
-  document.getElementById('sun-badge').style.transform = `scale(${1 + sunIntensity * 0.002})`;
-  if (sunIntensity > 75) {
-    orb.className = 'w-10 h-10 rounded-full blur-[6px] opacity-80 bg-amber-400 shadow-[0_0_25px_rgba(245,158,11,.6)] animate-pulse';
-  } else if (sunIntensity > 40) {
-    orb.className = 'w-10 h-10 rounded-full blur-[6px] opacity-80 bg-amber-300 shadow-[0_0_15px_rgba(251,191,36,.4)]';
-  } else {
-    orb.className = 'w-10 h-10 rounded-full blur-[6px] opacity-80 bg-amber-100 shadow-[0_0_8px_rgba(253,230,138,.2)]';
-  }
-
-  // spec panel
-  document.getElementById('sim-vlt').textContent     = film ? film.specs.vlt : '-';
-  document.getElementById('sim-ir').textContent      = film ? film.keyMetrics.ir : '-';
-  document.getElementById('sim-warranty').textContent = film ? film.keyMetrics.warranty : '-';
-
-  // bars
-  const commonPct = Math.min(100, (temps.commonTemp / 60) * 100);
-  const winfPct   = Math.min(100, ((film ? temps.winfTemp : temps.commonTemp) / 60) * 100);
-  document.getElementById('bar-common').style.width = commonPct + '%';
-  document.getElementById('bar-common-val').textContent = temps.commonTemp + '°C';
-  document.getElementById('bar-winf').style.width = winfPct + '%';
-  document.getElementById('bar-winf-val').textContent = (film ? temps.winfTemp : temps.commonTemp) + '°C';
-
-  const winfBarPanel = document.getElementById('bar-winf-panel');
-  const winfIcon     = document.getElementById('bar-winf-icon');
-  const winfLbl      = document.getElementById('bar-winf-label');
-  const winfBar      = document.getElementById('bar-winf');
-  const winfVal      = document.getElementById('bar-winf-val');
-
-  if (film) {
-    winfBarPanel.className = 'flex-1 p-6 md:p-8 flex flex-col gap-4 transition-all duration-500 bg-blue-950/15';
-    winfIcon.className     = 'w-10 h-10 flex items-center justify-center bg-blue-500/15 text-blue-400 border border-blue-500/30 shadow-[0_0_15px_rgba(59,130,246,.15)] transition-all duration-500';
-    winfLbl.className      = 'text-[9px] font-black uppercase tracking-[.25em] text-blue-400 mb-0.5 transition-colors duration-500';
-    winfLbl.textContent    = `Com ${film.name}`;
-    winfBar.className      = 'h-full bg-gradient-to-r from-blue-500 to-cyan-400 motion-bar';
-    winfVal.className      = 'text-3xl font-light text-blue-300 tracking-widest font-mono transition-colors duration-500';
-  } else {
-    winfBarPanel.className = 'flex-1 p-6 md:p-8 flex flex-col gap-4 transition-all duration-500 bg-zinc-950/10';
-    winfIcon.className     = 'w-10 h-10 flex items-center justify-center bg-zinc-800/10 text-zinc-500 border border-zinc-800/10 transition-all duration-500';
-    winfLbl.className      = 'text-[9px] font-black uppercase tracking-[.25em] text-zinc-500 mb-0.5 transition-colors duration-500';
-    winfLbl.textContent    = 'Com Winf™ Protection';
-    winfBar.className      = 'h-full bg-zinc-700 motion-bar';
-    winfVal.className      = 'text-3xl font-light text-white tracking-widest font-mono transition-colors duration-500';
-  }
+  const lab=document.getElementById('winf-film-lab');
+  if(!lab)return;
+  const mode=activeCategory;
+  const visible=mode==='arch'||mode==='aerocore';
+  lab.hidden=!visible;
+  if(!visible)return;
+  const scene=document.getElementById('sim-model-select');
+  const select=document.getElementById('sim-film-select');
+  if(!scene||!select)return;
+  const film=PRODUCT_CATALOG.find(p=>p.id===select.value);
+  selectedFilmId=film?film.id:'';
+  const image=scene.value||WINF_LAB_SCENES[mode][0].image;
+  const panes=document.getElementById('winf-lab-panes');
+  panes.dataset.mode=mode;
+  const url='url("'+image.replace(/"/g,'')+'")';
+  document.getElementById('sim-before').style.backgroundImage=url;
+  document.getElementById('sim-after').style.backgroundImage=url;
+  const vltText=film&&film.specs?film.specs.vlt:'—';
+  const numeric=film?Number.parseInt(vltText,10):100;
+  // Redução visual suavizada para nunca fingir reprodução óptica ou térmica real.
+  const darken=film&&Number.isFinite(numeric)?Math.min(0.68,Math.max(0,(100-numeric)/100*0.47)):0;
+  document.getElementById('sim-tint').style.opacity=String(darken);
+  document.getElementById('sim-vlt').textContent=vltText;
+  document.getElementById('sim-ir').textContent=film?film.keyMetrics.ir:'—';
+  document.getElementById('sim-warranty').textContent=film?film.keyMetrics.warranty:'—';
+  document.getElementById('winf-lab-kicker').textContent=mode==='arch'?'WINF SELECT™ / GLASS + HOME':'AEROCORE™ / WINDOW FILM AUTOMOTIVO';
+  document.getElementById('winf-lab-title').innerHTML=mode==='arch'?'VISUALIZE O <span>SEU AMBIENTE.</span>':'VISUALIZE O <span>SEU AUTOMÓVEL.</span>';
+  document.getElementById('winf-lab-description').textContent=mode==='arch'
+    ? 'Cenário arquitetônico: compare de forma ilustrativa a luminosidade e a tonalidade no vidro.'
+    : 'Cenário automotivo: compare de forma ilustrativa a aparência de películas para os vidros do veículo.';
+  const link=document.getElementById('winf-lab-page');
+  if(link)link.href=film?productLink(film):mode==='arch'?'/aerocore/winf-select/':'/aerocore/';
 }
-
-// ===================== SUN =====================
-function onSunChange(val) {
-  sunIntensity = parseInt(val);
-  document.getElementById('sun-label').textContent = val + '%';
-  updatePresetButtons();
-  updateSimDisplay();
-}
-
-// Preset do tailwind para manter as cores dinâmicas sem quebras
-function setSun(val) {
-  sunIntensity = val;
-  document.getElementById('sun-slider').value = val;
-  document.getElementById('sun-label').textContent = val + '%';
-  updatePresetButtons();
-  updateSimDisplay();
-}
-
-function updatePresetButtons() {
-  const presets = { 0:'blue', 40:'amber', 80:'orange', 100:'red' };
-  Object.entries(presets).forEach(([v, color]) => {
-    const btn = document.getElementById(`preset-${v}`);
-    if (!btn) return;
-    if (sunIntensity === parseInt(v)) {
-      btn.className = `px-2 py-1.5 text-[9px] font-mono uppercase tracking-wider border transition-all bg-${color}-500/10 text-${color}-400 border-${color}-400`;
-    } else {
-      btn.className = 'px-2 py-1.5 text-[9px] font-mono uppercase tracking-wider border border-zinc-800 text-zinc-400 hover:border-zinc-700 transition-all';
-    }
-  });
-}
+document.addEventListener('DOMContentLoaded',()=>{
+  const model=document.getElementById('sim-model-select');
+  const film=document.getElementById('sim-film-select');
+  if(model)model.addEventListener('change',updateSimDisplay);
+  if(film)film.addEventListener('change',updateSimDisplay);
+});
 
 // ===================== MODAL DE ESPECIFICAÇÕES (vanilla JS) =====================
 let currentSpecProductId = null;
