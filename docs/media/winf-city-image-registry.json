@@ -193,6 +193,31 @@
           ]
         }
       ]
+    },
+    {
+      "id": "cuiaba-mt",
+      "city": "Cuiabá",
+      "uf": "MT",
+      "origin": "cuiaba",
+      "route": "/pelicula-de-controle-solar-cuiaba-mt/",
+      "localStatus": "atendimento a confirmar",
+      "folder": "assets/cidades/cuiaba-mt/",
+      "images": [
+        {
+          "type": "capa-social-da-cidade",
+          "page": "https://winf.com.br/pelicula-de-controle-solar-cuiaba-mt/",
+          "image": "images/og/winf-select-cuiaba-1200x630.jpg",
+          "photoSource": "images/dualreflect-poster-1.webp",
+          "photoType": "imagem ilustrativa de arquitetura",
+          "cityTag": "WINF_SELECT_CITY=cuiaba-mt",
+          "alt": "WINF Select Cuiabá/MT — CONTROLE O SOL. PRESERVE SUA VISTA.",
+          "usage": [
+            "site",
+            "whatsapp-link-preview",
+            "redes-compartilhamento"
+          ]
+        }
+      ]
     }
   ]
 }
