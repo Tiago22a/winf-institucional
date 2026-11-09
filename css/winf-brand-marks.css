@@ -1,0 +1,23 @@
+/* Identidade de marcas existente no ecossistema WINF.
+   WINF usa sempre o SVG oficial. AeroCore / NeoSkin / Ceramic Armoring
+   reutilizam o tratamento tipográfico do cabeçalho de suas páginas oficiais. */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Montserrat:wght@300;400;600&display=swap');
+.winf-mark{display:inline-flex;align-items:baseline;justify-content:center;gap:0;color:#fff!important;text-shadow:0 3px 16px #0009;white-space:nowrap;font-variant-ligatures:none;line-height:1.16;text-transform:uppercase;max-width:100%}
+.winf-mark sup{font:500 .45em/1 Outfit,Arial,sans-serif;letter-spacing:0!important;vertical-align:super;position:relative;top:-.55em;margin-left:2px}
+.winf-mark--select{display:inline-flex;align-items:center;gap:8px;flex-wrap:nowrap}
+.winf-mark--select img{display:inline-block;width:clamp(42px,7vw,80px);height:auto;max-height:40px;object-fit:contain;filter:drop-shadow(0 2px 8px #0006)}
+.winf-mark--select .winf-mark-select-label{font:300 clamp(17px,2.2vw,27px)/1.08 Gustavo,Outfit,Arial,sans-serif;letter-spacing:.025em;color:#fff}
+.winf-mark--aerocore{font:300 clamp(19px,2.2vw,29px)/1.15 Outfit,Arial,sans-serif;letter-spacing:.21em!important;padding-left:.18em}
+.winf-mark--neoskin{font:300 clamp(18px,2.2vw,27px)/1.15 Outfit,Arial,sans-serif;letter-spacing:.27em!important;padding-left:.23em}
+.winf-mark--ceramic{font:300 clamp(16px,1.8vw,24px)/1.17 Outfit,Arial,sans-serif;letter-spacing:.13em!important;padding-left:.1em;white-space:normal}
+.winf-catalog-brands .winf-mark{align-self:flex-start;justify-content:flex-start;text-shadow:none}
+.winf-catalog-paths .winf-mark{justify-content:flex-start;text-shadow:none}
+.winf-catalog-brands .winf-mark--select img,.winf-catalog-paths .winf-mark--select img{width:clamp(43px,5vw,69px)}
+.winf-catalog-brands .winf-mark--select .winf-mark-select-label,.winf-catalog-paths .winf-mark--select .winf-mark-select-label{font-size:clamp(14px,1.6vw,22px)}
+.winf-catalog-brands .winf-mark--aerocore,.winf-catalog-paths .winf-mark--aerocore{font-size:clamp(18px,1.85vw,25px)}
+.winf-catalog-brands .winf-mark--neoskin,.winf-catalog-paths .winf-mark--neoskin{font-size:clamp(17px,1.8vw,24px)}
+.winf-catalog-brands .winf-mark--ceramic,.winf-catalog-paths .winf-mark--ceramic{font-size:clamp(14px,1.65vw,22px)}
+.brand-card-media .winf-mark,.santos-brand-photo .winf-mark{position:relative;z-index:5;text-align:center}
+.brand-card-media .winf-mark{padding:10px}
+.santos-brand-photo .winf-mark{width:auto;max-width:calc(100% - 30px);font-size:clamp(17px,2.1vw,29px);font-weight:300}
+@media(max-width:680px){.winf-catalog-brands .winf-mark--aerocore,.winf-catalog-paths .winf-mark--aerocore{font-size:18px;letter-spacing:.13em!important}.winf-catalog-brands .winf-mark--neoskin,.winf-catalog-paths .winf-mark--neoskin{font-size:16px;letter-spacing:.15em!important}.winf-catalog-brands .winf-mark--ceramic,.winf-catalog-paths .winf-mark--ceramic{font-size:14px;letter-spacing:.05em!important}.winf-mark--select{gap:4px}.winf-mark--select img{max-width:54px}}
