@@ -48,7 +48,7 @@ export function applyCitySeo(html,city){
   if(!text)throw new Error('Cidade sem texto SEO: '+city.origin);
   const esc=s=>String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
   const uri='https://winf.com.br/'+city.slug+'/';
-  const image=city.origin==='cuiaba' ? 'https://winf.com.br/images/og/winf-select-santos-1200x630.jpg' : 'https://winf.com.br/images/og/winf-select-'+city.origin+'-1200x630.jpg';
+  const image='https://winf.com.br/images/og/winf-select-'+city.origin+'-1200x630.jpg';
   const imageAlt='Imagem ilustrativa de arquitetura premium com vidros amplos para a WINF Select™ em '+city.city+'/'+city.uf;
   const putMeta=(kind,key,value)=>{
      const rx=new RegExp('<meta\\s+'+kind+'="'+key.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'"\\s+content="[^"]*"\\s*\\/?>','g');
