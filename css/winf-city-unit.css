@@ -190,3 +190,8 @@ body.menu-open .santos-contact-dock,body:has(#menu-overlay[aria-hidden="false"])
 @media(prefers-reduced-motion:reduce){
  .santos-brand-photo video,.santos-brand-photo::after,.santos-service-card::before,.santos-service-card::after,.santos-ecosystem-grid .brand-card-media video,.santos-ecosystem-grid .brand-shade{transition:none!important;transform:none!important}
 }
+
+/* Acesso explícito ao catálogo multimarcas, sem substituir o orçamento da cidade. */
+.santos-full-catalog-link{display:inline-flex;justify-content:center;align-items:center;gap:13px;border:1px solid #e3e4e6;color:#0b0c0e;background:#f3f3f4;min-height:49px;text-decoration:none;padding:13px 19px;margin:-13px 0 32px;font:700 10px/1.5 Inter,Arial,sans-serif;letter-spacing:.085em;transition:background .2s}
+.santos-full-catalog-link:hover{background:#fff}
+@media(prefers-reduced-motion:reduce){.santos-full-catalog-link{transition:none}}
