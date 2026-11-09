@@ -1,0 +1,24 @@
+name: WINF Select Santos — exportar letras Gustavo oficiais
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/winf-santos-typography.yml'
+      - 'scripts/export-winf-santos-type.py'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          python -m pip install --disable-pip-version-check Pillow==11.3.0
+          python scripts/export-winf-santos-type.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: WINF-SELECT-SANTOS-TEXTO-GUSTAVO-OFICIAL
+          path: build/WINF_SELECT_SANTOS_TIPOGRAFIA_OFICIAL_RENDERIZADA.zip
+          if-no-files-found: error
+          retention-days: 14
