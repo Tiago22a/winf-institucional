@@ -36,4 +36,4 @@ for(const city of cfg.cities){
  }
  console.log('✓ '+city.city+'/'+city.uf+': '+entry.images.length+' artes atribuídas e verificadas por nome, EXIF e URL.');
 }
-console.log('✓ Seis cidades mapeadas sem cruzamento de imagens.');
+console.log('✓ Cidades configuradas mapeadas sem cruzamento de imagens.');
