@@ -5,6 +5,7 @@ on:
     paths:
       - '.github/workflows/winf-pilar-social-art.yml'
       - 'scripts/build-winf-pilar-brand.py'
+      - 'scripts/export-winf-pilar-artwork-sprites.py'
   workflow_dispatch:
 
 permissions:
@@ -20,6 +21,16 @@ jobs:
         run: |
           python -m pip install --disable-pip-version-check Pillow==11.3.0 cairosvg==2.8.2
           python scripts/build-winf-pilar-brand.py
+      - name: Exportar somente matrizes tipográficas renderizadas (sem arquivos de fontes)
+        run: |
+          python scripts/export-winf-pilar-artwork-sprites.py
+      - name: Exportar sprites oficiais de tipografia para a composição White
+        uses: actions/upload-artifact@v4
+        with:
+          name: WINF-SELECT-PILAR-SPRITES-SOMENTE-PNG
+          path: build/WINF_PILAR_SPRITES_OFICIAIS_SEM_FONTES.zip
+          if-no-files-found: error
+          retention-days: 7
       - name: Anexar 3 conjuntos e foto de perfil
         uses: actions/upload-artifact@v4
         with:
