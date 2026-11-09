@@ -14,6 +14,7 @@ on:
       - 'scripts/winf-social-sitewide.mjs'
       - 'scripts/check-winf-social-sitewide.mjs'
       - 'config/winf-social-content.json'
+      - '.github/workflows/sync-winf-city-sites.yml'
       - 'index.html'
       - '**/index.html'
       - 'scripts/check-winf-applications.mjs'
