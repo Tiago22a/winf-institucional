@@ -17,7 +17,8 @@ const cityPhotos={
  guaruja:'images/dualreflect-poster-3.webp',
  sorocaba:'images/invisible-poster-1.webp',
  'pilar-do-sul':'images/blackpro-poster-2.webp',
- 'campina-grande':'images/blackpro-poster-1.webp'
+ 'campina-grande':'images/blackpro-poster-1.webp',
+ cuiaba:'images/dualreflect-poster-1.webp'
 };
 const imgDir=resolve(root,'images/og');
 mkdirSync(imgDir,{recursive:true});
