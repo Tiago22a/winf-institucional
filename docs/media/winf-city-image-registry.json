@@ -1,0 +1,198 @@
+{
+  "schema": "winf-city-media-v1",
+  "note": "Identidade regional e controle editorial; fotos de base podem ser ilustrativas. EXIF/IPTC pode ser removido por plataformas, por isso o arquivo e o cadastro definem a origem.",
+  "cities": [
+    {
+      "id": "santos-sp",
+      "city": "Santos",
+      "uf": "SP",
+      "origin": "santos",
+      "route": "/pelicula-de-controle-solar-santos-sp/",
+      "localStatus": "atendimento a confirmar",
+      "folder": "assets/cidades/santos-sp/",
+      "images": [
+        {
+          "type": "capa-social-da-cidade",
+          "page": "https://winf.com.br/pelicula-de-controle-solar-santos-sp/",
+          "image": "images/og/winf-select-santos-1200x630.jpg",
+          "photoSource": "images/dualreflect-poster-2.webp",
+          "photoType": "imagem ilustrativa de arquitetura",
+          "cityTag": "WINF_SELECT_CITY=santos-sp",
+          "alt": "WINF Select Santos/SP — MANTENHA A VISTA. CONTROLE O CALOR.",
+          "usage": [
+            "site",
+            "whatsapp-link-preview",
+            "redes-compartilhamento"
+          ]
+        },
+        {
+          "type": "guia-local",
+          "page": "https://winf.com.br/pelicula-de-controle-solar-santos-sp/janelas-residenciais/",
+          "image": "images/og/winf-share-pelicula-de-controle-solar-santos-sp-janelas-residenciais-1200x630.jpg",
+          "photoSource": "images/dualreflect-poster-2.webp",
+          "photoType": "imagem ilustrativa de arquitetura",
+          "cityTag": "WINF_SELECT_CITY=santos-sp",
+          "alt": "WINF Select Santos/SP — PELÍCULA PARA JANELAS RESIDENCIAIS",
+          "usage": [
+            "site",
+            "whatsapp-link-preview",
+            "redes-compartilhamento"
+          ]
+        },
+        {
+          "type": "guia-local",
+          "page": "https://winf.com.br/pelicula-de-controle-solar-santos-sp/privacidade/",
+          "image": "images/og/winf-share-pelicula-de-controle-solar-santos-sp-privacidade-1200x630.jpg",
+          "photoSource": "images/dualreflect-poster-2.webp",
+          "photoType": "imagem ilustrativa de arquitetura",
+          "cityTag": "WINF_SELECT_CITY=santos-sp",
+          "alt": "WINF Select Santos/SP — PELÍCULA DE PRIVACIDADE PARA VIDROS",
+          "usage": [
+            "site",
+            "whatsapp-link-preview",
+            "redes-compartilhamento"
+          ]
+        },
+        {
+          "type": "guia-local",
+          "page": "https://winf.com.br/pelicula-de-controle-solar-santos-sp/sacadas-varandas/",
+          "image": "images/og/winf-share-pelicula-de-controle-solar-santos-sp-sacadas-varandas-1200x630.jpg",
+          "photoSource": "images/dualreflect-poster-2.webp",
+          "photoType": "imagem ilustrativa de arquitetura",
+          "cityTag": "WINF_SELECT_CITY=santos-sp",
+          "alt": "WINF Select Santos/SP — PELÍCULA PARA SACADA E VARANDA EM S",
+          "usage": [
+            "site",
+            "whatsapp-link-preview",
+            "redes-compartilhamento"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "praia-grande-sp",
+      "city": "Praia Grande",
+      "uf": "SP",
+      "origin": "praia-grande",
+      "route": "/pelicula-de-controle-solar-praia-grande-sp/",
+      "localStatus": "atendimento a confirmar",
+      "folder": "assets/cidades/praia-grande-sp/",
+      "images": [
+        {
+          "type": "capa-social-da-cidade",
+          "page": "https://winf.com.br/pelicula-de-controle-solar-praia-grande-sp/",
+          "image": "images/og/winf-select-praia-grande-1200x630.jpg",
+          "photoSource": "images/invisible-poster-2.webp",
+          "photoType": "imagem ilustrativa de arquitetura",
+          "cityTag": "WINF_SELECT_CITY=praia-grande-sp",
+          "alt": "WINF Select Praia Grande/SP — SUA VISTA MERECE MAIS CONFORTO.",
+          "usage": [
+            "site",
+            "whatsapp-link-preview",
+            "redes-compartilhamento"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "guaruja-sp",
+      "city": "Guarujá",
+      "uf": "SP",
+      "origin": "guaruja",
+      "route": "/pelicula-de-controle-solar-guaruja-sp/",
+      "localStatus": "atendimento a confirmar",
+      "folder": "assets/cidades/guaruja-sp/",
+      "images": [
+        {
+          "type": "capa-social-da-cidade",
+          "page": "https://winf.com.br/pelicula-de-controle-solar-guaruja-sp/",
+          "image": "images/og/winf-select-guaruja-1200x630.jpg",
+          "photoSource": "images/dualreflect-poster-3.webp",
+          "photoType": "imagem ilustrativa de arquitetura",
+          "cityTag": "WINF_SELECT_CITY=guaruja-sp",
+          "alt": "WINF Select Guarujá/SP — MAIS PRIVACIDADE. MENOS INCÔMODO.",
+          "usage": [
+            "site",
+            "whatsapp-link-preview",
+            "redes-compartilhamento"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sorocaba-sp",
+      "city": "Sorocaba",
+      "uf": "SP",
+      "origin": "sorocaba",
+      "route": "/insulfilm-residencial-sorocaba-sp/",
+      "localStatus": "atendimento a confirmar",
+      "folder": "assets/cidades/sorocaba-sp/",
+      "images": [
+        {
+          "type": "capa-social-da-cidade",
+          "page": "https://winf.com.br/insulfilm-residencial-sorocaba-sp/",
+          "image": "images/og/winf-select-sorocaba-1200x630.jpg",
+          "photoSource": "images/invisible-poster-1.webp",
+          "photoType": "imagem ilustrativa de arquitetura",
+          "cityTag": "WINF_SELECT_CITY=sorocaba-sp",
+          "alt": "WINF Select Sorocaba/SP — SUA CASA CLARA. SEU CONFORTO EM DIA.",
+          "usage": [
+            "site",
+            "whatsapp-link-preview",
+            "redes-compartilhamento"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pilar-do-sul-sp",
+      "city": "Pilar do Sul",
+      "uf": "SP",
+      "origin": "pilar-do-sul",
+      "route": "/pelicula-de-controle-solar-pilar-do-sul-sp/",
+      "localStatus": "atendimento a confirmar",
+      "folder": "assets/cidades/pilar-do-sul-sp/",
+      "images": [
+        {
+          "type": "capa-social-da-cidade",
+          "page": "https://winf.com.br/pelicula-de-controle-solar-pilar-do-sul-sp/",
+          "image": "images/og/winf-select-pilar-do-sul-1200x630.jpg",
+          "photoSource": "images/blackpro-poster-2.webp",
+          "photoType": "imagem ilustrativa de arquitetura",
+          "cityTag": "WINF_SELECT_CITY=pilar-do-sul-sp",
+          "alt": "WINF Select Pilar do Sul/SP — A LUZ ENTRA. O CONFORTO FICA.",
+          "usage": [
+            "site",
+            "whatsapp-link-preview",
+            "redes-compartilhamento"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "campina-grande-pb",
+      "city": "Campina Grande",
+      "uf": "PB",
+      "origin": "campina-grande",
+      "route": "/pelicula-de-controle-solar-campina-grande-pb/",
+      "localStatus": "pré-ativação",
+      "folder": "assets/cidades/campina-grande-pb/",
+      "images": [
+        {
+          "type": "capa-social-da-cidade",
+          "page": "https://winf.com.br/pelicula-de-controle-solar-campina-grande-pb/",
+          "image": "images/og/winf-select-campina-grande-1200x630.jpg",
+          "photoSource": "images/blackpro-poster-1.webp",
+          "photoType": "imagem ilustrativa de arquitetura",
+          "cityTag": "WINF_SELECT_CITY=campina-grande-pb",
+          "alt": "WINF Select Campina Grande/PB — NOVAS POSSIBILIDADES. PARA SEUS VIDROS.",
+          "usage": [
+            "site",
+            "whatsapp-link-preview",
+            "redes-compartilhamento"
+          ]
+        }
+      ]
+    }
+  ]
+}
