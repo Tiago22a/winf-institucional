@@ -9,3 +9,22 @@
 .winf-city-social a{display:inline-block;margin:0 0 24px;color:#fff;text-decoration:none;border-bottom:1px solid #ffffff75;font:700 11px/1.8 Inter,Arial,sans-serif;letter-spacing:.12em}
 .winf-city-social a:is(:hover,:focus-visible){border-bottom-color:#fff}
 @media(max-width:680px){.winf-city-service-strip{align-items:flex-start;flex-direction:column;padding:19px 20px}.winf-city-service-strip p{font-size:12px}.winf-city-hours{font-size:10px;letter-spacing:.09em}}
+
+/* Pacote 2 | Estrutura territorial WINF Select: editorial premium, sem prometer agenda. */
+.winf-territory-local{background:#0a0b0c}
+.winf-territory-local .santos-local-shell{align-items:start}
+.winf-territory-intro{max-width:700px}
+.winf-territory-context{margin:16px 0 22px!important;color:#b9bdc4!important;font-size:13px!important;line-height:1.7!important}
+.winf-territory-zones{display:grid;gap:16px;align-content:start}
+.winf-territory-cluster{padding:26px clamp(18px,3vw,35px);border:1px solid rgba(255,255,255,.28);background:linear-gradient(135deg,#181a1c 0%,#101112 65%,#0e1011 100%);transition:border-color .3s ease,box-shadow .3s ease,transform .3s ease}
+.winf-territory-cluster:hover{border-color:rgba(255,255,255,.53);box-shadow:0 12px 28px rgba(0,0,0,.25)}
+.winf-territory-cluster--secondary{background:#101214;border-color:rgba(255,255,255,.18)}
+.winf-territory-label{font:700 10px/1.5 Inter,Arial,sans-serif!important;letter-spacing:.16em!important;color:#afb5bc!important;margin:0 0 10px!important}
+.winf-territory-cluster h3{font:600 clamp(18px,2vw,25px)/1.25 Inter,Arial,sans-serif!important;letter-spacing:-.025em;color:#fff;margin:0 0 19px!important}
+.winf-territory-tags{margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px;list-style:none}
+.winf-territory-tags li{font:600 11px/1.35 Inter,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#f0f1f3;padding:10px 12px;border:1px solid #ffffff38;background:#17191d;word-break:normal}
+.winf-territory-cluster--secondary .winf-territory-tags li{border-color:#ffffff23;color:#bfc3c9;background:#141517}
+.winf-territory-coverage{margin:24px 0 15px;padding:16px clamp(16px,4vw,30px);border-left:2px solid #cbd0d6;background:#ffffff0c;font:400 13px/1.75 Inter,Arial,sans-serif;color:#b9bec7}
+.winf-territory-coverage strong{color:#fff;font-weight:700}
+@media(max-width:730px){.winf-territory-zones{gap:10px}.winf-territory-cluster{padding:19px 17px}.winf-territory-tags{gap:6px}.winf-territory-tags li{font-size:10px;padding:9px 10px}}
+@media(prefers-reduced-motion:reduce){.winf-territory-cluster{transition:none!important;transform:none!important}}

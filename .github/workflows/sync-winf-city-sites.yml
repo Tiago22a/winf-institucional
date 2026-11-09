@@ -6,6 +6,10 @@ on:
       - 'pelicula-de-controle-solar-santos-sp/index.html'
       - 'config/winf-active-cities.json'
       - 'scripts/sync-winf-city-sites.mjs'
+      - 'config/winf-neighborhoods.json'
+      - 'scripts/winf-city-territory.mjs'
+      - 'scripts/apply-winf-territory-template.mjs'
+      - 'scripts/check-winf-territory-seo.mjs'
       - 'scripts/winf-city-seo.mjs'
       - 'scripts/build-winf-social-images.mjs'
       - 'scripts/check-winf-seo.mjs'
@@ -22,6 +26,11 @@ jobs:
           persist-credentials: true
       - name: Instalar ferramenta de imagem Sharp
         run: npm install --no-save --no-package-lock sharp@0.34.4
+      - name: Atualizar template territorial Santos
+        run: |
+          node --check scripts/winf-city-territory.mjs
+          node --check scripts/apply-winf-territory-template.mjs
+          node scripts/apply-winf-territory-template.mjs
       - name: Gerar 7 imagens sociais premium com logo oficial
         run: |
           node --check scripts/build-winf-social-images.mjs
@@ -34,12 +43,14 @@ jobs:
           node scripts/sync-winf-city-sites.mjs
           node scripts/sync-winf-city-sites.mjs --check
           node scripts/check-winf-seo.mjs
+          node --check scripts/check-winf-territory-seo.mjs
+          node scripts/check-winf-territory-seo.mjs
       - name: Publicar alteracoes compartilhadas
         run: |
-          if ! git diff --quiet -- insulfilm-residencial-sorocaba-sp/index.html pelicula-de-controle-solar-praia-grande-sp/index.html pelicula-de-controle-solar-guaruja-sp/index.html pelicula-de-controle-solar-pilar-do-sul-sp/index.html pelicula-de-controle-solar-campina-grande-pb/index.html || [ -n "$(git ls-files --others --exclude-standard images/og/winf-*-1200x630.jpg)" ]; then
+          if ! git diff --quiet -- pelicula-de-controle-solar-santos-sp/index.html insulfilm-residencial-sorocaba-sp/index.html pelicula-de-controle-solar-praia-grande-sp/index.html pelicula-de-controle-solar-guaruja-sp/index.html pelicula-de-controle-solar-pilar-do-sul-sp/index.html pelicula-de-controle-solar-campina-grande-pb/index.html || [ -n "$(git ls-files --others --exclude-standard images/og/winf-*-1200x630.jpg)" ]; then
             git config user.name "WINF City Sync"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add images/og/winf-*-1200x630.jpg insulfilm-residencial-sorocaba-sp/index.html pelicula-de-controle-solar-praia-grande-sp/index.html pelicula-de-controle-solar-guaruja-sp/index.html pelicula-de-controle-solar-pilar-do-sul-sp/index.html pelicula-de-controle-solar-campina-grande-pb/index.html
+            git add images/og/winf-*-1200x630.jpg pelicula-de-controle-solar-santos-sp/index.html insulfilm-residencial-sorocaba-sp/index.html pelicula-de-controle-solar-praia-grande-sp/index.html pelicula-de-controle-solar-guaruja-sp/index.html pelicula-de-controle-solar-pilar-do-sul-sp/index.html pelicula-de-controle-solar-campina-grande-pb/index.html
             git commit -m "build(cidades): capas OG e SEO sincronizados [skip ci]"
             git push
           else
