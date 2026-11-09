@@ -81,3 +81,19 @@
  .winf-home-header .winf-home-brand-divider{height:19px}
  .winf-home-header .winf-home-brand-signature{font-size:6.5px;letter-spacing:0}
 }
+
+/* HERO GLOBAL 2026 — slogan principal provoca sem substituir a assinatura premium WINF™. */
+.hero-copy .winf-home-hero-eyebrow{font:650 clamp(9px,.9vw,12px)/1.5 Gustavo,Inter,Arial,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:#e3e4e8;text-shadow:0 2px 15px #000;margin:0 0 clamp(16px,2.7vw,36px)}
+.hero-copy .winf-home-statement.winf-home-statement--impact{font:400 clamp(40px,6.65vw,106px)/.99 Gustavo,Inter,Arial,sans-serif;letter-spacing:-.055em;text-transform:uppercase;white-space:normal;display:flex;flex-direction:column;align-items:center;max-width:1200px;gap:0;color:#fff;text-shadow:0 5px 27px #000d;margin:0}
+.hero-copy .winf-home-statement.winf-home-statement--impact>span{display:block;white-space:normal;color:#f0f0f1;font-weight:300}
+.hero-copy .winf-home-hero-promise{font:400 clamp(13px,1.3vw,19px)/1.5 Gustavo,Inter,Arial,sans-serif;letter-spacing:.01em;color:#ebebed;text-shadow:0 2px 14px #000d;margin:clamp(16px,2vw,26px) auto 0;max-width:610px}
+.hero-copy .winf-home-hero-promise+.winf-home-global-slogan{font:550 clamp(9px,.86vw,12px)/1.4 Gustavo,Inter,Arial,sans-serif;letter-spacing:.24em;margin:clamp(15px,2.1vw,25px) 0 0;color:#bcbec4}
+.hero-copy .winf-home-hero-actions{margin-top:clamp(15px,2vw,26px)}
+@media(max-width:660px){
+.hero-copy .winf-home-hero-eyebrow{font-size:9px;letter-spacing:.16em;margin-bottom:18px}
+.hero-copy .winf-home-statement.winf-home-statement--impact{font-size:clamp(30px,7.1vw,46px);letter-spacing:-.047em;line-height:1.08}
+.hero-copy .winf-home-hero-promise{font-size:clamp(13px,3.45vw,16px);line-height:1.52;margin-top:20px}
+.hero-copy .winf-home-hero-promise+.winf-home-global-slogan{font-size:9px;letter-spacing:.12em;margin-top:17px}
+}
+@media(max-width:370px){.hero-copy .winf-home-statement.winf-home-statement--impact{font-size:7vw}}
+@media(prefers-reduced-motion:reduce){.hero-copy .winf-home-hero-eyebrow,.hero-copy .winf-home-statement.winf-home-statement--impact{animation:none}}
