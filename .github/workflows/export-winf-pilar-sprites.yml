@@ -1,0 +1,24 @@
+name: WINF Select Pilar — matrizes oficiais de arte
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/export-winf-pilar-sprites.yml'
+      - 'scripts/export-winf-pilar-artwork-sprites.py'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          python -m pip install --disable-pip-version-check Pillow==11.3.0 cairosvg==2.8.2
+          python scripts/export-winf-pilar-artwork-sprites.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: WINF-PILAR-ARTES-RENDERIZADAS-OFICIAIS
+          path: build/WINF_PILAR_SPRITES_OFICIAIS_SEM_FONTES.zip
+          if-no-files-found: error
+          retention-days: 10
