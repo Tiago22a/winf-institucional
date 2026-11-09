@@ -21,3 +21,21 @@
 .brand-card-media .winf-mark{padding:10px}
 .santos-brand-photo .winf-mark{width:auto;max-width:calc(100% - 30px);font-size:clamp(17px,2.1vw,29px);font-weight:300}
 @media(max-width:680px){.winf-catalog-brands .winf-mark--aerocore,.winf-catalog-paths .winf-mark--aerocore{font-size:18px;letter-spacing:.13em!important}.winf-catalog-brands .winf-mark--neoskin,.winf-catalog-paths .winf-mark--neoskin{font-size:16px;letter-spacing:.15em!important}.winf-catalog-brands .winf-mark--ceramic,.winf-catalog-paths .winf-mark--ceramic{font-size:14px;letter-spacing:.05em!important}.winf-mark--select{gap:4px}.winf-mark--select img{max-width:54px}}
+
+/* Ajustes de encaixe nos três contextos: não redesenha nenhuma logomarca. */
+.brand-card-media .brand-wordmark.winf-mark{
+  position:absolute;inset:0;z-index:4;display:flex;align-items:center;justify-content:center;max-width:none;
+  padding:16px;transform:none;white-space:nowrap;
+}
+.brand-card:hover .brand-wordmark.winf-mark{transform:scale(1.025)}
+.brand-card-media .brand-wordmark.winf-mark--ceramic{white-space:normal}
+.santos-brand-photo>span.winf-mark{position:relative;z-index:3;display:inline-flex;width:auto;max-width:calc(100% - 28px);justify-content:center;align-items:center;padding:0 10px;text-align:center}
+.santos-brand-photo>span.winf-mark--aerocore{font:300 clamp(19px,2.25vw,30px)/1.15 Outfit,Arial,sans-serif;letter-spacing:.2em}
+.santos-brand-photo>span.winf-mark--neoskin{font:300 clamp(19px,2.25vw,29px)/1.15 Outfit,Arial,sans-serif;letter-spacing:.24em}
+.santos-brand-photo>span.winf-mark--ceramic{font:300 clamp(16px,1.85vw,25px)/1.2 Outfit,Arial,sans-serif;letter-spacing:.12em;white-space:normal}
+.winf-catalog-paths .winf-mark,
+.winf-catalog-paths .winf-mark span{padding:0;gap:0;display:inline-flex;align-items:center;flex-direction:row;justify-content:flex-start}
+.winf-catalog-paths .winf-mark{width:100%;max-width:100%;margin-top:1px;margin-bottom:0;flex-wrap:nowrap}
+.winf-catalog-paths .winf-mark sup{flex:none}
+.winf-catalog-brands .winf-mark{width:100%;max-width:100%;align-items:center}
+@media(max-width:600px){.santos-brand-photo>span.winf-mark--aerocore,.santos-brand-photo>span.winf-mark--neoskin{font-size:clamp(16px,4.2vw,24px);letter-spacing:.14em}.santos-brand-photo>span.winf-mark--ceramic{font-size:clamp(13px,3.5vw,20px);letter-spacing:.08em}}
