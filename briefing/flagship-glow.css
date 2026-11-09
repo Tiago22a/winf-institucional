@@ -1,0 +1,88 @@
+/* WINF Partners | Flagship Studio: luz editorial nos três cards.
+   Efeito isolado do restante do briefing para preservar a tipografia oficial. */
+.partners-page #flagship-detail .al-grid--flagship-glow > .al-card {
+  --flagship-glow-x: 50%;
+  --flagship-glow-y: 50%;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #111113;
+  border-color: rgba(255,255,255,.24);
+  transition: border-color .35s ease, box-shadow .35s ease, transform .35s ease;
+}
+.partners-page #flagship-detail .al-grid--flagship-glow > .al-card:nth-child(1) {
+  --flagship-card-image: url('/briefing/media/flagship-showroom-2026.webp');
+}
+.partners-page #flagship-detail .al-grid--flagship-glow > .al-card:nth-child(2) {
+  --flagship-card-image: url('/briefing/media/flagship-operacoes-2026.webp');
+}
+.partners-page #flagship-detail .al-grid--flagship-glow > .al-card:nth-child(3) {
+  --flagship-card-image: url('/briefing/media/flagship-equipe-2026.webp');
+}
+.partners-page #flagship-detail .al-grid--flagship-glow > .al-card::before,
+.partners-page #flagship-detail .al-grid--flagship-glow > .al-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.partners-page #flagship-detail .al-grid--flagship-glow > .al-card::before {
+  z-index: 0;
+  background: var(--flagship-card-image) center / cover no-repeat;
+  filter: grayscale(1) brightness(.72);
+  opacity: 0;
+  transform: scale(1.055);
+  transition: opacity .55s ease, transform .7s cubic-bezier(.2,.7,.2,1);
+}
+.partners-page #flagship-detail .al-grid--flagship-glow > .al-card::after {
+  z-index: 0;
+  background:
+    radial-gradient(330px circle at var(--flagship-glow-x) var(--flagship-glow-y),
+      rgba(255,255,255,.22), rgba(255,255,255,.075) 35%, transparent 72%),
+    linear-gradient(180deg, rgba(10,10,12,.66), rgba(10,10,12,.90));
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+.partners-page #flagship-detail .al-grid--flagship-glow > .al-card > * {
+  position: relative;
+  z-index: 1;
+}
+.partners-page #flagship-detail .al-grid--flagship-glow > .al-card .al-card-index,
+.partners-page #flagship-detail .al-grid--flagship-glow > .al-card h3 {
+  transition: color .3s ease, text-shadow .3s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .partners-page #flagship-detail .al-grid--flagship-glow > .al-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255,255,255,.66);
+    box-shadow: 0 18px 42px rgba(0,0,0,.35), 0 0 26px rgba(255,255,255,.055);
+  }
+  .partners-page #flagship-detail .al-grid--flagship-glow > .al-card:hover::before {
+    opacity: .42;
+    transform: scale(1);
+  }
+  .partners-page #flagship-detail .al-grid--flagship-glow > .al-card:hover::after {
+    opacity: 1;
+  }
+  .partners-page #flagship-detail .al-grid--flagship-glow > .al-card:hover .al-card-index,
+  .partners-page #flagship-detail .al-grid--flagship-glow > .al-card:hover h3 {
+    color: #fff;
+    text-shadow: 0 0 18px rgba(255,255,255,.13);
+  }
+}
+@media (hover: none), (pointer: coarse) {
+  .partners-page #flagship-detail .al-grid--flagship-glow > .al-card::before {
+    opacity: .10;
+    transform: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .partners-page #flagship-detail .al-grid--flagship-glow > .al-card,
+  .partners-page #flagship-detail .al-grid--flagship-glow > .al-card::before,
+  .partners-page #flagship-detail .al-grid--flagship-glow > .al-card::after,
+  .partners-page #flagship-detail .al-grid--flagship-glow > .al-card .al-card-index,
+  .partners-page #flagship-detail .al-grid--flagship-glow > .al-card h3 {
+    transition: none;
+    transform: none;
+  }
+}
