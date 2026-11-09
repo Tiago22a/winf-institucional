@@ -1,0 +1,11 @@
+/* Identidade compartilhada WINF Select: horários e central de atendimento, sites regionais. */
+.winf-city-hours{display:inline-flex;align-items:center;gap:10px;margin:-5px 0 24px;padding:10px 15px;border:1px solid #ffffff58;color:#f4f4f4;background:#08090a93;font:700 11px/1.5 Inter,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.winf-city-hours:before{content:"";display:inline-block;width:7px;height:7px;background:#e1e5e8;border-radius:50%;box-shadow:0 0 12px #fff9}
+.winf-city-service-strip{display:flex;align-items:center;justify-content:space-between;gap:22px;background:#101112;border-top:1px solid #ffffff35;border-bottom:1px solid #ffffff30;padding:21px clamp(22px,5vw,70px);color:#eceff3}
+.winf-city-service-strip>div{display:flex;flex-direction:column;gap:4px;flex:0 0 auto}
+.winf-city-service-strip strong{font:700 12px/1.5 Inter,Arial,sans-serif;letter-spacing:.14em}
+.winf-city-service-strip span{color:#a6aab0;font:700 11px/1.4 Inter,Arial,sans-serif;letter-spacing:.12em}
+.winf-city-service-strip p{margin:0;max-width:750px;color:#c9cbd0;font:400 13px/1.6 Inter,Arial,sans-serif}
+.winf-city-social a{display:inline-block;margin:0 0 24px;color:#fff;text-decoration:none;border-bottom:1px solid #ffffff75;font:700 11px/1.8 Inter,Arial,sans-serif;letter-spacing:.12em}
+.winf-city-social a:is(:hover,:focus-visible){border-bottom-color:#fff}
+@media(max-width:680px){.winf-city-service-strip{align-items:flex-start;flex-direction:column;padding:19px 20px}.winf-city-service-strip p{font-size:12px}.winf-city-hours{font-size:10px;letter-spacing:.09em}}

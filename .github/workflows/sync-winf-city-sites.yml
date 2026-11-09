@@ -1,0 +1,35 @@
+name: WINF Select — Sincronizar sites de cidades
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'pelicula-de-controle-solar-santos-sp/index.html'
+      - 'config/winf-active-cities.json'
+      - 'scripts/sync-winf-city-sites.mjs'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Conferir script e sincronizar paginas regionais
+        run: |
+          node --check scripts/sync-winf-city-sites.mjs
+          node scripts/sync-winf-city-sites.mjs
+          node scripts/sync-winf-city-sites.mjs --check
+      - name: Publicar alteracoes compartilhadas
+        run: |
+          if ! git diff --quiet -- insulfilm-residencial-sorocaba-sp/index.html pelicula-de-controle-solar-praia-grande-sp/index.html pelicula-de-controle-solar-guaruja-sp/index.html pelicula-de-controle-solar-pilar-do-sul-sp/index.html pelicula-de-controle-solar-campina-grande-pb/index.html; then
+            git config user.name "WINF City Sync"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add insulfilm-residencial-sorocaba-sp/index.html pelicula-de-controle-solar-praia-grande-sp/index.html pelicula-de-controle-solar-guaruja-sp/index.html pelicula-de-controle-solar-pilar-do-sul-sp/index.html pelicula-de-controle-solar-campina-grande-pb/index.html
+            git commit -m "build(cidades): sincroniza paginas com template Santos [skip ci]"
+            git push
+          else
+            echo "Sites sincronizados, nenhuma mudanca necessaria."
+          fi

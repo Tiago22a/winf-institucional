@@ -1,0 +1,67 @@
+{
+  "model": "WINF Select™ / Santos como template compartilhado",
+  "hours": "07:00–22:00",
+  "template": "pelicula-de-controle-solar-santos-sp/index.html",
+  "cities": [
+    {
+      "id": "santos-sp",
+      "city": "Santos",
+      "uf": "SP",
+      "origin": "santos",
+      "slug": "pelicula-de-controle-solar-santos-sp",
+      "phone": "5513981113001",
+      "instagram": "winfselect.santos",
+      "note": "Santos, Praia Grande e Guarujá são atendidos pela central integrada da Baixada Santista (humano + IA)."
+    },
+    {
+      "id": "praia-grande-sp",
+      "city": "Praia Grande",
+      "uf": "SP",
+      "origin": "praia-grande",
+      "slug": "pelicula-de-controle-solar-praia-grande-sp",
+      "phone": "5513981113001",
+      "instagram": null,
+      "note": "A central integrada da Baixada Santista recebe solicitações de Praia Grande, Santos e Guarujá. Execução conforme confirmação de agenda."
+    },
+    {
+      "id": "guaruja-sp",
+      "city": "Guarujá",
+      "uf": "SP",
+      "origin": "guaruja",
+      "slug": "pelicula-de-controle-solar-guaruja-sp",
+      "phone": "5513981113001",
+      "instagram": null,
+      "note": "A central integrada da Baixada Santista recebe solicitações de Guarujá, Santos e Praia Grande. Execução conforme confirmação de agenda."
+    },
+    {
+      "id": "sorocaba-sp",
+      "city": "Sorocaba",
+      "uf": "SP",
+      "origin": "sorocaba",
+      "slug": "insulfilm-residencial-sorocaba-sp",
+      "phone": "5515997909049",
+      "instagram": "winfselect.sorocaba",
+      "note": "Atendimento da central Sorocaba/Pilar do Sul pelo WhatsApp regional. Instalação conforme avaliação e disponibilidade."
+    },
+    {
+      "id": "pilar-do-sul-sp",
+      "city": "Pilar do Sul",
+      "uf": "SP",
+      "origin": "pilar-do-sul",
+      "slug": "pelicula-de-controle-solar-pilar-do-sul-sp",
+      "phone": "5515997909049",
+      "instagram": "winfselect.pilardosul",
+      "note": "Atendimento da central Sorocaba/Pilar do Sul pelo mesmo WhatsApp regional. Instalação conforme avaliação e disponibilidade."
+    },
+    {
+      "id": "campina-grande-pb",
+      "city": "Campina Grande",
+      "uf": "PB",
+      "origin": "campina-grande",
+      "slug": "pelicula-de-controle-solar-campina-grande-pb",
+      "phone": "5513981113001",
+      "instagram": null,
+      "note": "Unidade em pré-ativação: recebimento pela central oficial WINF; cobertura e agenda local dependem de confirmação."
+    }
+  ]
+}

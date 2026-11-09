@@ -584,14 +584,14 @@ body.winf-catalog-page #catalogo-produtos .product-card:hover .card-img-inner{fi
 // ===================== LOGICA DO PARAMETRO WHATSAPP PARTNER =====================
 const urlParams = new URLSearchParams(window.location.search);
 const partnerParam = (urlParams.get('partner')||'').replace(/\D/g,'');
-const WHATSAPP_NUMBER = /^\d{11,13}$/.test(partnerParam) ? partnerParam : '5513997815375';
-const CATALOG_ORIGIN = (urlParams.get('origem')||'').toLowerCase() || (WHATSAPP_NUMBER==='5513981113001'?'santos':WHATSAPP_NUMBER==='5515997909049'?'sorocaba':'');
-const ORIGIN_PAGE = CATALOG_ORIGIN==='santos'?'/pelicula-de-controle-solar-santos-sp/':CATALOG_ORIGIN==='sorocaba'?'/insulfilm-residencial-sorocaba-sp/':'';
+const WHATSAPP_NUMBER = /^55\d{10,11}$/.test(partnerParam) ? partnerParam : '5513981113001';
+const CATALOG_ORIGIN = (urlParams.get('origem')||'').toLowerCase().replace(/[^a-z-]/g,'').slice(0,36); // Sem origem explícita, 5513981113001 é contato GLOBAL, não Santos.
+const ORIGIN_PAGE = ({santos:'/pelicula-de-controle-solar-santos-sp/', 'praia-grande':'/pelicula-de-controle-solar-praia-grande-sp/', guaruja:'/pelicula-de-controle-solar-guaruja-sp/', sorocaba:'/insulfilm-residencial-sorocaba-sp/', 'pilar-do-sul':'/pelicula-de-controle-solar-pilar-do-sul-sp/', 'campina-grande':'/pelicula-de-controle-solar-campina-grande-pb/'})[CATALOG_ORIGIN]||'';
 function productLink(p) {
   const base=getProductPage(p);
   const params=new URLSearchParams();
   if(CATALOG_ORIGIN)params.set('origem',CATALOG_ORIGIN);
-  if(partnerParam && /^\d{11,13}$/.test(partnerParam))params.set('partner',partnerParam);
+  if(partnerParam && /^55\d{10,11}$/.test(partnerParam))params.set('partner',partnerParam);
   const variants={'aerocore-spectre-05':'05','aerocore-spectre-15':'15','aerocore-spectre-35':'35', 'aerocore-phantom-05':'05','aerocore-phantom-15':'15','aerocore-phantom-35':'35', 'select-invisible-70':'70','select-invisible-80':'80','aerocore-ghost-05':'05','aerocore-ghost-15':'15','aerocore-ghost-35':'35','aerocore-wraith70':'70','neoskin-bunker150':'BKR-150','neoskin-apocalypse190':'APX-190'};
   if(variants[p.id])params.set('variant',variants[p.id]);
   return base+(params.size?'?'+params.toString():'');
@@ -1010,7 +1010,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
   if(ORIGIN_PAGE){
-    const originLabel=CATALOG_ORIGIN==='santos'?'Santos':'Sorocaba / Região 015';
+    const originLabel=({santos:'Santos','praia-grande':'Praia Grande',guaruja:'Guarujá',sorocaba:'Sorocaba','pilar-do-sul':'Pilar do Sul','campina-grande':'Campina Grande'})[CATALOG_ORIGIN]||'WINF';
     const notice=document.getElementById('winf-catalog-return');
     if(notice){
       notice.hidden=false;
