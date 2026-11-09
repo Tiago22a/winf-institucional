@@ -30,6 +30,12 @@ export const CITY_SEO={
     "socialTitle": "WINF Select™ Pilar do Sul | Conforto para vidros",
     "socialDesc": "Películas arquitetônicas para residências e projetos em Pilar do Sul. Conheça opções para luz, calor e privacidade."
   },
+  "cuiaba": {
+    "title": "Película de Controle Solar em Cuiabá MT | WINF Select™",
+    "description": "Películas para vidros e insulfilm residencial em Cuiabá MT. Conheça soluções para sacadas, janelas e fachadas e consulte a cobertura local.",
+    "socialTitle": "WINF Select™ Cuiabá | Películas arquitetônicas",
+    "socialDesc": "Controle solar, luminosidade e privacidade para vidros em Cuiabá. Conheça a WINF Select™ e consulte disponibilidade."
+  },
   "campina-grande": {
     "title": "Película de Controle Solar em Campina Grande PB | WINF Select™",
     "description": "Películas para vidros e controle solar em Campina Grande. Conheça WINF Select™ e consulte a central; unidade local em pré-ativação.",
@@ -42,7 +48,7 @@ export function applyCitySeo(html,city){
   if(!text)throw new Error('Cidade sem texto SEO: '+city.origin);
   const esc=s=>String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
   const uri='https://winf.com.br/'+city.slug+'/';
-  const image='https://winf.com.br/images/og/winf-select-'+city.origin+'-1200x630.jpg';
+  const image=city.origin==='cuiaba' ? 'https://winf.com.br/images/og/winf-select-santos-1200x630.jpg' : 'https://winf.com.br/images/og/winf-select-'+city.origin+'-1200x630.jpg';
   const imageAlt='Imagem ilustrativa de arquitetura premium com vidros amplos para a WINF Select™ em '+city.city+'/'+city.uf;
   const putMeta=(kind,key,value)=>{
      const rx=new RegExp('<meta\\s+'+kind+'="'+key.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'"\\s+content="[^"]*"\\s*\\/?>','g');
