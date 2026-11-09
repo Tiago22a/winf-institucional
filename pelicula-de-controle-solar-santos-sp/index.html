@@ -44,7 +44,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap">
 <link rel="stylesheet" href="/css/winf-return.css?v=20261104-5">
 <script defer src="/js/winf-return.js?v=20261104-scroll-3"></script>
-<link rel="stylesheet" href="/css/winf-home-roadmap.css?v=20261107-1"><link rel="stylesheet" href="/aerocore/assets/nav-roadmap.css?v=20261107-1"><link rel="stylesheet" href="/css/winf-global-menu.css?v=20261108-published-1"><link rel="stylesheet" href="/css/winf-home-header.css?v=20261108-select-header-4"><link rel="stylesheet" href="/css/winf-city-unit.css?v=20261109-product-cta-2"></head>
+<link rel="stylesheet" href="/css/winf-home-roadmap.css?v=20261107-1"><link rel="stylesheet" href="/aerocore/assets/nav-roadmap.css?v=20261107-1"><link rel="stylesheet" href="/css/winf-global-menu.css?v=20261108-published-1"><link rel="stylesheet" href="/css/winf-home-header.css?v=20261108-select-header-4"><link rel="stylesheet" href="/css/winf-city-unit.css?v=20261109-quote-lite2"></head>
 <body class="bg-black text-white antialiased selection:bg-white/20 selection:text-white">
 
 
@@ -240,21 +240,24 @@
         </div>
       </section>
 
-      <section id="orcamento" class="relative z-10 flex min-h-[80vh] items-center justify-center border-t border-white/10 bg-black/30 px-6 py-32 text-center backdrop-blur-[1px] sm:px-12 md:px-20">
+      <section id="orcamento" class="relative z-10 flex items-center justify-center border-t border-white/10 bg-black/30 px-6 py-20 text-center backdrop-blur-[1px] sm:px-12 md:px-20">
         <div class="mx-auto max-w-4xl reveal">
           <div class="section-label mb-6">ORÇAMENTO / SANTOS SP</div>
-          <h2 class="mb-6 text-4xl font-light uppercase leading-tight tracking-tight text-white sm:text-6xl md:text-7xl">Sua varanda merece mais.<br /><span class="font-extralight text-zinc-300">Conte o que você precisa.</span></h2>
-          <p class="mx-auto mb-12 max-w-2xl text-sm font-light text-zinc-300 sm:text-base">Conte o que deseja melhorar, seu bairro em Santos e a metragem aproximada. Preparamos a mensagem para o atendimento da unidade. Você também pode enviar fotos do vidro.</p>
-          <form id="santos-quote-form" data-whatsapp="5513981113001" data-city="Santos" class="santos-quote-form" aria-label="Solicitar orçamento em Santos">
-<label>O que você precisa?
-<select id="santos-quote-need" name="need" required><option value="">Selecione uma opção</option><option>Reduzir calor na varanda</option><option>Manter a vista com transparência</option><option>Mais privacidade</option><option>Reduzir reflexo e luminosidade</option><option>Proteção e segurança</option><option>Invisible™</option><option>Dual Reflect™</option><option>BlackPro™</option><option>SecurityBlinder™</option><option>AeroCore™</option><option>NeoSkin™</option><option>Ceramic Armoring™</option><option>Película para sacada e varanda</option><option>Película para janelas residenciais</option><option>Película de privacidade</option><option>Outra necessidade</option><option>Miniblind &amp; Venetian™</option></select></label>
+          <h2 class="mb-6 text-4xl font-light uppercase leading-tight tracking-tight text-white sm:text-6xl md:text-7xl">Quer facilitar seu orçamento?<br /><span class="font-extralight text-zinc-300">Conte o que você precisa.</span></h2>
+          <p class="mx-auto mb-12 max-w-2xl text-sm font-light text-zinc-300 sm:text-base">Descreva o que deseja melhorar e nós organizamos sua solicitação para a equipe WINF Santos. Prefere conversar diretamente? O WhatsApp está logo abaixo.</p>
+          <div class="santos-fast-contact"><a href="https://wa.me/5513981113001?text=Ol%C3%A1!%20Vim%20pelo%20site%20WINF%20Santos.%20Quero%20conversar%20com%20um%20atendente%20sobre%20pel%C3%ADculas%20e%20or%C3%A7amento%20para%20meu%20im%C3%B3vel%20em%20Santos." target="_blank" rel="noopener noreferrer" class="santos-talk-now">FALAR COM ATENDENTE AGORA <span aria-hidden="true">↗</span></a><span>OU CONTE SOBRE SEU PROJETO AQUI EMBAIXO ↓</span></div>
+<form id="santos-quote-form" data-whatsapp="5513981113001" data-city="Santos" class="santos-quote-form" aria-label="Solicitar orçamento em Santos">
+<label>Já sabe qual película prefere? (opcional)
+<select id="santos-quote-need" name="need"><option value="">Ainda não sei / quero orientação</option><option>Reduzir calor na varanda</option><option>Manter a vista com transparência</option><option>Mais privacidade</option><option>Reduzir reflexo e luminosidade</option><option>Proteção e segurança</option><option>Invisible™</option><option>Dual Reflect™</option><option>BlackPro™</option><option>SecurityBlinder™</option><option>AeroCore™</option><option>NeoSkin™</option><option>Ceramic Armoring™</option><option>Película para sacada e varanda</option><option>Película para janelas residenciais</option><option>Película de privacidade</option><option>Outra necessidade</option><option>Miniblind &amp; Venetian™</option></select></label>
+<label class="santos-quote-message-label">Conte o que você precisa
+<textarea id="santos-quote-details" name="details" rows="3" maxlength="900" required placeholder="Ex.: Minha varanda recebe muito sol à tarde. Quero diminuir o calor, manter a vista e saber o valor para instalar a película."></textarea></label>
 <label>Seu bairro em Santos
 <input id="santos-quote-neighborhood" type="text" name="neighborhood" autocomplete="address-level3" placeholder="Ex.: Gonzaga, Boqueirão, Embaré" maxlength="80"></label>
 <label>Metragem aproximada (opcional)
 <input id="santos-quote-area" type="text" name="area" placeholder="Ex.: sacada com 10 m²" maxlength="80"></label>
 <button type="submit" class="santos-quote-submit">PEDIR ORÇAMENTO NO WHATSAPP ↗</button>
-<p>Você poderá revisar a mensagem antes de enviá-la pelo WhatsApp.</p></form>
-<p class="santos-direct-whatsapp"><a href="https://wa.me/5513981113001?text=Ol%C3%A1%21%20Quero%20atendimento%20sobre%20pel%C3%ADculas%20na%20cidade%20de%20Santos." target="_blank" rel="noopener noreferrer">PREFIRO FALAR DIRETAMENTE COM A EQUIPE ↗</a></p>
+<p>Ao continuar, o WhatsApp abre com sua mensagem já preenchida. Você revisa e confirma o envio.</p></form>
+<p class="santos-direct-whatsapp"><a href="https://wa.me/5513981113001?text=Ol%C3%A1%21%20Quero%20atendimento%20sobre%20pel%C3%ADculas%20na%20cidade%20de%20Santos." target="_blank" rel="noopener noreferrer">TAMBÉM POSSO FALAR DIRETAMENTE NO WHATSAPP ↗</a></p>
         </div>
       </section>
 
@@ -352,6 +355,6 @@
   <script src="/script.js"></script>
 
     <script charset="utf-8" src="/js/winf-footer.js?v=20261103-reference-2" defer></script>
-  <script defer src="/js/winf-city-unit.js?v=20261108-region-2"></script></body>
+  <script defer src="/js/winf-city-unit.js?v=20261109-quote-lite2"></script></body>
 </html>
 
