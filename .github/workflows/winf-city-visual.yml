@@ -20,7 +20,18 @@ jobs:
         run: |
           npm install --no-save --no-package-lock playwright@1.56.1
           npx playwright install --with-deps chromium
+      - name: Servir o código publicado localmente para evitar bloqueios de bot do Cloudflare
+        run: |
+          nohup python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/winf-site-http.log 2>&1 &
+          for i in {1..20}; do
+            if curl -fsS http://127.0.0.1:8765/ > /dev/null; then exit 0; fi
+            sleep 1
+          done
+          cat /tmp/winf-site-http.log
+          exit 1
       - name: Testar 7 cidades em desktop e celular
+        env:
+          WINF_TEST_BASE: http://127.0.0.1:8765
         run: node scripts/test-winf-city-visual.mjs
       - name: Anexar evidências de layout e relatório
         if: always()
