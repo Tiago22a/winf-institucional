@@ -1,5 +1,5 @@
 /* WINF™ — capas OG 1200x630 com fotos internas e logomarca vetorial oficial.
- * Social cards aprovados para as seis cidades e o catálogo global.
+ * Social cards por território configurado e catálogo global.
  * Imagens de arquitetura ilustrativas, não fotografias de obras executadas.
  */
 import {readFileSync,mkdirSync} from 'node:fs';
@@ -15,6 +15,7 @@ const source={
  sorocaba:'images/invisible-poster-1.webp',
  'pilar-do-sul':'images/blackpro-poster-2.webp',
  'campina-grande':'images/blackpro-poster-1.webp',
+ cuiaba:'images/dualreflect-poster-1.webp',
  catalogo:'images/dualreflect-poster-1.webp'
 };
 const xml=v=>String(v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
