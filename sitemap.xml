@@ -342,5 +342,9 @@
   <priority>0.85</priority>
   <image:image><image:loc>https://winf.com.br/images/og/winf-select-campina-grande-1200x630.jpg</image:loc><image:title>WINF Select Campina Grande — proteção e conforto para vidros</image:title></image:image>
 </url>
+  <url><loc>https://winf.com.br/aplicacoes/sacadas-varandas/</loc><lastmod>2026-11-09</lastmod><changefreq>monthly</changefreq><priority>0.72</priority></url>
+  <url><loc>https://winf.com.br/aplicacoes/janelas-fachadas/</loc><lastmod>2026-11-09</lastmod><changefreq>monthly</changefreq><priority>0.72</priority></url>
+  <url><loc>https://winf.com.br/aplicacoes/privacidade/</loc><lastmod>2026-11-09</lastmod><changefreq>monthly</changefreq><priority>0.72</priority></url>
+  <url><loc>https://winf.com.br/aplicacoes/seguranca-vidros/</loc><lastmod>2026-11-09</lastmod><changefreq>monthly</changefreq><priority>0.72</priority></url>
 </urlset>
 
