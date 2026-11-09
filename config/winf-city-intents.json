@@ -1,0 +1,191 @@
+{
+  "purpose": "Cluster semântico por intenção real de serviço; não implica disponibilidade imediata em todos os bairros",
+  "territories": {
+    "santos": {
+      "headline": "Mais conforto nos vidros de Santos, sem escolher no escuro.",
+      "intro": "Em um apartamento com sacada envidraçada, a prioridade pode ser reduzir o incômodo do sol mantendo a vista. Já uma janela voltada para imóveis vizinhos pode pedir mais privacidade. Em cada caso, a película adequada depende do vidro, da orientação da fachada e das regras do condomínio.",
+      "segments": [
+        [
+          "Sacadas e varandas",
+          "Vista e calor",
+          "Para quem quer continuar aproveitando a varanda, mas percebe desconforto em horários de sol forte.",
+          "sacadas-varandas"
+        ],
+        [
+          "Apartamentos",
+          "Luminosidade e privacidade",
+          "Para salas e quartos com exposição solar, vista para a rua ou prédios próximos.",
+          "privacidade"
+        ],
+        [
+          "Escritórios e vitrines",
+          "Trabalho e exposição",
+          "Para controlar luminosidade em mesas, monitores e fachadas comerciais, sem ignorar a aparência exterior.",
+          "janelas-fachadas"
+        ],
+        [
+          "Vidros de uso comum",
+          "Avaliação de segurança",
+          "Para áreas condominiais onde tipo de vidro, fixação e retenção de fragmentos exigem avaliação específica.",
+          "seguranca-vidros"
+        ]
+      ],
+      "search": "As buscas por insulfilm residencial em Santos, película para sacada e película arquitetônica podem levar a soluções muito diferentes. Compare a necessidade real antes de decidir pelo nível de escurecimento."
+    },
+    "praia-grande": {
+      "headline": "Sua varanda em Praia Grande merece mais que vidro escuro.",
+      "intro": "Em edifícios residenciais, o excesso de luz e o calor junto às janelas podem mudar a forma como a família usa sala e varanda. Uma película mais escura não é necessariamente a melhor escolha: a vista, a orientação solar e as regras do prédio entram no projeto.",
+      "segments": [
+        [
+          "Varandas de apartamentos",
+          "Luz e vista",
+          "Para vidros amplos com incidência solar direta, mantendo atenção à fachada e à paisagem.",
+          "sacadas-varandas"
+        ],
+        [
+          "Salas e quartos",
+          "Conforto com discrição",
+          "Para quem quer reduzir o incômodo da exposição visual sem abandonar a iluminação natural.",
+          "privacidade"
+        ],
+        [
+          "Comércio local",
+          "Ambiente mais agradável",
+          "Para vitrines e ambientes de atendimento onde controle solar e apresentação visual importam.",
+          "janelas-fachadas"
+        ],
+        [
+          "Áreas compartilhadas",
+          "Especificação correta",
+          "Para vidros em condomínios que necessitam análise do conjunto e dos objetivos de segurança.",
+          "seguranca-vidros"
+        ]
+      ],
+      "search": "Quem procura película para sacada em Praia Grande ou insulfilm em apartamento normalmente quer conforto e privacidade, não apenas vidro preto. A especificação deve acompanhar essa intenção."
+    },
+    "guaruja": {
+      "headline": "No Guarujá, proteja o conforto sem perder a paisagem.",
+      "intro": "Casas e apartamentos próximos à orla, imóveis de temporada e escritórios podem ter orientações de vidro muito diferentes. Ao avaliar uma película, considere a entrada de luz, a privacidade entre imóveis e a compatibilidade com a fachada.",
+      "segments": [
+        [
+          "Casas envidraçadas",
+          "Transparência com controle",
+          "Para quem prefere ambientes abertos, mas busca mais conforto junto aos vidros.",
+          "janelas-fachadas"
+        ],
+        [
+          "Varandas e sacadas",
+          "Conforto junto à vista",
+          "Para sacadas em apartamentos onde a paisagem importa tanto quanto a sensação térmica.",
+          "sacadas-varandas"
+        ],
+        [
+          "Quartos e ambientes íntimos",
+          "Privacidade planejada",
+          "Para combinar proteção visual e luminosidade, considerando a diferença entre dia e noite.",
+          "privacidade"
+        ],
+        [
+          "Vidros em áreas comuns",
+          "Segurança sob medida",
+          "Para analisar retenção de fragmentos e condições de fixação, sem confundir película com blindagem.",
+          "seguranca-vidros"
+        ]
+      ],
+      "search": "Película espelhada no Guarujá, insulfilm residencial e película para vidro não são sinônimos de um único acabamento. O efeito visual precisa ser entendido em cada situação de luz."
+    },
+    "sorocaba": {
+      "headline": "Seu espaço em Sorocaba pode ser mais confortável todos os dias.",
+      "intro": "Em casas, apartamentos e ambientes de trabalho, o vidro influencia luz, calor percebido e privacidade. Na escolha entre películas claras, escuras e refletivas, o ideal é partir da rotina do ambiente e não somente da aparência.",
+      "segments": [
+        [
+          "Casas e condomínios",
+          "Rotina sem incômodo",
+          "Para salas, dormitórios e corredores que recebem sol em horários diferentes.",
+          "janelas-fachadas"
+        ],
+        [
+          "Home office",
+          "Luminosidade equilibrada",
+          "Para quem trabalha perto de janelas e quer avaliar reflexos, iluminação e conforto.",
+          "janelas-fachadas"
+        ],
+        [
+          "Sacadas e varandas",
+          "Aproveite melhor o espaço",
+          "Para ambientes de convivência com vidros amplos e necessidade de controle solar.",
+          "sacadas-varandas"
+        ],
+        [
+          "Escritórios e consultórios",
+          "Discrição profissional",
+          "Para salas comerciais onde exposição visual e privacidade precisam ser planejadas.",
+          "privacidade"
+        ]
+      ],
+      "search": "Insulfilm residencial em Sorocaba, película térmica para janela e window film são buscas que podem indicar objetivos distintos. Informe o tipo de vidro e o horário de incidência do sol antes de escolher."
+    },
+    "pilar-do-sul": {
+      "headline": "Em Pilar do Sul, mais luz pode conviver com mais conforto.",
+      "intro": "Residências e chácaras podem valorizar janelas amplas e contato visual com a paisagem. Nessas situações, a escolha da película deve considerar a transparência desejada, a incidência solar e o uso de cada cômodo.",
+      "segments": [
+        [
+          "Casas e chácaras",
+          "Paisagem preservada",
+          "Para quem busca orientação sobre películas de controle solar mantendo ambientes iluminados.",
+          "janelas-fachadas"
+        ],
+        [
+          "Varandas envidraçadas",
+          "Convivência com conforto",
+          "Para áreas de descanso e reunião de família com exposição solar nas horas de maior uso.",
+          "sacadas-varandas"
+        ],
+        [
+          "Quartos e salas",
+          "Mais privacidade",
+          "Para limitar a exposição visual com cuidado para não prometer privacidade noturna que o produto não oferece.",
+          "privacidade"
+        ],
+        [
+          "Portas e superfícies de vidro",
+          "Avaliação de segurança",
+          "Para projetos que exigem especificação conforme tipo e fixação do vidro e objetivo de proteção.",
+          "seguranca-vidros"
+        ]
+      ],
+      "search": "Se você procura insulfilm em Pilar do Sul, película para janela da chácara ou escurecimento do vidro de casa, explique o que deseja preservar: vista, claridade, privacidade ou controle de calor."
+    },
+    "campina-grande": {
+      "headline": "Campina Grande: conheça soluções para vidro antes de decidir.",
+      "intro": "O interesse por conforto solar, privacidade e películas arquitetônicas não precisa começar pela cor do vidro. A WINF disponibiliza informações técnicas e recebe consultas pela central nacional. A unidade local encontra-se em pré-ativação; disponibilidade, cobertura e agenda devem ser confirmadas antes de qualquer contratação.",
+      "segments": [
+        [
+          "Janelas residenciais",
+          "Entenda as opções",
+          "Para comparar películas claras e escuras com foco em luminosidade e controle solar.",
+          "janelas-fachadas"
+        ],
+        [
+          "Sacadas e fachadas",
+          "Compare as prioridades",
+          "Para conhecer soluções arquitetônicas e entender compatibilidade de vidros e regras do imóvel.",
+          "sacadas-varandas"
+        ],
+        [
+          "Ambientes de trabalho",
+          "Privacidade informada",
+          "Para quem considera películas refletivas, escuras ou decorativas para salas comerciais.",
+          "privacidade"
+        ],
+        [
+          "Proteção de vidros",
+          "Saiba os limites",
+          "Para entender quando uma película de segurança deve ser especificada com avaliação técnica.",
+          "seguranca-vidros"
+        ]
+      ],
+      "search": "Quem procura insulfilm em Campina Grande, película para vidro ou window film pode iniciar por nossos guias. O atendimento técnico local ainda depende da ativação e da confirmação de cobertura."
+    }
+  }
+}

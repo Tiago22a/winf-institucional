@@ -10,6 +10,9 @@ on:
       - 'scripts/winf-city-territory.mjs'
       - 'scripts/winf-city-applications.mjs'
       - 'scripts/winf-city-search-language.mjs'
+      - 'config/winf-city-intents.json'
+      - 'scripts/winf-city-intent-clusters.mjs'
+      - 'scripts/check-winf-city-intents.mjs'
       - 'scripts/check-winf-city-search-language.mjs'
       - 'scripts/winf-social-sitewide.mjs'
       - 'scripts/check-winf-social-sitewide.mjs'
@@ -44,6 +47,7 @@ jobs:
           node --check scripts/winf-city-territory.mjs
           node --check scripts/winf-city-applications.mjs
           node --check scripts/winf-city-search-language.mjs
+          node --check scripts/winf-city-intent-clusters.mjs
           node --check scripts/apply-winf-territory-template.mjs
           node scripts/apply-winf-territory-template.mjs
       - name: Gerar 7 imagens sociais premium com logo oficial
@@ -65,6 +69,8 @@ jobs:
           node --check scripts/check-winf-search-readiness.mjs
           node scripts/check-winf-search-readiness.mjs
           node scripts/check-winf-city-search-language.mjs
+          node --check scripts/check-winf-city-intents.mjs
+          node scripts/check-winf-city-intents.mjs
       - name: Criar 1200x630 OG + EXIF, títulos contextuais e links limpos
         run: |
           node --check scripts/winf-social-sitewide.mjs
