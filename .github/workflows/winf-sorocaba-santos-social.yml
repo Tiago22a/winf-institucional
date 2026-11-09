@@ -1,0 +1,37 @@
+name: WINF Select — Capas Sorocaba e Santos por território
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/winf-sorocaba-santos-social.yml'
+      - 'scripts/build-winf-sorocaba-santos.py'
+      - 'scripts/build-winf-pilar-brand.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  gerar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Gerar peças com SVG e fontes oficiais
+        run: |
+          python -m pip install --disable-pip-version-check Pillow==11.3.0 cairosvg==2.8.2
+          python scripts/build-winf-sorocaba-santos.py
+      - name: Pacote Sorocaba — WhatsApp, Facebook e perfil
+        uses: actions/upload-artifact@v4
+        with:
+          name: WINF-SELECT-SOROCABA-SP
+          path: build/WINF_SELECT_SOROCABA_SP_APROVACAO_3_CONCEITOS.zip
+          if-no-files-found: error
+          retention-days: 30
+      - name: Pacote Santos — WhatsApp, Facebook e perfil
+        uses: actions/upload-artifact@v4
+        with:
+          name: WINF-SELECT-SANTOS-SP
+          path: build/WINF_SELECT_SANTOS_SP_APROVACAO_3_CONCEITOS.zip
+          if-no-files-found: error
+          retention-days: 30
