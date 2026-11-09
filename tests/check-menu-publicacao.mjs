@@ -35,8 +35,8 @@ const checks = [
     assert.match(header,/class="winf-home-brand-divider"/);
     assert.match(header,/PREMIUM QUALITY WINDOW FILM/);
     assert.doesNotMatch(header,/winf-home-w-mark|winf-monogram/);
-    assert.match(home,/class="winf-home-statement"/);
-    assert.match(home,/PREMIUM QUALITY WINDOW FILM<\/h1>/);
+    assert.match(home,/class="winf-home-statement winf-home-statement--impact"/);
+    assert.match(home,/O SOL NÃO MANDA\.<span>NO SEU CONFORTO\.<\/span><\/h1>/);
     assert.match(header,/winf-home-ghost-lines/);
     assert.match(header,/ghost-symbol\.png/);
     assert.match(header,/aria-expanded="false"/);
