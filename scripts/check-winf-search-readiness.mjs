@@ -31,4 +31,4 @@ for(const path of paths){
  }
  console.log('✓ PRONTO PARA INSPEÇÃO:',canonical);
 }
-console.log('✓ 11 URLs preparadas para inspeção HTTP/Search Console. Dados de indexação: não avaliados.');
+console.log('✓ '+paths.length+' URLs preparadas para inspeção HTTP/Search Console. Dados de indexação: não avaliados.');
