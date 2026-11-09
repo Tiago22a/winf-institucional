@@ -62,6 +62,16 @@
       "phone": "5513981113001",
       "instagram": null,
       "note": "Unidade em pré-ativação: recebimento pela central oficial WINF; cobertura e agenda local dependem de confirmação."
+    },
+    {
+      "id": "cuiaba-mt",
+      "city": "Cuiabá",
+      "uf": "MT",
+      "origin": "cuiaba",
+      "slug": "pelicula-de-controle-solar-cuiaba-mt",
+      "phone": "5513981113001",
+      "instagram": null,
+      "note": "Atendimento de solicitações para Cuiabá pela central WINF; cobertura técnica, visita e instalação locais somente após confirmação, sem anúncio de unidade física."
     }
   ]
 }
