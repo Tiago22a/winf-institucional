@@ -23,7 +23,7 @@ const imgDir=resolve(root,'images/og');
 mkdirSync(imgDir,{recursive:true});
 const logo=await sharp(resolve(root,'winf-logo.svg')).resize({width:151}).png().toBuffer();
 const escape=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&apos;');
-const attr=(tag,key)=>tag.match(new RegExp('(?:^|\\s)'+key+'\\s*=\\s*(?:"([^"]*)"|\\'([^\\']*)\\')','i'))?.slice(1).find(v=>v!==undefined)||'';
+const attr=(tag,key)=>{const all=[...tag.matchAll(/([a-zA-Z:-]+)\s*=\s*(?:"([^"]*)"|'([^']*)')/g)];return all.find(m=>m[1].toLowerCase()===key.toLowerCase())?.slice(2).find(v=>v!==undefined)||''};
 function meta(html,kind,key){
  const matches=html.match(/<meta\b[^>]*>/ig)||[];
  for(const tag of matches)if(attr(tag,kind)===key)return attr(tag,'content');
