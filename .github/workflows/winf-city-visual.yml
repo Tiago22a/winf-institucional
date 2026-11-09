@@ -1,0 +1,32 @@
+name: WINF Select — Teste visual de cidades (desktop e mobile)
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/test-winf-city-visual.mjs'
+      - '.github/workflows/winf-city-visual.yml'
+      - 'css/winf-city-shared.css'
+      - 'css/winf-city-unit.css'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Instalar Chromium para testes reais
+        run: |
+          npm install --no-save --no-package-lock playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Testar 7 cidades em desktop e celular
+        run: node scripts/test-winf-city-visual.mjs
+      - name: Anexar evidências de layout e relatório
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: winf-city-browser-evidence
+          path: test-results/winf-city-visual/
+          if-no-files-found: warn
+          retention-days: 7
