@@ -70,7 +70,8 @@ const tests=[
    assert.match(home,/class="winf-home-official-logo"/);
    assert.match(home,/src="\/winf-logo\.svg"/);
    assert.doesNotMatch(home,/src="\/brand\/winf-monogram\.svg"/);
-   assert.match(winf,/src="\/brand\/winf-monogram\.svg"/);
+   assert.match(winf,/src="\/winf-logo\.svg"/);
+   assert.doesNotMatch(winf,/src="\/brand\/winf-monogram\.svg"/);
    assert.ok(existsSync('brand/winf-monogram.svg'));
    assert.match(read('brand/winf-monogram.svg'),/<path/);
  }]
