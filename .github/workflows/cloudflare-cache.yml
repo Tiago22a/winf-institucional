@@ -1,4 +1,4 @@
-name: WINF — Cloudflare Cache
+name: WINF — Cloudflare Cache Seletivo
 on:
   push:
     branches: [main]
@@ -7,6 +7,12 @@ on:
       - 'README.md'
       - 'docs/**'
   workflow_dispatch:
+    inputs:
+      full_purge:
+        description: 'Limpar toda a zona (use apenas em emergencias)'
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -18,13 +24,19 @@ concurrency:
 jobs:
   purge-cache:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 15
     env:
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
       SITE_URL: https://www.winf.com.br
+      FULL_PURGE: ${{ inputs.full_purge || 'false' }}
+      BEFORE_SHA: ${{ github.event.before }}
     steps:
-      - name: Validar credenciais e configuracao
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validar secrets
         shell: bash
         run: |
           if [[ -z "$CLOUDFLARE_API_TOKEN" || -z "$CLOUDFLARE_ZONE_ID" ]]; then
@@ -34,12 +46,8 @@ jobs:
           echo "::add-mask::$CLOUDFLARE_API_TOKEN"
           echo "::add-mask::$CLOUDFLARE_ZONE_ID"
 
-      - name: Esperar propagacao da publicacao
-        shell: bash
-        run: |
-          # Este repositorio nao possui um deploy central integrado ao Actions.
-          # Aguarda a janela de publicacao do host antes de invalidar o cache.
-          sleep 90
+      - name: Aguardar janela de publicacao
+        run: sleep 90
 
       - name: Verificar disponibilidade do dominio
         shell: bash
@@ -47,28 +55,94 @@ jobs:
           for attempt in 1 2 3 4 5; do
             status=$(curl -L -sS -o /dev/null -w '%{http_code}' --max-time 20 "$SITE_URL/?winf_deploy_check=${GITHUB_SHA}" || true)
             if [[ "$status" == "200" ]]; then
-              echo "Dominio respondeu HTTP 200 (tentativa $attempt)."
+              echo "Dominio respondeu HTTP 200."
               exit 0
             fi
-            echo "Tentativa $attempt: HTTP $status. Nova tentativa em 20 segundos."
+            echo "Tentativa $attempt: HTTP $status."
             sleep 20
           done
-          echo "::error::Dominio nao respondeu HTTP 200; cache preservado."
+          echo "::error::Dominio indisponivel; cache preservado."
           exit 1
 
-      - name: Limpar cache da Cloudflare
+      - name: Invalidar apenas URLs afetadas
         shell: bash
         run: |
-          response_file=$(mktemp)
-          http_code=$(curl --silent --show-error --retry 3 --retry-delay 4 --max-time 45 \
-            -o "$response_file" -w '%{http_code}' \
-            -X POST "https://api.cloudflare.com/client/v4/zones/${CLOUDFLARE_ZONE_ID}/purge_cache" \
-            -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
-            -H 'Content-Type: application/json' \
-            --data '{"purge_everything":true}')
-          if [[ "$http_code" != "200" ]] || ! python3 -c 'import json,sys; d=json.load(open(sys.argv[1])); sys.exit(0 if d.get("success") is True else 1)' "$response_file"; then
-            echo "::error::Cloudflare rejeitou a limpeza (HTTP $http_code). Confira permissao Zone Cache Purge e Zone ID."
-            # Nao imprimir resposta completa, pois pode conter detalhes de conta.
-            exit 1
-          fi
-          echo "Cloudflare confirmou purge_everything para a zona configurada."
+          python3 <<'PY'
+          import json, os, pathlib, subprocess, sys, time, urllib.request, urllib.error
+          from urllib.parse import quote
+
+          token = os.environ['CLOUDFLARE_API_TOKEN']
+          zone = os.environ['CLOUDFLARE_ZONE_ID']
+          base = os.environ['SITE_URL'].rstrip('/')
+          endpoint = f'https://api.cloudflare.com/client/v4/zones/{zone}/purge_cache'
+          full = os.environ.get('FULL_PURGE', 'false').lower() == 'true'
+          def purge(payload):
+              data = json.dumps(payload).encode()
+              req = urllib.request.Request(endpoint, data=data, method='POST', headers={
+                  'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json'})
+              for attempt in range(4):
+                  try:
+                      with urllib.request.urlopen(req, timeout=45) as response:
+                          result = json.load(response)
+                      if result.get('success') is not True:
+                          raise RuntimeError('Cloudflare nao confirmou sucesso')
+                      return
+                  except urllib.error.HTTPError as error:
+                      if error.code in (429, 500, 502, 503, 504) and attempt < 3:
+                          time.sleep(5 * (attempt + 1))
+                          continue
+                      raise RuntimeError(f'Cloudflare HTTP {error.code}') from error
+              raise RuntimeError('Falha ao invalidar cache')
+
+          if full:
+              purge({'purge_everything': True})
+              print('Limpeza TOTAL confirmada por solicitacao manual.')
+              sys.exit(0)
+
+          before = os.environ.get('BEFORE_SHA', '')
+          after = os.environ['GITHUB_SHA']
+          if not before or set(before) == {'0'}:
+              before = subprocess.check_output(['git', 'rev-parse', after + '^'], text=True).strip()
+          changed = subprocess.check_output(['git', 'diff', '--name-only', '--diff-filter=ACDMRT', before, after], text=True).splitlines()
+          if not changed:
+              print('Nenhum arquivo alterado; cache preservado.')
+              sys.exit(0)
+
+          urls = set()
+          def add(path):
+              path = path.lstrip('/')
+              urls.add(base + '/' + quote(path, safe='/'))
+              if path == 'index.html':
+                  urls.add(base + '/')
+              elif path.endswith('/index.html'):
+                  urls.add(base + '/' + quote(path[:-10], safe='/'))
+          htmls = list(pathlib.Path('.').rglob('*.html'))
+          htmls = [p for p in htmls if '.git' not in p.parts and 'node_modules' not in p.parts]
+          for name in changed:
+              if name.startswith(('.github/', 'docs/')) or name in ('README.md',):
+                  continue
+              add(name)
+              # For shared CSS/JS/media, invalidate HTML documents that reference the asset.
+              if name.lower().endswith(('.css', '.js', '.svg', '.png', '.jpg', '.jpeg', '.webp', '.gif', '.woff', '.woff2', '.otf', '.mp4')):
+                  target = '/' + name
+                  for html in htmls:
+                      try:
+                          body = html.read_text(encoding='utf-8')
+                      except (UnicodeError, OSError):
+                          continue
+                      if target in body or name in body:
+                          add(html.as_posix())
+          if not urls:
+              print('Nenhuma URL publica alterada.')
+              sys.exit(0)
+          # Evitar invalidações inesperadamente amplas; nao fazer full purge automatico.
+          if len(urls) > 500:
+              raise RuntimeError(f'{len(urls)} URLs afetadas: revise o conjunto; limpeza total nao e automatica')
+          urls = sorted(urls)
+          print(f'Arquivos modificados: {len(changed)}; URLs a invalidar: {len(urls)}')
+          for start in range(0, len(urls), 30):
+              batch = urls[start:start + 30]
+              purge({'files': batch})
+              print(f'Cloudflare confirmou URLs {start + 1}-{start + len(batch)}')
+          print('Limpeza seletiva concluida.')
+          PY
