@@ -60,4 +60,4 @@ assert.ok(siteMap.includes('<image:loc>'+catalogOg+'</image:loc>'));
 const catalogImage=await sharp(resolve(root,'images/og/winf-catalogo-1200x630.jpg')).metadata();
 assert.equal(catalogImage.width,1200);assert.equal(catalogImage.height,630);assert.equal(catalogImage.format,'jpeg');
 console.log('✓ OG catálogo WINF, imagem JPEG 1200x630');
-console.log('✓ 6 cidades com SEO distinto + 7 capas sociais disponíveis.');
+console.log('✓ '+cfg.cities.length+' cidades com SEO distinto + '+(cfg.cities.length+1)+' capas sociais disponíveis.');
