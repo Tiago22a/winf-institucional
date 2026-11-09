@@ -1341,7 +1341,7 @@ function shareAll() {
     switcher.addEventListener('pointerenter',()=>setOpen(true));
     switcher.addEventListener('pointerleave',()=>setOpen(false));
   }
-  button.addEventListener('click',()=>setOpen(!open));
+  button.addEventListener('click',()=>{if(window.matchMedia('(hover: hover) and (pointer: fine)').matches&&switcher.matches(':hover'))setOpen(true);else setOpen(!open);});
   switcher.addEventListener('focusout',event=>{
     if(!switcher.contains(event.relatedTarget))setOpen(false);
   });
