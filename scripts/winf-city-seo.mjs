@@ -2,37 +2,37 @@
 export const CITY_SEO={
   "santos": {
     "title": "Películas para Sacadas e Vidros em Santos SP | WINF Select™",
-    "description": "Películas para sacadas, varandas e fachadas em Santos. Conheça Invisible, BlackPro e Dual Reflect. Avaliação pela central WINF da Baixada.",
+    "description": "Películas de controle solar e insulfilm residencial em Santos para sacadas, varandas e fachadas. Conheça as linhas WINF Select™ e consulte a central.",
     "socialTitle": "WINF Select™ Santos | Conforto, vidro e privacidade",
     "socialDesc": "Soluções arquitetônicas para sacadas, apartamentos e fachadas em Santos. Conheça a WINF Select™ e solicite orientação."
   },
   "praia-grande": {
     "title": "Película de Controle Solar em Praia Grande SP | WINF Select™",
-    "description": "Proteção solar para sacadas, janelas e apartamentos em Praia Grande. Compare películas WINF Select™ e consulte agenda pela central da Baixada.",
+    "description": "Película de controle solar e insulfilm residencial em Praia Grande para sacadas, janelas e apartamentos. Compare WINF Select™ e consulte agenda.",
     "socialTitle": "WINF Select™ Praia Grande | Proteção para vidros",
     "socialDesc": "Conforto térmico, luminosidade e privacidade para imóveis em Praia Grande. Catálogo WINF Select™ e atendimento regional."
   },
   "guaruja": {
     "title": "Películas para Sacadas e Vidros no Guarujá SP | WINF Select™",
-    "description": "Películas arquitetônicas para sacadas, casas e fachadas no Guarujá. Conheça as linhas WINF Select™ e consulte a central integrada da Baixada.",
+    "description": "Películas para vidros e insulfilm residencial no Guarujá: sacadas, casas e fachadas. Conheça a WINF Select™ e consulte a central da Baixada.",
     "socialTitle": "WINF Select™ Guarujá | Arquitetura e conforto",
     "socialDesc": "Películas para vidros de sacadas, residências e fachadas no Guarujá. Explore soluções e solicite avaliação técnica."
   },
   "sorocaba": {
     "title": "Películas Residenciais e Controle Solar em Sorocaba SP | WINF Select™",
-    "description": "Películas para casas, apartamentos e escritórios em Sorocaba. Conheça Invisible, BlackPro e Dual Reflect. Atendimento WINF Select™ no DDD 15.",
+    "description": "Insulfilm residencial e películas de controle solar em Sorocaba para casas, apartamentos e escritórios. Compare as opções WINF Select™.",
     "socialTitle": "WINF Select™ Sorocaba | Películas para vidros",
     "socialDesc": "Conforto térmico, privacidade e controle solar em Sorocaba. Conheça as películas WINF Select™ e fale com a central regional."
   },
   "pilar-do-sul": {
     "title": "Películas para Vidros em Pilar do Sul SP | WINF Select™",
-    "description": "Conheça películas para janelas, residências e fachadas em Pilar do Sul. Catálogo WINF Select™ e orientação pela central Sorocaba/Pilar do Sul.",
+    "description": "Películas de controle solar e insulfilm residencial em Pilar do Sul para casas, chácaras e janelas. Conheça WINF Select™ e consulte a central.",
     "socialTitle": "WINF Select™ Pilar do Sul | Conforto para vidros",
     "socialDesc": "Películas arquitetônicas para residências e projetos em Pilar do Sul. Conheça opções para luz, calor e privacidade."
   },
   "campina-grande": {
     "title": "Película de Controle Solar em Campina Grande PB | WINF Select™",
-    "description": "Conheça as películas arquitetônicas WINF Select™ para Campina Grande. Solicitações recebidas pela central oficial; cobertura e agenda sob consulta.",
+    "description": "Películas para vidros e controle solar em Campina Grande. Conheça WINF Select™ e consulte a central; unidade local em pré-ativação.",
     "socialTitle": "WINF Select™ Campina Grande | Catálogo de películas",
     "socialDesc": "Conheça soluções WINF Select™ para vidros em Campina Grande. Atendimento e disponibilidade local sujeitos a confirmação."
   }
