@@ -6,6 +6,9 @@ on:
       - 'pelicula-de-controle-solar-santos-sp/index.html'
       - 'config/winf-active-cities.json'
       - 'scripts/sync-winf-city-sites.mjs'
+      - 'scripts/winf-city-seo.mjs'
+      - 'scripts/build-winf-social-images.mjs'
+      - 'scripts/check-winf-seo.mjs'
   workflow_dispatch:
 permissions:
   contents: write
@@ -17,18 +20,27 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: true
-      - name: Conferir script e sincronizar paginas regionais
+      - name: Instalar ferramenta de imagem Sharp
+        run: npm install --no-save --no-package-lock sharp@0.34.4
+      - name: Gerar 7 imagens sociais premium com logo oficial
         run: |
+          node --check scripts/build-winf-social-images.mjs
+          node scripts/build-winf-social-images.mjs
+      - name: Sincronizar sites e validar metadados
+        run: |
+          node --check scripts/winf-city-seo.mjs
           node --check scripts/sync-winf-city-sites.mjs
+          node --check scripts/check-winf-seo.mjs
           node scripts/sync-winf-city-sites.mjs
           node scripts/sync-winf-city-sites.mjs --check
+          node scripts/check-winf-seo.mjs
       - name: Publicar alteracoes compartilhadas
         run: |
-          if ! git diff --quiet -- insulfilm-residencial-sorocaba-sp/index.html pelicula-de-controle-solar-praia-grande-sp/index.html pelicula-de-controle-solar-guaruja-sp/index.html pelicula-de-controle-solar-pilar-do-sul-sp/index.html pelicula-de-controle-solar-campina-grande-pb/index.html; then
+          if ! git diff --quiet -- insulfilm-residencial-sorocaba-sp/index.html pelicula-de-controle-solar-praia-grande-sp/index.html pelicula-de-controle-solar-guaruja-sp/index.html pelicula-de-controle-solar-pilar-do-sul-sp/index.html pelicula-de-controle-solar-campina-grande-pb/index.html || [ -n "$(git ls-files --others --exclude-standard images/og/winf-*-1200x630.jpg)" ]; then
             git config user.name "WINF City Sync"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add insulfilm-residencial-sorocaba-sp/index.html pelicula-de-controle-solar-praia-grande-sp/index.html pelicula-de-controle-solar-guaruja-sp/index.html pelicula-de-controle-solar-pilar-do-sul-sp/index.html pelicula-de-controle-solar-campina-grande-pb/index.html
-            git commit -m "build(cidades): sincroniza paginas com template Santos [skip ci]"
+            git add images/og/winf-*-1200x630.jpg insulfilm-residencial-sorocaba-sp/index.html pelicula-de-controle-solar-praia-grande-sp/index.html pelicula-de-controle-solar-guaruja-sp/index.html pelicula-de-controle-solar-pilar-do-sul-sp/index.html pelicula-de-controle-solar-campina-grande-pb/index.html
+            git commit -m "build(cidades): capas OG e SEO sincronizados [skip ci]"
             git push
           else
             echo "Sites sincronizados, nenhuma mudanca necessaria."
