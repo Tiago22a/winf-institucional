@@ -8,7 +8,7 @@ const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const report=JSON.parse(readFileSync(resolve(root,'docs/seo/winf-social-audit.json'),'utf8'));
 const metas=['og:type','og:title','og:description','og:url','og:image','og:image:alt','og:image:secure_url','og:image:type','og:image:width','og:image:height'];
 const read=p=>readFileSync(resolve(root,p),'utf8');
-const attr=(tag,key)=>tag.match(new RegExp('(?:^|\\s)'+key+'\\s*=\\s*(?:"([^"]*)"|\\'([^\\']*)\\')','i'))?.slice(1).find(v=>v!==undefined)||'';
+const attr=(tag,key)=>{const all=[...tag.matchAll(/([a-zA-Z:-]+)\s*=\s*(?:"([^"]*)"|'([^']*)')/g)];return all.find(m=>m[1].toLowerCase()===key.toLowerCase())?.slice(2).find(v=>v!==undefined)||''};
 function get(html,kind,key){return (html.match(/<meta\b[^>]*>/ig)||[]).filter(tag=>attr(tag,kind)===key)}
 const found=new Set();
 for(const entry of report.indexPages){
