@@ -22,7 +22,7 @@ jobs:
           const base = 'https://www.winf.com.br';
           const nonce = Date.now();
           const checks = [
-            ['/briefing/?check='+nonce, [
+            ['/briefing/', [
               'al-grid--flagship-glow',
               '/briefing/flagship-glow.css?v=20261109-1',
               '/briefing/flagship-glow.js?v=20261109-1',
