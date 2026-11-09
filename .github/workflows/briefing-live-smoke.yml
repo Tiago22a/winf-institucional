@@ -1,0 +1,66 @@
+name: WINF Briefing — Publicacao no dominio
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'briefing/**'
+      - '.github/workflows/briefing-live-smoke.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  publicacao:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Verificar os tres cards e recursos de iluminacao no dominio WINF
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE'
+          const base = 'https://www.winf.com.br';
+          const nonce = Date.now();
+          const checks = [
+            ['/briefing/?check='+nonce, [
+              'al-grid--flagship-glow',
+              '/briefing/flagship-glow.css?v=20261109-1',
+              '/briefing/flagship-glow.js?v=20261109-1',
+              'Um endereço para viver a marca.',
+              'Estrutura para atender mais demandas.',
+              'Conexão com o desenvolvimento regional.'
+            ]],
+            ['/briefing/flagship-glow.css?check='+nonce, [
+              '--flagship-card-image',
+              'flagship-showroom-2026.webp',
+              'flagship-operacoes-2026.webp',
+              'flagship-equipe-2026.webp'
+            ]],
+            ['/briefing/flagship-glow.js?check='+nonce, [
+              'pointermove',
+              '--flagship-glow-x',
+              '--flagship-glow-y'
+            ]]
+          ];
+          let ok = true;
+          for (const [path, tokens] of checks) {
+            try {
+              const response = await fetch(base + path, { headers: { 'Cache-Control': 'no-cache' }, signal: AbortSignal.timeout(20000) });
+              const body = await response.text();
+              console.log('STATUS', response.status, 'URL', base+path, 'BYTES', body.length);
+              if (!response.ok) { ok=false; continue; }
+              for (const token of tokens) {
+                const found = body.includes(token);
+                console.log(found ? 'OK' : 'AUSENTE', token);
+                if (!found) ok=false;
+              }
+            } catch (error) {
+              console.error('ERRO', path, error.message);
+              ok=false;
+            }
+          }
+          if (!ok) {
+            console.error('A versao publica nao confirmou todos os recursos de hover. Pode existir atraso de deploy ou cache.');
+            process.exitCode = 1;
+          } else console.log('DOMINIO CONFIRMADO: HTML, CSS e JS dos tres cards publicados.');
+          NODE
