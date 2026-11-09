@@ -115,6 +115,10 @@ def lockup(canvas,x,y,scale=1,ink="light",extra=True):
  canvas.alpha_composite(ghost,(round(x+width*.825),round(y+width*36/109*.66)))
  d=ImageDraw.Draw(canvas)
  col="#f5f6f7" if ink=="light" else "#12181e"
+ # Trademark em tipografia OFICIAL, acima e à direita do F, nunca no corpo da marca.
+ # O desenho WINF continua vindo do mesmo SVG vetorial sem deformações.
+ tm_font=F("medium",max(8,round(12*scale)))
+ d.text((round(x+width*.935),round(y-2*scale)),"TM",font=tm_font,fill=col)
  sub="#d3d7dc" if ink=="light" else "#323d45"
  select=F("light",round(55*scale))
  label(d,"SELECT",(round(x+3*scale),round(y+mark.height+10*scale)),select,col,spacing=round(8.5*scale))
