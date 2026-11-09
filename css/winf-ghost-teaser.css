@@ -1,0 +1,20 @@
+
+/* Preview da Ghost Shop no ecossistema global e no site territorial; sem venda publica. */
+.winf-ghost-teaser{position:relative;overflow:hidden;isolation:isolate;background:linear-gradient(128deg,#121316,#050506 72%);border-top:1px solid #ffffff2e;border-bottom:1px solid #ffffff19;color:#fff;padding:clamp(70px,8vw,115px) max(22px,calc((100% - 1200px)/2));font-family:Inter,Arial,sans-serif}
+.winf-ghost-teaser:after{content:"";position:absolute;z-index:-1;right:-5%;top:-30%;width:60%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#ffffff15,transparent 60%);pointer-events:none}
+.winf-ghost-teaser-inner{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:clamp(35px,6vw,90px);width:min(100%,1200px);margin:auto}
+.winf-ghost-teaser-label{font:750 10px/1.6 Inter,sans-serif;letter-spacing:.21em;color:#c1c2c6;text-transform:uppercase}
+.winf-ghost-teaser h2{font:300 clamp(42px,6.6vw,82px)/1.02 Gustavo,Inter,Arial,sans-serif;letter-spacing:-.07em;text-transform:uppercase;margin:17px 0 24px;color:#fff}
+.winf-ghost-teaser h2 span{color:#9c9da2}
+.winf-ghost-teaser p{font:400 clamp(14px,1.5vw,17px)/1.75 Gustavo,Inter,Arial,sans-serif;color:#c6c6ce;max-width:570px}
+.winf-ghost-teaser-links{display:flex;gap:11px;flex-wrap:wrap;margin-top:30px}
+.winf-ghost-teaser-links a{display:inline-flex;align-items:center;min-height:48px;text-decoration:none;background:#fff;color:#111;padding:13px 18px;font:750 10px/1.4 Inter,Arial,sans-serif;letter-spacing:.07em;border:1px solid white}
+.winf-ghost-teaser-links a+ a{background:transparent;color:#fff}
+.winf-ghost-teaser-links a:hover{background:#dadada;color:#111}
+.winf-ghost-teaser-note{margin-top:16px!important;font-size:11px!important;color:#9fa1a6!important}
+.winf-ghost-teaser-visual{position:relative;min-height:320px;padding:25px;display:flex;flex-direction:column;justify-content:flex-end;border:1px solid #ffffff3d;background:radial-gradient(ellipse at 62% 40%,#3d4043 0%,#16171a 45%,#070808 100%);overflow:hidden}
+.winf-ghost-teaser-visual img{position:absolute;top:15%;left:50%;width:140px;height:auto;opacity:.16;filter:grayscale(1) brightness(4);transform:translateX(-50%);pointer-events:none}
+.winf-ghost-teaser-visual small{font:750 10px/1.5 Inter,sans-serif;color:#c7c8cb;letter-spacing:.16em;position:relative}
+.winf-ghost-teaser-visual strong{font:300 clamp(30px,4vw,50px)/1.1 Gustavo,Inter,sans-serif;letter-spacing:-.055em;margin-top:12px;color:#fff;position:relative}
+.winf-ghost-teaser-visual em{font:500 11px/1.5 Inter,sans-serif;color:#b6b9c0;margin-top:15px;font-style:normal;position:relative}
+@media(max-width:720px){.winf-ghost-teaser-inner{grid-template-columns:1fr}.winf-ghost-teaser-visual{min-height:245px}.winf-ghost-teaser-visual img{width:110px}}
