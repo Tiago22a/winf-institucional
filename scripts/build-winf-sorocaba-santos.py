@@ -87,7 +87,7 @@ def create(city):
  manifest=json.loads((directory/f"MANIFESTO_{city['slug']}.json").read_text(encoding="utf-8"))
  if manifest.get("territory")!=city["city"]:raise RuntimeError("Território incorreto no manifesto")
  jpgs=sorted(directory.glob("*.jpg"))
- covers=[p for p in jpgs if "WHATSAPP" in p.name or "FACEBOOK" in p.name]
+ covers=[p for p in jpgs if p.name.startswith("WINF_SELECT_") and ("WHATSAPP" in p.name or "FACEBOOK" in p.name)]
  if len(covers)!=6:raise RuntimeError("Número de capas inesperado: "+str(len(covers)))
  profiles=list(directory.glob("*PERFIL_1080x1080.png"))
  if len(profiles)!=1:raise RuntimeError("Perfil não encontrado para "+city["city"])
