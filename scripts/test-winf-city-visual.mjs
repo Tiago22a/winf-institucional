@@ -56,7 +56,8 @@ for(const mode of modes) {
           overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth,
           whatsapp:!!nav,
           logo:[...document.querySelectorAll('img')].filter(x=>x.src.includes('winf-logo')).map(x=>({loaded:x.complete&&x.naturalWidth>0,width:x.naturalWidth})),
-          badAlt:[...document.querySelectorAll('img')].filter(x=>!x.hasAttribute('alt')).length
+          badAlt:[...document.querySelectorAll('img')].filter(x=>!x.hasAttribute('alt')).length,
+          wrongRegionText:(document.body.innerText.match(/(?:CUIABÁ|CAMPINA GRANDE)\s*\/\s*SP\b/)||[])[0]||null
         }
       });
       check.metrics = a;
@@ -71,6 +72,7 @@ for(const mode of modes) {
       if(!a.whatsapp)check.errors.push('WhatsApp da central ausente');
       if(a.logo.length<1||a.logo.some(x=>!x.loaded))check.errors.push('Logo WINF não carregou');
       if(a.badAlt>0)check.errors.push('Imgs sem alt: '+a.badAlt);
+      if(a.wrongRegionText)check.errors.push('UF herdada incorreta: '+a.wrongRegionText);
       if(a.overflow>32)check.warnings.push('Possível scroll horizontal: '+a.overflow+'px');
       if(!a.og)check.errors.push('Meta OG image ausente');
       else {
