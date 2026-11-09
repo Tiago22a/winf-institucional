@@ -3,6 +3,7 @@ const context={
  santos:'Apartamentos e sacadas envidraçadas da orla pedem equilíbrio entre vista, luz e conforto.',
  'praia-grande':'Em sacadas e janelas de apartamentos, o controle solar deve respeitar a fachada e as condições de luz.',
  guaruja:'Casas e apartamentos próximos à orla podem exigir soluções diferentes para privacidade e incidência solar.',
+ cuiaba:'Em apartamentos, condomínios e escritórios, a posição do sol e o tipo de vidro orientam a escolha da película.',
  sorocaba:'Em casas, condomínios e home offices, a escolha depende do vidro, da iluminação e do uso do ambiente.',
  'pilar-do-sul':'Residências e chácaras podem combinar janelas amplas, vista aberta e necessidade de conforto térmico.',
  'campina-grande':'A central recebe consultas sobre soluções para janelas e fachadas; a atuação local ainda depende de confirmação.'
