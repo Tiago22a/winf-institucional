@@ -322,10 +322,26 @@ body.winf-catalog-page #catalogo-produtos .product-card:hover .card-img-inner{fi
 <style>
 /* Catálogo WINF: famílias distintas e navegação para páginas de produtos. */
 .winf-catalog-nav{display:flex;flex-wrap:wrap;gap:14px;align-items:center;align-content:center;min-height:86px}
+.winf-catalog-headgroup{display:flex;align-items:center;gap:10px;flex:0 0 auto;min-width:0}
 .winf-catalog-identity{display:inline-flex;align-items:center;flex:0 0 auto;gap:13px;min-width:0;text-decoration:none;color:#fff}
 .winf-catalog-identity img{display:block;width:105px;height:auto;max-height:38px;object-fit:contain}
 .winf-catalog-identity .winf-catalog-signature{border-left:1px solid rgba(255,255,255,.38);padding-left:12px;font:700 9px/1.45 Inter,Arial,sans-serif;letter-spacing:.13em;max-width:120px}
 .winf-catalog-identity:hover .winf-catalog-signature{color:#e4e5e7}
+/* Fantasminha oficial: acesso rápido às marcas do ecossistema. */
+.winf-ghost-switch{position:relative;z-index:60;flex:0 0 auto}
+.winf-ghost-trigger{display:flex;align-items:center;justify-content:center;width:41px;height:42px;border:1px solid rgba(255,255,255,.24);background:#141619;color:#fff;cursor:pointer;transition:border-color .25s,background .25s,box-shadow .25s}
+.winf-ghost-trigger img{display:block;width:23px;height:28px;object-fit:contain;transition:transform .28s,filter .28s}
+.winf-ghost-trigger:hover,.winf-ghost-trigger:focus-visible,.winf-ghost-switch[data-open="true"] .winf-ghost-trigger{background:#25282d;border-color:rgba(255,255,255,.75);box-shadow:0 0 26px rgba(255,255,255,.10)}
+.winf-ghost-trigger:hover img,.winf-ghost-switch[data-open="true"] .winf-ghost-trigger img{transform:translateY(-2px);filter:drop-shadow(0 0 8px rgba(255,255,255,.35))}
+.winf-ghost-menu{position:absolute;top:calc(100% + 9px);left:0;z-index:75;width:min(315px,calc(100vw - 24px));padding:14px;background:rgba(12,13,15,.98);border:1px solid rgba(255,255,255,.34);box-shadow:0 22px 50px rgba(0,0,0,.66);opacity:0;visibility:hidden;transform:translateY(-7px);transition:opacity .22s,transform .22s,visibility .22s}
+.winf-ghost-menu:before{content:"";position:absolute;top:-10px;left:0;right:0;height:10px}
+.winf-ghost-switch[data-open="true"] .winf-ghost-menu{opacity:1;visibility:visible;transform:translateY(0)}
+.winf-ghost-menu-title{display:block;margin:3px 5px 12px;color:#aaafb7;font:700 10px/1.5 Inter,Arial,sans-serif;letter-spacing:.16em}
+.winf-ghost-menu a{display:flex;align-items:center;justify-content:space-between;gap:16px;text-decoration:none;padding:13px 10px;border-bottom:1px solid rgba(255,255,255,.1);color:#f6f7f8;font:600 12px/1.4 Inter,Arial,sans-serif;letter-spacing:.075em;transition:background .2s,color .2s}
+.winf-ghost-menu a:last-child{border-bottom:0}.winf-ghost-menu a:hover,.winf-ghost-menu a:focus-visible{background:#26292e;color:#fff}
+.winf-ghost-menu a span{font-size:14px;color:#b9bcc2}
+@media(max-width:580px){.winf-catalog-headgroup{gap:7px}.winf-ghost-trigger{width:36px;height:36px}.winf-ghost-trigger img{width:20px;height:25px}.winf-ghost-menu{left:auto;right:-3px;width:min(305px,calc(100vw - 20px))}}
+@media(prefers-reduced-motion:reduce){.winf-ghost-trigger,.winf-ghost-trigger img,.winf-ghost-menu{transition:none!important}}
 @media(max-width:780px){.winf-catalog-identity{gap:8px}.winf-catalog-identity img{width:82px}.winf-catalog-identity .winf-catalog-signature{font-size:8px;letter-spacing:.07em;max-width:94px;padding-left:8px}}
 @media(max-width:580px){.winf-catalog-nav{column-gap:9px!important;row-gap:5px!important;min-height:109px}.winf-catalog-nav .winf-catalog-tabs{order:5;width:100%}.winf-catalog-nav #catalog-home-link{flex-shrink:0;width:33px;height:33px}.winf-catalog-nav+.relative{padding-top:210px!important}.winf-catalog-identity img{width:78px}}
 .winf-catalog-tabs{display:flex;align-items:center;gap:3px;overflow-x:auto;max-width:100%;min-width:0;padding:4px;background:#121214e8;border:1px solid #ffffff26;scrollbar-width:thin}
@@ -378,10 +394,26 @@ body.winf-catalog-page #catalogo-produtos .product-card:hover .card-img-inner{fi
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
     </a>
 
-    <a class="winf-catalog-identity" href="/" aria-label="WINF™ — Premium Quality Windowfilm, voltar ao site global">
-      <img src="/winf-logo.svg" width="105" height="36" alt="WINF™" decoding="async" />
-      <span class="winf-catalog-signature">PREMIUM QUALITY<br>WINDOWFILM</span>
-    </a>
+    <div class="winf-catalog-headgroup">
+      <a class="winf-catalog-identity" href="/" aria-label="WINF™ — Premium Quality Windowfilm, voltar ao site global">
+        <img src="/winf-logo.svg" width="105" height="36" alt="WINF™" decoding="async" />
+        <span class="winf-catalog-signature">PREMIUM QUALITY<br>WINDOWFILM</span>
+      </a>
+      <div class="winf-ghost-switch" id="winf-ghost-switch" data-open="false">
+        <button type="button" class="winf-ghost-trigger" id="winf-ghost-trigger" aria-expanded="false" aria-controls="winf-ghost-menu" aria-label="Abrir atalhos das marcas WINF">
+          <img src="/aerocore/assets/ghost-symbol.png" alt="" aria-hidden="true" width="23" height="28" />
+        </button>
+        <div class="winf-ghost-menu" id="winf-ghost-menu" role="group" aria-label="Atalhos das marcas WINF">
+          <span class="winf-ghost-menu-title">EXPLORE O UNIVERSO WINF™</span>
+          <a href="/aerocore/winf-select/">WINF SELECT™ <span aria-hidden="true">↗</span></a>
+          <a href="/aerocore/">AEROCORE™ <span aria-hidden="true">↗</span></a>
+          <a href="/aerocore/neoskin/">NEOSKIN™ <span aria-hidden="true">↗</span></a>
+          <a href="/aerocore/ceramic-armoring/">CERAMIC ARMORING™ <span aria-hidden="true">↗</span></a>
+          <a href="/partners/">WINF PARTNERS™ <span aria-hidden="true">↗</span></a>
+          <a href="/ghost-shop/">GHOST SHOP™ <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </div>
 
     <div class="winf-catalog-tabs" role="tablist" aria-label="Famílias do catálogo WINF">
       <button type="button" onclick="setCategory('all',true)" id="tab-all" role="tab" aria-selected="true">TODAS AS MARCAS</button>
@@ -970,7 +1002,7 @@ let toastTimer = null;
 document.addEventListener('DOMContentLoaded', () => {
   // A vitrine por família mantém o WhatsApp do território, assim como os cards dos produtos.
   if(CATALOG_ORIGIN || (/^55\d{10,11}$/.test(partnerParam))){
-    document.querySelectorAll('.winf-catalog-paths a[href],.winf-catalog-brands a[href]').forEach(anchor=>{
+    document.querySelectorAll('.winf-catalog-paths a[href],.winf-catalog-brands a[href],.winf-ghost-menu a[href]').forEach(anchor=>{
       const target=new URL(anchor.getAttribute('href'),location.origin);
       if(CATALOG_ORIGIN)target.searchParams.set('origem',CATALOG_ORIGIN);
       if(/^55\d{10,11}$/.test(partnerParam))target.searchParams.set('partner',partnerParam);
@@ -1290,6 +1322,36 @@ function shareProduct(e, id, name) {
 function shareAll() {
   falarConsultor();
 }
+</script>
+<script>
+/* Fantasminha WINF: hover para desktop; toque, foco e Escape para mobile e teclado. */
+(() => {
+  'use strict';
+  const switcher=document.getElementById('winf-ghost-switch');
+  const button=document.getElementById('winf-ghost-trigger');
+  if(!switcher||!button)return;
+  let open=false;
+  function setOpen(next) {
+    open=Boolean(next);
+    switcher.dataset.open=String(open);
+    button.setAttribute('aria-expanded',String(open));
+    button.setAttribute('aria-label',open?'Fechar atalhos das marcas WINF':'Abrir atalhos das marcas WINF');
+  }
+  if(window.matchMedia('(hover: hover) and (pointer: fine)').matches){
+    switcher.addEventListener('pointerenter',()=>setOpen(true));
+    switcher.addEventListener('pointerleave',()=>setOpen(false));
+  }
+  button.addEventListener('click',()=>setOpen(!open));
+  switcher.addEventListener('focusout',event=>{
+    if(!switcher.contains(event.relatedTarget))setOpen(false);
+  });
+  document.addEventListener('pointerdown',event=>{
+    if(!switcher.contains(event.target))setOpen(false);
+  });
+  document.addEventListener('keydown',event=>{
+    if(event.key==='Escape'&&open){setOpen(false);button.focus();}
+  });
+})();
 </script>
 
     <script charset="utf-8" src="/js/winf-footer.js?v=20261103-reference-2" defer></script>
