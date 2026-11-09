@@ -65,8 +65,11 @@ def create(city):
  text=text.replace("def label(draw,text,xy,font,fill,spacing=0):\n x,y=xy\n for letter in text:\n  draw.text((x,y),letter,font=font,fill=fill)\n  x+=draw.textlength(letter,font=font)+spacing\n return x\n\ndef letter_width(draw,text,font,spacing=0):\n return sum(draw.textlength(ch,font=font) for ch in text)+max(0,len(text)-1)*spacing\n\n","def label(draw,text,xy,font,fill,spacing=0):\n x,y=xy\n for letter in text:\n  glyph_font=(ImageFont.truetype(\"/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf\",font.size) if letter in \"/+•\" else font)\n  draw.text((x,y),letter,font=glyph_font,fill=fill)\n  x+=draw.textlength(letter,font=glyph_font)+spacing\n return x\n\ndef letter_width(draw,text,font,spacing=0):\n return sum(draw.textlength(ch,font=(ImageFont.truetype(\"/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf\",font.size) if ch in \"/+•\" else font)) for ch in text)+max(0,len(text)-1)*spacing\n\n")
  text=text.replace(" # original SVG sem a bolinha; Ghost original aplicado no ponto da marca.",
                    " # SVG original WINF preservado integralmente, com detalhe circular oficial.")
- if "  d.text(((main_x if platform==\"whatsapp\" else main_x),h-95 if platform==\"facebook\" else 496),\n         \"ARQUITETURA  /  AUTOMOTIVO  /  PPF\",font=F(\"medium\",12 if platform==\"whatsapp\" else 17),fill=\"#e3e6ea\",stroke_width=0)" not in text:raise RuntimeError("Rodapé da capa alterado")
- text=text.replace("  d.text(((main_x if platform==\"whatsapp\" else main_x),h-95 if platform==\"facebook\" else 496),\n         \"ARQUITETURA  /  AUTOMOTIVO  /  PPF\",font=F(\"medium\",12 if platform==\"whatsapp\" else 17),fill=\"#e3e6ea\",stroke_width=0)","  label(d,\"ARQUITETURA / GLASS + HOME\",\n        (main_x,h-95 if platform==\"facebook\" else 496),\n        F(\"medium\",12 if platform==\"whatsapp\" else 17),\"#e3e6ea\",spacing=0.3)")
+ marker=' d.text(((main_x if platform=="whatsapp" else main_x),h-95 if platform=="facebook" else 496),'
+ start=text.find(marker)
+ end=text.find('\n name=f"WINF_SELECT_',start)
+ if start<0 or end<0:raise RuntimeError("Rodapé original alterado")
+ text=text[:start]+' label(d,"ARQUITETURA / GLASS + HOME",\n       (main_x,h-95 if platform=="facebook" else 496),\n       F("medium",12 if platform=="whatsapp" else 17),"#e3e6ea",spacing=0.3)'+text[end:]
  text=text.replace('\"ARQUITETURA  /  AUTOMOTIVO  /  PPF\"','\"ARQUITETURA  /  GLASS + HOME\"')
  text=text.replace('line=\"ARQUITETURA • AUTOMOTIVO\"','line=\"ARQUITETURA • GLASS + HOME\"')
  text=text.replace('"original Ghost icon, Gustavo official font"','"official WINF SVG, Gustavo official font"')
