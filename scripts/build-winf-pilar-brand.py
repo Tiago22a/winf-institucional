@@ -29,9 +29,9 @@ PHOTOS=[
  ROOT/"images/blackpro-poster-2.webp",
 ]
 CONCEPTS=[
- {"id":1,"slug":"sol_conforto","line1":"SOL FORTE?","line2":"CONFORTO É ESCOLHA.","sub":"Controle solar para seus espaços.","theme":"graphite"},
+ {"id":1,"slug":"sol_conforto","line1":"SOL FORTE.","line2":"CONFORTO SOB CONTROLE.","sub":"Controle solar para seus espaços.","theme":"graphite"},
  {"id":2,"slug":"privacidade","line1":"MAIS PRIVACIDADE.","line2":"SEM PERDER A LUZ.","sub":"Discrição com estética arquitetônica.","theme":"light"},
- {"id":3,"slug":"arquitetura_carros","line1":"SUA CASA. SEU CARRO.","line2":"PROTEÇÃO COM IDENTIDADE.","sub":"Arquitetura • Automotivo • PPF","theme":"graphite"},
+ {"id":3,"slug":"arquitetura_carros","line1":"SUA CASA. SEU CARRO.","line2":"IDENTIDADE E PROTECAO.","sub":"Arquitetura • Automotivo • PPF","theme":"graphite"},
 ]
 
 def sha(p):
@@ -86,8 +86,9 @@ def fit_photo(path,size):
 
 def overlay(im,theme):
  w,h=im.size
- im=ImageEnhance.Color(im).enhance(.82)
- im=ImageEnhance.Brightness(im).enhance(1.21 if theme=="light" else 1.05)
+ im=ImageEnhance.Color(im).enhance(1.08)
+ im=ImageEnhance.Brightness(im).enhance(1.48 if theme=="light" else 1.33)
+ im=ImageEnhance.Contrast(im).enhance(1.09)
  dark=Image.new("RGBA",(w,h),(9,13,18,0))
  # vinheta com zona sólida para texto e vidro ainda visível ao fundo
  mask=Image.new("L",(w,h),0)
@@ -97,9 +98,9 @@ def overlay(im,theme):
   for x in range(w):
    xx=x/w
    if theme=="light":
-    opacity=int(130+68*(1-xx)+vert*90)
+    opacity=int(75+77*(1-xx)+vert*35)
    else:
-    opacity=int(150+55*(1-xx)+vert*75)
+    opacity=int(92+74*(1-xx)+vert*45)
    pixels[x,y]=min(240,opacity)
  dark.putalpha(mask)
  im=Image.alpha_composite(im.convert("RGBA"),dark)
@@ -191,15 +192,15 @@ def profile():
  # segurança do recorte circular: marca completa no centro de 72% da largura.
  d=ImageDraw.Draw(im)
  d.ellipse((85,85,995,995),outline="#ffffff5c",width=3)
- lockup(im,205,365,2.06)
+ lockup(im,225,287,2.00)
  d=ImageDraw.Draw(im)
  title="PILAR DO SUL / SP"
  f=F("medium",32)
  x=round((w-letter_width(d,title,f,3))/2)
- label(d,title,(x,740),f,"#fff",3)
+ label(d,title,(x,767),f,"#fff",3)
  line="ARQUITETURA • AUTOMOTIVO"
  f=F("regular",22);xx=round((w-letter_width(d,line,f,2))/2)
- label(d,line,(xx,792),f,"#d9dde2",2)
+ label(d,line,(xx,830),f,"#d9dde2",2)
  info=PngImagePlugin.PngInfo()
  meta={"Brand":"WINF Select™","Territory":"Pilar do Sul","State":"SP","Platform":"WhatsApp Business, Facebook, Instagram","Type":"profile",
        "Identity":"WINF official SVG, original Ghost icon, Gustavo official font","Version":VERSION,"PhotoStatus":"illustrative"}
@@ -224,6 +225,19 @@ def contact_sheet(files):
  out.save(path,quality=91)
  return path
 
+def export_master_lockups():
+ out=[]
+ for ink in ("light","dark"):
+  layer=Image.new("RGBA",(700,400),(0,0,0,0))
+  lockup(layer,17,13,1.83,ink=ink)
+  box=layer.getbbox()
+  if not box:raise RuntimeError("Logo transparente vazio: "+ink)
+  layer=layer.crop((0,0,max(box[2]+8,610),min(400,box[3]+8)))
+  p=OUT/("MATRIZ_OFICIAL_WINFIN_SELECT_"+ink.upper()+".png")
+  layer.save(p,optimize=True)
+  out.append(p)
+ return out
+
 def run():
  files=[]
  for platform in ("whatsapp","facebook"):
@@ -232,6 +246,7 @@ def run():
  profile_path=profile()
  print("✓",profile_path.name,Image.open(profile_path).size)
  preview=contact_sheet(files)
+ masters=export_master_lockups()
  meta={"territory":"Pilar do Sul","uf":"SP","status":"propostas para aprovação","brand":"WINF Select™",
        "logo_source":"winf-logo.svg (oficial, detalhe circular substituído pelo Ghost original)",
        "ghost_source":"aerocore/assets/ghost-symbol.png (original do GitHub)",
@@ -240,7 +255,7 @@ def run():
        "note":"Fotografias ilustrativas do acervo institucional. Sem promessa de eficácia ou disponibilidade não verificada.",
        "metadata":"EXIF em JPG, PNG textual na imagem do perfil e manifesto JSON; não aumenta ranking sozinho.",
        "source_hashes":{"winf_svg":sha(LOGO),"ghost":sha(GHOST),"gustavo_light":sha(FONTS["light"])},
-       "artworks":[{"filename":x.name,"bytes":x.stat().st_size,"sha256":sha(x)} for x in [*files,profile_path,preview]]
+       "artworks":[{"filename":x.name,"bytes":x.stat().st_size,"sha256":sha(x)} for x in [*files,profile_path,preview,*masters]]
        }
  manifest=OUT/"MANIFESTO_PILAR_DO_SUL.json"
  manifest.write_text(json.dumps(meta,ensure_ascii=False,indent=2),encoding="utf-8")
@@ -254,6 +269,6 @@ def run():
   "Ajuste fino de recorte pode variar entre aplicativos e aparelhos.\n",encoding="utf-8")
  archive=OUT.parent/"WINF_SELECT_PILAR_DO_SUL_SP_APROVACAO_3_CONCEITOS.zip"
  with zipfile.ZipFile(archive,"w",zipfile.ZIP_DEFLATED,compresslevel=6) as z:
-  for p in [*files,profile_path,preview,manifest,readme]:z.write(p,arcname=p.name)
+  for p in [*files,profile_path,preview,manifest,readme,*masters]:z.write(p,arcname=p.name)
  print("✓",archive.name,archive.stat().st_size)
 if __name__=="__main__":run()
