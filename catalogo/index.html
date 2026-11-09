@@ -230,6 +230,43 @@
 <link rel="stylesheet" href="/css/winf-footer-reference.css?v=20261103-reference-2">
 <link rel="stylesheet" href="/css/winf-return.css?v=20261104-5">
 <script defer src="/js/winf-return.js?v=20261104-scroll-3"></script>
+<style>
+/* Catálogo WINF: famílias distintas e navegação para páginas de produtos. */
+.winf-catalog-nav{display:flex;flex-wrap:wrap;gap:16px;align-content:center;min-height:86px}
+.winf-catalog-tabs{display:flex;align-items:center;gap:3px;overflow-x:auto;max-width:100%;min-width:0;padding:4px;background:#121214e8;border:1px solid #ffffff26;scrollbar-width:thin}
+.winf-catalog-tabs button{flex:0 0 auto;padding:11px 13px;min-height:39px;color:#bdbfc4;font:750 10px/1.4 Inter,Arial,sans-serif;letter-spacing:.09em;white-space:nowrap;transition:background .25s,color .25s;cursor:pointer}
+.winf-catalog-tabs button[aria-selected="true"]{background:#eee;color:#121315}
+.winf-catalog-tabs button:hover{color:#fff;background:#ffffff25}
+.winf-catalog-tabs button[aria-selected="true"]:hover{color:#121315;background:#fff}
+.winf-catalog-journeys{border-top:1px solid #ffffff25;border-bottom:1px solid #ffffff25;background:#0a0b0d;padding:65px clamp(22px,5vw,60px) 60px;color:#fff}
+.winf-catalog-inner{max-width:1216px;margin:auto}
+.winf-catalog-eyebrow{color:#a3a6aa;font:700 10px/1.6 Inter,Arial,sans-serif;letter-spacing:.18em}
+.winf-catalog-journeys h2{margin:17px 0;font:300 clamp(30px,5vw,61px)/1.1 Inter,Arial,sans-serif;letter-spacing:-.055em}
+.winf-catalog-journeys h2 span{color:#9ea0a6}
+.winf-catalog-intro{max-width:790px;color:#bec1c5;font-size:15px;line-height:1.75;margin:0 0 32px}
+.winf-catalog-paths{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
+.winf-catalog-paths>a{display:block;text-decoration:none;color:#fff;background:#141518;border:1px solid #ffffff26;overflow:hidden;transition:border-color .3s,transform .3s}
+.winf-catalog-paths>a:is(:hover,:focus-visible){border-color:#ffffffae;transform:translateY(-3px)}
+.winf-catalog-paths img{display:block;width:100%;aspect-ratio:1.6;object-fit:cover;filter:brightness(.75);transition:filter .3s}
+.winf-catalog-paths>a:hover img{filter:brightness(1.04)}
+.winf-catalog-paths span{display:flex;flex-direction:column;gap:10px;padding:17px}
+.winf-catalog-paths small{font:650 9px/1.4 Inter,Arial,sans-serif;letter-spacing:.12em;color:#aab0b8}
+.winf-catalog-paths strong{font:500 clamp(17px,1.8vw,24px)/1.3 Inter,Arial,sans-serif;letter-spacing:-.025em}
+.winf-catalog-paths em{font:750 9px/1.4 Inter,Arial,sans-serif;letter-spacing:.1em;font-style:normal;color:#f2f2f2}
+.winf-catalog-members{font:400 12px/1.7 Inter,Arial,sans-serif;color:#afb1b7;margin-top:26px}
+.winf-catalog-members a{color:#fff;text-decoration:underline;text-underline-offset:4px}
+.winf-catalog-return:not([hidden]){display:flex;flex-wrap:wrap;gap:10px 19px;align-items:center;padding:14px 17px;margin-bottom:32px;border:1px solid #ffffff36;background:#16181b;font-size:12px}
+.winf-catalog-return a{font-weight:700;letter-spacing:.06em;color:#fff;text-decoration:none}
+.winf-catalog-return span{color:#b4b6bd}
+.winf-catalog-deeplink{display:block;padding:15px 23px 21px;font:700 10px/1.4 Inter,Arial,sans-serif;letter-spacing:.08em;text-decoration:none;color:#fff;border-top:1px solid #ffffff20;background:#18191c}
+.winf-catalog-deeplink:hover{background:#25262b}
+#product-grid{scroll-margin-top:150px}
+@media(max-width:1100px){.winf-catalog-paths{grid-template-columns:repeat(2,minmax(0,1fr))}.winf-catalog-nav{gap:8px;padding:13px 20px}.winf-catalog-tabs{order:3;width:100%;justify-content:flex-start}}
+@media(max-width:580px){.winf-catalog-paths{grid-template-columns:1fr 1fr;gap:8px}.winf-catalog-paths strong{font-size:16px}.winf-catalog-paths small{font-size:8px}.winf-catalog-paths em{font-size:8px}.winf-catalog-paths span{padding:12px}.winf-catalog-tabs button{padding:9px 11px;font-size:9px}.winf-catalog-journeys{padding:43px 19px}.winf-catalog-nav{padding:10px 12px}}
+@media(max-width:430px){.winf-catalog-paths{grid-template-columns:1fr 1fr}}
+@media(prefers-reduced-motion:reduce){.winf-catalog-paths>a,.winf-catalog-paths img{transition:none!important;transform:none!important}}
+@media(hover:none){.winf-catalog-paths img{filter:brightness(.95)}}
+</style>
 </head>
 <body class="min-h-screen flex flex-col selection:bg-zinc-500/30">
 <a class="winf-return-link" data-winf-return href="/" aria-label="Voltar ao início da seção"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 5-7 7 7 7M5 12h14"></path></svg></a>
@@ -239,14 +276,16 @@
     <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-zinc-900/40 rounded-none blur-[150px] opacity-50 mix-blend-screen"></div>
   </div>
 
-  <nav id="nav" class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 py-6 bg-[#131314]/60 backdrop-blur-xl border-b border-[#444746] transition-colors duration-700">
-    <a href="../" class="w-10 h-10 flex items-center justify-center border border-[#444746] hover:bg-white/10 transition-colors">
+  <nav id="nav" class="winf-catalog-nav fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 py-6 bg-[#131314]/60 backdrop-blur-xl border-b border-[#444746] transition-colors duration-700">
+    <a id="catalog-home-link" href="/" aria-label="Voltar ao site WINF" class="w-10 h-10 flex items-center justify-center border border-[#444746] hover:bg-white/10 transition-colors">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
     </a>
 
-    <div class="flex bg-[#111112]/90 p-1 border border-zinc-800 absolute left-1/2 -translate-x-1/2 shadow-2xl backdrop-blur-xl" style="max-width:calc(100vw - 120px);">
-      <button onclick="setCategory('arch')" id="tab-arch" class="nav-tab-active px-3 md:px-7 py-2.5 text-[9px] md:text-[10px] tracking-[.15em] md:tracking-[.25em] uppercase font-black transition-all duration-300 whitespace-nowrap">Arch</button>
-      <button onclick="setCategory('auto')" id="tab-auto" class="nav-tab px-3 md:px-7 py-2.5 text-[9px] md:text-[10px] tracking-[.15em] md:tracking-[.25em] uppercase font-black transition-all duration-300 whitespace-nowrap">Auto</button>
+    <div class="winf-catalog-tabs" role="tablist" aria-label="Famílias do catálogo WINF">
+      <button type="button" onclick="setCategory('arch',true)" id="tab-arch" role="tab" aria-selected="true">WINF SELECT</button>
+      <button type="button" onclick="setCategory('aerocore',true)" id="tab-aerocore" role="tab" aria-selected="false">AEROCORE</button>
+      <button type="button" onclick="setCategory('neoskin',true)" id="tab-neoskin" role="tab" aria-selected="false">NEOSKIN</button>
+      <button type="button" onclick="setCategory('ceramic',true)" id="tab-ceramic" role="tab" aria-selected="false">CERAMIC ARMORING</button>
     </div>
 
     <div class="flex items-center gap-3">
@@ -279,6 +318,21 @@
     </div>
   </section>
 
+  <section class="winf-catalog-journeys" aria-labelledby="winf-catalog-journeys-title">
+    <div class="winf-catalog-inner">
+      <div class="winf-catalog-return" id="winf-catalog-return" hidden><a href="/pelicula-de-controle-solar-santos-sp/">← VOLTAR AO SITE DE SANTOS</a><span>Atendimento local: escolha seu produto e fale com a unidade Santos.</span></div>
+      <p class="winf-catalog-eyebrow">CATÁLOGO COMPLETO / EXPLORE AS TECNOLOGIAS</p>
+      <h2 id="winf-catalog-journeys-title">ESCOLHA A LINHA.<br><span>CONHEÇA O DETALHE.</span></h2>
+      <p class="winf-catalog-intro">Explore os produtos e suas especificações. Para conhecer aplicações, imagens e benefícios em profundidade, visite a página oficial de cada marca.</p>
+      <div class="winf-catalog-paths">
+        <a href="/aerocore/winf-select/"><img src="/images/invisible-poster-1.webp" alt="" loading="lazy"><span><small>ARQUITETURA / GLASS + HOME</small><strong>WINF SELECT™</strong><em>VER PÁGINA DA MARCA ↗</em></span></a>
+        <a href="/aerocore/"><img src="/aerocore/public/porsche-911-highway-20261103-poster.webp" alt="" loading="lazy"><span><small>PELÍCULAS AUTOMOTIVAS</small><strong>AEROCORE™</strong><em>VER PÁGINA DA MARCA ↗</em></span></a>
+        <a href="/aerocore/neoskin/"><img src="/aerocore/public/neoskin-hero-20261105.webp" alt="" loading="lazy"><span><small>PROTEÇÃO PPF</small><strong>NEOSKIN™</strong><em>VER PÁGINA DA MARCA ↗</em></span></a>
+        <a href="/aerocore/ceramic-armoring/"><img src="/images/ceramic-hero.webp" alt="" loading="lazy"><span><small>PROTEÇÃO CERÂMICA</small><strong>CERAMIC ARMORING™</strong><em>VER PÁGINA DA MARCA ↗</em></span></a>
+      </div>
+      <p class="winf-catalog-members">Produtos profissionais WINF são destinados ao atendimento pelas unidades e à rede autorizada. <a href="/ghost-shop/">GHOST SHOP™</a> é uma vitrine separada de acessórios e itens de marca, com compra reservada a membros.</p>
+    </div>
+  </section>
   <section class="relative z-10 pb-32 px-6 md:px-12 w-full max-w-7xl mx-auto flex-1">
     <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"></div>
   </section>
@@ -775,22 +829,42 @@ const CATEGORY_META = {
     title: 'O mesmo vidro.<br><span class="font-medium">Uma nova percepção.</span>',
     desc: '<p><b class="text-white">A Tecnologia Não Precisa Ser Vista. Precisa Ser Sentida.</b> Transforme ambientes em santuários de conforto, privacidade e eficiência, filtrando o que há de ruim no sol e deixando entrar apenas a luz.</p>'
   },
-  auto: {
-    label: 'Divisão Automotiva de Performance',
-    title: 'O mesmo veículo.<br><span class="font-medium">Uma nova blindagem.</span>',
-    desc: '<p><b class="text-white">Engenharia Aplicada em Cada Camada.</b> Da nano cerâmica invisível ao PPF mais resistente do mercado, proteja a pintura e o conforto térmico do seu veículo.</p>'
+  aerocore: {
+    label: 'AeroCore™ / Películas Automotivas',
+    title: 'O vidro do seu carro.<br><span class="font-medium">Nova performance.</span>',
+    desc: '<p>Explore as linhas de películas automotivas AeroCore™. Para conhecer aplicações e detalhes, visite a página oficial da marca.</p>'
+  },
+  neoskin: {
+    label: 'NeoSkin™ / Paint Protection Film',
+    title: 'Preserve o que move você.<br><span class="font-medium">Proteção PPF.</span>',
+    desc: '<p>Conheça as opções de proteção de pintura NeoSkin™ e acesse a página da marca para descobrir suas aplicações.</p>'
+  },
+  ceramic: {
+    label: 'Ceramic Armoring™ / Revestimentos',
+    title: 'Cuidado em cada detalhe.<br><span class="font-medium">Proteção cerâmica.</span>',
+    desc: '<p>Explore a Ceramic Armoring™ e conheça a tecnologia de proteção de superfícies e seus benefícios.</p>'
   }
 };
 
 // ===================== STATE =====================
 let activeCategory = 'arch';
+const matchesCurrentLine=p=>activeCategory==='arch'?p.category==='arch':p.line===activeCategory;
+function getProductPage(p){ if(p.line==='aerocore')return '/aerocore/';if(p.line==='neoskin')return '/aerocore/neoskin/';if(p.line==='ceramic')return '/aerocore/ceramic-armoring/';const id=p.id.toLowerCase();if(id.includes('spectre'))return '/aerocore/';if(id.includes('invisible'))return '/invisible/';if(id.includes('blackpro'))return '/blackpro/';if(id.includes('dual'))return '/dual-reflect/';if(id.includes('security'))return '/securityblind/';if(id.includes('mini')||id.includes('venetian'))return '/miniblind-venetian/';return '/aerocore/winf-select/';}
 let sunIntensity = 85;
 let selectedFilmId = '';
 let toastTimer = null;
 
 // ===================== INIT =====================
 document.addEventListener('DOMContentLoaded', () => {
-  renderGrid();
+  const catalogOrigin=urlParams.get('origem');
+  if (catalogOrigin==='santos') {
+    document.getElementById('winf-catalog-return').hidden=false;
+    document.getElementById('catalog-home-link').href='/pelicula-de-controle-solar-santos-sp/';
+    document.getElementById('catalog-home-link').setAttribute('aria-label','Voltar à WINF Santos');
+  }
+  const requestedLine=urlParams.get('linha');
+  if (['arch','aerocore','neoskin','ceramic'].includes(requestedLine)) setCategory(requestedLine);
+  else renderGrid();
   populateFilmSelect();
   setSun(85);
   updateSimDisplay();
@@ -801,18 +875,17 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ===================== CATEGORY =====================
-function setCategory(cat) {
+function setCategory(cat, scrollToProducts=false) {
+  if(!['arch','aerocore','neoskin','ceramic'].includes(cat)) return;
   activeCategory = cat;
   selectedFilmId = '';
   document.getElementById('sim-film-select').value = '';
 
   // tabs visual state
-  ['arch', 'auto'].forEach(c => {
+  ['arch', 'aerocore', 'neoskin', 'ceramic'].forEach(c => {
     const btn = document.getElementById(`tab-${c}`);
     if (!btn) return;
-    btn.className = (c === cat)
-      ? 'nav-tab-active px-3 md:px-7 py-2.5 text-[9px] md:text-[10px] tracking-[.15em] md:tracking-[.25em] uppercase font-black transition-all duration-300 whitespace-nowrap'
-      : 'nav-tab px-3 md:px-7 py-2.5 text-[9px] md:text-[10px] tracking-[.15em] md:tracking-[.25em] uppercase font-black transition-all duration-300 whitespace-nowrap';
+    btn.setAttribute('aria-selected',String(c===cat));
   });
 
   // manifesto header
@@ -826,12 +899,13 @@ function setCategory(cat) {
   renderGrid();
   populateFilmSelect();
   updateSimDisplay();
+  if(scrollToProducts)document.getElementById('product-grid')?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
 }
 
 // ===================== GRID =====================
 function renderGrid() {
   const grid = document.getElementById('product-grid');
-  const products = PRODUCT_CATALOG.filter(p => p.category === activeCategory);
+  const products = PRODUCT_CATALOG.filter(matchesCurrentLine);
   grid.innerHTML = '';
   products.forEach((product, idx) => {
     const card = document.createElement('div');
@@ -863,6 +937,7 @@ function renderGrid() {
             Explorar Specs <svg class="card-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </button>
         </div>
+        <a class="winf-catalog-deeplink" href="${getProductPage(product)}" onclick="event.stopPropagation()" aria-label="Conhecer a página da linha ${product.name}">VER PÁGINA DO PRODUTO / MARCA ↗</a>
         <div class="card-hover-line absolute bottom-0 left-0 h-[2px] text-white"></div>
       </div>
     `;
@@ -874,7 +949,7 @@ function renderGrid() {
 function populateFilmSelect() {
   const sel = document.getElementById('sim-film-select');
   sel.innerHTML = '<option value="">Selecione a Película...</option>';
-  const products = PRODUCT_CATALOG.filter(p => p.category === activeCategory);
+  const products = PRODUCT_CATALOG.filter(matchesCurrentLine);
   products.forEach(p => {
     const vlt = (p.specs.vlt.match(/\d+/) || ['?'])[0];
     const opt = document.createElement('option');
