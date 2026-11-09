@@ -1,0 +1,151 @@
+{
+  "lastReviewed": "2026-11-08",
+  "selectionNote": "Prioridade comercial exploratória: atributos de imóveis, densidade de edifícios e oportunidades de prospecção; não é classificação socioeconômica oficial nem garantia de serviço.",
+  "territories": {
+    "santos": {
+      "priority": [
+        "Gonzaga",
+        "Boqueirão",
+        "Ponta da Praia",
+        "Embaré",
+        "Aparecida",
+        "Pompéia"
+      ],
+      "complementary": [
+        "José Menino",
+        "Marapé",
+        "Campo Grande",
+        "Encruzilhada",
+        "Vila Belmiro",
+        "Macuco"
+      ],
+      "secondaryContext": "Orla, edifícios residenciais, varandas envidraçadas, coberturas e fachadas.",
+      "intro": "Em Santos, a prospecção começa por áreas com presença de edifícios, condomínios e projetos arquitetônicos. A WINF Select avalia cada solicitação pelo tipo de vidro, incidência solar, objetivo de privacidade e disponibilidade de agenda.",
+      "sourceUrls": [
+        "https://www.egov.santos.sp.gov.br/legis/documents/9695/view",
+        "https://www.quintoandar.com.br/guias/cidades/bairros-de-santos/"
+      ]
+    },
+    "praia-grande": {
+      "priority": [
+        "Canto do Forte",
+        "Boqueirão",
+        "Guilhermina",
+        "Aviação",
+        "Tupi",
+        "Caiçara"
+      ],
+      "complementary": [
+        "Ocian",
+        "Mirim",
+        "Maracanã",
+        "Real",
+        "Flórida",
+        "Solemar"
+      ],
+      "secondaryContext": "Eixos da orla, apartamentos, sacadas e fachadas de condomínios.",
+      "intro": "Em Praia Grande, o foco comercial contempla áreas residenciais e o corredor da orla, onde sacadas e janelas amplas podem exigir controle de luminosidade, calor e privacidade. A avaliação é feita pela central da Baixada.",
+      "sourceUrls": [
+        "https://www.praiagrande.sp.gov.br/atendimento/Seplan/CIDE/menucide.asp?item=198",
+        "https://grupoapimoveis.com.br/blog/melhores-bairros-de-praia-grande/"
+      ]
+    },
+    "guaruja": {
+      "priority": [
+        "Pitangueiras",
+        "Enseada",
+        "Astúrias",
+        "Pernambuco",
+        "Tombo",
+        "Guaiúba"
+      ],
+      "complementary": [
+        "Marinas",
+        "Santo Antônio",
+        "Perequê",
+        "Santa Rosa",
+        "Itapema",
+        "Morrinhos"
+      ],
+      "secondaryContext": "Orla, casas, apartamentos, condomínios e loteamentos residenciais, incluindo o entorno do Jardim Acapulco.",
+      "intro": "No Guarujá, a abordagem parte de edifícios e casas próximos à orla, além de áreas residenciais com grandes superfícies de vidro. Projetos e deslocamentos são avaliados pela central integrada da Baixada Santista.",
+      "sourceUrls": [
+        "https://www.guaruja.sp.gov.br/plataforma/wp-content/uploads/2020/06/PDDU-Anexo-III-Mapa-de-Macrozoneamento-e-Abairramento-de-Guaruja-Versao-Final.pdf",
+        "https://www.guaruja.sp.gov.br/plataforma/wp-content/uploads/2019/04/PDDU_LUOS_ILUSTRADO_2023-05-05.pdf"
+      ]
+    },
+    "sorocaba": {
+      "priority": [
+        "Parque Campolim",
+        "Jardim Portal da Colina",
+        "Mangal",
+        "Jardim Emília",
+        "Granja Olga",
+        "Jardim América"
+      ],
+      "complementary": [
+        "Santa Rosália",
+        "Alto da Boa Vista",
+        "Jardim Europa",
+        "Jardim Pagliato",
+        "Vila Jardini",
+        "Jardim Simus"
+      ],
+      "secondaryContext": "Zona Sul e Leste, residências, empreendimentos verticais e condomínios.",
+      "intro": "Em Sorocaba, a prospecção prioriza projetos residenciais e comerciais que demandam conforto térmico e privacidade. A seleção considera o perfil dos imóveis e não estabelece ranking de renda dos moradores.",
+      "sourceUrls": [
+        "https://portas.com.br/dados-inteligencia/bairros-mais-valorizados-brasil-2025/",
+        "https://www.construtoraplaneta.com.br/blog/descubra-melhores-bairros-de-sorocaba/",
+        "https://mya.casa/revista/patrimonio/qual-bairro-de-sorocaba-mais-valorizou-em-24-meses"
+      ]
+    },
+    "pilar-do-sul": {
+      "priority": [
+        "Centro",
+        "Jardim Panorama",
+        "Jardim Cananeia",
+        "Jardim Marajoara",
+        "Parque Residencial Campestre",
+        "Jardim Reserva dos Carvalhos"
+      ],
+      "complementary": [
+        "Jardim Colina",
+        "Jardim Bonança",
+        "Jardim Pinheiro",
+        "Jardim Ipê",
+        "Jardim Nova Pilar",
+        "Campo Grande"
+      ],
+      "secondaryContext": "Casas, chácaras, loteamentos e ambientes residenciais com vidros amplos.",
+      "intro": "Em Pilar do Sul, a estratégia atende à diversidade de imóveis da cidade: residências, chácaras e loteamentos. O orçamento e o deslocamento dependem do endereço, das medidas do vidro e da agenda técnica regional.",
+      "sourceUrls": [
+        "https://www.pilardosul.sp.gov.br/pagina/7/mapa-dos-loteamentos"
+      ]
+    },
+    "campina-grande": {
+      "priority": [
+        "Alto Branco",
+        "Jardim Tavares",
+        "Mirante",
+        "Catolé",
+        "Prata",
+        "Centro"
+      ],
+      "complementary": [
+        "Bela Vista",
+        "São José",
+        "Itararé",
+        "Liberdade",
+        "Sandra Cavalcante",
+        "Nações"
+      ],
+      "secondaryContext": "Edifícios residenciais, condomínios, escritórios e fachadas de vidro.",
+      "intro": "Campina Grande está em fase de pré-ativação comercial. Estes bairros orientam o mapeamento de imóveis e potenciais parcerias; a disponibilidade de aplicação local ainda precisa ser confirmada pela central oficial WINF.",
+      "sourceUrls": [
+        "https://planodiretor.campinagrande.pb.gov.br/wp-content/uploads/2024/05/DIAGNOSTICO-PARTICIPATIVO.pdf",
+        "https://www.zapimoveis.com.br/guia-de-cidades/pb%2Bcampina-grande/",
+        "https://dspace.bc.uepb.edu.br/jspui/bitstream/123456789/27024/1/%28TCCNV%29Vandrielyarquivo.docx%20-%20Documentos%20Google.pdf"
+      ]
+    }
+  }
+}
