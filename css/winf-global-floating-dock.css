@@ -1,0 +1,54 @@
+/* WINF GLOBAL | Atalhos flutuantes compartilhando o menu oficial existente.
+   Não interceptar o consentimento de cookies nem sobrepor o menu aberto. */
+.winf-global-floating-dock{
+  position:fixed;right:clamp(16px,2vw,28px);bottom:clamp(19px,2vw,29px);
+  z-index:65;display:flex;flex-direction:column;align-items:center;gap:24px;
+  pointer-events:none;transition:opacity .2s ease;
+}
+.winf-global-floating-dock>*{pointer-events:auto}
+.winf-global-floating-dock .winf-float-action{
+  position:relative;width:60px;height:60px;display:flex;align-items:center;justify-content:center;
+  border:1px solid rgba(255,255,255,.29);border-radius:50%;
+  background:rgba(11,13,16,.92);color:#fff;text-decoration:none;
+  box-shadow:0 8px 28px rgba(0,0,0,.65),inset 0 0 18px rgba(255,255,255,.025);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  cursor:pointer;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;
+}
+.winf-global-floating-dock .winf-float-action:is(:hover,:focus-visible){
+  transform:translateY(-3px);border-color:rgba(255,255,255,.75);
+  box-shadow:0 12px 32px rgba(0,0,0,.7),0 0 26px rgba(255,255,255,.13);
+}
+.winf-global-floating-dock .winf-float-action:focus-visible{outline:2px solid white;outline-offset:4px}
+.winf-global-floating-dock .winf-float-ghost img{
+  display:block;width:33px;height:42px;object-fit:contain;
+  filter:drop-shadow(0 0 10px rgba(255,255,255,.25));
+  transition:filter .25s ease,transform .25s ease;
+}
+.winf-global-floating-dock .winf-float-ghost:is(:hover,:focus-visible) img{
+  transform:scale(1.08);filter:drop-shadow(0 0 14px rgba(255,255,255,.65));
+}
+.winf-global-floating-dock .winf-float-whatsapp{
+  border-color:rgba(37,211,102,.55);color:#25d366;
+}
+.winf-global-floating-dock .winf-float-whatsapp:is(:hover,:focus-visible){
+  border-color:#25d366;box-shadow:0 11px 28px rgba(0,0,0,.7),0 0 22px rgba(37,211,102,.19);
+}
+.winf-global-floating-dock .winf-float-whatsapp svg{width:29px;height:29px;display:block;fill:currentColor}
+.winf-global-floating-dock .winf-float-caption{
+  position:absolute;top:calc(100% + 5px);left:50%;transform:translateX(-50%);
+  color:#f1f1f1;text-shadow:0 2px 6px rgba(0,0,0,.9);
+  font:700 9px/1.2 'JetBrains Mono',monospace;letter-spacing:.12em;white-space:nowrap;
+}
+body.menu-open .winf-global-floating-dock{opacity:0;pointer-events:none}
+body.menu-open .winf-global-floating-dock>*{pointer-events:none}
+@media(max-width:640px){
+  .winf-global-floating-dock{right:17px;bottom:25px;gap:23px}
+  .winf-global-floating-dock .winf-float-action{width:54px;height:54px}
+  .winf-global-floating-dock .winf-float-ghost img{width:28px;height:37px}
+  .winf-global-floating-dock .winf-float-whatsapp svg{width:27px;height:27px}
+  .winf-global-floating-dock .winf-float-caption{font-size:8px}
+}
+@media(prefers-reduced-motion:reduce){
+  .winf-global-floating-dock,.winf-global-floating-dock .winf-float-action,
+  .winf-global-floating-dock .winf-float-ghost img{transition:none!important}
+}
