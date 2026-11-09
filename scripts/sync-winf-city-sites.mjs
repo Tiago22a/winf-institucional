@@ -63,6 +63,13 @@ const generateCity=function generateCity(template, city) {
     '<p class="santos-area-notice">'+contactNote+' Recebemos solicitações das 07h às 22h. Esta página não representa loja física aberta ao público.</p>');
   // WhatsApp contextualiza o território mesmo quando há uma central comum.
   html=html.replaceAll('data-city="'+city.city+'"','data-city="'+city.city+'"');
+  // O schema representa a cidade real e identifica o WhatsApp da central que a atende.
+  const internationalPhone=city.phone==='5515997909049'?'+55-15-99790-9049':'+55-13-98111-3001';
+  html=html.replace('"areaServed":"'+city.city+', SP"','"areaServed":"'+city.city+', '+city.uf+'"');
+  html=html.replace('"telephone":"+55-13-98111-3001"','"telephone":"'+internationalPhone+'"');
+  // Espaços em nomes compostos não devem permanecer soltos em URLs de WhatsApp.
+  html=html.replace(/href="https:\/\/wa\.me\/[^"]+"/g,(url)=>url.replaceAll(city.city,encodeURIComponent(city.city)));
+  if(city.origin==='campina-grande')html=html.replace('WhatsApp de '+city.city+' sempre à mão','atendimento da central oficial WINF sempre à mão');
   // A marca WINF global sempre remete ao Instagram oficial, e a conta local só existe quando fornecida.
   if(city.instagram){
     html=html.replace(/"sameAs":\["https:\/\/www\.instagram\.com\/winf\.ofc\/","https:\/\/www\.instagram\.com\/[^"]+\/"\]/,
