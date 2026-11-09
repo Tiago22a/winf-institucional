@@ -318,6 +318,13 @@
       "alt": "A VISTA CONTINUA. O CONFORTO MUDA."
     },
     {
+      "route": "/mapa-do-site/",
+      "title": "Mapa do Site WINF™ | Cidades, Produtos, Aplicações e Franquias",
+      "ogImage": "/images/og/winf-share-mapa-do-site-1200x630.jpg",
+      "topic": "WINF™",
+      "alt": "UM MAPA. TODAS AS SOLUÇÕES."
+    },
+    {
       "route": "/miniblind-venetian/",
       "title": "MINIBLIND &amp; VENETIAN™ — WINF™",
       "ogImage": "/images/og/winf-share-miniblind-venetian-1200x630.jpg",
@@ -421,6 +428,13 @@
       "ogImage": "/images/og/winf-share-pelicula-de-controle-solar-santos-sp-sacadas-varandas-1200x630.jpg",
       "topic": "WINF™",
       "alt": "PELÍCULA PARA SACADA E VARANDA EM S"
+    },
+    {
+      "route": "/peliculas-de-controle-solar-brasil/",
+      "title": "Películas de Controle Solar no Brasil | Guia WINF Select™",
+      "ogImage": "/images/og/winf-share-peliculas-de-controle-solar-brasil-1200x630.jpg",
+      "topic": "WINF SELECT™",
+      "alt": "O VIDRO É O MESMO. A ESCOLHA MUDA TUDO."
     },
     {
       "route": "/redes/",
