@@ -1,0 +1,481 @@
+{
+  "generatedAt": "2026-11-09",
+  "domain": "https://winf.com.br/",
+  "indexPages": [
+    {
+      "route": "/aerocore/about-us/",
+      "title": "About Us | AeroCore™, NeoSkin™ e Ceramic Armoring™",
+      "ogImage": "/images/og/winf-share-aerocore-about-us-1200x630.jpg",
+      "topic": "AEROCORE™",
+      "alt": "ENGENHARIA. VISÃO DE FUTURO."
+    },
+    {
+      "route": "/aerocore/aerocore/",
+      "title": "AeroCore™ | Soluções Avançadas de Windowfilm e Engenharia Térmica",
+      "ogImage": "/images/og/winf-share-aerocore-aerocore-1200x630.jpg",
+      "topic": "AEROCORE™",
+      "alt": "DESEMPENHO EM CADA DETALHE."
+    },
+    {
+      "route": "/aerocore/aeronautica/",
+      "title": "AeroStrike | Proteção Solar para Aeronaves | AeroCore",
+      "ogImage": "/images/og/winf-share-aerocore-aeronautica-1200x630.jpg",
+      "topic": "AEROCORE™",
+      "alt": "ENGENHARIA PARA NOVOS HORIZONTES."
+    },
+    {
+      "route": "/aerocore/apocalypse/",
+      "title": "Apocalypse 190 | NEOSKIN™ Tactical PPF",
+      "ogImage": "/images/og/winf-share-aerocore-apocalypse-1200x630.jpg",
+      "topic": "NEOSKIN™",
+      "alt": "PROTEÇÃO INTENSA. ESTÉTICA EM FOCO."
+    },
+    {
+      "route": "/aerocore/bunker/",
+      "title": "Bunker 150 | NEOSKIN™ Tactical PPF",
+      "ogImage": "/images/og/winf-share-aerocore-bunker-1200x630.jpg",
+      "topic": "NEOSKIN™",
+      "alt": "PROTEÇÃO PPF. DETALHE A DETALHE."
+    },
+    {
+      "route": "/aerocore/ceramic-armoring/",
+      "title": "Ceramic Armoring™ | Blindagem Molecular Absoluta",
+      "ogImage": "/images/og/winf-share-aerocore-ceramic-armoring-1200x630.jpg",
+      "topic": "CERAMIC ARMORING™",
+      "alt": "CUIDADO QUE SE PERCEBE."
+    },
+    {
+      "route": "/aerocore/contato/",
+      "title": "Contato | Canal Seguro AEROCORE™",
+      "ogImage": "/images/og/winf-share-aerocore-contato-1200x630.jpg",
+      "topic": "AEROCORE™",
+      "alt": "FALE COM A MARCA. DESCUBRA A SOLUÇÃO."
+    },
+    {
+      "route": "/aerocore/ghost/",
+      "title": "Ghost | AEROCORE™ Windowfilm",
+      "ogImage": "/images/og/winf-share-aerocore-ghost-1200x630.jpg",
+      "topic": "AEROCORE™",
+      "alt": "GHOST™. DISCRIÇÃO EM MOVIMENTO."
+    },
+    {
+      "route": "/aerocore/ghostliquid/",
+      "title": "Ghost Liquid | CERAMIC ARMORING™",
+      "ogImage": "/images/og/winf-share-aerocore-ghostliquid-1200x630.jpg",
+      "topic": "AEROCORE™",
+      "alt": "PROTEÇÃO LÍQUIDA. VISUAL PRECISO."
+    },
+    {
+      "route": "/aerocore/",
+      "title": "AEROCORE | Engenharia de Performance Global",
+      "ogImage": "/images/og/winf-share-aerocore-1200x630.jpg",
+      "topic": "AEROCORE™",
+      "alt": "O INVISÍVEL. FAZ A DIFERENÇA."
+    },
+    {
+      "route": "/aerocore/licenciamento/",
+      "title": "Seja um Licenciado AeroCore | Exclusividade Territorial",
+      "ogImage": "/images/og/winf-share-aerocore-licenciamento-1200x630.jpg",
+      "topic": "AEROCORE™",
+      "alt": "LICENCIAMENTO. PERFORMANCE DE MARCA."
+    },
+    {
+      "route": "/aerocore/luxo/",
+      "title": "Luxury Cars | Blindagem Estética & Luxo Balístico | AeroCore",
+      "ogImage": "/images/og/winf-share-aerocore-luxo-1200x630.jpg",
+      "topic": "AEROCORE™",
+      "alt": "DESIGN EM MOVIMENTO. PROTEÇÃO DISCRETA."
+    },
+    {
+      "route": "/aerocore/marine/",
+      "title": "HydroStrike | Proteção Marítima para Iates | AeroCore",
+      "ogImage": "/images/og/winf-share-aerocore-marine-1200x630.jpg",
+      "topic": "AEROCORE™",
+      "alt": "PROTEÇÃO TAMBÉM É VISÃO DE PROJETO."
+    },
+    {
+      "route": "/aerocore/motorsports/",
+      "title": "Motorsports | Performance e Perfeição nas Pistas | AeroCore",
+      "ogImage": "/images/og/winf-share-aerocore-motorsports-1200x630.jpg",
+      "topic": "AEROCORE™",
+      "alt": "MOVIMENTO. PERFORMANCE."
+    },
+    {
+      "route": "/aerocore/neoskin/",
+      "title": "NeoSkin™ | Blindagem Tática &amp; Paint Protection Film (PPF)",
+      "ogImage": "/images/og/winf-share-aerocore-neoskin-1200x630.jpg",
+      "topic": "NEOSKIN™",
+      "alt": "PROTEJA O QUE VOCÊ CONQUISTOU."
+    },
+    {
+      "route": "/aerocore/onde-comprar/",
+      "title": "Onde comprar | Unidades e territórios WINF — AeroCore",
+      "ogImage": "/images/og/winf-share-aerocore-onde-comprar-1200x630.jpg",
+      "topic": "AEROCORE™",
+      "alt": "ENCONTRE SUA REDE DE ATENDIMENTO."
+    },
+    {
+      "route": "/aerocore/phantom/",
+      "title": "Phantom | AEROCORE™ Windowfilm",
+      "ogImage": "/images/og/winf-share-aerocore-phantom-1200x630.jpg",
+      "topic": "AEROCORE™",
+      "alt": "PHANTOM™. PRESENÇA DISCRETA."
+    },
+    {
+      "route": "/aerocore/policies/",
+      "title": "Compliance &amp; Standards | Políticas e Certificações AeroCore",
+      "ogImage": "/images/og/winf-share-aerocore-policies-1200x630.jpg",
+      "topic": "AEROCORE™",
+      "alt": "TRANSPARÊNCIA. EM CADA DETALHE."
+    },
+    {
+      "route": "/aerocore/spectre/",
+      "title": "Spectre | AEROCORE™ Windowfilm",
+      "ogImage": "/images/og/winf-share-aerocore-spectre-1200x630.jpg",
+      "topic": "AEROCORE™",
+      "alt": "SPECTRE™. OUTRA PERCEPÇÃO."
+    },
+    {
+      "route": "/aerocore/supermaquinas/",
+      "title": "HeavyStrike | Blindagem Industrial para Frotas | AeroCore",
+      "ogImage": "/images/og/winf-share-aerocore-supermaquinas-1200x630.jpg",
+      "topic": "AEROCORE™",
+      "alt": "MÁQUINAS EXIGENTES. PROTEÇÃO EM FOCO."
+    },
+    {
+      "route": "/aerocore/supermotos/",
+      "title": "Super Motos | Performance Extrema em Duas Rodas | AeroCore",
+      "ogImage": "/images/og/winf-share-aerocore-supermotos-1200x630.jpg",
+      "topic": "AEROCORE™",
+      "alt": "SUA MOTO. OUTRA PROTEÇÃO."
+    },
+    {
+      "route": "/aerocore/winf-select/",
+      "title": "WINF Select™ | Películas arquitetônicas, conforto e privacidade",
+      "ogImage": "/images/og/winf-share-aerocore-winf-select-1200x630.jpg",
+      "topic": "WINF SELECT™",
+      "alt": "O VIDRO CONTINUA. A EXPERIÊNCIA MUDA."
+    },
+    {
+      "route": "/aerocore/wraith/",
+      "title": "Wraith | AEROCORE™ Windowfilm",
+      "ogImage": "/images/og/winf-share-aerocore-wraith-1200x630.jpg",
+      "topic": "AEROCORE™",
+      "alt": "WRAITH™. PERFORMANCE VISUAL."
+    },
+    {
+      "route": "/aplicacoes/janelas-fachadas/",
+      "title": "Películas para janelas, fachadas e home office | Guia WINF Select™",
+      "ogImage": "/images/og/winf-share-aplicacoes-janelas-fachadas-1200x630.jpg",
+      "topic": "WINF SELECT™",
+      "alt": "SUA LUZ. SEU CONTROLE."
+    },
+    {
+      "route": "/aplicacoes/privacidade/",
+      "title": "Privacidade para vidros: soluções claras, escuras e refletivas | Guia WINF Select™",
+      "ogImage": "/images/og/winf-share-aplicacoes-privacidade-1200x630.jpg",
+      "topic": "WINF SELECT™",
+      "alt": "MAIS DISCRIÇÃO. NO SEU RITMO."
+    },
+    {
+      "route": "/aplicacoes/sacadas-varandas/",
+      "title": "Películas para sacadas e varandas envidraçadas | Guia WINF Select™",
+      "ogImage": "/images/og/winf-share-aplicacoes-sacadas-varandas-1200x630.jpg",
+      "topic": "WINF SELECT™",
+      "alt": "VIVA A VARANDA. COM MAIS CONFORTO."
+    },
+    {
+      "route": "/aplicacoes/seguranca-vidros/",
+      "title": "Películas de segurança para vidros: o que avaliar | Guia WINF Select™",
+      "ogImage": "/images/og/winf-share-aplicacoes-seguranca-vidros-1200x630.jpg",
+      "topic": "WINF SELECT™",
+      "alt": "PROTEÇÃO COMEÇA PELA ESCOLHA."
+    },
+    {
+      "route": "/blackpro/",
+      "title": "WINF SELECT BlackPro™ — Privacidade Arquitetônica",
+      "ogImage": "/images/og/winf-share-blackpro-1200x630.jpg",
+      "topic": "WINF SELECT™",
+      "alt": "PRIVACIDADE. COM PERSONALIDADE."
+    },
+    {
+      "route": "/blog/blindagem-transparente/",
+      "title": "BLINDAGEM TRANSPARENTE: COMO FUNCIONA UMA PELÍCULA DE SEGURANÇA | WINF Journal™",
+      "ogImage": "/images/og/winf-share-blog-blindagem-transparente-1200x630.jpg",
+      "topic": "WINF JOURNAL™",
+      "alt": "SEGURANÇA. SEM ATALHOS."
+    },
+    {
+      "route": "/blog/ceramica-nanometrica/",
+      "title": "CERÂMICA NANOMÉTRICA: PROTEÇÃO UV SEM NENHUM FILTRO VISÍVEL | WINF Journal™",
+      "ogImage": "/images/og/winf-share-blog-ceramica-nanometrica-1200x630.jpg",
+      "topic": "WINF JOURNAL™",
+      "alt": "TECNOLOGIA ALÉM DO VISÍVEL."
+    },
+    {
+      "route": "/blog/",
+      "title": "WINF Journal™ — Artigos sobre Tecnologia e Engenharia do Vidro",
+      "ogImage": "/images/og/winf-share-blog-1200x630.jpg",
+      "topic": "WINF JOURNAL™",
+      "alt": "IDEIAS QUE TRANSPARENTA(M)."
+    },
+    {
+      "route": "/blog/persianas-no-vidro/",
+      "title": "PERSIANAS DENTRO DO VIDRO: A ESTÉTICA DO MINIBLIND &amp; VENETIAN | WINF Journal™",
+      "ogImage": "/images/og/winf-share-blog-persianas-no-vidro-1200x630.jpg",
+      "topic": "WINF JOURNAL™",
+      "alt": "A LUZ. COM OUTRO DESIGN."
+    },
+    {
+      "route": "/blog/ppf-armadura-invisivel/",
+      "title": "PPF: A ARMADURA INVISÍVEL PARA SUPERFÍCIES PREMIUM | WINF Journal™",
+      "ogImage": "/images/og/winf-share-blog-ppf-armadura-invisivel-1200x630.jpg",
+      "topic": "WINF JOURNAL™",
+      "alt": "PINTURA PROTEGIDA. ESTÉTICA PRESERVADA."
+    },
+    {
+      "route": "/blog/privacidade-arquitetonica/",
+      "title": "PRIVACIDADE SEM ABRIR MÃO DA LUZ: A ARQUITETURA DO VIDRO ESCURO | WINF Journal™",
+      "ogImage": "/images/og/winf-share-blog-privacidade-arquitetonica-1200x630.jpg",
+      "topic": "WINF JOURNAL™",
+      "alt": "SEU ESPAÇO. MAIS DISCRIÇÃO."
+    },
+    {
+      "route": "/blog/rejeicao-infravermelha/",
+      "title": "REJEIÇÃO INFRAVERMELHA: A ENGENHARIA DO CONFORTO TÉRMICO | WINF Journal™",
+      "ogImage": "/images/og/winf-share-blog-rejeicao-infravermelha-1200x630.jpg",
+      "topic": "WINF JOURNAL™",
+      "alt": "ENTENDA O CALOR. ESCOLHA MELHOR."
+    },
+    {
+      "route": "/briefing/asset-light/",
+      "title": "WINF Asset Light™ | Licenciamento Territorial — WINF Partners",
+      "ogImage": "/images/og/winf-share-briefing-asset-light-1200x630.jpg",
+      "topic": "WINF PARTNERS™",
+      "alt": "ESTRUTURA ENXUTA. VISÃO DE EXPANSÃO."
+    },
+    {
+      "route": "/briefing/flagship/",
+      "title": "WINF Flagship™ | AeroCore Studio e Hub Regional — WINF Partners",
+      "ogImage": "/images/og/winf-share-briefing-flagship-1200x630.jpg",
+      "topic": "WINF PARTNERS™",
+      "alt": "UMA LOJA. UMA REFERÊNCIA."
+    },
+    {
+      "route": "/briefing/",
+      "title": "WINF Partners™ | Briefing e Modelos de Licenciamento Territorial",
+      "ogImage": "/images/og/winf-share-briefing-1200x630.jpg",
+      "topic": "WINF PARTNERS™",
+      "alt": "ESCOLHA SEU MODELO. CONHEÇA O CAMINHO."
+    },
+    {
+      "route": "/briefing/quiosque/",
+      "title": "WINF Kiosk™ | Quiosque Arquitetônico — WINF Partners",
+      "ogImage": "/images/og/winf-share-briefing-quiosque-1200x630.jpg",
+      "topic": "WINF PARTNERS™",
+      "alt": "PRESENÇA QUE CHAMA ATENÇÃO."
+    },
+    {
+      "route": "/catalogo/",
+      "title": "Catálogo WINF™ | Películas Arquitetônicas, Automotivas e PPF",
+      "ogImage": "/images/og/winf-catalogo-1200x630.jpg",
+      "topic": "WINF™",
+      "alt": "ESCOLHA A SOLUÇÃO. CONHEÇA A TECNOLOGIA."
+    },
+    {
+      "route": "/dual-reflect/",
+      "title": "WINF SELECT Dual Reflect™ — Controle Solar Refletivo",
+      "ogImage": "/images/og/winf-share-dual-reflect-1200x630.jpg",
+      "topic": "WINF SELECT™",
+      "alt": "SOL SOB CONTROLE. VISTA PRESERVADA."
+    },
+    {
+      "route": "/ghost-shop/",
+      "title": "GHOST SHOP™ | Lifestyle e mimos WINF™ para membros",
+      "ogImage": "/images/og/winf-share-ghost-shop-1200x630.jpg",
+      "topic": "GHOST SHOP™",
+      "alt": "IDENTIDADE QUE VAI ALÉM DO VIDRO."
+    },
+    {
+      "route": "/",
+      "title": "WINF™ — Engenharia Invisível em Vidro",
+      "ogImage": "/images/og/winf-share-oficial-1200x630.jpg",
+      "topic": "WINF™",
+      "alt": "O SOL NÃO MANDA. NO SEU CONFORTO."
+    },
+    {
+      "route": "/insulfilm-residencial-sorocaba-sp/",
+      "title": "Películas Residenciais e Controle Solar em Sorocaba SP | WINF Select™",
+      "ogImage": "/images/og/winf-select-sorocaba-1200x630.jpg",
+      "topic": "WINF SELECT™",
+      "alt": "SUA CASA CLARA. SEU CONFORTO EM DIA."
+    },
+    {
+      "route": "/invisible/",
+      "title": "WINF SELECT Invisible™ — Nano Cerâmica Arquitetônica Invisível",
+      "ogImage": "/images/og/winf-share-invisible-1200x630.jpg",
+      "topic": "WINF SELECT™",
+      "alt": "A VISTA CONTINUA. O CONFORTO MUDA."
+    },
+    {
+      "route": "/miniblind-venetian/",
+      "title": "MINIBLIND &amp; VENETIAN™ — WINF™",
+      "ogImage": "/images/og/winf-share-miniblind-venetian-1200x630.jpg",
+      "topic": "WINF SELECT™",
+      "alt": "DESENHE A LUZ. PERSONALIZE O VIDRO."
+    },
+    {
+      "route": "/onde-comprar/",
+      "title": "Onde comprar películas WINF™ | Unidades e territórios ativos",
+      "ogImage": "/images/og/winf-share-onde-comprar-1200x630.jpg",
+      "topic": "WINF™",
+      "alt": "ENCONTRE SEU ATENDIMENTO WINF."
+    },
+    {
+      "route": "/partners/cuidar-e-conectar/",
+      "title": "Cuidar & Conectar | Projeto social — WINF Partners™",
+      "ogImage": "/images/og/winf-share-partners-cuidar-e-conectar-1200x630.jpg",
+      "topic": "WINF™",
+      "alt": "CUIDAR. E CONECTAR."
+    },
+    {
+      "route": "/partners/distribuidores/",
+      "title": "Distribuidores | Parcerias comerciais — WINF Partners™",
+      "ogImage": "/images/og/winf-share-partners-distribuidores-1200x630.jpg",
+      "topic": "WINF PARTNERS™",
+      "alt": "CONEXÕES QUE AMPLIAM MERCADOS."
+    },
+    {
+      "route": "/partners/ecossistema/",
+      "title": "Projetos do ecossistema | WINF Partners™",
+      "ogImage": "/images/og/winf-share-partners-ecossistema-1200x630.jpg",
+      "topic": "WINF PARTNERS™",
+      "alt": "UM ECOSSISTEMA. MUITAS POSSIBILIDADES."
+    },
+    {
+      "route": "/partners/",
+      "title": "WINF Partners™ | Expansão territorial e WINF Asset Light™",
+      "ogImage": "/images/og/winf-share-partners-1200x630.jpg",
+      "topic": "WINF PARTNERS™",
+      "alt": "SEU TERRITÓRIO. NOVAS POSSIBILIDADES."
+    },
+    {
+      "route": "/partners/varejistas/",
+      "title": "Varejistas | Pontos de relacionamento — WINF Partners™",
+      "ogImage": "/images/og/winf-share-partners-varejistas-1200x630.jpg",
+      "topic": "WINF PARTNERS™",
+      "alt": "PRESENÇA LOCAL. IDENTIDADE GLOBAL."
+    },
+    {
+      "route": "/pelicula-de-controle-solar-campina-grande-pb/",
+      "title": "Película de Controle Solar em Campina Grande PB | WINF Select™",
+      "ogImage": "/images/og/winf-select-campina-grande-1200x630.jpg",
+      "topic": "WINF SELECT™",
+      "alt": "NOVAS POSSIBILIDADES. PARA SEUS VIDROS."
+    },
+    {
+      "route": "/pelicula-de-controle-solar-guaruja-sp/",
+      "title": "Películas para Sacadas e Vidros no Guarujá SP | WINF Select™",
+      "ogImage": "/images/og/winf-select-guaruja-1200x630.jpg",
+      "topic": "WINF SELECT™",
+      "alt": "MAIS PRIVACIDADE. MENOS INCÔMODO."
+    },
+    {
+      "route": "/pelicula-de-controle-solar-pilar-do-sul-sp/",
+      "title": "Películas para Vidros em Pilar do Sul SP | WINF Select™",
+      "ogImage": "/images/og/winf-select-pilar-do-sul-1200x630.jpg",
+      "topic": "WINF SELECT™",
+      "alt": "A LUZ ENTRA. O CONFORTO FICA."
+    },
+    {
+      "route": "/pelicula-de-controle-solar-praia-grande-sp/",
+      "title": "Película de Controle Solar em Praia Grande SP | WINF Select™",
+      "ogImage": "/images/og/winf-select-praia-grande-1200x630.jpg",
+      "topic": "WINF SELECT™",
+      "alt": "SUA VISTA MERECE MAIS CONFORTO."
+    },
+    {
+      "route": "/pelicula-de-controle-solar-santos-sp/",
+      "title": "Películas para Sacadas e Vidros em Santos SP | WINF Select™",
+      "ogImage": "/images/og/winf-select-santos-1200x630.jpg",
+      "topic": "WINF SELECT™",
+      "alt": "MANTENHA A VISTA. CONTROLE O CALOR."
+    },
+    {
+      "route": "/pelicula-de-controle-solar-santos-sp/janelas-residenciais/",
+      "title": "Película para Janelas Residenciais em Santos | WINF Select™",
+      "ogImage": "/images/og/winf-share-pelicula-de-controle-solar-santos-sp-janelas-residenciais-1200x630.jpg",
+      "topic": "WINF™",
+      "alt": "PELÍCULA PARA JANELAS RESIDENCIAIS"
+    },
+    {
+      "route": "/pelicula-de-controle-solar-santos-sp/privacidade/",
+      "title": "Película de Privacidade para Vidros em Santos | WINF Select™",
+      "ogImage": "/images/og/winf-share-pelicula-de-controle-solar-santos-sp-privacidade-1200x630.jpg",
+      "topic": "WINF™",
+      "alt": "PELÍCULA DE PRIVACIDADE PARA VIDROS"
+    },
+    {
+      "route": "/pelicula-de-controle-solar-santos-sp/sacadas-varandas/",
+      "title": "Película para Sacada e Varanda em Santos | WINF Select™",
+      "ogImage": "/images/og/winf-share-pelicula-de-controle-solar-santos-sp-sacadas-varandas-1200x630.jpg",
+      "topic": "WINF™",
+      "alt": "PELÍCULA PARA SACADA E VARANDA EM S"
+    },
+    {
+      "route": "/redes/",
+      "title": "Universo WINF™ | Redes oficiais e marcas",
+      "ogImage": "/images/og/winf-share-redes-1200x630.jpg",
+      "topic": "WINF™",
+      "alt": "UM UNIVERSO. TODAS AS MARCAS."
+    },
+    {
+      "route": "/securityblind/",
+      "title": "WINF SELECT SecurityBlinder™ — Segurança em Vidro",
+      "ogImage": "/images/og/winf-share-securityblind-1200x630.jpg",
+      "topic": "WINF SELECT™",
+      "alt": "SEGURANÇA EXIGE ESPECIFICAÇÃO."
+    },
+    {
+      "route": "/winf-home/",
+      "title": "WINF Home™ — Todas as Linhas WINF",
+      "ogImage": "/images/og/winf-share-winf-home-1200x630.jpg",
+      "topic": "WINF™",
+      "alt": "ESCOLHA SUA LINHA. CONHEÇA A WINF."
+    }
+  ],
+  "excluded": [
+    {
+      "route": "404",
+      "reason": "noindex"
+    },
+    {
+      "route": "ceramic",
+      "reason": "noindex"
+    },
+    {
+      "route": "cidades/santos-sp",
+      "reason": "redirecionamento"
+    },
+    {
+      "route": "cidades/sorocaba-sp",
+      "reason": "redirecionamento"
+    },
+    {
+      "route": "cliente",
+      "reason": "noindex"
+    },
+    {
+      "route": "hub",
+      "reason": "noindex"
+    },
+    {
+      "route": "neoskin",
+      "reason": "noindex"
+    },
+    {
+      "route": "partners/carro-midia",
+      "reason": "noindex"
+    }
+  ]
+}
