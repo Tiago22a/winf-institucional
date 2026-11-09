@@ -8,6 +8,7 @@ import {fileURLToPath} from 'node:url';
 import {applyCitySeo} from './winf-city-seo.mjs';
 import {applyTerritorySection} from './winf-city-territory.mjs';
 import {applyApplicationSection} from './winf-city-applications.mjs';
+import {applyCitySearchLanguage} from './winf-city-search-language.mjs';
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const cfg=JSON.parse(readFileSync(resolve(root,'config/winf-active-cities.json'),'utf8'));
 const template=readFileSync(resolve(root,cfg.template),'utf8');
@@ -81,7 +82,7 @@ const generateCity=function generateCity(template, city) {
     html=html.replace(/"sameAs":\["https:\/\/www\.instagram\.com\/winf\.ofc\/","https:\/\/www\.instagram\.com\/[^"]+\/"\]/,
       '"sameAs":["https://www.instagram.com/winf.ofc/"]');
   }
-  return applyCitySeo(applyTerritorySection(applyApplicationSection(html,city),city),city);
+  return applyCitySeo(applyTerritorySection(applyCitySearchLanguage(applyApplicationSection(html,city),city),city),city);
 };
 let stale=0;
 for(const city of cfg.cities){
