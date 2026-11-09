@@ -1,0 +1,29 @@
+name: WINF Select Pilar do Sul — artes oficiais para aprovação
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/winf-pilar-social-art.yml'
+      - 'scripts/build-winf-pilar-brand.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  criar-artes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Preparar imagens com fontes e marcas oficiais do repositório
+        run: |
+          python -m pip install --disable-pip-version-check Pillow==11.3.0 cairosvg==2.8.2
+          python scripts/build-winf-pilar-brand.py
+      - name: Anexar 3 conjuntos e foto de perfil
+        uses: actions/upload-artifact@v4
+        with:
+          name: WINF-SELECT-PILAR-DO-SUL-IDENTIDADE-OFICIAL
+          path: build/WINF_SELECT_PILAR_DO_SUL_SP_APROVACAO_3_CONCEITOS.zip
+          if-no-files-found: error
+          retention-days: 30
