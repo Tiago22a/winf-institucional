@@ -348,5 +348,12 @@
   <url><loc>https://winf.com.br/aplicacoes/seguranca-vidros/</loc><lastmod>2026-11-09</lastmod><changefreq>monthly</changefreq><priority>0.72</priority></url>
   <url><loc>https://winf.com.br/peliculas-de-controle-solar-brasil/</loc><lastmod>2026-11-09</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
   <url><loc>https://winf.com.br/mapa-do-site/</loc><lastmod>2026-11-09</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
+  <url>
+  <loc>https://winf.com.br/pelicula-de-controle-solar-cuiaba-mt/</loc>
+  <lastmod>2026-11-09</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+  <image:image><image:loc>https://winf.com.br/images/og/winf-select-cuiaba-1200x630.jpg</image:loc><image:title>WINF Select Cuiabá — soluções de controle solar e privacidade para vidros</image:title></image:image>
+</url>
 </urlset>
 
