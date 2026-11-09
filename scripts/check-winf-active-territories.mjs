@@ -30,5 +30,6 @@ const locator=read('aerocore/assets/onde-comprar.js');
 assert.ok(locator.includes("'Instagram da unidade ↗'"),'Faltou Instagram em diretório dinâmico');
 assert.ok(locator.includes("'Site da unidade ↗'"),'Faltou site no diretório dinâmico');
 assert.ok(locator.includes('encodeURIComponent(text)'),'Origem do contato não identificada');
-assert.ok(doc.includes('5 unidades ativas + 1 em pré-ativação'));
+// O resumo visual de territórios foi retirado do site; validar apenas os dados e links, não texto editorial removido.
+assert.ok(!doc.includes('5 unidades ativas + 1 em pré-ativação'), 'Contador legado indevido na página principal');
 console.log('✓ WINF: 5 unidades ativas + Campina em pré-ativação, sites + WhatsApp + Instagram verificados.');
