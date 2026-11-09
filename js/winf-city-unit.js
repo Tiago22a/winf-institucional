@@ -1,7 +1,7 @@
 (()=>{'use strict';const cards=document.querySelectorAll('.santos-hover-card');if(cards.length){if('IntersectionObserver' in window){const touch=matchMedia('(hover: none)');const io=new IntersectionObserver(entries=>{if(!touch.matches)return;entries.forEach(e=>e.target.classList.toggle('santos-visible',e.isIntersecting))},{threshold:.45});cards.forEach(c=>io.observe(c))}else cards.forEach(c=>c.classList.add('santos-visible'))}
 const form=document.getElementById('santos-quote-form');if(!form)return;
-const city=form.getAttribute('data-city')||'Santos';
+const city=form.getAttribute('data-city')||'Santos'; const whatsapp=(form.getAttribute('data-whatsapp')||'5513981113001').replace(/[^0-9]/g,'');
 const need=form.querySelector('[name="need"]'),bairro=form.querySelector('[name="neighborhood"]'),area=form.querySelector('[name="area"]');
 document.querySelectorAll('[data-santos-product]').forEach(a=>a.addEventListener('click',()=>{need.value=a.getAttribute('data-santos-product')||''}));
-form.addEventListener('submit',e=>{e.preventDefault();if(!form.reportValidity())return;const lines=['Olá! Vim pelo site WINF de '+city+' e gostaria de um orçamento.','Produto ou objetivo: '+need.value,'Cidade: '+city,'Bairro: '+(bairro.value.trim()||'a informar'),'Medidas: '+(area.value.trim()||'a informar'),'Posso enviar fotos do vidro para avaliação.'];window.open('https://wa.me/5513981113001?text='+encodeURIComponent(lines.join('\n')),'_blank','noopener,noreferrer')});
+form.addEventListener('submit',e=>{e.preventDefault();if(!form.reportValidity())return;const lines=['Olá! Vim pelo site WINF de '+city+' e gostaria de um orçamento.','Produto ou objetivo: '+need.value,'Cidade: '+city,'Bairro: '+(bairro.value.trim()||'a informar'),'Medidas: '+(area.value.trim()||'a informar'),'Posso enviar fotos do vidro para avaliação.'];window.open('https://wa.me/'+whatsapp+'?text='+encodeURIComponent(lines.join('\n')),'_blank','noopener,noreferrer')});
 })();
