@@ -19,6 +19,11 @@ for(const city of cfg.cities){
   assert.ok(s.includes('Não há loja física anunciada'),'Sem inventar loja física');
   if(city.origin==='campina-grande')assert.ok(s.includes('pré-ativação'),'Campina Grande deve sinalizar pré-ativação');
   assert.ok(!s.includes('INFORME SEU BAIRRO</span><span>ENVIE SEU CEP'),'Conteúdo genérico não substituído: '+city.city);
+  assert.ok(s.includes('name="geo.region" content="BR-'+city.uf+'"'),'UF de metadados incorreta: '+city.city);
+  if(city.uf!=='SP') {
+    const nome=city.city.toLocaleUpperCase('pt-BR');
+    assert.ok(!s.includes(nome+' / SP')&&!s.includes(nome+'/SP'),'Estado SP herdado no texto de '+city.city);
+  }
   console.log('✓ Bairros WINF',city.city,plan.priority.length,'foco +',plan.complementary.length,'complementares');
 }
-console.log('✓ SEO TERRITORIAL de 6 cidades verificado.');
+console.log('✓ SEO TERRITORIAL de '+cfg.cities.length+' cidades verificado.');
