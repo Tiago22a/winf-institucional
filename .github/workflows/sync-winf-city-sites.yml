@@ -37,6 +37,9 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+concurrency:
+  group: winf-city-sync-${{ github.ref }}
+  cancel-in-progress: false
 jobs:
   sync:
     runs-on: ubuntu-latest
@@ -95,7 +98,12 @@ jobs:
             git config user.name "WINF Social SEO"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git commit -m "build(social): capas por pagina e metadados completos [skip ci]"
-            git push
+            # Um commit externo pode entrar durante a geração de imagens.
+            if ! git push origin HEAD:main; then
+              git fetch origin main
+              git rebase origin/main
+              git push origin HEAD:main
+            fi
           else
             echo "Metadados e capas já estão sincronizados."
           fi
