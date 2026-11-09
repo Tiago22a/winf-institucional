@@ -1,0 +1,34 @@
+/* Enlaces oficiais e status confiáveis do diretório WINF (teste de regressão). */
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import vm from 'node:vm';
+const read=path=>readFileSync(path,'utf8');
+const doc=read('index.html');
+const source=read('js/cidades.js');
+const root={};vm.runInNewContext(source,{globalThis:root});
+const rows=[...root.WINF_CIDADES,...root.WINF_UNIDADES_EXTRAS].filter(c=>c.status==='ativa');
+assert.equal(rows.length,5,'Exatamente 5 unidades operacionais, Pilar extra incluído');
+const pending=root.WINF_CIDADES.filter(c=>c.status==='pre_ativacao');
+assert.equal(pending.length,1);assert.equal(pending[0].id,'campina-grande-pb');
+const all=[...rows,...pending];
+assert.equal(all.length,6);
+for(const city of all){
+ assert.ok(city.url?.startsWith('/'),'Site faltando '+city.cidade);
+ assert.ok(read(city.url.slice(1)+'index.html').includes('https://winf.com.br/'+city.url.slice(1)),'Página local não gerada '+city.cidade);
+ assert.ok(doc.includes('href="'+city.url+'"'),'Site ausente no global: '+city.cidade);
+ assert.equal(city.numero,'5513981113001','Telefone central temporário: '+city.cidade);
+ const marker=doc.indexOf('aria-label="WINF Select '+city.cidade+', '+city.uf+'"');
+ assert.ok(marker>=0,'Card de território ausente '+city.cidade);
+ const article=doc.slice(marker,doc.indexOf('</article>',marker));
+ assert.match(article,/wa\.me\/5513981113001\?text=/,'WhatsApp com origem '+city.cidade);
+ assert.ok(article.includes(encodeURIComponent(city.cidade)),'Mensagem deve registrar local '+city.cidade);
+ assert.match(article,/<a href="https:\/\/www\.instagram\.com\/[^"]+\/"[^>]*>INSTAGRAM/,'Instagram oficial '+city.cidade);
+ if(city.instagram)assert.ok(article.includes(city.instagram),'Instagram da unidade '+city.cidade);
+ else assert.ok(article.includes('INSTAGRAM WINF GLOBAL'),'Sem perfil local confirmado '+city.cidade);
+}
+const locator=read('aerocore/assets/onde-comprar.js');
+assert.ok(locator.includes("'Instagram da unidade ↗'"),'Faltou Instagram em diretório dinâmico');
+assert.ok(locator.includes("'Site da unidade ↗'"),'Faltou site no diretório dinâmico');
+assert.ok(locator.includes('encodeURIComponent(text)'),'Origem do contato não identificada');
+assert.ok(doc.includes('5 unidades ativas + 1 em pré-ativação'));
+console.log('✓ WINF: 5 unidades ativas + Campina em pré-ativação, sites + WhatsApp + Instagram verificados.');

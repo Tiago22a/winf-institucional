@@ -5,7 +5,7 @@
   if (!root) return;
   const source = Array.isArray(globalThis.WINF_CIDADES) ? globalThis.WINF_CIDADES : [];
   // Demonstration records are never advertised as real units or available territories.
-  const cities = source.filter(city => city && city.exemplo === false && ['ativa', 'nao_ativa'].includes(city.status));
+  const cities = source.filter(city => city && city.exemplo === false && ['ativa', 'pre_ativacao', 'nao_ativa'].includes(city.status));
   const extras = Array.isArray(globalThis.WINF_UNIDADES_EXTRAS) ? globalThis.WINF_UNIDADES_EXTRAS.filter(city => city && city.exemplo === false && city.status === 'ativa') : [];
   const extrasSection = document.getElementById('directory-extras');
   const extraResults = document.getElementById('directory-extra-results');
@@ -21,7 +21,7 @@
   let mode = 'ativas';
   const names = { automotivo: 'Automotivo', residencial: 'Residencial', ambos: 'Automotivo + residencial' };
   const normalize = value => String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
-  const eligible = city => mode === 'ativas' ? city.status === 'ativa' : city.status === 'nao_ativa' && city.disponivelParaAtivacao === true;
+  const eligible = city => mode === 'ativas' ? (city.status === 'ativa' || city.status === 'pre_ativacao') : city.status === 'nao_ativa' && city.disponivelParaAtivacao === true;
   function safeUrl(value) {
     if (!value) return null;
     try {
@@ -50,16 +50,20 @@
         const card = template.content.cloneNode(true);
         card.querySelector('article').dataset.status = city.status;
         card.querySelector('.directory-card-state').textContent = city.referencia || city.uf || '';
-        card.querySelector('.directory-card-status').textContent = city.status === 'ativa' ? '● Ativa' : mode === 'territorios' ? 'Ativação disponível' : 'Não ativa';
+        card.querySelector('.directory-card-status').textContent = city.status === 'pre_ativacao' ? '◌ Pré-ativação' : city.status === 'ativa' ? '● Ativa' : mode === 'territorios' ? 'Ativação disponível' : 'Não ativa';
         card.querySelector('.directory-card-city').textContent = city.cidade + (city.uf ? ' — ' + city.uf : '');
-        card.querySelector('.directory-card-segment').textContent = city.status === 'ativa' ? (names[city.tipoAtendimento] || 'Atendimento sob consulta') : 'Disponibilidade para ativação sob consulta';
+        card.querySelector('.directory-card-segment').textContent = city.status === 'pre_ativacao' ? 'Página local publicada; operação sob consulta' : city.status === 'ativa' ? (names[city.tipoAtendimento] || 'Atendimento sob consulta') : 'Disponibilidade para ativação sob consulta';
         const tags = city.tipoAtendimento === 'ambos' ? ['Automotivo', 'Residencial'] : [names[city.tipoAtendimento]].filter(Boolean);
         tags.forEach(text => { const tag = document.createElement('span'); tag.textContent = text; card.querySelector('.directory-card-tags').append(tag); });
         const links = card.querySelector('.directory-card-links');
-        if (city.status === 'ativa') {
-          addLink(links, 'Conhecer unidade ↗', city.url);
-          if (/^55\d{10,11}$/.test(String(city.numero || ''))) addLink(links, 'WhatsApp ↗', 'https://wa.me/' + city.numero);
-          if (!links.childElementCount) addLink(links, 'Consultar com a central ↗', 'https://wa.me/5513981113001?text=' + encodeURIComponent('Olá! Gostaria de atendimento em ' + city.cidade + '/' + city.uf + '.'));
+        if (city.status === 'ativa' || city.status === 'pre_ativacao') {
+          addLink(links, city.status === 'pre_ativacao' ? 'Conhecer página local ↗' : 'Site da unidade ↗', city.url);
+          const whatsapp = /^55\d{10,11}$/.test(String(city.numero || '')) ? city.numero : '5513981113001';
+          const text = city.status === 'pre_ativacao'
+            ? 'Olá! Vim da WINF e gostaria de consultar a pré-ativação em ' + city.cidade + '/' + city.uf + '.'
+            : 'Olá! Vim da página de unidades WINF e gostaria de atendimento em ' + city.cidade + '/' + city.uf + '.';
+          addLink(links, 'WhatsApp ↗', 'https://wa.me/' + whatsapp + '?text=' + encodeURIComponent(text));
+          addLink(links, city.instagram ? 'Instagram da unidade ↗' : 'Instagram WINF global ↗', city.instagram || 'https://www.instagram.com/winf.ofc/');
         } else {
           addLink(links, 'Consultar ativação ↗', 'https://wa.me/5513997815375?text=' + encodeURIComponent('Olá! Tenho interesse em consultar a disponibilidade de um território WINF em ' + city.cidade + '/' + city.uf + '.'));
         }
@@ -73,11 +77,15 @@
     extrasSection.hidden = extraMatched.length === 0;
     empty.hidden = matched.length + extraMatched.length !== 0;
     enquiry.hidden = mode !== 'territorios';
-    count.textContent = mode === 'ativas' ? (matched.length + extraMatched.length) + (matched.length + extraMatched.length === 1 ? ' unidade ativa' : ' unidades ativas') : matched.length + (matched.length === 1 ? ' território confirmado' : ' territórios confirmados');
+    const activeCount = matched.filter(item => item.status === 'ativa').length + extraMatched.length;
+    const pendingCount = matched.filter(item => item.status === 'pre_ativacao').length;
+    count.textContent = mode === 'ativas'
+      ? activeCount + (activeCount === 1 ? ' unidade ativa' : ' unidades ativas') + (pendingCount ? ' · ' + pendingCount + ' em pré-ativação' : '')
+      : matched.length + (matched.length === 1 ? ' território confirmado' : ' territórios confirmados');
     const activeNotice = document.querySelector('.directory-active-toggle');
     if (activeNotice) activeNotice.hidden = mode !== 'ativas';
     document.getElementById('directory-kicker').textContent = mode === 'ativas' ? 'LOCATOR WINF // UNIDADES ATIVAS' : 'WINF PARTNERS // CONSULTA DE EXPANSÃO';
-    document.getElementById('directory-title').textContent = mode === 'ativas' ? 'Unidades em operação' : 'Onde você quer começar?';
+    document.getElementById('directory-title').textContent = mode === 'ativas' ? 'Unidades e páginas em pré-ativação' : 'Onde você quer começar?';
     document.getElementById('directory-empty-title').textContent = mode === 'ativas' ? 'Vamos encontrar seu atendimento.' : 'Consulte a cidade que você tem em mente.';
     document.getElementById('directory-empty-copy').textContent = mode === 'ativas' ? 'Ainda não há unidades cadastradas que correspondam à sua busca. Fale com a central para confirmar o atendimento na sua região.' : 'A lista de territórios disponíveis será exibida conforme as confirmações da equipe. Você também pode informar uma cidade abaixo e solicitar uma consulta.';
     const contact = document.getElementById('directory-empty-contact');

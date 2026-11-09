@@ -20,6 +20,10 @@ on:
       - 'config/winf-social-content.json'
       - '.github/workflows/sync-winf-city-sites.yml'
       - 'index.html'
+      - 'js/cidades.js'
+      - 'aerocore/assets/onde-comprar.js'
+      - 'css/winf-active-territories.css'
+      - 'scripts/check-winf-active-territories.mjs'
       - '**/index.html'
       - 'scripts/check-winf-applications.mjs'
       - 'scripts/check-winf-search-readiness.mjs'
@@ -72,6 +76,9 @@ jobs:
           node scripts/check-winf-city-search-language.mjs
           node --check scripts/check-winf-city-intents.mjs
           node scripts/check-winf-city-intents.mjs
+          node --check scripts/check-winf-active-territories.mjs
+          node --check aerocore/assets/onde-comprar.js
+          node scripts/check-winf-active-territories.mjs
       - name: Criar 1200x630 OG + EXIF, títulos contextuais e links limpos
         run: |
           node --check scripts/winf-social-sitewide.mjs

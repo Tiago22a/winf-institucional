@@ -1,9 +1,9 @@
 /**
  * Cadastro de 100 territórios WINF — relação informada pelo responsável da rede.
- * Cinco territórios estão ativos. Pilar do Sul é uma unidade extra, fora dos 100.
+ * Cinco unidades estão ativas, incluindo Pilar do Sul como extra; Campina Grande em pré-ativação.
  * As demais estão não ativas; esse status não confirma disponibilidade territorial.
  *
- * status: "ativa" | "nao_ativa".
+ * status: "ativa" | "pre_ativacao" | "nao_ativa".
  * tipoAtendimento: "automotivo" | "residencial" | "ambos" | null (a confirmar).
  * numero: WhatsApp local, país e DDD, somente dígitos; null se não informado.
  * url / instagram: endereços oficiais locais; null se não informados.
@@ -56,10 +56,10 @@ globalThis.WINF_CIDADES = [
     "uf": "SP",
     "status": "ativa",
     "tipoAtendimento": "residencial",
-    "numero": "5515997909049",
+    "numero": "5513981113001",
     "url": "/insulfilm-residencial-sorocaba-sp/",
     "instagram": "https://www.instagram.com/winfselect.sorocaba/",
-    "observacoes": "Central compartilhada Sorocaba/Pilar do Sul pelo WhatsApp DDD 15. Atendimento 07h às 22h; instalação sob consulta.",
+    "observacoes": "Atendimento temporariamente centralizado pela WINF no DDD 13, com identificação da cidade. Consulte disponibilidade de instalação.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -69,9 +69,9 @@ globalThis.WINF_CIDADES = [
     "referencia": "04",
     "cidade": "Campina Grande",
     "uf": "PB",
-    "status": "ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
-    "numero": null,
+    "numero": "5513981113001",
     "url": "/pelicula-de-controle-solar-campina-grande-pb/",
     "instagram": null,
     "observacoes": "Página WINF Select em pré-ativação. Contato recebido pela central WINF oficial (DDD 13); confirmação de cobertura e agenda local necessária.",
@@ -1544,10 +1544,10 @@ globalThis.WINF_UNIDADES_EXTRAS = [
     "uf": "SP",
     "status": "ativa",
     "tipoAtendimento": null,
-    "numero": "5515997909049",
+    "numero": "5513981113001",
     "url": "/pelicula-de-controle-solar-pilar-do-sul-sp/",
     "instagram": "https://www.instagram.com/winfselect.pilardosul/",
-    "observacoes": "Central compartilhada Sorocaba/Pilar do Sul pelo WhatsApp DDD 15. Atendimento 07h às 22h; instalação sob consulta.",
+    "observacoes": "Atendimento temporariamente centralizado pela WINF no DDD 13, com identificação da cidade. Consulte disponibilidade de instalação.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   }
