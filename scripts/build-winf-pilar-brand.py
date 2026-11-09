@@ -191,7 +191,7 @@ def profile():
  im=Image.alpha_composite(im,overlay_layer)
  # segurança do recorte circular: marca completa no centro de 72% da largura.
  d=ImageDraw.Draw(im)
- d.ellipse((85,85,995,995),outline="#ffffff5c",width=3)
+ # Sem aro: o WhatsApp e o Facebook aplicam recorte circular por conta própria.
  lockup(im,225,287,2.00)
  d=ImageDraw.Draw(im)
  title="PILAR DO SUL / SP"
