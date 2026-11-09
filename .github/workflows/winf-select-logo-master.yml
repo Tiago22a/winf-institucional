@@ -1,0 +1,27 @@
+name: WINF Select — Logo mestre SVG e PNG TM verificado
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/winf-select-logo-master.yml'
+      - 'scripts/build-winf-select-logo-master.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  gerar-logo-oficial:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Gerar logomarca com letras vetoriais oficiais e TM preciso
+        run: |
+          python -m pip install --disable-pip-version-check Pillow==11.3.0 cairosvg==2.8.2 fonttools==4.60.1
+          python scripts/build-winf-select-logo-master.py
+      - name: Verificar e anexar PNGs e SVGs
+        uses: actions/upload-artifact@v4
+        with:
+          name: WINF-SELECT-LOGOMARCA-MESTRA-TM-CORRIGIDO
+          path: build/WINF_SELECT_LOGOMARCA_TM_CORRIGIDO.zip
+          retention-days: 30
+          if-no-files-found: error
