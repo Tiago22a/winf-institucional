@@ -1,0 +1,25 @@
+name: WINF — Diagnóstico ao vivo das 6 cidades e domínios
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/winf-live-city-link-audit.yml'
+      - 'scripts/check-winf-city-live.mjs'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v4
+      - name: Consultar HTTPS público (www, sem www) e conteúdo
+        run: node scripts/check-winf-city-live.mjs
+      - name: Publicar relatório de diagnóstico
+        uses: actions/upload-artifact@v4
+        with:
+          name: winf-city-live-link-diagnostics
+          path: build/winf-city-live-audit.json
+          if-no-files-found: error
+          retention-days: 14
