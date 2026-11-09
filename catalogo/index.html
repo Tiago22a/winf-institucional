@@ -245,6 +245,10 @@
 @media(max-width:850px){.winf-catalog-brands{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:490px){.winf-catalog-brands{grid-template-columns:1fr 1fr}.winf-catalog-brands a{min-height:200px;padding:15px}.winf-catalog-brands strong{font-size:18px}.winf-catalog-division-actions button{width:100%}}
 @media(prefers-reduced-motion:reduce){.winf-catalog-brands a{transition:none;transform:none!important}}
+  .winf-catalog-ghost{display:inline-block;width:15px;height:17px;object-fit:contain;vertical-align:middle;margin-right:4px;filter:brightness(1.6)}
+  #product-grid .product-card:focus-visible{outline:2px solid white;outline-offset:4px}
+  #product-grid .product-card{scroll-margin-top:90px}
+  @media (max-width:680px){#product-grid .product-card .winf-catalog-ghost{width:13px;height:15px}}
 </style>
     <link rel="stylesheet" href="/css/winf-footer.css?v=20261029-country-dots-2" />
   <link rel="stylesheet" href="/css/winf-signoff.css">
@@ -303,7 +307,8 @@
     </a>
 
     <div class="winf-catalog-tabs" role="tablist" aria-label="Famílias do catálogo WINF">
-      <button type="button" onclick="setCategory('arch',true)" id="tab-arch" role="tab" aria-selected="true">WINF SELECT</button>
+      <button type="button" onclick="setCategory('all',true)" id="tab-all" role="tab" aria-selected="true">TODAS AS MARCAS</button>
+      <button type="button" onclick="setCategory('arch',true)" id="tab-arch" role="tab" aria-selected="false">WINF SELECT</button>
       <button type="button" onclick="setCategory('aerocore',true)" id="tab-aerocore" role="tab" aria-selected="false">AEROCORE</button>
       <button type="button" onclick="setCategory('neoskin',true)" id="tab-neoskin" role="tab" aria-selected="false">NEOSKIN</button>
       <button type="button" onclick="setCategory('ceramic',true)" id="tab-ceramic" role="tab" aria-selected="false">CERAMIC ARMORING</button>
@@ -354,7 +359,7 @@
       <p class="winf-catalog-members">Produtos profissionais WINF são destinados ao atendimento pelas unidades e à rede autorizada. <a href="/ghost-shop/">GHOST SHOP™</a> é uma vitrine separada de acessórios e itens de marca, com compra reservada a membros.</p>
     </div>
   </section>
-  <section id="catalogo-navegacao" aria-labelledby="winf-catalog-nav-title"><span class="winf-catalog-overline">CATÁLOGO OFICIAL WINF™ / TECNOLOGIAS</span><h2 id="winf-catalog-nav-title">Encontre sua solução.<br>Conheça cada marca.</h2><p>Navegue pelas fichas dos produtos e depois abra as páginas completas das marcas. O catálogo é público e informativo; compras e abastecimento profissional são realizados apenas nos ambientes autorizados da WINF.</p><div class="winf-catalog-division-actions"><button type="button" data-winf-category="arch">VER PELÍCULAS ARQUITETÔNICAS ↓</button><button type="button" data-winf-category="auto">VER PELÍCULAS AUTOMOTIVAS, PPF E CERÂMICA ↓</button></div><nav class="winf-catalog-brands" aria-label="Conheça as páginas das marcas WINF"><a href="/aerocore/winf-select/"><small>01 / GLASS + HOME</small><strong>WINF SELECT™</strong><em>ARQUITETURA / VER PÁGINA ↗</em></a><a href="/aerocore/"><small>02 / PERFORMANCE</small><strong>AEROCORE™</strong><em>PELÍCULAS AUTOMOTIVAS ↗</em></a><a href="/aerocore/neoskin/"><small>03 / PAINT PROTECTION</small><strong>NEOSKIN™</strong><em>PROTEÇÃO DE PINTURA ↗</em></a><a href="/aerocore/ceramic-armoring/"><small>04 / CERAMIC PROTECTION</small><strong>CERAMIC ARMORING™</strong><em>REVESTIMENTO CERÂMICO ↗</em></a></nav><p class="winf-cat-context">Santos/SP: <a href="/pelicula-de-controle-solar-santos-sp/#orcamento" style="text-decoration:underline;text-underline-offset:4px">solicitar orçamento local ↗</a> · <a href="/onde-comprar/" style="text-decoration:underline;text-underline-offset:4px">encontrar minha cidade ↗</a> · <a href="/ghost-shop/" style="text-decoration:underline;text-underline-offset:4px">GHOST SHOP™ / vitrine de membros ↗</a></p></section>
+  <section id="catalogo-navegacao" aria-labelledby="winf-catalog-nav-title"><span class="winf-catalog-overline">CATÁLOGO OFICIAL WINF™ / TECNOLOGIAS</span><h2 id="winf-catalog-nav-title">Encontre sua solução.<br>Conheça cada marca.</h2><p>Navegue pelas fichas dos produtos e depois abra as páginas completas das marcas. O catálogo é público e informativo; compras e abastecimento profissional são realizados apenas nos ambientes autorizados da WINF.</p><div class="winf-catalog-division-actions"><button type="button" data-winf-category="arch">VER PELÍCULAS ARQUITETÔNICAS ↓</button><button type="button" data-winf-category="all">EXPLORAR TODAS AS TECNOLOGIAS ↓</button></div><nav class="winf-catalog-brands" aria-label="Conheça as páginas das marcas WINF"><a href="/aerocore/winf-select/"><small>01 / GLASS + HOME</small><strong>WINF SELECT™</strong><em>ARQUITETURA / VER PÁGINA ↗</em></a><a href="/aerocore/"><small>02 / PERFORMANCE</small><strong>AEROCORE™</strong><em>PELÍCULAS AUTOMOTIVAS ↗</em></a><a href="/aerocore/neoskin/"><small>03 / PAINT PROTECTION</small><strong>NEOSKIN™</strong><em>PROTEÇÃO DE PINTURA ↗</em></a><a href="/aerocore/ceramic-armoring/"><small>04 / CERAMIC PROTECTION</small><strong>CERAMIC ARMORING™</strong><em>REVESTIMENTO CERÂMICO ↗</em></a></nav><p class="winf-cat-context">Santos/SP: <a href="/pelicula-de-controle-solar-santos-sp/#orcamento" style="text-decoration:underline;text-underline-offset:4px">solicitar orçamento local ↗</a> · <a href="/onde-comprar/" style="text-decoration:underline;text-underline-offset:4px">encontrar minha cidade ↗</a> · <a href="/ghost-shop/" style="text-decoration:underline;text-underline-offset:4px">GHOST SHOP™ / vitrine de membros ↗</a></p></section>
 
 <section id="catalogo-produtos" class="relative z-10 pb-32 px-6 md:px-12 w-full max-w-7xl mx-auto flex-1">
     <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"></div>
@@ -581,9 +586,17 @@
 <script>
 // ===================== LOGICA DO PARAMETRO WHATSAPP PARTNER =====================
 const urlParams = new URLSearchParams(window.location.search);
-const partnerParam = urlParams.get('partner');
-// Limpa caracteres especiais caso venham formatados e mantém apenas números
-const WHATSAPP_NUMBER = partnerParam ? partnerParam.replace(/\D/g, '') : '5513997815375';
+const partnerParam = (urlParams.get('partner')||'').replace(/\D/g,'');
+const WHATSAPP_NUMBER = /^\d{11,13}$/.test(partnerParam) ? partnerParam : '5513997815375';
+const CATALOG_ORIGIN = (urlParams.get('origem')||'').toLowerCase() || (WHATSAPP_NUMBER==='5513981113001'?'santos':WHATSAPP_NUMBER==='5515997909049'?'sorocaba':'');
+const ORIGIN_PAGE = CATALOG_ORIGIN==='santos'?'/pelicula-de-controle-solar-santos-sp/':CATALOG_ORIGIN==='sorocaba'?'/insulfilm-residencial-sorocaba-sp/':'';
+function productLink(p) {
+  const base=getProductPage(p);
+  const params=new URLSearchParams();
+  if(CATALOG_ORIGIN)params.set('origem',CATALOG_ORIGIN);
+  if(partnerParam && /^\d{11,13}$/.test(partnerParam))params.set('partner',partnerParam);
+  return base+(params.size?'?'+params.toString():'');
+}
 
 // ===================== ICON SET (sem dependências externas) =====================
 const BENEFIT_ICONS = {
@@ -633,23 +646,8 @@ const PRODUCT_CATALOG = [
     ],
     specs: { vlt: '82%', irer: '96%', tsr: '58%', thickness: '2 mil', material: 'Nano Cerâmica Não Metalizada', glareReduction: 'N/A' }
   },
-  {
-    id: 'select-invisible-spectre',
-    name: 'WINF™ Invisible® Spectre',
-    subname: 'Optic Grade | Alta Performance',
-    badge: 'TECNOLOGIA SUPREMA',
-    category: 'arch',
-    line: 'select',
-    image: '/images/invisible-poster-3.webp',
-    shortDescription: 'A película arquitetônica mais avançada da linha Invisible, com bloqueio de infravermelho de até 99% e garantia vitalícia.',
-    fullDescription: 'Grade óptica premium com 99% de rejeição de infravermelho e 99,99% de bloqueio UV, mantendo 75% de transparência e reflexão noturna reduzida.',
-    keyMetrics: { ir: '99%', uv: '99,99%', tser: '68%', warranty: '15 Anos (Vitalícia)' },
-    benefits: [
-      { title: 'Rejeição IR Extrema', description: 'Até 99% de bloqueio de infravermelho, o maior da linha arquitetônica.', icon: 'Sun' },
-      { title: 'Garantia Vitalícia', description: '15 anos de garantia para projetos residenciais e comerciais.', icon: 'Shield' }
-    ],
-    specs: { vlt: '75%', irer: '99%', tsr: '68%', thickness: '2 mil', material: 'Nano Cerâmica Optic Grade', glareReduction: 'N/A' }
-  },
+  // Spectre pertence à AeroCore™; aparece na seleção arquitetônica como tecnologia convidada,
+  // identificado pelo Ghost e com consulta de aplicação, não como produto Invisible.
   {
     id: 'select-blackpro',
     name: 'WINF™ BlackPro®',
@@ -847,6 +845,11 @@ const PRODUCT_CATALOG = [
 
 // Rótulos de divisão e hero por categoria (para manter o manifesto coerente ao trocar de aba)
 const CATEGORY_META = {
+  all: {
+    label: 'WINF™ / Universo de tecnologias',
+    title: 'Uma marca.<br><span class="font-medium">Muitas possibilidades.</span>',
+    desc: '<p>Arquitetura e mobilidade no mesmo catálogo. Escolha um produto para abrir sua página completa. O WhatsApp acompanha a unidade de origem.</p>'
+  },
   arch: {
     label: 'Divisão de Conforto Arquitetônico',
     title: 'O mesmo vidro.<br><span class="font-medium">Uma nova percepção.</span>',
@@ -870,24 +873,30 @@ const CATEGORY_META = {
 };
 
 // ===================== STATE =====================
-let activeCategory = 'arch';
-const matchesCurrentLine=p=>activeCategory==='arch'?p.category==='arch':p.line===activeCategory;
-function getProductPage(p){ if(p.line==='aerocore')return '/aerocore/';if(p.line==='neoskin')return '/aerocore/neoskin/';if(p.line==='ceramic')return '/aerocore/ceramic-armoring/';const id=p.id.toLowerCase();if(id.includes('spectre'))return '/aerocore/';if(id.includes('invisible'))return '/invisible/';if(id.includes('blackpro'))return '/blackpro/';if(id.includes('dual'))return '/dual-reflect/';if(id.includes('security'))return '/securityblind/';if(id.includes('mini')||id.includes('venetian'))return '/miniblind-venetian/';return '/aerocore/winf-select/';}
+let activeCategory = 'all';
+const matchesCurrentLine=p=>activeCategory==='all'||(activeCategory==='arch'&&(p.category==='arch'||p.id==='aerocore-spectre'))||p.line===activeCategory;
+function getProductPage(p){if(p.line==='aerocore')return '/aerocore/';if(p.line==='neoskin')return '/aerocore/neoskin/';if(p.line==='ceramic')return '/aerocore/ceramic-armoring/';const id=p.id.toLowerCase();if(id.includes('invisible'))return '/invisible/';if(id.includes('blackpro'))return '/blackpro/';if(id.includes('dual'))return '/dual-reflect/';if(id.includes('security'))return '/securityblind/';if(id.includes('mini')||id.includes('venetian'))return '/miniblind-venetian/';return '/aerocore/winf-select/';}
 let sunIntensity = 85;
 let selectedFilmId = '';
 let toastTimer = null;
 
 // ===================== INIT =====================
 document.addEventListener('DOMContentLoaded', () => {
-  const catalogOrigin=urlParams.get('origem');
-  if (catalogOrigin==='santos') {
-    document.getElementById('winf-catalog-return').hidden=false;
-    document.getElementById('catalog-home-link').href='/pelicula-de-controle-solar-santos-sp/';
-    document.getElementById('catalog-home-link').setAttribute('aria-label','Voltar à WINF Santos');
+  if(ORIGIN_PAGE){
+    const originLabel=CATALOG_ORIGIN==='santos'?'Santos':'Sorocaba / Região 015';
+    const notice=document.getElementById('winf-catalog-return');
+    if(notice){
+      notice.hidden=false;
+      notice.querySelector('a').href=ORIGIN_PAGE;
+      notice.querySelector('a').textContent='← VOLTAR AO SITE DE '+originLabel.toUpperCase();
+      notice.querySelector('span').textContent='Catálogo vinculado à central '+originLabel+'. Atendimento direcionado ao WhatsApp desta região.';
+    }
+    const home=document.getElementById('catalog-home-link');
+    if(home){home.href=ORIGIN_PAGE;home.setAttribute('aria-label','Voltar à WINF '+originLabel);}
   }
   const requestedLine=urlParams.get('linha');
-  if (['arch','aerocore','neoskin','ceramic'].includes(requestedLine)) setCategory(requestedLine);
-  else renderGrid();
+  if (['all','arch','aerocore','neoskin','ceramic'].includes(requestedLine)) setCategory(requestedLine);
+  else {setCategory('all');}
   populateFilmSelect();
   setSun(85);
   updateSimDisplay();
@@ -899,13 +908,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ===================== CATEGORY =====================
 function setCategory(cat, scrollToProducts=false) {
-  if(!['arch','aerocore','neoskin','ceramic'].includes(cat)) return;
+  if(!['all','arch','aerocore','neoskin','ceramic'].includes(cat)) return;
   activeCategory = cat;
   selectedFilmId = '';
   document.getElementById('sim-film-select').value = '';
 
   // tabs visual state
-  ['arch', 'aerocore', 'neoskin', 'ceramic'].forEach(c => {
+  ['all', 'arch', 'aerocore', 'neoskin', 'ceramic'].forEach(c => {
     const btn = document.getElementById(`tab-${c}`);
     if (!btn) return;
     btn.setAttribute('aria-selected',String(c===cat));
@@ -926,22 +935,11 @@ function setCategory(cat, scrollToProducts=false) {
 }
 
 
-function productPage(product) {
- if (product.id.startsWith('select-invisible')) return '/invisible/';
- if (product.id==='select-blackpro') return '/blackpro/';
- if (product.id==='select-dualreflect') return '/dual-reflect/';
- if (product.id==='select-securityblinder') return '/securityblind/';
- if (product.id==='select-miniblind-venetian') return '/miniblind-venetian/';
- if (product.line==='aerocore') return '/aerocore/aerocore/';
- if (product.line==='neoskin') return '/aerocore/neoskin/';
- if (product.line==='ceramic') return '/aerocore/ceramic-armoring/';
- return '/aerocore/winf-select/';
-}
 document.addEventListener('DOMContentLoaded', () => {
  document.querySelectorAll('[data-winf-category]').forEach(button=>{
   button.addEventListener('click', ()=>{
    const category=button.dataset.winfCategory;
-   if (category==='auto'||category==='arch') setCategory(category);
+   if (category==='all'||category==='arch') setCategory(category);
    document.getElementById('catalogo-produtos')?.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
   });
  });
@@ -956,13 +954,17 @@ function renderGrid() {
     const card = document.createElement('div');
     card.className = 'product-card group cursor-pointer border border-[#444746] bg-[#131314] overflow-hidden flex flex-col relative';
     card.style.animationDelay = `${idx * 0.08}s`;
-    card.onclick = () => openSpecModal(product.id);
+    card.setAttribute('role','link');
+    card.setAttribute('tabindex','0');
+    card.setAttribute('aria-label','Abrir página de '+product.name);
+    card.addEventListener('click', event => {if(event.target.closest('a,button'))return;window.location.assign(productLink(product));});
+    card.addEventListener('keydown', event => {if((event.key==='Enter'||event.key===' ')&&event.target===card){event.preventDefault();window.location.assign(productLink(product));}});
     card.innerHTML = `
       <div class="relative h-[300px] overflow-hidden">
         <div class="card-img-inner absolute inset-0 bg-cover bg-center" style="background-image:url('${product.image}')"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/40 to-transparent"></div>
         <div class="absolute top-4 left-4 right-4 flex justify-between items-start">
-          <div class="bg-[#131314]/60 backdrop-blur-md px-3 py-1.5 text-[10px] uppercase tracking-[.2em] font-bold text-white border border-[#444746]">${product.line.toUpperCase()}</div>
+          <div class="bg-[#131314]/70 backdrop-blur-md px-3 py-1.5 text-[10px] uppercase tracking-[.13em] font-bold text-white border border-[#444746]">${product.line==='aerocore'?'<img src="/aerocore/assets/ghost-symbol.png" alt="" aria-hidden="true" class="winf-catalog-ghost"> AEROCORE™ / GHOST':product.line==='neoskin'?'NEOSKIN™':product.line==='ceramic'?'CERAMIC ARMORING™':'WINF SELECT™'}${product.id==='aerocore-spectre'&&activeCategory==='arch'?' · CONVIDADA':''}</div>
           <button onclick="falarConsultorProduto(event,'${product.name}')" class="w-8 h-8 bg-[#131314]/60 backdrop-blur-md flex items-center justify-center border border-[#25D366]/40 hover:bg-[#25D366] hover:text-black transition-all text-[#25D366]">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.124 1.533 5.858L.057 23.857a.5.5 0 0 0 .608.608l6.001-1.476A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.861 0-3.607-.49-5.117-1.346l-.367-.214-3.803.934.953-3.803-.228-.374A9.97 9.97 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
           </button>
@@ -978,12 +980,11 @@ function renderGrid() {
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white/20"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             ${product.keyMetrics.warranty}
           </div>
-          <button onclick="event.stopPropagation(); openSpecModal('${product.id}')" class="card-cta text-[10px] uppercase font-bold tracking-[.2em] flex items-center gap-2 text-white">
-            Explorar Specs <svg class="card-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </button>
+          <a href="${productLink(product)}" onclick="event.stopPropagation()" class="card-cta text-[10px] uppercase font-bold tracking-[.12em] flex items-center gap-2 text-white">
+            ABRIR PÁGINA <svg class="card-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
         </div>
-        <a class="winf-catalog-deeplink" href="${getProductPage(product)}" onclick="event.stopPropagation()" aria-label="Conhecer a página da linha ${product.name}">VER PÁGINA DO PRODUTO / MARCA ↗</a>
-        <a href="${productPage(product)}" onclick="event.stopPropagation()" class="inline-flex mt-5 py-2 text-[10px] uppercase font-bold tracking-[.15em] text-white/80 hover:text-white border-b border-white/30" aria-label="Conhecer página oficial da linha ${product.name}">CONHECER PÁGINA DA LINHA ↗</a>
+        <a class="winf-catalog-deeplink" href="${productLink(product)}" onclick="event.stopPropagation()" aria-label="Conhecer a página oficial ${product.name}">CONHECER PÁGINA COMPLETA ↗</a>
         <div class="card-hover-line absolute bottom-0 left-0 h-[2px] text-white"></div>
       </div>
     `;
@@ -994,6 +995,7 @@ function renderGrid() {
 // ===================== FILM SELECT =====================
 function populateFilmSelect() {
   const sel = document.getElementById('sim-film-select');
+  if(!sel)return;
   sel.innerHTML = '<option value="">Selecione a Película...</option>';
   const products = PRODUCT_CATALOG.filter(matchesCurrentLine);
   products.forEach(p => {
