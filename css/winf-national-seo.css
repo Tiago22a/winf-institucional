@@ -1,0 +1,67 @@
+/* WINF™ — guia nacional e mapa de soluções / estética soft-luxury, sem dependências. */
+@font-face{font-family:Gustavo;src:url('/fonts/gustavo-regular.otf') format('opentype');font-weight:400;font-display:swap}
+@font-face{font-family:Gustavo;src:url('/fonts/gustavo-light.otf') format('opentype');font-weight:300;font-display:swap}
+:root{color-scheme:dark;--fg:#f4f5f6;--muted:#bac0c8;--edge:#ffffff36;--bg:#0b0d10}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 15px/1.7 Inter,Arial,sans-serif}
+a{color:inherit}a:focus-visible,summary:focus-visible{outline:2px solid #fff;outline-offset:5px}
+.winf-national-header{display:flex;gap:22px;align-items:center;justify-content:space-between;padding:22px clamp(22px,5vw,80px);border-bottom:1px solid var(--edge);background:#090a0c}
+.winf-national-identity{display:inline-flex;align-items:center;gap:18px;text-decoration:none}
+.winf-national-identity img{display:block;width:105px;height:auto}
+.winf-national-identity span{border-left:1px solid #ffffff5a;padding-left:17px;font:500 11px/1.6 Inter,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.winf-national-header nav{display:flex;gap:22px;flex-wrap:wrap}
+.winf-national-header nav a{font:700 10px/1.5 Inter,Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid transparent;padding-bottom:6px}
+.winf-national-header nav a:hover{border-color:#fff}
+.winf-national-wrap{width:min(1160px,calc(100% - 42px));margin:0 auto}
+.winf-national-hero{position:relative;isolation:isolate;overflow:hidden;min-height:480px;background:#11161b;display:flex;align-items:center}
+.winf-national-hero:before{content:"";position:absolute;inset:0;z-index:-2;background-image:var(--hero-image);background-size:cover;background-position:center;filter:grayscale(.25) brightness(.62)}
+.winf-national-hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#08090bf9 0%,#090c0fe5 50%,#0a0b0c77)}
+.winf-national-hero-inner{padding-top:80px;padding-bottom:80px}
+.winf-national-eyebrow{display:block;font:700 10px/1.6 Inter,Arial,sans-serif;letter-spacing:.18em;color:#ccd0d7;text-transform:uppercase;margin-bottom:26px}
+.winf-national-hero h1{font:300 clamp(40px,7vw,88px)/.99 Gustavo,Inter,Arial,sans-serif;text-transform:uppercase;letter-spacing:-.05em;max-width:960px;margin:0 0 26px}
+.winf-national-hero h1 span{color:#afb4bc}
+.winf-national-hero p{font:400 clamp(15px,1.6vw,19px)/1.65 Inter,Arial,sans-serif;color:#d4d8dc;max-width:750px;margin:0}
+.winf-national-section{padding:clamp(65px,7vw,100px) 0;border-top:1px solid #ffffff20}
+.winf-national-section h2{font:400 clamp(32px,5vw,62px)/1.06 Gustavo,Inter,Arial,sans-serif;text-transform:uppercase;letter-spacing:-.045em;margin:0 0 27px}
+.winf-national-section h2 span{color:#9ea4ae}
+.winf-national-section>p,.winf-national-lead{max-width:900px;color:#bdc2ca;font:400 16px/1.8 Inter,Arial,sans-serif}
+.winf-national-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:28px}
+.winf-national-card{display:flex;flex-direction:column;gap:13px;min-height:225px;padding:27px 25px;border:1px solid var(--edge);background:#12151a;text-decoration:none;color:#fff;transition:background .28s,transform .28s,border-color .28s}
+.winf-national-card .index{font:700 10px/1.3 Inter,Arial,sans-serif;letter-spacing:.14em;color:#9fa7b3}
+.winf-national-card strong{font:400 clamp(22px,2.5vw,31px)/1.16 Gustavo,Inter,Arial,sans-serif;letter-spacing:-.035em;text-transform:uppercase}
+.winf-national-card .desc{font:400 13px/1.67 Inter,Arial,sans-serif;color:#c0c5cd}
+.winf-national-card em{font:700 10px/1.5 Inter,Arial,sans-serif;font-style:normal;letter-spacing:.1em;margin-top:auto}
+.winf-national-card:is(:hover,:focus-visible){background:#242830;transform:translateY(-4px);border-color:#fff8}
+.winf-national-section .tag{display:inline-block;margin:12px 7px 0 0;border:1px solid #ffffff40;padding:7px 11px;font:600 11px/1.5 Inter,Arial,sans-serif;color:#d6d9dc}
+.winf-national-prose{max-width:850px;color:#bfc5ce;font:400 15px/1.9 Inter,Arial,sans-serif}
+.winf-national-prose h3{color:#fff;font:400 26px/1.23 Gustavo,Inter,Arial,sans-serif;text-transform:uppercase;margin:35px 0 12px}
+.winf-national-prose ul{padding-left:25px}
+.winf-national-table{width:100%;border-collapse:collapse;margin:25px 0}
+.winf-national-table th,.winf-national-table td{padding:19px 15px;border-bottom:1px solid #ffffff3b;text-align:left;vertical-align:top}
+.winf-national-table th{font:700 12px/1.5 Inter,Arial,sans-serif;text-transform:uppercase;letter-spacing:.1em}
+.winf-national-table td{font:400 13px/1.7 Inter,Arial,sans-serif;color:#ccd1d7}
+.winf-national-cities{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin-top:28px}
+.winf-national-cities a{border:1px solid #ffffff44;background:#15171b;padding:24px;text-decoration:none;display:flex;flex-direction:column;gap:8px}
+.winf-national-cities a strong{font:400 clamp(22px,2.5vw,32px)/1.2 Gustavo,Inter,Arial,sans-serif;text-transform:uppercase}
+.winf-national-cities a span{font:400 12px/1.6 Inter,Arial,sans-serif;color:#bfc4cd}
+.winf-national-cities a:hover{border-color:#fff;background:#202329}
+.winf-national-faq details{border-bottom:1px solid #ffffff30;padding:20px 0;max-width:880px}
+.winf-national-faq summary{font:600 15px/1.5 Inter,Arial,sans-serif;cursor:pointer}
+.winf-national-faq p{color:#bfc4cd;font:400 14px/1.8 Inter,Arial,sans-serif;margin:10px 0 0}
+.winf-national-cta{display:inline-flex;text-decoration:none;border:1px solid #ffffffa0;padding:16px 20px;font:700 11px/1.4 Inter,Arial,sans-serif;letter-spacing:.12em;margin-top:25px}
+.winf-national-cta:hover{background:#fff;color:#0b0d10}
+.winf-national-foot{background:#08090b;border-top:1px solid #ffffff29;padding:47px 0}
+.winf-national-foot .winf-national-wrap{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.winf-national-foot nav{display:flex;gap:20px;flex-wrap:wrap}
+.winf-national-foot a{font-size:12px;text-decoration:none}
+.winf-national-foot a:hover{text-decoration:underline}
+.winf-national-note{border-left:2px solid #ffffff7b;padding-left:18px;color:#bfc6d0;font-size:13px;margin:28px 0}
+.winf-sitemap-section{padding:34px 0 35px;border-bottom:1px solid #ffffff2b}
+.winf-sitemap-section h2{font:400 clamp(25px,3.3vw,41px)/1.16 Gustavo,Inter,Arial,sans-serif;text-transform:uppercase;letter-spacing:-.035em;margin:0 0 17px}
+.winf-sitemap-section ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px 25px;list-style:none;margin:0;padding:0}
+.winf-sitemap-section a{display:block;color:#cbd1d8;text-decoration:none;padding:11px 0;font-size:13px;border-bottom:1px solid #ffffff22}
+.winf-sitemap-section a:hover{color:#fff;border-color:#fff}
+@media(max-width:900px){.winf-national-grid,.winf-national-cities{grid-template-columns:repeat(2,minmax(0,1fr))}.winf-sitemap-section ul{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.winf-national-header{flex-direction:column;align-items:flex-start;padding:18px 21px}.winf-national-header nav{gap:15px}.winf-national-hero{min-height:510px}.winf-national-grid,.winf-national-cities,.winf-sitemap-section ul{grid-template-columns:1fr}.winf-national-card{min-height:175px}.winf-national-table{display:block;overflow-x:auto}.winf-national-foot .winf-national-wrap{display:block}.winf-national-foot nav{margin-top:20px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.winf-national-card{transform:none!important;transition:none!important}}

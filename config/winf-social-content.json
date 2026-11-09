@@ -387,6 +387,18 @@
       "title": "ESCOLHA SUA LINHA.|CONHEÇA A WINF.",
       "subtitle": "TECNOLOGIAS OFICIAIS",
       "photo": "images/dualreflect-poster-1.webp"
+    },
+    "peliculas-de-controle-solar-brasil": {
+      "brand": "WINF SELECT™",
+      "title": "O VIDRO É O MESMO.|A ESCOLHA MUDA TUDO.",
+      "subtitle": "GUIA NACIONAL / PELÍCULAS ARQUITETÔNICAS",
+      "photo": "images/dualreflect-poster-2.webp"
+    },
+    "mapa-do-site": {
+      "brand": "WINF™",
+      "title": "UM MAPA.|TODAS AS SOLUÇÕES.",
+      "subtitle": "PÁGINAS OFICIAIS WINF",
+      "photo": "images/invisible-poster-2.webp"
     }
   }
 }
