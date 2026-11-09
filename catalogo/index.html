@@ -224,7 +224,28 @@
 
     .benefit-card { transition: border-color .3s ease, background .3s ease; }
     .benefit-card:hover { border-color: rgba(255,255,255,.25); background: rgba(255,255,255,.03); }
-  </style>
+  
+/* CATALOGO WINF | jornada simples entre categorias, especificacoes e paginas oficiais */
+#catalogo-navegacao{position:relative;z-index:5;width:min(1280px,calc(100% - 46px));margin:0 auto 60px;border-top:1px solid #ffffff24;padding:40px 0 0}
+#catalogo-navegacao .winf-catalog-overline{color:#b8b8c0;font:750 11px/1.5 Inter,sans-serif;letter-spacing:.19em;text-transform:uppercase}
+#catalogo-navegacao h2{font:300 clamp(32px,5vw,62px)/1.1 Inter,sans-serif;letter-spacing:-.055em;margin:13px 0 16px}
+#catalogo-navegacao>p{max-width:840px;font:400 14px/1.75 Inter,sans-serif;color:#a6a6ae;margin:0 0 27px}
+.winf-catalog-division-actions{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:24px}
+.winf-catalog-division-actions button{border:1px solid #ffffff65;padding:13px 18px;color:#fafafa;background:#16171a;cursor:pointer;font:750 11px/1.5 Inter,sans-serif;letter-spacing:.08em}
+.winf-catalog-division-actions button:hover,.winf-catalog-division-actions button:focus-visible{background:#fff;color:#111}
+.winf-catalog-brands{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.winf-catalog-brands a{display:flex;min-height:225px;flex-direction:column;justify-content:space-between;align-items:flex-start;gap:20px;overflow:hidden;border:1px solid #ffffff35;background:#0b0c0f;padding:20px;color:#fff;text-decoration:none;transition:transform .3s,border-color .3s,filter .3s}
+.winf-catalog-brands a:hover{transform:translateY(-4px);border-color:#ffffffb4;filter:brightness(1.22)}
+.winf-catalog-brands a:nth-child(1){background:linear-gradient(145deg,#282a2e 0%,#090a0b 72%)}.winf-catalog-brands a:nth-child(2){background:linear-gradient(145deg,#212938 0%,#08090b 75%)}.winf-catalog-brands a:nth-child(3){background:linear-gradient(145deg,#202b25 0%,#080b09 75%)}.winf-catalog-brands a:nth-child(4){background:linear-gradient(145deg,#303133 0%,#070809 75%)}
+.winf-catalog-brands small{font:700 9px/1.6 Inter,sans-serif;letter-spacing:.15em;color:#b4b7bf}
+.winf-catalog-brands strong{font:450 clamp(19px,2.1vw,27px)/1.15 Inter,sans-serif;letter-spacing:-.045em;text-transform:uppercase;overflow-wrap:anywhere}
+.winf-catalog-brands em{font:700 10px/1.4 Inter,sans-serif;letter-spacing:.06em;color:#d4d6da;font-style:normal}
+.winf-cat-context{margin:25px 0 0;color:#b3b4b8;font-size:12px;line-height:1.7}
+#catalogo-produtos{scroll-margin-top:105px}
+@media(max-width:850px){.winf-catalog-brands{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:490px){.winf-catalog-brands{grid-template-columns:1fr 1fr}.winf-catalog-brands a{min-height:200px;padding:15px}.winf-catalog-brands strong{font-size:18px}.winf-catalog-division-actions button{width:100%}}
+@media(prefers-reduced-motion:reduce){.winf-catalog-brands a{transition:none;transform:none!important}}
+</style>
     <link rel="stylesheet" href="/css/winf-footer.css?v=20261029-country-dots-2" />
   <link rel="stylesheet" href="/css/winf-signoff.css">
 <link rel="stylesheet" href="/css/winf-footer-reference.css?v=20261103-reference-2">
@@ -333,7 +354,9 @@
       <p class="winf-catalog-members">Produtos profissionais WINF são destinados ao atendimento pelas unidades e à rede autorizada. <a href="/ghost-shop/">GHOST SHOP™</a> é uma vitrine separada de acessórios e itens de marca, com compra reservada a membros.</p>
     </div>
   </section>
-  <section class="relative z-10 pb-32 px-6 md:px-12 w-full max-w-7xl mx-auto flex-1">
+  <section id="catalogo-navegacao" aria-labelledby="winf-catalog-nav-title"><span class="winf-catalog-overline">CATÁLOGO OFICIAL WINF™ / TECNOLOGIAS</span><h2 id="winf-catalog-nav-title">Encontre sua solução.<br>Conheça cada marca.</h2><p>Navegue pelas fichas dos produtos e depois abra as páginas completas das marcas. O catálogo é público e informativo; compras e abastecimento profissional são realizados apenas nos ambientes autorizados da WINF.</p><div class="winf-catalog-division-actions"><button type="button" data-winf-category="arch">VER PELÍCULAS ARQUITETÔNICAS ↓</button><button type="button" data-winf-category="auto">VER PELÍCULAS AUTOMOTIVAS, PPF E CERÂMICA ↓</button></div><nav class="winf-catalog-brands" aria-label="Conheça as páginas das marcas WINF"><a href="/aerocore/winf-select/"><small>01 / GLASS + HOME</small><strong>WINF SELECT™</strong><em>ARQUITETURA / VER PÁGINA ↗</em></a><a href="/aerocore/"><small>02 / PERFORMANCE</small><strong>AEROCORE™</strong><em>PELÍCULAS AUTOMOTIVAS ↗</em></a><a href="/aerocore/neoskin/"><small>03 / PAINT PROTECTION</small><strong>NEOSKIN™</strong><em>PROTEÇÃO DE PINTURA ↗</em></a><a href="/aerocore/ceramic-armoring/"><small>04 / CERAMIC PROTECTION</small><strong>CERAMIC ARMORING™</strong><em>REVESTIMENTO CERÂMICO ↗</em></a></nav><p class="winf-cat-context">Santos/SP: <a href="/pelicula-de-controle-solar-santos-sp/#orcamento" style="text-decoration:underline;text-underline-offset:4px">solicitar orçamento local ↗</a> · <a href="/onde-comprar/" style="text-decoration:underline;text-underline-offset:4px">encontrar minha cidade ↗</a> · <a href="/ghost-shop/" style="text-decoration:underline;text-underline-offset:4px">GHOST SHOP™ / vitrine de membros ↗</a></p></section>
+
+<section id="catalogo-produtos" class="relative z-10 pb-32 px-6 md:px-12 w-full max-w-7xl mx-auto flex-1">
     <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"></div>
   </section>
 
@@ -902,6 +925,28 @@ function setCategory(cat, scrollToProducts=false) {
   if(scrollToProducts)document.getElementById('product-grid')?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
 }
 
+
+function productPage(product) {
+ if (product.id.startsWith('select-invisible')) return '/invisible/';
+ if (product.id==='select-blackpro') return '/blackpro/';
+ if (product.id==='select-dualreflect') return '/dual-reflect/';
+ if (product.id==='select-securityblinder') return '/securityblind/';
+ if (product.id==='select-miniblind-venetian') return '/miniblind-venetian/';
+ if (product.line==='aerocore') return '/aerocore/aerocore/';
+ if (product.line==='neoskin') return '/aerocore/neoskin/';
+ if (product.line==='ceramic') return '/aerocore/ceramic-armoring/';
+ return '/aerocore/winf-select/';
+}
+document.addEventListener('DOMContentLoaded', () => {
+ document.querySelectorAll('[data-winf-category]').forEach(button=>{
+  button.addEventListener('click', ()=>{
+   const category=button.dataset.winfCategory;
+   if (category==='auto'||category==='arch') setCategory(category);
+   document.getElementById('catalogo-produtos')?.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
+  });
+ });
+});
+
 // ===================== GRID =====================
 function renderGrid() {
   const grid = document.getElementById('product-grid');
@@ -938,6 +983,7 @@ function renderGrid() {
           </button>
         </div>
         <a class="winf-catalog-deeplink" href="${getProductPage(product)}" onclick="event.stopPropagation()" aria-label="Conhecer a página da linha ${product.name}">VER PÁGINA DO PRODUTO / MARCA ↗</a>
+        <a href="${productPage(product)}" onclick="event.stopPropagation()" class="inline-flex mt-5 py-2 text-[10px] uppercase font-bold tracking-[.15em] text-white/80 hover:text-white border-b border-white/30" aria-label="Conhecer página oficial da linha ${product.name}">CONHECER PÁGINA DA LINHA ↗</a>
         <div class="card-hover-line absolute bottom-0 left-0 h-[2px] text-white"></div>
       </div>
     `;
