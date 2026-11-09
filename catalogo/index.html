@@ -256,17 +256,17 @@
 @font-face{font-family:Gustavo;src:url('/fonts/gustavo-medium.otf') format('opentype');font-style:normal;font-weight:500;font-display:swap}
 @font-face{font-family:Gustavo;src:url('/fonts/gustavo-bold.otf') format('opentype');font-style:normal;font-weight:700;font-display:swap}
 @font-face{font-family:'JetBrains Mono';src:url('/fonts/jetbrains-mono-var.woff2') format('woff2');font-weight:100 800;font-display:swap}
-body.winf-catalog-page{background:#08090a;font-family:Gustavo,Arial,sans-serif}
-body.winf-catalog-page #catalogo-navegacao,
-body.winf-catalog-page #catalogo-produtos,
-body.winf-catalog-page .winf-catalog-journeys{font-family:Gustavo,Arial,sans-serif}
-body.winf-catalog-page :is(#hero-title,#catalogo-navegacao h2,#catalogo-produtos h3,.winf-catalog-journeys h2,.winf-catalog-paths strong){
- font-family:Gustavo,Arial,sans-serif!important;letter-spacing:-.047em;font-weight:300!important
+/* Tipografia editorial legível: evitar sobreposição de ligaturas e tracking comprimido */
+body.winf-catalog-page{background:#08090a;font-family:Inter,Arial,sans-serif;letter-spacing:normal}
+body.winf-catalog-page :is(#catalogo-navegacao,#catalogo-produtos,.winf-catalog-journeys){font-family:Inter,Arial,sans-serif}
+body.winf-catalog-page :is(#hero-title,#catalogo-navegacao h2,.winf-catalog-journeys h2,.winf-lab-heading h2){
+ font-family:Outfit,Inter,Arial,sans-serif!important;letter-spacing:.005em!important;font-weight:300!important;line-height:1.13!important;font-variant-ligatures:none
 }
-body.winf-catalog-page #hero-title{line-height:1.06}
-body.winf-catalog-page #catalogo-produtos h3{font-size:clamp(21px,2vw,29px);line-height:1.18}
-body.winf-catalog-page #catalogo-produtos h4{font-family:Gustavo,Arial,sans-serif;font-style:normal}
-body.winf-catalog-page #catalogo-produtos p{font-family:Gustavo,Arial,sans-serif;font-weight:400}
+body.winf-catalog-page :is(#hero-title span,#winf-catalog-journeys-title span){font-weight:500!important}
+body.winf-catalog-page #catalogo-produtos h3{font-family:Outfit,Inter,Arial,sans-serif!important;font-size:clamp(21px,2vw,29px);line-height:1.2;letter-spacing:0!important;font-weight:400!important;font-variant-ligatures:none}
+body.winf-catalog-page #catalogo-produtos h4{font-family:Inter,Arial,sans-serif;font-style:normal}
+body.winf-catalog-page #catalogo-produtos p{font-family:Inter,Arial,sans-serif;font-weight:400}
+body.winf-catalog-page :is(#hero-desc,.winf-catalog-intro,#catalogo-navegacao>p){font-family:Inter,Arial,sans-serif;letter-spacing:normal;line-height:1.7}
 body.winf-catalog-page .winf-catalog-tabs button,
 body.winf-catalog-page .winf-catalog-eyebrow,
 body.winf-catalog-page .winf-catalog-paths small,
@@ -280,7 +280,7 @@ body.winf-catalog-page #catalogo-produtos .product-card:hover .card-img-inner{fi
 .winf-lab-container{max-width:1280px;margin:0 auto}
 .winf-lab-kicker{font:700 10px/1.5 'JetBrains Mono',monospace;letter-spacing:.2em;color:#acb0b7;margin:0 0 24px}
 .winf-lab-heading{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(260px,.7fr);gap:38px;align-items:end;margin-bottom:38px}
-.winf-lab-heading h2{font:300 clamp(36px,5vw,72px)/1.03 Gustavo,Arial,sans-serif!important;letter-spacing:-.055em;margin:0}
+.winf-lab-heading h2{font:300 clamp(36px,5vw,72px)/1.09 Outfit,Inter,Arial,sans-serif!important;letter-spacing:0!important;margin:0}
 .winf-lab-heading h2 span{color:#a3a7af}
 .winf-lab-heading>p{font:400 15px/1.7 Gustavo,Arial,sans-serif;color:#c8c9cd;max-width:480px}
 .winf-lab-layout{display:grid;grid-template-columns:minmax(260px,.36fr) minmax(0,.64fr);gap:20px}
@@ -357,6 +357,7 @@ body.winf-catalog-page #catalogo-produtos .product-card:hover .card-img-inner{fi
 @media(hover:none){.winf-catalog-paths img{filter:brightness(.95)}}
 </style>
   <link rel="stylesheet" href="/css/winf-home-roadmap.css?v=20261107-1">
+<link rel="stylesheet" href="/css/winf-brand-marks.css?v=20261109-mark1">
 </head>
 <body class="winf-catalog-page min-h-screen flex flex-col selection:bg-zinc-500/30">
 <a class="winf-return-link" data-winf-return href="/" aria-label="Voltar ao início da seção"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 5-7 7 7 7M5 12h14"></path></svg></a>
@@ -401,11 +402,9 @@ body.winf-catalog-page #catalogo-produtos .product-card:hover .card-img-inner{fi
         <p><b class="text-white">A Tecnologia Não Precisa Ser Vista. Precisa Ser Sentida.</b> Transforme ambientes em santuários de conforto, privacidade e eficiência, filtrando o que há de ruim no sol e deixando entrar apenas a luz.</p>
       </div>
     </div>
-    <div class="hidden lg:flex w-32 h-32 border border-dashed border-[#444746] items-center justify-center relative shrink-0 fade-up-delay2">
-      <div class="absolute inset-0 flex items-center justify-center animate-pulse opacity-20">
-        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18"/></svg>
-      </div>
-      <div class="text-[8px] font-black tracking-widest text-center uppercase text-white">Master<br>Specs</div>
+    <div class="hidden lg:flex flex-col gap-4 items-center justify-center border border-[#444746] p-5 shrink-0 fade-up-delay2" aria-label="WINF™">
+      <img src="/winf-logo.svg" width="122" height="40" alt="Logomarca oficial WINF™" decoding="async">
+      <span class="text-[9px] font-bold tracking-[.12em] text-center text-white/70">PREMIUM QUALITY WINDOW FILM</span>
     </div>
   </section>
 
@@ -416,15 +415,15 @@ body.winf-catalog-page #catalogo-produtos .product-card:hover .card-img-inner{fi
       <h2 id="winf-catalog-journeys-title">ESCOLHA A LINHA.<br><span>CONHEÇA O DETALHE.</span></h2>
       <p class="winf-catalog-intro">Explore os produtos e suas especificações. Para conhecer aplicações, imagens e benefícios em profundidade, visite a página oficial de cada marca.</p>
       <div class="winf-catalog-paths">
-        <a href="/aerocore/winf-select/"><img src="/images/invisible-poster-1.webp" alt="" loading="lazy"><span><small>ARQUITETURA / GLASS + HOME</small><strong>WINF SELECT™</strong><em>VER PÁGINA DA MARCA ↗</em></span></a>
-        <a href="/aerocore/"><img src="/aerocore/public/porsche-911-highway-20261103-poster.webp" alt="" loading="lazy"><span><small>PELÍCULAS AUTOMOTIVAS</small><strong>AEROCORE™</strong><em>VER PÁGINA DA MARCA ↗</em></span></a>
-        <a href="/aerocore/neoskin/"><img src="/aerocore/public/neoskin-hero-20261105.webp" alt="" loading="lazy"><span><small>PROTEÇÃO PPF</small><strong>NEOSKIN™</strong><em>VER PÁGINA DA MARCA ↗</em></span></a>
-        <a href="/aerocore/ceramic-armoring/"><img src="/images/ceramic-hero.webp" alt="" loading="lazy"><span><small>PROTEÇÃO CERÂMICA</small><strong>CERAMIC ARMORING™</strong><em>VER PÁGINA DA MARCA ↗</em></span></a>
+        <a href="/aerocore/winf-select/"><img src="/images/invisible-poster-1.webp" alt="" loading="lazy"><span><small>ARQUITETURA / GLASS + HOME</small><span class="winf-mark winf-mark--select"><img src="/winf-logo.svg" alt="WINF™" width="94" height="31" loading="lazy" decoding="async"><span class="winf-mark-select-label">SELECT<sup>™</sup></span></span><em>VER PÁGINA DA MARCA ↗</em></span></a>
+        <a href="/aerocore/"><img src="/aerocore/public/porsche-911-highway-20261103-poster.webp" alt="" loading="lazy"><span><small>PELÍCULAS AUTOMOTIVAS</small><span class="winf-mark winf-mark--aerocore">AEROCORE<sup>™</sup></span><em>VER PÁGINA DA MARCA ↗</em></span></a>
+        <a href="/aerocore/neoskin/"><img src="/aerocore/public/neoskin-hero-20261105.webp" alt="" loading="lazy"><span><small>PROTEÇÃO PPF</small><span class="winf-mark winf-mark--neoskin">NEOSKIN<sup>™</sup></span><em>VER PÁGINA DA MARCA ↗</em></span></a>
+        <a href="/aerocore/ceramic-armoring/"><img src="/images/ceramic-hero.webp" alt="" loading="lazy"><span><small>PROTEÇÃO CERÂMICA</small><span class="winf-mark winf-mark--ceramic">CERAMIC ARMORING<sup>™</sup></span><em>VER PÁGINA DA MARCA ↗</em></span></a>
       </div>
       <p class="winf-catalog-members">Produtos profissionais WINF são destinados ao atendimento pelas unidades e à rede autorizada. <a href="/ghost-shop/">GHOST SHOP™</a> é uma vitrine separada de acessórios e itens de marca, com compra reservada a membros.</p>
     </div>
   </section>
-  <section id="catalogo-navegacao" aria-labelledby="winf-catalog-nav-title"><span class="winf-catalog-overline">CATÁLOGO OFICIAL WINF™ / TECNOLOGIAS</span><h2 id="winf-catalog-nav-title">Encontre sua solução.<br>Conheça cada marca.</h2><p>Navegue pelas fichas dos produtos e depois abra as páginas completas das marcas. O catálogo é público e informativo; compras e abastecimento profissional são realizados apenas nos ambientes autorizados da WINF.</p><div class="winf-catalog-division-actions"><button type="button" data-winf-category="arch">VER PELÍCULAS ARQUITETÔNICAS ↓</button><button type="button" data-winf-category="all">EXPLORAR TODAS AS TECNOLOGIAS ↓</button></div><nav class="winf-catalog-brands" aria-label="Conheça as páginas das marcas WINF"><a href="/aerocore/winf-select/"><small>01 / GLASS + HOME</small><strong>WINF SELECT™</strong><em>ARQUITETURA / VER PÁGINA ↗</em></a><a href="/aerocore/"><small>02 / PERFORMANCE</small><strong>AEROCORE™</strong><em>PELÍCULAS AUTOMOTIVAS ↗</em></a><a href="/aerocore/neoskin/"><small>03 / PAINT PROTECTION</small><strong>NEOSKIN™</strong><em>PROTEÇÃO DE PINTURA ↗</em></a><a href="/aerocore/ceramic-armoring/"><small>04 / CERAMIC PROTECTION</small><strong>CERAMIC ARMORING™</strong><em>REVESTIMENTO CERÂMICO ↗</em></a></nav><p class="winf-cat-context">Santos/SP: <a href="/pelicula-de-controle-solar-santos-sp/#orcamento" style="text-decoration:underline;text-underline-offset:4px">solicitar orçamento local ↗</a> · <a href="/onde-comprar/" style="text-decoration:underline;text-underline-offset:4px">encontrar minha cidade ↗</a> · <a href="/ghost-shop/" style="text-decoration:underline;text-underline-offset:4px">GHOST SHOP™ / vitrine de membros ↗</a></p></section>
+  <section id="catalogo-navegacao" aria-labelledby="winf-catalog-nav-title"><span class="winf-catalog-overline">CATÁLOGO OFICIAL WINF™ / TECNOLOGIAS</span><h2 id="winf-catalog-nav-title">Encontre sua solução.<br>Conheça cada marca.</h2><p>Navegue pelos produtos e clique em cada card para abrir a página daquela película ou proteção. O catálogo é público e informativo; compras e abastecimento profissional são realizados apenas nos ambientes autorizados da WINF.</p><div class="winf-catalog-division-actions"><button type="button" data-winf-category="arch">VER PELÍCULAS ARQUITETÔNICAS ↓</button><button type="button" data-winf-category="all">EXPLORAR TODAS AS TECNOLOGIAS ↓</button></div><nav class="winf-catalog-brands" aria-label="Conheça as páginas das marcas WINF"><a href="/aerocore/winf-select/"><small>01 / GLASS + HOME</small><span class="winf-mark winf-mark--select"><img src="/winf-logo.svg" alt="WINF™" width="94" height="31" loading="lazy" decoding="async"><span class="winf-mark-select-label">SELECT<sup>™</sup></span></span><em>ARQUITETURA / VER PÁGINA ↗</em></a><a href="/aerocore/"><small>02 / PERFORMANCE</small><span class="winf-mark winf-mark--aerocore">AEROCORE<sup>™</sup></span><em>PELÍCULAS AUTOMOTIVAS ↗</em></a><a href="/aerocore/neoskin/"><small>03 / PAINT PROTECTION</small><span class="winf-mark winf-mark--neoskin">NEOSKIN<sup>™</sup></span><em>PROTEÇÃO DE PINTURA ↗</em></a><a href="/aerocore/ceramic-armoring/"><small>04 / CERAMIC PROTECTION</small><span class="winf-mark winf-mark--ceramic">CERAMIC ARMORING<sup>™</sup></span><em>REVESTIMENTO CERÂMICO ↗</em></a></nav><p class="winf-cat-context">Santos/SP: <a href="/pelicula-de-controle-solar-santos-sp/#orcamento" style="text-decoration:underline;text-underline-offset:4px">solicitar orçamento local ↗</a> · <a href="/onde-comprar/" style="text-decoration:underline;text-underline-offset:4px">encontrar minha cidade ↗</a> · <a href="/ghost-shop/" style="text-decoration:underline;text-underline-offset:4px">GHOST SHOP™ / vitrine de membros ↗</a></p></section>
 
 <section id="catalogo-produtos" class="relative z-10 pb-32 px-6 md:px-12 w-full max-w-7xl mx-auto flex-1">
     <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"></div>
@@ -550,6 +549,8 @@ function productLink(p) {
   const params=new URLSearchParams();
   if(CATALOG_ORIGIN)params.set('origem',CATALOG_ORIGIN);
   if(partnerParam && /^\d{11,13}$/.test(partnerParam))params.set('partner',partnerParam);
+  const variants={'select-invisible-70':'70','select-invisible-80':'80','aerocore-ghost':'05','aerocore-wraith70':'70','neoskin-bunker150':'BKR-150','neoskin-apocalypse190':'APX-190'};
+  if(variants[p.id])params.set('variant',variants[p.id]);
   return base+(params.size?'?'+params.toString():'');
 }
 
@@ -830,7 +831,24 @@ const CATEGORY_META = {
 // ===================== STATE =====================
 let activeCategory = 'all';
 const matchesCurrentLine=p=>activeCategory==='all'||(activeCategory==='arch'&&(p.category==='arch'||p.id==='aerocore-spectre'))||p.line===activeCategory;
-function getProductPage(p){if(p.line==='aerocore')return '/aerocore/';if(p.line==='neoskin')return '/aerocore/neoskin/';if(p.line==='ceramic')return '/aerocore/ceramic-armoring/';const id=p.id.toLowerCase();if(id.includes('invisible'))return '/invisible/';if(id.includes('blackpro'))return '/blackpro/';if(id.includes('dual'))return '/dual-reflect/';if(id.includes('security'))return '/securityblind/';if(id.includes('mini')||id.includes('venetian'))return '/miniblind-venetian/';return '/aerocore/winf-select/';}
+function getProductPage(p){
+  const paths={
+    'select-invisible-70':'/invisible/',
+    'select-invisible-80':'/invisible/',
+    'select-blackpro':'/blackpro/',
+    'select-dualreflect':'/dual-reflect/',
+    'select-securityblinder':'/securityblind/',
+    'select-miniblind-venetian':'/miniblind-venetian/',
+    'aerocore-ghost':'/aerocore/ghost/',
+    'aerocore-phantom':'/aerocore/phantom/',
+    'aerocore-spectre':'/aerocore/spectre/',
+    'aerocore-wraith70':'/aerocore/wraith/',
+    'neoskin-bunker150':'/aerocore/bunker/',
+    'neoskin-apocalypse190':'/aerocore/apocalypse/',
+    'ceramic-armoring':'/aerocore/ceramic-armoring/'
+  };
+  return paths[p.id] || '/catalogo/';
+}
 let sunIntensity = 85;
 let selectedFilmId = '';
 let toastTimer = null;
