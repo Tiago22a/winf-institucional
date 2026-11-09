@@ -195,3 +195,20 @@ body.menu-open .santos-contact-dock,body:has(#menu-overlay[aria-hidden="false"])
 .santos-full-catalog-link{display:inline-flex;justify-content:center;align-items:center;gap:13px;border:1px solid #e3e4e6;color:#0b0c0e;background:#f3f3f4;min-height:49px;text-decoration:none;padding:13px 19px;margin:-13px 0 32px;font:700 10px/1.5 Inter,Arial,sans-serif;letter-spacing:.085em;transition:background .2s}
 .santos-full-catalog-link:hover{background:#fff}
 @media(prefers-reduced-motion:reduce){.santos-full-catalog-link{transition:none}}
+
+/* Santos: cada card abre a ficha do produto; WhatsApp local fica independente e imediato. */
+.santos-architecture-grid .santos-product-card{display:flex;flex-direction:column}
+.santos-architecture-grid .santos-product-info{display:block;flex:1;color:inherit;text-decoration:none}
+.santos-architecture-grid .santos-product-info:focus-visible,
+.santos-architecture-grid .santos-product-actions a:focus-visible{outline:2px solid white;outline-offset:-3px}
+.santos-architecture-grid .santos-product-info .santos-card-desc{border-top:1px solid #ffffff16}
+.santos-architecture-grid .santos-product-actions{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:7px;padding:11px 12px;border-top:1px solid #ffffff24;margin-top:auto}
+.santos-architecture-grid .santos-product-actions a{display:flex;align-items:center;justify-content:center;gap:6px;padding:12px 6px;min-height:45px;text-align:center;font:700 9px/1.4 Inter,Arial,sans-serif;letter-spacing:.045em;text-decoration:none;white-space:nowrap;transition:background .2s,border-color .2s}
+.santos-architecture-grid .santos-product-whatsapp{background:#17894e;color:white;border:1px solid #30ad6b}
+.santos-architecture-grid .santos-product-whatsapp:hover{background:#1c9e5c}
+.santos-architecture-grid .santos-product-form-link{color:#e5e6e9;border:1px solid #ffffff40;background:#ffffff0c}
+.santos-architecture-grid .santos-product-form-link:hover{background:#ffffff25;border-color:#fff}
+.santos-architecture-grid .santos-product-info .brand-visit{letter-spacing:.08em}
+@media(max-width:1040px){.santos-architecture-grid .santos-product-actions{grid-template-columns:1fr}.santos-architecture-grid .santos-product-actions a{min-height:42px}}
+@media(max-width:600px){.santos-architecture-grid .santos-product-actions{grid-template-columns:minmax(0,1.45fr) minmax(0,1fr)}.santos-architecture-grid .santos-product-actions a{font-size:9px;padding:12px 5px}}
+@media(prefers-reduced-motion:reduce){.santos-architecture-grid .santos-product-actions a{transition:none}}
