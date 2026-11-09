@@ -20,7 +20,10 @@
     '/aerocore/ghostliquid/':'Ceramic Armoring™ Ghost Liquid'
   };
   const product=names[pathname]||document.title.split('|')[0].trim();
-  const productDetail=(pathname==='/aerocore/ghost/'&&variant==='05')?'AeroCore™ Ghost 05':(pathname==='/aerocore/wraith/'&&variant==='70')?'AeroCore™ Wraith 70':product;
+  const variantSeries=['/aerocore/ghost/','/aerocore/phantom/','/aerocore/spectre/'];
+  const validSeriesVariant=/^(05|15|35)$/.test(variant);
+  const productDetail=(variantSeries.includes(pathname)&&validSeriesVariant)?product+' '+variant:
+    (pathname==='/aerocore/wraith/'&&variant==='70')?product+' 70':product;
   if(!phone&&!origin&&!variant)return;
   const carriedParams=new URLSearchParams();
   if(origin)carriedParams.set('origem',origin);
@@ -54,11 +57,12 @@
     node.querySelectorAll('a[href]').forEach(rewrite);
   }
   function focusVariant(){
-    if(!(pathname==='/aerocore/ghost/'&&variant==='05'))return;
+    if(!(variantSeries.includes(pathname)&&validSeriesVariant))return;
     const heading=document.querySelector('main h1');
-    if(heading&&heading.textContent.trim().toUpperCase()==='GHOST'){
-      heading.textContent='GHOST 05';
-      document.title='Ghost 05 | AEROCORE™ Window Film';
+    const label=pathname.split('/').filter(Boolean).pop();
+    if(heading&&heading.textContent.trim().toUpperCase()===label.toUpperCase()){
+      heading.textContent=(label+' '+variant).toUpperCase();
+      document.title=(label+' '+variant)+' | AEROCORE™ Window Film';
     }
   }
   function ready(){
