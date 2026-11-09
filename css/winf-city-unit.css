@@ -123,3 +123,70 @@ body.menu-open .santos-contact-dock,body:has(#menu-overlay[aria-hidden="false"])
 @media(max-width:980px){.santos-feature-wrap,.santos-local-shell,.santos-brand-heading{grid-template-columns:1fr}.santos-feature-media{min-height:360px}}
 @media(max-width:760px){.santos-brand-grid,.santos-service-grid{grid-template-columns:1fr}.santos-brand-photo{aspect-ratio:16/9}.santos-brand-photo>span{font-size:21px}.santos-service-card{min-height:275px}.santos-neighborhood-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.santos-process-grid{grid-template-columns:1fr;gap:14px}.santos-process{margin-top:60px}}
 @media(prefers-reduced-motion:reduce){.santos-service-card:before,.santos-brand-card{transition:none;transform:none}}
+
+/* WINF SELECT | REFINO DE ILUMINACAO DAS FOTOGRAFIAS / CARDS | NOV 2026
+   Desktop: preto editorial em repouso, iluminacao viva ao passar o mouse.
+   Touch: imagens ja visiveis sem interacao. Mantem gradiente para legibilidade. */
+.santos-brand-photo video{
+  filter:brightness(.78) contrast(1.05) saturate(.9);
+  transition:filter .45s ease,transform .65s ease;
+}
+.santos-brand-photo::after{
+  background:linear-gradient(180deg,rgba(0,0,0,.14),rgba(0,0,0,.52));
+  transition:background .4s ease;
+}
+.santos-brand-card:is(:hover,:focus-visible) .santos-brand-photo video{
+  filter:brightness(1.12) contrast(1.06) saturate(1.06);
+  transform:scale(1.035);
+}
+.santos-brand-card:is(:hover,:focus-visible) .santos-brand-photo::after{
+  background:linear-gradient(180deg,rgba(0,0,0,.06),rgba(0,0,0,.33));
+}
+.santos-service-card::before{
+  opacity:.42;filter:grayscale(.55) brightness(1.06);
+  transition:opacity .45s ease,transform .6s ease,filter .45s ease;
+}
+.santos-service-card::after{
+  background:linear-gradient(0deg,rgba(2,3,4,.82),rgba(2,3,4,.35) 80%,rgba(2,3,4,.18));
+  transition:background .4s ease;
+}
+.santos-service-card:is(:hover,:focus-visible)::before{
+  opacity:.92;filter:grayscale(.12) brightness(1.12);
+  transform:scale(1);
+}
+.santos-service-card:is(:hover,:focus-visible)::after{
+  background:linear-gradient(0deg,rgba(2,3,4,.72),rgba(2,3,4,.24) 80%,rgba(2,3,4,.09));
+}
+.santos-hover-card:is(:hover,:focus-within,.santos-visible)::before{
+  opacity:.9;filter:grayscale(.4) brightness(1.08);
+}
+.santos-hover-card:is(:hover,:focus-within,.santos-visible)::after{
+  background:linear-gradient(105deg,rgba(4,5,6,.78),rgba(4,5,6,.39));
+}
+.santos-ecosystem-grid .santos-ecosystem-card .brand-card-media video{
+  opacity:.67;filter:brightness(1.1) saturate(.93);
+  transition:opacity .55s ease,filter .45s ease,transform .55s ease;
+}
+.santos-ecosystem-grid .santos-ecosystem-card .brand-shade{
+  background:linear-gradient(180deg,rgba(0,0,0,.13),transparent 52%,rgba(0,0,0,.47));
+  transition:background .45s ease;
+}
+.santos-ecosystem-grid .santos-ecosystem-card:is(:hover,:focus-visible) .brand-card-media video{
+  opacity:1;filter:brightness(1.18) saturate(1.07);transform:scale(1.045);
+}
+.santos-ecosystem-grid .santos-ecosystem-card:is(:hover,:focus-visible) .brand-shade{
+  background:linear-gradient(180deg,rgba(0,0,0,.04),transparent 55%,rgba(0,0,0,.34));
+}
+@media(hover:none), (pointer:coarse){
+  .santos-brand-photo video{filter:brightness(.99) contrast(1.04) saturate(1.01)}
+  .santos-brand-photo::after{background:linear-gradient(180deg,rgba(0,0,0,.07),rgba(0,0,0,.37))}
+  .santos-service-card::before{opacity:.78;filter:grayscale(.22) brightness(1.09);transform:scale(1.02)}
+  .santos-service-card::after{background:linear-gradient(0deg,rgba(2,3,4,.76),rgba(2,3,4,.25) 80%,rgba(2,3,4,.1))}
+  .santos-hover-card::before{opacity:.73;transform:scale(1.02);filter:grayscale(.48) brightness(1.06)}
+  .santos-hover-card::after{background:linear-gradient(105deg,rgba(4,5,6,.79),rgba(4,5,6,.48))}
+  .santos-ecosystem-grid .santos-ecosystem-card .brand-card-media video{opacity:.93;filter:brightness(1.14) saturate(1.04)}
+  .santos-ecosystem-grid .santos-ecosystem-card .brand-shade{background:linear-gradient(180deg,rgba(0,0,0,.07),transparent 55%,rgba(0,0,0,.37))}
+}
+@media(prefers-reduced-motion:reduce){
+ .santos-brand-photo video,.santos-brand-photo::after,.santos-service-card::before,.santos-service-card::after,.santos-ecosystem-grid .brand-card-media video,.santos-ecosystem-grid .brand-shade{transition:none!important;transform:none!important}
+}
