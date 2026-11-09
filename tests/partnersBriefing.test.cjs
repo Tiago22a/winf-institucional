@@ -152,10 +152,10 @@ test('Projetos em desenvolvimento não prometem serviços já lançados', () => 
   assert.match(ecosystem, /GHOST SHOP/);
   assert.doesNotMatch(ecosystem, /Black Shop|MediaK|CityWave/);
 });
-test('Vídeo hero AeroCore não aponta para filme antigo de derrapagem', () => {
+test('Vídeo hero AeroCore mantém o Porsche em derrapagem aprovado', () => {
   const h = read('aerocore/index.html');
-  assert.match(h, /porsche-911-highway-20261103\.mp4/);
-  assert.doesNotMatch(h, /quero_uma_porche_rebaixada\.mp4/);
+  assert.match(h, /quero_uma_porche_rebaixada\.mp4/);
+  assert.doesNotMatch(h, /porsche-911-highway-20261103\.mp4/);
   const n = read('aerocore/assets/neoskin-actions-2026.css');
   assert.match(n, /pointer:coarse/);
   assert.match(n, /background:transparent!important/);
