@@ -1,0 +1,16 @@
+/* WINF Select product detail header and global menu; the official WINF wordmark remains unchanged. */
+body.ws-select-detail .ws-product-header{max-width:1280px;width:100%;padding:0 clamp(2px,.8vw,14px);min-height:66px;display:flex;align-items:center;gap:12px}
+body.ws-select-detail .ws-product-header .winf-home-brand{display:flex;flex-direction:row;align-items:center;min-width:0;gap:clamp(9px,1vw,16px);text-decoration:none}
+body.ws-select-detail .ws-product-header .winf-home-official-logo{width:clamp(83px,8vw,115px);height:auto;max-height:42px}
+body.ws-select-detail .ws-product-header .winf-home-brand-divider{height:34px;flex:none}
+body.ws-select-detail .ws-product-brand-lines{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:3px;min-width:0}
+body.ws-select-detail .ws-product-header .winf-home-brand-signature{font-family:Gustavo,Arial,sans-serif;font-size:clamp(9px,1.02vw,15px);line-height:1.1;letter-spacing:.09em;font-weight:400;color:#d1d2d6;white-space:nowrap}
+body.ws-select-detail .ws-product-label{font-family:Gustavo,Arial,sans-serif;font-weight:400;color:#a3a5ab;font-size:clamp(9px,.8vw,12px);letter-spacing:.16em;text-transform:uppercase;line-height:1.2}
+body.ws-select-detail .ws-product-header .winf-home-ghost-trigger{min-width:70px;max-height:52px;padding:2px!important}
+body.ws-select-detail #menu-overlay.winf-global-roadmap{z-index:9999}
+body.ws-select-detail #menu-overlay.winf-global-roadmap .ws-menu-products .ac-roadmap-mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+body.ws-select-detail #menu-overlay.winf-global-roadmap .ac-roadmap-shell{max-width:1280px}
+body.ws-select-detail #winf-global-footer.winf-home-roadmap{width:100%;max-width:none;font-family:Inter,Arial,sans-serif}
+body.ws-select-detail #winf-global-footer.winf-home-roadmap h2{font-family:Montserrat,Inter,Arial,sans-serif}
+@media(max-width:700px){body.ws-select-detail .ws-product-header{min-height:59px;padding:0;gap:5px}body.ws-select-detail .ws-product-header .winf-home-brand{gap:7px}body.ws-select-detail .ws-product-header .winf-home-official-logo{width:clamp(65px,15vw,90px)}body.ws-select-detail .ws-product-header .winf-home-brand-divider{height:26px}body.ws-select-detail .ws-product-header .winf-home-brand-signature{font-size:clamp(6.5px,1.7vw,10px);letter-spacing:.02em}body.ws-select-detail .ws-product-label{font-size:clamp(7px,1.5vw,9px);letter-spacing:.07em}body.ws-select-detail .ws-product-header .winf-home-ghost-trigger{min-width:60px;gap:7px!important}body.ws-select-detail .ws-product-header .winf-home-ghost-trigger>img{height:32px}}
+@media(max-width:380px){body.ws-select-detail .ws-product-header .winf-home-official-logo{width:65px}body.ws-select-detail .ws-product-header .winf-home-brand-signature{font-size:6.3px}body.ws-select-detail .ws-product-label{font-size:7px}body.ws-select-detail .ws-product-header .winf-home-ghost-trigger{min-width:54px}}
