@@ -1,0 +1,392 @@
+{
+  "visualSystem": {
+    "format": "jpeg",
+    "width": 1200,
+    "height": 630,
+    "design": "soft-luxury editorial, clean typography, official WINF SVG, no visual claims of real installations",
+    "tagline": "SITE OFICIAL WINF™"
+  },
+  "cityHooks": {
+    "santos": [
+      "MANTENHA A VISTA.",
+      "CONTROLE O CALOR."
+    ],
+    "praia-grande": [
+      "SUA VISTA MERECE",
+      "MAIS CONFORTO."
+    ],
+    "guaruja": [
+      "MAIS PRIVACIDADE.",
+      "MENOS INCÔMODO."
+    ],
+    "sorocaba": [
+      "SUA CASA CLARA.",
+      "SEU CONFORTO EM DIA."
+    ],
+    "pilar-do-sul": [
+      "A LUZ ENTRA.",
+      "O CONFORTO FICA."
+    ],
+    "campina-grande": [
+      "NOVAS POSSIBILIDADES.",
+      "PARA SEUS VIDROS."
+    ]
+  },
+  "hooks": {
+    "": {
+      "brand": "WINF™",
+      "title": "O SOL NÃO MANDA.|NO SEU CONFORTO.",
+      "subtitle": "PREMIUM QUALITY WINDOW FILM™",
+      "photo": "images/dualreflect-poster-1.webp",
+      "label": "SITE OFICIAL WINF™"
+    },
+    "aerocore": {
+      "brand": "AEROCORE™",
+      "title": "O INVISÍVEL.|FAZ A DIFERENÇA.",
+      "subtitle": "ENGENHARIA DE PELÍCULAS AUTOMOTIVAS",
+      "photo": "aerocore/public/porsche-911-highway-20261103-poster.webp"
+    },
+    "aerocore/winf-select": {
+      "brand": "WINF SELECT™",
+      "title": "O VIDRO CONTINUA.|A EXPERIÊNCIA MUDA.",
+      "subtitle": "GLASS + HOME / ARQUITETURA",
+      "photo": "images/invisible-poster-1.webp"
+    },
+    "aerocore/neoskin": {
+      "brand": "NEOSKIN™",
+      "title": "PROTEJA O QUE|VOCÊ CONQUISTOU.",
+      "subtitle": "PPF / PROTEÇÃO DE PINTURA",
+      "photo": "aerocore/public/neoskin-hero-20261105.webp"
+    },
+    "neoskin": {
+      "brand": "NEOSKIN™",
+      "title": "CUIDADO QUE|SE VÊ NA PINTURA.",
+      "subtitle": "PPF / PROTEÇÃO DE PINTURA",
+      "photo": "aerocore/public/neoskin-hero-20261105.webp"
+    },
+    "ceramic": {
+      "brand": "CERAMIC ARMORING™",
+      "title": "PROTEÇÃO COMEÇA|NA SUPERFÍCIE.",
+      "subtitle": "REVESTIMENTOS CERÂMICOS",
+      "photo": "partners/media/reference-detailing.webp"
+    },
+    "aerocore/ceramic-armoring": {
+      "brand": "CERAMIC ARMORING™",
+      "title": "CUIDADO QUE|SE PERCEBE.",
+      "subtitle": "PROTEÇÃO CERÂMICA DE SUPERFÍCIES",
+      "photo": "partners/media/reference-detailing.webp"
+    },
+    "partners": {
+      "brand": "WINF PARTNERS™",
+      "title": "SEU TERRITÓRIO.|NOVAS POSSIBILIDADES.",
+      "subtitle": "EXPANSÃO E LICENCIAMENTO",
+      "photo": "briefing/media/flagship-showroom-2026.webp"
+    },
+    "briefing": {
+      "brand": "WINF PARTNERS™",
+      "title": "ESCOLHA SEU MODELO.|CONHEÇA O CAMINHO.",
+      "subtitle": "ASSET LIGHT · QUIOSQUE · FLAGSHIP",
+      "photo": "briefing/media/flagship-showroom-2026.webp"
+    },
+    "briefing/asset-light": {
+      "brand": "WINF PARTNERS™",
+      "title": "ESTRUTURA ENXUTA.|VISÃO DE EXPANSÃO.",
+      "subtitle": "WINF ASSET LIGHT™",
+      "photo": "briefing/media/asset-light-gestao-2026.webp"
+    },
+    "briefing/quiosque": {
+      "brand": "WINF PARTNERS™",
+      "title": "PRESENÇA QUE|CHAMA ATENÇÃO.",
+      "subtitle": "MODELO QUIOSQUE",
+      "photo": "briefing/media/quiosque-principal-2026.webp"
+    },
+    "briefing/flagship": {
+      "brand": "WINF PARTNERS™",
+      "title": "UMA LOJA.|UMA REFERÊNCIA.",
+      "subtitle": "FLAGSHIP STUDIO & HUB",
+      "photo": "briefing/media/flagship-showroom-2026.webp"
+    },
+    "partners/distribuidores": {
+      "brand": "WINF PARTNERS™",
+      "title": "CONEXÕES QUE|AMPLIAM MERCADOS.",
+      "subtitle": "PARCERIAS PARA DISTRIBUIÇÃO",
+      "photo": "partners/media/parceria.webp"
+    },
+    "partners/varejistas": {
+      "brand": "WINF PARTNERS™",
+      "title": "PRESENÇA LOCAL.|IDENTIDADE GLOBAL.",
+      "subtitle": "PARCERIAS PARA VAREJO",
+      "photo": "partners/media/studio.webp"
+    },
+    "partners/ecossistema": {
+      "brand": "WINF PARTNERS™",
+      "title": "UM ECOSSISTEMA.|MUITAS POSSIBILIDADES.",
+      "subtitle": "MARCAS, TECNOLOGIA E REDE",
+      "photo": "partners/media/arquitetura.webp"
+    },
+    "partners/cuidar-e-conectar": {
+      "brand": "WINF™",
+      "title": "CUIDAR.|E CONECTAR.",
+      "subtitle": "INICIATIVA SOCIAL",
+      "photo": "partners/media/lifestyle.webp"
+    },
+    "partners/carro-midia": {
+      "brand": "WINF PARTNERS™",
+      "title": "SUA MARCA.|EM MOVIMENTO.",
+      "subtitle": "MÍDIA E VISIBILIDADE",
+      "photo": "partners/media/parceria.webp"
+    },
+    "ghost-shop": {
+      "brand": "GHOST SHOP™",
+      "title": "IDENTIDADE QUE|VAI ALÉM DO VIDRO.",
+      "subtitle": "VITRINE OFICIAL DE MARCA",
+      "photo": "images/shop/blackshop (14).webp"
+    },
+    "catalogo": {
+      "brand": "WINF™",
+      "title": "ESCOLHA A SOLUÇÃO.|CONHEÇA A TECNOLOGIA.",
+      "subtitle": "CATÁLOGO DIGITAL / LINHAS WINF",
+      "photo": "images/dualreflect-poster-1.webp"
+    },
+    "redes": {
+      "brand": "WINF™",
+      "title": "UM UNIVERSO.|TODAS AS MARCAS.",
+      "subtitle": "CANAIS E REDES OFICIAIS",
+      "photo": "images/dualreflect-poster-3.webp"
+    },
+    "onde-comprar": {
+      "brand": "WINF™",
+      "title": "ENCONTRE SEU|ATENDIMENTO WINF.",
+      "subtitle": "UNIDADES E CONTATOS",
+      "photo": "images/dualreflect-poster-1.webp"
+    },
+    "aerocore/onde-comprar": {
+      "brand": "AEROCORE™",
+      "title": "ENCONTRE SUA|REDE DE ATENDIMENTO.",
+      "subtitle": "PONTOS DE CONTATO",
+      "photo": "images/aerocore/aerocore-showroom.webp"
+    },
+    "invisible": {
+      "brand": "WINF SELECT™",
+      "title": "A VISTA CONTINUA.|O CONFORTO MUDA.",
+      "subtitle": "INVISIBLE™ / NANO CERÂMICA",
+      "photo": "images/invisible-poster-1.webp"
+    },
+    "blackpro": {
+      "brand": "WINF SELECT™",
+      "title": "PRIVACIDADE.|COM PERSONALIDADE.",
+      "subtitle": "BLACKPRO™ / VIDROS",
+      "photo": "images/blackpro-poster-2.webp"
+    },
+    "dual-reflect": {
+      "brand": "WINF SELECT™",
+      "title": "SOL SOB CONTROLE.|VISTA PRESERVADA.",
+      "subtitle": "DUAL REFLECT™ / VIDROS",
+      "photo": "images/dualreflect-poster-2.webp"
+    },
+    "securityblind": {
+      "brand": "WINF SELECT™",
+      "title": "SEGURANÇA EXIGE|ESPECIFICAÇÃO.",
+      "subtitle": "SECURITY BLIND™ / VIDROS",
+      "photo": "images/securityblind/scene-01.webp"
+    },
+    "miniblind-venetian": {
+      "brand": "WINF SELECT™",
+      "title": "DESENHE A LUZ.|PERSONALIZE O VIDRO.",
+      "subtitle": "MINIBLIND & VENETIAN™",
+      "photo": "images/miniblind-venetian/scene-01.webp"
+    },
+    "blog": {
+      "brand": "WINF JOURNAL™",
+      "title": "IDEIAS QUE|TRANSPARENTA(M).",
+      "subtitle": "CONHECIMENTO E ENGENHARIA",
+      "photo": "images/invisible-poster-2.webp"
+    },
+    "blog/ceramica-nanometrica": {
+      "brand": "WINF JOURNAL™",
+      "title": "TECNOLOGIA ALÉM|DO VISÍVEL.",
+      "subtitle": "CERÂMICA NANOMÉTRICA",
+      "photo": "images/invisible-poster-2.webp"
+    },
+    "blog/blindagem-transparente": {
+      "brand": "WINF JOURNAL™",
+      "title": "SEGURANÇA.|SEM ATALHOS.",
+      "subtitle": "VIDROS E PROTEÇÃO",
+      "photo": "images/securityblind/scene-07.webp"
+    },
+    "blog/persianas-no-vidro": {
+      "brand": "WINF JOURNAL™",
+      "title": "A LUZ.|COM OUTRO DESIGN.",
+      "subtitle": "PERSIANAS E VIDROS",
+      "photo": "images/miniblind-venetian/scene-03.webp"
+    },
+    "blog/ppf-armadura-invisivel": {
+      "brand": "WINF JOURNAL™",
+      "title": "PINTURA PROTEGIDA.|ESTÉTICA PRESERVADA.",
+      "subtitle": "PROTEÇÃO PPF",
+      "photo": "aerocore/public/neoskin-hero-20261105.webp"
+    },
+    "blog/privacidade-arquitetonica": {
+      "brand": "WINF JOURNAL™",
+      "title": "SEU ESPAÇO.|MAIS DISCRIÇÃO.",
+      "subtitle": "PRIVACIDADE ARQUITETÔNICA",
+      "photo": "images/blackpro-poster-2.webp"
+    },
+    "blog/rejeicao-infravermelha": {
+      "brand": "WINF JOURNAL™",
+      "title": "ENTENDA O CALOR.|ESCOLHA MELHOR.",
+      "subtitle": "CONTROLE SOLAR",
+      "photo": "images/dualreflect-poster-2.webp"
+    },
+    "aplicacoes/sacadas-varandas": {
+      "brand": "WINF SELECT™",
+      "title": "VIVA A VARANDA.|COM MAIS CONFORTO.",
+      "subtitle": "SACADAS E VIDROS",
+      "photo": "images/dualreflect-poster-2.webp"
+    },
+    "aplicacoes/janelas-fachadas": {
+      "brand": "WINF SELECT™",
+      "title": "SUA LUZ.|SEU CONTROLE.",
+      "subtitle": "JANELAS E FACHADAS",
+      "photo": "images/invisible-poster-2.webp"
+    },
+    "aplicacoes/privacidade": {
+      "brand": "WINF SELECT™",
+      "title": "MAIS DISCRIÇÃO.|NO SEU RITMO.",
+      "subtitle": "PRIVACIDADE EM VIDROS",
+      "photo": "images/blackpro-poster-2.webp"
+    },
+    "aplicacoes/seguranca-vidros": {
+      "brand": "WINF SELECT™",
+      "title": "PROTEÇÃO COMEÇA|PELA ESCOLHA.",
+      "subtitle": "SEGURANÇA PARA VIDROS",
+      "photo": "images/securityblind/scene-01.webp"
+    },
+    "hub": {
+      "brand": "WINF™",
+      "title": "UM ECOSSISTEMA.|MUITOS CAMINHOS.",
+      "subtitle": "CONEXÕES WINF",
+      "photo": "partners/media/arquitetura.webp"
+    },
+    "cliente": {
+      "brand": "WINF™",
+      "title": "SEU PROJETO.|NOSSA ATENÇÃO.",
+      "subtitle": "ÁREA DO CLIENTE",
+      "photo": "images/invisible-poster-1.webp"
+    },
+    "aerocore/aerocore": {
+      "brand": "AEROCORE™",
+      "title": "DESEMPENHO EM|CADA DETALHE.",
+      "subtitle": "TECNOLOGIA AUTOMOTIVA",
+      "photo": "images/aerocore-catalog/banner-aerocore.webp"
+    },
+    "aerocore/ghost": {
+      "brand": "AEROCORE™",
+      "title": "GHOST™.|DISCRIÇÃO EM MOVIMENTO.",
+      "subtitle": "PELÍCULA AUTOMOTIVA",
+      "photo": "images/aerocore-catalog/ghost-05.webp"
+    },
+    "aerocore/phantom": {
+      "brand": "AEROCORE™",
+      "title": "PHANTOM™.|PRESENÇA DISCRETA.",
+      "subtitle": "PELÍCULA AUTOMOTIVA",
+      "photo": "images/aerocore-catalog/phantom-15.webp"
+    },
+    "aerocore/spectre": {
+      "brand": "AEROCORE™",
+      "title": "SPECTRE™.|OUTRA PERCEPÇÃO.",
+      "subtitle": "PELÍCULA AUTOMOTIVA",
+      "photo": "images/aerocore-catalog/spectre-15.webp"
+    },
+    "aerocore/wraith": {
+      "brand": "AEROCORE™",
+      "title": "WRAITH™.|PERFORMANCE VISUAL.",
+      "subtitle": "PELÍCULA AUTOMOTIVA",
+      "photo": "images/aerocore-catalog/wraith-70.webp"
+    },
+    "aerocore/ghostliquid": {
+      "brand": "AEROCORE™",
+      "title": "PROTEÇÃO LÍQUIDA.|VISUAL PRECISO.",
+      "subtitle": "GHOST LIQUID™",
+      "photo": "partners/media/reference-detailing.webp"
+    },
+    "aerocore/bunker": {
+      "brand": "NEOSKIN™",
+      "title": "PROTEÇÃO PPF.|DETALHE A DETALHE.",
+      "subtitle": "BUNKER™",
+      "photo": "images/neoskin-catalog/bunker-150.webp"
+    },
+    "aerocore/apocalypse": {
+      "brand": "NEOSKIN™",
+      "title": "PROTEÇÃO INTENSA.|ESTÉTICA EM FOCO.",
+      "subtitle": "APOCALYPSE™",
+      "photo": "images/neoskin-catalog/apocalypse-190.webp"
+    },
+    "aerocore/about-us": {
+      "brand": "AEROCORE™",
+      "title": "ENGENHARIA.|VISÃO DE FUTURO.",
+      "subtitle": "CONHEÇA A MARCA",
+      "photo": "images/aerocore/aerocore-showroom.webp"
+    },
+    "aerocore/contato": {
+      "brand": "AEROCORE™",
+      "title": "FALE COM A MARCA.|DESCUBRA A SOLUÇÃO.",
+      "subtitle": "CONTATOS OFICIAIS",
+      "photo": "images/aerocore/aerocore-showroom.webp"
+    },
+    "aerocore/licenciamento": {
+      "brand": "AEROCORE™",
+      "title": "LICENCIAMENTO.|PERFORMANCE DE MARCA.",
+      "subtitle": "PARCERIAS",
+      "photo": "images/aerocore/aerocore-showroom.webp"
+    },
+    "aerocore/luxo": {
+      "brand": "AEROCORE™",
+      "title": "DESIGN EM MOVIMENTO.|PROTEÇÃO DISCRETA.",
+      "subtitle": "SEGMENTO PREMIUM",
+      "photo": "aerocore/public/porsche-911-highway-20261103-poster.webp"
+    },
+    "aerocore/marine": {
+      "brand": "AEROCORE™",
+      "title": "PROTEÇÃO TAMBÉM|É VISÃO DE PROJETO.",
+      "subtitle": "APLICAÇÕES MARINE",
+      "photo": "images/invisible-poster-3.webp"
+    },
+    "aerocore/aeronautica": {
+      "brand": "AEROCORE™",
+      "title": "ENGENHARIA PARA|NOVOS HORIZONTES.",
+      "subtitle": "APLICAÇÕES AERONÁUTICAS",
+      "photo": "images/aerocore/aerocore-showroom.webp"
+    },
+    "aerocore/motorsports": {
+      "brand": "AEROCORE™",
+      "title": "MOVIMENTO.|PERFORMANCE.",
+      "subtitle": "MOTORSPORTS",
+      "photo": "aerocore/public/porsche-911-highway-20261103-poster.webp"
+    },
+    "aerocore/supermaquinas": {
+      "brand": "AEROCORE™",
+      "title": "MÁQUINAS EXIGENTES.|PROTEÇÃO EM FOCO.",
+      "subtitle": "SUPER MÁQUINAS",
+      "photo": "aerocore/public/porsche-911-highway-20261103-poster.webp"
+    },
+    "aerocore/supermotos": {
+      "brand": "AEROCORE™",
+      "title": "SUA MOTO.|OUTRA PROTEÇÃO.",
+      "subtitle": "SUPER MOTOS",
+      "photo": "images/aerocore-catalog/banner-aerocore.webp"
+    },
+    "aerocore/policies": {
+      "brand": "AEROCORE™",
+      "title": "TRANSPARÊNCIA.|EM CADA DETALHE.",
+      "subtitle": "POLÍTICAS E INFORMAÇÕES",
+      "photo": "images/aerocore/aerocore-showroom.webp"
+    },
+    "winf-home": {
+      "brand": "WINF™",
+      "title": "ESCOLHA SUA LINHA.|CONHEÇA A WINF.",
+      "subtitle": "TECNOLOGIAS OFICIAIS",
+      "photo": "images/dualreflect-poster-1.webp"
+    }
+  }
+}
