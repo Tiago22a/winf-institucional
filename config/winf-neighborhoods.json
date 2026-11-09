@@ -1,5 +1,5 @@
 {
-  "lastReviewed": "2026-11-08",
+  "lastReviewed": "2026-11-09",
   "selectionNote": "Prioridade comercial exploratória: atributos de imóveis, densidade de edifícios e oportunidades de prospecção; não é classificação socioeconômica oficial nem garantia de serviço.",
   "territories": {
     "santos": {
@@ -145,6 +145,30 @@
         "https://planodiretor.campinagrande.pb.gov.br/wp-content/uploads/2024/05/DIAGNOSTICO-PARTICIPATIVO.pdf",
         "https://www.zapimoveis.com.br/guia-de-cidades/pb%2Bcampina-grande/",
         "https://dspace.bc.uepb.edu.br/jspui/bitstream/123456789/27024/1/%28TCCNV%29Vandrielyarquivo.docx%20-%20Documentos%20Google.pdf"
+      ]
+    },
+    "cuiaba": {
+      "priority": [
+        "Goiabeiras",
+        "Duque de Caxias",
+        "Santa Rosa",
+        "Jardim das Américas",
+        "Bosque da Saúde",
+        "Jardim Itália"
+      ],
+      "complementary": [
+        "Quilombo",
+        "Jardim Cuiabá",
+        "Morada dos Nobres",
+        "Jardim Europa",
+        "Centro Norte",
+        "Centro Sul"
+      ],
+      "secondaryContext": "Apartamentos, edifícios comerciais, condomínios e casas com superfícies envidraçadas em diferentes regiões de Cuiabá.",
+      "intro": "Em Cuiabá, o projeto de controle solar começa pela orientação da fachada, o tipo de vidro e a intensidade de luz percebida no ambiente. Os bairros destacados são regiões para consultas comerciais; cobertura técnica e agenda dependem de confirmação pela central WINF.",
+      "sourceUrls": [
+        "https://www.cuiaba.mt.gov.br/upload/arquivo/ComposicaodosBairrosdeCuiaba20132.pdf",
+        "https://gazetamunicipal.cuiaba.mt.gov.br/api/api/editions/viewPdf/11547"
       ]
     }
   }
