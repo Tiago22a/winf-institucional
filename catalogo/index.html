@@ -321,7 +321,13 @@ body.winf-catalog-page #catalogo-produtos .product-card:hover .card-img-inner{fi
 <script defer src="/js/winf-return.js?v=20261104-scroll-3"></script>
 <style>
 /* Catálogo WINF: famílias distintas e navegação para páginas de produtos. */
-.winf-catalog-nav{display:flex;flex-wrap:wrap;gap:16px;align-content:center;min-height:86px}
+.winf-catalog-nav{display:flex;flex-wrap:wrap;gap:14px;align-items:center;align-content:center;min-height:86px}
+.winf-catalog-identity{display:inline-flex;align-items:center;flex:0 0 auto;gap:13px;min-width:0;text-decoration:none;color:#fff}
+.winf-catalog-identity img{display:block;width:105px;height:auto;max-height:38px;object-fit:contain}
+.winf-catalog-identity .winf-catalog-signature{border-left:1px solid rgba(255,255,255,.38);padding-left:12px;font:700 9px/1.45 Inter,Arial,sans-serif;letter-spacing:.13em;max-width:120px}
+.winf-catalog-identity:hover .winf-catalog-signature{color:#e4e5e7}
+@media(max-width:780px){.winf-catalog-identity{gap:8px}.winf-catalog-identity img{width:82px}.winf-catalog-identity .winf-catalog-signature{font-size:8px;letter-spacing:.07em;max-width:94px;padding-left:8px}}
+@media(max-width:580px){.winf-catalog-nav{column-gap:9px!important;row-gap:5px!important;min-height:109px}.winf-catalog-nav .winf-catalog-tabs{order:5;width:100%}.winf-catalog-nav #catalog-home-link{flex-shrink:0;width:33px;height:33px}.winf-catalog-nav+.relative{padding-top:210px!important}.winf-catalog-identity img{width:78px}}
 .winf-catalog-tabs{display:flex;align-items:center;gap:3px;overflow-x:auto;max-width:100%;min-width:0;padding:4px;background:#121214e8;border:1px solid #ffffff26;scrollbar-width:thin}
 .winf-catalog-tabs button{flex:0 0 auto;padding:11px 13px;min-height:39px;color:#bdbfc4;font:750 10px/1.4 Inter,Arial,sans-serif;letter-spacing:.09em;white-space:nowrap;transition:background .25s,color .25s;cursor:pointer}
 .winf-catalog-tabs button[aria-selected="true"]{background:#eee;color:#121315}
@@ -370,6 +376,11 @@ body.winf-catalog-page #catalogo-produtos .product-card:hover .card-img-inner{fi
   <nav id="nav" class="winf-catalog-nav fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 py-6 bg-[#131314]/60 backdrop-blur-xl border-b border-[#444746] transition-colors duration-700">
     <a id="catalog-home-link" href="/" aria-label="Voltar ao site WINF" class="w-10 h-10 flex items-center justify-center border border-[#444746] hover:bg-white/10 transition-colors">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+    </a>
+
+    <a class="winf-catalog-identity" href="/" aria-label="WINF™ — Premium Quality Windowfilm, voltar ao site global">
+      <img src="/winf-logo.svg" width="105" height="36" alt="WINF™" decoding="async" />
+      <span class="winf-catalog-signature">PREMIUM QUALITY<br>WINDOWFILM</span>
     </a>
 
     <div class="winf-catalog-tabs" role="tablist" aria-label="Famílias do catálogo WINF">
