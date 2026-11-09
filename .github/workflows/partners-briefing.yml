@@ -35,4 +35,5 @@ jobs:
       - name: Validar scripts do Briefing
         run: |
           node --check briefing/briefing.js
+          node --check briefing/flagship-glow.js
           node --check partners/partners.js
