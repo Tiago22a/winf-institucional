@@ -13,6 +13,15 @@
   if (!current || document.getElementById('ws-product-contact')) return;
   const origin = new URLSearchParams(location.search).get('origem');
   const isSantos = origin === 'santos';
+  // Preserve the territorial sales journey when product details are opened from Santos.
+  if (isSantos) {
+    const home = document.querySelector('.ws-product-header .winf-home-brand');
+    if (home) { home.href='/pelicula-de-controle-solar-santos-sp/'; home.setAttribute('aria-label','Voltar ao site WINF Santos'); }
+    document.querySelectorAll('#menu-overlay .ws-menu-products a[href]').forEach(link=>{
+      if (/^\/(invisible|dual-reflect|blackpro|securityblind|miniblind-venetian)\/$/.test(link.pathname)) link.href=link.pathname+'?origem=santos';
+    });
+    document.querySelectorAll('#menu-overlay a[href="/catalogo/"]').forEach(link=>{link.href='/catalogo/?origem=santos&partner=5513981113001';});
+  }
   const productHref = 'https://winf.com.br' + route;
   const cityLabel = isSantos ? 'WINF Select Santos' : 'WINF Select Glass + Home™';
   const message = isSantos
