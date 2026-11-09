@@ -5,7 +5,8 @@
  */
 import { chromium } from 'playwright';
 import { mkdirSync, writeFileSync } from 'node:fs';
-const BASE = 'https://winf.com.br';
+const BASE = process.env.WINF_TEST_BASE || 'https://winf.com.br';
+const CANONICAL_BASE = 'https://winf.com.br';
 const cities = [
   ['santos','pelicula-de-controle-solar-santos-sp'],
   ['praia-grande','pelicula-de-controle-solar-praia-grande-sp'],
@@ -33,7 +34,7 @@ for(const mode of modes) {
       const response = await page.goto(url,{waitUntil:'domcontentloaded',timeout:45000});
       check.status = response?.status() ?? null;
       if(check.status!==200)check.errors.push('HTTP '+check.status);
-      await page.evaluate(()=>document.fonts?.ready).catch(()=>{});
+      await page.evaluate(()=>Promise.race([document.fonts?.ready, new Promise(resolve=>setTimeout(resolve,2500))])).catch(()=>{});
       await page.locator('#guias-aplicacoes').waitFor({state:'attached',timeout:15000});
       const a = await page.evaluate(()=>{
         const css=(selector)=>{const el=document.querySelector(selector);return el?getComputedStyle(el):null};
@@ -60,7 +61,7 @@ for(const mode of modes) {
       });
       check.metrics = a;
       if(a.h1Count!==1)check.errors.push('H1: '+a.h1Count);
-      if(a.canonical!==url)check.errors.push('Canonical incorreto');
+      if(a.canonical!==CANONICAL_BASE+'/'+path+'/')check.errors.push('Canonical incorreto');
       if(a.robots.toLowerCase().includes('noindex'))check.errors.push('Página noindex');
       if(a.guides!==4)check.errors.push('Guias: '+a.guides);
       if(a.intentCards!==4)check.errors.push('Cards de aplicações: '+a.intentCards);
@@ -74,7 +75,9 @@ for(const mode of modes) {
       if(!a.og)check.errors.push('Meta OG image ausente');
       else {
         try {
-          const ogRes = await ctx.request.get(a.og,{timeout:20000});
+          const previewImage = new URL(a.og);
+          const testOgUrl = BASE+previewImage.pathname;
+          const ogRes = await ctx.request.get(testOgUrl,{timeout:12000});
           check.ogStatus=ogRes.status();
           if(check.ogStatus!==200)check.errors.push('OG imagem HTTP '+check.ogStatus);
           else if(!(ogRes.headers()['content-type']||'').includes('image/'))check.warnings.push('OG sem content-type image/');
