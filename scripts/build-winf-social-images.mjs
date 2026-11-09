@@ -1,4 +1,5 @@
 /* WINF™ — capas OG 1200x630 com fotos internas e logomarca vetorial oficial.
+ * Social cards aprovados para as seis cidades e o catálogo global.
  * Imagens de arquitetura ilustrativas, não fotografias de obras executadas.
  */
 import {readFileSync,mkdirSync} from 'node:fs';
