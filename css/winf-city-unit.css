@@ -212,3 +212,14 @@ body.menu-open .santos-contact-dock,body:has(#menu-overlay[aria-hidden="false"])
 @media(max-width:1040px){.santos-architecture-grid .santos-product-actions{grid-template-columns:1fr}.santos-architecture-grid .santos-product-actions a{min-height:42px}}
 @media(max-width:600px){.santos-architecture-grid .santos-product-actions{grid-template-columns:minmax(0,1.45fr) minmax(0,1fr)}.santos-architecture-grid .santos-product-actions a{font-size:9px;padding:12px 5px}}
 @media(prefers-reduced-motion:reduce){.santos-architecture-grid .santos-product-actions a{transition:none}}
+
+/* Conversão Santos: contato direto prioritário, formulário como atalho opcional. */
+.santos-fast-contact{max-width:730px;margin:0 auto 26px;display:flex;flex-direction:column;align-items:center;gap:13px}
+.santos-fast-contact .santos-talk-now{display:flex;align-items:center;justify-content:center;gap:14px;width:min(100%,430px);min-height:55px;padding:13px 20px;background:#17894e;color:#fff;text-decoration:none;border:1px solid #37b46d;font:750 11px/1.4 Inter,Arial,sans-serif;letter-spacing:.07em;transition:background .2s}
+.santos-fast-contact .santos-talk-now:hover{background:#1e9c5b}
+.santos-fast-contact>span{font:650 10px/1.4 "JetBrains Mono",monospace;letter-spacing:.12em;color:#aaaeb2}
+.santos-quote-form .santos-quote-message-label{grid-column:1/-1}
+.santos-quote-form textarea{width:100%;max-width:100%;min-height:115px;resize:vertical;padding:16px;color:#fff;border:1px solid #ffffff45;background:#1d1e22;font:400 14px/1.55 Inter,Arial,sans-serif;letter-spacing:normal;border-radius:0}
+.santos-quote-form textarea:focus-visible{outline:2px solid white;outline-offset:2px}
+.santos-product-card{cursor:pointer}
+@media(prefers-reduced-motion:reduce){.santos-fast-contact .santos-talk-now{transition:none}}
