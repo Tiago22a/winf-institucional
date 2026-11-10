@@ -32,7 +32,7 @@ test('fotografia número 1 foi dividida em 12 quadrados independentes sem mostra
  assert.ok(fs.existsSync(path.join(root,'images/shop/blackshop (45).webp')));
  assert.doesNotMatch(html,/src="\/images\/shop\/blackshop%20\(45\)\.webp"/);
  const css=read('css/winf-ghost-shop.css');
- assert.match(css,/background-size:400% 320%/);
+ assert.match(css,/background-size:var\(--gs-width-scale\) var\(--gs-height-scale\)/);
  for(let x=0;x<4;x++)for(let y=0;y<3;y++)assert.ok(coords.includes(x+','+y),"Tile "+x+","+y);
 });
 test('catálogo oficial WINF inclui boutique como seção sem misturar o grid técnico',()=>{
