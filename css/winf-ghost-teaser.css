@@ -18,3 +18,12 @@
 .winf-ghost-teaser-visual strong{font:300 clamp(30px,4vw,50px)/1.1 Gustavo,Inter,sans-serif;letter-spacing:-.055em;margin-top:12px;color:#fff;position:relative}
 .winf-ghost-teaser-visual em{font:500 11px/1.5 Inter,sans-serif;color:#b6b9c0;margin-top:15px;font-style:normal;position:relative}
 @media(max-width:720px){.winf-ghost-teaser-inner{grid-template-columns:1fr}.winf-ghost-teaser-visual{min-height:245px}.winf-ghost-teaser-visual img{width:110px}}
+
+/* Card da degustação pública GHOST SHOP™ — reutiliza fotos existentes da marca */
+.winf-ghost-teaser .gs-preview-visual{position:relative;display:block;overflow:hidden;min-height:315px;align-self:stretch;background:#dfdfdf;border:1px solid #ffffff35;text-decoration:none}
+.winf-ghost-teaser .gs-preview-visual img{display:block;width:100%;height:100%;min-height:315px;object-fit:cover;object-position:center;filter:contrast(1.03);transition:transform .35s}
+.winf-ghost-teaser .gs-preview-visual:hover img,.winf-ghost-teaser .gs-preview-visual:focus-visible img{transform:scale(1.03)}
+.winf-ghost-teaser .gs-preview-visual>span{position:absolute;inset:auto 0 0;background:linear-gradient(to top,#090909eb,#09090900);display:flex;align-items:flex-end;justify-content:space-between;gap:14px;padding:50px 22px 20px;font:600 12px/1.5 Inter,sans-serif;letter-spacing:.08em;color:#fff}
+.winf-ghost-teaser .gs-preview-visual>span strong{font:700 9px/1.5 Inter,sans-serif;letter-spacing:.09em}
+@media(max-width:720px){.winf-ghost-teaser .gs-preview-visual{min-height:230px}.winf-ghost-teaser .gs-preview-visual img{min-height:230px}}
+@media(prefers-reduced-motion:reduce){.winf-ghost-teaser .gs-preview-visual img{transition:none}.winf-ghost-teaser .gs-preview-visual:hover img{transform:none}}
