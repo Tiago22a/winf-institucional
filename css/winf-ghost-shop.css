@@ -89,22 +89,26 @@ body.ghost-shop-page{margin:0;background:var(--ghost-bg);color:var(--ghost-text)
 @media(prefers-reduced-motion:reduce){.gs-product,.gs-product-visual img,.gs-filter{transition:none}.gs-product:hover,.gs-product:focus-visible,.gs-product:hover img,.gs-product:focus-visible img{transform:none}}
 
 
-/* GHOST SHOP™ / Fotografia 01: separação editorial real da prancha 4 x 3.
-   Todas as fatias são vistas individuais da imagem original, sem inventar fotos
-   ou ampliar a própria marca. Os recortes preservam as proporções dos cards. */
+/* GHOST SHOP™ / Fotografia original 1536×1024 — 12 recortes individuais.
+   Os limites acompanham as divisórias reais da prancha (não um grid estimado). */
 .gs-mosaic-crop{
   aspect-ratio:1/1;
   background-image:url("/images/shop/blackshop%20(45).webp");
   background-repeat:no-repeat;
-  background-size:400% 320%;
   background-color:#e7e7e7;
+  background-size:var(--gs-width-scale) var(--gs-height-scale);
+  background-position:var(--gs-x-position) var(--gs-y-position);
 }
-.gs-mosaic-crop--c0-r0,.gs-mosaic-crop--c0-r1,.gs-mosaic-crop--c0-r2{background-position-x:0%}
-.gs-mosaic-crop--c1-r0,.gs-mosaic-crop--c1-r1,.gs-mosaic-crop--c1-r2{background-position-x:33.33333%}
-.gs-mosaic-crop--c2-r0,.gs-mosaic-crop--c2-r1,.gs-mosaic-crop--c2-r2{background-position-x:66.66667%}
-.gs-mosaic-crop--c3-r0,.gs-mosaic-crop--c3-r1,.gs-mosaic-crop--c3-r2{background-position-x:100%}
-.gs-mosaic-crop--c0-r0,.gs-mosaic-crop--c1-r0,.gs-mosaic-crop--c2-r0,.gs-mosaic-crop--c3-r0{background-position-y:0%}
-.gs-mosaic-crop--c0-r1,.gs-mosaic-crop--c1-r1,.gs-mosaic-crop--c2-r1,.gs-mosaic-crop--c3-r1{background-position-y:55%}
-.gs-mosaic-crop--c0-r2,.gs-mosaic-crop--c1-r2,.gs-mosaic-crop--c2-r2,.gs-mosaic-crop--c3-r2{background-position-y:100%}
+/* Larguras reais por coluna/linha (px na prancha 1536×1024). */
+.gs-mosaic-crop--c0-r0,.gs-mosaic-crop--c0-r1,.gs-mosaic-crop--c0-r2{--gs-width-scale:365.7%;--gs-x-position:0%}
+.gs-mosaic-crop--c1-r0{--gs-width-scale:369.2%;--gs-x-position:37.5%}
+.gs-mosaic-crop--c2-r0{--gs-width-scale:453.1%;--gs-x-position:69.84%}
+.gs-mosaic-crop--c1-r1,.gs-mosaic-crop--c1-r2{--gs-width-scale:412.9%;--gs-x-position:36.08%}
+.gs-mosaic-crop--c2-r1,.gs-mosaic-crop--c2-r2{--gs-width-scale:401%;--gs-x-position:68.69%}
+.gs-mosaic-crop--c3-r0,.gs-mosaic-crop--c3-r1,.gs-mosaic-crop--c3-r2{--gs-width-scale:425.5%;--gs-x-position:100%}
+/* Cada fileira tem altura distinta na foto; ajustar evita vazamento entre itens. */
+.gs-mosaic-crop--c0-r0,.gs-mosaic-crop--c1-r0,.gs-mosaic-crop--c2-r0,.gs-mosaic-crop--c3-r0{--gs-height-scale:263.9%;--gs-y-position:0%}
+.gs-mosaic-crop--c0-r1,.gs-mosaic-crop--c1-r1,.gs-mosaic-crop--c2-r1,.gs-mosaic-crop--c3-r1{--gs-height-scale:321%;--gs-y-position:55.04%}
+.gs-mosaic-crop--c0-r2,.gs-mosaic-crop--c1-r2,.gs-mosaic-crop--c2-r2,.gs-mosaic-crop--c3-r2{--gs-height-scale:323%;--gs-y-position:100%}
 .gs-product--slice .gs-product-number{background:rgba(7,8,9,.9)}
 .gs-product--slice:focus-visible{outline:2px solid #e3e5e7;outline-offset:3px}
