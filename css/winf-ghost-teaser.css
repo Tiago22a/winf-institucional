@@ -18,3 +18,9 @@
 .winf-ghost-teaser-visual strong{font:300 clamp(30px,4vw,50px)/1.1 Gustavo,Inter,sans-serif;letter-spacing:-.055em;margin-top:12px;color:#fff;position:relative}
 .winf-ghost-teaser-visual em{font:500 11px/1.5 Inter,sans-serif;color:#b6b9c0;margin-top:15px;font-style:normal;position:relative}
 @media(max-width:720px){.winf-ghost-teaser-inner{grid-template-columns:1fr}.winf-ghost-teaser-visual{min-height:245px}.winf-ghost-teaser-visual img{width:110px}}
+
+/* Boutique teaser with actual editorial photography already hosted on WINF. */
+a.winf-ghost-teaser-visual{text-decoration:none;color:#fff;background:linear-gradient(0deg,#030405ef 0%,#05060765 55%,#00000024),url("/images/aerocore/aerocore-packaging.webp") center / cover no-repeat}
+a.winf-ghost-teaser-visual:hover{border-color:#ffffffa0}
+a.winf-ghost-teaser-visual:focus-visible{outline:2px solid #93bee9;outline-offset:3px}
+a.winf-ghost-teaser-visual small,a.winf-ghost-teaser-visual strong,a.winf-ghost-teaser-visual em{text-shadow:0 2px 18px #000}
