@@ -62,3 +62,23 @@ body:has(dialog[open]) #winf-quick-contact{display:none!important}
  #winf-quick-contact .wqc-label{font-size:8px}
  #winf-quick-contact .wqc-panel{bottom:77px}
 }
+
+/* Padrão definitivo WINF: manter um único par de controles fixos.
+   Proteção durante transição de cache de HTML/CSS antigo. */
+html.winf-quick-dock-active #winf-global-dock,
+html.winf-quick-dock-active .winf-global-floating-dock {display:none!important}
+#winf-quick-contact{
+  right:max(16px,env(safe-area-inset-right,0px));
+  bottom:calc(20px + env(safe-area-inset-bottom,0px) + var(--winf-qc-cookie-offset,0px));
+}
+#winf-quick-contact .wqc-launchers{display:flex;gap:14px;align-items:flex-end;justify-content:flex-end}
+#winf-quick-contact .wqc-item{min-width:66px;max-width:78px;gap:5px;flex:0 0 auto}
+#winf-quick-contact .wqc-circle{width:58px;height:58px}
+#winf-quick-contact .wqc-label{font:700 9px/1.2 Inter,Arial,sans-serif;letter-spacing:.05em;white-space:nowrap}
+@media(max-width:580px){
+  #winf-quick-contact{right:max(12px,env(safe-area-inset-right,0px));bottom:calc(17px + env(safe-area-inset-bottom,0px) + var(--winf-qc-cookie-offset,0px))}
+  #winf-quick-contact .wqc-launchers{gap:12px}
+  #winf-quick-contact .wqc-item{min-width:55px;max-width:65px;gap:5px}
+  #winf-quick-contact .wqc-circle{width:52px;height:52px}
+  #winf-quick-contact .wqc-label{font-size:8px;letter-spacing:.025em}
+}

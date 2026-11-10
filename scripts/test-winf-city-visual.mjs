@@ -122,6 +122,23 @@ for(const mode of modes) {
       if(!card.links.some(x=>x.href?.includes('wa.me/5513981113001?text=')))homeCheck.errors.push(card.id+' sem WhatsApp central');
       if(!card.links.some(x=>x.href?.includes('instagram.com/')))homeCheck.errors.push(card.id+' sem Instagram');
     }
+    const dockState=await page.evaluate(()=>{
+      const controls=document.getElementById('winf-quick-contact');
+      const items=controls?[...controls.querySelectorAll('.wqc-launchers .wqc-circle')]:[];
+      const wa=controls?.querySelector('.wqc-whatsapp');
+      return {totalQuick:document.querySelectorAll('#winf-quick-contact').length,
+        legacy:document.querySelectorAll('#winf-global-dock,.winf-global-floating-dock').length,
+        count:items.length,
+        whatsapp:wa?.getAttribute('href')||null,
+        widths:items.map(x=>x.getBoundingClientRect().width),
+        inViewport:items.every(x=>{const r=x.getBoundingClientRect();return r.left>=0&&r.right<=innerWidth&&r.top>=0&&r.bottom<=innerHeight;}),
+        labelsVisible:controls?[...controls.querySelectorAll('.wqc-label')].every(el=>{const r=el.getBoundingClientRect();return r.left>=0&&r.right<=innerWidth;}):false};
+    });
+    homeCheck.metrics.dock=dockState;
+    if(dockState.totalQuick!==1||dockState.legacy!==0)homeCheck.errors.push('Dock fixo duplicado ou ausente');
+    if(dockState.count!==2)homeCheck.errors.push('Esperado fantasma e WhatsApp únicos');
+    if(!dockState.whatsapp?.includes('wa.me/5513981113001'))homeCheck.errors.push('WhatsApp não usa a central');
+    if(!dockState.inViewport||!dockState.labelsVisible)homeCheck.errors.push('Dock/rótulos extrapolam viewport');
     const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);
     if(overflow>32)homeCheck.warnings.push('Overflow horizontal '+overflow+'px');
     const section=page.locator('#unidades-ativas');

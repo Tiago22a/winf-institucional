@@ -49,7 +49,7 @@
     if (document.querySelector('link[href^="/css/winf-quick-contact.css"]')) return;
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = '/css/winf-quick-contact.css?v=20261108-unified-2';
+    link.href = '/css/winf-quick-contact.css?v=20261110-single-dock';
     document.head.appendChild(link);
   }
   function addLink(label,href) {
@@ -66,6 +66,8 @@
 
   function init() {
     if (document.getElementById('winf-quick-contact') || !document.body) return;
+    // Eliminar o dock legado quando HTML previamente em cache ainda estiver disponível.
+    document.getElementById('winf-global-dock')?.remove();
     addStyle();
     const dock = document.createElement('aside');
     dock.id='winf-quick-contact';
@@ -77,6 +79,20 @@
       + '</div>';
     document.body.appendChild(dock);
     document.documentElement.classList.add('winf-quick-dock-active');
+    // O aviso de cookies nunca deve ficar atrás dos atalhos.
+    const cookieBanner = document.getElementById('cookie-banner');
+    if (cookieBanner) {
+      const updateCookieOffset = () => {
+        const cs = getComputedStyle(cookieBanner);
+        const rect = cookieBanner.getBoundingClientRect();
+        const visible = !cookieBanner.hidden && cs.display !== 'none' && cs.visibility !== 'hidden' && rect.height > 0;
+        dock.style.setProperty('--winf-qc-cookie-offset', visible ? Math.ceil(rect.height + 10) + 'px' : '0px');
+      };
+      updateCookieOffset();
+      new MutationObserver(updateCookieOffset).observe(cookieBanner,{attributes:true,attributeFilter:['class','style','hidden','aria-hidden']});
+      if ('ResizeObserver' in window) new ResizeObserver(updateCookieOffset).observe(cookieBanner);
+      window.addEventListener('resize',updateCookieOffset,{passive:true});
+    }
     const panel=dock.querySelector('#wqc-panel'),options=dock.querySelector('#wqc-options');
     const title=dock.querySelector('#wqc-panel-title'),description=dock.querySelector('#wqc-panel-desc'),note=dock.querySelector('#wqc-note');
     const triggers=[...dock.querySelectorAll('button[data-wqc]')];
