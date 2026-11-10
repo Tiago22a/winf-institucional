@@ -1,0 +1,24 @@
+name: WINF Partners — Consistência do benefício Asset Light
+on:
+  push:
+    branches:
+      - feature/asset-light-beneficio-inicial-45m-winfcoin-20261110
+  pull_request:
+    paths:
+      - 'briefing/index.html'
+      - 'briefing/asset-light/index.html'
+      - 'partners/index.html'
+      - 'tests/asset-light-benefit.test.mjs'
+      - '.github/workflows/asset-light-benefit.yml'
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Testar consistência comercial
+        run: node --test tests/asset-light-benefit.test.mjs

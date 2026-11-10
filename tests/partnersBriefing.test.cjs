@@ -86,7 +86,8 @@ test('mosaicos mostram imagens independentes P, M e G do Quiosque e demais model
 test('as tres paginas individuais tem FAQs e compartilhamento configurados', () => {
   for (const model of ['asset-light','quiosque','flagship']) {
     const h = read('briefing/'+model+'/index.html');
-    assert.equal((h.match(/class="model-faq-item"/g)||[]).length, 3, model);
+    assert.equal((h.match(/class="model-faq-item"/g)||[]).length, model==="asset-light"?4:3, model);
+    if(model==="asset-light")assert.match(h,/WINFCOIN™/);
     assert.match(h, /property="og:image"/, model);
     assert.match(h, /application\/ld\+json/, model);
     assert.ok(h.includes('href="#avaliar"'), model);
