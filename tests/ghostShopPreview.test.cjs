@@ -9,7 +9,7 @@ const html=read('ghost-shop/index.html');
 const css=read('css/winf-ghost-shop.css');
 const login='https://painel-os.winf.com.br/login/';
 test('GHOST SHOP™ inclui 23 conceitos, sem preço ou checkout fictício',()=>{
- const cards=[...html.matchAll(/class="gs-product" data-category="[^"]+" href="([^"]+)"/g)];
+ const cards=[...html.matchAll(/class="gs-product(?: gs-product--slice)?" data-category="[^"]+" href="([^"]+)"/g)];
  assert.equal(cards.length,23);
  for(const item of cards)assert.equal(item[1],login);
  assert.match(html,/VITRINE CONCEITUAL/);
