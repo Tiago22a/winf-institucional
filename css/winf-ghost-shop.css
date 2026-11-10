@@ -51,6 +51,32 @@ body.ghost-shop-page{margin:0;background:var(--ghost-bg);color:var(--ghost-text)
 @media(prefers-reduced-motion:reduce){.gs-card{transition:none;transform:none!important}}
 
 /* GHOST SHOP™ | Conceitos de coleção. Sem preços, carrinho ou checkout público. */
+
+/* GHOST SHOP 2026 — menu em botões editoriais e ghost ao fundo, sem distorção. */
+.gs-header{gap:clamp(18px,3vw,32px)}
+.gs-nav{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px}
+.gs-nav a{display:inline-flex;align-items:center;justify-content:center;text-align:center;min-height:40px;padding:9px 12px;border:1px solid #ffffff48;border-radius:3px;background:#ffffff08;font:700 10px/1.35 Inter,Arial,sans-serif;letter-spacing:.05em;color:#f6f6f7;text-decoration:none;transition:background .2s,border-color .2s}
+.gs-nav a:hover,.gs-nav a:focus-visible{background:#ffffff1c;border-color:#ffffffb9;text-decoration:none}
+.gs-nav a:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.gs-hero-body>:not(.gs-ghost){position:relative;z-index:1}
+.gs-ghost{width:min(34vw,365px);height:auto;max-width:none;aspect-ratio:784/1043;object-fit:contain;right:3%;top:15%;opacity:.095;filter:grayscale(1);transform:rotate(-4deg);z-index:0}
+@media(max-width:850px){
+  .gs-header{align-items:flex-start}
+  .gs-nav{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+  .gs-nav a{min-width:0;min-height:44px;padding:11px 8px;font-size:11px;letter-spacing:.045em}
+  .gs-ghost{width:min(46vw,285px);height:auto;right:0;top:15%;opacity:.09}
+}
+@media(max-width:580px){
+  .gs-header{gap:18px;padding:20px 0}
+  .gs-nav{gap:8px}
+  .gs-nav a{min-height:44px;padding:11px 7px;font-size:10px;line-height:1.3;letter-spacing:.025em}
+  .gs-ghost{width:clamp(175px,48vw,240px);height:auto;right:-3%;top:17%;opacity:.085;transform:rotate(-4deg)}
+}
+@media(max-width:350px){
+  .gs-nav a{font-size:9px;letter-spacing:0}
+}
+@media(prefers-reduced-motion:reduce){.gs-nav a{transition:none}}
+
 .gs-showcase{background:#0a0a0b;padding:clamp(58px,7vw,108px) 0}
 .gs-showcase h2 span{color:#888a8e}
 .gs-collection-head{display:grid;grid-template-columns:1.2fr .8fr;gap:36px;align-items:end}
