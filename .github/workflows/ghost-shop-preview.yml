@@ -1,0 +1,30 @@
+name: GHOST SHOP™ Preview
+on:
+  pull_request:
+    paths:
+      - 'ghost-shop/**'
+      - 'images/shop/**'
+      - 'css/winf-ghost-shop.css'
+      - 'css/winf-ghost-teaser.css'
+      - 'js/winf-footer.js'
+      - 'index.html'
+      - 'aerocore/index.html'
+      - 'aerocore/neoskin/index.html'
+      - 'aerocore/ceramic-armoring/index.html'
+      - 'aerocore/winf-select/index.html'
+      - 'partners/index.html'
+      - 'tests/ghostShopPreview.test.cjs'
+      - '.github/workflows/ghost-shop-preview.yml'
+  push:
+    branches:
+      - feature/ghost-shop-members-preview-20261109
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify concept boutique navigation
+        run: node --test tests/ghostShopPreview.test.cjs
