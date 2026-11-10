@@ -180,7 +180,7 @@ for(const mode of modes) {
         navDisplay:getComputedStyle(nav).display,
         navRects,
         ghost:{naturalWidth:ghost?.naturalWidth,naturalHeight:ghost?.naturalHeight,
-          displayedRatio:rect?.width/rect?.height,
+          displayedRatio:ghost?.offsetWidth/ghost?.offsetHeight,
           nativeRatio:ghost?.naturalWidth/ghost?.naturalHeight,
           opacity:parseFloat(getComputedStyle(ghost).opacity)},
         documentOverflow:document.documentElement.scrollWidth-document.documentElement.clientWidth
