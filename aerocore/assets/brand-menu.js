@@ -5,6 +5,22 @@
  const header = document.getElementById('brand-header');
  if (!layer || !trigger || !header) return;
  const panel = layer.querySelector('.brand-menu-panel');
+ // Link comum para AeroCore™, NeoSkin™ e Ceramic Armoring™, sem duplicar menus.
+ const sections = panel.querySelectorAll('.brand-menu-section');
+ const collectionNav = sections.length > 1 ? sections[1] : sections[0];
+ if (collectionNav && !panel.querySelector('a[href="/ghost-shop/"]')) {
+   const link = document.createElement('a');
+   link.href = '/ghost-shop/';
+   link.className = 'brand-menu-line';
+   const label = document.createElement('span');
+   label.textContent = 'GHOST SHOP™ — Boutique';
+   const arrow = document.createElement('span');
+   arrow.textContent = '↗';
+   arrow.setAttribute('aria-hidden', 'true');
+   link.append(label, arrow);
+   collectionNav.appendChild(link);
+ }
+
  let previousFocus;
  function setOpen(open) {
    if (open) previousFocus = document.activeElement;
