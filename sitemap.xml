@@ -17,6 +17,14 @@
         <priority>0.8</priority>
     </url>
 
+    <!-- GHOST SHOP™ / Vitrine de coleções -->
+    <url>
+        <loc>https://winf.com.br/ghost-shop/</loc>
+        <lastmod>2026-11-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
     <!-- AEROCORE -->
     <url>
         <loc>https://winf.com.br/aerocore/</loc>
