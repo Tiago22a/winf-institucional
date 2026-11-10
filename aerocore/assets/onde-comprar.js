@@ -21,7 +21,7 @@
   let mode = 'ativas';
   const names = { automotivo: 'Automotivo', residencial: 'Residencial', ambos: 'Automotivo + residencial' };
   const normalize = value => String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
-  const eligible = city => mode === 'ativas' ? (city.status === 'ativa' || city.status === 'pre_ativacao') : city.status === 'nao_ativa' && city.disponivelParaAtivacao === true;
+  const eligible = city => mode === 'ativas' ? city.siteAtivo === true : city.status === 'nao_ativa' && city.siteAtivo !== true && city.disponivelParaAtivacao === true;
   function safeUrl(value) {
     if (!value) return null;
     try {
@@ -50,18 +50,16 @@
         const card = template.content.cloneNode(true);
         card.querySelector('article').dataset.status = city.status;
         card.querySelector('.directory-card-state').textContent = city.referencia || city.uf || '';
-        card.querySelector('.directory-card-status').textContent = city.status === 'pre_ativacao' ? '◌ Pré-ativação' : city.status === 'ativa' ? '● Ativa' : mode === 'territorios' ? 'Ativação disponível' : 'Não ativa';
+        card.querySelector('.directory-card-status').textContent = city.siteAtivo ? '● Site ativo' : mode === 'territorios' ? 'Ativação disponível' : 'Não ativa';
         card.querySelector('.directory-card-city').textContent = city.cidade + (city.uf ? ' — ' + city.uf : '');
-        card.querySelector('.directory-card-segment').textContent = city.status === 'pre_ativacao' ? 'Página local publicada; operação sob consulta' : city.status === 'ativa' ? (names[city.tipoAtendimento] || 'Atendimento sob consulta') : 'Disponibilidade para ativação sob consulta';
+        card.querySelector('.directory-card-segment').textContent = city.siteAtivo ? (names[city.tipoAtendimento] || 'Atendimento sob consulta') : 'Disponibilidade para ativação sob consulta';
         const tags = city.tipoAtendimento === 'ambos' ? ['Automotivo', 'Residencial'] : [names[city.tipoAtendimento]].filter(Boolean);
         tags.forEach(text => { const tag = document.createElement('span'); tag.textContent = text; card.querySelector('.directory-card-tags').append(tag); });
         const links = card.querySelector('.directory-card-links');
-        if (city.status === 'ativa' || city.status === 'pre_ativacao') {
-          addLink(links, city.status === 'pre_ativacao' ? 'Conhecer página local ↗' : 'Site da unidade ↗', city.url);
+        if (city.siteAtivo === true) {
+          addLink(links, 'Site da unidade ↗', city.url);
           const whatsapp = /^55\d{10,11}$/.test(String(city.numero || '')) ? city.numero : '5513981113001';
-          const text = city.status === 'pre_ativacao'
-            ? 'Olá! Vim da WINF e gostaria de consultar a pré-ativação em ' + city.cidade + '/' + city.uf + '.'
-            : 'Olá! Vim da página de unidades WINF e gostaria de atendimento em ' + city.cidade + '/' + city.uf + '.';
+          const text = 'Olá! Vim da página WINF e gostaria de consultar atendimento em ' + city.cidade + '/' + city.uf + '.';
           addLink(links, 'WhatsApp ↗', 'https://wa.me/' + whatsapp + '?text=' + encodeURIComponent(text));
           addLink(links, city.instagram ? 'Instagram da unidade ↗' : 'Instagram WINF global ↗', city.instagram || 'https://www.instagram.com/winf.ofc/');
         } else {
