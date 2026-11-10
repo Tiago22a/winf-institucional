@@ -1,0 +1,22 @@
+name: WINF Catálogo — título e CTA
+on:
+  push:
+    branches:
+      - fix/catalogo-hero-cta-typography-20261110
+  pull_request:
+    paths:
+      - 'catalogo/index.html'
+      - 'tests/catalogo-hero.test.cjs'
+      - '.github/workflows/catalogo-hero.yml'
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Checar título, CTA e interações preservadas
+        run: node --test tests/catalogo-hero.test.cjs
