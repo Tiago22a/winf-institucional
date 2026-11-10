@@ -27,6 +27,21 @@
       locator.textContent = 'LOCATOR — UNIDADES ATIVAS';
       nav.appendChild(locator);
     }
+    // GHOST SHOP™: um único acesso público à vitrine nas páginas que usam o rodapé compartilhado.
+    footer.querySelectorAll('.whr-pending').forEach(function (placeholder) {
+      if (!/GHOST SHOP/i.test(placeholder.textContent || '')) return;
+      var link = document.createElement('a');
+      link.href = '/ghost-shop/';
+      link.textContent = 'GHOST SHOP™ / VITRINE DE MEMBROS ↗';
+      placeholder.replaceWith(link);
+    });
+    var shopNav = footer.querySelector('.wf-ref-primary') || footer.querySelector('.whr-columns .whr-column:last-child');
+    if (shopNav && !shopNav.querySelector('a[href="/ghost-shop/"]')) {
+      var shop = document.createElement('a');
+      shop.href = '/ghost-shop/';
+      shop.textContent = 'GHOST SHOP™ / VITRINE ↗';
+      shopNav.appendChild(shop);
+    }
     footer.querySelectorAll('a[href*="instagram.com/maw.winf/"]').forEach(function (link) {
       link.href = 'https://www.instagram.com/maw.partners/';
       link.title = 'M.A.W.™ — Marketing Advanced Windowfilm';
