@@ -27,6 +27,22 @@
       locator.textContent = 'LOCATOR — UNIDADES ATIVAS';
       nav.appendChild(locator);
     }
+    // Vitrine pública acessível no ecossistema; pedidos internos continuam no WINF OS.
+    if (nav && !nav.querySelector('a[href="/ghost-shop/"]')) {
+      var ghostShop = document.createElement('a');
+      ghostShop.href = '/ghost-shop/';
+      ghostShop.textContent = 'GHOST SHOP™ / COLEÇÕES';
+      ghostShop.setAttribute('data-winf-ghost-shop', 'true');
+      nav.appendChild(ghostShop);
+    }
+    footer.querySelectorAll('.whr-pending').forEach(function (pending) {
+      if (!/GHOST SHOP/i.test(pending.textContent || '')) return;
+      var shopLink = document.createElement('a');
+      shopLink.href = '/ghost-shop/';
+      shopLink.textContent = 'GHOST SHOP™ / VITRINE ↗';
+      shopLink.setAttribute('data-winf-ghost-shop', 'true');
+      pending.replaceWith(shopLink);
+    });
     footer.querySelectorAll('a[href*="instagram.com/maw.winf/"]').forEach(function (link) {
       link.href = 'https://www.instagram.com/maw.partners/';
       link.title = 'M.A.W.™ — Marketing Advanced Windowfilm';
