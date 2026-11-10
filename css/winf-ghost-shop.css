@@ -87,3 +87,6 @@ body.ghost-shop-page{margin:0;background:var(--ghost-bg);color:var(--ghost-text)
 @media(max-width:680px){.gs-collection-head,.gs-member-banner{grid-template-columns:1fr}.gs-collection-head{gap:10px}.gs-member-actions{align-items:stretch}.gs-product-grid{gap:11px}.gs-product-meta{padding:15px 12px;min-height:144px}.gs-product-meta strong{font-size:16px}.gs-product-cta{font-size:9px}.gs-filters{gap:6px}.gs-filter{font-size:9px;padding:9px 11px}}
 @media(max-width:410px){.gs-product-grid{grid-template-columns:1fr}.gs-product-visual{aspect-ratio:1/.85}}
 @media(prefers-reduced-motion:reduce){.gs-product,.gs-product-visual img,.gs-filter{transition:none}.gs-product:hover,.gs-product:focus-visible,.gs-product:hover img,.gs-product:focus-visible img{transform:none}}
+
+/* Convite secundário para visitantes ainda não credenciados no WINF OS™. */
+.gs-join-note{font:400 12px/1.6 Inter,Arial,sans-serif;color:#b2b8bb;margin:16px 0 0;letter-spacing:.01em}.gs-join-note a{color:#f7f7f7;text-decoration:underline;text-decoration-color:#8e9497;text-underline-offset:4px}.gs-join-note a:hover,.gs-join-note a:focus-visible{text-decoration-color:#fff}
