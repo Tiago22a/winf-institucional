@@ -1,9 +1,10 @@
 /**
  * Cadastro de 100 territórios WINF — relação informada pelo responsável da rede.
- * Cinco unidades estão ativas, incluindo Pilar do Sul como extra; Campina Grande em pré-ativação.
+ * Sete páginas regionais publicadas; status operacional é tratado separadamente.
  * As demais estão não ativas; esse status não confirma disponibilidade territorial.
  *
- * status: "ativa" | "pre_ativacao" | "nao_ativa".
+ * status: "ativa" | "pre_ativacao" | "nao_ativa" (situação operacional).
+ * siteAtivo: true indica página publicada, não disponibilidade de instalador.
  * tipoAtendimento: "automotivo" | "residencial" | "ambos" | null (a confirmar).
  * numero: WhatsApp local, país e DDD, somente dígitos; null se não informado.
  * url / instagram: endereços oficiais locais; null se não informados.
@@ -40,6 +41,7 @@ globalThis.WINF_CIDADES = [
     "cidade": "Santos",
     "uf": "SP",
     "status": "ativa",
+    "siteAtivo": true,
     "tipoAtendimento": "residencial",
     "numero": "5513981113001",
     "url": "/pelicula-de-controle-solar-santos-sp/",
@@ -55,6 +57,7 @@ globalThis.WINF_CIDADES = [
     "cidade": "Sorocaba",
     "uf": "SP",
     "status": "ativa",
+    "siteAtivo": true,
     "tipoAtendimento": "residencial",
     "numero": "5513981113001",
     "url": "/insulfilm-residencial-sorocaba-sp/",
@@ -70,6 +73,7 @@ globalThis.WINF_CIDADES = [
     "cidade": "Campina Grande",
     "uf": "PB",
     "status": "pre_ativacao",
+    "siteAtivo": true,
     "tipoAtendimento": null,
     "numero": "5513981113001",
     "url": "/pelicula-de-controle-solar-campina-grande-pb/",
@@ -460,6 +464,7 @@ globalThis.WINF_CIDADES = [
     "cidade": "Guarujá",
     "uf": "SP",
     "status": "ativa",
+    "siteAtivo": true,
     "tipoAtendimento": null,
     "numero": "5513981113001",
     "url": "/pelicula-de-controle-solar-guaruja-sp/",
@@ -475,6 +480,7 @@ globalThis.WINF_CIDADES = [
     "cidade": "Praia Grande",
     "uf": "SP",
     "status": "ativa",
+    "siteAtivo": true,
     "tipoAtendimento": null,
     "numero": "5513981113001",
     "url": "/pelicula-de-controle-solar-praia-grande-sp/",
@@ -954,11 +960,12 @@ globalThis.WINF_CIDADES = [
     "cidade": "Cuiabá",
     "uf": "MT",
     "status": "nao_ativa",
+    "siteAtivo": true,
     "tipoAtendimento": null,
-    "numero": null,
-    "url": null,
+    "numero": "5513981113001",
+    "url": "/pelicula-de-controle-solar-cuiaba-mt/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select Cuiabá ativa, atendimento pela central WINF; instalação e cobertura sob consulta, sem loja física anunciada.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -1543,6 +1550,7 @@ globalThis.WINF_UNIDADES_EXTRAS = [
     "cidade": "Pilar do Sul",
     "uf": "SP",
     "status": "ativa",
+    "siteAtivo": true,
     "tipoAtendimento": null,
     "numero": "5513981113001",
     "url": "/pelicula-de-controle-solar-pilar-do-sul-sp/",
