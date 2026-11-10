@@ -6,12 +6,11 @@ const read=path=>readFileSync(path,'utf8');
 const doc=read('index.html');
 const source=read('js/cidades.js');
 const root={};vm.runInNewContext(source,{globalThis:root});
-const rows=[...root.WINF_CIDADES,...root.WINF_UNIDADES_EXTRAS].filter(c=>c.status==='ativa');
-assert.equal(rows.length,5,'Exatamente 5 unidades operacionais, Pilar extra incluído');
-const pending=root.WINF_CIDADES.filter(c=>c.status==='pre_ativacao');
-assert.equal(pending.length,1);assert.equal(pending[0].id,'campina-grande-pb');
-const all=[...rows,...pending];
-assert.equal(all.length,6);
+const all=[...root.WINF_CIDADES,...root.WINF_UNIDADES_EXTRAS].filter(c=>c.siteAtivo===true);
+assert.equal(all.length,7,'São sete sites de cidades publicados');
+assert.equal(all.filter(c=>c.status==='ativa').length,5,'Não inventar disponibilidade operacional');
+assert.equal(all.find(c=>c.id==='campina-grande-pb')?.status,'pre_ativacao');
+assert.equal(all.find(c=>c.id==='cuiaba-mt')?.status,'nao_ativa');
 for(const city of all){
  assert.ok(city.url?.startsWith('/'),'Site faltando '+city.cidade);
  assert.ok(read(city.url.slice(1)+'index.html').includes('https://winf.com.br/'+city.url.slice(1)),'Página local não gerada '+city.cidade);
@@ -32,4 +31,4 @@ assert.ok(locator.includes("'Site da unidade ↗'"),'Faltou site no diretório d
 assert.ok(locator.includes('encodeURIComponent(text)'),'Origem do contato não identificada');
 // O resumo visual de territórios foi retirado do site; validar apenas os dados e links, não texto editorial removido.
 assert.ok(!doc.includes('5 unidades ativas + 1 em pré-ativação'), 'Contador legado indevido na página principal');
-console.log('✓ WINF: 5 unidades ativas + Campina em pré-ativação, sites + WhatsApp + Instagram verificados.');
+console.log('✓ WINF: 7 sites de cidades ativos, central e Instagram conferidos; operação presencial independente.');
