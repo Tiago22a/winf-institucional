@@ -96,6 +96,40 @@ for(const mode of modes) {
     results.push(check);
     console.log(JSON.stringify({city:slug,mode:mode.name,status:check.status,ogStatus:check.ogStatus,errors:check.errors,warnings:check.warnings}));
   }
+  // A página inicial tem sete cards, cada um com três canais de contato visíveis.
+  const homeCheck={city:'home-cards',mode:mode.name,url:BASE+'/',errors:[],warnings:[]};
+  try{
+    const response=await page.goto(BASE+'/',{waitUntil:'domcontentloaded',timeout:45000});
+    homeCheck.status=response?.status()??null;
+    if(homeCheck.status!==200)homeCheck.errors.push('HTTP '+homeCheck.status);
+    await page.locator('#winf-active-cards > article.winf-active-card').first().waitFor({timeout:12000});
+    const cards=await page.locator('#winf-active-cards > article.winf-active-card').evaluateAll(items=>items.map(el=>{
+      const links=[...el.querySelectorAll('.winf-active-card-link')];
+      return {
+        id:el.getAttribute('data-territory'),
+        cardWidth:el.getBoundingClientRect().width,
+        navDisplay:getComputedStyle(el.querySelector('.winf-active-card-links')).display,
+        links:links.map(a=>({href:a.getAttribute('href'),width:a.getBoundingClientRect().width,height:a.getBoundingClientRect().height,visible:getComputedStyle(a).visibility!=='hidden'}))
+      };
+    }));
+    homeCheck.metrics={cards};
+    if(cards.length!==7)homeCheck.errors.push('Esperados 7 cards: '+cards.length);
+    for(const card of cards){
+      if(card.links.length!==3)homeCheck.errors.push(card.id+' com '+card.links.length+' canais');
+      if(card.navDisplay!=='grid')homeCheck.errors.push(card.id+' sem grid de contatos');
+      if(card.links.some(x=>x.width<40||x.height<34||!x.visible))homeCheck.errors.push(card.id+' com botão invisível/pequeno');
+      if(!card.links.some(x=>x.href?.startsWith('/')))homeCheck.errors.push(card.id+' sem site local');
+      if(!card.links.some(x=>x.href?.includes('wa.me/5513981113001?text=')))homeCheck.errors.push(card.id+' sem WhatsApp central');
+      if(!card.links.some(x=>x.href?.includes('instagram.com/')))homeCheck.errors.push(card.id+' sem Instagram');
+    }
+    const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);
+    if(overflow>32)homeCheck.warnings.push('Overflow horizontal '+overflow+'px');
+    const section=page.locator('#unidades-ativas');
+    await section.scrollIntoViewIfNeeded();
+    await section.screenshot({path:outDir+'/homepage-cards-'+mode.name+'.png',timeout:25000,animations:'disabled'});
+  }catch(err){homeCheck.errors.push(String(err).slice(0,450));}
+  results.push(homeCheck);
+  console.log(JSON.stringify({city:'home-cards',mode:mode.name,status:homeCheck.status,errors:homeCheck.errors,warnings:homeCheck.warnings}));
   await ctx.close();
 }
 await browser.close();
