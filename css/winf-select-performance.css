@@ -78,3 +78,40 @@ body.ws-select-detail .sp-perf-heading .sp-perf-mark{border-color:var(--sp-brand
 body.ws-select-detail .sp-perf-cta:is(:hover,:focus-visible){
   border-color:var(--sp-brand-accent);color:var(--sp-brand-accent)!important;
 }
+
+/* 2026-11-10 — Correção global do preenchimento dos indicadores técnicos.
+   Valores numéricos ocupam a proporção exata; métricas sem ficha técnica
+   exibem estado visual neutro, sem simular desempenho. */
+body.ws-select-detail .sp-perf-row:not(.is-pending) .sp-perf-track{
+  display:block;
+  width:100%;
+  min-width:0;
+  box-sizing:border-box;
+}
+body.ws-select-detail .sp-perf-row:not(.is-pending) .sp-perf-fill{
+  display:block!important;
+  width:var(--sp-perf-width,0%)!important;
+  min-width:0;
+  max-width:100%;
+  height:100%!important;
+  opacity:1!important;
+  transform:none!important;
+  transition:width .35s ease;
+  border-radius:999px;
+}
+/* Placeholder de dado não homologado: textura fina contínua, NÃO uma barra
+   percentual. Fica visível até o cadastro de valor técnico confirmado. */
+body.ws-select-detail .sp-perf-row.is-pending .sp-perf-track{
+  background:repeating-linear-gradient(110deg,#30343a 0 9px,#42474e 9px 13px);
+  box-shadow:inset 0 0 0 1px #ffffff0e;
+}
+body.ws-select-detail .sp-perf-row.is-pending .sp-perf-track::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,.07) 48%,transparent 100%);
+  pointer-events:none;
+}
+@media(prefers-reduced-motion:reduce){
+  body.ws-select-detail .sp-perf-row:not(.is-pending) .sp-perf-fill{transition:none}
+}
