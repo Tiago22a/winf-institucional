@@ -44,3 +44,21 @@ test('estilos de loja e teaser não têm blocos CSS desbalanceados',()=>{
   assert.equal((s.match(/\{/g)||[]).length,(s.match(/\}/g)||[]).length,file);
  }
 });
+
+test('GHOST SHOP™ aparece diretamente nos sete rodapés territoriais e no sitemap',()=>{
+ const cidades=[
+  'pelicula-de-controle-solar-santos-sp/index.html',
+  'pelicula-de-controle-solar-praia-grande-sp/index.html',
+  'pelicula-de-controle-solar-guaruja-sp/index.html',
+  'insulfilm-residencial-sorocaba-sp/index.html',
+  'pelicula-de-controle-solar-pilar-do-sul-sp/index.html',
+  'pelicula-de-controle-solar-cuiaba-mt/index.html',
+  'pelicula-de-controle-solar-campina-grande-pb/index.html'
+ ];
+ for(const cidade of cidades){
+  const markup=read(cidade);
+  assert.ok(markup.includes('href="/ghost-shop/"'),cidade);
+  assert.ok(!markup.includes('GHOST SHOP™ / EM IMPLANTAÇÃO'),cidade);
+ }
+ assert.match(read('sitemap.xml'),/<loc>https:\/\/winf\.com\.br\/ghost-shop\/<\/loc>/);
+});
