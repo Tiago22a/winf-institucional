@@ -1,0 +1,32 @@
+name: GHOST SHOP Boutique Checks
+on:
+  pull_request:
+    paths:
+      - ghost-shop/**
+      - css/winf-ghost-shop.css
+      - css/winf-ghost-teaser.css
+      - js/winf-ghost-shop.js
+      - js/winf-footer.js
+      - aerocore/assets/brand-menu.js
+      - index.html
+      - aerocore/index.html
+      - partners/index.html
+      - tests/ghost-shop-boutique.test.mjs
+      - .github/workflows/ghost-shop-boutique.yml
+  push:
+    branches: [feature/ghost-shop-public-curation-20261109]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: JavaScript syntax
+        run: |
+          node --check js/winf-ghost-shop.js
+          node --check js/winf-footer.js
+          node --check aerocore/assets/brand-menu.js
+      - name: Boutique integration smoke tests
+        run: node --test tests/ghost-shop-boutique.test.mjs
