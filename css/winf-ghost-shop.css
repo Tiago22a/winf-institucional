@@ -87,3 +87,24 @@ body.ghost-shop-page{margin:0;background:var(--ghost-bg);color:var(--ghost-text)
 @media(max-width:680px){.gs-collection-head,.gs-member-banner{grid-template-columns:1fr}.gs-collection-head{gap:10px}.gs-member-actions{align-items:stretch}.gs-product-grid{gap:11px}.gs-product-meta{padding:15px 12px;min-height:144px}.gs-product-meta strong{font-size:16px}.gs-product-cta{font-size:9px}.gs-filters{gap:6px}.gs-filter{font-size:9px;padding:9px 11px}}
 @media(max-width:410px){.gs-product-grid{grid-template-columns:1fr}.gs-product-visual{aspect-ratio:1/.85}}
 @media(prefers-reduced-motion:reduce){.gs-product,.gs-product-visual img,.gs-filter{transition:none}.gs-product:hover,.gs-product:focus-visible,.gs-product:hover img,.gs-product:focus-visible img{transform:none}}
+
+
+/* GHOST SHOP™ / Fotografia 01: separação editorial real da prancha 4 x 3.
+   Todas as fatias são vistas individuais da imagem original, sem inventar fotos
+   ou ampliar a própria marca. Os recortes preservam as proporções dos cards. */
+.gs-mosaic-crop{
+  aspect-ratio:1/1;
+  background-image:url("/images/shop/blackshop%20(45).webp");
+  background-repeat:no-repeat;
+  background-size:400% 320%;
+  background-color:#e7e7e7;
+}
+.gs-mosaic-crop--c0-r0,.gs-mosaic-crop--c0-r1,.gs-mosaic-crop--c0-r2{background-position-x:0%}
+.gs-mosaic-crop--c1-r0,.gs-mosaic-crop--c1-r1,.gs-mosaic-crop--c1-r2{background-position-x:33.33333%}
+.gs-mosaic-crop--c2-r0,.gs-mosaic-crop--c2-r1,.gs-mosaic-crop--c2-r2{background-position-x:66.66667%}
+.gs-mosaic-crop--c3-r0,.gs-mosaic-crop--c3-r1,.gs-mosaic-crop--c3-r2{background-position-x:100%}
+.gs-mosaic-crop--c0-r0,.gs-mosaic-crop--c1-r0,.gs-mosaic-crop--c2-r0,.gs-mosaic-crop--c3-r0{background-position-y:0%}
+.gs-mosaic-crop--c0-r1,.gs-mosaic-crop--c1-r1,.gs-mosaic-crop--c2-r1,.gs-mosaic-crop--c3-r1{background-position-y:55%}
+.gs-mosaic-crop--c0-r2,.gs-mosaic-crop--c1-r2,.gs-mosaic-crop--c2-r2,.gs-mosaic-crop--c3-r2{background-position-y:100%}
+.gs-product--slice .gs-product-number{background:rgba(7,8,9,.9)}
+.gs-product--slice:focus-visible{outline:2px solid #e3e5e7;outline-offset:3px}
