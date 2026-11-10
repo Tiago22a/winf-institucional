@@ -21,9 +21,12 @@ for(const city of all){
  const article=doc.slice(marker,doc.indexOf('</article>',marker));
  assert.match(article,/wa\.me\/5513981113001\?text=/,'WhatsApp com origem '+city.cidade);
  assert.ok(article.includes(encodeURIComponent(city.cidade)),'Mensagem deve registrar local '+city.cidade);
- assert.match(article,/<a href="https:\/\/www\.instagram\.com\/[^"]+\/"[^>]*>INSTAGRAM/,'Instagram oficial '+city.cidade);
+ assert.equal((article.match(/class="winf-active-card-link/g)||[]).length,3,'Três links em cada card: '+city.cidade);
+ assert.ok(article.includes('href="'+city.url+'"'),'Link próprio da cidade: '+city.cidade);
+ assert.ok(article.includes('aria-label="WhatsApp central WINF para '+city.cidade+'"'),'WhatsApp da cidade '+city.cidade);
+ assert.ok(article.includes('https://www.instagram.com/'),'Instagram oficial '+city.cidade);
  if(city.instagram)assert.ok(article.includes(city.instagram),'Instagram da unidade '+city.cidade);
- else assert.ok(article.includes('INSTAGRAM WINF GLOBAL'),'Sem perfil local confirmado '+city.cidade);
+ else assert.ok(article.includes('https://www.instagram.com/winf.ofc/'),'Sem perfil local confirmado '+city.cidade);
 }
 const locator=read('aerocore/assets/onde-comprar.js');
 assert.ok(locator.includes("'Instagram da unidade ↗'"),'Faltou Instagram em diretório dinâmico');

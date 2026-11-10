@@ -484,7 +484,7 @@ globalThis.WINF_CIDADES = [
     "tipoAtendimento": null,
     "numero": "5513981113001",
     "url": "/pelicula-de-controle-solar-praia-grande-sp/",
-    "instagram": null,
+    "instagram": "https://www.instagram.com/winfselect.praiagrande/",
     "observacoes": "Central humana + IA da Baixada Santista unificada entre Santos, Praia Grande e Guarujá. Atendimento 07h às 22h; disponibilidade de instalação sob consulta.",
     "disponivelParaAtivacao": false,
     "exemplo": false
@@ -964,7 +964,7 @@ globalThis.WINF_CIDADES = [
     "tipoAtendimento": null,
     "numero": "5513981113001",
     "url": "/pelicula-de-controle-solar-cuiaba-mt/",
-    "instagram": null,
+    "instagram": "https://www.instagram.com/winfselect.cuiaba/",
     "observacoes": "Página WINF Select Cuiabá ativa, atendimento pela central WINF; instalação e cobertura sob consulta, sem loja física anunciada.",
     "disponivelParaAtivacao": false,
     "exemplo": false

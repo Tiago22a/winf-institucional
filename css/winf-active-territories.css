@@ -24,13 +24,15 @@
 @media(max-width:850px){.winf-active-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:630px){.winf-active-grid{grid-template-columns:1fr}.winf-active-head{grid-template-columns:1fr}.winf-active-total{text-align:left}.winf-active-footer{align-items:flex-start;flex-direction:column}.winf-active-cta{width:100%}.winf-active-card{min-height:152px}}
 
-/* Canais territoriais: site, WhatsApp com origem, Instagram local (ou WINF global).
-   Nenhum link encobre outro: botões acessíveis também em touchscreen. */
-.winf-active-card-links{display:flex;flex-wrap:wrap;gap:8px 15px;align-items:center;margin-top:auto;padding-top:9px;border-top:1px solid #ffffff18}
-.winf-active-card .winf-active-card-links a{margin:0;padding:5px 0;color:#f6f6f8;text-decoration:none;border-bottom:1px solid #ffffff50;font:500 11px/1.4 Gustavo,Inter,Arial,sans-serif;white-space:normal}
-.winf-active-card .winf-active-card-links a:hover,.winf-active-card .winf-active-card-links a:focus-visible{border-bottom-color:#fff;color:#fff}
-.winf-active-card--pending{border-style:dashed;background:#121216d9}
-.winf-active-dot--pending{color:#e7d2ac}
-.winf-active-dot--pending:before{background:#d7b577}
-.winf-active-card--pending h3{color:#f1ebdd}
-@media(max-width:630px){.winf-active-card-links{gap:6px 14px}.winf-active-card .winf-active-card-links a{font-size:12px;padding:8px 0}}
+/* Cards regionais: três canais permanentes, sem dependência de JS ou hover.
+   Site em destaque, WhatsApp e Instagram lado a lado. */
+.winf-active-card{min-height:240px}
+.winf-active-card-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:auto;padding-top:14px;border-top:1px solid #ffffff24;align-items:stretch}
+.winf-active-card .winf-active-card-link{display:flex;align-items:center;justify-content:space-between;gap:6px;min-width:0;min-height:41px;margin:0;padding:10px 11px;text-decoration:none;text-align:left;border:1px solid #ffffff38;border-radius:2px;background:#ffffff08;color:#f6f6f8;font:600 10px/1.35 Gustavo,Inter,Arial,sans-serif;letter-spacing:.02em;word-break:normal;overflow-wrap:normal}
+.winf-active-card .winf-active-card-link span{flex:none;white-space:nowrap}
+.winf-active-card .winf-active-card-link--site{grid-column:1/-1;background:#ffffff12;border-color:#ffffff70;color:#fff;font-weight:700}
+.winf-active-card .winf-active-card-link--whatsapp{border-color:#ffffff46}
+.winf-active-card .winf-active-card-link:hover,.winf-active-card .winf-active-card-link:focus-visible{background:#fff;border-color:#fff;color:#101014;text-decoration:none;outline-offset:3px}
+.winf-active-card .winf-active-card-link:focus-visible{outline:2px solid #fff}
+@media(max-width:630px){.winf-active-card{min-height:220px}.winf-active-card .winf-active-card-link{font-size:11px;min-height:46px}}
+@media(max-width:365px){.winf-active-card-links{grid-template-columns:1fr}.winf-active-card .winf-active-card-link--site{grid-column:auto}}
