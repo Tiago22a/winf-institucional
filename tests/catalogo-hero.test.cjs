@@ -31,3 +31,9 @@ test("tipografia forte é restrita à aba geral, com breakpoint mobile",()=>{
  assert.match(source,/font-size:clamp\(29px,8vw,44px\)!important/);
  assert.match(source,/label: 'Divisão de Conforto Arquitetônico'/);
 });
+
+test("Ceramic Armoring usa imagem própria do produto, não referência genérica de Partners",()=>{
+ assert.match(source,/<a href="\/aerocore\/ceramic-armoring\/"><img src="\/images\/ceramic-hero\.webp"/);
+ assert.doesNotMatch(source,/src="\/partners\/media\/reference-detailing\.webp"/);
+ assert.match(source,/id: 'ceramic-armoring',[\s\S]{0,300}image: '\/images\/ceramic-hero\.webp'/);
+});
