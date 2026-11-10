@@ -162,6 +162,42 @@ for(const mode of modes) {
   }catch(err){homeCheck.errors.push(String(err).slice(0,450));}
   results.push(homeCheck);
   console.log(JSON.stringify({city:'home-cards',mode:mode.name,status:homeCheck.status,errors:homeCheck.errors,warnings:homeCheck.warnings}));
+
+  // GHOST SHOP: quatro botões de navegação visíveis e marca d'água sem distorção.
+  const ghostCheck={city:'ghost-shop',mode:mode.name,url:BASE+'/ghost-shop/',errors:[],warnings:[]};
+  try{
+    const response=await page.goto(ghostCheck.url,{waitUntil:'domcontentloaded',timeout:45000});
+    ghostCheck.status=response?.status()??null;
+    if(ghostCheck.status!==200)ghostCheck.errors.push('HTTP '+ghostCheck.status);
+    await page.locator('.gs-nav a').first().waitFor({state:'visible',timeout:12000});
+    const layout=await page.evaluate(()=>{
+      const nav=document.querySelector('.gs-nav');
+      const anchors=[...nav.querySelectorAll('a')];
+      const ghost=document.querySelector('.gs-ghost');
+      const rect=ghost?.getBoundingClientRect();
+      const navRects=anchors.map(a=>{const b=a.getBoundingClientRect();return {width:b.width,height:b.height,left:b.left,right:b.right,top:b.top,bottom:b.bottom};});
+      return {links:anchors.map(a=>a.getAttribute('href')),
+        navDisplay:getComputedStyle(nav).display,
+        navRects,
+        ghost:{naturalWidth:ghost?.naturalWidth,naturalHeight:ghost?.naturalHeight,
+          displayedRatio:rect?.width/rect?.height,
+          nativeRatio:ghost?.naturalWidth/ghost?.naturalHeight,
+          opacity:parseFloat(getComputedStyle(ghost).opacity)},
+        documentOverflow:document.documentElement.scrollWidth-document.documentElement.clientWidth
+      };
+    });
+    ghostCheck.metrics=layout;
+    if(layout.links.length!==4)ghostCheck.errors.push('Esperados 4 links: '+layout.links.length);
+    if(layout.navRects.some(r=>r.height<40||r.width<50||r.left<0||r.right>mode.viewport.width+1))ghostCheck.errors.push('Botões apertados ou fora da tela');
+    if(mode.name==='mobile'&&layout.navDisplay!=='grid')ghostCheck.errors.push('Menu mobile não está em grade');
+    if(!layout.ghost.naturalWidth||Math.abs(layout.ghost.displayedRatio-layout.ghost.nativeRatio)>0.015)ghostCheck.errors.push('Fantasma distorcido');
+    if(layout.ghost.opacity>0.16||layout.ghost.opacity<0.04)ghostCheck.errors.push('Fantasma perdeu a transparência');
+    if(layout.documentOverflow>32)ghostCheck.warnings.push('Rolagem horizontal inesperada: '+layout.documentOverflow);
+    await page.locator('.gs-header').screenshot({path:outDir+'/ghost-shop-'+mode.name+'-header.png',animations:'disabled'});
+    await page.locator('.gs-hero').screenshot({path:outDir+'/ghost-shop-'+mode.name+'-hero.png',animations:'disabled'});
+  }catch(err){ghostCheck.errors.push(String(err).slice(0,450));}
+  results.push(ghostCheck);
+  console.log(JSON.stringify({city:'ghost-shop',mode:mode.name,status:ghostCheck.status,errors:ghostCheck.errors,warnings:ghostCheck.warnings}));
   await ctx.close();
 }
 await browser.close();
