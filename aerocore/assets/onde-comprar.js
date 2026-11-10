@@ -50,7 +50,7 @@
         const card = template.content.cloneNode(true);
         card.querySelector('article').dataset.status = city.status;
         card.querySelector('.directory-card-state').textContent = city.referencia || city.uf || '';
-        card.querySelector('.directory-card-status').textContent = city.siteAtivo ? '● Site ativo' : mode === 'territorios' ? 'Ativação disponível' : 'Não ativa';
+        card.querySelector('.directory-card-status').textContent = city.siteAtivo ? (city.status === 'ativa' ? '● Unidade operacional' : city.status === 'pre_ativacao' ? '● Site publicado · pré-ativação' : '● Site publicado · operação não ativa') : mode === 'territorios' ? 'Consulta territorial' : 'Sem operação';
         card.querySelector('.directory-card-city').textContent = city.cidade + (city.uf ? ' — ' + city.uf : '');
         card.querySelector('.directory-card-segment').textContent = city.siteAtivo ? (names[city.tipoAtendimento] || 'Atendimento sob consulta') : 'Disponibilidade para ativação sob consulta';
         const tags = city.tipoAtendimento === 'ambos' ? ['Automotivo', 'Residencial'] : [names[city.tipoAtendimento]].filter(Boolean);
@@ -75,15 +75,18 @@
     extrasSection.hidden = extraMatched.length === 0;
     empty.hidden = matched.length + extraMatched.length !== 0;
     enquiry.hidden = mode !== 'territorios';
-    const activeCount = matched.filter(item => item.status === 'ativa').length + extraMatched.length;
+    const publishedCount = matched.length + extraMatched.length;
+    const operationalCount = matched.filter(item => item.status === 'ativa').length + extraMatched.filter(item => item.status === 'ativa').length;
     const pendingCount = matched.filter(item => item.status === 'pre_ativacao').length;
     count.textContent = mode === 'ativas'
-      ? activeCount + (activeCount === 1 ? ' unidade ativa' : ' unidades ativas') + (pendingCount ? ' · ' + pendingCount + ' em pré-ativação' : '')
-      : matched.length + (matched.length === 1 ? ' território confirmado' : ' territórios confirmados');
+      ? publishedCount + (publishedCount === 1 ? ' página regional publicada' : ' páginas regionais publicadas') +
+        ' · ' + operationalCount + (operationalCount === 1 ? ' operação confirmada' : ' operações confirmadas') +
+        (pendingCount ? ' · ' + pendingCount + ' em pré-ativação' : '')
+      : matched.length + (matched.length === 1 ? ' território para consulta' : ' territórios para consulta');
     const activeNotice = document.querySelector('.directory-active-toggle');
     if (activeNotice) activeNotice.hidden = mode !== 'ativas';
-    document.getElementById('directory-kicker').textContent = mode === 'ativas' ? 'LOCATOR WINF // UNIDADES ATIVAS' : 'WINF PARTNERS // CONSULTA DE EXPANSÃO';
-    document.getElementById('directory-title').textContent = mode === 'ativas' ? 'Unidades e páginas em pré-ativação' : 'Onde você quer começar?';
+    document.getElementById('directory-kicker').textContent = mode === 'ativas' ? 'LOCATOR WINF // SITES REGIONAIS PUBLICADOS' : 'WINF PARTNERS // CONSULTA DE EXPANSÃO';
+    document.getElementById('directory-title').textContent = mode === 'ativas' ? 'Páginas regionais e situação de atendimento' : 'Onde você quer começar?';
     document.getElementById('directory-empty-title').textContent = mode === 'ativas' ? 'Vamos encontrar seu atendimento.' : 'Consulte a cidade que você tem em mente.';
     document.getElementById('directory-empty-copy').textContent = mode === 'ativas' ? 'Ainda não há unidades cadastradas que correspondam à sua busca. Fale com a central para confirmar o atendimento na sua região.' : 'A lista de territórios disponíveis será exibida conforme as confirmações da equipe. Você também pode informar uma cidade abaixo e solicitar uma consulta.';
     const contact = document.getElementById('directory-empty-contact');
