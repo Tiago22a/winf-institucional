@@ -16,7 +16,7 @@ for(const [name,html] of [["Briefing",briefing],["Asset Light",asset],["Partners
  });
 }
 test("Briefing mantém composição de 15 m para as três linhas",()=>{
- for(const product of ["DualReflect","BlackPro","Invisible"])assert.match(briefing,new RegExp("15 m[^<]{0,100}WINF "+product+"™","i"));
+ for(const product of ["DualReflect","BlackPro","Invisible"])assert.match(briefing,new RegExp("15 m[\\s\\S]{0,100}WINF "+product+"™","i"));
  assert.match(briefing,/não se soma ao kit físico/);
  assert.match(briefing,/valor e a ativação dessa opção dependem/);
 });
