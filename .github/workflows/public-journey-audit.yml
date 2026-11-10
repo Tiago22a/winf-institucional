@@ -1,0 +1,38 @@
+name: WINF — Jornada pública (links e navegação)
+on:
+  push:
+    branches:
+      - audit/jornada-publica-winf-20261110
+  pull_request:
+    paths:
+      - "scripts/audit-public-journey.mjs"
+      - "sitemap.xml"
+      - "**/*.html"
+      - "js/cidades.js"
+      - "aerocore/assets/onde-comprar.js"
+      - ".github/workflows/public-journey-audit.yml"
+  workflow_dispatch:
+jobs:
+  journey:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Conferir sintaxe do auditor e do localizador
+        run: |
+          node --check scripts/audit-public-journey.mjs
+          node --check js/cidades.js
+          node --check aerocore/assets/onde-comprar.js
+      - name: Auditar navegação estática do domínio
+        run: node scripts/audit-public-journey.mjs
+      - name: Publicar evidências do inventário
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: winf-jornada-publica
+          path: audit/jornada-publica-relatorio.json
+          if-no-files-found: warn
