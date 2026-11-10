@@ -1,0 +1,25 @@
+
+/* WINF official catalog — distinct boutique module without mixing technical films. */
+.winf-catalog-ghost-collection{position:relative;z-index:2;padding:30px clamp(16px,4vw,70px) 95px;background:transparent}
+.winf-catalog-ghost-collection-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr minmax(300px,.88fr);gap:clamp(25px,4.8vw,75px);align-items:stretch;padding:clamp(30px,5vw,65px);border:1px solid #4f5357;background:linear-gradient(125deg,#0d0e10 0%,#171a1c 55%,#101113 100%);box-shadow:0 20px 70px #0000003b}
+.winf-catalog-ghost-collection-copy{display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.winf-catalog-ghost-collection-kicker{font:650 10px/1.5 Inter,Arial,sans-serif;letter-spacing:.23em;color:#aeb4ba;margin:0 0 28px}
+.winf-catalog-ghost-collection-symbol{object-fit:contain;margin-bottom:17px;filter:drop-shadow(0 0 12px #ffffff48)}
+.winf-catalog-ghost-collection h2{font:300 clamp(66px,8.3vw,127px)/.83 Inter,Arial,sans-serif;letter-spacing:-.105em;color:#fafafa;margin:0 0 35px}
+.winf-catalog-ghost-collection h2 sup{font-size:.15em;vertical-align:top;letter-spacing:0;margin-left:.26em}
+.winf-catalog-ghost-collection-headline{font:450 clamp(20px,2.3vw,29px)/1.2 Inter,Arial,sans-serif!important;color:#f6f7f9!important;letter-spacing:-.04em!important;margin:0 0 15px!important}
+.winf-catalog-ghost-collection-copy p:not(.winf-catalog-ghost-collection-headline):not(.winf-catalog-ghost-collection-kicker){color:#bbc0c7;max-width:520px;font:400 14px/1.7 Inter,Arial,sans-serif;margin:0 0 28px}
+.winf-catalog-ghost-collection-link{display:inline-flex;align-items:center;justify-content:space-between;gap:30px;min-width:min(100%,300px);min-height:52px;padding:14px 17px;color:#0b0e12;background:#f3f5f6;text-decoration:none;font:750 10px/1.5 Inter,Arial,sans-serif;letter-spacing:.12em}
+.winf-catalog-ghost-collection-link:hover,.winf-catalog-ghost-collection-link:focus-visible{background:#bec8cf;color:#040404}
+.winf-catalog-ghost-collection-copy small{font:500 10px/1.6 Inter,Arial,sans-serif;color:#9da4ab;margin-top:17px}
+.winf-catalog-ghost-collection-gallery{min-height:440px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:8px;position:relative;text-decoration:none}
+.winf-catalog-ghost-collection-gallery>span{position:relative;display:block;overflow:hidden;background:#e9eaeb}
+.winf-catalog-ghost-collection-gallery>span:first-child{grid-row:span 2}
+.winf-catalog-ghost-collection-gallery img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.68);transition:transform .4s,filter .4s}
+.winf-catalog-ghost-collection-gallery:hover img{transform:scale(1.045);filter:saturate(.9)}
+.winf-catalog-ghost-collection-gallery strong{position:absolute;bottom:18px;left:16px;color:#fff;text-shadow:0 2px 16px #000,0 1px 4px #000;font:600 clamp(16px,2.3vw,28px)/1.06 Inter,Arial,sans-serif;letter-spacing:-.04em}
+.winf-catalog-ghost-collection-gallery strong span{color:#fff}
+.winf-catalog-ghost-collection-gallery:focus-visible{outline:2px solid #dcecf3;outline-offset:4px}
+@media(max-width:900px){.winf-catalog-ghost-collection-inner{grid-template-columns:1fr}.winf-catalog-ghost-collection-gallery{min-height:340px;max-height:470px}}
+@media(max-width:560px){.winf-catalog-ghost-collection{padding:20px 14px 65px}.winf-catalog-ghost-collection-inner{padding:25px 18px;gap:24px}.winf-catalog-ghost-collection h2{font-size:clamp(65px,15vw,94px)}.winf-catalog-ghost-collection-gallery{min-height:275px;max-height:350px}.winf-catalog-ghost-collection-link{width:100%}}
+@media(prefers-reduced-motion:reduce){.winf-catalog-ghost-collection-gallery img{transition:none}.winf-catalog-ghost-collection-gallery:hover img{transform:none}}

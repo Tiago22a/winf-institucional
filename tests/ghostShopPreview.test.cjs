@@ -8,22 +8,42 @@ const read=file=>fs.readFileSync(path.join(root,file),'utf8');
 const html=read('ghost-shop/index.html');
 const css=read('css/winf-ghost-shop.css');
 const login='https://painel-os.winf.com.br/login/';
-test('GHOST SHOP™ inclui exatamente 12 mockups sem produtos ficticiamente comercializados',()=>{
- const cards=[...html.matchAll(/class="gs-product" data-category="[^"]+" href="([^"]+)"/g)];
- assert.equal(cards.length,12);
+test('GHOST SHOP™ inclui 23 conceitos, sem preço ou checkout fictício',()=>{
+ const cards=[...html.matchAll(/class="gs-product(?: gs-product--slice)?" data-category="[^"]+" href="([^"]+)"/g)];
+ assert.equal(cards.length,23);
  for(const item of cards)assert.equal(item[1],login);
  assert.match(html,/VITRINE CONCEITUAL/);
  assert.match(html,/Sem preços/);
  assert.doesNotMatch(html,/R\$\s*[\d.,]+|data-price|add-to-cart|checkout\//i);
 });
-test('cada conceito usa imagem existente do acervo WINF',()=>{
+test('os 11 itens individuais de acervo e a prancha original usam imagens existentes',()=>{
  const urls=[...html.matchAll(/src="(\/images\/shop\/blackshop%20\(\d+\)\.webp)"/g)].map(x=>x[1]);
- assert.equal(urls.length,12);
- assert.equal(new Set(urls).size,12);
+ assert.equal(urls.length,11);
+ assert.equal(new Set(urls).size,11);
  for(const url of urls){
   const relative=decodeURIComponent(url.replace(/^\//,''));
   assert.ok(fs.existsSync(path.join(root,relative)),relative);
  }
+});
+test('fotografia número 1 foi dividida em 12 quadrados independentes sem mostrar a montagem completa',()=>{
+ const coords=[...html.matchAll(/gs-mosaic-crop--c([0-3])-r([0-2])/g)].map(x=>x[1]+','+x[2]);
+ assert.equal(coords.length,12);
+ assert.equal(new Set(coords).size,12);
+ assert.ok(fs.existsSync(path.join(root,'images/shop/blackshop (45).webp')));
+ assert.doesNotMatch(html,/src="\/images\/shop\/blackshop%20\(45\)\.webp"/);
+ const css=read('css/winf-ghost-shop.css');
+ assert.match(css,/background-size:var\(--gs-width-scale\) var\(--gs-height-scale\)/);
+ for(let x=0;x<4;x++)for(let y=0;y<3;y++)assert.ok(coords.includes(x+','+y),"Tile "+x+","+y);
+});
+test('catálogo oficial WINF inclui boutique como seção sem misturar o grid técnico',()=>{
+ const catalog=read('catalogo/index.html');
+ assert.match(catalog,/id="catalog-ghost-collection-title"/);
+ assert.match(catalog,/href="\/ghost-shop\/"/);
+ assert.match(catalog,/css\/winf-catalog-ghost\.css/);
+ assert.ok(fs.existsSync(path.join(root,'css/winf-catalog-ghost.css')));
+ const start=catalog.indexOf('winf-catalog-ghost-collection');
+ const products=catalog.indexOf('id="catalogo-produtos"');
+ assert.ok(start>=0&&start<products);
 });
 test('filtros permitem navegação sem eliminar a rota de login',()=>{
  const js=html.match(/<script>\s*(\(\(\)=>\{[\s\S]*?\}\)\(\);)\s*<\/script>/)?.[1];
