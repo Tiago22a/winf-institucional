@@ -1,0 +1,40 @@
+{
+  "status": "provisorio",
+  "updatedAt": "2026-11-10",
+  "source": "cards comerciais fornecidos pela WINF; não substituem laudo do fornecedor",
+  "note": "Dados de referência para apresentação. Não são especificações certificadas; confirmar por SKU, lote e método de ensaio antes de propostas contratuais.",
+  "products": {
+    "select-invisible-70": {
+      "line": "Invisible",
+      "uv": 100,
+      "ir": 86,
+      "tser": null,
+      "warrantyYears": 10,
+      "variantConfirmed": false
+    },
+    "select-invisible-80": {
+      "line": "Invisible",
+      "uv": 100,
+      "ir": 86,
+      "tser": null,
+      "warrantyYears": 10,
+      "variantConfirmed": false
+    },
+    "select-blackpro": {
+      "line": "BlackPro",
+      "uv": 99,
+      "ir": 73,
+      "tser": null,
+      "warrantyYears": 7,
+      "variantConfirmed": false
+    },
+    "select-dualreflect": {
+      "line": "Dual Reflect",
+      "uv": 99,
+      "ir": 81,
+      "tser": null,
+      "warrantyYears": 7,
+      "variantConfirmed": false
+    }
+  }
+}

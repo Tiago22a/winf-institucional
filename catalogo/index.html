@@ -90,7 +90,7 @@
         "@id": "https://winf.com.br/catalogo/#lista",
         "name": "Produtos WINF™",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1,  "item": { "@type": "Product", "name": "WINF™ Invisible® 70",       "description": "Nano cerâmica não metalizada, 94% de rejeição IR e 99,9% de bloqueio UV.", "brand": { "@type": "Brand", "name": "WINF™" } } },
+          { "@type": "ListItem", "position": 1,  "item": { "@type": "Product", "name": "WINF™ Invisible® 70",       "description": "Nano cerâmica não metalizada, 86% de rejeição IR e 100% de redução UV (referências provisórias).", "brand": { "@type": "Brand", "name": "WINF™" } } },
           { "@type": "ListItem", "position": 2,  "item": { "@type": "Product", "name": "WINF™ Invisible® 80",       "description": "Variante ultra clara com 82% de transmissão de luz.", "brand": { "@type": "Brand", "name": "WINF™" } } },
           { "@type": "ListItem", "position": 3,  "item": { "@type": "Product", "name": "AeroCore™ Spectre",  "description": "Película de controle solar AeroCore™; disponibilidade para aplicações específicas sujeita a consulta técnica.", "brand": { "@type": "Brand", "name": "AeroCore™" } } },
           { "@type": "ListItem", "position": 4,  "item": { "@type": "Product", "name": "WINF™ BlackPro®",           "description": "Película fumê não metalizada para privacidade e conforto térmico.", "brand": { "@type": "Brand", "name": "WINF™" } } },
@@ -782,6 +782,7 @@ body.winf-catalog-page #catalogo-produtos .product-card:hover .card-img-inner{fi
 <meta name="twitter:image:alt" content="Imagem editorial WINF™ para WINF™: ESCOLHA A SOLUÇÃO. CONHEÇA A TECNOLOGIA.. Fotografia ilustrativa.">
 </head>
 <body class="winf-catalog-page min-h-screen flex flex-col selection:bg-zinc-500/30">
+<div role="note" style="padding:12px 18px;background:#171717;color:#fff;border-left:3px solid #aaa;font:14px/1.5 Arial,sans-serif">WINF Select™ — indicadores UV e IR provisórios para apresentação. Especificações por versão e laudos do fornecedor ainda pendentes. TSER não confirmado.</div>
 <a class="winf-return-link" data-winf-return href="/" aria-label="Voltar ao início da seção"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 5-7 7 7 7M5 12h14"></path></svg></a>
 
 
@@ -1035,34 +1036,36 @@ const PRODUCT_CATALOG = [
     name: 'WINF™ Invisible® 70',
     subname: 'HT70 | Nano Cerâmica Não Metalizada',
     badge: 'PROTEÇÃO NATURAL',
+    technicalStatus: 'REFERÊNCIA PROVISÓRIA — valores sujeitos à ficha técnica oficial',
     category: 'arch',
     line: 'select',
     image: '/images/invisible-poster-1.webp',
     shortDescription: 'Proteção solar e UV sem escurecer o vidro, preservando a leitura cromática original da fachada.',
     fullDescription: 'Tecnologia Nano Cerâmica não metalizada, 100% dielétrica e sem interferência em sinais eletrônicos. Indicada para fachadas com regras rígidas de preservação estética.',
-    keyMetrics: { ir: '94%', uv: '99,9%', tser: '62%', warranty: '10 Anos' },
+    keyMetrics: { ir: '86%', uv: '100%', tser: 'A confirmar', warranty: '10 Anos' },
     benefits: [
       { title: 'Clareza Óptica', description: 'Transmissão de 70% de luz, sem alteração perceptível da aparência do vidro.', icon: 'Eye' },
       { title: 'Zero Interferência', description: 'Construção 100% dielétrica, sem impacto em sinais Wi-Fi, GPS ou celular.', icon: 'Shield' }
     ],
-    specs: { vlt: '70%', irer: '94%', tsr: '62%', thickness: '2 mil', material: 'Nano Cerâmica Não Metalizada', glareReduction: 'N/A' }
+    specs: { vlt: '70%', irer: '86%', tsr: 'A confirmar', thickness: '2 mil', material: 'Nano Cerâmica Não Metalizada', glareReduction: 'N/A' }
   },
   {
     id: 'select-invisible-80',
     name: 'WINF™ Invisible® 80',
     subname: 'HT80 | Ultra Clara',
     badge: 'MÁXIMA TRANSPARÊNCIA',
+    technicalStatus: 'REFERÊNCIA PROVISÓRIA — valores sujeitos à ficha técnica oficial',
     category: 'arch',
     line: 'select',
     image: '/images/invisible-poster-2.webp',
     shortDescription: 'Variante ultra clara da linha Invisible, com 82% de transmissão de luz e alto bloqueio de calor.',
     fullDescription: 'Tecnologia Nano Cerâmica não metalizada com a maior transparência da linha, indicada para projetos que exigem o mínimo de alteração visual possível.',
-    keyMetrics: { ir: '96%', uv: '99,9%', tser: '58%', warranty: '10 Anos' },
+    keyMetrics: { ir: '86%', uv: '100%', tser: 'A confirmar', warranty: '10 Anos' },
     benefits: [
       { title: 'Transparência Máxima', description: '82% de VLT, a variante mais clara da linha Invisible.', icon: 'Eye' },
-      { title: 'Conforto Térmico', description: '96% de rejeição de infravermelho sem escurecer o ambiente.', icon: 'Sun' }
+      { title: 'Conforto Térmico', description: '86% de rejeição de infravermelho (referência provisória) sem escurecer o ambiente.', icon: 'Sun' }
     ],
-    specs: { vlt: '82%', irer: '96%', tsr: '58%', thickness: '2 mil', material: 'Nano Cerâmica Não Metalizada', glareReduction: 'N/A' }
+    specs: { vlt: '82%', irer: '86%', tsr: 'A confirmar', thickness: '2 mil', material: 'Nano Cerâmica Não Metalizada', glareReduction: 'N/A' }
   },
   // Spectre pertence à AeroCore™; aparece na seleção arquitetônica como tecnologia convidada,
   // identificado pelo Ghost e com consulta de aplicação, não como produto Invisible.
@@ -1071,34 +1074,36 @@ const PRODUCT_CATALOG = [
     name: 'WINF™ BlackPro®',
     subname: 'BP10 | Não Metalizada • Fumê',
     badge: 'PRIVACIDADE E CONFORTO',
+    technicalStatus: 'REFERÊNCIA PROVISÓRIA — valores sujeitos à ficha técnica oficial',
     category: 'arch',
     line: 'select',
     image: '/images/blackpro-poster-1.webp',
     shortDescription: 'Película arquitetônica de privacidade com visual fumê, foco em presença visual, conforto térmico e discrição.',
     fullDescription: 'Construção não metalizada com efeito Blackout Privacy. Reduz a exposição visual do ambiente e melhora o conforto térmico sem comprometer a fachada.',
-    keyMetrics: { ir: '95%', uv: '99,9%', tser: 'N/A', warranty: '10 Anos' },
+    keyMetrics: { ir: '73%', uv: '99%', tser: 'A confirmar', warranty: '7 Anos' },
     benefits: [
       { title: 'Privacidade e Estética', description: 'Visual sofisticado e recluso.', icon: 'Eye' },
       { title: 'Conforto Térmico', description: 'Redução eficaz do ofuscamento e do calor.', icon: 'Sun' }
     ],
-    specs: { vlt: '70%', irer: '95%', tsr: 'N/A', thickness: '2 mil', material: 'Não Metalizada Fumê', glareReduction: 'N/A' }
+    specs: { vlt: '70%', irer: '73%', tsr: 'A confirmar', thickness: '2 mil', material: 'Não Metalizada Fumê', glareReduction: 'N/A' }
   },
   {
     id: 'select-dualreflect',
     name: 'WINF™ Dual Reflect®',
     subname: 'SI15 | Refletiva • Controle Solar',
     badge: 'MÁXIMO CONTROLE SOLAR',
+    technicalStatus: 'REFERÊNCIA PROVISÓRIA — valores sujeitos à ficha técnica oficial',
     category: 'arch',
     line: 'select',
     image: '/images/dualreflect-poster-1.webp',
     shortDescription: 'Película de máxima eficiência para fachadas expostas ao sol, com efeito espelho diurno e alta rejeição térmica.',
     fullDescription: 'Tecnologia refletiva com controle solar e privacidade diurna por efeito espelhado, preservando a leitura arquitetônica da fachada.',
-    keyMetrics: { ir: '82%', uv: '99,9%', tser: 'N/A', warranty: '10 Anos' },
+    keyMetrics: { ir: '81%', uv: '99%', tser: 'A confirmar', warranty: '7 Anos' },
     benefits: [
       { title: 'Privacidade Diurna', description: 'Alta reflexividade externa e privacidade durante o dia.', icon: 'Eye' },
       { title: 'Economia Energética', description: 'Redução significativa do brilho e calor.', icon: 'Sun' }
     ],
-    specs: { vlt: '15%', irer: '82%', tsr: 'N/A', thickness: 'N/A', material: 'Refletiva Controle Solar', glareReduction: 'N/A' }
+    specs: { vlt: '15%', irer: '81%', tsr: 'A confirmar', thickness: 'N/A', material: 'Refletiva Controle Solar', glareReduction: 'N/A' }
   },
   {
     id: 'select-securityblinder',
