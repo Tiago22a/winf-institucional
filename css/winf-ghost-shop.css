@@ -49,3 +49,41 @@ body.ghost-shop-page{margin:0;background:var(--ghost-bg);color:var(--ghost-text)
 @media(max-width:850px){.gs-grid{grid-template-columns:1fr 1fr}.gs-header{flex-wrap:wrap}.gs-nav{gap:12px}}
 @media(max-width:580px){.gs-grid,.gs-rule{grid-template-columns:1fr}.gs-card{min-height:245px}.gs-header{padding:18px 0}.gs-brand span{font-size:8px;letter-spacing:.09em}.gs-nav{gap:12px}.gs-nav a{font-size:9px}.gs-hero-body{padding:65px 0 75px}.gs-ghost{top:11%;width:53vw;right:-8%}}
 @media(prefers-reduced-motion:reduce){.gs-card{transition:none;transform:none!important}}
+
+/* GHOST SHOP™ | Conceitos de coleção. Sem preços, carrinho ou checkout público. */
+.gs-showcase{background:#0a0a0b;padding:clamp(58px,7vw,108px) 0}
+.gs-showcase h2 span{color:#888a8e}
+.gs-collection-head{display:grid;grid-template-columns:1.2fr .8fr;gap:36px;align-items:end}
+.gs-collection-head p:not(.gs-eyebrow){font-size:15px;max-width:440px;margin:0 0 14px;color:#aeb0b6}
+.gs-collection-head strong{color:#fff;font-weight:650}
+.gs-catalog-note{display:flex;gap:14px;align-items:start;border:1px solid #ffffff35;background:#17181a;color:#c9cbd1;padding:17px 20px;margin:32px 0 28px;font-size:12px;line-height:1.6}
+.gs-catalog-note>span:first-child{font-size:17px;color:#fff;line-height:1}
+.gs-catalog-note strong{font-size:10px;letter-spacing:.09em;color:#fff}
+.gs-filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px}
+.gs-filter{border:1px solid #45474c;background:transparent;color:#b8bbc0;padding:10px 15px;min-height:43px;font:700 10px/1.2 Inter,Arial,sans-serif;letter-spacing:.1em;cursor:pointer;transition:background .2s,border-color .2s}
+.gs-filter:hover,.gs-filter:focus-visible{border-color:#c5c6c8;color:#fff}
+.gs-filter.is-active{background:#eceef0;border-color:#eceef0;color:#101112}
+.gs-product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.gs-product{display:block;min-width:0;text-decoration:none!important;background:#151617;border:1px solid #ffffff22;transition:border-color .25s,transform .25s}
+.gs-product[hidden]{display:none!important}
+.gs-product:hover,.gs-product:focus-visible{border-color:#ffffffb2;transform:translateY(-3px);outline-offset:3px}
+.gs-product-visual{display:block;position:relative;aspect-ratio:1/.88;overflow:hidden;background:#eeeeee}
+.gs-product-visual img{width:100%;height:100%;display:block;object-fit:cover;object-position:center;transition:transform .35s}
+.gs-product:hover img,.gs-product:focus-visible img{transform:scale(1.035)}
+.gs-product-mosaic img{object-position:50% 18%}
+.gs-product-number{position:absolute;top:13px;left:14px;padding:6px 8px;background:#0a0b0ce6;color:#e8e8e9;font:700 9px/1 Inter,sans-serif;letter-spacing:.12em}
+.gs-product-meta{display:flex;flex-direction:column;align-items:flex-start;min-height:154px;padding:22px 20px 19px}
+.gs-product-series{font:700 10px/1.3 Inter,sans-serif;color:#999ca3;letter-spacing:.13em;text-transform:uppercase}
+.gs-product-meta strong{font:400 clamp(17px,1.9vw,23px)/1.22 Inter,Arial,sans-serif;letter-spacing:-.035em;color:#f0f1f3;margin:10px 0 17px}
+.gs-product-cta{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:auto;width:100%;font:700 10px/1.3 Inter,sans-serif;letter-spacing:.07em;color:#eee;text-transform:uppercase;border-top:1px solid #ffffff22;padding-top:14px}
+.gs-product-cta span{font-size:17px}
+.gs-filter-count{font:500 11px/1.5 Inter,Arial,sans-serif;color:#888b92!important;margin:15px 0 0!important;letter-spacing:.09em}
+.gs-member-banner{display:grid;grid-template-columns:1.3fr .7fr;gap:32px;align-items:center;background:linear-gradient(130deg,#1c1e21,#08090a);border:1px solid #ffffff38;margin-top:65px;padding:clamp(25px,4vw,53px)}
+.gs-member-banner h3{font:250 clamp(36px,5vw,65px)/1.02 Inter,sans-serif;letter-spacing:-.075em;margin:8px 0 20px}
+.gs-member-banner p:not(.gs-eyebrow){max-width:620px;color:#bcbec5;line-height:1.7;font-size:14px}
+.gs-member-actions{display:flex;flex-direction:column;gap:11px;align-items:stretch}
+.gs-member-actions .gs-btn{text-align:center}
+@media(max-width:970px){.gs-product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:680px){.gs-collection-head,.gs-member-banner{grid-template-columns:1fr}.gs-collection-head{gap:10px}.gs-member-actions{align-items:stretch}.gs-product-grid{gap:11px}.gs-product-meta{padding:15px 12px;min-height:144px}.gs-product-meta strong{font-size:16px}.gs-product-cta{font-size:9px}.gs-filters{gap:6px}.gs-filter{font-size:9px;padding:9px 11px}}
+@media(max-width:410px){.gs-product-grid{grid-template-columns:1fr}.gs-product-visual{aspect-ratio:1/.85}}
+@media(prefers-reduced-motion:reduce){.gs-product,.gs-product-visual img,.gs-filter{transition:none}.gs-product:hover,.gs-product:focus-visible,.gs-product:hover img,.gs-product:focus-visible img{transform:none}}
