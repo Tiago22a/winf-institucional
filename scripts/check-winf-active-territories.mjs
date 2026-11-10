@@ -28,6 +28,10 @@ for(const city of all){
  if(city.instagram)assert.ok(article.includes(city.instagram),'Instagram da unidade '+city.cidade);
  else assert.ok(article.includes('https://www.instagram.com/winf.ofc/'),'Sem perfil local confirmado '+city.cidade);
 }
+const portalScript=read('js/winf-active-territories.js');
+assert.ok(!portalScript.includes('replaceChildren'),'O script legado não deve apagar cards completos');
+assert.ok(!portalScript.includes('status === "ativa"'),'Sites publicados não devem ser filtrados por status de operação local');
+assert.ok(doc.includes('/js/winf-active-territories.js?v=20261109-seven-channels2'),'Cache bust da versão corrigida do script');
 const locator=read('aerocore/assets/onde-comprar.js');
 assert.ok(locator.includes("'Instagram da unidade ↗'"),'Faltou Instagram em diretório dinâmico');
 assert.ok(locator.includes("'Site da unidade ↗'"),'Faltou site no diretório dinâmico');
