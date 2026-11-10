@@ -103,6 +103,7 @@ for(const mode of modes) {
     homeCheck.status=response?.status()??null;
     if(homeCheck.status!==200)homeCheck.errors.push('HTTP '+homeCheck.status);
     await page.locator('#winf-active-cards > article.winf-active-card').first().waitFor({timeout:12000});
+    await page.locator('#winf-quick-contact .wqc-launchers .wqc-circle').first().waitFor({state:'visible',timeout:15000});
     const cards=await page.locator('#winf-active-cards > article.winf-active-card').evaluateAll(items=>items.map(el=>{
       const links=[...el.querySelectorAll('.winf-active-card-link')];
       return {
@@ -132,13 +133,27 @@ for(const mode of modes) {
         whatsapp:wa?.getAttribute('href')||null,
         widths:items.map(x=>x.getBoundingClientRect().width),
         inViewport:items.every(x=>{const r=x.getBoundingClientRect();return r.left>=0&&r.right<=innerWidth&&r.top>=0&&r.bottom<=innerHeight;}),
-        labelsVisible:controls?[...controls.querySelectorAll('.wqc-label')].every(el=>{const r=el.getBoundingClientRect();return r.left>=0&&r.right<=innerWidth;}):false};
+        labelsVisible:controls?[...controls.querySelectorAll('.wqc-label')].every(el=>{const r=el.getBoundingClientRect();return r.left>=0&&r.right<=innerWidth;}):false,
+        labelsOverlap:(()=>{
+          const labels=controls?[...controls.querySelectorAll('.wqc-label')]:[];
+          if(labels.length<2)return false;
+          const a=labels[0].getBoundingClientRect(),b=labels[1].getBoundingClientRect();
+          return a.left<b.right&&a.right>b.left&&a.top<b.bottom&&a.bottom>b.top;
+        })(),
+        cookieOverlap:(()=>{
+          const cookie=document.getElementById('cookie-banner');
+          if(!controls||!cookie||cookie.hidden||getComputedStyle(cookie).display==='none')return false;
+          const a=controls.getBoundingClientRect(),b=cookie.getBoundingClientRect();
+          return a.left<b.right&&a.right>b.left&&a.top<b.bottom&&a.bottom>b.top;
+        })()
+      };
     });
     homeCheck.metrics.dock=dockState;
     if(dockState.totalQuick!==1||dockState.legacy!==0)homeCheck.errors.push('Dock fixo duplicado ou ausente');
     if(dockState.count!==2)homeCheck.errors.push('Esperado fantasma e WhatsApp únicos');
     if(!dockState.whatsapp?.includes('wa.me/5513981113001'))homeCheck.errors.push('WhatsApp não usa a central');
     if(!dockState.inViewport||!dockState.labelsVisible)homeCheck.errors.push('Dock/rótulos extrapolam viewport');
+    if(dockState.labelsOverlap||dockState.cookieOverlap)homeCheck.errors.push('Dock/rótulos sobrepostos');
     const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);
     if(overflow>32)homeCheck.warnings.push('Overflow horizontal '+overflow+'px');
     const section=page.locator('#unidades-ativas');
