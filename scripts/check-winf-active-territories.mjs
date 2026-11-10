@@ -21,7 +21,7 @@ for(const city of all){
  const article=doc.slice(marker,doc.indexOf('</article>',marker));
  assert.match(article,/wa\.me\/5513981113001\?text=/,'WhatsApp com origem '+city.cidade);
  assert.ok(article.includes(encodeURIComponent(city.cidade)),'Mensagem deve registrar local '+city.cidade);
- assert.equal((article.match(/class="winf-active-card-link/g)||[]).length,3,'Três links em cada card: '+city.cidade);
+ assert.equal((article.match(/<a class="winf-active-card-link\s/g)||[]).length,3,'Três links em cada card: '+city.cidade);
  assert.ok(article.includes('href="'+city.url+'"'),'Link próprio da cidade: '+city.cidade);
  assert.ok(article.includes('aria-label="WhatsApp central WINF para '+city.cidade+'"'),'WhatsApp da cidade '+city.cidade);
  assert.ok(article.includes('https://www.instagram.com/'),'Instagram oficial '+city.cidade);
