@@ -1,14 +1,158 @@
-/* WINF Partners™ — vídeo ambiente do briefing. VSL abaixo mantém controle independente. */
-#topo.reference-hero{isolation:isolate;background:#111214}
-#topo .briefing-hero-motion{position:absolute;inset:0;z-index:1;width:100%;height:100%;object-fit:cover;object-position:center 55%;pointer-events:none;opacity:.48;filter:grayscale(.62) brightness(.48) contrast(1.18);transform:scale(1.025)}
-#topo .briefing-hero-static-background{z-index:0}
-#topo .briefing-hero-motion::cue{display:none}
+/* WINF Partners™ | Briefing — abertura cinematográfica unificada (11/11/2026).
+   Mesma linguagem do /partners/: vídeo original em tela cheia, título e CTAs por cima.
+   Camada de contraste leve, sem escurecer excessivamente o filme. */
+#topo.reference-hero{
+  position:relative;
+  isolation:isolate;
+  min-height:clamp(680px,88svh,930px);
+  background:#101216;
+  padding-block:clamp(105px,10vw,150px) clamp(75px,9vw,120px);
+}
+#topo .briefing-hero-film{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  pointer-events:none;
+  background:#11161b;
+}
+#topo .briefing-hero-poster,
+#topo .briefing-hero-motion{
+  position:absolute;
+  inset:0;
+  display:block;
+  width:100%;
+  height:100%;
+  max-width:none;
+  object-fit:cover;
+  object-position:center 53%;
+  pointer-events:none;
+}
+#topo .briefing-hero-poster{
+  z-index:0;
+  filter:brightness(.95) saturate(1.05);
+}
+#topo .briefing-hero-motion{
+  z-index:1;
+  opacity:0;
+  filter:brightness(1.04) saturate(1.04);
+  transition:opacity .7s ease;
+}
+#topo .briefing-hero-motion.wc-playing{opacity:1}
+#topo .briefing-hero-shade{
+  position:absolute;
+  inset:0;
+  z-index:5;
+  pointer-events:none;
+  /* Mid-tone shading: keep the marina, daylight and yacht visible. */
+  background:
+    linear-gradient(90deg,rgba(4,8,12,.43) 0%,rgba(4,8,12,.26) 38%,rgba(4,8,12,.19) 72%,rgba(4,8,12,.28) 100%),
+    linear-gradient(0deg,rgba(4,8,12,.41) 0%,rgba(4,8,12,.08) 43%,rgba(4,8,12,.30) 100%);
+}
+#topo.reference-hero .partners-site-header{z-index:30}
+#topo.reference-hero .reference-hero-copy{
+  position:relative;
+  z-index:20;
+  padding-top:clamp(40px,5vw,80px);
+  text-shadow:0 2px 22px rgba(0,0,0,.80);
+}
+#topo.reference-hero .reference-hero-badge{
+  margin-bottom:clamp(26px,5vw,64px);
+  color:rgba(255,255,255,.95);
+  border-color:rgba(255,255,255,.40);
+  background:rgba(0,0,0,.29);
+  backdrop-filter:blur(7px);
+  -webkit-backdrop-filter:blur(7px);
+}
+#topo.reference-hero h1{
+  font-size:clamp(55px,8.3vw,138px);
+  letter-spacing:-.008em;
+  line-height:1.03;
+  max-width:1160px;
+  text-wrap:balance;
+  text-shadow:0 4px 32px rgba(0,0,0,.7);
+}
+#topo.reference-hero .reference-hero-copy>div:nth-of-type(2){margin-bottom:clamp(30px,5vw,58px)}
+#topo.reference-hero .reference-hero-copy>div:nth-of-type(2)>p{
+  color:rgba(255,255,255,.96)!important;
+  font-size:clamp(13px,1.4vw,19px);
+  letter-spacing:clamp(.12em,.28vw,.27em);
+  line-height:1.68;
+  margin-top:clamp(24px,4vw,48px);
+  max-width:940px;
+  text-shadow:0 3px 20px rgba(0,0,0,.95);
+}
+#topo.reference-hero .reference-hero-copy>div:last-child>a{
+  background:rgba(8,12,17,.46);
+  border-color:rgba(255,255,255,.55);
+  color:#fff;
+  backdrop-filter:blur(9px);
+  -webkit-backdrop-filter:blur(9px);
+  font-weight:800;
+  text-shadow:0 2px 10px #000b;
+}
+#topo.reference-hero .reference-hero-copy>div:last-child>a:first-child{
+  background:rgba(255,255,255,.92);
+  color:#111519;
+  text-shadow:none;
+}
+#topo.reference-hero .reference-hero-copy>div:last-child>a:hover{
+  background:#fff;
+  color:#131414;
+  border-color:#fff;
+}
 #topo .briefing-hero-motion:focus{outline:none}
-#topo.reference-hero .reference-hero-copy{text-shadow:0 1px 16px #000a}
 @media(max-width:767px){
-  #topo .briefing-hero-motion{display:none}
-  #topo .briefing-hero-static-background{background:linear-gradient(145deg,#17191b,#090a0b)}
+  #topo.reference-hero{
+    min-height:clamp(670px,88svh,860px);
+    padding:110px 0 70px;
+  }
+  #topo .briefing-hero-poster,
+  #topo .briefing-hero-motion{object-position:60% center}
+  #topo .briefing-hero-shade{
+    background:
+      linear-gradient(0deg,rgba(4,8,12,.58) 0%,rgba(4,8,12,.24) 56%,rgba(4,8,12,.37) 100%),
+      linear-gradient(90deg,rgba(4,8,12,.17),rgba(4,8,12,.15));
+  }
+  #topo.reference-hero .reference-hero-copy{
+    padding-top:15px;
+    width:min(100%,calc(100% - 30px));
+  }
+  #topo.reference-hero .reference-hero-badge{
+    margin-bottom:clamp(22px,5vh,40px);
+    letter-spacing:.18em;
+    font-size:10px;
+  }
+  #topo.reference-hero h1{
+    font-size:clamp(42px,10vw,73px);
+    letter-spacing:-.012em;
+    line-height:1.05;
+  }
+  #topo.reference-hero .reference-hero-copy>div:nth-of-type(2){margin-bottom:30px}
+  #topo.reference-hero .reference-hero-copy>div:nth-of-type(2)>p{
+    font-size:clamp(12px,2.5vw,16px);
+    margin-top:25px;
+    letter-spacing:.14em;
+  }
+  #topo.reference-hero .reference-hero-copy>div:last-child{
+    width:100%;
+    gap:12px;
+  }
+  #topo.reference-hero .reference-hero-copy>div:last-child>a{
+    width:min(420px,100%);
+    max-width:100%;
+    font-size:11px;
+    letter-spacing:.15em;
+    padding:18px 20px;
+  }
+}
+@media(max-width:390px){
+  #topo.reference-hero h1{font-size:clamp(39px,10.1vw,46px)}
+  #topo.reference-hero .reference-hero-badge{padding:9px 12px;font-size:9px}
 }
 @media(prefers-reduced-motion:reduce){
   #topo .briefing-hero-motion{display:none!important}
+  #topo .briefing-hero-poster{filter:brightness(.91)}
 }
