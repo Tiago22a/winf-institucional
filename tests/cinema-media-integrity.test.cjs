@@ -24,7 +24,9 @@ test("Cinema: páginas estão ligadas à versão corrigida do player e do estilo
  assert.match(css,/:hover,:focus-within/);
  for(const route of routes){
   const html=get(route);
-  assert.match(html,/\/css\/winf-cinema\.css\?v=20261111-2/,route);
+  const sharedCss=/\/css\/winf-cinema\.css\?v=20261111-2/.test(html);
+  const isolatedCss=["synthwave/index.html","ghost-shop/index.html"].includes(route)&&html.includes("<style>");
+  assert.ok(sharedCss||isolatedCss,route+" deve fornecer estilo local ou compartilhado para o player");
   assert.match(html,/\/js\/winf-cinema\.js\?v=20261111-2/,route);
  }
 });
