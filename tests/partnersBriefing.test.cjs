@@ -114,9 +114,15 @@ test('nomenclatura e afirmacoes comerciais permanecem corretas', () => {
   assert.match(read('briefing/quiosque/index.html'), /Asset Light/);
 });
 
-test('logo oficial e CSS touch/hover sao preservados', () => {
+test('logo oficial vetorial ou legado aprovado e CSS touch/hover sao preservados', () => {
+  const logoVector = read('winf-logo.svg');
+  assert.match(logoVector, /<svg[^>]+viewBox=/);
+  assert.match(logoVector, /<path/);
   for (const p of pages) {
-    assert.ok(read(p).includes('winf-logo-white-official.png'), p);
+    assert.match(read(p), /(?:winf-logo-white-official\.png|\/winf-logo\.svg(?:\?[^"']*)?)/, p);
+  }
+  for (const p of ['partners/index.html', 'briefing/index.html']) {
+    assert.match(read(p), /\/winf-logo\.svg(?:\?[^"']*)?/);
   }
   for (const p of ['partners/landing.css','briefing/partners-experience.css','briefing/model-page.css']) {
     const css = read(p);
