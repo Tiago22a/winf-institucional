@@ -71,7 +71,45 @@
 @media(max-width:900px){.maw-mediacar-grid{grid-template-columns:1fr;min-height:0;gap:30px}.maw-mediacar h2{font-size:clamp(62px,10vw,108px)}.maw-mediacar-visual{height:auto;aspect-ratio:16/10;min-height:330px}.maw-mediacar-lead{max-width:740px}.maw-mediacar-points{margin-top:23px}}
 @media(max-width:600px){.maw-mediacar{padding-block:64px}.maw-mediacar h2{font-size:clamp(52px,12vw,78px);line-height:.98}.maw-mediacar .buttons{display:grid;grid-template-columns:1fr}.maw-mediacar .btn{width:100%;justify-content:space-between}.maw-mediacar-visual{aspect-ratio:4/5;min-height:350px}.maw-mediacar-brand{flex-wrap:wrap}.maw-mediacar-brand small{text-align:left}.maw-mediacar-points{gap:10px 15px}.maw-mediacar-visual .maw-mediacar-image,.maw-mediacar-visual .maw-mediacar-video{object-position:52% center}}
 @media(prefers-reduced-motion:reduce){.maw-mediacar-video{display:none!important}.maw-mediacar-image{transform:none}.maw-mediacar-visual *{transition:none!important}}
- .brands .maw-brand-product{padding:11px 15px;border:1px solid #ffffff80;color:#fff;font-size:10px;letter-spacing:.1em;font-weight:800;transition:background .2s}.brands .maw-brand-product:hover{background:#ffffff20}</style>
+ .brands .maw-brand-product{padding:11px 15px;border:1px solid #ffffff80;color:#fff;font-size:10px;letter-spacing:.1em;font-weight:800;transition:background .2s}.brands .maw-brand-product:hover{background:#ffffff20}
+/* M.A.W.™ — revisão da imagem institucional e precisão do lockup vetorial.
+   O Ghost que aparece na fotografia original permanece; não sobrepor outro.
+   O símbolo no cabeçalho usa o SVG já vetorizado e não pode ser distorcido. */
+.brand .maw-agency-mark,
+.brand img.maw-agency-mark{
+  display:block;
+  flex:0 0 auto;
+  width:clamp(180px,18.4vw,238px);
+  height:auto;
+  max-height:none;
+  aspect-ratio:336 / 97;
+  object-fit:contain;
+  image-rendering:auto;
+}
+.brand img.maw-parent-mark{
+  width:clamp(70px,7.5vw,91px);
+  height:auto;
+  max-height:none;
+  object-fit:contain;
+}
+.hero-frame>img:first-child{
+  object-position:54% 47%;
+  transform:none;
+}
+@media(hover:hover) and (pointer:fine){
+  .hero-frame:hover>img:first-child{
+    transform:scale(1.02);
+    transform-origin:center center;
+  }
+}
+@media(max-width:650px){
+  .brand img.maw-agency-mark{width:clamp(136px,39vw,175px)}
+  .brand img.maw-parent-mark{width:clamp(57px,15vw,74px)}
+  .brand{gap:clamp(7px,2vw,12px)}
+  .brand .bar{height:23px}
+  .hero-frame>img:first-child{object-position:56% center}
+}
+</style>
 
 <!-- WINF social / previews oficiais e URLs canônicas sem parâmetros -->
 
@@ -1298,7 +1336,7 @@
 <main id="conteudo">
 <section class="hero" aria-labelledby="titulo-maw"><div class="wrap hero-grid">
 <div><p class="kicker">WINF.inc® / MARKETING ADVANCED WINDOWFILM</p><h1 class="display" id="titulo-maw">VOCÊ NA LINHA DE FRENTE.<br><em>NÓS NOS BASTIDORES.</em></h1><p class="lead">A M.A.W.™ é a agência de marketing nativa em inteligência artificial do ecossistema WINF. Branding, campanhas, conteúdo e tecnologia para construir presença e apoiar a expansão da rede.</p><p class="sub">Estratégia centralizada. Identidade consistente. Execução coordenada para marcas, territórios e parceiros.</p><div class="buttons"><a class="btn" href="#estrutura">CONHECER A AGÊNCIA <span>↘</span></a><a class="btn alt" href="https://www.instagram.com/maw.winf/" target="_blank" rel="noopener noreferrer">VER CAMPANHAS NO INSTAGRAM <span>↗</span></a></div></div>
-<figure class="hero-frame"><img src="/briefing/media/asset-light-gestao-2026.webp" alt="Profissional em ambiente de gestão digital, representando a operação de marketing da rede WINF" width="1147" height="860" fetchpriority="high"><img class="frame-ghost" src="/aerocore/assets/ghost-symbol.png" alt="" aria-hidden="true" width="52" height="70"><figcaption class="frame-caption"><small>ESTRATÉGIA / BRANDING / CONTEÚDO / INTELIGÊNCIA</small><strong>UMA AGÊNCIA.<br><span>MUITOS TERRITÓRIOS.</span></strong></figcaption></figure>
+<figure class="hero-frame"><img src="/briefing/media/asset-light-gestao-2026.webp" alt="Profissional em ambiente de gestão digital, representando a operação de marketing da rede WINF" width="1147" height="860" fetchpriority="high"><figcaption class="frame-caption"><small>ESTRATÉGIA / BRANDING / CONTEÚDO / INTELIGÊNCIA</small><strong>UMA AGÊNCIA.<br><span>MUITOS TERRITÓRIOS.</span></strong></figcaption></figure>
 </div></section>
 <div class="strip"><div class="wrap strip-in"><strong>M.A.W.™ — MARKETING ADVANCED WINDOWFILM</strong><span>BY WINF.inc® &nbsp; / &nbsp; DO BRASIL PARA O MUNDO.</span></div></div>
 <section id="estrutura" class="section" aria-labelledby="estrutura-titulo"><div class="wrap">
