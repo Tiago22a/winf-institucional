@@ -46,10 +46,15 @@ test("Cinema: todos os pôsteres locais existem e nenhum fallback aponta para ar
 
 test("Briefing: filme aprovado com capa própria, sem vídeo genérico substituto",()=>{
  const html=get("briefing/index.html");
- assert.match(html,/data-src="\/briefing\/media\/winf-dominio-absoluto-manha\.mp4"/);
+ const films=["winf-dominio-absoluto-ghost-corrigido","winf-dominio-absoluto-manha"];
+ const src=(html.match(/data-src="(\/briefing\/media\/winf-dominio-absoluto-[^"]+\.mp4)"/)||[])[1];
+ assert.ok(src,"Filme específico do briefing deve ser configurado");
+ assert.ok(films.some(f=>src==="/briefing/media/"+f+".mp4"),"Video não aprovado no briefing: "+src);
+ assert.equal(exists(src),true,"Video aprovado deve existir: "+src);
+ const poster=src.replace(/\.mp4$/,".webp");
+ assert.ok(html.includes('src="'+poster+'"')||html.includes('poster="'+poster+'"'),"Capa correspondente deve existir no HTML: "+poster);
+ assert.equal(exists(poster),true,"Capa aprovada deve existir: "+poster);
  assert.doesNotMatch(html,/data-fallback-src="\/partners\/media\/hero\.mp4"/);
- assert.match(html,/class="(?:wc-film-poster|briefing-hero-poster)" src="\/briefing\/media\/winf-dominio-absoluto-manha\.webp"/);
- assert.doesNotMatch(html,/poster="\/briefing\/media\/winf-dominio-absoluto-manha\.jpg"/);
 });
 
 test("Cinema: mídias finais carregadas e conferíveis no repositório",()=>{
