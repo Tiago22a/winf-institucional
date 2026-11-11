@@ -302,21 +302,117 @@
 <meta name="twitter:description" content="Uma iniciativa social WINF em estruturação: comunidade, educação, tecnologia e oportunidades.">
 <meta name="twitter:image" content="https://winf.com.br/images/og/winf-share-partners-cuidar-e-conectar-1200x630.jpg">
 <meta name="twitter:image:alt" content="Imagem editorial WINF™ para WINF™: CUIDAR. E CONECTAR.. Fotografia ilustrativa.">
-</head><body class="pp-page pp-social"><a class="pp-skip" href="#conteudo">Pular para o conteúdo</a>
+<style>
+/* Cuidar & Conectar: identidade própria, posters e vídeos exclusivos da campanha */
+:root{--cc-lime:#85ea3e;--cc-ink:#09130d}
+.pp-social{background:#09130d!important;color:#f8fbf7}
+.pp-social .pp-header{background:#0b110d;border-bottom:1px solid #9bd06a40}
+.pp-social .pp-kicker,.pp-social .wc-kicker{color:var(--cc-lime)}
+.pp-social .pp-brand>span{color:#fff}
+.pp-social .pp-nav nav a:hover{color:var(--cc-lime)}
+.pp-social-hero--cinema.cc-hero{min-height:clamp(650px,86svh,920px);display:flex;align-items:center;position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(130deg,#08110b,#203423)}
+.pp-social-hero--cinema.cc-hero:before{display:none}
+.cc-hero .cc-hero-media{position:absolute;inset:0;z-index:0;overflow:hidden}
+.cc-hero-poster,.cc-hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.cc-hero-poster{filter:brightness(.75) saturate(.9)}
+.cc-hero-video{opacity:0;transition:opacity 1s ease;filter:brightness(.72) saturate(.88)}
+.cc-hero-video.wc-playing{opacity:.95}
+.cc-hero-shade{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#050906fa 0%,#050906ee 27%,#050906b2 51%,#05090643 80%),linear-gradient(0deg,#0509068b,transparent 32%);pointer-events:none}
+.cc-hero .cc-hero-copy{position:relative;z-index:2;width:min(1240px,calc(100% - 60px));padding:clamp(90px,11vw,165px) 0}
+.cc-overline{font:800 10px/1.6 Inter,sans-serif;letter-spacing:.21em;color:#dceadc;display:flex;gap:11px;align-items:center;text-transform:uppercase}
+.cc-overline:before{content:"";width:32px;height:3px;background:var(--cc-lime)}
+.cc-hero h1{font:400 clamp(67px,10vw,148px)/.93 Anton,Impact,sans-serif;letter-spacing:-.02em;text-transform:uppercase;margin:18px 0 0;max-width:850px;text-shadow:0 4px 30px #000a}
+.cc-hero h1 em{color:var(--cc-lime);font-style:normal}
+.cc-hero .cc-lead{font-size:clamp(19px,2vw,25px);max-width:550px;color:#fff!important;line-height:1.5;font-weight:650;margin:25px 0 0}
+.cc-hero .cc-sub{font-size:14px;max-width:560px;color:#d6e5d7!important;line-height:1.75;margin:15px 0 0}
+.cc-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.pp-social .cc-cta{display:inline-flex;align-items:center;justify-content:center;background:var(--cc-lime);color:#071308!important;border:1px solid var(--cc-lime);text-decoration:none;min-height:51px;padding:13px 21px;font:800 11px/1.5 Inter,sans-serif;letter-spacing:.08em;transition:transform .25s}
+.pp-social .cc-cta:hover{transform:translateY(-2px)}
+.pp-social .cc-cta--ghost{background:#07120bad;border-color:#c6f3b1a6;color:#fff!important}
+.cc-hero .cc-disclaimer{font-size:11px;max-width:570px;line-height:1.7;color:#b7c8ba!important;margin-top:26px}
+.cc-values{background:var(--cc-lime);padding:20px 0;color:#0b1b0c}
+.cc-values-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;width:min(1240px,calc(100% - 56px));margin:auto}
+.cc-values strong{font-size:11px;font-weight:800;letter-spacing:.16em}
+.cc-values i{width:5px;height:5px;background:#19321c;border-radius:50%}
+.cc-gallery{background:linear-gradient(150deg,#111f15,#08110b);padding:clamp(72px,8vw,120px) 0;border-bottom:1px solid #91ea643d}
+.cc-wrap{width:min(1240px,calc(100% - 56px));margin:auto}
+.cc-gallery-head{display:grid;grid-template-columns:1fr .7fr;gap:40px;align-items:end;margin-bottom:35px}
+.cc-kicker{font:800 10px Inter,sans-serif;letter-spacing:.22em;color:var(--cc-lime);text-transform:uppercase}
+.cc-gallery-head h2{font:400 clamp(50px,6vw,86px)/1 Anton,Impact,sans-serif;text-transform:uppercase;margin:17px 0 0}
+.cc-gallery-head h2 em{color:var(--cc-lime);font-style:normal}
+.cc-gallery-head p{font-size:15px;line-height:1.8;color:#bcd0c0;margin:0}
+.cc-photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cc-photo{margin:0;background:#0c1d11;border:1px solid #ace67e55;overflow:hidden}
+.cc-photo-frame{position:relative;aspect-ratio:16/9;background:radial-gradient(ellipse at center,#25472a,#0d1a10)}
+.cc-photo-frame img{position:absolute;z-index:1;inset:0;width:100%;height:100%;object-fit:contain;transition:filter .5s,transform .7s}
+.cc-photo-frame img[hidden]{display:none}
+.cc-photo:hover img{filter:brightness(1.11);transform:scale(1.018)}
+.cc-photo-fallback{position:absolute;inset:0;display:grid;place-items:center;padding:20px;color:#c7f2c0;font:400 25px Anton,Impact,sans-serif;letter-spacing:.08em;text-align:center}
+.cc-photo figcaption{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:20px;background:#0c180f}
+.cc-photo strong{font-size:11px;font-weight:800;letter-spacing:.08em;color:#fff}
+.cc-photo small{color:var(--cc-lime);font-size:10px}
+.cc-concept-note{font-size:11px;color:#adc2b0;margin:22px 0 0}
+.pp-social-cinema.cc-cinema{background:#eff4ed!important;color:#101b12!important;padding-block:clamp(65px,8vw,105px)}
+.cc-cinema .wc-head h2{color:#101a13}
+.cc-cinema .wc-head h2 em{color:#398742!important}
+.cc-cinema .wc-head p{color:#3f5c45!important}
+.cc-cinema .wc-film{border:1px solid #a5c39d!important;background:#102218}
+.cc-cinema .wc-film-caption{background:#112317!important;color:#fff}
+.cc-cinema .wc-film-caption span{color:#b4e3a7}
+.cc-cinema .wc-film-media{aspect-ratio:16/9}
+.cc-cinema .wc-poster-fallback{background:linear-gradient(110deg,#183f22,#0c1b11)}
+.cc-cinema .wc-film-poster[hidden]{display:none}
+.pp-social .pp-section{border-top:1px solid #a8d98831}
+.pp-social .pp-feature{border-color:#7fcb5a50;background:#111e16}
+.pp-social .pp-feature span{color:var(--cc-lime)}
+.pp-social .pp-feature h3{color:#fff}
+.pp-social .pp-closing{background:radial-gradient(ellipse at 80% 0%,#285a304b,transparent 55%),#07100a}
+@media(max-width:900px){.cc-gallery-head{grid-template-columns:1fr}.cc-photo-grid{grid-template-columns:1fr}.cc-hero-shade{background:linear-gradient(0deg,#050d08f5,#050d08cf 57%,#050d0876)}.cc-hero .cc-hero-copy{width:calc(100% - 44px)}}
+@media(max-width:600px){.pp-social-hero--cinema.cc-hero{min-height:760px}.cc-hero h1{font-size:clamp(62px,15vw,91px)}.cc-hero .cc-hero-copy{padding:100px 0 84px}.cc-hero .cc-lead{font-size:19px}.cc-hero .cc-sub{font-size:13px}.cc-hero-poster,.cc-hero-video{object-position:60% center}.cc-actions{display:grid;grid-template-columns:1fr}.cc-values-inner{justify-content:center;gap:10px 18px}.cc-values strong{font-size:9px}.cc-wrap{width:calc(100% - 34px)}.cc-gallery{padding:70px 0}.cc-gallery-head h2{font-size:clamp(50px,12vw,76px)}.cc-photo figcaption{padding:15px}}
+@media(prefers-reduced-motion:reduce){.cc-hero-video,.cc-cinema video{display:none!important}.cc-photo img,.cc-cta{animation:none!important;transition:none!important}}
+</style></head><body class="pp-page pp-social"><a class="pp-skip" href="#conteudo">Pular para o conteúdo</a>
 <header class="pp-header"><div class="pp-wrap pp-nav">
   <a class="pp-brand" href="/partners/" aria-label="WINF Partners — início"><img src="/briefing/media/winf-logo-white-official.png" alt="WINF™ — logomarca oficial" width="109" height="36"><span>PARTNERS<sup>™</sup></span></a>
   <nav aria-label="Navegação da expansão"><a href="/partners/#modalidades">LICENCIAMENTO</a><a href="/partners/#parcerias-comerciais">PARCERIAS</a><a href="/partners/ecossistema/">ECOSSISTEMA</a></nav>
 </div></header><main id="conteudo">
-<section class="pp-hub-hero pp-social-hero pp-social-hero--cinema"><div class="pp-social-hero-visual" aria-hidden="true"><video data-winf-cinema autoplay muted loop playsinline preload="metadata" tabindex="-1"><source data-src="/media/ecossistema/cuidar-conectar-community.mp4" type="video/mp4"></video></div><div class="pp-wrap"><p class="pp-kicker">WINF.inc® / IMPACTO SOCIAL — PROJETO EM ESTRUTURAÇÃO</p><h1>CUIDAR<br><em>&amp; CONECTAR.</em></h1><p>Conexões têm valor quando ampliam oportunidades reais. Uma proposta de atuação social do ecossistema WINF, concebida para começar com pilotos responsáveis, aprender com a comunidade e evoluir com transparência.</p><a class="pp-button pp-button-outline pp-social-hero-cta" href="#filmes">CONHEÇA O PROJETO <span aria-hidden="true">↓</span></a></div></section>
-<section class="wc-section pp-social-cinema" id="filmes" aria-label="Experiências audiovisuais WINF"><div class="wc-head"><div><p class="wc-kicker">CUIDAR & CONECTAR™ / PESSOAS EM PRIMEIRO LUGAR</p><h2>O CUIDADO SE VÊ.<br><em>A CONEXÃO SE SENTE.</em></h2></div><p>Duas cenas da nossa campanha visual: acolhimento na comunidade e aprendizagem com tecnologia. Conteúdo ilustrativo, sem representar ações sociais já realizadas.</p></div><div class="wc-film-grid"><figure class="wc-film"><div class="wc-film-media"><div class="wc-poster-fallback" aria-hidden="true"><span>PESSOAS. ENCONTROS. CUIDADO.</span></div><img class="wc-film-poster" src="/media/ecossistema/cuidar-conectar-community.webp" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"><video data-winf-cinema autoplay muted loop playsinline preload="none" tabindex="-1" aria-hidden="true"><source data-src="/media/ecossistema/cuidar-conectar-community.mp4" type="video/mp4"></video></div><figcaption class="wc-film-caption"><strong>PESSOAS E ENCONTROS</strong><span>01 / COMUNIDADE</span></figcaption></figure>
-<figure class="wc-film"><div class="wc-film-media"><div class="wc-poster-fallback" aria-hidden="true"><span>EDUCAÇÃO. INCLUSÃO. OPORTUNIDADES.</span></div><img class="wc-film-poster" src="/media/ecossistema/cuidar-conectar-education.webp" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"><video data-winf-cinema autoplay muted loop playsinline preload="none" tabindex="-1" aria-hidden="true"><source data-src="/media/ecossistema/cuidar-conectar-education.mp4" type="video/mp4"></video></div><figcaption class="wc-film-caption"><strong>EDUCAÇÃO E OPORTUNIDADES</strong><span>02 / INCLUSÃO</span></figcaption></figure></div></section>
-<section class="pp-section"><div class="pp-wrap"><p class="pp-kicker">01 / PROPÓSITO</p><div class="pp-section-heading"><h2>PESSOAS PRIMEIRO.<br><em>TECNOLOGIA A SERVIÇO.</em></h2><p>Cuidar & Conectar não é um produto comercial nem uma condição para se tornar licenciado.</p></div><div class="pp-feature-grid"><article class="pp-feature"><span>01 / EDUCAR</span><h3>CONHECIMENTO COMPARTILHADO</h3><p>Explorar ações educativas e caminhos de acesso a conteúdos úteis, com objetivos definidos para cada piloto.</p></article><article class="pp-feature"><span>02 / CONECTAR</span><h3>PESSOAS E PARCEIROS</h3><p>Criar pontes entre pessoas, comunidades e organizações interessadas em colaborar.</p></article><article class="pp-feature"><span>03 / APRENDER</span><h3>PILOTOS MENSURÁVEIS</h3><p>Testar formatos pequenos, ouvir participantes e avaliar resultados antes de uma expansão.</p></article></div></div></section>
-<section class="pp-section"><div class="pp-wrap"><p class="pp-kicker">02 / COMO ESTRUTURAR</p><div class="pp-section-heading"><h2>COMEÇAR PEQUENO.<br><em>CONSTRUIR COM CUIDADO.</em></h2><p>A direção proposta é estruturar um hub de iniciativas com governança clara e comunicação responsável.</p></div><ol class="pp-steps"><li><span>01</span><div><h3>DESENHO</h3><p>Definir público, necessidade, parceiros e critérios éticos de cada iniciativa.</p></div></li>
+<section class="pp-hub-hero pp-social-hero pp-social-hero--cinema cc-hero" aria-labelledby="cc-title">
+  <div class="pp-social-hero-visual cc-hero-media" aria-hidden="true">
+    <img class="cc-hero-poster" src="/media/ecossistema/cuidar-conectar-community.webp" alt="" fetchpriority="high" onerror="this.hidden=true">
+    <video class="cc-hero-video" data-winf-cinema autoplay muted loop playsinline preload="metadata" poster="/media/ecossistema/cuidar-conectar-community.webp" tabindex="-1"><source src="/media/ecossistema/cuidar-conectar-community.mp4" type="video/mp4"></video>
+  </div>
+  <div class="cc-hero-shade" aria-hidden="true"></div>
+  <div class="pp-wrap cc-hero-copy">
+    <p class="cc-overline">WINF.inc® / PROJETO SOCIAL EM ESTRUTURAÇÃO</p>
+    <h1 id="cc-title">CUIDAR<br><em>&amp; CONECTAR.</em></h1>
+    <p class="cc-lead">Pessoas primeiro. Conexões que abrem portas.</p>
+    <p class="cc-sub">Educação, inclusão e tecnologia para aproximar pessoas e criar possibilidades. Um projeto da WINF que começa pela escuta e quer crescer com responsabilidade.</p>
+    <div class="cc-actions"><a class="cc-cta" href="#historias">CONHECER A PROPOSTA ↓</a><a class="cc-cta cc-cta--ghost" href="#filmes">VER FILMES DA CAMPANHA ↗</a></div>
+    <p class="cc-disclaimer">Imagens e animações conceituais. Não representam atividades sociais já realizadas.</p>
+  </div>
+</section>
+<div class="cc-values" aria-label="Pilares do projeto"><div class="cc-values-inner"><strong>EDUCAÇÃO</strong><i aria-hidden="true"></i><strong>INCLUSÃO</strong><i aria-hidden="true"></i><strong>OPORTUNIDADES</strong><i aria-hidden="true"></i><strong>TRANSFORMAÇÃO</strong></div></div>
+<section class="cc-gallery" id="historias" aria-labelledby="cc-historias-titulo"><div class="cc-wrap">
+  <header class="cc-gallery-head"><div><span class="cc-kicker">01 / NOSSA IDENTIDADE VISUAL</span><h2 id="cc-historias-titulo">CONEXÕES<br><em>QUE INSPIRAM.</em></h2></div><p>O universo visual Cuidar & Conectar™ nasce de encontros, colaboração e educação. Cada cena apresenta uma possibilidade de futuro — com pessoas no centro de tudo.</p></header>
+  <div class="cc-photo-grid">
+    <figure class="cc-photo"><div class="cc-photo-frame"><div class="cc-photo-fallback" aria-hidden="true">PESSOAS. ENCONTROS. CUIDADO.</div><img src="/media/ecossistema/cuidar-conectar-community.webp" loading="lazy" decoding="async" alt="Arte original Cuidar & Conectar: gesto de acolhimento entre voluntário e criança" onerror="this.hidden=true"></div><figcaption><strong>01 / O PODER DE ESTAR PRESENTE</strong><small>Comunidade</small></figcaption></figure>
+    <figure class="cc-photo"><div class="cc-photo-frame"><div class="cc-photo-fallback" aria-hidden="true">APRENDER. CONECTAR. CRESCER.</div><img src="/media/ecossistema/cuidar-conectar-education.webp" loading="lazy" decoding="async" alt="Arte original Cuidar & Conectar: crianças aprendendo com tecnologia em oficina educativa" onerror="this.hidden=true"></div><figcaption><strong>02 / CONHECIMENTO COMPARTILHADO</strong><small>Educação</small></figcaption></figure>
+  </div>
+  <p class="cc-concept-note">Campanha ilustrativa criada para comunicar a proposta; imagens não documentam atividades executadas.</p>
+</div></section>
+<section class="wc-section pp-social-cinema cc-cinema" id="filmes" aria-label="Filmes da campanha Cuidar & Conectar™">
+  <div class="wc-head"><div><p class="wc-kicker">02 / CUIDAR & CONECTAR™ EM MOVIMENTO</p><h2>O CUIDADO SE VÊ.<br><em>A CONEXÃO SE SENTE.</em></h2></div><p>Dois filmes originais da campanha: acolhimento na comunidade e oficina educativa com tecnologia. Uma visão de possibilidades, não um registro de ações realizadas.</p></div>
+  <div class="wc-film-grid">
+    <figure class="wc-film"><div class="wc-film-media"><div class="wc-poster-fallback" aria-hidden="true"><span>PESSOAS. ENCONTROS. CUIDADO.</span></div><img class="wc-film-poster" src="/media/ecossistema/cuidar-conectar-community.webp" alt="" loading="lazy" decoding="async" onerror="this.hidden=true"><video data-winf-cinema autoplay muted loop playsinline preload="none" tabindex="-1" aria-label="Campanha Cuidar & Conectar: encontro comunitário"><source data-src="/media/ecossistema/cuidar-conectar-community.mp4" type="video/mp4"></video></div><figcaption class="wc-film-caption"><strong>PESSOAS E ENCONTROS</strong><span>01 / COMUNIDADE</span></figcaption></figure>
+    <figure class="wc-film"><div class="wc-film-media"><div class="wc-poster-fallback" aria-hidden="true"><span>EDUCAÇÃO. INCLUSÃO. OPORTUNIDADES.</span></div><img class="wc-film-poster" src="/media/ecossistema/cuidar-conectar-education.webp" alt="" loading="lazy" decoding="async" onerror="this.hidden=true"><video data-winf-cinema autoplay muted loop playsinline preload="none" tabindex="-1" aria-label="Campanha Cuidar & Conectar: oficina educativa"><source data-src="/media/ecossistema/cuidar-conectar-education.mp4" type="video/mp4"></video></div><figcaption class="wc-film-caption"><strong>EDUCAÇÃO E OPORTUNIDADES</strong><span>02 / INCLUSÃO</span></figcaption></figure>
+  </div>
+</section>
+<section class="pp-section" id="proposito"><div class="pp-wrap"><p class="pp-kicker">03 / PROPÓSITO</p><div class="pp-section-heading"><h2>PESSOAS PRIMEIRO.<br><em>TECNOLOGIA A SERVIÇO.</em></h2><p>Cuidar & Conectar não é um produto comercial nem uma condição para se tornar licenciado.</p></div><div class="pp-feature-grid"><article class="pp-feature"><span>01 / EDUCAR</span><h3>CONHECIMENTO COMPARTILHADO</h3><p>Explorar ações educativas e caminhos de acesso a conteúdos úteis, com objetivos definidos para cada piloto.</p></article><article class="pp-feature"><span>02 / CONECTAR</span><h3>PESSOAS E PARCEIROS</h3><p>Criar pontes entre pessoas, comunidades e organizações interessadas em colaborar.</p></article><article class="pp-feature"><span>03 / APRENDER</span><h3>PILOTOS MENSURÁVEIS</h3><p>Testar formatos pequenos, ouvir participantes e avaliar resultados antes de uma expansão.</p></article></div></div></section>
+<section class="pp-section"><div class="pp-wrap"><p class="pp-kicker">04 / COMO ESTRUTURAR</p><div class="pp-section-heading"><h2>COMEÇAR PEQUENO.<br><em>CONSTRUIR COM CUIDADO.</em></h2><p>A direção proposta é estruturar um hub de iniciativas com governança clara e comunicação responsável.</p></div><ol class="pp-steps"><li><span>01</span><div><h3>DESENHO</h3><p>Definir público, necessidade, parceiros e critérios éticos de cada iniciativa.</p></div></li>
 <li><span>02</span><div><h3>PILOTO</h3><p>Selecionar um escopo viável, autorizações e responsabilidades antes de começar.</p></div></li>
 <li><span>03</span><div><h3>ACOMPANHAMENTO</h3><p>Registrar o que foi entregue, custos, participação e aprendizados, com proteção de dados.</p></div></li>
 <li><span>04</span><div><h3>EXPANSÃO RESPONSÁVEL</h3><p>Ampliar somente depois de avaliação, transparência e recursos confirmados.</p></div></li></ol></div></section>
 <section class="pp-section pp-social-priorities" id="frentes" aria-labelledby="pp-social-priorities-title"><div class="pp-wrap">
-  <p class="pp-kicker">03 / FRENTES PARA ANÁLISE</p>
+  <p class="pp-kicker">05 / FRENTES PARA ANÁLISE</p>
   <div class="pp-section-heading"><h2 id="pp-social-priorities-title">EDUCAÇÃO QUE ABRE PORTAS.<br><em>CONEXÕES QUE TRANSFORMAM.</em></h2><p>Cuidar & Conectar™ nasce para aproximar pessoas, educação, tecnologia e oportunidades. As frentes abaixo são propostas para pilotos futuros, ainda sem participantes ou ações executadas confirmadas.</p></div>
   <div class="pp-feature-grid">
     <article class="pp-feature"><span>01 / EDUCAÇÃO</span><h3>CONHECIMENTO QUE TRANSFORMA</h3><p>Conceber oficinas, conteúdos e ações de inclusão digital para facilitar o acesso de crianças, jovens e comunidades ao conhecimento e às novas tecnologias.</p></article>
@@ -326,7 +422,7 @@
   <p class="pp-pilot-note">Cada iniciativa dependerá de escuta da comunidade, seleção transparente, orçamento, parceiros, autorização institucional, proteção de dados, consentimento para imagens e prestação de contas. Não há inscrições abertas nem benefícios garantidos.</p>
 </div></section>
 <div class="pp-wrap pp-social-note"><p><strong>Estado atual:</strong> conceito em planejamento. Esta página não anuncia benefícios garantidos, inscrições, repasses financeiros ou projetos já executados.</p></div>
-<section class="pp-closing"><div class="pp-wrap"><p class="pp-kicker">03 / CONEXÃO</p><h2>UMA BOA IDEIA PRECISA<br>DE RESPONSABILIDADE.</h2><p>Se você representa uma organização e deseja apresentar uma proposta, envie uma breve descrição para avaliação da equipe.</p><a class="pp-button" href="https://wa.me/5513997815375?text=Ol%C3%A1!%20Gostaria%20de%20apresentar%20uma%20proposta%20de%20colabora%C3%A7%C3%A3o%20para%20o%20Cuidar%20%26%20Conectar%20da%20WINF." target="_blank" rel="noopener noreferrer">APRESENTAR PROPOSTA <span aria-hidden="true">↗</span></a></div></section>
+<section class="pp-closing"><div class="pp-wrap"><p class="pp-kicker">06 / CONEXÃO</p><h2>UMA BOA IDEIA PRECISA<br>DE RESPONSABILIDADE.</h2><p>Se você representa uma organização e deseja apresentar uma proposta, envie uma breve descrição para avaliação da equipe.</p><a class="pp-button" href="https://wa.me/5513997815375?text=Ol%C3%A1!%20Gostaria%20de%20apresentar%20uma%20proposta%20de%20colabora%C3%A7%C3%A3o%20para%20o%20Cuidar%20%26%20Conectar%20da%20WINF." target="_blank" rel="noopener noreferrer">APRESENTAR PROPOSTA <span aria-hidden="true">↗</span></a></div></section>
 </main><footer class="pp-footer"><div class="pp-wrap pp-foot-cols">
   <div><img src="/briefing/media/winf-logo-white-official.png" width="109" height="36" alt="WINF™ — logomarca oficial"><p>DO BRASIL PARA O MUNDO.</p><small>WINF.inc® / WINF PARTNERS™</small></div>
   <nav aria-label="Links institucionais"><a href="/partners/">WINF Partners™</a><a href="/briefing/">Briefing</a><a href="/partners/distribuidores/">Distribuidores</a><a href="/partners/varejistas/">Varejistas</a><a href="/partners/ecossistema/">Projetos</a><a href="/partners/cuidar-e-conectar/">Cuidar &amp; Conectar</a><a href="/aerocore/policies/#privacidade">Privacidade</a></nav>
