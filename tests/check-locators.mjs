@@ -45,13 +45,19 @@ const tests=[
    assert.doesNotMatch(home,/href="\/aerocore\/onde-comprar\/"/);
    assert.match(home,/winf-active-territories\.js/);
  }],
- ['100 territory register has 4 active, Campina pré-ativação and 1 extra; Santos real landing/phone',()=>{
+ ['100 territory register has 1 active, 4 pre-activation and 1 extra; Santos real landing/phone',()=>{
    const list=JSON.parse(cities.match(/globalThis\.WINF_CIDADES\s*=\s*(\[[\s\S]*?\]);/)[1]);
    const extra=JSON.parse(cities.match(/globalThis\.WINF_UNIDADES_EXTRAS\s*=\s*(\[[\s\S]*?\]);/)[1]);
    assert.equal(list.length,100);
-   assert.equal(list.filter(x=>x.status==='ativa').length,4);
-   assert.equal(list.filter(x=>x.status==='pre_ativacao').length,1);
+   assert.equal(list.filter(x=>x.status==='ativa').length,1);
+   assert.equal(list.filter(x=>x.status==='pre_ativacao').length,4);
    assert.equal(list.find(x=>x.id==='campina-grande-pb')?.status,'pre_ativacao');
+   for(const id of ['sorocaba-sp','guaruja-sp','praia-grande-sp']) {
+     assert.equal(list.find(x=>x.id===id)?.status,'pre_ativacao');
+     assert.equal(list.find(x=>x.id===id)?.siteAtivo,true);
+   }
+   assert.equal(list.find(x=>x.id==='cuiaba-mt')?.status,'nao_ativa');
+
    assert.equal(extra.filter(x=>x.status==='ativa').length,1);
    const santos=list.find(x=>x.id==='santos-sp');
    assert.equal(santos.url,'/pelicula-de-controle-solar-santos-sp/');
