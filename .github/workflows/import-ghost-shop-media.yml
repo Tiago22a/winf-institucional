@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - 'uploads/ghost-shop-media.zip'
+      - 'uploads/ghost-shop-media-chunks/**'
   workflow_dispatch:
 permissions:
   contents: write
@@ -13,50 +14,63 @@ concurrency:
 jobs:
   import:
     runs-on: ubuntu-latest
-    timeout-minutes: 7
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
         with:
           persist-credentials: true
-      - name: Importar as cinco mídias aprovadas (sem substituições)
+      - name: Montar e validar as mídias originais aprovadas
         shell: bash
         run: |
           python3 - <<'PY'
-          import sys,zipfile,pathlib
-          zippath=pathlib.Path('uploads/ghost-shop-media.zip')
-          if not zippath.exists():
-              print('Nenhum pacote pendente.')
-              sys.exit(0)
-          allowed={f'media/ecossistema/{n}' for n in (
-            'ghost-shop-products.webp',
-            'ghost-shop-operation.webp',
-            'ghost-shop-products.mp4',
-            'ghost-shop-operation.mp4',
-            'ghost-shop-team.mp4'
-          )}
-          with zipfile.ZipFile(zippath) as z:
-              names=set(z.namelist())
-              assert names==allowed, f'Pacote não corresponde às mídias: {names ^ allowed}'
-              for n in sorted(allowed):
-                  info=z.getinfo(n)
-                  assert 5000 < info.file_size < 25000000, f'Tamanho inválido: {n}'
-                  raw=z.read(n)
-                  if n.endswith('.webp'):
-                      assert raw[:4]==b'RIFF' and raw[8:12]==b'WEBP',f'WebP inválido: {n}'
-                  else:
-                      assert b'ftyp' in raw[:32], f'MP4 inválido: {n}'
-                  dest=pathlib.Path(n)
-                  dest.parent.mkdir(parents=True,exist_ok=True)
+          import base64, pathlib, zipfile
+          media = pathlib.Path('media/ecossistema')
+          media.mkdir(parents=True,exist_ok=True)
+          folder = pathlib.Path('uploads/ghost-shop-media-chunks')
+          if folder.exists():
+              for stem, count in [('products',4),('operation',5)]:
+                  paths = sorted(folder.glob(f'{stem}-*.b64'))
+                  assert len(paths)==count, f'{stem}: esperado {count} partes, encontrados {len(paths)}'
+                  want = [f'{stem}-{i:02}.b64' for i in range(1,count+1)]
+                  assert [p.name for p in paths]==want, f'{stem}: sequência incompleta'
+                  encoded = ''.join(p.read_text(encoding='ascii') for p in paths)
+                  raw = base64.b64decode(encoded, validate=True)
+                  assert b'ftyp' in raw[:32] and len(raw)>100000, f'{stem}: vídeo inválido'
+                  dest=media / f'ghost-shop-{stem}.mp4'
                   dest.write_bytes(raw)
-                  print('PUBLICADO',n,len(raw))
+                  print('RECUPERADO',dest,len(raw))
+          archive=pathlib.Path('uploads/ghost-shop-media.zip')
+          if archive.exists():
+              allowed={f'media/ecossistema/ghost-shop-{n}' for n in
+                ('products.webp','operation.webp','products.mp4','operation.mp4','team.mp4')}
+              with zipfile.ZipFile(archive) as z:
+                  assert set(z.namelist())==allowed, 'Pacote de mídia inesperado'
+                  for filename in sorted(allowed):
+                      raw=z.read(filename)
+                      assert len(raw)>5000 and len(raw)<25000000,filename
+                      if filename.endswith('.mp4'):
+                          assert b'ftyp' in raw[:32],filename
+                      else:
+                          assert raw[:4]==b'RIFF' and raw[8:12]==b'WEBP',filename
+                      dest=pathlib.Path(filename)
+                      dest.parent.mkdir(parents=True, exist_ok=True)
+                      dest.write_bytes(raw)
+                      print('EXTRAÍDO',dest,len(raw))
+          assert (media / 'ghost-shop-products.mp4').is_file(), 'Vídeo de produtos ausente'
+          assert (media / 'ghost-shop-operation.mp4').is_file(), 'Vídeo de operação ausente'
           PY
-      - name: Versionar os vídeos e pôsteres no repositório
+      - name: Publicar vídeos no GitHub e limpar arquivos temporários
         shell: bash
         run: |
-          if [ ! -f uploads/ghost-shop-media.zip ]; then exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add media/ecossistema/ghost-shop-{products,operation,team}.mp4 media/ecossistema/ghost-shop-{products,operation}.webp
-          git rm -- uploads/ghost-shop-media.zip
-          git commit -m "media(ghost-shop): publicar fotos e animações originais"
-          git push
+          git add media/ecossistema/ghost-shop-{products,operation}.mp4
+          if [ -d uploads/ghost-shop-media-chunks ]; then git rm -r -- uploads/ghost-shop-media-chunks; fi
+          if [ -f uploads/ghost-shop-media.zip ]; then
+            git add media/ecossistema/ghost-shop-{products,operation,team}.mp4 media/ecossistema/ghost-shop-{products,operation}.webp
+            git rm -- uploads/ghost-shop-media.zip
+          fi
+          if git diff --cached --quiet; then echo 'Nenhuma nova mídia para publicar'; exit 0; fi
+          git commit -m "media(ghost-shop): publicar vídeos e artes originais"
+          git pull --rebase origin main
+          git push origin HEAD:main
