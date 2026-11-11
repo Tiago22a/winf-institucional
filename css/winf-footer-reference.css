@@ -13,3 +13,19 @@
 .wf-reference-footer .winf-footer-signoff{margin-top:46px;padding:0;max-width:1100px}.wf-reference-footer .winf-footer-signoff::before{width:112px;margin-bottom:30px}.wf-reference-footer .winf-footer-motto{font-size:12px;letter-spacing:.22em}.wf-reference-footer .winf-footer-credit{font-size:13px;gap:6px 8px}.wf-reference-footer .winf-footer-credit a{font-size:13px;font-weight:600;color:#f4f4f4;text-decoration:underline;text-underline-offset:4px}.wf-reference-footer .winf-footer-credit>span:first-child{font-size:11px;letter-spacing:.14em}.wf-reference-footer .winf-footer-maw-description{font-size:12px}.wf-reference-footer .winf-footer-legal{font-size:12px;color:#aaaab3}.wf-reference-footer .winf-footer-legal a{text-decoration:underline;text-underline-offset:4px}
 @media(max-width:700px){.wf-reference-footer{padding:72px 20px 44px}.wf-ref-primary{gap:10px 22px}.wf-ref-primary>a,.wf-ref-primary>span{font-size:12px;letter-spacing:.08em}.wf-ref-institutional{gap:8px 18px}.wf-ref-institutional>a{font-size:12px;letter-spacing:.06em;min-height:36px}.wf-reference-footer .winf-footer-motto{letter-spacing:.12em}.wf-reference-footer .wf-ref-brand{font-size:22px;margin-bottom:42px}}
 @media(max-width:380px){.wf-ref-primary>a,.wf-ref-primary>span{font-size:11px}.wf-ref-social{gap:6px}.wf-reference-footer .winf-footer-credit .winf-footer-maw-description{flex-basis:100%}}
+
+
+/* WINF | Acendimento suave das fotografias ao hover.
+   Exclui logomarcas, simbolos e SVGs de interface; respeita toque e movimento reduzido. */
+@media (hover:hover) and (pointer:fine) {
+  img:not([src*="logo"]):not([src*="mark"]):not([src*="symbol"]):not([class*="logo"]):not([class*="mark"]):not([class*="ghost"]):not([src$=".svg"]) {
+    transition:filter .42s ease,opacity .42s ease;
+  }
+  img:not([src*="logo"]):not([src*="mark"]):not([src*="symbol"]):not([class*="logo"]):not([class*="mark"]):not([class*="ghost"]):not([src$=".svg"]):hover,
+  :is(.brand-card,.product-card,.editorial,.gs-card,.gs-product,.portfolio-item,.gallery-item,.image-card,figure):hover img:not([src*="logo"]):not([src*="mark"]):not([src*="symbol"]):not([class*="logo"]):not([class*="mark"]):not([class*="ghost"]):not([src$=".svg"]) {
+    filter:brightness(1.2) contrast(1.04) !important;
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  img{transition-duration:0ms!important}
+}
