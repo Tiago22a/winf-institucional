@@ -1,246 +1,38 @@
 <!doctype html>
-<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#080a0f"><meta name="description" content="SYNTHWAVE.fm — rádio digital, soundscapes, playlists e podcasts."><title>SYNTHWAVE.fm | Rádio e experiências sonoras WINF</title><link rel="canonical" href="https://winf.com.br/synthwave/"><meta name="robots" content="index,follow">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script><script>tailwind.config={theme:{extend:{colors:{pink:'#ff007f',ink:'#080a0f'},fontFamily:{display:['Bebas Neue','sans-serif'],sans:['Plus Jakarta Sans','sans-serif'],brush:['Permanent Marker','cursive']}}}}</script>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#08090d"><meta name="robots" content="index,follow">
+<title>Synthwave.FM™ — Música, atmosfera e experiências | WINF.inc®</title>
+<meta name="description" content="Conheça a Synthwave.FM™, experiência cultural do ecossistema WINF. Uma nova frequência de música, atmosferas sonoras, rádio e descoberta. Entre na rádio digital.">
+<link rel="canonical" href="https://winf.com.br/synthwave/"><link rel="icon" href="/winf-logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{color-scheme:dark}*{box-sizing:border-box}body{background:#080a0f;color:#d5d8df;font-family:'Plus Jakarta Sans',sans-serif}h1,h2,h3{font-family:'Bebas Neue',sans-serif;letter-spacing:.025em}.btn{background:#ff007f;color:white;padding:.85rem 1.35rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;transition:.2s}.btn:hover{background:#ff3d9f;transform:translateY(-2px)}.btn-outline{border:1px solid #464956;padding:.8rem 1.15rem;text-transform:uppercase;font-size:.75rem;font-weight:800;letter-spacing:.08em}.btn-outline:hover{border-color:#ff007f;color:#ff007f}.panel{background:#14161d;border:1px solid #292c36}.tile{cursor:pointer;transition:transform .2s,border-color .2s}.tile:hover{transform:translateY(-4px);border-color:#ff007f}.nav.active{color:#ff007f}.nav:hover{color:white}.glow{text-shadow:0 0 45px #ff007f66}.paper{background:#f5efe4;color:#17181b;background-image:radial-gradient(#d8cfbe 0.75px, transparent 0.75px);background-size:20px 20px}.hero{background:radial-gradient(ellipse at 80% 10%,#5f174c66,transparent 43%),radial-gradient(ellipse at 0 90%,#16285877,transparent 50%),#080a0f}.scrollbar::-webkit-scrollbar{height:5px}.scrollbar::-webkit-scrollbar-thumb{background:#555}.pill{border:1px solid #464956;border-radius:999px;padding:.45rem .85rem;font-size:.75rem}.pill.selected{background:#ff007f;border-color:#ff007f;color:white}input,select,textarea{background:#161922;border:1px solid #3a3c47;padding:.8rem;color:white;max-width:100%}input:focus,select:focus{outline:1px solid #ff007f}button{cursor:pointer}button:disabled{opacity:.35;cursor:not-allowed}#visualizer{height:32px;width:95px}#visualizer span{display:inline-block;background:#ff007f;width:3px;margin-right:3px;vertical-align:middle;height:6px;animation:bars 1s ease-in-out infinite alternate;animation-play-state:paused}body.playing #visualizer span{animation-play-state:running}@keyframes bars{to{height:27px}}@media(max-width:650px){.hide-mobile{display:none}#nav{overflow-x:auto;white-space:nowrap}main{padding-bottom:130px}} 
-</style><link rel="stylesheet" href="/css/winf-cinema.css?v=20261111-2"><style>/* Atmosfera reservada: retirar destaque cyberpunk sem alterar funcionalidades */ :root{--synth-accent:#e0e2e5} .text-pink{color:#d7d8de!important}.bg-pink{background:#464a51!important}.border-pink{border-color:#d4d7dc!important}.btn{background:#343841}.btn:hover{background:#51545d}#visualizer span{background:#a6a9b0} .glow{text-shadow:none}</style>
-
-<style>
-/* SYNTHWAVE.fm — cenas autorais. Nenhuma fotografia herdada do Briefing. */
-#filmes{background:linear-gradient(145deg,#0c0d13,#10111d 58%,#080a11);border-top:0;padding-top:clamp(52px,6vw,90px);padding-bottom:clamp(50px,7vw,96px)}
-#filmes .wc-head h2{font-family:'Bebas Neue',sans-serif;letter-spacing:.02em;font-size:clamp(53px,6.5vw,101px)}
-#filmes .wc-head h2 em{color:#ec4193}
-#filmes .wc-film{border-color:#b7588d55;background:#0a0b13}
-#filmes .wc-film-media{background:radial-gradient(ellipse at 70% 40%,#542a4a,#131622 54%,#090a12)}
-#filmes .sw-film-fallback{position:absolute;inset:0;display:flex;align-items:flex-end;padding:clamp(20px,3vw,44px);z-index:0;background:radial-gradient(circle at 75% 24%,#ed368a2c,transparent 38%)}
-#filmes .sw-film-fallback span{font:400 clamp(25px,3vw,48px)/1.04 'Bebas Neue',Impact,sans-serif;color:#f7e8f1;letter-spacing:.03em;text-shadow:0 3px 20px #0008;max-width:310px}
-#filmes .wc-film-poster{z-index:1}
-#filmes .wc-film video{z-index:2}
-#filmes .wc-film-caption{background:#0c0d13}
-#filmes .wc-film-caption strong{font-family:'Plus Jakarta Sans',sans-serif;letter-spacing:.1em}
-#filmes .wc-film-caption span{color:#eb9dc8}
-@media(min-width:920px){#filmes .wc-film:first-child .wc-film-media{aspect-ratio:16/9}}
+:root{color-scheme:dark;--bg:#08090d;--text:#f5f6f9;--muted:#b5b9c8;--mag:#e44eab;--line:#ffffff2d}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:400 15px/1.7 Inter,Arial,sans-serif}a{color:inherit;text-decoration:none}a:focus-visible{outline:2px solid #fff;outline-offset:4px}img{max-width:100%;display:block}.w{width:min(1320px,calc(100% - 48px));margin:auto}
+.top{position:relative;z-index:5;border-bottom:1px solid var(--line);background:#08090e}.top .w{display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:78px}.brand{display:flex;align-items:center;gap:15px}.brand img{width:95px;height:auto}.brand b{border-left:1px solid #ffffff60;padding-left:14px;font:400 24px Anton,Impact,sans-serif;letter-spacing:.025em}.brand b span{color:var(--mag)}nav{display:flex;flex-wrap:wrap;gap:24px;align-items:center}nav a{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}nav a:hover{color:#f9a3d6}
+.hero{position:relative;isolation:isolate;min-height:min(850px,calc(100svh - 78px));overflow:hidden;display:flex;align-items:center;background:radial-gradient(ellipse at 78% 35%,#51143b75 0%,transparent 45%),radial-gradient(ellipse at 10% 100%,#19264b8c,transparent 53%),#090a0f}
+.hero .w{position:relative;z-index:2;padding-block:clamp(115px,13vw,200px);pointer-events:none}.hero .w>*{pointer-events:auto}.kicker{font-size:10px;letter-spacing:.24em;font-weight:800;text-transform:uppercase;color:#dfc4d8}.hero h1,.section h2,.closing h2{font:400 clamp(65px,10vw,156px)/.94 Anton,Impact,sans-serif;letter-spacing:-.022em;text-transform:uppercase;margin:24px 0}.hero h1 em,.section h2 em,.closing h2 em{font-style:normal;color:#969caa}.hero p{font-size:clamp(17px,2vw,23px);max-width:650px;color:#dce0e8;line-height:1.6;margin:0 0 20px}.hero small{display:block;color:#afb4c2;max-width:610px;line-height:1.7}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:35px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:22px;min-height:53px;padding:14px 23px;border:1px solid white;background:#fff;color:#0a0a0e;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;transition:transform .25s,background .25s,border-color .25s}.btn:hover{transform:translateY(-2px);background:#f4d5e9}.btn.alt{background:#090a0f9e;color:#fff;border-color:#ffffff88}.btn.alt:hover{background:#ffffff1a}
+.visual{position:absolute;z-index:-1;inset:0 0 0 37%;overflow:hidden;pointer-events:none;mask-image:linear-gradient(90deg,transparent,#000 23%)}.disc{position:absolute;width:min(58vw,720px);aspect-ratio:1;top:50%;left:17%;translate:0 -50%;border-radius:50%;border:1px solid #ffffff30;background:repeating-radial-gradient(circle at center,#10111a 0 2px,#20202b 3px 4px,#090910 5px 7px,#232332 8px 9px);box-shadow:0 0 0 32px #c1329310,0 0 90px #ed53ac3d,inset 0 0 150px #000;animation:sw-spin 26s linear infinite}.disc:after{content:"";position:absolute;inset:37%;border-radius:50%;background:radial-gradient(circle at center,#05050b 0 12%,#f1d0e3 14% 17%,#cb378d 18% 48%,#1a1528 49%);box-shadow:0 0 25px #f34bad88}.beam{position:absolute;inset:0;opacity:.8;background:linear-gradient(130deg,transparent 50%,#f446ac16 65%,transparent 74%)}
+.wave{position:absolute;bottom:8%;right:8%;display:flex;gap:7px;align-items:center;height:95px}.wave i{display:block;width:4px;height:var(--h);border-radius:5px;background:linear-gradient(#ffb8e4,#cb409b);box-shadow:0 0 15px #fd66c4a0;animation:sw-wave 1.6s ease-in-out infinite alternate;animation-delay:var(--d)}
+.section{padding-block:clamp(80px,9vw,135px);border-top:1px solid var(--line)}.heading{display:grid;grid-template-columns:1.1fr .6fr;gap:40px;align-items:end;margin-bottom:40px}.heading h2{font-size:clamp(48px,6vw,90px);margin:12px 0 0}.heading p{color:var(--muted);max-width:450px}.frames{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.frame{margin:0;border:1px solid #ffffff3a;background:#14151e;overflow:hidden}.frame-media{aspect-ratio:16/10;position:relative;overflow:hidden;isolation:isolate}.frame-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .4s}.frame-media video.wc-playing{opacity:1}.frame-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;background:radial-gradient(circle at 50% 40%,#8b256c70,transparent 45%),linear-gradient(140deg,#181625,#07090d)}.frame-fallback i{width:clamp(130px,18vw,250px);aspect-ratio:1;border-radius:50%;background:repeating-radial-gradient(circle,#1d1e2c 0 2px,#06060d 3px 6px);box-shadow:0 0 45px #e1529b42;animation:sw-spin 25s linear infinite}.frame-fallback strong{font:400 clamp(25px,3vw,43px) Anton,Impact,sans-serif;letter-spacing:.05em;text-align:center;margin-top:15px}.frame figcaption{display:flex;justify-content:space-between;gap:16px;padding:19px 22px;font-size:11px;letter-spacing:.08em;font-weight:800}.frame figcaption span{color:#adb0bc;font-weight:500}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{border:1px solid #ffffff30;padding:clamp(22px,3vw,37px);background:linear-gradient(135deg,#161720,#090a0f)}.card small{font-weight:800;color:#c6a3bc;letter-spacing:.16em;font-size:10px}.card h3{font:400 38px/1.02 Anton,Impact,sans-serif;text-transform:uppercase;margin:50px 0 14px}.card p{color:#b7bbc9;font-size:13px;margin:0;line-height:1.75}.card:hover{border-color:#edb1d6}
+.closing{padding:clamp(100px,13vw,175px) 0;text-align:center;background:radial-gradient(ellipse at 50% 110%,#6d1c5473,transparent 60%),#090a10}.closing h2{font-size:clamp(55px,7vw,106px)}.closing p{max-width:650px;margin:0 auto;color:var(--muted)}.closing .actions{justify-content:center}
+.foot{border-top:1px solid var(--line);padding:32px 0;color:#b2b3be}.foot .w{display:flex;align-items:center;justify-content:space-between;gap:25px;flex-wrap:wrap}.foot img{width:95px}.foot small{letter-spacing:.1em}
+@keyframes sw-spin{to{transform:rotate(360deg)}}@keyframes sw-wave{to{height:12px;opacity:.65}}
+@media(max-width:800px){.top .w{flex-wrap:wrap;padding-block:15px}.hero{min-height:660px}.hero .w{padding-block:120px}.visual{inset:0;opacity:.4;mask-image:none}.disc{width:100vw;left:25%;top:40%}.heading{grid-template-columns:1fr}.frames{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.section{padding-block:72px}.hero h1{font-size:clamp(65px,13vw,110px)}.frame figcaption{padding:14px}}
+@media(max-width:450px){.w{width:calc(100% - 32px)}.brand b{font-size:21px}.top nav{gap:14px}nav a{font-size:10px}.hero h1{font-size:clamp(60px,16vw,83px)}.hero .w{padding-block:100px}.hero{min-height:610px}.btn{width:100%}.frame-fallback strong{font-size:30px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.disc,.wave i,.frame-fallback i{animation:none}.frame-media video{display:none}.btn{transition:none}}
 </style>
-<!-- WINF social / previews oficiais e URLs canônicas sem parâmetros -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- WINF social / previews oficiais e URLs canônicas sem parâmetros -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- WINF social / previews oficiais e URLs canônicas sem parâmetros -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- WINF social / previews oficiais e URLs canônicas sem parâmetros -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- WINF social / previews oficiais e URLs canônicas sem parâmetros -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- WINF social / previews oficiais e URLs canônicas sem parâmetros -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- WINF social / previews oficiais e URLs canônicas sem parâmetros -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- WINF social / previews oficiais e URLs canônicas sem parâmetros -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- WINF social / previews oficiais e URLs canônicas sem parâmetros -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- WINF social / previews oficiais e URLs canônicas sem parâmetros -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- WINF social / previews oficiais e URLs canônicas sem parâmetros -->
-<meta property="og:type" content="website">
-<meta property="og:locale" content="pt_BR">
-<meta property="og:site_name" content="WINF™">
-<meta property="og:title" content="SYNTHWAVE.fm | Rádio e experiências sonoras WINF">
-<meta property="og:description" content="SYNTHWAVE.fm — rádio digital, soundscapes, playlists e podcasts.">
-<meta property="og:url" content="https://winf.com.br/synthwave/">
-<meta property="og:image" content="https://winf.com.br/images/og/winf-share-synthwave-1200x630.jpg">
-<meta property="og:image:secure_url" content="https://winf.com.br/images/og/winf-share-synthwave-1200x630.jpg">
-<meta property="og:image:type" content="image/jpeg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Imagem editorial WINF™ para WINF™: S YNTHWAVE.FM. Fotografia ilustrativa.">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="SYNTHWAVE.fm | Rádio e experiências sonoras WINF">
-<meta name="twitter:description" content="SYNTHWAVE.fm — rádio digital, soundscapes, playlists e podcasts.">
-<meta name="twitter:image" content="https://winf.com.br/images/og/winf-share-synthwave-1200x630.jpg">
-<meta name="twitter:image:alt" content="Imagem editorial WINF™ para WINF™: S YNTHWAVE.FM. Fotografia ilustrativa.">
-</head>
-<body class="min-h-screen flex flex-col">
-<header class="sticky top-0 z-40 bg-ink/95 backdrop-blur border-b border-white/10"><div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3 px-4 py-4">
-<button onclick="go('home')" class="text-white font-display text-3xl tracking-wider">SYNTH<span class="text-pink">WAVE</span><span class="text-sm">.fm</span></button>
-<nav id="nav" class="flex gap-4 lg:gap-7 items-center text-[11px] font-extrabold tracking-widest uppercase"><button class="nav active" data-nav="home" onclick="go('home')">Início</button><button class="nav" data-nav="live" onclick="go('live')">Ao Vivo</button><button class="nav" data-nav="playlists" onclick="go('playlists')">Playlists</button><button class="nav" data-nav="podcasts" onclick="go('podcasts')">Podcasts</button><button class="nav" data-nav="explore" onclick="go('explore')">Explorar</button><button class="nav" data-nav="about" onclick="go('about')">Sobre</button></nav>
-<button onclick="openPremium()" class="text-[11px] tracking-widest font-black uppercase border border-pink text-pink px-4 py-2">Premium +</button></div></header>
-<section class="wc-section" id="filmes" aria-label="Experiências audiovisuais WINF"><div class="wc-head"><div><p class="wc-kicker">SYNTHWAVE.FM / CULTURA E EXPERIÊNCIA</p><h2>UM RITMO PRÓPRIO.<br><em>SEM EXCESSOS.</em></h2></div><p>Luxo discreto, cultura e uma atmosfera reservada. Dois filmes editoriais; a experiência sonora permanece independente e sujeita às licenças de conteúdo.</p></div><div class="wc-film-grid"><figure class="wc-film"><div class="wc-film-media"><div class="sw-film-fallback" aria-hidden="true"><span>A MÚSICA CRIA ATMOSFERAS.</span></div><img class="wc-film-poster" src="/media/ecossistema/synthwave-hero.webp" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"><video data-winf-cinema autoplay muted loop playsinline preload="none" tabindex="-1" aria-hidden="true"><source data-src="/media/ecossistema/synthwave-hero.mp4" type="video/mp4"></video></div><figcaption class="wc-film-caption"><strong>O SOM EM PRIMEIRO PLANO</strong><span>01 / CULTURA</span></figcaption></figure>
-<figure class="wc-film"><div class="wc-film-media"><div class="sw-film-fallback" aria-hidden="true"><span>UMA EXPERIÊNCIA PARA SENTIR.</span></div><img class="wc-film-poster" src="/media/ecossistema/synthwave-experience.webp" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"><video data-winf-cinema autoplay muted loop playsinline preload="none" tabindex="-1" aria-hidden="true"><source data-src="/media/ecossistema/synthwave-experience.mp4" type="video/mp4"></video></div><figcaption class="wc-film-caption"><strong>UMA EXPERIÊNCIA RESERVADA</strong><span>02 / ATMOSFERA</span></figcaption></figure></div></section>
-<main id="app" class="w-full flex-1"></main>
-<footer class="border-t border-white/10 px-5 pt-14 pb-32 bg-[#0d0e14]"><div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-9"><div><div class="font-display text-4xl text-white">SYNTH<span class="text-pink">WAVE</span>.fm</div><p class="mt-3 text-sm text-gray-500">A trilha sonora de quem está sempre em movimento.</p></div><div><div class="text-xs uppercase font-black text-white tracking-widest mb-4">Explore</div><div class="flex flex-wrap gap-4 text-sm text-gray-400"><button onclick="go('live')">Rádio</button><button onclick="go('playlists')">Playlists</button><button onclick="go('podcasts')">Podcasts</button><button onclick="go('about')">Manifesto</button><button onclick="go('credits')">Créditos musicais</button></div></div><div><div class="text-xs uppercase font-black text-white tracking-widest mb-4">WINF INTERNATIONAL GROUP</div><p class="text-xs text-gray-500">Experiência sonora independente. © <span id="year"></span> SYNTHWAVE.fm</p><button onclick="go('admin')" class="text-xs mt-4 text-gray-600 hover:text-pink">Painel administrativo</button></div></div></footer>
-<div id="audioStatus" role="status" aria-live="polite" class="text-xs text-pink fixed bottom-[90px] left-5 z-[51]"></div><div class="fixed z-50 bottom-0 left-0 right-0 border-t border-white/15 bg-[#11131b]/95 backdrop-blur px-3 md:px-7 py-3"><div class="max-w-7xl mx-auto flex items-center gap-3 md:gap-6"><img id="nowCover" class="h-12 w-12 md:h-16 md:w-16 object-cover rounded-sm" alt="Capa da faixa"><div class="min-w-0 flex-1"><p id="nowTitle" class="text-xs md:text-sm text-white font-bold truncate">SYNTHWAVE.fm Radio</p><p id="nowArtist" class="text-[10px] md:text-xs text-gray-500 truncate">Escolha uma faixa</p><a id="nowCredit" class="text-[10px] text-pink hover:underline hidden truncate block" target="_blank" rel="noopener noreferrer"></a></div><div class="hide-mobile min-w-[132px]"><div id="visualizer"></div><div id="timeLabel" class="text-[10px] text-gray-500">0:00 / 0:00</div><div class="h-1 bg-white/10 mt-1"><div id="progressBar" class="bg-pink h-full w-0 transition-[width] duration-200"></div></div></div><button onclick="previous()" aria-label="Anterior" class="text-white text-lg">⏮</button><button id="playBtn" onclick="togglePlay()" aria-label="Reproduzir ou pausar" class="bg-pink text-white h-11 w-11 rounded-full font-bold text-lg">▶</button><button onclick="next()" aria-label="Próxima" class="text-white text-lg">⏭</button><label class="hide-mobile text-gray-400 text-xs">VOL <input type="range" min="0" max="100" value="65" id="volume" oninput="setVolume(this.value)" class="align-middle w-24 accent-pink"></label></div></div>
-<div id="modal" class="fixed inset-0 hidden z-[70] bg-black/80 backdrop-blur-sm p-5 items-center justify-center" onclick="if(event.target===this)closePremium()"><div class="panel max-w-lg w-full p-8 relative"><button onclick="closePremium()" class="absolute top-4 right-5 text-2xl">×</button><p class="text-pink uppercase text-xs font-black tracking-[.3em]">Exclusive access</p><h2 class="text-white text-6xl mt-3">SYNTHWAVE PREMIUM</h2><p class="mt-4 text-gray-400 leading-relaxed">Uma experiência sonora sem limites. A ativação premium é uma prévia e ainda não processa pagamentos.</p><button onclick="closePremium()" class="btn mt-7 w-full">Entendi</button></div></div>
-<script src="./music-library.js" defer></script><script src="./audio-engine.js" defer></script><script src="./app.js" defer></script>
-<div style="position:fixed;z-index:60;right:16px;top:16px"><a href="/partners/ecossistema/" style="display:inline-block;background:#10131ddf;color:#fff;border:1px solid #ffffff88;padding:10px 15px;text-decoration:none;font:700 11px sans-serif;letter-spacing:.05em">← ECOSSISTEMA WINF</a></div><script defer src="/js/winf-cinema.js?v=20261111-2"></script></body></html>
+</head><body>
+<header class="top"><div class="w"><a class="brand" href="/"><img src="/winf-logo.svg" alt="WINF™"><b>SYNTH<span>WAVE</span>.FM™</b></a><nav aria-label="Navegação"><a href="#conceito">CONCEITO</a><a href="#experiencia">EXPERIÊNCIA</a><a href="/partners/ecossistema/">ECOSSISTEMA</a><a href="/synthwave/radio/">ENTRAR NA RÁDIO ↗</a></nav></div></header>
+<main>
+<section class="hero" aria-labelledby="sw-title"><div class="visual" aria-hidden="true"><div class="disc"></div><div class="beam"></div><div class="wave"><i style="--h:12px;--d:0.00s"></i><i style="--h:25px;--d:0.07s"></i><i style="--h:38px;--d:0.14s"></i><i style="--h:51px;--d:0.21s"></i><i style="--h:64px;--d:0.28s"></i><i style="--h:77px;--d:0.35s"></i><i style="--h:14px;--d:0.42s"></i><i style="--h:27px;--d:0.49s"></i><i style="--h:40px;--d:0.56s"></i><i style="--h:53px;--d:0.63s"></i><i style="--h:66px;--d:0.70s"></i><i style="--h:79px;--d:0.77s"></i><i style="--h:16px;--d:0.84s"></i><i style="--h:29px;--d:0.91s"></i><i style="--h:42px;--d:0.98s"></i><i style="--h:55px;--d:1.05s"></i><i style="--h:68px;--d:1.12s"></i><i style="--h:81px;--d:1.19s"></i><i style="--h:18px;--d:1.26s"></i><i style="--h:31px;--d:1.33s"></i><i style="--h:44px;--d:1.40s"></i></div></div><div class="w"><span class="kicker">WINF.inc® / CULTURA DIGITAL / SYNTHWAVE.FM™</span><h1 id="sw-title">O SOM MUDA<br><em>A ATMOSFERA.</em></h1><p>Existe um lugar entre a música e o momento. Um universo de descobertas sonoras, novas frequências e experiências que acompanham seu ritmo.</p><small>A Synthwave.FM™ é a frente cultural do ecossistema WINF. Uma experiência digital de rádio, playlists, ambientações e conteúdos em evolução.</small><div class="actions"><a class="btn" href="/synthwave/radio/">ENTRAR NA SYNTHWAVE ↗</a><a class="btn alt" href="#conceito">CONHECER A EXPERIÊNCIA ↓</a></div></div></section>
+<section class="section" id="conceito"><div class="w"><div class="heading"><div><span class="kicker">01 / CULTURA QUE CONECTA</span><h2>SUA FREQUÊNCIA.<br><em>SEU UNIVERSO.</em></h2></div><p>Da escuta concentrada aos momentos de descoberta: uma identidade musical que conecta tecnologia, criatividade e lifestyle, sem perder a liberdade de explorar.</p></div><div class="cards"><article class="card"><small>01 / RADIO</small><h3>SINTONIZE.</h3><p>Entre na experiência da rádio, descubra faixas e navegue pelos canais experimentais disponíveis.</p></article><article class="card"><small>02 / EXPERIÊNCIA</small><h3>SINTA.</h3><p>Atmosferas, texturas sonoras e uma linguagem visual que transforma cada sessão em um momento próprio.</p></article><article class="card"><small>03 / DESCOBERTA</small><h3>EXPLORE.</h3><p>Playlists, conteúdo editorial e novas possibilidades de conexão com as marcas do ecossistema.</p></article></div></div></section>
+<section class="section" id="experiencia"><div class="w"><div class="heading"><div><span class="kicker">02 / IMAGENS E MOVIMENTO</span><h2>O RITMO TAMBÉM<br><em>SE VÊ.</em></h2></div><p>Os dois filmes originais da campanha Synthwave ganharam lugares próprios. Enquanto os arquivos finais não estiverem no servidor, a identidade animada mantém a apresentação completa.</p></div><div class="frames">
+<figure class="frame"><div class="frame-media"><div class="frame-fallback" aria-hidden="true"><i></i><strong>A MÚSICA CRIA ATMOSFERAS.</strong></div><video autoplay muted loop playsinline preload="none" data-winf-cinema aria-label="Toca-discos da campanha Synthwave.FM"><source data-src="/media/ecossistema/synthwave-hero.mp4" type="video/mp4"></video></div><figcaption>01 / O VINIL EM MOVIMENTO <span>VISUAL / ATMOSFERA</span></figcaption></figure>
+<figure class="frame"><div class="frame-media"><div class="frame-fallback" aria-hidden="true"><i></i><strong>UM LUGAR PARA ESCUTAR.</strong></div><video autoplay muted loop playsinline preload="none" data-winf-cinema aria-label="Sala de escuta da campanha Synthwave.FM"><source data-src="/media/ecossistema/synthwave-experience.mp4" type="video/mp4"></video></div><figcaption>02 / A EXPERIÊNCIA SONORA <span>CULTURA / DESCOBERTA</span></figcaption></figure>
+</div></div></section>
+<section class="closing"><div class="w"><span class="kicker">03 / ENTER THE FREQUENCY</span><h2>NÃO É SÓ OUVIR.<br><em>É ENTRAR.</em></h2><p>A apresentação termina aqui. A experiência começa na Synthwave.FM™.</p><div class="actions"><a class="btn" href="/synthwave/radio/">ENTRAR NA SYNTHWAVE ↗</a><a class="btn alt" href="/partners/ecossistema/">EXPLORAR O ECOSSISTEMA ↗</a></div></div></section>
+</main><footer class="foot"><div class="w"><img src="/winf-logo.svg" alt="WINF™ — logo oficial"><small>SYNTHWAVE.FM™ / WINF.inc® — DO BRASIL PARA O MUNDO.</small><a href="/maw/" style="font-size:11px">M.A.W.™ ↗</a></div></footer>
+<script defer src="/js/winf-cinema.js?v=20261111-2"></script></body></html>
