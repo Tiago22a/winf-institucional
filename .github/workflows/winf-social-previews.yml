@@ -1,0 +1,48 @@
+name: WINF — Previews de Links (WhatsApp / Open Graph)
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'config/winf-social-content.json'
+      - 'scripts/winf-social-sitewide.mjs'
+      - 'scripts/check-winf-social-sitewide.mjs'
+      - '.github/workflows/winf-social-previews.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: winf-social-previews
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    name: Gerar e validar miniaturas oficiais
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Instalar gerador de imagens
+        run: npm install --no-save --package-lock=false sharp@0.34.4
+      - name: Gerar cards 1200x630 e atualizar metadados OG/Twitter
+        run: node scripts/winf-social-sitewide.mjs
+      - name: Validar todas as rotas, dimensões, EXIF e links
+        run: node scripts/check-winf-social-sitewide.mjs
+      - name: Publicar novos JPEGs e HTMLs no repositório
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -u
+          git add -A -- images/og docs/seo/winf-social-audit.json docs/media/winf-city-image-registry.json
+          if ! git diff --cached --quiet; then
+            git commit -m "fix(previews): publish clean versioned cards for all WINF share links"
+            git push origin HEAD:main
+          fi
