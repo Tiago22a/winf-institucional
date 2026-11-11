@@ -6,6 +6,8 @@ on:
       - 'css/mediacar-studio-v2.css'
       - 'css/mediacar-client-preview.css'
       - 'js/mediacar-client-preview.js'
+      - 'js/mediacar-image-prompts.js'
+      - 'media/ecossistema/mediacar-*-concept.svg'
       - 'tests/mediacar-client-preview.test.cjs'
       - 'media/brands/winf-logo-*'
       - 'tests/mediacar-studio-v2.test.cjs'
@@ -17,6 +19,8 @@ on:
       - 'css/mediacar-studio-v2.css'
       - 'css/mediacar-client-preview.css'
       - 'js/mediacar-client-preview.js'
+      - 'js/mediacar-image-prompts.js'
+      - 'media/ecossistema/mediacar-*-concept.svg'
       - 'tests/mediacar-client-preview.test.cjs'
       - 'tests/mediacar-studio-v2.test.cjs'
   workflow_dispatch:
@@ -31,5 +35,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Verificar sintaxe dos prompts
+        run: node --check js/mediacar-image-prompts.js
       - name: Testar simulador, apresentação do cliente e integração
         run: node --test tests/mediacar-studio-v2.test.cjs tests/mediacar-client-preview.test.cjs tests/mediacar-footer.test.cjs
