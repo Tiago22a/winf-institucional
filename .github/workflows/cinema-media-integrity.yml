@@ -2,6 +2,8 @@ name: WINF Cinema — Integridade de mídias e fallback
 on:
   pull_request:
     paths:
+      - 'media/ecossistema/**'
+      - 'briefing/media/winf-dominio-absoluto-manha.*'
       - 'js/winf-cinema.js'
       - 'css/winf-cinema.css'
       - 'briefing/index.html'
@@ -15,6 +17,8 @@ on:
   push:
     branches: [main]
     paths:
+      - 'media/ecossistema/**'
+      - 'briefing/media/winf-dominio-absoluto-manha.*'
       - 'js/winf-cinema.js'
       - 'css/winf-cinema.css'
       - 'tests/cinema-media-integrity.test.cjs'
