@@ -43,7 +43,34 @@
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
 
-.maw-mediacar{background:linear-gradient(125deg,#111319,#050607);}.maw-mediacar-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(240px,.9fr);gap:clamp(30px,6vw,90px);align-items:center}.maw-mediacar h2{font-size:clamp(46px,6vw,90px)}.maw-mediacar p:not(.kicker){max-width:590px;color:#c7c9cf}.maw-mediacar .btn{margin-top:21px}.maw-mediacar-preview{min-height:340px;border:1px solid #ffffff36;padding:clamp(25px,4vw,52px);display:flex;flex-direction:column;justify-content:space-between;background:radial-gradient(ellipse at 75% 40%,#272a35,#0b0c0f 66%);overflow:hidden}.maw-mediacar-preview>span,.maw-mediacar-preview small{font-size:10px;letter-spacing:.18em;color:#bbbfc8}.maw-mediacar-preview strong{font:400 clamp(70px,10vw,150px)/.84 Anton,Impact,sans-serif;letter-spacing:-.045em}.maw-mediacar-preview sup{font:16px Inter,sans-serif;vertical-align:top}.maw-mediacar-preview:hover{border-color:#ffffffb0;filter:brightness(1.2);transition:filter .4s,border-color .4s}@media(max-width:760px){.maw-mediacar-grid{grid-template-columns:1fr}.maw-mediacar-preview{min-height:250px}}
+
+/* MediaCar™ na M.A.W. — experiência editorial em escala real, imagem e vídeo originais. */
+.maw-mediacar{background:radial-gradient(ellipse at 84% 55%,#1c2329 0%,#0b0c0f 57%,#070809 100%);padding-block:clamp(76px,8vw,126px);overflow:hidden}
+.maw-mediacar-grid{display:grid;grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);gap:clamp(32px,5vw,84px);align-items:center;min-height:clamp(490px,45vw,660px)}
+.maw-mediacar-copy{min-width:0;position:relative;z-index:2}
+.maw-mediacar .kicker{color:#bfc5cf;letter-spacing:.22em}
+.maw-mediacar h2{font-size:clamp(59px,6.5vw,116px);line-height:.92;letter-spacing:-.022em;text-wrap:balance;margin:17px 0 29px}
+.maw-mediacar h2 em{font-style:normal;color:#959ba7}
+.maw-mediacar-lead{font-size:clamp(16px,1.42vw,20px);line-height:1.67;max-width:570px;color:#e5e7eb;margin:0 0 14px}
+.maw-mediacar-copy .maw-mediacar-note{font-size:13px;max-width:540px;color:#adb2bc;line-height:1.75;margin:0}
+.maw-mediacar .buttons{display:flex;align-items:stretch;gap:11px;flex-wrap:wrap;margin-top:29px}
+.maw-mediacar .btn{margin:0;min-height:52px;padding:14px 17px;font-size:10px;line-height:1.45;letter-spacing:.07em}
+.maw-mediacar-points{display:flex;align-items:center;flex-wrap:wrap;gap:12px 22px;margin-top:25px;padding-top:20px;border-top:1px solid #ffffff32}
+.maw-mediacar-points span{font-size:10px;font-weight:800;letter-spacing:.1em;color:#d7dae1;text-transform:uppercase}
+.maw-mediacar-points b{color:#9ea5b1;font-size:10px;margin-right:7px}
+.maw-mediacar-visual{position:relative;min-width:0;height:clamp(375px,42vw,640px);margin:0;background:#11151a;border:1px solid #ffffff38;overflow:hidden;isolation:isolate}
+.maw-mediacar-image,.maw-mediacar-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.maw-mediacar-image{z-index:0;filter:brightness(.88);transform:scale(1.01)}
+.maw-mediacar-video{z-index:1;opacity:0;transition:opacity 1s ease;filter:brightness(.88)}
+.maw-mediacar-video.is-playing{opacity:1}
+.maw-mediacar-visual:after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(0deg,#050607d9 0%,transparent 39%,#05060720 100%)}
+.maw-mediacar-brand{position:absolute;z-index:3;inset:auto 0 0;padding:clamp(21px,3vw,38px);display:flex;justify-content:space-between;gap:20px;align-items:end}
+.maw-mediacar-brand strong{font:400 clamp(43px,5vw,75px)/.9 Anton,Impact,sans-serif;letter-spacing:-.01em;color:white;text-shadow:0 3px 25px #000b}
+.maw-mediacar-brand small{color:#e2e3e6;font-size:10px;font-weight:700;letter-spacing:.14em;text-align:right;max-width:150px}
+.maw-mediacar-visual:hover .maw-mediacar-image{filter:brightness(1.06);transition:filter .5s}
+@media(max-width:900px){.maw-mediacar-grid{grid-template-columns:1fr;min-height:0;gap:30px}.maw-mediacar h2{font-size:clamp(62px,10vw,108px)}.maw-mediacar-visual{height:auto;aspect-ratio:16/10;min-height:330px}.maw-mediacar-lead{max-width:740px}.maw-mediacar-points{margin-top:23px}}
+@media(max-width:600px){.maw-mediacar{padding-block:64px}.maw-mediacar h2{font-size:clamp(52px,12vw,78px);line-height:.98}.maw-mediacar .buttons{display:grid;grid-template-columns:1fr}.maw-mediacar .btn{width:100%;justify-content:space-between}.maw-mediacar-visual{aspect-ratio:4/5;min-height:350px}.maw-mediacar-brand{flex-wrap:wrap}.maw-mediacar-brand small{text-align:left}.maw-mediacar-points{gap:10px 15px}.maw-mediacar-visual .maw-mediacar-image,.maw-mediacar-visual .maw-mediacar-video{object-position:52% center}}
+@media(prefers-reduced-motion:reduce){.maw-mediacar-video{display:none!important}.maw-mediacar-image{transform:none}.maw-mediacar-visual *{transition:none!important}}
  .brands .maw-brand-product{padding:11px 15px;border:1px solid #ffffff80;color:#fff;font-size:10px;letter-spacing:.1em;font-weight:800;transition:background .2s}.brands .maw-brand-product:hover{background:#ffffff20}</style>
 
 <!-- WINF social / previews oficiais e URLs canônicas sem parâmetros -->
@@ -635,8 +662,41 @@
 <div class="section-heading"><div><p class="kicker">04 / A AGÊNCIA DO ECOSSISTEMA</p><h2 class="display" id="marcas-titulo">UMA VISÃO.<br><em>VÁRIAS MARCAS.</em></h2></div><p>Apoio central de comunicação e expansão, adaptado às particularidades de cada marca e de cada operação. A disponibilidade dos serviços segue os planos e as condições aplicáveis.</p></div>
 <div class="brands" aria-label="Marcas e frentes do ecossistema"><span>WINF SELECT™</span><span>AEROCORE™</span><span>NEOSKIN™</span><span>CERAMIC ARMORING™</span><span>WINF PARTNERS™</span><span>GHOST SHOP™</span><span>SYNTHWAVE.FM</span><span>CUIDAR &amp; CONECTAR™</span><a class="maw-brand-product" href="#mediacar">MEDIACAR™ ↗</a></div>
 </div></section>
-<section class="section maw-mediacar" id="mediacar" aria-labelledby="maw-mediacar-title"><div class="wrap maw-mediacar-grid"><div><p class="kicker">05 / PRODUTO CRIATIVO M.A.W.™</p><h2 class="display" id="maw-mediacar-title">MEDIACAR™.<br><em>SUA MARCA EM MOVIMENTO.</em></h2><p>Uma frente de mídia em veículos concebida no universo criativo da M.A.W.™. Explore espaços publicitários, posicione marcas sobre imagens do veículo e monte uma proposta visual para apresentação.</p><p class="muted">Simulador conceitual, com cotas e valores configuráveis. A aplicação real depende de aprovação, medidas e requisitos legais.</p><div class="buttons" style="margin-top:22px"><a class="btn" href="/mediacar/">CONHECER MEDIACAR™ <span aria-hidden="true">↗</span></a><a class="btn alt" href="/mediacar/#simulador">EXPERIMENTAR SIMULADOR <span aria-hidden="true">↗</span></a></div></div><div class="maw-mediacar-preview" aria-hidden="true"><span>MAW / CREATIVE PRODUCTS</span><strong>MEDIA<br>CAR<sup>™</sup></strong><small>OUT OF HOME / MOBILIDADE / MARCAS</small></div></div></section>
-<section class="cta" aria-labelledby="cta-titulo"><div class="wrap cta-grid"><div><p class="kicker">05 / CONEXÃO</p><h2 class="display" id="cta-titulo">VOCÊ ENTREGA EXCELÊNCIA.<br><span style="color:#9297a1">NÓS CONECTAMOS A COMUNICAÇÃO.</span></h2><p>Conheça a linguagem, as ideias e o trabalho criativo da agência. Para licenciamento e expansão, acesse o canal oficial da WINF Partners™.</p></div><div class="buttons"><a class="btn" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/maw.winf/">CONHECER @MAW.WINF <span>↗</span></a><a class="btn alt" href="/partners/">CONHECER WINF PARTNERS™ <span>↗</span></a><a class="btn alt" href="/partners/ecossistema/">EXPLORAR O ECOSSISTEMA <span>↗</span></a></div></div></section>
+<section class="section maw-mediacar" id="mediacar" aria-labelledby="maw-mediacar-title">
+  <div class="wrap maw-mediacar-grid">
+    <div class="maw-mediacar-copy">
+      <p class="kicker">05 / M.A.W.™ CREATIVE PRODUCTS</p>
+      <h2 class="display" id="maw-mediacar-title">O CARRO<br>VIRA <em>MÍDIA.</em></h2>
+      <p class="maw-mediacar-lead">Visual de competição. Circulação de verdade. O MediaCar™ transforma um carro de uso cotidiano em uma plataforma de publicidade para marcas que querem ser vistas.</p>
+      <p class="maw-mediacar-note">Uma proposta de cotas publicitárias com mensalidade e campanhas em ciclos de seis meses. A execução depende de contrato, autorizações e regras aplicáveis.</p>
+      <div class="buttons">
+        <a class="btn" href="/mediacar/">CONHECER MEDIACAR™ <span aria-hidden="true">↗</span></a>
+        <a class="btn alt" href="/mediacar/#simulador">EXPERIMENTAR O SIMULADOR <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="maw-mediacar-points" aria-label="Características do MediaCar">
+        <span><b>01</b> VISUAL RACING</span>
+        <span><b>02</b> COTAS MENSAIS</span>
+        <span><b>03</b> CICLO SEMESTRAL</span>
+      </div>
+    </div>
+    <figure class="maw-mediacar-visual" aria-label="Campanha audiovisual original MediaCar">
+      <img class="maw-mediacar-image" src="/media/ecossistema/mediacar-bmw.webp" alt="Carro personalizado com identidade visual esportiva para publicidade MediaCar™" loading="lazy" decoding="async">
+      <video class="maw-mediacar-video" autoplay muted loop playsinline preload="metadata" poster="/media/ecossistema/mediacar-bmw.webp" aria-hidden="true" tabindex="-1">
+        <source src="/media/ecossistema/mediacar-bmw.mp4" type="video/mp4">
+      </video>
+      <figcaption class="maw-mediacar-brand"><strong>MEDIACAR™</strong><small>BY M.A.W.™ / WINF.inc®</small></figcaption>
+    </figure>
+  </div>
+</section>
+<section class="cta" aria-labelledby="cta-titulo"><div class="wrap cta-grid"><div><p class="kicker">06 / CONEXÃO</p><h2 class="display" id="cta-titulo">VOCÊ ENTREGA EXCELÊNCIA.<br><span style="color:#9297a1">NÓS CONECTAMOS A COMUNICAÇÃO.</span></h2><p>Conheça a linguagem, as ideias e o trabalho criativo da agência. Para licenciamento e expansão, acesse o canal oficial da WINF Partners™.</p></div><div class="buttons"><a class="btn" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/maw.winf/">CONHECER @MAW.WINF <span>↗</span></a><a class="btn alt" href="/partners/">CONHECER WINF PARTNERS™ <span>↗</span></a><a class="btn alt" href="/partners/ecossistema/">EXPLORAR O ECOSSISTEMA <span>↗</span></a></div></div></section>
 </main>
 <footer class="footer"><div class="wrap foot-grid"><div><img src="/winf-logo.svg" alt="WINF™ — logomarca oficial" width="109" height="36"><p>M.A.W.™ / MARKETING ADVANCED WINDOWFILM<br>DO BRASIL PARA O MUNDO.</p></div><nav class="foot-links" aria-label="Links institucionais"><a href="/">WINF.inc®</a><a href="/partners/">WINF Partners™</a><a href="/partners/ecossistema/">Ecossistema</a><a href="https://www.instagram.com/maw.winf/" target="_blank" rel="noopener noreferrer">Instagram M.A.W. ↗</a></nav></div></footer>
-</body></html>
+<script>
+(()=>{const video=document.querySelector('.maw-mediacar-video');if(!video)return;
+const off=()=>{try{video.pause()}catch(e){}video.classList.remove('is-playing')};
+video.addEventListener('playing',()=>video.classList.add('is-playing'));
+video.addEventListener('error',off);
+if(window.matchMedia('(prefers-reduced-motion: reduce)').matches||navigator.connection?.saveData){off();return}
+if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>{for(const entry of entries){if(entry.isIntersecting){const play=video.play();if(play?.catch)play.catch(()=>{})}else off()}},{threshold:.08});observer.observe(video)}
+})();
+</script></body></html>
