@@ -17,6 +17,8 @@ on:
       - 'synthwave/profile.js'
       - 'synthwave/radio-theme.css'
       - 'synthwave/assets/retro-radio.svg'
+      - 'synthwave/assets/frequencia-radio-ilustrado.svg'
+      - 'synthwave/assets/experiencia-sonora-ilustrada.svg'
       - 'tests/cinema-media-integrity.test.cjs'
       - '.github/workflows/cinema-media-integrity.yml'
   push:
@@ -32,6 +34,8 @@ on:
       - 'synthwave/profile.js'
       - 'synthwave/radio-theme.css'
       - 'synthwave/assets/retro-radio.svg'
+      - 'synthwave/assets/frequencia-radio-ilustrado.svg'
+      - 'synthwave/assets/experiencia-sonora-ilustrada.svg'
       - 'tests/cinema-media-integrity.test.cjs'
   workflow_dispatch:
 permissions:
