@@ -1,0 +1,32 @@
+name: WINF — MediaCar e rodapé
+on:
+  pull_request:
+    paths:
+      - 'partners/carro-midia/index.html'
+      - 'partials/winf-footer.html'
+      - 'js/winf-footer.js'
+      - 'tests/mediacar-footer.test.cjs'
+      - '.github/workflows/mediacar-footer.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'partners/carro-midia/index.html'
+      - 'partials/winf-footer.html'
+      - 'js/winf-footer.js'
+      - 'tests/mediacar-footer.test.cjs'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Testar simulador e rotas
+        run: node --test tests/mediacar-footer.test.cjs
+      - name: Sintaxe do rodapé
+        run: node --check js/winf-footer.js
