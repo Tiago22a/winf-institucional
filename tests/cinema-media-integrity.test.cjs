@@ -41,15 +41,15 @@ test("Cinema: todos os pôsteres locais existem e nenhum fallback aponta para ar
  }
 });
 
-test("Briefing: filme mantém fonte original, capa existente e recuperação explícita",()=>{
+test("Briefing: filme aprovado com capa própria, sem vídeo genérico substituto",()=>{
  const html=get("briefing/index.html");
  assert.match(html,/data-src="\/briefing\/media\/winf-dominio-absoluto-manha\.mp4"/);
- assert.match(html,/data-fallback-src="\/partners\/media\/hero\.mp4"/);
- assert.match(html,/class="wc-film-poster" src="\/briefing\/media\/briefing-poster\.webp"/);
+ assert.doesNotMatch(html,/data-fallback-src="\/partners\/media\/hero\.mp4"/);
+ assert.match(html,/class="wc-film-poster" src="\/briefing\/media\/winf-dominio-absoluto-manha\.webp"/);
  assert.doesNotMatch(html,/poster="\/briefing\/media\/winf-dominio-absoluto-manha\.jpg"/);
 });
 
-test("Cinema: fontes primárias ausentes são registradas sem fingir homologação",()=>{
+test("Cinema: mídias finais carregadas e conferíveis no repositório",()=>{
  const unresolved=[];
  for(const route of routes){
   const html=get(route);
@@ -58,5 +58,5 @@ test("Cinema: fontes primárias ausentes são registradas sem fingir homologaç�
   }
  }
  if(unresolved.length)console.warn("Fontes originais pendentes de mídia (pôster/fallback preservado):\n"+unresolved.join("\n"));
- assert.ok(unresolved.length<=11,"Novos vídeos ausentes além da lista atual: "+unresolved.join(", "));
+ assert.deepEqual(unresolved,[],"Todos os vídeos aprovados devem existir no repositório: "+unresolved.join(", "));
 });
