@@ -42,3 +42,21 @@ test("Os dois filmes pertencem ao MediaCar, sem reaproveitamento indevido",()=>{
  assert.match(script,/IntersectionObserver/);
  assert.match(html,/MÍDIA EM MOVIMENTO/);
 });
+
+const studio=fs.readFileSync(path.join(root,"partners/carro-midia/index.html"),"utf8");
+test("O MediaCar institucional não incorpora o simulador e aponta para o estúdio separado",()=>{
+ assert.doesNotMatch(html,/<iframe\b/i);
+ assert.doesNotMatch(html,/mc-studio-app|\?embed=1/);
+ assert.match(html,/class="mc-studio-preview"/);
+ assert.match(html,/href="\/partners\/carro-midia\/"/);
+ assert.match(html,/src="\/media\/ecossistema\/mediacar-bmw\.webp"/);
+});
+test("Página do estúdio usa somente material original MediaCar, sem visual de Asset Light",()=>{
+ assert.doesNotMatch(studio,/asset-light-mobilidade|\/briefing\/media\/asset-light|\/images\/aerocore\//i);
+ assert.match(studio,/src="\/media\/ecossistema\/mediacar-team\.webp"/);
+ assert.match(studio,/Equipe WINF com BMW M4 personalizada/);
+ assert.match(studio,/href="\/mediacar\/"/);
+ for(const id of ["carImage","photoInput","viewTabs","zones","saveProject","exportJpg","printProposal","copySummary"]){
+  assert.ok(studio.includes('id="'+id+'"'),"controle preservado: "+id);
+ }
+});
