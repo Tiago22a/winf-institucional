@@ -50,14 +50,14 @@
         const card = template.content.cloneNode(true);
         card.querySelector('article').dataset.status = city.status;
         card.querySelector('.directory-card-state').textContent = city.referencia || city.uf || '';
-        card.querySelector('.directory-card-status').textContent = city.siteAtivo ? '● Site ativo' : mode === 'territorios' ? 'Ativação disponível' : 'Não ativa';
+        card.querySelector('.directory-card-status').textContent = city.status === 'ativa' ? '● Unidade operacional' : city.siteAtivo ? '● Página publicada · operação a confirmar' : mode === 'territorios' ? 'Ativação sob consulta' : 'Não operacional';
         card.querySelector('.directory-card-city').textContent = city.cidade + (city.uf ? ' — ' + city.uf : '');
         card.querySelector('.directory-card-segment').textContent = city.siteAtivo ? (names[city.tipoAtendimento] || 'Atendimento sob consulta') : 'Disponibilidade para ativação sob consulta';
         const tags = city.tipoAtendimento === 'ambos' ? ['Automotivo', 'Residencial'] : [names[city.tipoAtendimento]].filter(Boolean);
         tags.forEach(text => { const tag = document.createElement('span'); tag.textContent = text; card.querySelector('.directory-card-tags').append(tag); });
         const links = card.querySelector('.directory-card-links');
         if (city.siteAtivo === true) {
-          addLink(links, 'Site da unidade ↗', city.url);
+          addLink(links, 'Página da cidade ↗', city.url);
           const whatsapp = /^55\d{10,11}$/.test(String(city.numero || '')) ? city.numero : '5513981113001';
           const text = 'Olá! Vim da página WINF e gostaria de consultar atendimento em ' + city.cidade + '/' + city.uf + '.';
           addLink(links, 'WhatsApp ↗', 'https://wa.me/' + whatsapp + '?text=' + encodeURIComponent(text));
@@ -76,16 +76,16 @@
     empty.hidden = matched.length + extraMatched.length !== 0;
     enquiry.hidden = mode !== 'territorios';
     const activeCount = matched.filter(item => item.status === 'ativa').length + extraMatched.length;
-    const pendingCount = matched.filter(item => item.status === 'pre_ativacao').length;
+    const pagesCount = matched.length + extraMatched.length;
     count.textContent = mode === 'ativas'
-      ? activeCount + (activeCount === 1 ? ' unidade ativa' : ' unidades ativas') + (pendingCount ? ' · ' + pendingCount + ' em pré-ativação' : '')
-      : matched.length + (matched.length === 1 ? ' território confirmado' : ' territórios confirmados');
+      ? pagesCount + (pagesCount === 1 ? ' página regional publicada' : ' páginas regionais publicadas') + ' · ' + activeCount + (activeCount === 1 ? ' unidade operacional confirmada' : ' unidades operacionais confirmadas')
+      : matched.length + (matched.length === 1 ? ' território com ativação confirmada' : ' territórios com ativação confirmada');
     const activeNotice = document.querySelector('.directory-active-toggle');
     if (activeNotice) activeNotice.hidden = mode !== 'ativas';
-    document.getElementById('directory-kicker').textContent = mode === 'ativas' ? 'LOCATOR WINF // UNIDADES ATIVAS' : 'WINF PARTNERS // CONSULTA DE EXPANSÃO';
-    document.getElementById('directory-title').textContent = mode === 'ativas' ? 'Unidades e páginas em pré-ativação' : 'Onde você quer começar?';
+    document.getElementById('directory-kicker').textContent = mode === 'ativas' ? 'LOCATOR WINF // PÁGINAS E UNIDADES' : 'WINF PARTNERS // CONSULTA DE EXPANSÃO';
+    document.getElementById('directory-title').textContent = mode === 'ativas' ? 'Páginas regionais e unidades operacionais' : 'Onde você quer começar?';
     document.getElementById('directory-empty-title').textContent = mode === 'ativas' ? 'Vamos encontrar seu atendimento.' : 'Consulte a cidade que você tem em mente.';
-    document.getElementById('directory-empty-copy').textContent = mode === 'ativas' ? 'Ainda não há unidades cadastradas que correspondam à sua busca. Fale com a central para confirmar o atendimento na sua região.' : 'A lista de territórios disponíveis será exibida conforme as confirmações da equipe. Você também pode informar uma cidade abaixo e solicitar uma consulta.';
+    document.getElementById('directory-empty-copy').textContent = mode === 'ativas' ? 'Ainda não há páginas regionais cadastradas que correspondam à sua busca. Fale com a central para confirmar o atendimento na sua região.' : 'A lista de territórios disponíveis será exibida conforme as confirmações da equipe. Você também pode informar uma cidade abaixo e solicitar uma consulta.';
     const contact = document.getElementById('directory-empty-contact');
     contact.textContent = mode === 'ativas' ? 'Falar com a central →' : 'Falar com a expansão →';
     contact.href = mode === 'ativas' ? 'https://wa.me/5513981113001' : 'https://wa.me/5513997815375';
