@@ -21,7 +21,9 @@
   let mode = 'ativas';
   const names = { automotivo: 'Automotivo', residencial: 'Residencial', ambos: 'Automotivo + residencial' };
   const normalize = value => String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
-  const eligible = city => mode === 'ativas' ? city.siteAtivo === true : city.status === 'nao_ativa' && city.siteAtivo !== true && city.disponivelParaAtivacao === true;
+  const eligible = city => mode === 'ativas'
+    ? city.status === 'ativa' // Página publicada não é sinônimo de unidade operacional.
+    : city.status === 'pre_ativacao' || (city.status === 'nao_ativa' && city.siteAtivo !== true && city.disponivelParaAtivacao === true);
   function safeUrl(value) {
     if (!value) return null;
     try {
