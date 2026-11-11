@@ -3,6 +3,7 @@ on:
   pull_request:
     paths:
       - 'mediacar/index.html'
+      - 'partners/carro-midia/index.html'
       - 'media/ecossistema/mediacar-*'
       - 'tests/mediacar-original-motion.test.cjs'
       - '.github/workflows/mediacar-original-motion.yml'
@@ -10,6 +11,7 @@ on:
     branches: [main]
     paths:
       - 'mediacar/index.html'
+      - 'partners/carro-midia/index.html'
       - 'media/ecossistema/mediacar-*'
       - 'tests/mediacar-original-motion.test.cjs'
   workflow_dispatch:
