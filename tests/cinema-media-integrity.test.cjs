@@ -27,7 +27,8 @@ test("Cinema: páginas estão ligadas à versão corrigida do player e do estilo
   const sharedCss=/\/css\/winf-cinema\.css\?v=20261111-2/.test(html);
   const isolatedCss=["synthwave/index.html","ghost-shop/index.html"].includes(route)&&html.includes("<style>");
   assert.ok(sharedCss||isolatedCss,route+" deve fornecer estilo local ou compartilhado para o player");
-  assert.match(html,/\/js\/winf-cinema\.js\?v=20261111-2/,route);
+  if(route==="synthwave/index.html")assert.match(html,/<source src="\/media\/ecossistema\/synthwave-hero\.mp4"/);
+  else assert.match(html,/\/js\/winf-cinema\.js\?v=20261111-2/,route);
  }
 });
 
@@ -63,19 +64,22 @@ test("Cinema: mídias finais carregadas e conferíveis no repositório",()=>{
  assert.deepEqual(unresolved,[],"Todos os vídeos aprovados devem existir no repositório: "+unresolved.join(", "));
 });
 
-test("SynthWAVE: animações MP4 reais carregam e são visíveis sem depender do lazy-player",()=>{
- const html=get("synthwave/index.html");
- const bootstrap=get("synthwave/playback.js");
+test("SynthWAVE: identidade retrô, dois filmes reais e entrada da rádio existentes",()=>{
+ const html=get("synthwave/index.html"),radio=get("synthwave/radio/index.html");
+ const engine=get("synthwave/app.js"),profile=get("synthwave/profile.js");
+ assert.match(html,/SYNTHWAVE.FM/i);
+ assert.match(html,/\/synthwave\/assets\/retro-radio\.svg/);
+ assert.equal(exists("/synthwave/assets/retro-radio.svg"),true);
+ assert.match(html,/href="\/synthwave\/radio\/"/);
  for(const slug of ["hero","experience"]){
-  const video="/media/ecossistema/synthwave-"+slug+".mp4";
-  assert.equal(exists(video),true,"MP4 ausente: "+video);
-  assert.match(html,new RegExp('src="'+video.replaceAll(".","\\.")+'"'));
+  const source="/media/ecossistema/synthwave-"+slug+".mp4";
+  assert.equal(exists(source),true,"MP4 ausente: "+source);
+  assert.match(html,new RegExp('src="'+source.replaceAll(".","\\.")+'"'));
  }
- assert.match(html,/<video class="sw-live-video" autoplay muted loop playsinline/);
- assert.match(html,/<video class="sw-frame-video" autoplay muted loop playsinline/);
- assert.match(html,/video\.sw-live-video\{display:block;opacity:\.9/);
- assert.match(html,/sw-play-trigger/);
- assert.match(html,/\/synthwave\/playback\.js\?v=20261111-native-1/);
- assert.match(bootstrap,/video\.play\(\)/);
- assert.doesNotMatch(html,/<source data-src="\/media\/ecossistema\/synthwave-/);
+ assert.equal((html.match(/<video autoplay muted loop playsinline controls/g)||[]).length,2);
+ assert.match(radio,/data-nav="profile"/);
+ assert.match(radio,/\.\.\/profile\.js/);
+ assert.match(radio,/\/synthwave\/radio-theme\.css/);
+ assert.match(engine,/profile:\(\)=>window\.SynthwaveProfile\.render\(\)/);
+ assert.match(profile,/localStorage\.setItem/);
 });
