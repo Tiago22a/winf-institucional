@@ -180,7 +180,7 @@ var MC_MODELS={
  custom:{label:"Carro do licenciado",views:{}}
 };
 var MC_BRANDS=[
- {id:"W0",name:"WINF™",logo:"/winf-logo.svg",x:34,y:61,w:16,h:9},
+ {id:"W0",name:"WINF™",logo:"/media/brands/winf-logo-horizontal-official.png",x:34,y:61,w:16,h:9},
  {id:"W2",name:"AEROCORE™",x:37,y:77,w:15,h:8},
  {id:"W3",name:"NEOSKIN™",x:53,y:77,w:14,h:8},
  {id:"W4",name:"CERAMIC ARMORING™",x:68,y:77,w:21,h:8},
@@ -210,7 +210,7 @@ function seed(){
 }
 function upgradeState(saved){
  if(!saved||saved.version!==1||!saved.slots||!saved.photos)return seed();
- if(!MC_MODELS[saved.model])saved.model="custom";
+ if(!MC_MODELS[saved.model])saved.model=keys.some(function(k){return !!saved.photos[k]})?"custom":"bmw";
  if(!saved.modelAssets||typeof saved.modelAssets!=="object")saved.modelAssets={};
  keys.forEach(function(view){
   var prior=Array.isArray(saved.slots[view])?saved.slots[view]:[];
@@ -245,6 +245,7 @@ function renderStage(){
  if(image)img.src=image;else img.removeAttribute("src");
  img.style.transform=(!state.photos[state.current]&&state.current==="right"&&state.model==="bmw")?"scaleX(-1)":"none";
  $("emptyPhoto").hidden=!!image;
+ $("zones").hidden=!image;
  $("emptyPhoto").querySelector("span").textContent="Envie uma foto ou render aprovado desta vista para a aplicação dos patrocinadores.";
  $("viewName").textContent=labels[state.current].toUpperCase();
  renderModelCollection();renderZones();
@@ -281,7 +282,7 @@ function saveFile(data,name,mime){var blob=data instanceof Blob?data:new Blob([d
 function slug(){return(state.licenseName||"licenciado").normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/gi,"-").toLowerCase().replace(/^-|-$/g,"").slice(0,35)}
 function loadImage(src){return new Promise(function(resolve,reject){var im=new Image();im.onload=function(){resolve(im)};im.onerror=reject;im.src=src})}
 function drawRound(ctx,x,y,w,h,r){r=Math.min(r,w/2,h/2);ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath()}
-async function exportCanvas(){var canvas=document.createElement("canvas");canvas.width=1600;canvas.height=900;var g=canvas.getContext("2d");g.fillStyle="#18191d";g.fillRect(0,0,1600,900);var imgSource=currentImage();if(imgSource){var car=await loadImage(imgSource),ratio=Math.min(1600/car.width,900/car.height),iw=car.width*ratio,ih=car.height*ratio;g.save();if(!state.photos[state.current]&&state.current==="right"&&state.model==="bmw"){g.translate(1600,0);g.scale(-1,1)}g.drawImage(car,(1600-iw)/2,(900-ih)/2,iw,ih);g.restore()}else{g.font="32px Arial";g.fillStyle="#ddd";g.textAlign="center";g.fillText("INSIRA A FOTO DESTA VISTA",800,450)}
+async function exportCanvas(){var canvas=document.createElement("canvas");canvas.width=1600;canvas.height=900;var g=canvas.getContext("2d");g.fillStyle="#18191d";g.fillRect(0,0,1600,900);var imgSource=currentImage();if(imgSource){var car=await loadImage(imgSource),ratio=Math.min(1600/car.width,900/car.height),iw=car.width*ratio,ih=car.height*ratio;g.save();if(!state.photos[state.current]&&state.current==="right"&&state.model==="bmw"){g.translate(1600,0);g.scale(-1,1)}g.drawImage(car,(1600-iw)/2,(900-ih)/2,iw,ih);g.restore()}else{g.font="32px Arial";g.fillStyle="#ddd";g.textAlign="center";g.fillText("ADICIONE FOTO DESTA VISTA — PRÉVIA NÃO HOMOLOGADA",800,450)}
 for(var i=0;i<currentSlots().length;i++){var s=currentSlots()[i];if(s.visible===false)continue;var x=s.x*16,y=s.y*9,w=s.w*16,h=s.h*9;g.save();drawRound(g,x,y,w,h,4);g.fillStyle=s.type==="official"?"rgba(0,0,0,.80)":"rgba(8,8,10,.58)";g.fill();g.strokeStyle="#fff";g.lineWidth=s.type==="official"?2:1.5;if(s.type==="sponsor")g.setLineDash([9,6]);g.stroke();g.setLineDash([]);if(s.logo){try{var mark=await loadImage(s.logo),scale=Math.min((w-16)/mark.width,(h-12)/mark.height);g.drawImage(mark,x+(w-mark.width*scale)/2,y+(h-mark.height*scale)/2,mark.width*scale,mark.height*scale)}catch(e){}}else{g.fillStyle="#fff";g.textAlign="center";g.textBaseline="middle";g.font="bold "+Math.max(11,Math.min(28,h*.28,w/Math.max(5,s.name.length*.58)))+"px Arial";g.fillText(s.name,x+w/2,y+h/2,w-12)}g.restore()}
 g.textAlign="right";g.fillStyle="rgba(255,255,255,.75)";g.font="18px monospace";g.fillText("MEDIACAR™ BY WINF PARTNERS™ / 08 / PRÉVIA COMERCIAL",1555,860);return canvas}
 function captureCurrentModel(){
@@ -349,7 +350,7 @@ $("addSlot").onclick=function(){var id="N"+(state.next++);var slot={id:id,type:"
 $("saveProject").onclick=function(){captureCurrentModel();saveFile(JSON.stringify(state,null,2),"mediacar-08-"+slug()+".json","application/json");toast("Projeto salvo em arquivo JSON.")};
 $("loadProject").onclick=function(){$("projectInput").click()};
 $("projectInput").onchange=async function(e){var file=e.target.files&&e.target.files[0];if(!file)return;try{if(file.size>26000000)throw Error("size");var data=JSON.parse(await file.text());if(data.version!==1||!data.slots||!data.photos||!keys.every(function(k){return Array.isArray(data.slots[k])}))throw Error("invalid");state=upgradeState(data);state.projectId=null;state.modelAssets={};["licenseName","city","vehicle"].forEach(function(k){$(k).value=state[k]||""});render();persist();toast("Projeto recuperado.")}catch(error){toast("O arquivo não é um projeto WINF válido.")}e.target.value=""};
-$("exportJpg").onclick=async function(){var btn=this;btn.disabled=true;try{var can=await exportCanvas();can.toBlob(function(blob){if(blob){saveFile(blob,"winf-carro-midia-"+slug()+"-"+state.current+".jpg","image/jpeg");toast("Prévia JPG exportada.")}btn.disabled=false},"image/jpeg",.94)}catch(e){toast("Falha ao exportar a imagem.");btn.disabled=false}};
+$("exportJpg").onclick=async function(){if(!currentImage()){toast("Adicione uma foto ou render desta vista antes de exportar.");return}var btn=this;btn.disabled=true;try{var can=await exportCanvas();can.toBlob(function(blob){if(blob){saveFile(blob,"winf-carro-midia-"+slug()+"-"+state.current+".jpg","image/jpeg");toast("Prévia JPG exportada.")}btn.disabled=false},"image/jpeg",.94)}catch(e){toast("Falha ao exportar a imagem.");btn.disabled=false}};
 $("printProposal").onclick=function(){renderPrint();window.print()};
 $("copySummary").onclick=async function(){var lines=["MEDIACAR™ / WINF PARTNERS™ / 08",state.licenseName||"Licenciado: a definir",state.city||"Cidade: a definir","Veículo: "+(state.vehicle||"a definir"),"","COTAS COMERCIAIS"];keys.forEach(function(k){var items=state.slots[k].filter(function(s){return s.type==="sponsor"&&s.visible!==false});if(!items.length)return;lines.push("— "+labels[k]);items.forEach(function(s){lines.push(s.name+" | "+cash(s.price)+" | "+({available:"Disponível",reserved:"Reservada",sold:"Vendida"}[s.status]))})});lines.push("","Potencial mensal bruto das cotas: "+$("potential").textContent,"Potencial bruto no ciclo de seis meses: "+$("cycleValue").textContent,"Valores mensais indicativos; campanha proposta de 6 meses, com renovação do envelopamento. Sujeito a contrato e aprovação.");var result=lines.join("\n");try{await navigator.clipboard.writeText(result);toast("Resumo comercial copiado.")}catch(e){saveFile(result,"winf-cotas-"+slug()+".txt","text/plain");toast("Resumo salvo como texto.")}};
 $("resetProject").onclick=function(){if(!confirm("Reiniciar o rascunho atual? Seus projetos guardados continuam na biblioteca deste navegador."))return;state=seed();["licenseName","city","vehicle"].forEach(function(k){$(k).value=""});render();persist();toast("Novo projeto iniciado.")};
