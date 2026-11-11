@@ -51,6 +51,30 @@
 /* O fantasma faz parte do selo central e acompanha a rotação de todo o vinil. */
 @media(max-width:650px){.brand{gap:8px}.brand img.brand-ghost{width:29px;height:35px;padding:6px 7px;border-radius:12px}.groove .vinyl-ghost{width:46px;height:62px}}
 @media(prefers-reduced-motion:reduce){.brand img.brand-ghost{animation:none!important;transform:none!important}}
+
+/* Fotografia primeiro: momentos de vida, sem virar vitrine de carros ou imóveis. */
+.sw-photo-story{background:#d9e6d8;color:#203d34;padding-top:clamp(75px,8vw,115px)}
+.sw-photo-intro{display:grid;grid-template-columns:1.2fr .75fr;gap:34px;align-items:end;margin-bottom:30px}
+.sw-photo-intro .kicker{color:#3b6559;margin:0 0 21px}
+.sw-photo-intro h2{font:400 clamp(65px,8.8vw,126px)/.91 Anton,Impact,sans-serif;letter-spacing:-.02em;margin:0;text-transform:uppercase}
+.sw-photo-intro h2 em{font-style:normal;color:#659787}
+.sw-photo-intro>p{max-width:430px;color:#355b50;font-size:clamp(15px,1.3vw,18px);line-height:1.75;margin:0 0 6px}
+.sw-photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.sw-photo{position:relative;overflow:hidden;margin:0;aspect-ratio:1/1.15;background:#375847;isolation:isolate}
+.sw-photo img{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(.72) contrast(.96);transition:transform .7s ease,filter .7s ease}
+.sw-photo:nth-child(2) img{object-position:center}.sw-photo:nth-child(3) img{object-position:center}
+.sw-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#0f20151c 0%,transparent 38%,#071b16db 100%);pointer-events:none;z-index:1}
+.sw-photo figcaption{position:absolute;inset:auto 0 0;z-index:2;padding:clamp(19px,2.5vw,32px);display:flex;flex-direction:column;gap:12px;color:#f4f6e8}
+.sw-photo figcaption span{font-size:10px;letter-spacing:.22em;font-weight:800}
+.sw-photo figcaption strong{font:400 clamp(28px,3vw,49px)/1.02 Anton,Impact,sans-serif;text-transform:uppercase}
+.sw-photo:hover img{transform:scale(1.035);filter:saturate(.82) contrast(1)}
+.sw-photo-footer{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:25px;flex-wrap:wrap}
+.sw-photo-footer span{font-size:10px;font-weight:800;letter-spacing:.2em}
+.sw-photo-footer .button{background:#234e41;border-color:#234e41;color:#fff}
+.sw-photo-footer .button:hover{background:#3e705a}
+@media(max-width:950px){.sw-photo-intro{grid-template-columns:1fr}.sw-photo-grid{gap:9px}.sw-photo figcaption strong{font-size:clamp(25px,3.3vw,40px)}}
+@media(max-width:650px){.sw-photo-intro h2{font-size:clamp(58px,14vw,92px)}.sw-photo-grid{grid-template-columns:1fr;gap:13px}.sw-photo{aspect-ratio:4/3}.sw-photo figcaption strong{font-size:40px}.sw-photo-footer span{letter-spacing:.1em}}
+@media(prefers-reduced-motion:reduce){.sw-photo img{transition:none}.sw-photo:hover img{transform:none}}
 </style>
 
 <!-- WINF social / previews oficiais e URLs canônicas sem parâmetros -->
@@ -240,5 +264,15 @@
 <figure class="film"><div class="film-box"><img src="/synthwave/assets/frequencia-radio-ilustrado.svg" loading="lazy" width="1200" height="675" alt="Ilustração editorial em tons sálvia e cobre: rádio retrô sobre mesa de madeira, vinil e pequeno símbolo original GHOST no equipamento"></div><figcaption>01 / O RÁDIO TEM HISTÓRIA <span>DESENHO ORIGINAL</span></figcaption></figure>
 <figure class="film"><div class="film-box"><img src="/synthwave/assets/experiencia-sonora-ilustrada.svg" loading="lazy" width="1200" height="675" alt="Ilustração de fones de ouvido, mesa de som e discos com pequenos símbolos originais GHOST integrados aos equipamentos"></div><figcaption>02 / A EXPERIÊNCIA SONORA <span>CULTURA E DESCOBERTA</span></figcaption></figure>
 </div><p class="film-text">Duas ilustrações estáticas, sem áudio e com carregamento rápido. Para ouvir música, entre na plataforma da rádio.</p></div></section>
+<section class="section sw-photo-story" id="destinos" aria-labelledby="destinos-title">
+<div class="wrap">
+<div class="sw-photo-intro"><div><p class="kicker">04 / MÚSICA QUE ACOMPANHA A VIDA</p><h2 id="destinos-title">TODO DESTINO<br>TEM UMA <em>TRILHA.</em></h2></div><p>Uma fotografia guarda o momento. A música devolve a sensação. Da estrada ao mar, da altitude aos lugares que chamamos de casa: a SynthWAVE acompanha experiências, não produtos.</p></div>
+<div class="sw-photo-grid">
+<figure class="sw-photo"><img src="/briefing/media/portfolio-supercars-v2.webp" alt="Automóvel escuro seguindo por uma estrada cercada por árvores" loading="lazy" decoding="async" width="343" height="512"><figcaption><span>01 / ESTRADA</span><strong>O mundo segue.<br>O som fica.</strong></figcaption></figure>
+<figure class="sw-photo"><img src="/briefing/media/portfolio-lifestyle-v2.webp" alt="Duas pessoas conversando a bordo de um iate com marina ao fundo" loading="lazy" decoding="async" width="512" height="384"><figcaption><span>02 / MAR</span><strong>Alguns momentos<br>pedem pausa.</strong></figcaption></figure>
+<figure class="sw-photo"><img src="/briefing/media/portfolio-arquitetura-v2.webp" alt="Casa contemporânea com amplos vidros, jardim tropical e luz do dia" loading="lazy" decoding="async" width="512" height="384"><figcaption><span>03 / REFÚGIOS</span><strong>A melhor trilha<br>é a que acompanha você.</strong></figcaption></figure>
+</div>
+<div class="sw-photo-footer"><span>NA ESTRADA · NO MAR · NO AR · EM CASA</span><a class="button" href="/synthwave/radio/">ESCOLHER MINHA TRILHA ↗</a></div>
+</div></section>
 </main><footer class="footer"><div class="wrap footer-grid"><div><strong>SYNTHWAVE.FM™</strong><p>UMA EXPERIÊNCIA WINF.inc® · DO BRASIL PARA O MUNDO.</p></div><nav aria-label="Links institucionais"><a href="/synthwave/radio/">PLATAFORMA DE RÁDIO</a><a href="/partners/ecossistema/">← VOLTAR AO UNIVERSO WINF</a><a href="/maw/">M.A.W.™</a><a href="/partners/">WINF PARTNERS™</a></nav></div></footer>
 </body></html>
