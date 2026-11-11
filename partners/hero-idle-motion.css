@@ -79,3 +79,48 @@
 .winf-partners-site .wp-hero-glass-ghost{right:14%;top:32%;width:clamp(14px,1.35vw,21px)}
 @media(max-width:760px){.winf-partners-site .wp-hero-glass-ghost{right:8%;top:25%;width:16px}.winf-partners-site .wp-hero-approved-video{object-position:50% 50%}}
 @media(prefers-reduced-motion:reduce){.winf-partners-site .wp-hero-glass-ghost{display:none}}
+
+
+/* 11/11/2026 — WINF Partners™ | vídeo mais claro e Ghost em destaque.
+   Aumentamos a visibilidade sem remover a proteção de leitura do headline. */
+.winf-partners-site .wp-hero-approved-video{
+  filter:brightness(1.17) saturate(1.08) contrast(1.02);
+  object-position:53% 49%;
+  transition:opacity .55s ease;
+}
+.winf-partners-site .wp-hero-cinematic-stage.wp-film-playing::after{
+  background:
+    linear-gradient(90deg,rgba(7,8,10,.64) 0%,rgba(7,8,10,.40) 53%,rgba(7,8,10,.22) 100%),
+    linear-gradient(0deg,rgba(7,8,10,.35),rgba(7,8,10,.03) 39%,rgba(7,8,10,.13));
+}
+.winf-partners-site .wp-hero-cinematic-stage .wp-hero-glass-ghost{
+  width:clamp(22px,2.1vw,31px);
+  top:30%;
+  right:13%;
+  opacity:.38;
+  filter:grayscale(1) drop-shadow(0 0 8px rgba(255,255,255,.36));
+}
+.winf-partners-site .wp-hero-cinematic-stage.wp-film-playing .wp-hero-glass-ghost{
+  opacity:.39!important;
+  animation:none!important;
+  transition:opacity .6s ease;
+}
+.winf-partners-site .wp-hero-cinematic-stage.wp-film-hold .wp-hero-approved-video{
+  opacity:1;
+}
+@media(max-width:760px){
+  .winf-partners-site .wp-hero-approved-video{
+    object-position:56% center;
+    filter:brightness(1.21) saturate(1.07) contrast(1.01);
+  }
+  .winf-partners-site .wp-hero-cinematic-stage.wp-film-playing::after{
+    background:linear-gradient(0deg,rgba(7,8,10,.47),rgba(7,8,10,.19) 48%,rgba(7,8,10,.24)),
+               linear-gradient(90deg,rgba(7,8,10,.36),rgba(7,8,10,.08));
+  }
+  .winf-partners-site .wp-hero-cinematic-stage .wp-hero-glass-ghost{
+    right:9%;top:26%;width:24px;opacity:.36;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .winf-partners-site .wp-hero-cinematic-stage.wp-film-hold .wp-hero-approved-video{display:none!important}
+}
