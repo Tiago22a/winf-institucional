@@ -3,8 +3,9 @@
     "format": "jpeg",
     "width": 1200,
     "height": 630,
-    "design": "soft-luxury editorial, clean typography, official WINF SVG, no visual claims of real installations",
-    "tagline": "SITE OFICIAL WINF™"
+    "design": "Social preview 1200x630: typography in bounded safe area, no split words, brand-specific photo and uncluttered editorial composition",
+    "tagline": "SITE OFICIAL WINF™",
+    "previewVersion": "r2"
   },
   "cityHooks": {
     "santos": [
@@ -403,6 +404,48 @@
       "title": "UM MAPA.|TODAS AS SOLUÇÕES.",
       "subtitle": "PÁGINAS OFICIAIS WINF",
       "photo": "images/invisible-poster-2.webp"
+    },
+    "synthwave": {
+      "brand": "SYNTHWAVE.fm™",
+      "title": "O SOM MUDA.|A ATMOSFERA.",
+      "subtitle": "RÁDIO · PLAYLISTS · CULTURA",
+      "photo": "synthwave/assets/frequencia-radio-ilustrado.svg",
+      "label": "SYNTHESIZED EXPERIENCES / BY WINF™"
+    },
+    "synthwave/radio": {
+      "brand": "SYNTHWAVE.fm™",
+      "title": "SUA MÚSICA.|SUA FREQUÊNCIA.",
+      "subtitle": "RÁDIO · PODCASTS · PLAYLISTS",
+      "photo": "synthwave/assets/experiencia-sonora-ilustrada.svg",
+      "label": "OUÇA E DESCUBRA / BY WINF™"
+    },
+    "maw": {
+      "brand": "M.A.W.™",
+      "title": "CONTEÚDO QUE|POSICIONA.",
+      "subtitle": "MARKETING ADVANCED WINDOWFILM",
+      "photo": "briefing/media/asset-light-mobilidade-2026.webp",
+      "label": "ESTRATÉGIA / CAMPANHAS / EXPANSÃO"
+    },
+    "mediacar": {
+      "brand": "MEDIACAR™",
+      "title": "SUA MARCA.|EM MOVIMENTO.",
+      "subtitle": "MÍDIA SOBRE RODAS",
+      "photo": "media/ecossistema/mediacar-bmw.webp",
+      "label": "EXPERIÊNCIAS WINF™"
+    },
+    "partners/universo-dark": {
+      "brand": "UNIVERSO DARK™",
+      "title": "OUTRAS IDEIAS.|NOVAS CONEXÕES.",
+      "subtitle": "ECOSSISTEMA DE PROJETOS",
+      "photo": "media/ecossistema/universo-dark-entry.webp",
+      "label": "WINF PARTNERS™"
+    },
+    "ghost-shop/vitrine": {
+      "brand": "GHOST SHOP™",
+      "title": "UM UNIVERSO.|MUITAS ESCOLHAS.",
+      "subtitle": "VITRINE DO ECOSSISTEMA",
+      "photo": "images/shop/blackshop (14).webp",
+      "label": "GHOST SHOP™ / WINF"
     }
   }
 }
