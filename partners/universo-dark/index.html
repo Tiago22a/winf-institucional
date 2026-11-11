@@ -40,16 +40,35 @@ h1 span{display:block;font-size:.93em;white-space:normal}
 @media(max-width:780px){h1{font-size:clamp(49px,12vw,90px);line-height:1.03}.lead{font-size:16px}}
 @media(prefers-reduced-motion:reduce){main::before{animation:none}.grid article{transition:none}}
 .wc-section{padding:45px 0;background:transparent;border:0}.wc-section .wc-film-grid{gap:12px}.wc-section .wc-head{margin-top:10px}.wc-section .wc-head h2{font-size:clamp(33px,4vw,65px)}.wc-section .wc-film-caption{font-size:12px}</style>
-<link rel="stylesheet" href="/css/winf-cinema.css?v=20261111-2"></head>
+<link rel="stylesheet" href="/css/winf-cinema.css?v=20261111-2">
+<style>
+/* Universo Dark — cenas próprias; nenhuma mídia emprestada da Flagship. */
+.dark-cinema-bg{position:absolute;inset:0 0 auto;height:min(94vh,900px);z-index:0;pointer-events:none;overflow:hidden;background:radial-gradient(ellipse at 70% 25%,#2b303c,#08090c 80%)}
+.dark-cinema-bg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#070809fa,#070809d9 50%,#07080988),linear-gradient(0deg,#070809 1%,transparent 48%);z-index:1}
+.dark-cinema-bg video{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s}
+.dark-cinema-bg video.wc-playing{opacity:.82}
+main>:not(.dark-cinema-bg){position:relative;z-index:1}
+main>h1{font-size:clamp(48px,10vw,142px);line-height:1.02;max-width:100%;text-shadow:0 2px 22px #000a}
+main>h1 span{white-space:normal}
+main>.lead{color:#dee1e7}
+.wc-section{background:#0c0d13!important}
+.wc-film-media{background:linear-gradient(135deg,#1b1d27,#08090c)}
+.dark-film-fallback{position:absolute;inset:0;z-index:0;display:flex;align-items:flex-end;padding:clamp(18px,3vw,42px);background:radial-gradient(circle at 75% 25%,#9ba5c326,transparent 48%)}
+.dark-film-fallback span{font:900 clamp(24px,3vw,45px)/1.03 Impact,'Arial Narrow',sans-serif;color:#eaedf3;max-width:330px;letter-spacing:.015em}
+.wc-film-poster{z-index:1}.wc-film video{z-index:2}
+@media(max-width:780px){main>h1{font-size:clamp(52px,11.8vw,88px)}.dark-cinema-bg{height:770px}.dark-cinema-bg:after{background:linear-gradient(0deg,#070809 5%,#070809bc 60%,#07080980)}}
+@media(prefers-reduced-motion:reduce){.dark-cinema-bg video{display:none}}
+</style>
+</head>
 <body id="topo">
 <header><a class="brand" href="/" aria-label="WINF — início"><img src="/winf-logo.svg" alt="WINF™"> <span>PROJETOS ESTRATÉGICOS</span></a><a class="back" href="/partners/">← WINF PARTNERS™</a></header>
-<main id="conteudo">
+<main id="conteudo"><div class="dark-cinema-bg" aria-hidden="true"><video data-winf-cinema autoplay muted loop playsinline preload="metadata" tabindex="-1"><source data-src="/media/ecossistema/universo-dark-entry.mp4" type="video/mp4"></video></div>
 <p class="eyebrow">WINF.inc® / PROJETOS ESTRATÉGICOS / UNIVERSO DARK™</p>
 <h1>UNIVERSO <span>DARK™</span></h1>
 <p class="lead">Um espaço institucional dedicado à organização de projetos estratégicos, estudos de estruturação e governança do ecossistema WINF.</p>
 <p class="notice"><strong>Projeto em estruturação.</strong> Esta página não constitui oferta pública de valores mobiliários, promessa de rentabilidade, convite para investimento ou declaração de que operações financeiras já estejam disponíveis.</p>
-<section class="wc-section" id="filmes" aria-label="Experiências audiovisuais WINF"><div class="wc-head"><div><p class="wc-kicker">WINF UNIVERSO DARK™ / CAPITAL PRIVADO E ESTRATÉGIA</p><h2>VISÃO RESERVADA.<br><em>CRITÉRIOS CLAROS.</em></h2></div><p>Um universo institucional para discutir equity, valuation, governança e oportunidades estratégicas. Sem oferta pública ou promessa de rentabilidade.</p></div><div class="wc-film-grid"><figure class="wc-film"><div class="wc-film-media"><img class="wc-film-poster" src="/briefing/media/flagship-operacoes-2026.webp" alt="" loading="lazy" decoding="async"><div class="wc-brand-lockup"><img src="/aerocore/assets/ghost-symbol.png" alt="" aria-hidden="true"><span>WINF.inc®</span></div><video data-winf-cinema autoplay muted loop playsinline preload="none" tabindex="-1" aria-hidden="true"><source data-src="/media/ecossistema/universo-dark-entry.mp4" data-fallback-src="/briefing/media/flagship-studio-20261108.mp4" type="video/mp4"></video></div><figcaption class="wc-film-caption"><strong>CAPITAL E ESTRATÉGIA</strong><span>01 / INSTITUCIONAL</span></figcaption></figure>
-<figure class="wc-film"><div class="wc-film-media"><img class="wc-film-poster" src="/briefing/media/flagship-showroom-2026.webp" alt="" loading="lazy" decoding="async"><div class="wc-brand-lockup"><img src="/aerocore/assets/ghost-symbol.png" alt="" aria-hidden="true"><span>WINF.inc®</span></div><video data-winf-cinema autoplay muted loop playsinline preload="none" tabindex="-1" aria-hidden="true"><source data-src="/media/ecossistema/universo-dark-equity.mp4" type="video/mp4"></video></div><figcaption class="wc-film-caption"><strong>EQUITY & VALUATION</strong><span>02 / GOVERNANÇA</span></figcaption></figure></div></section>
+<section class="wc-section" id="filmes" aria-label="Experiências audiovisuais WINF"><div class="wc-head"><div><p class="wc-kicker">WINF UNIVERSO DARK™ / CAPITAL PRIVADO E ESTRATÉGIA</p><h2>VISÃO RESERVADA.<br><em>CRITÉRIOS CLAROS.</em></h2></div><p>Um universo institucional para discutir equity, valuation, governança e oportunidades estratégicas. Sem oferta pública ou promessa de rentabilidade.</p></div><div class="wc-film-grid"><figure class="wc-film"><div class="wc-film-media"><div class="dark-film-fallback" aria-hidden="true"><span>CAPITAL. VISÃO. ESTRATÉGIA.</span></div><img class="wc-film-poster" src="/media/ecossistema/universo-dark-entry.webp" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"><div class="wc-brand-lockup"><img src="/aerocore/assets/ghost-symbol.png" alt="" aria-hidden="true"><span>WINF.inc®</span></div><video data-winf-cinema autoplay muted loop playsinline preload="none" tabindex="-1" aria-hidden="true"><source data-src="/media/ecossistema/universo-dark-entry.mp4" type="video/mp4"></video></div><figcaption class="wc-film-caption"><strong>CAPITAL E ESTRATÉGIA</strong><span>01 / INSTITUCIONAL</span></figcaption></figure>
+<figure class="wc-film"><div class="wc-film-media"><div class="dark-film-fallback" aria-hidden="true"><span>VALOR SE CONSTRÓI COM GOVERNANÇA.</span></div><img class="wc-film-poster" src="/media/ecossistema/universo-dark-equity.webp" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"><div class="wc-brand-lockup"><img src="/aerocore/assets/ghost-symbol.png" alt="" aria-hidden="true"><span>WINF.inc®</span></div><video data-winf-cinema autoplay muted loop playsinline preload="none" tabindex="-1" aria-hidden="true"><source data-src="/media/ecossistema/universo-dark-equity.mp4" type="video/mp4"></video></div><figcaption class="wc-film-caption"><strong>EQUITY & VALUATION</strong><span>02 / GOVERNANÇA</span></figcaption></figure></div></section>
 <section class="grid" aria-label="Frentes conceituais em estudo">
 <article><small>01 / GOVERNANÇA</small><h2>Estrutura e critérios</h2><p>Organização de processos, responsabilidades e requisitos de conformidade antes de qualquer iniciativa de capital.</p></article>
 <article><small>02 / PROJETOS</small><h2>Desenvolvimento estratégico</h2><p>Estudo de modelos de expansão, abastecimento e cooperação com parceiros do ecossistema.</p></article>
