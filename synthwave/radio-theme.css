@@ -1,0 +1,48 @@
+/* SynthWAVE.fm / plataforma — ponte visual da entrada retrô com a rádio existente.
+   Cor e aparência apenas: o mecanismo de áudio e o catálogo permanecem intactos. */
+:root{--sw-forest:#1f3e35;--sw-darker:#0e2620;--sw-cream:#f6f0df;--sw-sage:#bbd7c6;--sw-orange:#e9a16c;--sw-tangerine:#d9794d}
+body{background:#0c231f;color:#e3e8db}
+header.sticky{background:#1b3d34f2!important;border-color:#9abdab55!important}
+footer{background:#132f29!important;border-color:#acc5b055!important}
+.hero{background:radial-gradient(ellipse at 83% 20%,#c38d6073,transparent 37%),radial-gradient(ellipse at 10% 90%,#3b766b77,transparent 49%),linear-gradient(140deg,#20453c,#0f2825)!important}
+.panel{background:#1b3931;border-color:#9dbca84b;color:#e9ecdf}
+.tile:hover{border-color:#e9a16c!important}
+.paper{background:#eee6d1!important;color:#1d3c33!important;background-image:radial-gradient(#d5c8ad .75px,transparent .75px)}
+.text-pink,.nav.active,.nav:hover{color:#edb584!important}
+.bg-pink{background:#d47d4e!important}
+.border-pink{border-color:#e2a878!important}
+.btn{background:#d47d4e;color:#182e28}
+.btn:hover{background:#efb785}
+.btn-outline{border-color:#c2c6b09c}
+.btn-outline:hover{border-color:#edb584;color:#edb584}
+.pill.selected{background:#d37c50;border-color:#d37c50;color:#fff}
+input:focus,select:focus{outline-color:#edb584}
+#visualizer span{background:#edb584}
+.glow{text-shadow:0 0 35px #edb58432}
+#playBtn{box-shadow:0 0 0 5px #d47d4e25}
+#app .panel img{filter:saturate(.82)}
+.sw-profile-wrap{max-width:1180px}
+.sw-profile-eyebrow{font-size:10px;font-weight:800;letter-spacing:.23em;color:#eeb786;text-transform:uppercase}
+.sw-profile-title{font:400 clamp(65px,11vw,160px)/.87 'Bebas Neue',Impact,sans-serif;letter-spacing:-.012em;color:var(--sw-cream);margin:20px 0 26px}
+.sw-profile-title em{font-style:normal;color:var(--sw-orange)}
+.sw-profile-copy{color:#bfd1c4;font-size:17px;max-width:580px;line-height:1.7;margin-bottom:46px}
+.sw-profile-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.85fr);gap:15px}
+.sw-profile-form-panel,.sw-profile-info{background:#19392f;border:1px solid #ffffff33;padding:clamp(26px,5vw,52px)}
+.sw-profile-form-panel label{display:block;color:#e8d6ba;font-size:10px;font-weight:800;letter-spacing:.13em;margin:20px 0 10px}
+.sw-profile-form-panel input,.sw-profile-form-panel select{display:block;width:100%;color:#f8f3e7;background:#0c2c24;border:1px solid #aac3ae69;border-radius:0;padding:14px 15px;font:500 15px 'Plus Jakarta Sans',sans-serif}
+.sw-profile-form-panel option{background:#15372c;color:#f9f6ee}
+.sw-profile-saved{padding:14px 18px;background:#abcbb81a;border-left:3px solid #c2ddbc;color:#e3f2e8;font-size:13px}
+.sw-profile-intro{color:#c2d3c5;font-size:13px}
+.sw-profile-actions{display:flex;flex-wrap:wrap;align-items:center;gap:13px;margin-top:25px}
+.sw-profile-save{background:#e5a16b;color:#19372d;font-size:11px;font-weight:800;letter-spacing:.09em;padding:13px 22px}
+.sw-profile-save:hover{background:#ffd09b}
+.sw-profile-delete{border:1px solid #ffffff52;color:#e6eae0;padding:12px 15px;font-size:10px;letter-spacing:.1em}
+.sw-profile-status{font-size:12px;color:#ffd3a5;min-height:21px}
+.sw-profile-info{position:relative;min-height:440px;overflow:hidden;background:#c3dac8;color:#1d3c33}
+.sw-profile-num{font-size:10px;font-weight:800;letter-spacing:.18em}
+.sw-profile-info h2{position:relative;z-index:1;font:400 clamp(48px,6vw,84px)/.94 'Bebas Neue',Impact,sans-serif;margin:75px 0 20px}
+.sw-profile-info p{position:relative;z-index:1;max-width:380px;color:#31594d;font-size:13px}
+.sw-profile-return{position:relative;z-index:1;font-size:10px;font-weight:800;border-bottom:1px solid #31594d;letter-spacing:.12em;padding-bottom:7px}
+.sw-profile-circle{position:absolute;right:-85px;bottom:-210px;width:450px;height:450px;background:repeating-radial-gradient(circle,#d98f5a 0 3px,#844e3d 4px 7px,#263d32 8px 11px);border:18px solid #2a4d41;color:#f7ecdc;border-radius:50%;display:grid;place-items:start center;padding-top:90px;opacity:.23;transform:rotate(-18deg);font-size:42px}
+@media(max-width:830px){.sw-profile-grid{grid-template-columns:1fr}.sw-profile-info{min-height:350px}.sw-profile-info h2{margin-top:35px}.sw-profile-circle{opacity:.15}}
+@media(prefers-reduced-motion:reduce){.tile:hover{transform:none}}
