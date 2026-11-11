@@ -60,40 +60,56 @@ function details(route,html){
  if(!lines){
   let title=textTitle(html).split(/[|—]/)[0].trim().toUpperCase();
   if(title.length>35)title=title.slice(0,35).trim();
-  const mid=Math.max(1,title.lastIndexOf(' ',Math.ceil(title.length*.55)));
-  lines=[title.slice(0,mid),title.slice(mid).trim()];
+  // Nunca divida uma palavra: isso gerava capas com "S" isolado antes de "YNTHWAVE.FM".
+  const middle=Math.floor(title.length/2);
+  const spaces=[...title.matchAll(/\s+/g)].map(m=>m.index);
+  if(!spaces.length)lines=[title];
+  else {
+    const cut=spaces.reduce((best,x)=>Math.abs(x-middle)<Math.abs(best-middle)?x:best,spaces[0]);
+    lines=[title.slice(0,cut).trim(),title.slice(cut).trim()].filter(Boolean);
+  }
  }
  return {cityScope,brand:cityScope?'WINF SELECT™':brand,photo:cityScope?cityPhotos[cityScope.origin]:photo,lines,subtitle:hook.subtitle||textTitle(html).split(/[|—]/)[0].trim().toUpperCase(),label:hook.label||(cityScope?'SITE OFICIAL WINF SELECT™':'SITE OFICIAL WINF™')};
 }
 function filename(route,city){
- if(city)return 'winf-select-'+city.origin+'-1200x630.jpg';
- if(route==='catalogo')return 'winf-catalogo-1200x630.jpg';
- return 'winf-share-'+(route?route.replace(/[^a-z0-9]+/g,'-'):'oficial')+'-1200x630.jpg';
+ // Novo caminho de arquivo: o WhatsApp armazena a imagem anterior em cache.
+ const version=String(config.visualSystem.previewVersion||'r2').replace(/[^a-z0-9-]/gi,'');
+ const basename=city?'winf-select-'+city.origin:route==='catalogo'?'winf-catalogo':'winf-share-'+(route?route.replace(/[^a-z0-9]+/g,'-'):'oficial');
+ return basename+'-1200x630-'+version+'.jpg';
 }
 function svgContent(d){
- const city=!!d.city,loc=city?d.city.city.toUpperCase()+' / '+d.city.uf:d.brand;
- const lines=d.lines.slice(0,2);
- const longest=Math.max(...lines.map(s=>s.length));
- const fontSize=longest>27?34:longest>22?39:longest>17?44:longest>13?50:57;
- const x=70;
- const labels=lines.map((line,i)=>'<text x="'+x+'" y="'+(city?338:325+i*63 + (i?0:0))+'" font-size="'+fontSize+'" font-weight="400" letter-spacing="-1.3" fill="#f5f5f6" font-family="DejaVu Sans,Arial,sans-serif">'+escape(line)+'</text>');
- // The city headline needs a second independent line, aligned with the first.
- if(city&&labels.length>1)labels[1]='<text x="'+x+'" y="399" font-size="'+fontSize+'" font-weight="400" letter-spacing="-1.3" fill="#f5f5f6" font-family="DejaVu Sans,Arial,sans-serif">'+escape(lines[1])+'</text>';
+ // Composição editorial com área de segurança. O texto nunca fica no meio
+ // da fotografia e nenhum nome de marca é separado no meio da palavra.
+ const synth=/SYNTHWAVE/i.test(d.brand);
+ const city=!!d.city;
+ const loc=city?d.city.city.toUpperCase('pt-BR')+' / '+d.city.uf:d.brand;
+ const lines=(d.lines||[]).map(v=>String(v).trim()).filter(Boolean).slice(0,2);
+ if(!lines.length)lines.push('WINF');
+ const estimate=(line)=>[...line].reduce((sum,ch)=>sum+('MW@%'.includes(ch)?0.86:'I1|'.includes(ch)?0.34:' .,-'.includes(ch)?0.32:0.64),0);
+ const longest=Math.max(...lines.map(estimate));
+ const fontSize=Math.max(29,Math.min(61,Math.floor(750/Math.max(longest,1))));
+ const y=lines.length===1?[356]:[325,392];
+ const color=synth?'#fff7e8':'#fafafa';
+ const pale=synth?'#cfe0d4':'#d1d7da';
+ const accent=synth?'#e9aa75':'#b7bec1';
+ const shade0=synth?'#163b32':'#080b0f';
+ const shade1=synth?'#1e483a':'#0d1014';
+ const headline=lines.map((line,i)=>
+  '<text x="74" y="'+y[i]+'" font-size="'+fontSize+'" font-weight="700" letter-spacing="-1.3" fill="'+color+'" font-family="DejaVu Sans,Arial,sans-serif">'+escape(line)+'</text>');
  const topLabel=city?'SELECT™ / GLASS + HOME':loc;
  const under=city?loc:d.subtitle;
- const yTitle=city?276:217;
  return [
  '<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">',
- '<defs><linearGradient id="black" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#08090b" stop-opacity=".99"/><stop offset=".39" stop-color="#0b0c0e" stop-opacity=".92"/><stop offset=".71" stop-color="#14171b" stop-opacity=".37"/><stop offset="1" stop-color="#1c2024" stop-opacity=".15"/></linearGradient>',
- '<linearGradient id="floor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#050607" stop-opacity=".05"/><stop offset="1" stop-color="#050607" stop-opacity=".62"/></linearGradient></defs>',
- '<rect width="1200" height="630" fill="url(#black)"/><rect width="1200" height="630" fill="url(#floor)"/>',
- '<line x1="70" y1="148" x2="400" y2="148" stroke="#d6d9de" stroke-width="1" opacity=".50"/>',
- '<text x="258" y="95" fill="#e9e9ec" font-size="18" font-weight="400" letter-spacing="2" font-family="DejaVu Sans,Arial,sans-serif">'+escape(topLabel)+'</text>',
- '<text x="72" y="'+yTitle+'" fill="#bfc4cb" font-size="'+(city?24:16)+'" letter-spacing="'+(city?2:3)+'" font-family="DejaVu Sans,Arial,sans-serif">'+escape(under)+'</text>',
- ...labels,
- '<line x1="72" y1="456" x2="158" y2="456" stroke="#e5e6e8" stroke-width="2" opacity=".72"/>',
- '<text x="72" y="497" fill="#c4c7cc" font-size="15" letter-spacing="1.3" font-family="DejaVu Sans,Arial,sans-serif">'+escape(d.subtitle)+'</text>',
- '<text x="72" y="580" fill="#dcdee1" font-size="11" letter-spacing="3" font-family="DejaVu Sans,Arial,sans-serif">'+escape(d.label)+'</text>',
+ '<defs><linearGradient id="shade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="'+shade0+'" stop-opacity=".99"/><stop offset=".53" stop-color="'+shade1+'" stop-opacity=".95"/><stop offset=".78" stop-color="'+shade1+'" stop-opacity=".36"/><stop offset="1" stop-color="'+shade1+'" stop-opacity=".13"/></linearGradient>',
+ '<linearGradient id="floor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#060d0b" stop-opacity="0"/><stop offset="1" stop-color="#060d0b" stop-opacity=".75"/></linearGradient></defs>',
+ '<rect width="1200" height="630" fill="url(#shade)"/><rect width="1200" height="630" fill="url(#floor)"/>',
+ '<line x1="74" y1="151" x2="410" y2="151" stroke="'+accent+'" stroke-width="2" opacity=".72"/>',
+ '<text x="262" y="92" fill="'+color+'" font-size="19" font-weight="600" letter-spacing="1.5" font-family="DejaVu Sans,Arial,sans-serif">'+escape(topLabel)+'</text>',
+ '<text x="74" y="226" fill="'+pale+'" font-size="17" letter-spacing="1.4" font-family="DejaVu Sans,Arial,sans-serif">'+escape(under)+'</text>',
+ ...headline,
+ '<line x1="74" y1="446" x2="172" y2="446" stroke="'+accent+'" stroke-width="4" opacity=".88"/>',
+ '<text x="74" y="488" fill="'+color+'" font-size="15" letter-spacing="1.0" font-family="DejaVu Sans,Arial,sans-serif">'+escape(d.subtitle)+'</text>',
+ '<text x="74" y="575" fill="'+pale+'" font-size="12" letter-spacing="1.9" font-family="DejaVu Sans,Arial,sans-serif">'+escape(d.label)+'</text>',
  '</svg>'
  ].join('');
 }
