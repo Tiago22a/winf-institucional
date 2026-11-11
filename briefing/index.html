@@ -560,7 +560,7 @@
 
 
 
-<link rel="stylesheet" href="/css/winf-cinema.css?v=20261111-1">
+<link rel="stylesheet" href="/css/winf-cinema.css?v=20261111-2">
 
 <!-- WINF social / previews oficiais e URLs canônicas sem parâmetros -->
 <meta property="og:type" content="website">
@@ -588,8 +588,9 @@
  <div class="wc-film-grid wc-film-grid--one">
   <figure class="wc-film">
    <div class="wc-film-media">
-    <video data-winf-cinema autoplay muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" poster="/briefing/media/winf-dominio-absoluto-manha.jpg">
-     <source data-src="/briefing/media/winf-dominio-absoluto-manha.mp4" type="video/mp4">
+    <img class="wc-film-poster" src="/briefing/media/briefing-poster.webp" alt="" loading="lazy" decoding="async">
+    <video data-winf-cinema autoplay muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" poster="/briefing/media/briefing-poster.webp">
+     <source data-src="/briefing/media/winf-dominio-absoluto-manha.mp4" data-fallback-src="/partners/media/hero.mp4" type="video/mp4">
     </video>
    </div>
   </figure>
@@ -814,7 +815,7 @@
   </div>
 </div>
 </footer><script defer="" src="/script.js"></script><script charset="utf-8" defer="" src="/js/winf-footer.js?v=20261103-reference-2"></script><script defer="" src="/partners/partners.js?v=20261107-direct-whatsapp-3"></script><script defer src="/briefing/model-film.js?v=20261108-media7"></script><script defer src="/briefing/flagship-glow.js?v=20261109-1"></script>
-<script defer src="/briefing/hero-motion.js?v=20261111-1"></script><script defer src="/js/winf-cinema.js?v=20261111-1"></script>
+<!-- O filme editorial é carregado pelo player compartilhado; evita duas animações concorrendo no hero. --><script defer src="/js/winf-cinema.js?v=20261111-2"></script>
 </body></html>
 
 

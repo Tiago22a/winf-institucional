@@ -41,3 +41,18 @@
 .wc-section--light .wc-link:hover{background:#111;color:white}
 @media(max-width:800px){.wc-head{display:block}.wc-head>p{margin-top:18px}.wc-film-grid{grid-template-columns:1fr}.wc-section--briefing .wc-film-media{aspect-ratio:16/9}.wc-film-caption{padding:15px;min-height:70px}.wc-film-caption strong{font-size:11px}.wc-film-caption span{font-size:9px}.wc-brand-lockup{left:12px;top:10px}}
 @media(prefers-reduced-motion:reduce){.wc-film video{display:none!important}.wc-film-poster{opacity:1}.wc-section *, .wc-section *::before,.wc-section *::after{transition:none!important}}
+
+/* P1 — imagens acendem ao passar o mouse, sem interferir nas logomarcas. */
+.wc-film-poster{transition:filter .5s ease,transform 1.1s ease}
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+ .wc-film:is(:hover,:focus-within) .wc-film-poster{filter:brightness(1.18) saturate(1.06);transform:scale(1.035)}
+ .wc-film:is(:hover,:focus-within) video.wc-playing{filter:brightness(1.12)}
+}
+/* Se o filme ainda não estiver no servidor, mantém o pôster vivo em vez de um quadro vazio. */
+@keyframes wc-poster-ambient{from{transform:scale(1)}to{transform:scale(1.055)}}
+@media(prefers-reduced-motion:no-preference){
+ .wc-film[data-wc-error="video-unavailable"] .wc-film-poster{animation:wc-poster-ambient 13s ease-in-out alternate infinite}
+}
+@media(prefers-reduced-motion:reduce){
+ .wc-film-poster,.wc-film video{transition:none!important;animation:none!important}
+}

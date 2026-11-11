@@ -17,7 +17,8 @@ test('GHOST SHOP™ inclui 23 conceitos, sem preço ou checkout fictício',()=>{
  assert.doesNotMatch(html,/R\$\s*[\d.,]+|data-price|add-to-cart|checkout\//i);
 });
 test('os 11 itens individuais de acervo e a prancha original usam imagens existentes',()=>{
- const urls=[...html.matchAll(/src="(\/images\/shop\/blackshop%20\(\d+\)\.webp)"/g)].map(x=>x[1]);
+ // Conta apenas os 11 itens de acervo; a nova capa cinematográfica não é produto.
+ const urls=[...html.matchAll(/<span class="gs-product-visual"><img src="(\/images\/shop\/blackshop%20\(\d+\)\.webp)"/g)].map(x=>x[1]);
  assert.equal(urls.length,11);
  assert.equal(new Set(urls).size,11);
  for(const url of urls){
