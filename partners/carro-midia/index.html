@@ -38,6 +38,18 @@ body{font-family:Inter,Arial,Helvetica,sans-serif;background:radial-gradient(ell
 @media(max-width:1040px){.layout{grid-template-columns:1fr}.sidebar{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:660px){.topbar{position:relative}.sidebar{display:flex}.hero h1{font-size:clamp(35px,8.6vw,53px)}.panelhead{flex-wrap:wrap}.panelhead #photoBtn{width:100%}.stage-wrap{padding:10px}.stage{aspect-ratio:4/3}.actions .btn{flex:1 1 45%}}
 @media(prefers-reduced-motion:reduce){.btn,.view,.inv{transition:none!important;transform:none!important}}
+
+.mediacar-story{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(25px,4vw,65px);align-items:center;padding:0 0 clamp(55px,7vw,100px);margin-top:14px}
+.mediacar-story-media{position:relative;min-height:clamp(370px,40vw,590px);overflow:hidden;background:#181b22;border:1px solid #ffffff30}
+.mediacar-story-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) brightness(.7);transition:filter .55s,transform .8s}
+.mediacar-story-media:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#050608e8,transparent 60%);pointer-events:none}
+.mediacar-story-overlay{position:absolute;z-index:2;left:clamp(22px,3vw,45px);bottom:30px;right:18px}.mediacar-story-overlay span{display:block;font:700 10px JetBrains,monospace;letter-spacing:.15em;margin-bottom:13px}.mediacar-story-overlay strong{font:700 clamp(30px,3.4vw,50px)/1.08 Gustavo,Arial,sans-serif}
+.mediacar-story-copy .mono{color:#aeb2bb}.mediacar-story-copy h2{font:700 clamp(35px,3.8vw,60px)/1.08 Gustavo,Arial,sans-serif;letter-spacing:-.04em;margin:20px 0}.mediacar-story-copy h2 em{font-style:normal;color:#abb1bc}
+.mediacar-story-copy p{color:#c0c3cc;font-size:clamp(14px,1.15vw,17px);line-height:1.75}.mediacar-story-copy .btn{display:inline-block;margin-top:16px;text-decoration:none}
+#mediacar-simulador{scroll-margin-top:105px}
+@media(hover:hover){.mediacar-story-media:hover img{filter:grayscale(1) brightness(1.12);transform:scale(1.04)}}
+@media(max-width:850px){.mediacar-story{grid-template-columns:1fr}.mediacar-story-media{min-height:350px}}
+@media(prefers-reduced-motion:reduce){.mediacar-story-media img{transition:none}}
 </style>
 </head>
 <body>
@@ -51,7 +63,10 @@ body{font-family:Inter,Arial,Helvetica,sans-serif;background:radial-gradient(ell
 <p>Transforme veículos em mídia local. Visualize cotas comerciais, posicione marcas nas diferentes vistas do carro e prepare uma proposta para potenciais anunciantes. Para operações WINF, preserve os espaços institucionais da marca.</p></div>
 <span class="prototype mono">ESTÚDIO DE SIMULAÇÃO / PROTÓTIPO</span>
 </section>
-<main class="layout">
+<section class="mediacar-story" aria-labelledby="mediacar-story-title">
+<div class="mediacar-story-media"><img src="/briefing/media/asset-light-mobilidade-2026.webp" loading="lazy" alt="Mobilidade e presença territorial WINF — imagem ilustrativa"><div class="mediacar-story-overlay"><span>M.A.W.™ / MEDIA IN MOTION</span><strong>UM VEÍCULO.<br>INÚMERAS CONEXÕES.</strong></div></div>
+<div class="mediacar-story-copy"><span class="mono">01 / O CONCEITO</span><h2 id="mediacar-story-title">O CARRO SE MOVE.<br><em>A MARCA ACOMPANHA.</em></h2><p>MediaCar™ transforma a mobilidade cotidiana em uma oportunidade de presença publicitária local. Cada veículo pode ser apresentado com espaços reservados para marcas e campanhas, de forma visual e personalizável.</p><p>Na experiência abaixo você escolhe a vista do carro, posiciona as cotas, insere artes, define valores e exporta uma proposta. É uma simulação: publicidade real exige aprovação das marcas, medidas e regras aplicáveis.</p><a class="btn" href="#mediacar-simulador">EXPERIMENTAR O SIMULADOR ↓</a></div></section>
+<main class="layout" id="mediacar-simulador">
 <section class="panel" aria-label="Área de simulação">
 <div class="panelhead"><h2>01 / Projeto visual do veículo</h2><button class="btn secondary" type="button" id="photoBtn">+ Inserir foto do carro</button><input type="file" id="photoInput" accept="image/jpeg,image/png,image/webp" hidden></div>
 <div class="views" id="viewTabs" role="group" aria-label="Vista do carro"></div>
