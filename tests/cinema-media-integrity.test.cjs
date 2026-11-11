@@ -27,7 +27,7 @@ test("Cinema: páginas estão ligadas à versão corrigida do player e do estilo
   const sharedCss=/\/css\/winf-cinema\.css\?v=20261111-2/.test(html);
   const isolatedCss=["synthwave/index.html","ghost-shop/index.html"].includes(route)&&html.includes("<style>");
   assert.ok(sharedCss||isolatedCss,route+" deve fornecer estilo local ou compartilhado para o player");
-  if(route==="synthwave/index.html")assert.match(html,/<source src="\/media\/ecossistema\/synthwave-hero\.mp4"/);
+  if(route==="synthwave/index.html")assert.match(html,/src="\/synthwave\/assets\/frequencia-radio-ilustrado\.svg"/);
   else assert.match(html,/\/js\/winf-cinema\.js\?v=20261111-2/,route);
  }
 });
@@ -64,22 +64,30 @@ test("Cinema: mídias finais carregadas e conferíveis no repositório",()=>{
  assert.deepEqual(unresolved,[],"Todos os vídeos aprovados devem existir no repositório: "+unresolved.join(", "));
 });
 
-test("SynthWAVE: identidade retrô, dois filmes reais e entrada da rádio existentes",()=>{
+test("SynthWAVE: two illustrated panels, authentic GHOST symbol and functioning radio routes",()=>{
  const html=get("synthwave/index.html"),radio=get("synthwave/radio/index.html");
  const engine=get("synthwave/app.js"),profile=get("synthwave/profile.js");
- assert.match(html,/SYNTHWAVE.FM/i);
+ assert.match(html,/SYNTHWAVE\.FM/i);
  assert.match(html,/\/synthwave\/assets\/retro-radio\.svg/);
- assert.equal(exists("/synthwave/assets/retro-radio.svg"),true);
  assert.match(html,/href="\/synthwave\/radio\/"/);
- for(const slug of ["hero","experience"]){
-  const source="/media/ecossistema/synthwave-"+slug+".mp4";
-  assert.equal(exists(source),true,"MP4 ausente: "+source);
-  assert.match(html,new RegExp('src="'+source.replaceAll(".","\\.")+'"'));
+ const artworks=["frequencia-radio-ilustrado.svg","experiencia-sonora-ilustrada.svg"];
+ for(const file of artworks){
+   const route="/synthwave/assets/"+file;
+   assert.equal(exists(route),true,route+" deve existir");
+   assert.match(html,new RegExp('src="'+route.replaceAll(".","\\.")+'"'));
+   const asset=get(route.replace(/^\//,""));
+   assert.match(asset,/data:image\/png;base64,/,"assinatura GHOST integrada na imagem: "+file);
  }
- assert.equal((html.match(/<video autoplay muted loop playsinline controls/g)||[]).length,2);
+ assert.match(get("synthwave/assets/retro-radio.svg"),/data:image\/png;base64,/);
+ assert.match(html,/\/aerocore\/assets\/ghost-symbol\.png/);
+ assert.equal(exists("/aerocore/assets/ghost-symbol.png"),true);
+ assert.doesNotMatch(html.slice(html.indexOf('id="filmes"')),/<video\b/,"painéis devem ser ilustrações estáticas");
  assert.match(radio,/data-nav="profile"/);
  assert.match(radio,/\.\.\/profile\.js/);
  assert.match(radio,/\/synthwave\/radio-theme\.css/);
+ assert.match(radio,/sw-ghost-nav/);
+ assert.match(radio,/sw-ghost-player/);
+ assert.doesNotMatch(radio,/#ff007f|#ff3d9f|#ec4193|#ed368a/i);
  assert.match(engine,/profile:\(\)=>window\.SynthwaveProfile\.render\(\)/);
  assert.match(profile,/localStorage\.setItem/);
 });
