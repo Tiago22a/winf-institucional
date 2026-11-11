@@ -28,12 +28,23 @@ article small{display:block;color:#91959b;letter-spacing:.2em;font-size:10px}h2{
 footer{max-width:1320px;margin:auto;border-top:1px solid var(--line);padding:28px clamp(18px,4vw,64px) 40px;color:#95979c;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px}
 @media(max-width:780px){.grid{grid-template-columns:1fr;margin-top:60px}article{min-height:0}header{align-items:flex-start}.brand{flex-direction:column;align-items:start}h1{overflow-wrap:anywhere}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Universo Dark editorial layout: title must never collide or overflow */
+main{position:relative;isolation:isolate;overflow:hidden}
+main::before{content:"";position:absolute;z-index:-1;right:-20%;top:-25%;width:min(85vw,900px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#292f44 0%,#171b2b 28%,transparent 68%);opacity:.65;animation:darkPulse 12s ease-in-out infinite}
+h1{max-width:100%;font-size:clamp(48px,10vw,135px);line-height:1;letter-spacing:-.035em;overflow-wrap:normal;word-break:normal;text-wrap:balance}
+h1 span{display:block;font-size:.93em;white-space:normal}
+.grid article{transition:transform .35s,border-color .35s,background .35s}
+@media(hover:hover){.grid article:hover{transform:translateY(-5px);border-color:#dadfeb9c;background:#1b1f2b}}
+@keyframes darkPulse{0%,100%{transform:scale(.92);opacity:.45}50%{transform:scale(1.06);opacity:.85}}
+@media(max-width:780px){h1{font-size:clamp(49px,12vw,90px);line-height:1.03}.lead{font-size:16px}}
+@media(prefers-reduced-motion:reduce){main::before{animation:none}.grid article{transition:none}}
 </style>
 </head>
 <body id="topo">
 <header><a class="brand" href="/" aria-label="WINF — início"><img src="/winf-logo.svg" alt="WINF™"> <span>PROJETOS ESTRATÉGICOS</span></a><a class="back" href="/partners/">← WINF PARTNERS™</a></header>
 <main id="conteudo">
-<p class="eyebrow">WINF.inc® / Governança e desenvolvimento</p>
+<p class="eyebrow">WINF.inc® / PROJETOS ESTRATÉGICOS / UNIVERSO DARK™</p>
 <h1>UNIVERSO <span>DARK™</span></h1>
 <p class="lead">Um espaço institucional dedicado à organização de projetos estratégicos, estudos de estruturação e governança do ecossistema WINF.</p>
 <p class="notice"><strong>Projeto em estruturação.</strong> Esta página não constitui oferta pública de valores mobiliários, promessa de rentabilidade, convite para investimento ou declaração de que operações financeiras já estejam disponíveis.</p>
