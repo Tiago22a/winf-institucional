@@ -16,7 +16,7 @@ test('P0: cadastro distingue operações ativas de páginas em pré-ativação',
   assert.ok(list.length >= 100, 'cadastro territorial preservado');
   const active = list.concat(extras).filter(x => x.status === 'ativa' && x.exemplo === false);
   assert.equal(active.length, 2, 'somente as duas operações declaradas');
-  assert.deepEqual(active.map(x => x.cidade).sort(), ['Pilar do Sul', 'Santos']);
+  assert.deepEqual(Array.from(active, x => x.cidade).sort(), ['Pilar do Sul', 'Santos']);
   assert.ok(list.some(x => x.status === 'pre_ativacao' && x.siteAtivo === true), 'páginas publicadas e sem operação existem');
 });
 
