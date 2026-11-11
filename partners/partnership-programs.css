@@ -101,3 +101,16 @@ html{scroll-behavior:smooth}
 @media(max-width:820px){.pp-hero-grid,.pp-section-heading,.pp-picture-row,.pp-project-detail{grid-template-columns:1fr}.pp-hero-visual{aspect-ratio:16/9}.pp-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.pp-steps li:nth-child(2){border-right:0}.pp-steps li:nth-child(-n+2){border-bottom:1px solid #ffffff31}.pp-steps li:first-child{padding-left:24px}.pp-feature-grid{grid-template-columns:1fr}.pp-feature{min-height:0}.pp-feature h3{margin-top:25px}}
 @media(max-width:620px){.pp-wrap{width:min(100% - 32px,1240px)}.pp-nav{flex-direction:column;justify-content:center;align-items:flex-start;padding-block:12px;gap:12px}.pp-nav nav{gap:16px}.pp-nav nav a{font-size:9px}.pp-brand img{width:90px}.pp-brand>span{font-size:18px}.pp-hero-text h1,.pp-hub-hero h1{font-size:clamp(48px,12vw,74px)}.pp-hero-actions .pp-button{width:100%}.pp-hero{padding-top:65px}.pp-feature-grid{gap:10px}.pp-steps{grid-template-columns:1fr}.pp-steps li{border-right:0;border-bottom:1px solid #ffffff30!important;padding:20px 0!important}.pp-steps li:last-child{border-bottom:0!important}.pp-foot-cols{flex-direction:column}.pp-foot-cols nav{grid-template-columns:1fr 1fr}.winf-partners-site .wp-channel-grid,.winf-partners-site .wp-project-grid{grid-template-columns:1fr}.winf-partners-site .wp-project-card{min-height:0}.winf-partners-site .wp-channel-info{padding:22px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.winf-partners-site .wp-channel-media img{transition:none;transform:none}}
+
+
+/* WINF project pages | responsive editorial titling and motion */
+.pp-social .pp-social-hero{position:relative;overflow:hidden;isolation:isolate;background:radial-gradient(ellipse at 78% 32%,#26352b 0%,#141b18 39%,#0b0e0d 75%)}
+.pp-social .pp-social-hero:after{content:"";pointer-events:none;position:absolute;z-index:-1;width:min(66vw,850px);aspect-ratio:1;right:-12%;top:-38%;border:1px solid #cae9d52b;border-radius:50%;box-shadow:0 0 0 70px #badac30a,0 0 0 170px #badac309;animation:pp-breathe 11s ease-in-out infinite}
+.pp-social .pp-hub-hero h1{font-size:clamp(48px,8.4vw,124px);line-height:1.03;letter-spacing:-.025em;overflow-wrap:normal;word-break:normal;max-width:100%;text-wrap:balance}
+.pp-social .pp-hub-hero h1 em{display:inline-block;color:#d2e3d6}
+.pp-social .pp-feature{transition:border-color .3s,background .3s,transform .3s}
+@media(hover:hover){.pp-social .pp-feature:hover{border-color:#d9ebe6a0;background:#202a24;transform:translateY(-4px)}.pp-social .pp-picture-row figure:hover img{filter:brightness(1.2);transform:scale(1.025)}}
+.pp-social .pp-picture-row img{transition:filter .4s,transform .6s}
+@keyframes pp-breathe{0%,100%{transform:scale(.98);opacity:.65}50%{transform:scale(1.06);opacity:1}}
+@media(max-width:640px){.pp-social .pp-hub-hero h1{font-size:clamp(43px,11.5vw,72px);line-height:1.06}.pp-social .pp-social-hero:after{width:90vw;right:-45%;top:-20%}}
+@media(prefers-reduced-motion:reduce){.pp-social .pp-social-hero:after{animation:none}.pp-social .pp-feature,.pp-social .pp-picture-row img{transition:none}}
