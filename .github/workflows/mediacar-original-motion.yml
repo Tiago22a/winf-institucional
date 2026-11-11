@@ -1,0 +1,28 @@
+name: WINF MediaCar — Vídeos originais e hero
+on:
+  pull_request:
+    paths:
+      - 'mediacar/index.html'
+      - 'media/ecossistema/mediacar-*'
+      - 'tests/mediacar-original-motion.test.cjs'
+      - '.github/workflows/mediacar-original-motion.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'mediacar/index.html'
+      - 'media/ecossistema/mediacar-*'
+      - 'tests/mediacar-original-motion.test.cjs'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validar mídias oficiais, hero e CTA do simulador
+        run: node --test tests/mediacar-original-motion.test.cjs
