@@ -163,19 +163,25 @@
 
 
 <style>
-.mc-studio{scroll-margin-top:30px;background:linear-gradient(165deg,#12151b,#07090d);padding:clamp(75px,9vw,135px) 0;border-top:1px solid #ffffff2c}
-.mc-studio-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(250px,.6fr);align-items:end;gap:clamp(18px,4vw,80px);margin-bottom:32px}
-.mc-studio-head h2{font-size:clamp(43px,5vw,81px);line-height:.98}
+/* Site institucional: convite ao estúdio separado, sem painel ou iframe embutido. */
+.mc-studio{scroll-margin-top:32px;background:linear-gradient(160deg,#121419,#06080b);padding:clamp(68px,8vw,116px) 0;border-top:1px solid #ffffff28}
+.mc-studio-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,.65fr);align-items:end;gap:clamp(20px,4vw,68px);margin-bottom:32px}
+.mc-studio-head h2{font:400 clamp(43px,5vw,81px)/1.02 Anton,Impact,sans-serif;text-transform:uppercase;margin:14px 0 0}
 .mc-studio-head h2 em{font-style:normal;color:#aab1bc}
 .mc-studio-head p{color:#c2c5cc;line-height:1.75;font-size:15px}
-.mc-studio-frame{border:1px solid #ffffff36;background:#0d0f13;overflow:hidden;box-shadow:0 35px 90px #0008}
-.mc-studio-bar{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;padding:19px 24px;border-bottom:1px solid #ffffff29;background:#17191d}
-.mc-studio-bar strong,.mc-studio-bar a{font:700 10px/1.5 Inter,Arial,sans-serif;letter-spacing:.1em}
-.mc-studio-bar a{color:#fff;text-decoration:none;border-bottom:1px solid #ffffff96;padding-bottom:4px}
-#mc-studio-app{display:block;width:100%;height:1550px;border:0;background:#08090b;overflow:hidden}
-.mc-studio-note{color:#9da3af;line-height:1.75;font-size:12px;margin-top:19px;max-width:900px}
-@media(max-width:850px){.mc-studio-head{grid-template-columns:1fr}.mc-studio-frame{margin:0 -2vw}.mc-studio-bar{padding:15px}#mc-studio-app{height:2200px}}
-@media(prefers-reduced-motion:reduce){#mc-studio-app{scroll-behavior:auto}}
+.mc-studio-preview{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(260px,.8fr);border:1px solid #ffffff32;background:#0d0f13;box-shadow:0 35px 90px #0006;overflow:hidden}
+.mc-studio-visual{min-height:370px;position:relative;overflow:hidden;background:#111318}
+.mc-studio-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.82);transition:transform .7s ease,filter .7s ease}
+.mc-studio-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#050608a8,transparent 65%);pointer-events:none}
+.mc-studio-visual-label{position:absolute;z-index:1;left:clamp(18px,3vw,38px);bottom:clamp(18px,3vw,36px);font-size:11px;letter-spacing:.17em;font-weight:800;text-shadow:0 2px 18px #000}
+.mc-studio-cta{padding:clamp(26px,4.2vw,64px);display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.mc-studio-cta strong{font:400 clamp(33px,3.4vw,57px)/1.06 Anton,Impact,sans-serif;text-transform:uppercase}
+.mc-studio-cta p{color:#c8ccd3;font-size:14px;line-height:1.8;margin:23px 0 0}
+.mc-studio-cta .cta{margin-top:30px}
+.mc-studio-note{color:#a3a9b4;line-height:1.75;font-size:12px;margin-top:18px}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){.mc-studio-preview:hover .mc-studio-visual img{transform:scale(1.03);filter:brightness(.98)}}
+@media(max-width:850px){.mc-studio-head,.mc-studio-preview{grid-template-columns:1fr}.mc-studio-visual{min-height:270px}.mc-studio-cta{padding:30px 22px}}
+@media(prefers-reduced-motion:reduce){.mc-studio-visual img{transition:none}}
 </style>
 
 <!-- WINF social / previews oficiais e URLs canônicas sem parâmetros -->
@@ -394,17 +400,17 @@
 <meta property="og:title" content="MediaCar™ | Mídia sobre rodas — WINF">
 <meta property="og:description" content="MediaCar™: publicidade sobre veículos, cotas de patrocínio e mídia em movimento. Projeto de comunicação visual M.A.W.™ / WINF.inc®.">
 <meta property="og:url" content="https://winf.com.br/mediacar/">
-<meta property="og:image" content="https://winf.com.br/images/og/winf-share-mediacar-1200x630.jpg">
-<meta property="og:image:secure_url" content="https://winf.com.br/images/og/winf-share-mediacar-1200x630.jpg">
-<meta property="og:image:type" content="image/jpeg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Imagem editorial WINF™ para WINF™: M EDIACAR™. Fotografia ilustrativa.">
+<meta property="og:image" content="https://winf.com.br/media/ecossistema/mediacar-bmw.webp">
+<meta property="og:image:secure_url" content="https://winf.com.br/media/ecossistema/mediacar-bmw.webp">
+<meta property="og:image:type" content="image/webp">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
+<meta property="og:image:alt" content="BMW M4 MediaCar™ — mídia sobre rodas.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MediaCar™ | Mídia sobre rodas — WINF">
 <meta name="twitter:description" content="MediaCar™: publicidade sobre veículos, cotas de patrocínio e mídia em movimento. Projeto de comunicação visual M.A.W.™ / WINF.inc®.">
-<meta name="twitter:image" content="https://winf.com.br/images/og/winf-share-mediacar-1200x630.jpg">
-<meta name="twitter:image:alt" content="Imagem editorial WINF™ para WINF™: M EDIACAR™. Fotografia ilustrativa.">
+<meta name="twitter:image" content="https://winf.com.br/media/ecossistema/mediacar-bmw.webp">
+<meta name="twitter:image:alt" content="BMW M4 MediaCar™ — mídia sobre rodas.">
 </head><body><header class="header"><div class="w"><a class="brand" href="/partners/"><img src="/winf-logo.svg" alt="WINF™ — marca oficial"><span>MEDIACAR™</span></a><nav class="nav" aria-label="Navegação"><a href="/partners/ecossistema/">ECOSSISTEMA</a><a href="/maw/">M.A.W.™</a><a href="/partners/">WINF PARTNERS™</a></nav></div></header><main>
 <section class="hero" aria-labelledby="mediacar-title">
   <div class="hero-media" aria-hidden="true">
@@ -446,14 +452,13 @@
     </figure>
   </div>
 </section><section class="info"><div class="w"><div class="top"><div><span class="eyebrow">02 / A IDEIA POR TRÁS DA EXPERIÊNCIA</span><h2>VISÃO PRÓPRIA.<br><em>MESMA ORIGEM.</em></h2></div><p>Conceito audiovisual e simulador experimental. Cotas, patrocínios, aplicações e circulação dependem de contratos, direitos de marca e legislação de trânsito.</p></div><div class="items"><article><small>01 / TRANSFORMAÇÃO</small><h3>VISUAL DE CORRIDA.</h3><p>Envelopamento e comunicação que dão ao carro linguagem esportiva, respeitando sua utilização real.</p></article><article><small>02 / MARCAS</small><h3>COTAS MENSAIS.</h3><p>Cada área de publicidade poderá ser contratada por uma marca anunciante, mediante mensalidade e condições previstas em contrato.</p></article><article><small>03 / PLANEJAMENTO</small><h3>CICLO DE SEIS MESES.</h3><p>A campanha proposta tem duração semestral; a cada renovação, a arte e os adesivos podem ser atualizados. Simule as cotas antes da aplicação.</p></article></div></div></section><section class="mc-studio" id="simulador" aria-labelledby="mc-studio-title"><div class="w">
-  <div class="mc-studio-head"><div><span class="eyebrow">03 / FERRAMENTA INTERATIVA M.A.W.™</span><h2 id="mc-studio-title">AGORA, CRIE<br><em>SUA PROPOSTA.</em></h2></div><p>O estúdio MediaCar™ está integrado a esta página. Escolha as vistas do carro, insira fotos, posicione marcas e configure as cotas para construir uma prévia comercial.</p></div>
-  <div class="mc-studio-frame"><div class="mc-studio-bar"><strong>MEDIACAR™ / ESTÚDIO DE SIMULAÇÃO</strong><a href="/partners/carro-midia/" target="_blank" rel="noopener">ABRIR EM TELA INTEIRA ↗</a></div>
-    <iframe id="mc-studio-app" title="Simulador interativo MediaCar com vistas do veículo e cotas publicitárias" src="/partners/carro-midia/?embed=1" loading="lazy" scrolling="no" referrerpolicy="same-origin"></iframe>
-  </div>
-  <p class="mc-studio-note">Simulação visual e comercial, sem venda automática de mídia, assinatura de contrato ou confirmação de disponibilidade. As artes, preços e aplicações dependem de validação.</p>
-</div></section><section class="closing"><div class="w"><span class="eyebrow">03 / WINF.inc® — DO BRASIL PARA O MUNDO</span><h2>A MARCA GANHA<br><em>MOVIMENTO.</em></h2><p>Explore a próxima etapa do projeto e os canais oficiais do ecossistema.</p><a class="cta" href="#simulador">USAR SIMULADOR MEDIACAR ↓</a><a class="cta alt" href="/partners/ecossistema/">VER ECOSSISTEMA ↗</a></div></section></main><footer><div class="w"><img src="/winf-logo.svg" alt="WINF™"><span>MEDIACAR™ / WINF.inc®</span><a href="/partners/ecossistema/">VOLTAR AO ECOSSISTEMA ↗</a></div></footer><script defer src="/js/winf-cinema.js?v=20261111-2"></script><script>
-(()=>{'use strict';const frame=document.getElementById('mc-studio-app');if(!frame)return;let observer;
-const resize=()=>{try{const doc=frame.contentDocument;if(!doc)return;const height=Math.max(doc.documentElement.scrollHeight,doc.body?.scrollHeight||0,650);frame.style.height=height+24+'px';}catch(_){}};
-frame.addEventListener('load',()=>{resize();try{observer?.disconnect();observer=new ResizeObserver(resize);observer.observe(frame.contentDocument.documentElement);observer.observe(frame.contentDocument.body);}catch(_){}});window.addEventListener('resize',resize);
-})();
-</script></body></html>
+ <div class="mc-studio-head">
+   <div><span class="eyebrow">03 / FERRAMENTA M.A.W.™</span><h2 id="mc-studio-title">CRIE SUA<br><em>PROPOSTA.</em></h2></div>
+   <p>O MediaCar™ Studio é uma ferramenta própria para planejar espaços publicitários em veículos. A experiência comercial fica em uma página independente, sem misturar o simulador com a apresentação institucional.</p>
+ </div>
+ <div class="mc-studio-preview">
+   <div class="mc-studio-visual"><img src="/media/ecossistema/mediacar-bmw.webp" width="1280" height="720" loading="lazy" decoding="async" alt="BMW M4 MediaCar™ personalizada com espaços de publicidade"><span class="mc-studio-visual-label">MEDIACAR™ / MÍDIA SOBRE RODAS</span></div>
+   <div class="mc-studio-cta"><span class="eyebrow">PRÉVIA DO ESTÚDIO</span><strong>UMA IDEIA.<br>VÁRIAS MARCAS.</strong><p>Escolha uma vista, envie as imagens do veículo, distribua as cotas e exporte uma apresentação. Ferramenta demonstrativa: não confirma vendas ou contratos.</p><a class="cta" href="/partners/carro-midia/">ABRIR ESTÚDIO MEDIACAR ↗</a></div>
+ </div>
+ <p class="mc-studio-note">As imagens exibidas aqui são as criações originais do projeto MediaCar™. Aplicação real e produção gráfica dependem de medidas, autorização das marcas e validação técnica.</p>
+</div></section><section class="closing"><div class="w"><span class="eyebrow">03 / WINF.inc® — DO BRASIL PARA O MUNDO</span><h2>A MARCA GANHA<br><em>MOVIMENTO.</em></h2><p>Explore a próxima etapa do projeto e os canais oficiais do ecossistema.</p><a class="cta" href="/partners/carro-midia/">ABRIR ESTÚDIO MEDIACAR ↗</a><a class="cta alt" href="/partners/ecossistema/">VER ECOSSISTEMA ↗</a></div></section></main><footer><div class="w"><img src="/winf-logo.svg" alt="WINF™"><span>MEDIACAR™ / WINF.inc®</span><a href="/partners/ecossistema/">VOLTAR AO ECOSSISTEMA ↗</a></div></footer><script defer src="/js/winf-cinema.js?v=20261111-2"></script></body></html>
