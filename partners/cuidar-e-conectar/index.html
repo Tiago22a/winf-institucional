@@ -408,7 +408,18 @@
 <meta name="twitter:description" content="Uma iniciativa social WINF em estruturação: comunidade, educação, tecnologia e oportunidades.">
 <meta name="twitter:image" content="https://winf.com.br/images/og/winf-share-partners-cuidar-e-conectar-1200x630.jpg">
 <meta name="twitter:image:alt" content="Imagem editorial WINF™ para WINF™: CUIDAR. E CONECTAR.. Fotografia ilustrativa.">
-</head><body class="pp-page pp-social"><a class="pp-skip" href="#conteudo">Pular para o conteúdo</a>
+<style>
+/* Microinterações próprias do Cuidar & Conectar — não substituem os filmes originais. */
+.cc-hero:after{content:"";position:absolute;z-index:1;pointer-events:none;width:min(44vw,560px);aspect-ratio:1;right:-12%;top:-22%;border-radius:50%;border:1px solid #99ec7950;box-shadow:0 0 0 40px #89eb4810,0 0 0 105px #89eb4809;animation:cc-breathe 13s ease-in-out infinite alternate}
+.cc-gallery .cc-photo-frame{background:radial-gradient(circle at 76% 33%,#2a5534,#102316 70%);background-size:130% 130%;animation:cc-softlight 14s ease-in-out infinite alternate}
+.cc-photo:focus-within,.cc-photo:hover{border-color:#9df064}
+.cc-photo:focus-within .cc-photo-frame:before,.cc-photo:hover .cc-photo-frame:before{opacity:.8}
+.cc-hero .cc-overline:before{box-shadow:0 0 18px #a4fa83aa}
+@keyframes cc-breathe{0%{transform:scale(.9) translateY(0);opacity:.55}100%{transform:scale(1.07) translateY(18px);opacity:.9}}
+@keyframes cc-softlight{from{background-position:0% 0%}to{background-position:100% 70%}}
+@media(max-width:700px){.cc-hero:after{width:85vw;right:-48%;top:-16%;opacity:.35}}
+@media(prefers-reduced-motion:reduce){.cc-hero:after,.cc-gallery .cc-photo-frame{animation:none!important}}
+</style></head><body class="pp-page pp-social"><a class="pp-skip" href="#conteudo">Pular para o conteúdo</a>
 <header class="pp-header"><div class="pp-wrap pp-nav">
   <a class="pp-brand" href="/partners/" aria-label="WINF Partners — início"><img src="/briefing/media/winf-logo-white-official.png" alt="WINF™ — logomarca oficial" width="109" height="36"><span>PARTNERS<sup>™</sup></span></a>
   <nav aria-label="Navegação da expansão"><a href="/partners/#modalidades">LICENCIAMENTO</a><a href="/partners/#parcerias-comerciais">PARCERIAS</a><a href="/partners/ecossistema/">ECOSSISTEMA</a></nav>
