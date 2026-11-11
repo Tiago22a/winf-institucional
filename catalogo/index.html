@@ -314,9 +314,9 @@ body.winf-catalog-page #catalogo-produtos .product-card:hover .card-img-inner{fi
 @media(prefers-reduced-motion:reduce){.winf-lab-tint,body.winf-catalog-page #catalogo-produtos .product-card,body.winf-catalog-page #catalogo-produtos .card-img-inner{transition:none;transform:none}}
 
 
-/* WINF™ Catálogo Geral — manifesto com fonte oficial e impacto editorial.
-   Escopo intencional: somente "Todas as marcas", sem alterar outras divisões. */
-body.winf-catalog-page #catalog-hero.is-universe .winf-catalog-hero-copy{
+/* WINF™ Catálogo — manifesto editorial unificado em TODAS as famílias.
+   Mesma tipografia, peso, caixa alta e escala independentemente da aba selecionada. */
+body.winf-catalog-page #catalog-hero .winf-catalog-hero-copy{
   flex:1 1 auto;
   min-width:0;
   max-width:980px;
@@ -329,7 +329,7 @@ body.winf-catalog-page #hero-title.winf-catalog-hero-all{
   line-height:.98!important;
   text-transform:uppercase;
   max-width:100%;
-  overflow-wrap:normal;
+  overflow-wrap:break-word;
   text-wrap:balance;
 }
 body.winf-catalog-page #hero-title.winf-catalog-hero-all span{
@@ -342,6 +342,7 @@ body.winf-catalog-page #hero-title.winf-catalog-hero-all span{
     font-size:clamp(29px,8vw,44px)!important;
     letter-spacing:-.025em!important;
     line-height:1.02!important;
+    overflow-wrap:anywhere;
   }
 }
 </style>
@@ -1538,8 +1539,8 @@ function setCategory(cat, scrollToProducts=false) {
     document.getElementById('division-label').textContent = meta.label;
     const heading=document.getElementById('hero-title');
     heading.innerHTML = meta.title;
-    heading.classList.toggle('winf-catalog-hero-all',cat==='all');
-    document.getElementById('catalog-hero')?.classList.toggle('is-universe',cat==='all');
+    heading.classList.add('winf-catalog-hero-all'); // Padrão Gustavo Bold em todas as abas
+    document.getElementById('catalog-hero')?.classList.add('is-universe');
     document.getElementById('hero-desc').innerHTML = meta.desc;
   }
 
