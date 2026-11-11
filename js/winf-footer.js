@@ -27,6 +27,17 @@
       locator.textContent = 'LOCATOR — UNIDADES ATIVAS';
       nav.appendChild(locator);
     }
+    // Rotas institucionais já existentes: corrige rodapés antigos em cache sem duplicar links.
+    footer.querySelectorAll('.wf-ref-upcoming').forEach(function (placeholder) {
+      var title = (placeholder.textContent || '').trim();
+      var href = /UNIVERSO DARK/i.test(title) ? '/partners/universo-dark/' :
+        /SYNTHWAVE/i.test(title) ? '/synthwave/' : null;
+      if (!href) return;
+      var link = document.createElement('a');
+      link.href = href;
+      link.textContent = /SYNTHWAVE/i.test(title) ? 'SYNTHWAVE.fm' : 'UNIVERSO DARK™';
+      placeholder.replaceWith(link);
+    });
     // GHOST SHOP™: um único acesso público à vitrine nas páginas que usam o rodapé compartilhado.
     footer.querySelectorAll('.whr-pending').forEach(function (placeholder) {
       if (!/GHOST SHOP/i.test(placeholder.textContent || '')) return;
