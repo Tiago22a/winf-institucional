@@ -438,6 +438,43 @@
 @keyframes cc-softlight{from{background-position:0% 0%}to{background-position:100% 70%}}
 @media(max-width:700px){.cc-hero:after{width:85vw;right:-48%;top:-16%;opacity:.35}}
 @media(prefers-reduced-motion:reduce){.cc-hero:after,.cc-gallery .cc-photo-frame{animation:none!important}}
+/* Cuidar & Conectar: fechamento institucional cinematográfico.
+   Mesma mídia original do hero, texto inteiramente sobreposto e overlay responsivo. */
+.pp-social .pp-closing.cc-closing-cinema{
+ position:relative;isolation:isolate;overflow:hidden;min-height:clamp(530px,72svh,790px);
+ display:flex;align-items:center;padding:clamp(80px,11vw,145px) 0;background:#07110b;
+}
+.cc-closing-media{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.cc-closing-media img,.cc-closing-media video{
+ position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 48%;
+}
+.cc-closing-media img{filter:brightness(.70) saturate(.88)}
+.cc-closing-media video{opacity:0;filter:brightness(.74) saturate(.9);transition:opacity 1s ease}
+.cc-closing-media video.wc-playing{opacity:.80}
+.cc-closing-shade{
+ position:absolute;inset:0;z-index:1;pointer-events:none;
+ background:linear-gradient(90deg,rgba(4,12,7,.95) 0%,rgba(4,12,7,.83) 35%,rgba(4,12,7,.52) 67%,rgba(4,12,7,.32) 100%),
+ linear-gradient(0deg,rgba(4,12,7,.65),transparent 37%);
+}
+.pp-social .cc-closing-content{position:relative;z-index:2;width:min(1240px,calc(100% - 56px));margin-inline:auto}
+.cc-closing-content .pp-kicker{color:#94f34d;font-size:11px;letter-spacing:.18em}
+.cc-closing-content h2{font-size:clamp(54px,7vw,105px);line-height:.98;letter-spacing:-.015em;max-width:990px;color:#fff;text-shadow:0 3px 28px #0008}
+.cc-closing-content>p:not(.pp-kicker){max-width:590px;color:#f0f7f1;font-size:clamp(16px,1.4vw,19px);line-height:1.7;text-shadow:0 2px 16px #000c}
+.cc-closing-content .pp-button{margin-top:18px;background:#90ed45;color:#07110b!important;border-color:#90ed45;box-shadow:0 9px 34px #020a0559}
+.cc-closing-content .pp-button:hover{background:#b5ff7b;border-color:#b5ff7b}
+@media(max-width:780px){
+ .pp-social .pp-closing.cc-closing-cinema{min-height:590px;padding:85px 0}
+ .cc-closing-media img,.cc-closing-media video{object-position:55% center}
+ .cc-closing-shade{background:linear-gradient(0deg,rgba(3,12,6,.95) 0%,rgba(3,12,6,.84) 49%,rgba(3,12,6,.36) 100%)}
+ .cc-closing-content h2{font-size:clamp(46px,10vw,76px)}
+}
+@media(max-width:480px){
+ .pp-social .pp-closing.cc-closing-cinema{min-height:650px}
+ .cc-closing-content{width:calc(100% - 36px)!important}
+ .cc-closing-content h2{font-size:clamp(46px,11.5vw,64px)}
+ .cc-closing-content .pp-button{width:100%;max-width:360px}
+}
+@media(prefers-reduced-motion:reduce){.cc-closing-media video{display:none!important}.cc-closing-media img{filter:brightness(.64)}}
 </style>
 <!-- WINF social / previews oficiais e URLs canônicas sem parâmetros -->
 
@@ -528,7 +565,21 @@
   <p class="pp-pilot-note">Cada iniciativa dependerá de escuta da comunidade, seleção transparente, orçamento, parceiros, autorização institucional, proteção de dados, consentimento para imagens e prestação de contas. Não há inscrições abertas nem benefícios garantidos.</p>
 </div></section>
 <div class="pp-wrap pp-social-note"><p><strong>Estado atual:</strong> conceito em planejamento. Esta página não anuncia benefícios garantidos, inscrições, repasses financeiros ou projetos já executados.</p></div>
-<section class="pp-closing"><div class="pp-wrap"><p class="pp-kicker">06 / CONEXÃO</p><h2>UMA BOA IDEIA PRECISA<br>DE RESPONSABILIDADE.</h2><p>Se você representa uma organização e deseja apresentar uma proposta, envie uma breve descrição para avaliação da equipe.</p><a class="pp-button" href="https://wa.me/5513997815375?text=Ol%C3%A1!%20Gostaria%20de%20apresentar%20uma%20proposta%20de%20colabora%C3%A7%C3%A3o%20para%20o%20Cuidar%20%26%20Conectar%20da%20WINF." target="_blank" rel="noopener noreferrer">APRESENTAR PROPOSTA <span aria-hidden="true">↗</span></a></div></section>
+<section class="pp-closing cc-closing-cinema" aria-labelledby="cc-closing-title">
+  <div class="cc-closing-media" aria-hidden="true">
+    <img src="/media/ecossistema/cuidar-conectar-community.webp" alt="" loading="lazy" decoding="async" width="1600" height="900">
+    <video data-winf-cinema autoplay muted loop playsinline preload="none" tabindex="-1" poster="/media/ecossistema/cuidar-conectar-community.webp">
+      <source data-src="/media/ecossistema/cuidar-conectar-community.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="cc-closing-shade" aria-hidden="true"></div>
+  <div class="pp-wrap cc-closing-content">
+    <p class="pp-kicker">06 / CONEXÃO — CUIDAR &amp; CONECTAR™</p>
+    <h2 id="cc-closing-title">UMA BOA IDEIA PRECISA<br>DE RESPONSABILIDADE.</h2>
+    <p>Se você representa uma organização e deseja apresentar uma proposta, envie uma breve descrição para avaliação da equipe.</p>
+    <a class="pp-button" href="https://wa.me/5513997815375?text=Ol%C3%A1!%20Gostaria%20de%20apresentar%20uma%20proposta%20de%20colabora%C3%A7%C3%A3o%20para%20o%20Cuidar%20%26%20Conectar%20da%20WINF." target="_blank" rel="noopener noreferrer">APRESENTAR PROPOSTA <span aria-hidden="true">↗</span></a>
+  </div>
+</section>
 </main><footer class="pp-footer"><div class="pp-wrap pp-foot-cols">
   <div><img src="/briefing/media/winf-logo-white-official.png" width="109" height="36" alt="WINF™ — logomarca oficial"><p>DO BRASIL PARA O MUNDO.</p><small>WINF.inc® / WINF PARTNERS™</small></div>
   <nav aria-label="Links institucionais"><a href="/partners/">WINF Partners™</a><a href="/briefing/">Briefing</a><a href="/partners/distribuidores/">Distribuidores</a><a href="/partners/varejistas/">Varejistas</a><a href="/partners/ecossistema/">Projetos</a><a href="/partners/cuidar-e-conectar/">Cuidar &amp; Conectar</a><a href="/aerocore/policies/#privacidade">Privacidade</a></nav>
