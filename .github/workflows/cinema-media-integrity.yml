@@ -12,6 +12,11 @@ on:
       - 'partners/universo-dark/index.html'
       - 'ghost-shop/index.html'
       - 'synthwave/index.html'
+      - 'synthwave/radio/index.html'
+      - 'synthwave/app.js'
+      - 'synthwave/profile.js'
+      - 'synthwave/radio-theme.css'
+      - 'synthwave/assets/retro-radio.svg'
       - 'tests/cinema-media-integrity.test.cjs'
       - '.github/workflows/cinema-media-integrity.yml'
   push:
@@ -21,6 +26,12 @@ on:
       - 'briefing/media/winf-dominio-absoluto-manha.*'
       - 'js/winf-cinema.js'
       - 'css/winf-cinema.css'
+      - 'synthwave/index.html'
+      - 'synthwave/radio/index.html'
+      - 'synthwave/app.js'
+      - 'synthwave/profile.js'
+      - 'synthwave/radio-theme.css'
+      - 'synthwave/assets/retro-radio.svg'
       - 'tests/cinema-media-integrity.test.cjs'
   workflow_dispatch:
 permissions:
@@ -36,5 +47,9 @@ jobs:
           node-version: '22'
       - name: Conferir sintaxe do player
         run: node --check js/winf-cinema.js
+      - name: Conferir sintaxe da plataforma de rádio e perfil
+        run: |
+          node --check synthwave/app.js
+          node --check synthwave/profile.js
       - name: Testar rotas, pôsteres e fontes alternativas
         run: node --test tests/cinema-media-integrity.test.cjs
