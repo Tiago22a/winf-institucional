@@ -24,6 +24,7 @@ test('P0: locator AeroCore só inclui status ativa em unidades operacionais', ()
   const src = read('aerocore/assets/onde-comprar.js');
   assert.match(src, /mode === 'ativas'\s*\? city\.status === 'ativa'/);
   assert.doesNotMatch(src, /mode === 'ativas'\s*\? city\.siteAtivo === true/);
+  assert.match(src, /city\.siteAtivo === true \|\| city\.disponivelParaAtivacao === true/);
   assert.match(src, /em análise \(sem ativação confirmada\)/);
   const html = read('aerocore/onde-comprar/index.html');
   assert.match(html, /Somente Santos e Pilar do Sul possuem operação confirmada/);
