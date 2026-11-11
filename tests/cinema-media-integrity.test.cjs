@@ -48,7 +48,7 @@ test("Briefing: filme aprovado com capa própria, sem vídeo genérico substitut
  const html=get("briefing/index.html");
  assert.match(html,/data-src="\/briefing\/media\/winf-dominio-absoluto-manha\.mp4"/);
  assert.doesNotMatch(html,/data-fallback-src="\/partners\/media\/hero\.mp4"/);
- assert.match(html,/class="wc-film-poster" src="\/briefing\/media\/winf-dominio-absoluto-manha\.webp"/);
+ assert.match(html,/class="(?:wc-film-poster|briefing-hero-poster)" src="\/briefing\/media\/winf-dominio-absoluto-manha\.webp"/);
  assert.doesNotMatch(html,/poster="\/briefing\/media\/winf-dominio-absoluto-manha\.jpg"/);
 });
 
