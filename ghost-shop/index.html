@@ -19,6 +19,20 @@
 @media(max-width:800px){.header .w{flex-wrap:wrap;padding:15px 0}.hero{min-height:650px}.hero .w{padding:115px 0 90px}.hero h1{font-size:clamp(66px,15vw,118px)}.giant-ghost{width:65vw;right:-9%;top:12%;opacity:.1}.section-head{grid-template-columns:1fr}.feature-grid,.films{grid-template-columns:1fr}.feature{min-height:190px}.feature h3{margin:27px 0 10px}}
 @media(max-width:450px){.w{width:calc(100% - 32px)}.brand span{font-size:20px}.nav{gap:13px}.hero h1{font-size:clamp(63px,17vw,91px)}.btn{width:100%}.film figcaption{padding:14px}.film-still strong{font-size:28px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.giant-ghost,.film-still img{animation:none}.hero-media video,.film-video{display:none}.btn{transition:none}}
+
+/* GHOST SHOP™: animação original no topo, sem bloquear títulos ou CTAs. */
+.hero{isolation:isolate}
+.hero-media{z-index:0;pointer-events:none;display:block}
+.hero-media .campaign-hero-photo{z-index:0;object-position:center 48%;opacity:.8;filter:brightness(.82) saturate(.9)}
+.hero-media video{z-index:1;object-position:center 48%;opacity:0;filter:brightness(.78) saturate(.83);transform:scale(1.015);transition:opacity 1.15s ease}
+.hero-media video.wc-playing{opacity:.72}
+.hero-media:after{z-index:2;background:linear-gradient(90deg,rgba(5,6,8,.9),rgba(5,6,8,.78) 34%,rgba(5,6,8,.42) 69%,rgba(5,6,8,.24)),linear-gradient(0deg,rgba(5,6,8,.44),transparent 35%)}
+.giant-ghost{z-index:2}.hero:has(video.wc-playing) .giant-ghost{opacity:.10}
+.hero .w{position:relative;z-index:3}
+.hero h1,.hero .lead,.hero .sub,.hero .kicker,.hero .actions,.hero .minor{position:relative;z-index:4;text-shadow:0 2px 28px rgba(0,0,0,.35)}
+.hero .lead{color:#fff}.hero .sub{color:#e3e6eb}.hero .kicker{color:#e1e4e9}
+@media(max-width:800px){.hero-media .campaign-hero-photo,.hero-media video{object-position:65% center}.hero-media:after{background:linear-gradient(0deg,#060708f2 0%,#060708c4 47%,#0607088a 78%,#0607087d 100%)}}
+@media(prefers-reduced-motion:reduce){.hero-media video{display:none!important}.hero-media .campaign-hero-photo{opacity:.82!important}.hero-media *{transition:none!important}}
 </style>
 <!-- WINF social / previews oficiais e URLs canônicas sem parâmetros -->
 
@@ -268,7 +282,7 @@
 <meta name="twitter:image:alt" content="Imagem editorial WINF™ para GHOST SHOP™: IDENTIDADE QUE VAI ALÉM DO VIDRO.. Fotografia ilustrativa.">
 </head><body>
 <header class="header"><div class="w"><a class="brand" href="/"><img src="/winf-logo.svg" alt="WINF™"><span>GHOST SHOP™</span></a><nav class="nav" aria-label="Navegação Ghost Shop"><a href="#conceito">A MARCA</a><a href="#filmes">UNIVERSO</a><a href="/ghost-shop/vitrine/">VITRINE</a><a href="/partners/">WINF PARTNERS</a></nav></div></header>
-<main><section class="hero" aria-labelledby="gs-title"><div class="hero-media" aria-hidden="true"><img class="campaign-hero-photo" src="/media/ecossistema/ghost-shop-products.webp" alt="" onerror="this.hidden=true"><video data-winf-cinema autoplay muted loop playsinline preload="none"><source data-src="/media/ecossistema/ghost-shop-products.mp4" type="video/mp4"></video></div><img class="giant-ghost" src="/aerocore/assets/ghost-symbol.png" alt="" aria-hidden="true">
+<main><section class="hero" aria-labelledby="gs-title"><div class="hero-media" aria-hidden="true"><img class="campaign-hero-photo" src="/media/ecossistema/ghost-shop-products.webp" alt="" onerror="this.hidden=true"><video data-winf-cinema autoplay muted loop playsinline preload="metadata" poster="/media/ecossistema/ghost-shop-products.webp" aria-hidden="true" tabindex="-1"><source src="/media/ecossistema/ghost-shop-products.mp4" type="video/mp4"></video></div><img class="giant-ghost" src="/aerocore/assets/ghost-symbol.png" alt="" aria-hidden="true">
 <div class="w"><span class="kicker">WINF.inc® / MEMBERS ONLY / GHOST SHOP™</span><h1 id="gs-title">GHOST<br><span>SHOP™</span></h1><p class="lead">Não é para todos.</p><p class="sub">Um universo de itens, objetos e acessórios com identidade própria. Criado para quem faz parte do movimento WINF. O acesso é uma conquista — e a experiência começa aqui.</p><div class="actions"><a class="btn" href="/ghost-shop/vitrine/">EXPLORAR VITRINE DE DEGUSTAÇÃO ↗</a><a class="btn alt" href="#conceito">CONHECER A GHOST SHOP ↓</a></div><p class="minor">Já faz parte da rede? <a href="https://painel-os.winf.com.br/login/" rel="noopener noreferrer" target="_blank">Entrar na área do membro WINF OS™ ↗</a></p></div></section>
 <div class="stripe"><div class="w"><strong>ACESSO SELECIONADO. IDENTIDADE SEM CONCESSÕES.</strong><span>BY WINF.inc® / DO BRASIL PARA O MUNDO.</span></div></div>
 <section class="section" id="conceito"><div class="w"><div class="section-head"><div><span class="kicker">01 / O CONCEITO</span><h2>MAIS QUE ITENS.<br><em>PERTENCIMENTO.</em></h2></div><p>A GHOST SHOP™ é uma frente de lifestyle e abastecimento concebida para membros do ecossistema WINF. Esta apresentação é pública. As condições comerciais e os pedidos não são.</p></div><div class="feature-grid"><article class="feature"><small>01 / IDENTIDADE</small><h3>FEITO PARA A REDE.</h3><p>Uma curadoria visual de objetos, acessórios e materiais conectados ao universo WINF e às suas marcas.</p></article><article class="feature"><small>02 / DEGUSTAÇÃO</small><h3>CONHEÇA ANTES.</h3><p>Explore categorias e detalhes na vitrine de apresentação, sem simular compras, estoque ou preços públicos.</p></article><article class="feature"><small>03 / EXCLUSIVIDADE</small><h3>ACESSO AUTORIZADO.</h3><p>Pedidos, preços, disponibilidade e condições comerciais dependem do vínculo e da autorização dentro do WINF OS™.</p></article></div></div></section>
