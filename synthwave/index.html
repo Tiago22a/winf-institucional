@@ -42,6 +42,15 @@
 .nav .back-universe{display:inline-flex;align-items:center;white-space:nowrap;padding:10px 13px;border:1px solid #294e423e;border-radius:2px;background:#ffffff4a;font-size:9px;letter-spacing:.11em}
 .nav .back-universe:hover{background:#ffffffaa;color:#193a31}
 @media(max-width:950px){.nav{gap:12px}.nav .back-universe{padding:9px 11px}}
+
+/* GHOST — assinatura editorial: respiro, contraste e movimento discreto na marca. */
+.brand{gap:11px}
+.brand img.brand-ghost{width:34px;height:40px;flex:none;padding:7px 8px;border-radius:14px;background:#274f43;opacity:1;object-fit:contain;filter:none;box-shadow:0 1px 0 #ffffff55,inset 0 1px 0 #ffffff20;transform-origin:50% 70%;animation:sw-ghost-bob 4.7s ease-in-out infinite}
+.brand:hover img.brand-ghost{background:#183d32}
+@keyframes sw-ghost-bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-3px) rotate(2deg)}}
+.groove .vinyl-ghost{top:36%;left:50%;width:20px;height:27px;opacity:.68;filter:drop-shadow(0 2px 2px #18372c33)}
+@media(max-width:650px){.brand{gap:8px}.brand img.brand-ghost{width:29px;height:35px;padding:6px 7px;border-radius:12px}.groove .vinyl-ghost{width:17px;height:23px}}
+@media(prefers-reduced-motion:reduce){.brand img.brand-ghost{animation:none!important;transform:none!important}}
 </style>
 
 <!-- WINF social / previews oficiais e URLs canônicas sem parâmetros -->
@@ -122,7 +131,7 @@
 </head>
 <body>
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
-<header class="top"><div class="wrap top-in"><a class="brand" href="/synthwave/" aria-label="SynthWAVE.fm — página inicial"><img class="brand-ghost" src="/aerocore/assets/ghost-symbol.png" alt="" aria-hidden="true" width="17" height="23"><strong>SYNTHWAVE.fm™</strong><small>RÁDIO · CULTURA · CIDADE</small></a><nav class="nav" aria-label="Menu institucional"><a class="back-universe" href="/partners/ecossistema/" aria-label="Voltar ao Universo WINF">← UNIVERSO WINF</a><a href="#conceito">CONCEITO</a><a href="#explorar">EXPLORAR</a><a class="enter" href="/synthwave/radio/">ENTRAR NA RÁDIO ↗</a></nav></div></header>
+<header class="top"><div class="wrap top-in"><a class="brand" href="/synthwave/" aria-label="SynthWAVE.fm — página inicial"><img class="brand-ghost" src="/aerocore/assets/ghost-symbol.png" alt="" aria-hidden="true" width="24" height="33"><strong>SYNTHWAVE.fm™</strong><small>RÁDIO · CULTURA · CIDADE</small></a><nav class="nav" aria-label="Menu institucional"><a class="back-universe" href="/partners/ecossistema/" aria-label="Voltar ao Universo WINF">← UNIVERSO WINF</a><a href="#conceito">CONCEITO</a><a href="#explorar">EXPLORAR</a><a class="enter" href="/synthwave/radio/">ENTRAR NA RÁDIO ↗</a></nav></div></header>
 <main id="conteudo">
 <section class="hero" aria-labelledby="hero-title"><div class="wrap hero-content"><p class="eyebrow">DO ANALÓGICO AO DIGITAL · UMA NOVA FREQUÊNCIA</p><h1 id="hero-title" class="hero-headline">RÁDIO.</h1><p class="hero-description"><strong>O som muda a atmosfera.</strong> Playlists, podcasts e novas descobertas em uma experiência feita para acompanhar você.</p><div class="hero-actions"><a class="button" href="/synthwave/radio/">OUVIR AGORA <span>↗</span></a><a class="button secondary" href="#explorar">DESCOBRIR <span>↓</span></a></div></div><p class="hero-caption">MÚSICA<br>HISTÓRIAS<br>PLAYLISTS<br>CULTURA</p><img class="radio-art" src="/synthwave/assets/retro-radio.svg" alt="Rádio analógico retrô laranja, ilustração original da SynthWAVE.fm" width="900" height="565" fetchpriority="high"><div class="hero-note">CIDADE EM MOVIMENTO <b>ON AIR.</b></div></section>
 <div class="band" id="conceito"><div class="wrap band-in"><strong>SYNTHWAVE.FM™ / SEU UNIVERSO SONORO</strong><span>PLAY · LISTEN · DISCOVER · REPEAT</span></div></div>
