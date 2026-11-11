@@ -150,8 +150,8 @@ test('B2B e impacto social têm rotas de piloto e responsabilidades explícitas'
   assert.match(retailer, /VENDA OU INDICAÇÃO/);
   assert.match(retailer, /INSTALAÇÃO/);
   assert.match(social, /id="frentes"/);
-  assert.match(social, /ESCOLAS E ESPAÇOS EDUCATIVOS/);
-  assert.match(social, /INSTITUIÇÕES PARA IDOSOS/);
+  assert.match(social, /EDUCAÇÃO QUE ABRE PORTAS|CONHECIMENTO QUE TRANSFORMA/);
+  assert.match(social, /PESSOAS EM PRIMEIRO LUGAR|INSTITUIÇÕES PARA IDOSOS/);
   assert.match(social, /consentimento para imagens/);
 });
 test('Projetos em desenvolvimento não prometem serviços já lançados', () => {
