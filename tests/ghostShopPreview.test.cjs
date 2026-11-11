@@ -32,7 +32,7 @@ test('fotografia número 1 foi dividida em 12 quadrados independentes sem mostra
  assert.equal(coords.length,12);
  assert.equal(new Set(coords).size,12);
  assert.ok(fs.existsSync(path.join(root,'images/shop/blackshop (45).webp')));
- assert.doesNotMatch(html,/src="\/images\/shop\/blackshop%20\(45\)\.webp"/);
+ assert.doesNotMatch(vitrine,/src="\/images\/shop\/blackshop%20\(45\)\.webp"/);
  const css=read('css/winf-ghost-shop.css');
  assert.match(css,/background-size:var\(--gs-width-scale\) var\(--gs-height-scale\)/);
  for(let x=0;x<4;x++)for(let y=0;y<3;y++)assert.ok(coords.includes(x+','+y),"Tile "+x+","+y);
@@ -86,9 +86,9 @@ test('GHOST SHOP™ aparece diretamente nos sete rodapés territoriais e no site
 });
 
 test('site institucional apresenta campanha original e CTA para vitrine reservada',()=>{
- assert.match(html,/NÃƒO Ã‰ PARA TODOS|NÃƒO Ã‰ PARA TODOS|Não é para todos/i);
+ assert.ok(html.includes('Não é para todos.'));
  for(const name of ['ghost-shop-products.webp','ghost-shop-operation.webp','ghost-shop-products.mp4','ghost-shop-operation.mp4','ghost-shop-team.mp4'])assert.ok(html.includes(name),name);
- assert.match(html,/href="\\/ghost-shop\\/vitrine\\/"/);
- assert.match(html,/href="https:\\/\\/painel-os\\.winf\\.com\\.br\\/login\\/"/);
- assert.doesNotMatch(html,/checkout\\/|add-to-cart/i);
+ assert.ok(html.includes('href="/ghost-shop/vitrine/"'));
+ assert.ok(html.includes('href="https://painel-os.winf.com.br/login/"'));
+ assert.ok(!html.includes('add-to-cart')&&!html.includes('checkout/'));
 });
