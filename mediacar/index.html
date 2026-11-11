@@ -582,12 +582,32 @@
 <meta name="twitter:description" content="MediaCar™: publicidade sobre veículos, cotas de patrocínio e mídia em movimento. Projeto de comunicação visual M.A.W.™ / WINF.inc®.">
 <meta name="twitter:image" content="https://winf.com.br/images/og/winf-share-mediacar-1200x630.jpg">
 <meta name="twitter:image:alt" content="Imagem editorial WINF™ para WINF™: M EDIACAR™. Fotografia ilustrativa.">
-</head><body><header class="header"><div class="w"><a class="brand" href="/partners/"><img src="/winf-logo.svg" alt="WINF™ — marca oficial"><span>MEDIACAR™</span></a><nav class="nav" aria-label="Navegação"><a href="/partners/ecossistema/">ECOSSISTEMA</a><a href="/maw/">M.A.W.™</a><a href="/partners/">WINF PARTNERS™</a></nav></div></header><main>
+<style>
+/* MEDIACAR — hero cinematic: original film as full-bleed background with legible text overlay */
+.hero{position:relative;isolation:isolate;min-height:clamp(660px,87svh,1000px);display:flex;align-items:center;overflow:hidden;background:#090b0e}
+.hero-media{position:absolute;inset:0;z-index:0;pointer-events:none;background:#11141a}
+.hero-media img,.hero-media video{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center 48%}
+.hero-media img{z-index:0;filter:brightness(.78)}
+.hero-media video{z-index:1;opacity:.78;filter:brightness(.8) saturate(.85);transition:opacity .7s ease}
+.hero-media video.wc-playing{opacity:.84}
+.hero:after{content:"";pointer-events:none;position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(5,7,10,.93) 0%,rgba(5,7,10,.8) 36%,rgba(5,7,10,.5) 67%,rgba(5,7,10,.19) 100%),linear-gradient(0deg,rgba(5,7,10,.55),transparent 35%); }
+.hero .w{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,750px);gap:14px;align-content:center;align-items:center;width:min(1260px,calc(100% - 48px));padding-block:clamp(95px,12vw,170px);min-height:inherit}
+.hero h1{font-size:clamp(67px,9.3vw,146px);line-height:.95;letter-spacing:-.02em;margin:18px 0 8px;max-width:850px;text-shadow:0 3px 24px #000a}
+.hero h1 em{color:#f8f9fc}
+.hero .eyebrow{color:#e2e6eb}
+.hero p{color:#f3f4f6;font-weight:500;font-size:clamp(17px,1.8vw,22px);line-height:1.6;max-width:680px;margin:3px 0 0;text-shadow:0 2px 16px #000a}
+.hero small{color:#cdd2dc;font-size:12px;line-height:1.75;max-width:660px;margin:12px 0 0}
+.hero .cta{margin-top:25px;min-height:51px}
+.hero .cta.alt{margin-left:9px}
+@media(max-width:850px){.hero{min-height:750px;align-items:center}.hero .w{grid-template-columns:minmax(0,1fr);gap:10px;padding-block:110px 82px;width:calc(100% - 36px)}.hero h1{font-size:clamp(60px,12vw,94px)}.hero-media img,.hero-media video{object-position:61% center}.hero:after{background:linear-gradient(0deg,rgba(5,7,10,.95) 0%,rgba(5,7,10,.83) 50%,rgba(5,7,10,.42) 100%)}.hero p{font-size:16px}.hero small{font-size:11px;line-height:1.65}}
+@media(max-width:480px){.hero{min-height:760px}.hero h1{font-size:clamp(58px,16vw,82px)}.hero .w{padding-block:120px 72px}.hero .cta{display:flex;justify-content:space-between;max-width:100%;margin-top:16px}.hero .cta.alt{margin-left:0;margin-top:10px}.hero .eyebrow{font-size:9px}.hero p{font-size:15px}}
+@media(prefers-reduced-motion:reduce){.hero-media video{display:none!important}.hero-media img{filter:brightness(.7)}}
+</style></head><body><header class="header"><div class="w"><a class="brand" href="/partners/"><img src="/winf-logo.svg" alt="WINF™ — marca oficial"><span>MEDIACAR™</span></a><nav class="nav" aria-label="Navegação"><a href="/partners/ecossistema/">ECOSSISTEMA</a><a href="/maw/">M.A.W.™</a><a href="/partners/">WINF PARTNERS™</a></nav></div></header><main>
 <section class="hero" aria-labelledby="mediacar-title">
   <div class="hero-media" aria-hidden="true">
     <img src="/media/ecossistema/mediacar-bmw.webp" alt="" width="1280" height="720" fetchpriority="high" decoding="async">
-    <video data-winf-cinema autoplay muted loop playsinline preload="none" tabindex="-1" poster="/media/ecossistema/mediacar-bmw.webp">
-      <source data-src="/media/ecossistema/mediacar-bmw.mp4" type="video/mp4">
+    <video data-winf-cinema autoplay muted loop playsinline preload="metadata" tabindex="-1" aria-hidden="true" poster="/media/ecossistema/mediacar-bmw.webp">
+      <source src="/media/ecossistema/mediacar-bmw.mp4" type="video/mp4">
     </video>
   </div>
   <div class="w">
