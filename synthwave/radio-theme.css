@@ -1,4 +1,4 @@
-/* SynthWAVE.fm / plataforma — ponte visual da entrada retrô com a rádio existente.
+/* SynthWAVE.fm / plataforma — identidade retrô definitiva com assinatura discreta GHOST.
    Cor e aparência apenas: o mecanismo de áudio e o catálogo permanecem intactos. */
 :root{--sw-forest:#1f3e35;--sw-darker:#0e2620;--sw-cream:#f6f0df;--sw-sage:#bbd7c6;--sw-orange:#e9a16c;--sw-tangerine:#d9794d}
 body{background:#0c231f;color:#e3e8db}
@@ -46,3 +46,12 @@ input:focus,select:focus{outline-color:#edb584}
 .sw-profile-circle{position:absolute;right:-85px;bottom:-210px;width:450px;height:450px;background:repeating-radial-gradient(circle,#d98f5a 0 3px,#844e3d 4px 7px,#263d32 8px 11px);border:18px solid #2a4d41;color:#f7ecdc;border-radius:50%;display:grid;place-items:start center;padding-top:90px;opacity:.23;transform:rotate(-18deg);font-size:42px}
 @media(max-width:830px){.sw-profile-grid{grid-template-columns:1fr}.sw-profile-info{min-height:350px}.sw-profile-info h2{margin-top:35px}.sw-profile-circle{opacity:.15}}
 @media(prefers-reduced-motion:reduce){.tile:hover{transform:none}}
+
+/* Assinatura em equipamentos e player: símbolo original, sem redesenho. */
+.sw-radio-brand{display:inline-flex;align-items:center;gap:9px}
+.sw-ghost-nav{width:17px;height:23px;object-fit:contain;opacity:.74;flex:none;filter:drop-shadow(0 1px 3px #081a15b2)}
+.sw-ghost-player{display:block;width:13px;height:19px;flex:none;opacity:.54;object-fit:contain;align-self:center}
+.sw-footer-brand{display:flex;align-items:center;gap:10px}
+.sw-ghost-footer{display:block;flex:none;width:19px;height:26px;object-fit:contain;opacity:.58}
+.sw-radio-brand:hover .sw-ghost-nav{opacity:.9}
+@media(max-width:640px){.sw-ghost-nav{width:14px;height:20px}.sw-ghost-player{display:none}}
