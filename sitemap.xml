@@ -10,6 +10,8 @@
         <priority>1.0</priority>
     </url>
 
+<url><loc>https://winf.com.br/ghost-shop/vitrine/</loc><lastmod>2026-11-11</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
+<url><loc>https://winf.com.br/synthwave/radio/</loc><lastmod>2026-11-11</lastmod><changefreq>monthly</changefreq><priority>0.65</priority></url>
     <!-- GHOST SHOP™ / Vitrine de coleções -->
     <url>
         <loc>https://winf.com.br/ghost-shop/</loc>
