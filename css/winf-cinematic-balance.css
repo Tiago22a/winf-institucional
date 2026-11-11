@@ -1,0 +1,240 @@
+/* WINF™ cinematic balance — 2026-11-11
+   Video remains full-bleed. We change only container proportions, optical sizing and
+   responsive framing; NEVER alter the user's browser zoom or inject scaling JS.
+   Tested against the specific class names of the five WINF project pages. */
+.winf-page-cuidar,
+.winf-page-ghost,
+.winf-page-synthwave,
+.winf-page-mediacar,
+.winf-page-maw{max-width:100%;overflow-x:clip}
+.winf-page-cuidar :is(img,video),
+.winf-page-ghost :is(img,video),
+.winf-page-synthwave :is(img,video),
+.winf-page-mediacar :is(img,video),
+.winf-page-maw :is(img,video){max-width:100%}
+
+/* CUIDAR & CONECTAR — human-centered video framing */
+.winf-page-cuidar .pp-social-hero--cinema.cc-hero{
+  min-height:clamp(590px,77svh,790px);
+}
+.winf-page-cuidar .cc-hero .cc-hero-copy{
+  width:min(1140px,calc(100% - 64px));
+  padding-block:clamp(84px,9vw,130px);
+}
+.winf-page-cuidar .cc-hero h1{
+  font-size:clamp(57px,7.7vw,108px);
+  line-height:1.01;max-width:810px;overflow-wrap:normal;
+}
+.winf-page-cuidar .cc-hero .cc-lead{font-size:clamp(18px,1.65vw,22px)}
+.winf-page-cuidar .cc-gallery-head h2{font-size:clamp(43px,5.4vw,73px)}
+.winf-page-cuidar .pp-closing.cc-closing-cinema{
+  min-height:clamp(510px,70svh,690px);
+  padding-block:clamp(78px,9vw,117px)
+}
+.winf-page-cuidar .cc-closing-content h2{
+  font-size:clamp(44px,6vw,82px);line-height:1.05;letter-spacing:-.018em;
+  max-width:860px;text-wrap:balance;
+}
+@media(min-width:781px){
+ .winf-page-cuidar .cc-hero-poster,
+ .winf-page-cuidar .cc-hero-video,
+ .winf-page-cuidar .cc-closing-media img,
+ .winf-page-cuidar .cc-closing-media video{
+   object-position:left center;
+   transform:scale(1.22);
+   transform-origin:left center;
+   -webkit-mask-image:linear-gradient(to right,#000 0%,#000 59%,transparent 86%);
+   mask-image:linear-gradient(to right,#000 0%,#000 59%,transparent 86%);
+ }
+}
+
+/* SYNTHWAVE.FM — frequency animations within an editorial-sized scene */
+.winf-page-synthwave .sw-cinematic-hero{min-height:clamp(610px,77svh,830px)}
+.winf-page-synthwave .sw-cinematic-hero .w{padding-block:clamp(90px,10vw,150px)}
+.winf-page-synthwave .sw-cinematic-hero h1{
+ font-size:clamp(64px,8vw,118px);line-height:.98;max-width:930px
+}
+.winf-page-synthwave .sw-orbit{width:min(48vw,580px)}
+.winf-page-synthwave .sw-orbit-two{width:min(35vw,440px)}
+.winf-page-synthwave .sw-closing-cinema{
+ min-height:clamp(510px,67svh,730px);
+ padding-block:clamp(88px,10vw,130px)
+}
+.winf-page-synthwave .sw-closing-copy h2{font-size:clamp(54px,6.8vw,92px);line-height:1.04}
+.winf-page-synthwave .sw-art-picture{aspect-ratio:16/10}
+.winf-page-synthwave .sw-art-picture img,
+.winf-page-synthwave .sw-closing-media img{
+ animation-name:winf-soft-pan;
+}
+@keyframes winf-soft-pan{
+ from{transform:scale(1.005) translate3d(-.25%,0,0)}
+ to{transform:scale(1.035) translate3d(.25%,0,0)}
+}
+
+/* MEDIACAR — the vehicle fits, and headline reads at the first glance */
+.winf-page-mediacar .hero{min-height:clamp(600px,77svh,820px)}
+.winf-page-mediacar .hero .w{
+ min-height:0;padding-block:clamp(80px,9vw,136px);
+ width:min(1200px,calc(100% - 56px));
+ grid-template-columns:minmax(0,680px);gap:11px;
+}
+.winf-page-mediacar .hero h1{
+ font-size:clamp(59px,7.8vw,112px);
+ line-height:1.02;max-width:720px;
+}
+.winf-page-mediacar .hero p{font-size:clamp(16px,1.5vw,20px);line-height:1.6}
+.winf-page-mediacar .hero-media img,
+.winf-page-mediacar .hero-media video{object-position:56% 47%}
+
+/* GHOST SHOP — black-label, restrained, readable */
+.winf-page-ghost .hero{min-height:clamp(610px,76svh,820px)}
+.winf-page-ghost .hero .w{padding-block:clamp(85px,10vw,135px)}
+.winf-page-ghost .hero h1{
+ font-size:clamp(72px,9vw,132px);line-height:.96;max-width:800px;
+}
+.winf-page-ghost .gs-close-cinema{
+ min-height:clamp(550px,70svh,760px);
+ padding-block:clamp(88px,10vw,132px);
+}
+.winf-page-ghost .gs-close-copy h2{
+ font-size:clamp(51px,7.4vw,104px);line-height:1.04;
+}
+.winf-page-ghost .hero-media video{transform:none}
+.winf-page-ghost .film-visual{aspect-ratio:16/10}
+
+/* M.A.W. — keep editorial scales and MediaCar preview on screen */
+.winf-page-maw .hero-grid{
+ padding-block:clamp(66px,7.2vw,115px);
+ gap:clamp(30px,4vw,62px);
+}
+.winf-page-maw .hero h1{
+ font-size:clamp(52px,6.8vw,104px);line-height:1.02
+}
+.winf-page-maw .hero-frame{min-height:clamp(410px,38vw,560px)}
+.winf-page-maw .maw-mediacar{padding-block:clamp(64px,6.8vw,100px)}
+.winf-page-maw .maw-mediacar-grid{
+ min-height:0;gap:clamp(28px,4vw,58px)
+}
+.winf-page-maw .maw-mediacar h2{
+ font-size:clamp(52px,5.8vw,91px);line-height:1.02
+}
+.winf-page-maw .maw-mediacar-visual{
+ height:clamp(330px,33vw,520px)
+}
+
+/* Tablet: avoid huge videos and overlarge headlines in near-square screens */
+@media(max-width:900px){
+ .winf-page-cuidar .pp-social-hero--cinema.cc-hero{min-height:620px}
+ .winf-page-cuidar .cc-hero h1{font-size:clamp(52px,10.2vw,80px)}
+ .winf-page-cuidar .cc-closing-content h2{font-size:clamp(42px,7.8vw,69px)}
+ .winf-page-synthwave .sw-cinematic-hero{min-height:660px}
+ .winf-page-synthwave .sw-cinematic-hero h1{font-size:clamp(55px,10vw,90px)}
+ .winf-page-synthwave .sw-orbit{width:min(68vw,470px)}
+ .winf-page-mediacar .hero{min-height:690px}
+ .winf-page-mediacar .hero h1{font-size:clamp(55px,9.5vw,83px)}
+ .winf-page-ghost .hero{min-height:660px}
+ .winf-page-ghost .hero h1{font-size:clamp(65px,11vw,105px)}
+ .winf-page-maw .hero-frame{min-height:360px}
+ .winf-page-maw .maw-mediacar-visual{height:auto;aspect-ratio:16/10;min-height:0}
+ .winf-page-maw .maw-mediacar h2{font-size:clamp(52px,8.5vw,85px)}
+}
+
+/* Phones: no clipped text, scene still fills screen but never at forced 100svh */
+@media(max-width:600px){
+ .winf-page-cuidar .pp-social-hero--cinema.cc-hero{
+   min-height:0;padding-block:42px;background:#08130d
+ }
+ .winf-page-cuidar .cc-hero .cc-hero-copy{
+   width:calc(100% - 32px);padding-block:52px 55px
+ }
+ .winf-page-cuidar .cc-hero h1{
+   font-size:clamp(45px,12vw,66px);line-height:1.02;
+   max-width:100%;overflow-wrap:normal
+ }
+ .winf-page-cuidar .cc-hero .cc-lead{font-size:17px;line-height:1.45}
+ .winf-page-cuidar .cc-closing-cinema{
+   min-height:0;padding-block:86px!important;
+ }
+ .winf-page-cuidar .cc-closing-content h2{
+   font-size:clamp(31px,8.5vw,49px);line-height:1.08;
+   overflow-wrap:normal
+ }
+ .winf-page-cuidar .cc-hero-poster,
+ .winf-page-cuidar .cc-hero-video,
+ .winf-page-cuidar .cc-closing-media img,
+ .winf-page-cuidar .cc-closing-media video{
+   object-position:37% center;transform:none
+ }
+ .winf-page-synthwave .sw-cinematic-hero{min-height:0;padding-block:34px}
+ .winf-page-synthwave .sw-cinematic-hero .w{
+   padding-block:73px 82px;
+   width:calc(100% - 34px)
+ }
+ .winf-page-synthwave .sw-cinematic-hero h1{
+   font-size:clamp(51px,11.8vw,70px);line-height:1.03;
+   overflow-wrap:normal
+ }
+ .winf-page-synthwave .sw-orbit{width:65vw}
+ .winf-page-synthwave .sw-closing-cinema{
+   min-height:0;padding-block:106px
+ }
+ .winf-page-synthwave .sw-closing-copy h2{
+   font-size:clamp(45px,11vw,64px);line-height:1.07
+ }
+ .winf-page-mediacar .hero{min-height:0;padding-block:32px}
+ .winf-page-mediacar .hero .w{
+   padding-block:78px 75px;width:calc(100% - 36px);
+   grid-template-columns:minmax(0,1fr)
+ }
+ .winf-page-mediacar .hero h1{
+   font-size:clamp(48px,11.7vw,69px);line-height:1.04;
+   max-width:100%;overflow-wrap:normal
+ }
+ .winf-page-mediacar .hero-media img,
+ .winf-page-mediacar .hero-media video{object-position:59% center}
+ .winf-page-ghost .hero{min-height:0;padding-block:22px}
+ .winf-page-ghost .hero .w{padding-block:82px 89px}
+ .winf-page-ghost .hero h1{
+   font-size:clamp(60px,15vw,81px);line-height:.99
+ }
+ .winf-page-ghost .gs-close-cinema{
+   min-height:0;padding-block:105px
+ }
+ .winf-page-ghost .gs-close-copy h2{
+   font-size:clamp(43px,11.5vw,68px);line-height:1.05
+ }
+ .winf-page-maw .hero-grid{
+   padding-block:62px;gap:28px
+ }
+ .winf-page-maw .hero h1{
+   font-size:clamp(43px,11.4vw,67px);line-height:1.05
+ }
+ .winf-page-maw .hero-frame{min-height:0;aspect-ratio:16/10}
+ .winf-page-maw .maw-mediacar{
+   padding-block:55px
+ }
+ .winf-page-maw .maw-mediacar h2{
+   font-size:clamp(45px,11.6vw,65px);line-height:1.05
+ }
+ .winf-page-maw .maw-mediacar-visual{
+   min-height:0;aspect-ratio:16/10;height:auto
+ }
+}
+
+/* Very narrow devices: intentional wrap, no overflow */
+@media(max-width:380px){
+ .winf-page-cuidar .cc-hero h1{font-size:42px}
+ .winf-page-cuidar .cc-closing-content h2{font-size:30px}
+ .winf-page-synthwave .sw-cinematic-hero h1{font-size:45px}
+ .winf-page-synthwave .sw-closing-copy h2{font-size:42px}
+ .winf-page-mediacar .hero h1{font-size:45px}
+ .winf-page-ghost .hero h1{font-size:54px}
+ .winf-page-ghost .gs-close-copy h2{font-size:42px}
+ .winf-page-maw .hero h1,.winf-page-maw .maw-mediacar h2{font-size:41px}
+}
+
+/* Accessibility: keep user zoom free, do not disable pinch/zoom. */
+@media(prefers-reduced-motion:reduce){
+ .winf-page-synthwave .sw-art-picture img,
+ .winf-page-synthwave .sw-closing-media img{animation:none}
+}
