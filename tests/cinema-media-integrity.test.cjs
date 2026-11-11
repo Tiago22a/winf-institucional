@@ -91,3 +91,26 @@ test("SynthWAVE: two illustrated panels, authentic GHOST symbol and functioning 
  assert.match(engine,/profile:\(\)=>window\.SynthwaveProfile\.render\(\)/);
  assert.match(profile,/localStorage\.setItem/);
 });
+
+test("SynthWAVE: logo GHOST em relevo no rádio e fotografia editorial preservam a identidade",()=>{
+ const home=get("synthwave/index.html");
+ const illustration=get("synthwave/assets/frequencia-radio-ilustrado.svg");
+ assert.match(illustration,/Marca do som: emblema em baixo-relevo no centro da grade/);
+ assert.match(illustration,/<rect x="493" y="393" width="53" height="66"/);
+ assert.match(illustration,/<image x="508" y="408" width="23" height="34"/);
+ assert.doesNotMatch(illustration,/x="760" y="459" width="24" height="32"/);
+ assert.match(illustration,/data:image\/png;base64,/);
+ assert.match(home,/id="destinos"/);
+ const photos=[
+  "/briefing/media/portfolio-supercars-v2.webp",
+  "/briefing/media/portfolio-lifestyle-v2.webp",
+  "/briefing/media/portfolio-arquitetura-v2.webp"
+ ];
+ for(const photo of photos){
+  assert.equal(exists(photo),true,"Fotografia de lifestyle ausente: "+photo);
+  assert.ok(home.includes('src="'+photo+'"'),"O site deve referenciar fotografia existente: "+photo);
+ }
+ assert.match(home,/id="filmes"/);
+ assert.match(home,/\/synthwave\/assets\/retro-radio\.svg/);
+ assert.match(home,/href="\/synthwave\/radio\/"/);
+});
