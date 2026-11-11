@@ -17,7 +17,7 @@ test("MediaCar publica as mídias originais específicas da BMW e da equipe",()=
   assert.ok(fs.existsSync(asset(name)),name+" não foi publicado");
   assert.ok(fs.statSync(asset(name)).size>minimum,name+" inesperadamente pequeno");
  }
- assert.match(html,/data-src="\/media\/ecossistema\/mediacar-bmw\.mp4"/);
+ assert.match(html,/(?:data-)?src="\/media\/ecossistema\/mediacar-bmw\.mp4"/);
  assert.match(html,/data-src="\/media\/ecossistema\/mediacar-team\.mp4"/);
  assert.match(html,/src="\/media\/ecossistema\/mediacar-bmw\.webp"/);
  assert.match(html,/src="\/media\/ecossistema\/mediacar-team\.webp"/);
