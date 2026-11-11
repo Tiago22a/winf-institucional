@@ -35,7 +35,7 @@ test("todas as abas compartilham a tipografia editorial da WINF, inclusive no ce
 test("troca as referências do Porsche na vitrine sem sobreposição textual no card Ceramic",()=>{
  const section=source.match(/<div class="winf-catalog-paths">([\s\S]*?)<\/div>/)?.[0];
  assert.ok(section,"Grade das quatro marcas existe");
- assert.match(section,/<a href="\/aerocore\/"><img class="winf-card-aerocore-image" src="\/images\/ceramic-hero\.webp"/);
+ assert.match(section,/<a href="\/aerocore\/"><img class="winf-card-aerocore-image" src="\/images\/catalogo\/aerocore-porsche-clean\.webp"/);
  assert.match(section,/<a href="\/aerocore\/ceramic-armoring\/"><video class="winf-card-ceramic-video"/);
  assert.match(section,/ceramic-armoring-detailing\.mp4/);
  assert.doesNotMatch(section,/porsche-911-highway-20261103-poster\.webp/);

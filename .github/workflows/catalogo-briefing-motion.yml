@@ -1,0 +1,27 @@
+name: WINF — Catálogo de marcas e motion briefing
+on:
+  push:
+    branches:
+      - feature/catalogo-atalhos-briefing-hero-motion-20261111
+  pull_request:
+    paths:
+      - 'catalogo/index.html'
+      - 'briefing/index.html'
+      - 'briefing/hero-motion.*'
+      - 'images/catalogo/**'
+      - 'tests/catalogo-briefing-motion.test.cjs'
+      - '.github/workflows/catalogo-briefing-motion.yml'
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Conferir Javascript da animação
+        run: node --check briefing/hero-motion.js
+      - name: Testes de atalhos, imagens e vídeo
+        run: node --test tests/catalogo-briefing-motion.test.cjs
