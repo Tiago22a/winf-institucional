@@ -170,6 +170,10 @@ nav a:hover{color:#ff9bd7}.kicker{color:#eac8ed}
  .sw-radio-bridge-visual img,.winf-page-synthwave .card,.winf-page-synthwave .frame{transition:none}
  .winf-page-synthwave .card:hover,.winf-page-synthwave .frame:hover{transform:none}
 }
+
+/* Botão de reprodução pertence à camada de interação, não ao conteúdo decorativo. */
+.winf-page-synthwave .sw-cinematic-hero>.sw-play-trigger{z-index:9;bottom:clamp(18px,3vw,39px);right:clamp(18px,3vw,39px)}
+@media(max-width:620px){.winf-page-synthwave .sw-cinematic-hero>.sw-play-trigger{bottom:14px;right:16px;left:16px;width:calc(100% - 32px);min-height:44px}}
 </style>
 
 <!-- WINF social / previews oficiais e URLs canônicas sem parâmetros -->
@@ -843,8 +847,9 @@ nav a:hover{color:#ff9bd7}.kicker{color:#eac8ed}
 <section class="hero sw-cinematic-hero" aria-labelledby="sw-title">
 <div class="sw-hero-media" aria-hidden="true">
   <img src="/media/ecossistema/synthwave-hero.webp" alt="" fetchpriority="high" decoding="async">
-  <video class="sw-live-video" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="/media/ecossistema/synthwave-hero.webp" tabindex="-1" aria-hidden="true"><source src="/media/ecossistema/synthwave-hero.mp4" type="video/mp4"></video><button type="button" class="sw-play-trigger" id="sw-play-trigger" hidden aria-label="Iniciar animação da SynthWAVE">▶ REPRODUZIR ANIMAÇÃO</button>
+  <video class="sw-live-video" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="/media/ecossistema/synthwave-hero.webp" tabindex="-1" aria-hidden="true"><source src="/media/ecossistema/synthwave-hero.mp4" type="video/mp4"></video>
 </div>
+<button type="button" class="sw-play-trigger" id="sw-play-trigger" hidden aria-label="Iniciar animação da Synthwave.FM">▶ REPRODUZIR ANIMAÇÃO</button>
 <div class="visual sw-viz" aria-hidden="true"><canvas id="sw-hero-canvas"></canvas><div class="sw-orbit sw-orbit-one"></div><div class="sw-orbit sw-orbit-two"></div><div class="sw-neon-dash"></div></div>
 <div class="sw-hero-shade" aria-hidden="true"></div><div class="w"><span class="kicker">WINF.inc® / CULTURA DIGITAL / SYNTHWAVE.FM™</span><h1 id="sw-title">O SOM MUDA<br><em>A ATMOSFERA.</em></h1><p>Existe um lugar entre a música e o momento. Um universo de descobertas sonoras, novas frequências e experiências que acompanham seu ritmo.</p><small>A Synthwave.FM™ é a experiência cultural digital do ecossistema WINF: rádio, playlists, descobertas e novas atmosferas sonoras em desenvolvimento.</small><div class="actions"><a class="btn" href="/synthwave/radio/">ENTRAR NA SYNTHWAVE ↗</a><a class="btn alt" href="#conceito">DESCOBRIR O UNIVERSO ↓</a></div></div></section>
 <section class="section" id="conceito"><div class="w"><div class="heading"><div><span class="kicker">01 / CULTURA QUE CONECTA</span><h2>SUA FREQUÊNCIA.<br><em>SEU UNIVERSO.</em></h2></div><p>Da escuta concentrada aos momentos de descoberta: uma identidade musical que conecta tecnologia, criatividade e lifestyle, sem perder a liberdade de explorar.</p></div><div class="cards"><article class="card"><small>01 / RADIO</small><h3>SINTONIZE.</h3><p>Entre na experiência da rádio, descubra faixas e navegue pelos canais experimentais disponíveis.</p></article><article class="card"><small>02 / EXPERIÊNCIA</small><h3>SINTA.</h3><p>Atmosferas, texturas sonoras e uma linguagem visual que transforma cada sessão em um momento próprio.</p></article><article class="card"><small>03 / DESCOBERTA</small><h3>EXPLORE.</h3><p>Playlists, conteúdo editorial e novas possibilidades de conexão com as marcas do ecossistema.</p></article></div></div></section>
