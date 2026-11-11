@@ -21,14 +21,17 @@ test('imagens profissionais de marcas são arquivos locais e não contêm títul
  assert.ok(grid);
  assert.doesNotMatch(grid,/src="\/images\/ceramic-hero\.webp"/);
 });
-test('briefing possui hero animado e mantém VSL com acionamento voluntário',()=>{
- assert.match(briefing,/id="briefing-hero-motion"/);
- assert.match(briefing,/data-src="\/partners\/media\/partners-varanda-20261108\.mp4"/);
+test('briefing usa um único filme editorial abaixo do hero e preserva VSL voluntária',()=>{
+ assert.match(briefing,/id="dominio-absoluto-filme"/);
+ assert.match(briefing,/data-src="\/briefing\/media\/winf-dominio-absoluto-manha\.mp4"/);
+ assert.match(briefing,/data-fallback-src="\/partners\/media\/hero\.mp4"/);
+ assert.doesNotMatch(briefing,/id="briefing-hero-motion"/);
  assert.match(briefing,/id="partners-manifesto"/);
  assert.match(briefing,/data-play-manifesto/);
- assert.match(briefing,/hero-motion\.js\?v=/);
+ assert.match(briefing,/\/js\/winf-cinema\.js\?v=/);
  assert.match(briefing,/hero-motion\.css\?v=/);
 });
+
 test('animações param ou não iniciam com movimento reduzido/economia de dados',()=>{
  const script=readFileSync(join(root,'briefing/hero-motion.js'),'utf8');
  const style=readFileSync(join(root,'briefing/hero-motion.css'),'utf8');
