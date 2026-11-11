@@ -1,0 +1,36 @@
+name: WINF Cinema — Integridade de mídias e fallback
+on:
+  pull_request:
+    paths:
+      - 'js/winf-cinema.js'
+      - 'css/winf-cinema.css'
+      - 'briefing/index.html'
+      - 'mediacar/index.html'
+      - 'partners/cuidar-e-conectar/index.html'
+      - 'partners/universo-dark/index.html'
+      - 'ghost-shop/index.html'
+      - 'synthwave/index.html'
+      - 'tests/cinema-media-integrity.test.cjs'
+      - '.github/workflows/cinema-media-integrity.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'js/winf-cinema.js'
+      - 'css/winf-cinema.css'
+      - 'tests/cinema-media-integrity.test.cjs'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Conferir sintaxe do player
+        run: node --check js/winf-cinema.js
+      - name: Testar rotas, pôsteres e fontes alternativas
+        run: node --test tests/cinema-media-integrity.test.cjs
