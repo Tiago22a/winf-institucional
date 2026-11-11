@@ -96,3 +96,123 @@
   .al-eyebrow{letter-spacing:.12em}
   .al-button{padding:13px 15px;font-size:12px;letter-spacing:.035em}
 }
+
+
+/* WINF PARTNERS™ / BRIEFING — cartões editoriais com fotografia do próprio ecossistema.
+   Nove cartões selecionados: 2 atividade, 2 operação, 5 expansões.
+   Fotografia suavemente visível ao repouso, revelação progressiva no hover/focus.
+   Fotos são ilustrações da marca — não comprovação de unidade ou ativação existente. */
+.al-section .al-card.al-card--visual{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  min-height:clamp(240px,17vw,300px);
+  justify-content:flex-end;
+  background:#0d1014;
+  border-color:rgba(218,228,236,.20);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.015);
+  transition:border-color .45s ease,box-shadow .45s ease,transform .45s cubic-bezier(.2,.7,.2,1);
+}
+.al-section .al-card.al-card--visual .al-card-art{
+  position:absolute;
+  z-index:0;
+  inset:0;
+  display:block;
+  width:100%;
+  height:100%;
+  max-width:none;
+  object-fit:cover;
+  object-position:center;
+  opacity:.24;
+  transform:scale(1.025);
+  filter:grayscale(.30) brightness(.69) saturate(.83);
+  transition:opacity .65s ease,transform 1.2s cubic-bezier(.12,.6,.28,1),filter .65s ease;
+  pointer-events:none;
+}
+.al-section .al-card.al-card--visual:before{
+  content:"";
+  position:absolute;
+  z-index:1;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(90deg,rgba(9,11,15,.79),rgba(9,11,15,.54) 62%,rgba(9,11,15,.32)),
+             linear-gradient(0deg,rgba(6,8,11,.76),rgba(6,8,11,.14) 80%);
+  transition:opacity .65s ease;
+}
+.al-section .al-card.al-card--visual:after{
+  content:"";
+  position:absolute;
+  z-index:1;
+  left:0;
+  bottom:0;
+  width:0;
+  height:2px;
+  background:linear-gradient(90deg,#ffffff,#bbcbd4);
+  box-shadow:0 0 18px rgba(224,243,255,.23);
+  transition:width .55s ease;
+  pointer-events:none;
+}
+.al-section .al-card.al-card--visual>h3,
+.al-section .al-card.al-card--visual>p,
+.al-section .al-card.al-card--visual>a{
+  position:relative;
+  z-index:2;
+}
+.al-section .al-card.al-card--visual h3{
+  color:#fff;
+  text-shadow:0 3px 20px rgba(0,0,0,.82);
+  max-width:95%;
+}
+.al-section .al-card.al-card--visual p{
+  color:#f0f2f3;
+  text-shadow:0 2px 14px rgba(0,0,0,.86);
+  max-width:100%;
+}
+@media(hover:hover) and (pointer:fine){
+  .al-section .al-card.al-card--visual:hover,
+  .al-section .al-card.al-card--visual:focus-within{
+    transform:translateY(-3px);
+    border-color:rgba(240,246,255,.51);
+    box-shadow:0 14px 35px rgba(0,0,0,.24);
+  }
+  .al-section .al-card.al-card--visual:hover .al-card-art,
+  .al-section .al-card.al-card--visual:focus-within .al-card-art{
+    opacity:.64;
+    transform:scale(1.075);
+    filter:grayscale(.06) brightness(.96) saturate(1.02);
+  }
+  .al-section .al-card.al-card--visual:hover:before,
+  .al-section .al-card.al-card--visual:focus-within:before{opacity:.86}
+  .al-section .al-card.al-card--visual:hover:after,
+  .al-section .al-card.al-card--visual:focus-within:after{width:100%}
+}
+/* Gentle editorial art direction tailored to subject location. */
+.al-section .al-card.al-card--visual:has(img[src*="portfolio-arquitetura"]) .al-card-art{object-position:55% center}
+.al-section .al-card.al-card--visual:has(img[src*="neoskin-hero"]) .al-card-art{object-position:60% 48%}
+.al-section .al-card.al-card--visual:has(img[src*="aerocore-car"]) .al-card-art{object-position:62% center}
+.al-section .al-card.al-card--visual:has(img[src*="aerocore-showroom"]) .al-card-art{object-position:58% center}
+@media(max-width:850px){
+  .al-section .al-card.al-card--visual{
+    min-height:245px;
+    padding:clamp(22px,4vw,33px);
+  }
+}
+@media(hover:none), (pointer:coarse){
+  .al-section .al-card.al-card--visual .al-card-art{
+    opacity:.43;
+    filter:grayscale(.23) brightness(.85) saturate(.9);
+  }
+  .al-section .al-card.al-card--visual:before{
+    background:linear-gradient(90deg,rgba(6,9,13,.83),rgba(6,9,13,.47)),
+               linear-gradient(0deg,rgba(6,9,13,.66),transparent 85%);
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .al-section .al-card.al-card--visual,
+  .al-section .al-card.al-card--visual .al-card-art,
+  .al-section .al-card.al-card--visual:before,
+  .al-section .al-card.al-card--visual:after{
+    transition:none!important;
+    transform:none!important;
+  }
+}
