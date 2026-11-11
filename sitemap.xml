@@ -10,13 +10,6 @@
         <priority>1.0</priority>
     </url>
 
-    <url>
-        <loc>https://winf.com.br/winf-home/</loc>
-        <lastmod>2026-10-21</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
     <!-- GHOST SHOP™ / Vitrine de coleções -->
     <url>
         <loc>https://winf.com.br/ghost-shop/</loc>
@@ -363,5 +356,13 @@
   <priority>0.85</priority>
   <image:image><image:loc>https://winf.com.br/images/og/winf-select-cuiaba-1200x630.jpg</image:loc><image:title>WINF Select Cuiabá — soluções de controle solar e privacidade para vidros</image:title></image:image>
 </url>
+
+    <!-- Páginas públicas de navegação, expansão e modelos -->
+    <url><loc>https://winf.com.br/partners/</loc><lastmod>2026-11-11</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
+    <url><loc>https://winf.com.br/onde-comprar/</loc><lastmod>2026-11-11</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
+    <url><loc>https://winf.com.br/redes/</loc><lastmod>2026-11-11</lastmod><changefreq>monthly</changefreq><priority>0.70</priority></url>
+    <url><loc>https://winf.com.br/briefing/asset-light/</loc><lastmod>2026-11-11</lastmod><changefreq>monthly</changefreq><priority>0.70</priority></url>
+    <url><loc>https://winf.com.br/briefing/quiosque/</loc><lastmod>2026-11-11</lastmod><changefreq>monthly</changefreq><priority>0.70</priority></url>
+    <url><loc>https://winf.com.br/briefing/flagship/</loc><lastmod>2026-11-11</lastmod><changefreq>monthly</changefreq><priority>0.70</priority></url>
 </urlset>
 
