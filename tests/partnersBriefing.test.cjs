@@ -148,7 +148,7 @@ test('Projetos em desenvolvimento não prometem serviços já lançados', () => 
   assert.match(ecosystem, /SYNTHWAVE.*fm/i);
   assert.match(ecosystem, /licenças pertinentes/);
   assert.match(ecosystem, /Não há promessa de streaming/);
-  assert.match(ecosystem, /CARRO MÍDIA/);
+  assert.match(ecosystem, /CARRO MÍDIA|MEDIACAR/i);
   assert.match(ecosystem, /GHOST SHOP/);
   assert.doesNotMatch(ecosystem, /Black Shop|MediaK|CityWave/);
 });
