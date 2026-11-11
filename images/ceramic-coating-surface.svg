@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-label="Superfície vitrificada com gotas de água e reflexos de proteção cerâmica">
+  <defs>
+    <linearGradient id="base" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#030506"/><stop offset=".35" stop-color="#121920"/><stop offset=".74" stop-color="#05080d"/><stop offset="1" stop-color="#010203"/></linearGradient>
+    <linearGradient id="sheet" x1=".1" x2=".9" y1=".2" y2=".8"><stop stop-color="#667982" stop-opacity=".17"/><stop offset=".37" stop-color="#d1edf0" stop-opacity=".36"/><stop offset=".53" stop-color="#26363c" stop-opacity=".07"/><stop offset=".76" stop-color="#a2c1c5" stop-opacity=".22"/><stop offset="1" stop-color="#050609" stop-opacity=".03"/></linearGradient>
+    <radialGradient id="droplet" cx=".33" cy=".22" r=".8"><stop stop-color="#f7ffff" stop-opacity=".97"/><stop offset=".24" stop-color="#a9cbcd" stop-opacity=".73"/><stop offset=".58" stop-color="#29454d" stop-opacity=".45"/><stop offset=".78" stop-color="#071219" stop-opacity=".86"/><stop offset=".94" stop-color="#101a1f" stop-opacity=".23"/><stop offset="1" stop-color="#efffff" stop-opacity=".79"/></radialGradient>
+    <radialGradient id="glow"><stop stop-color="#bed7db" stop-opacity=".25"/><stop offset="1" stop-color="#b5d9d9" stop-opacity="0"/></radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="60"/></filter>
+    <filter id="drop"><feDropShadow dx="15" dy="22" stdDeviation="20" flood-color="#000" flood-opacity=".6"/></filter>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#base)"/>
+  <ellipse cx="1240" cy="150" rx="690" ry="400" fill="url(#glow)" filter="url(#soft)"/>
+  <path d="M-240 1030 C180 840 405 880 770 625 S1430 360 1840 255 L1840 1100Z" fill="url(#sheet)" stroke="#b6d7da" stroke-opacity=".2" stroke-width="3"/>
+  <path d="M-200 915 C205 757 518 813 841 555 S1370 343 1790 210" fill="none" stroke="#eefbff" stroke-opacity=".2" stroke-width="7"/>
+  <path d="M-300 980 C320 770 646 900 1000 569 S1420 345 1800 344" fill="none" stroke="#a2c8d4" stroke-opacity=".1" stroke-width="60" filter="url(#soft)"/>
+  <g filter="url(#drop)">
+    <ellipse cx="425" cy="462" rx="112" ry="102" fill="url(#droplet)" transform="rotate(-17 425 462)"/>
+    <ellipse cx="990" cy="600" rx="68" ry="63" fill="url(#droplet)" transform="rotate(19 990 600)"/>
+    <ellipse cx="1260" cy="395" rx="52" ry="49" fill="url(#droplet)"/>
+    <ellipse cx="732" cy="266" rx="31" ry="29" fill="url(#droplet)"/>
+    <ellipse cx="1414" cy="710" rx="30" ry="28" fill="url(#droplet)"/>
+    <ellipse cx="252" cy="743" rx="26" ry="25" fill="url(#droplet)"/>
+  </g>
+  <g fill="#eaffff" opacity=".83">
+    <ellipse cx="391" cy="408" rx="28" ry="13" transform="rotate(-30 391 408)"/>
+    <ellipse cx="973" cy="578" rx="16" ry="8" transform="rotate(-25 973 578)"/>
+    <ellipse cx="1247" cy="379" rx="12" ry="6" transform="rotate(-25 1247 379)"/>
+    <ellipse cx="722" cy="258" rx="8" ry="4" transform="rotate(-25 722 258)"/>
+  </g>
+  <rect width="1600" height="1000" fill="#020303" opacity=".15"/>
+</svg>
