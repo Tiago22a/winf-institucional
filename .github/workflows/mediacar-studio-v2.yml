@@ -1,9 +1,12 @@
-name: MediaCar Studio V2 — coleção e cotas 08
+name: MediaCar Studio — coleção e apresentação comercial 08
 on:
   pull_request:
     paths:
       - 'partners/carro-midia/index.html'
       - 'css/mediacar-studio-v2.css'
+      - 'css/mediacar-client-preview.css'
+      - 'js/mediacar-client-preview.js'
+      - 'tests/mediacar-client-preview.test.cjs'
       - 'media/brands/winf-logo-*'
       - 'tests/mediacar-studio-v2.test.cjs'
       - '.github/workflows/mediacar-studio-v2.yml'
@@ -12,6 +15,9 @@ on:
     paths:
       - 'partners/carro-midia/index.html'
       - 'css/mediacar-studio-v2.css'
+      - 'css/mediacar-client-preview.css'
+      - 'js/mediacar-client-preview.js'
+      - 'tests/mediacar-client-preview.test.cjs'
       - 'tests/mediacar-studio-v2.test.cjs'
   workflow_dispatch:
 permissions:
@@ -25,5 +31,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Testar simulador v2 e integração v1
-        run: node --test tests/mediacar-studio-v2.test.cjs tests/mediacar-footer.test.cjs
+      - name: Testar simulador, apresentação do cliente e integração
+        run: node --test tests/mediacar-studio-v2.test.cjs tests/mediacar-client-preview.test.cjs tests/mediacar-footer.test.cjs

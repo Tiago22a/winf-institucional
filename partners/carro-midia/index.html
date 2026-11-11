@@ -12,6 +12,7 @@
 <link rel="icon" href="/winf-logo.svg">
 <link rel="stylesheet" href="/css/winf-footer-reference.css?v=20261103-reference-2">
 <link rel="stylesheet" href="/css/winf-signoff.css"><link rel="stylesheet" href="/css/mediacar-studio-v2.css?v=20261111-1">
+<link rel="stylesheet" href="/css/mediacar-client-preview.css?v=20261111-1">
 <style>
 @font-face{font-family:Gustavo;src:url('/fonts/gustavo-bold.otf') format('opentype');font-display:swap;font-weight:700}
 @font-face{font-family:JetBrains;src:url('/fonts/jetbrains-mono-var.woff2') format('woff2');font-display:swap}
@@ -108,7 +109,7 @@ body{font-family:Inter,Arial,Helvetica,sans-serif;background:radial-gradient(ell
 <div class="views" id="viewTabs" role="group" aria-label="Vista do carro"></div>
 <div class="stage-wrap"><div class="stage" id="stage" aria-label="Prévia de aplicação de marcas no veículo"><img id="carImage" class="car-image" alt="Imagem do veículo para aplicação das cotas"><div id="emptyPhoto" class="photoempty" hidden><b>Adicione a foto desta vista</b><span>Use uma imagem frontal, lateral, traseira ou do teto.</span></div><div id="zones"></div></div></div>
 <div class="stage-note"><span>Arraste uma cota para posicionar. Use o quadrado branco para ajustar o tamanho.</span><span id="viewName" class="mono">LATERAL ESQUERDA</span></div>
-<div class="actions"><button class="btn secondary" id="addSlot">+ Nova cota comercial</button><button class="btn secondary" id="saveProject">Salvar projeto</button><button class="btn secondary" id="loadProject">Abrir projeto</button><input id="projectInput" type="file" accept=".json,application/json" hidden><button class="btn" id="exportJpg">Exportar imagem JPG</button><button class="btn secondary" id="printProposal">Imprimir / PDF</button></div>
+<div class="actions"><button class="btn secondary" id="addSlot">+ Nova cota comercial</button><button class="btn secondary" id="saveProject">Salvar projeto</button><button class="btn secondary" id="loadProject">Abrir projeto</button><input id="projectInput" type="file" accept=".json,application/json" hidden><button class="btn" id="exportJpg">Exportar imagem JPG</button><button class="btn secondary" id="printProposal">Imprimir / PDF</button><button class="btn" id="mcClientPreview" type="button">Visualizar como cliente</button><button class="btn secondary" id="mcClientExport" type="button">Baixar apresentação HTML</button></div>
 <div class="metrics"><div class="metric"><small>Cotas livres</small><strong id="freeCount">0</strong></div><div class="metric"><small>Potencial mensal</small><strong id="potential">R$ 0</strong></div><div class="metric"><small>Mensalidades vendidas</small><strong id="soldValue">R$ 0</strong></div><div class="metric"><small>Potencial em 6 meses</small><strong id="cycleValue">R$ 0</strong></div></div>
 <div id="printDetails" class="printheader"></div>
 </section>
@@ -124,6 +125,7 @@ body{font-family:Inter,Arial,Helvetica,sans-serif;background:radial-gradient(ell
 </aside></main>
 <div class="footnote"><span class="mono">MEDIACAR™ / BY WINF PARTNERS™ / NÚMERO OFICIAL 08</span><p>Simulação conceitual para licenciado autorizado. WINF™, AeroCore™, NeoSkin™, Ceramic Armoring™ e o numeral 08 permanecem fixos na arte de apresentação. Valide artes, dimensões, legislação local e autorizações antes da aplicação física. As imagens e marcas enviadas ficam no seu navegador, sem upload para um servidor neste protótipo.</p></div>
 </div>
+<dialog id="mcClientDialog" class="mc-client-dialog" aria-label="Prévia de apresentação comercial MediaCar 08"><div class="mc-client-dialog-head"><strong>MEDIACAR™ <em>08</em> / VISÃO DO CLIENTE</strong><button class="btn secondary" type="button" id="mcClientClose">Fechar</button></div><p class="mc-client-dialog-note" id="mcPreviewNote">Apresentação estática do projeto atual.</p><iframe id="mcClientFrame" title="Apresentação comercial MediaCar para anunciantes" sandbox=""></iframe></dialog>
 <footer id="winf-global-footer" class="wf-reference-footer" aria-label="Rodapé do ecossistema WINF" data-footer-version="20261103-reference-2">
 <span id="privacy" aria-hidden="true"></span><span id="politica-de-privacidade" aria-hidden="true"></span>
 <div class="wf-ref-wrap">
@@ -344,6 +346,35 @@ $("mcDeleteLocal").onclick=function(){
  var req=db.transaction("projects","readwrite").objectStore("projects").delete(id);
  req.onsuccess=function(){if(state.projectId===id)state.projectId=null;refreshProjects();toast("Projeto local excluído.")};
 };
+function presentationImages(){
+ var images={};
+ keys.forEach(function(view){
+  var source=state.photos[view]||((MC_MODELS[state.model]||MC_MODELS.custom).views[view]||null);
+  if(source)images[view]={src:source,flip:!state.photos[view]&&view==="right"&&state.model==="bmw"};
+ });
+ return images;
+}
+$("mcClientPreview").onclick=async function(){
+ var btn=this;btn.disabled=true;
+ try{
+  if(!window.MediacarPresentation)throw Error("O visualizador comercial não está disponível.");
+  await window.MediacarPresentation.show(state,presentationImages());
+ }catch(error){toast(error&&error.message?error.message:"Não foi possível abrir a apresentação.")}
+ finally{btn.disabled=false}
+};
+$("mcClientExport").onclick=async function(){
+ var btn=this;btn.disabled=true;
+ try{
+  if(!window.MediacarPresentation)throw Error("O exportador comercial não está disponível.");
+  await window.MediacarPresentation.exportHtml(state,presentationImages());
+  toast("Apresentação comercial salva. Envie o arquivo HTML aos interessados.");
+ }catch(error){toast(error&&error.message?error.message:"Não foi possível gerar a apresentação.")}
+ finally{btn.disabled=false}
+};
+$("mcClientClose").onclick=function(){
+ $("mcClientDialog").close();
+ $("mcClientFrame").srcdoc="";
+};
 $("photoBtn").onclick=function(){$("photoInput").click()};
 $("photoInput").onchange=async function(e){var f=e.target.files&&e.target.files[0];if(!f)return;try{state.photos[state.current]=await compress(f,2200,"image/jpeg");renderStage();persist();toast("Foto adicionada à vista "+labels[state.current]+".")}catch(error){toast("Use JPG, PNG ou WEBP de um veículo.")}e.target.value=""};
 $("addSlot").onclick=function(){var id="N"+(state.next++);var slot={id:id,type:"sponsor",name:"NOVA COTA",x:35,y:53,w:19,h:12,status:"available",price:0,logo:null,visible:true};currentSlots().push(slot);state.selected=id;render();persist();toast("Nova cota criada. Arraste para posicionar.")};
@@ -381,6 +412,7 @@ function init(){
 init();
 })();
 </script>
+<script src="/js/mediacar-client-preview.js?v=20261111-1" defer></script>
 <script src="/js/winf-footer.js?v=20261103-reference-2" defer></script>
 </body>
 </html>
