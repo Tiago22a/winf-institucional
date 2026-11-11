@@ -55,3 +55,11 @@ input:focus,select:focus{outline-color:#edb584}
 .sw-ghost-footer{display:block;flex:none;width:19px;height:26px;object-fit:contain;opacity:.58}
 .sw-radio-brand:hover .sw-ghost-nav{opacity:.9}
 @media(max-width:640px){.sw-ghost-nav{width:14px;height:20px}.sw-ghost-player{display:none}}
+
+/* Marca SynthWAVE: lettering em branco monocromático e assinatura GHOST original. */
+.sw-radio-brand{color:#f6f0e6!important;white-space:nowrap}
+.sw-radio-brand>span,.sw-radio-brand .text-pink{color:#f6f0e6!important}
+.sw-universe-back{flex:none;display:inline-flex;align-items:center;justify-content:center;color:#f2eadd;background:#ffffff0b;border:1px solid #e9e0cf61;padding:9px 13px;min-height:38px;font:800 9px/1.25 'Plus Jakarta Sans',sans-serif;letter-spacing:.105em;text-transform:uppercase;white-space:nowrap;transition:background .2s,border-color .2s}
+.sw-universe-back:hover,.sw-universe-back:focus-visible{background:#cce0ce19;border-color:#d2e2d4;color:#fff}
+.sw-universe-back:focus-visible{outline:2px solid #e8bc89;outline-offset:3px}
+@media(max-width:700px){.sw-universe-back{font-size:9px;padding:8px 11px;min-height:35px}}
