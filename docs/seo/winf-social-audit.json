@@ -484,6 +484,13 @@
       "ogImage": "/images/og/winf-share-synthwave-1200x630.jpg",
       "topic": "WINF™",
       "alt": "S YNTHWAVE.FM"
+    },
+    {
+      "route": "/synthwave/radio/",
+      "title": "Synthwave.FM — Entrar na Rádio",
+      "ogImage": "/images/og/winf-share-synthwave-radio-1200x630.jpg",
+      "topic": "WINF™",
+      "alt": "S YNTHWAVE.FM"
     }
   ],
   "excluded": [
