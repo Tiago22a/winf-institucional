@@ -34,8 +34,8 @@ assert.ok(!portalScript.includes('status === "ativa"'),'Sites publicados não de
 assert.ok(doc.includes('/js/winf-active-territories.js?v=20261109-seven-channels2'),'Cache bust da versão corrigida do script');
 const locator=read('aerocore/assets/onde-comprar.js');
 assert.ok(locator.includes("'Instagram da unidade ↗'"),'Faltou Instagram em diretório dinâmico');
-assert.ok(locator.includes("'Site da unidade ↗'"),'Faltou site no diretório dinâmico');
+assert.ok(locator.includes("'Página da cidade ↗'"),'Faltou site no diretório dinâmico');
 assert.ok(locator.includes('encodeURIComponent(text)'),'Origem do contato não identificada');
 // O resumo visual de territórios foi retirado do site; validar apenas os dados e links, não texto editorial removido.
 assert.ok(!doc.includes('5 unidades ativas + 1 em pré-ativação'), 'Contador legado indevido na página principal');
-console.log('✓ WINF: 7 sites de cidades ativos, central e Instagram conferidos; operação presencial independente.');
+console.log('✓ WINF: 7 páginas de cidades publicadas, 2 territórios operacionais; atendimento e Instagram auditados.');
