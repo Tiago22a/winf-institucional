@@ -8,7 +8,7 @@ const source=read('js/cidades.js');
 const root={};vm.runInNewContext(source,{globalThis:root});
 const all=[...root.WINF_CIDADES,...root.WINF_UNIDADES_EXTRAS].filter(c=>c.siteAtivo===true);
 assert.equal(all.length,7,'São sete sites de cidades publicados');
-assert.equal(all.filter(c=>c.status==='ativa').length,5,'Não inventar disponibilidade operacional');
+assert.equal(all.filter(c=>c.status==='ativa').length,2,'Só Santos e Pilar do Sul estão operacionais; página publicada não é unidade ativa');
 assert.equal(all.find(c=>c.id==='campina-grande-pb')?.status,'pre_ativacao');
 assert.equal(all.find(c=>c.id==='cuiaba-mt')?.status,'nao_ativa');
 for(const city of all){
