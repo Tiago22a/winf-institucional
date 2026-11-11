@@ -62,3 +62,20 @@ test("Cinema: mídias finais carregadas e conferíveis no repositório",()=>{
  if(unresolved.length)console.warn("Fontes originais pendentes de mídia (pôster/fallback preservado):\n"+unresolved.join("\n"));
  assert.deepEqual(unresolved,[],"Todos os vídeos aprovados devem existir no repositório: "+unresolved.join(", "));
 });
+
+test("SynthWAVE: animações MP4 reais carregam e são visíveis sem depender do lazy-player",()=>{
+ const html=get("synthwave/index.html");
+ const bootstrap=get("synthwave/playback.js");
+ for(const slug of ["hero","experience"]){
+  const video="/media/ecossistema/synthwave-"+slug+".mp4";
+  assert.equal(exists(video),true,"MP4 ausente: "+video);
+  assert.match(html,new RegExp('src="'+video.replaceAll(".","\\.")+'"'));
+ }
+ assert.match(html,/<video class="sw-live-video" autoplay muted loop playsinline/);
+ assert.match(html,/<video class="sw-frame-video" autoplay muted loop playsinline/);
+ assert.match(html,/video\.sw-live-video\{display:block;opacity:\.9/);
+ assert.match(html,/sw-play-trigger/);
+ assert.match(html,/\/synthwave\/playback\.js\?v=20261111-native-1/);
+ assert.match(bootstrap,/video\.play\(\)/);
+ assert.doesNotMatch(html,/<source data-src="\/media\/ecossistema\/synthwave-/);
+});
