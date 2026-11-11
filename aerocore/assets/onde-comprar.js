@@ -23,7 +23,7 @@
   const normalize = value => String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
   const eligible = city => mode === 'ativas'
     ? city.status === 'ativa' // Página publicada não é sinônimo de unidade operacional.
-    : city.status === 'pre_ativacao' || (city.status === 'nao_ativa' && city.siteAtivo !== true && city.disponivelParaAtivacao === true);
+    : city.status === 'pre_ativacao' || (city.status === 'nao_ativa' && (city.siteAtivo === true || city.disponivelParaAtivacao === true));
   function safeUrl(value) {
     if (!value) return null;
     try {
@@ -52,7 +52,7 @@
         const card = template.content.cloneNode(true);
         card.querySelector('article').dataset.status = city.status;
         card.querySelector('.directory-card-state').textContent = city.referencia || city.uf || '';
-        card.querySelector('.directory-card-status').textContent = city.status === 'ativa' ? '● Unidade operacional' : city.siteAtivo ? '● Página publicada · operação a confirmar' : mode === 'territorios' ? 'Ativação sob consulta' : 'Não operacional';
+        card.querySelector('.directory-card-status').textContent = city.status === 'ativa' ? '● Unidade operacional' : city.siteAtivo ? '● Página publicada · sem operação confirmada' : mode === 'territorios' ? 'Ativação sob consulta' : 'Não operacional';
         card.querySelector('.directory-card-city').textContent = city.cidade + (city.uf ? ' — ' + city.uf : '');
         card.querySelector('.directory-card-segment').textContent = city.siteAtivo ? (names[city.tipoAtendimento] || 'Atendimento sob consulta') : 'Disponibilidade para ativação sob consulta';
         const tags = city.tipoAtendimento === 'ambos' ? ['Automotivo', 'Residencial'] : [names[city.tipoAtendimento]].filter(Boolean);
