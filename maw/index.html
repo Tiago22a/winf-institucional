@@ -34,6 +34,13 @@
 .footer{background:#050506;border-top:1px solid #ffffff20;padding:65px 0}.foot-grid{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap}.footer img{width:110px}.footer p{color:#999ca5;font-size:12px;letter-spacing:.13em;text-transform:uppercase;margin:16px 0 0}.foot-links{display:flex;gap:22px;flex-wrap:wrap}.foot-links a{font-size:11px;letter-spacing:.08em;font-weight:800;text-transform:uppercase;color:#b9bdc6}.foot-links a:hover{color:#fff}
 @media(max-width:1000px){.hero-grid{grid-template-columns:1fr}.hero-frame{min-height:430px;border-left:0}.section-heading{grid-template-columns:1fr}.section-heading p{max-width:650px}.editorial{min-height:340px}.grid-3{grid-template-columns:repeat(2,1fr)}.ai-top{grid-template-columns:1fr}.pipeline{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:650px){.wrap{width:calc(100% - 34px)}.top-in{min-height:72px;flex-wrap:wrap;padding-block:13px}.brand img{width:81px}.brand img.maw-agency-mark{width:157px}.brand img.maw-parent-mark{width:70px}.brand strong{font-size:22px}.nav{width:100%;gap:16px}.nav a{font-size:9px}.nav .nav-ig{padding:8px 10px}.hero-grid{padding-block:66px;gap:38px}.hero h1{font-size:clamp(49px,13.1vw,77px)}.hero-frame{min-height:390px}.hero .lead{font-size:16px}.strip-in{padding-block:16px}.grid-3,.editorial-grid,.pipeline,.cta-grid{grid-template-columns:1fr}.card{min-height:215px}.editorial{min-height:330px}.ai-block h2{font-size:clamp(45px,12vw,67px)}.step{min-height:105px}.step strong{margin-top:10px}.cta .buttons{margin-top:18px}.footer{padding:48px 0}}
+/* M.A.W. | Acendimento editorial suave no hover, sem alterar logos ou texto. */
+.hero-frame>img:not(.frame-ghost){transition:filter .55s ease,transform .7s ease}
+.editorial img{transition:filter .55s ease,transform .7s ease}
+@media(hover:hover) and (pointer:fine){
+  .hero-frame:hover>img:not(.frame-ghost){filter:grayscale(1) contrast(1.08) brightness(1.12);transform:scale(1.035)}
+  .editorial:hover img{filter:grayscale(1) contrast(1.06) brightness(1.08);transform:scale(1.04)}
+}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
 </style>
 
