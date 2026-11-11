@@ -680,6 +680,40 @@
 
 
 <!-- WINF social / previews oficiais e URLs canônicas sem parâmetros -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+/* Ghost Shop — vídeos próprios em destaque, sem pôster de outras páginas. */
+.gs-hero{position:relative;isolation:isolate;overflow:hidden;background:#0a0b0d}
+.gs-hero-motion{position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(135deg,#1a1d22,#070809)}
+.gs-hero-motion:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#070809f7 2%,#070809b9 58%,#07080985 100%)}
+.gs-hero-motion video{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .65s}
+.gs-hero-motion video.wc-playing{opacity:.65}
+.gs-hero .gs-hero-body{position:relative;z-index:1}
+.gs-hero .gs-ghost{filter:grayscale(1) brightness(2.5);opacity:.24}
+.gs-film-fallback{position:absolute;inset:0;z-index:0;display:flex;align-items:flex-end;padding:clamp(22px,4vw,48px);background:radial-gradient(circle at 80% 25%,#5d667731,transparent 55%),#101318}
+.gs-film-fallback span{font:800 clamp(24px,3vw,45px)/1.08 Inter,Arial,sans-serif;letter-spacing:-.05em;color:#f3f5f7;max-width:420px}
+.wc-film-poster{z-index:1}.wc-film video{z-index:2}
+@media(max-width:700px){.gs-hero-motion:after{background:linear-gradient(0deg,#070809f5,#070809ba 75%)}}
+@media(prefers-reduced-motion:reduce){.gs-hero-motion video{display:none}}
+</style>
+<!-- WINF social / previews oficiais e URLs canônicas sem parâmetros -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="GHOST SHOP™">
@@ -697,22 +731,7 @@
 <meta name="twitter:description" content="Uma vitrine pública para conhecer acessórios, mimos e lifestyle WINF. Compra exclusiva para membros autorizados.">
 <meta name="twitter:image" content="https://winf.com.br/images/og/winf-share-ghost-shop-1200x630.jpg">
 <meta name="twitter:image:alt" content="Imagem editorial WINF™ para GHOST SHOP™: IDENTIDADE QUE VAI ALÉM DO VIDRO.. Fotografia ilustrativa.">
-
-<style>
-/* Ghost Shop — vídeos próprios em destaque, sem pôster de outras páginas. */
-.gs-hero{position:relative;isolation:isolate;overflow:hidden;background:#0a0b0d}
-.gs-hero-motion{position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(135deg,#1a1d22,#070809)}
-.gs-hero-motion:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#070809f7 2%,#070809b9 58%,#07080985 100%)}
-.gs-hero-motion video{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .65s}
-.gs-hero-motion video.wc-playing{opacity:.65}
-.gs-hero .gs-hero-body{position:relative;z-index:1}
-.gs-hero .gs-ghost{filter:grayscale(1) brightness(2.5);opacity:.24}
-.gs-film-fallback{position:absolute;inset:0;z-index:0;display:flex;align-items:flex-end;padding:clamp(22px,4vw,48px);background:radial-gradient(circle at 80% 25%,#5d667731,transparent 55%),#101318}
-.gs-film-fallback span{font:800 clamp(24px,3vw,45px)/1.08 Inter,Arial,sans-serif;letter-spacing:-.05em;color:#f3f5f7;max-width:420px}
-.wc-film-poster{z-index:1}.wc-film video{z-index:2}
-@media(max-width:700px){.gs-hero-motion:after{background:linear-gradient(0deg,#070809f5,#070809ba 75%)}}
-@media(prefers-reduced-motion:reduce){.gs-hero-motion video{display:none}}
-</style></head>
+</head>
 <body id="topo" class="ghost-shop-page">
 <div class="gs-container"><header class="gs-header">
 <a href="/" class="gs-brand" aria-label="WINF global"><img src="/winf-logo.svg" width="94" height="32" alt="WINF™"><i aria-hidden="true"></i><span>PREMIUM QUALITY<br>WINDOW FILM</span></a>
