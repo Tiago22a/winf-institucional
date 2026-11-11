@@ -297,6 +297,13 @@
       "alt": "IDENTIDADE QUE VAI ALÉM DO VIDRO."
     },
     {
+      "route": "/ghost-shop/vitrine/",
+      "title": "Vitrine GHOST SHOP™ | Degustação exclusiva WINF",
+      "ogImage": "/images/og/winf-share-ghost-shop-vitrine-1200x630.jpg",
+      "topic": "WINF™",
+      "alt": "VITRINE GHOST SHOP™"
+    },
+    {
       "route": "/",
       "title": "WINF™ — Engenharia Invisível em Vidro",
       "ogImage": "/images/og/winf-share-oficial-1200x630.jpg",
