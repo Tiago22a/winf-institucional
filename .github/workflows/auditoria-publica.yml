@@ -1,0 +1,43 @@
+name: WINF Publico - Auditoria de Integridade
+on:
+  pull_request:
+    paths:
+      - 'js/cidades.js'
+      - 'aerocore/onde-comprar/**'
+      - 'blog/**'
+      - 'winf-home/**'
+      - 'ceramic/**'
+      - 'partners/universo-dark/**'
+      - 'partners/ecossistema/**'
+      - 'sitemap.xml'
+      - 'tests/auditoria-publica.test.cjs'
+      - '.github/workflows/auditoria-publica.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'js/cidades.js'
+      - 'aerocore/onde-comprar/**'
+      - 'blog/**'
+      - 'winf-home/**'
+      - 'ceramic/**'
+      - 'partners/universo-dark/**'
+      - 'partners/ecossistema/**'
+      - 'sitemap.xml'
+      - 'tests/auditoria-publica.test.cjs'
+      - '.github/workflows/auditoria-publica.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  auditoria:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Integridade publica - operacoes, privacidade e paginas
+        run: node --test tests/auditoria-publica.test.cjs
+      - name: Sintaxe do localizador
+        run: node --check aerocore/assets/onde-comprar.js
