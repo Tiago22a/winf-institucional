@@ -237,3 +237,80 @@ body.wp-menu-open{overflow:hidden}
 .wp-header .wp-header-actions .wp-header-action:focus-visible{outline:2px solid #fff;outline-offset:3px}
 @media(max-width:760px){.wp-header .wp-header-actions{gap:9px}.wp-header .wp-header-actions .wp-header-action{display:inline-flex!important;font-size:9px;padding:8px 9px;min-height:36px}.wp-header .wp-header-inner{gap:10px}}
 @media(max-width:410px){.wp-header .wp-header-actions .wp-header-action{font-size:8px;padding:7px 7px}.wp-header .wp-header-actions{gap:5px}.wp-header .partners-landing-lockup{gap:6px}.wp-header .partners-lockup-wordmark{font-size:13px}}
+
+
+/* WINF Partners — alinhamento da marca oficial vetorial com PARTNERS™.
+   A marca WINF preserva a geometria original; a assinatura "FROM BRAZIL
+   TO THE WORLD" segue em texto de interface para máxima nitidez. */
+.winf-partners-site .wp-header .partners-landing-lockup,
+.winf-partners-site .wp-footer-base .partners-landing-lockup{
+  display:inline-flex;
+  align-items:center;
+  gap:14px;
+}
+.winf-partners-site .wp-header .wp-parent-logo,
+.winf-partners-site .wp-footer-base .wp-parent-logo{
+  display:inline-flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:2px;
+  flex:0 0 auto;
+  line-height:1;
+}
+.winf-partners-site .wp-header .wp-parent-logo img,
+.winf-partners-site .wp-footer-base .wp-parent-logo img{
+  display:block;
+  width:auto;
+  height:36px;
+  max-width:none;
+  object-fit:contain;
+}
+.winf-partners-site .wp-header .wp-parent-logo small,
+.winf-partners-site .wp-footer-base .wp-parent-logo small{
+  font:700 7px/1.15 Inter,Arial,sans-serif;
+  letter-spacing:.1em;
+  white-space:nowrap;
+  max-width:none;
+  color:#fff;
+  text-align:center;
+}
+.winf-partners-site .wp-header .partners-lockup-wordmark,
+.winf-partners-site .wp-footer-base .partners-lockup-wordmark{
+  display:inline-flex;
+  align-items:flex-start;
+  border-left:1px solid rgba(255,255,255,.66);
+  padding-left:15px;
+  font:400 34px/.95 var(--wp-font),Anton,Impact,sans-serif;
+  letter-spacing:.025em;
+  white-space:nowrap;
+}
+.winf-partners-site .wp-header .partners-lockup-wordmark sup,
+.winf-partners-site .wp-footer-base .partners-lockup-wordmark sup{
+  font:700 10px/1 Inter,Arial,sans-serif;
+  letter-spacing:0;
+  margin-left:3px;
+  vertical-align:super;
+}
+@media(max-width:760px){
+  .winf-partners-site .wp-header .partners-landing-lockup,
+  .winf-partners-site .wp-footer-base .partners-landing-lockup{gap:9px}
+  .winf-partners-site .wp-header .wp-parent-logo img,
+  .winf-partners-site .wp-footer-base .wp-parent-logo img{height:28px}
+  .winf-partners-site .wp-header .wp-parent-logo small,
+  .winf-partners-site .wp-footer-base .wp-parent-logo small{font-size:5.5px;letter-spacing:.075em}
+  .winf-partners-site .wp-header .partners-lockup-wordmark,
+  .winf-partners-site .wp-footer-base .partners-lockup-wordmark{font-size:26px;padding-left:10px}
+  .winf-partners-site .wp-header .partners-lockup-wordmark sup,
+  .winf-partners-site .wp-footer-base .partners-lockup-wordmark sup{font-size:8px}
+}
+@media(max-width:420px){
+  .winf-partners-site .wp-header .partners-landing-lockup,
+  .winf-partners-site .wp-footer-base .partners-landing-lockup{gap:6px}
+  .winf-partners-site .wp-header .wp-parent-logo img,
+  .winf-partners-site .wp-footer-base .wp-parent-logo img{height:24px}
+  .winf-partners-site .wp-header .wp-parent-logo small,
+  .winf-partners-site .wp-footer-base .wp-parent-logo small{font-size:4.8px;letter-spacing:.045em}
+  .winf-partners-site .wp-header .partners-lockup-wordmark,
+  .winf-partners-site .wp-footer-base .partners-lockup-wordmark{font-size:21px;padding-left:7px}
+}
