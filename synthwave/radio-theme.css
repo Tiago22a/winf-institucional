@@ -63,3 +63,17 @@ input:focus,select:focus{outline-color:#edb584}
 .sw-universe-back:hover,.sw-universe-back:focus-visible{background:#cce0ce19;border-color:#d2e2d4;color:#fff}
 .sw-universe-back:focus-visible{outline:2px solid #e8bc89;outline-offset:3px}
 @media(max-width:700px){.sw-universe-back{font-size:9px;padding:8px 11px;min-height:35px}}
+
+/* Assinatura GHOST posicionada com intenção: logo, capa de álbum, rodapé. */
+.sw-radio-brand{gap:10px}
+.sw-radio-brand .sw-ghost-nav{display:block;flex:none;width:33px;height:40px;object-fit:contain;opacity:1;padding:7px 8px;border:1px solid #e5d8bf3a;border-radius:13px;background:#c2ddc91a;filter:none;transform-origin:50% 70%;animation:sw-ghost-float 4.7s ease-in-out infinite}
+.sw-radio-brand:hover .sw-ghost-nav{background:#c2ddc929}
+@keyframes sw-ghost-float{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-3px) rotate(2deg)}}
+.sw-cover-frame{position:relative;flex:none;width:48px;height:48px}
+.sw-cover-frame #nowCover{display:block;width:100%;height:100%;object-fit:cover}
+.sw-cover-frame .sw-ghost-player{position:absolute;top:-5px;right:-5px;display:block;width:22px;height:26px;object-fit:contain;padding:5px 6px;border:1px solid #d7d4b878;background:#244c3f;border-radius:9px;opacity:1;pointer-events:none;z-index:2}
+.sw-footer-brand{gap:9px}
+.sw-footer-brand .sw-ghost-footer{width:23px;height:31px;padding:4px;border-radius:9px;background:#c5dcc314;opacity:.63}
+@media(min-width:768px){.sw-cover-frame{width:64px;height:64px}}
+@media(max-width:640px){.sw-radio-brand .sw-ghost-nav{width:29px;height:36px;padding:6px 7px}.sw-cover-frame .sw-ghost-player{display:block;width:20px;height:24px;top:-4px;right:-4px}.sw-footer-brand .sw-ghost-footer{width:21px;height:29px}}
+@media(prefers-reduced-motion:reduce){.sw-radio-brand .sw-ghost-nav{animation:none!important;transform:none!important}}
