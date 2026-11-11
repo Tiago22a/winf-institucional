@@ -300,8 +300,8 @@
       "route": "/ghost-shop/vitrine/",
       "title": "Vitrine GHOST SHOP™ | Degustação exclusiva WINF",
       "ogImage": "/images/og/winf-share-ghost-shop-vitrine-1200x630.jpg",
-      "topic": "WINF™",
-      "alt": "VITRINE GHOST SHOP™"
+      "topic": "GHOST SHOP™",
+      "alt": "UM UNIVERSO. MUITAS ESCOLHAS."
     },
     {
       "route": "/",
@@ -335,15 +335,15 @@
       "route": "/maw/",
       "title": "M.A.W.™ — Marketing Advanced Windowfilm | Agência de IA da WINF",
       "ogImage": "/images/og/winf-share-maw-1200x630.jpg",
-      "topic": "WINF™",
-      "alt": "M .A.W.™"
+      "topic": "M.A.W.™",
+      "alt": "CONTEÚDO QUE POSICIONA."
     },
     {
       "route": "/mediacar/",
       "title": "MediaCar™ | Mídia sobre rodas — WINF",
       "ogImage": "/images/og/winf-share-mediacar-1200x630.jpg",
-      "topic": "WINF™",
-      "alt": "M EDIACAR™"
+      "topic": "MEDIACAR™",
+      "alt": "SUA MARCA. EM MOVIMENTO."
     },
     {
       "route": "/miniblind-venetian/",
@@ -482,15 +482,15 @@
       "route": "/synthwave/",
       "title": "SynthWAVE.fm™ — Rádio, playlists e podcasts | WINF.inc®",
       "ogImage": "/images/og/winf-share-synthwave-1200x630.jpg",
-      "topic": "WINF™",
-      "alt": "S YNTHWAVE.FM™"
+      "topic": "SYNTHWAVE.fm™",
+      "alt": "O SOM MUDA. A ATMOSFERA."
     },
     {
       "route": "/synthwave/radio/",
       "title": "Synthwave.FM — Entrar na Rádio",
       "ogImage": "/images/og/winf-share-synthwave-radio-1200x630.jpg",
-      "topic": "WINF™",
-      "alt": "S YNTHWAVE.FM"
+      "topic": "SYNTHWAVE.fm™",
+      "alt": "SUA MÚSICA. SUA FREQUÊNCIA."
     }
   ],
   "excluded": [
