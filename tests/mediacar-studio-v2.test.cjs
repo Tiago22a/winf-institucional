@@ -20,13 +20,13 @@ test("Studio V2: JS executa sem erro de sintaxe e conserva funções preexistent
  }
  assert.doesNotMatch(institutional,/<iframe\b/i);
 });
-test("Galeria V2: quatro opções de veículo e comunicação de não homologado",()=>{
- assert.equal((studio.match(/class="mc-model"/g)||[]).length,4);
- for(const val of ["bmw","porsche","volvo","custom"])assert.match(studio,new RegExp('data-mc-model="'+val+'"'));
+test("Galeria V2: seis veículos e referências conceituais não homologadas",()=>{
+ assert.equal((studio.match(/class="mc-model"/g)||[]).length,6);
+ for(const val of ["bmw","porsche","volvo","mustang","sprinter","custom"])assert.match(studio,new RegExp('data-mc-model="'+val+'"'));
  assert.match(studio,/\/css\/mediacar-studio-v2\.css/);
  assert.match(studio,/NÚMERO 08|08/);
  assert.match(studio,/ANEXAR IMAGENS/);
- assert.match(studio,/Projeto com foto real ou render aprovado/);
+ assert.match(studio,/Conceito ilustrado · anexe vistas aprovadas/);
  assert.ok(!studio.includes("asset-light-mobilidade-2026.webp"));
 });
 test("Marca oficial original e fotografia MediaCar existem",()=>{
@@ -68,4 +68,36 @@ test("Projetos de vários carros são isolados e podem ser armazenados no navega
  for(const btn of ["mcSaveLocal","mcLoadLocal","mcDeleteLocal"])assert.match(studio,new RegExp('id="'+btn+'"'));
  assert.match(code,/function refreshProjects/);
  assert.match(code,/if\(!currentImage\(\)\)\{toast\("Adicione uma foto/);
+});
+
+test("MediaCar: biblioteca de prompts para seis modelos e cinco vistas está conectada",()=>{
+ const promptCode=read("js/mediacar-image-prompts.js");
+ assert.doesNotThrow(()=>new Function(promptCode));
+ assert.match(studio,/id="mcPromptModel"/);
+ assert.match(studio,/id="mcPromptView"/);
+ assert.match(studio,/id="mcPromptOutput"/);
+ assert.match(studio,/id="mcPromptCopy"/);
+ assert.match(studio,/id="mcPromptDownload"/);
+ assert.match(studio,/src="\/js\/mediacar-image-prompts\.js/);
+ const ctx={window:{},document:{readyState:"loading",addEventListener(){}},navigator:{}};
+ vm.runInNewContext(promptCode,ctx);
+ const lib=ctx.window.MediaCarPromptLibrary;
+ assert.deepEqual(Array.from(lib.models),["bmw","porsche","volvo","mustang","sprinter","custom"]);
+ assert.deepEqual(Array.from(lib.views),["left","right","front","back","roof"]);
+ for(const model of lib.models)for(const view of lib.views){
+  const p=lib.buildPrompt(model,view);
+  assert.match(p,/MEDIACAR™/);
+  assert.match(p,/1920 × 1080/);
+  assert.match(p,/NÃO INSERIR/);
+  assert.match(p,/fotografia conceitual/i);
+ }
+ for(const slug of ["porsche-911","volvo-ex90","mustang-fastback","sprinter"]){
+  const asset="media/ecossistema/mediacar-"+slug+"-concept.svg";
+  assert.match(studio,new RegExp(asset.replaceAll("/","\\/").replaceAll(".","\\.")));
+  assert.ok(require("node:fs").statSync(require("node:path").join(root,asset)).size>1000,asset);
+ }
+ // O BMW continua a única fonte de fotografia aprovada no template de edição.
+ const modelsBlock=code.slice(code.indexOf("var MC_MODELS="),code.indexOf("var MC_BRANDS="));
+ assert.match(modelsBlock,/bmw:\{label:"BMW M4 \/ MediaCar",views:\{left:"\/media\/ecossistema\/mediacar-bmw\.webp"/);
+ for(const model of ["porsche","volvo","mustang","sprinter","custom"])assert.match(modelsBlock,new RegExp(model+':\\{label:"[^"]+",views:\\{\\}\\}'));
 });
