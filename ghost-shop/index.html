@@ -34,6 +34,25 @@
 .hero .lead{color:#fff}.hero .sub{color:#e3e6eb}.hero .kicker{color:#e1e4e9}
 @media(max-width:800px){.hero-media .campaign-hero-photo,.hero-media video{object-position:65% center}.hero-media:after{background:linear-gradient(0deg,rgba(6,7,8,.87) 0%,rgba(6,7,8,.65) 47%,rgba(6,7,8,.30) 78%,rgba(6,7,8,.22) 100%)}}
 @media(prefers-reduced-motion:reduce){.hero-media video{display:none!important}.hero-media .campaign-hero-photo{opacity:.96!important}.hero-media *{transition:none!important}}
+
+/* GHOST SHOP™ / segundo ato cinematográfico: animação original de operação no fechamento. */
+.gs-close-cinema{position:relative;isolation:isolate;display:flex;align-items:center;justify-content:center;overflow:hidden;min-height:clamp(570px,76svh,860px);padding-block:clamp(105px,12vw,178px);background:#07080b}
+.gs-close-media{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.gs-close-media img,.gs-close-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%;display:block}
+.gs-close-media img{filter:brightness(.98) saturate(.98)}
+.gs-close-media video{filter:brightness(1.10) saturate(1.04);opacity:0;transition:opacity 1s ease}
+.gs-close-media video.wc-playing{opacity:.94}
+.gs-close-shade{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(5,6,9,.78),rgba(5,6,9,.54) 48%,rgba(5,6,9,.55)),linear-gradient(0deg,rgba(5,6,9,.63),transparent 50%)}
+.gs-close-copy{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.gs-close-copy h2{color:#fff;text-shadow:0 4px 35px #000d}
+.gs-close-copy h2 em{color:#dddfe4}
+.gs-close-copy p{color:#eef0f5;font-size:clamp(16px,1.5vw,21px);text-shadow:0 2px 18px #000d}
+.gs-close-copy .kicker{color:#e9ecf2;text-shadow:0 2px 15px #000}
+.gs-close-copy .actions{justify-content:center}
+.gs-close-copy .btn.alt{background:rgba(4,5,9,.65);backdrop-filter:blur(8px)}
+@media(max-width:800px){.gs-close-cinema{min-height:720px;padding:96px 0}.gs-close-media img,.gs-close-media video{object-position:56% center}.gs-close-shade{background:linear-gradient(0deg,rgba(5,6,9,.90),rgba(5,6,9,.66) 54%,rgba(5,6,9,.32))}.gs-close-copy h2{font-size:clamp(58px,11vw,95px)}}
+@media(max-width:480px){.gs-close-cinema{min-height:790px}.gs-close-copy h2{font-size:clamp(52px,13.8vw,76px)}.gs-close-copy .actions{width:100%}.gs-close-copy .btn{width:100%}}
+@media(prefers-reduced-motion:reduce){.gs-close-media video{display:none!important}.gs-close-media img{filter:brightness(.85)}}
 </style>
 <!-- WINF social / previews oficiais e URLs canônicas sem parâmetros -->
 
@@ -579,5 +598,10 @@
 <figure class="film"><div class="film-visual"><div class="film-still" aria-hidden="true"><img src="/aerocore/assets/ghost-symbol.png" alt=""><strong>PESSOAS. PROCESSO. PRECISÃO.</strong></div><img class="film-poster" src="/media/ecossistema/ghost-shop-operation.webp" alt="Equipe de expedição GHOST SHOP" loading="lazy" onerror="this.hidden=true"><video class="film-video" data-winf-cinema autoplay muted loop playsinline preload="none" poster="/media/ecossistema/ghost-shop-operation.webp" aria-label="Equipe GHOST SHOP preparando os produtos da rede"><source data-src="/media/ecossistema/ghost-shop-team.mp4" type="video/mp4"></video></div><figcaption>03 / EQUIPE & PREPARAÇÃO <span>WINF MEMBERS</span></figcaption></figure>
 </div></div></section>
 <section class="section" id="imagens-da-campanha"><div class="w"><div class="section-head"><div><span class="kicker">03 / CAMPANHA ORIGINAL GHOST SHOP™</span><h2>AS IMAGENS<br><em>DA NOSSA MARCA.</em></h2></div><p>Fotografias criadas para a apresentação GHOST SHOP™. Produtos, películas, cerâmicos e operação da marca — sem imagens emprestadas de outras linhas do ecossistema.</p></div><div class="campaign-images"><figure class="campaign-image"><img class="campaign-photo" onerror="this.style.opacity='0';this.setAttribute('aria-hidden','true')" src="/media/ecossistema/ghost-shop-products.webp" alt="Campanha de produtos GHOST SHOP: películas, PPF, cerâmicos e acessórios" loading="lazy" decoding="async"><figcaption>01 / PRODUTOS, SUPRIMENTOS E PERFORMANCE</figcaption></figure><figure class="campaign-image"><img class="campaign-photo" onerror="this.style.opacity='0';this.setAttribute('aria-hidden','true')" src="/media/ecossistema/ghost-shop-operation.webp" alt="Equipe GHOST SHOP preparando produtos, películas e embalagens" loading="lazy" decoding="async"><figcaption>02 / OPERAÇÃO, PREPARAÇÃO E EXPERIÊNCIA</figcaption></figure></div><p class="campaign-note">Representações visuais da marca. Acesso a preços, pedidos e itens disponíveis apenas a membros autorizados WINF.</p></div></section>
-<section class="close"><div class="w"><span class="kicker">03 / OPEN THE EXPERIENCE</span><h2>VEJA O UNIVERSO.<br><em>DESCUBRA OS ITENS.</em></h2><p>A vitrine é uma degustação aberta. Para comprar ou solicitar, é necessário ser membro autorizado da WINF.</p><div class="actions"><a class="btn" href="/ghost-shop/vitrine/">ENTRAR NA VITRINE ↗</a><a class="btn alt" href="https://painel-os.winf.com.br/login/" target="_blank" rel="noopener noreferrer">SOU MEMBRO — WINF OS™ ↗</a><a class="btn alt" href="/partners/">CONHECER WINF PARTNERS™ ↗</a></div></div></section></main>
+<section class="close gs-close-cinema" aria-labelledby="gs-close-title">
+<div class="gs-close-media" aria-hidden="true">
+<img src="/media/ecossistema/ghost-shop-operation.webp" alt="" loading="lazy" decoding="async">
+<video data-winf-cinema autoplay muted loop playsinline preload="none" poster="/media/ecossistema/ghost-shop-operation.webp" tabindex="-1" aria-hidden="true"><source data-src="/media/ecossistema/ghost-shop-operation.mp4" type="video/mp4"></video>
+</div><div class="gs-close-shade" aria-hidden="true"></div>
+<div class="w gs-close-copy"><span class="kicker">04 / OPEN THE EXPERIENCE</span><h2 id="gs-close-title">VEJA O UNIVERSO.<br><em>DESCUBRA OS ITENS.</em></h2><p>A vitrine é uma degustação aberta. Para comprar ou solicitar, é necessário ser membro autorizado da WINF.</p><div class="actions"><a class="btn" href="/ghost-shop/vitrine/">ENTRAR NA VITRINE ↗</a><a class="btn alt" href="https://painel-os.winf.com.br/login/" target="_blank" rel="noopener noreferrer">SOU MEMBRO — WINF OS™ ↗</a><a class="btn alt" href="/partners/">CONHECER WINF PARTNERS™ ↗</a></div></div></section></main>
 <footer class="footer"><div class="w"><img src="/winf-logo.svg" alt="WINF™"><small>GHOST SHOP™ / WINF.inc® — NÃO É PARA TODOS.</small><a href="/maw/" style="font-size:11px">M.A.W.™ ↗</a></div></footer><script defer src="/js/winf-cinema.js?v=20261111-2"></script></body></html>
