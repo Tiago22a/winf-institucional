@@ -1,0 +1,58 @@
+name: Cuidar & Conectar — Publicar mídias originais
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'uploads/cuidar-conectar-media.zip'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: cuidar-conectar-media-main
+  cancel-in-progress: false
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Validar pacote de artes e vídeos específicos do Cuidar & Conectar
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import zipfile
+          archive=Path('uploads/cuidar-conectar-media.zip')
+          if not archive.is_file():
+              print('Nenhum ZIP pendente. Rotina encerrada.')
+              raise SystemExit(0)
+          required={f'media/ecossistema/cuidar-conectar-{name}.{ext}' for name in ('community','education') for ext in ('webp','mp4')}
+          with zipfile.ZipFile(archive) as bundle:
+              files=set(bundle.namelist())
+              assert files==required, f'Arquivos inesperados/faltantes: {files.symmetric_difference(required)}'
+              for name in sorted(required):
+                  file=bundle.getinfo(name)
+                  assert 4000<file.file_size<20000000, f'Tamanho inválido para {name}'
+                  raw=bundle.read(name)
+                  if name.endswith('.webp'):
+                      assert raw[:4]==b'RIFF' and raw[8:12]==b'WEBP', f'Formato WebP inválido: {name}'
+                  else:
+                      assert b'ftyp' in raw[:32],f'Formato MP4 inválido: {name}'
+                  path=Path(name)
+                  path.parent.mkdir(parents=True,exist_ok=True)
+                  path.write_bytes(raw)
+                  print('IMPORTADO',name,len(raw))
+          PY
+      - name: Versionar mídias originais e limpar o ZIP temporário
+        shell: bash
+        run: |
+          if [ ! -f uploads/cuidar-conectar-media.zip ]; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add media/ecossistema/cuidar-conectar-{community,education}.{mp4,webp}
+          git rm -- uploads/cuidar-conectar-media.zip
+          git commit -m "media(cuidar-conectar): publicar campanha original e filmes"
+          git pull --rebase origin main
+          git push origin HEAD:main
