@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="Ilustração conceitual de veículo sprinter; não é fotografia homologada">
+<defs><linearGradient id="room" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#141a23"/><stop offset=".52" stop-color="#0b0e13"/><stop offset="1" stop-color="#030405"/></linearGradient>
+<linearGradient id="paint" x1="0" y1="0" x2=".6" y2="1"><stop stop-color="#56636b"/><stop offset=".42" stop-color="#2d3940"/><stop offset=".86" stop-color="#18232a"/><stop offset="1" stop-color="#0a1117"/></linearGradient><linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0a1724"/><stop offset=".65" stop-color="#21364b"/><stop offset="1" stop-color="#070d16"/></linearGradient>
+<radialGradient id="spot"><stop stop-color="#d8fc45" stop-opacity=".2"/><stop offset="1" stop-color="#d8fc45" stop-opacity="0"/></radialGradient><filter id="shadow"><feGaussianBlur stdDeviation="19"/></filter></defs>
+<rect width="1200" height="675" fill="url(#room)"/><ellipse cx="600" cy="362" rx="550" ry="230" fill="url(#spot)"/><path d="M0 504H1200M0 558H1200M0 618H1200" stroke="#ced7e5" stroke-opacity=".1" stroke-width="2"/>
+<path d="M110 82H1090M110 117H1090" stroke="#eff3fa" stroke-opacity=".07" stroke-width="2"/><path d="M0 476H1200V675H0Z" fill="#0b0e13"/><ellipse cx="650" cy="418" rx="470" ry="58" fill="#000" opacity=".8" filter="url(#shadow)"/>
+<g transform="translate(0,34) scale(1 1.08)"><path d="M204 296L209 183Q216 148 257 137L801 137Q880 141 921 176L952 265L1067 281L1070 327Q1034 342 976 340L286 339Q223 332 205 319Z" fill="url(#paint)" stroke="#56636b" stroke-width="7" stroke-linejoin="round"/>
+<path d="M286 160L793 160Q852 161 881 192L893 245L280 245Z" fill="url(#glass)" stroke="#cbd6de" stroke-opacity=".34" stroke-width="4"/>
+<path d="M291 247H895" fill="none" stroke="#cedde9" stroke-opacity=".45" stroke-width="3"/>
+<path d="M270 285Q535 267 985 285" stroke="#fff" stroke-opacity=".2" stroke-width="3" fill="none"/>
+<path d="M252 324H1013" stroke="#e7fd4a" stroke-width="5" opacity=".67"/>
+<g><circle cx="342" cy="332" r="59" fill="#080c12" stroke="#5d676b" stroke-width="11"/><circle cx="342" cy="332" r="32" fill="#283138" stroke="#adbac3" stroke-width="5"/><circle cx="932" cy="332" r="59" fill="#080c12" stroke="#5d676b" stroke-width="11"/><circle cx="932" cy="332" r="32" fill="#283138" stroke="#adbac3" stroke-width="5"/></g>
+<path d="M207 301l26-15 24-3m756-2 38 7" stroke="#eff4f5" stroke-width="7" stroke-linecap="round" opacity=".8"/>
+</g>
+<path d="M153 520H1047" stroke="#d9fc45" stroke-width="3" opacity=".28"/>
+<circle cx="1123" cy="79" r="10" fill="#d9fc45" opacity=".78"/>
+</svg>
