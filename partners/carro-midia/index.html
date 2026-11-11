@@ -281,9 +281,68 @@ function saveFile(data,name,mime){var blob=data instanceof Blob?data:new Blob([d
 function slug(){return(state.licenseName||"licenciado").normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/gi,"-").toLowerCase().replace(/^-|-$/g,"").slice(0,35)}
 function loadImage(src){return new Promise(function(resolve,reject){var im=new Image();im.onload=function(){resolve(im)};im.onerror=reject;im.src=src})}
 function drawRound(ctx,x,y,w,h,r){r=Math.min(r,w/2,h/2);ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath()}
-async function exportCanvas(){var canvas=document.createElement("canvas");canvas.width=1600;canvas.height=900;var g=canvas.getContext("2d");g.fillStyle="#18191d";g.fillRect(0,0,1600,900);var imgSource=state.photos[state.current]||(["left","right"].includes(state.current)?demo:null);if(imgSource){var car=await loadImage(imgSource),ratio=Math.min(1600/car.width,900/car.height),iw=car.width*ratio,ih=car.height*ratio;g.save();if(!state.photos[state.current]&&state.current==="right"){g.translate(1600,0);g.scale(-1,1)}g.drawImage(car,(1600-iw)/2,(900-ih)/2,iw,ih);g.restore()}else{g.font="32px Arial";g.fillStyle="#ddd";g.textAlign="center";g.fillText("INSIRA A FOTO DESTA VISTA",800,450)}
+async function exportCanvas(){var canvas=document.createElement("canvas");canvas.width=1600;canvas.height=900;var g=canvas.getContext("2d");g.fillStyle="#18191d";g.fillRect(0,0,1600,900);var imgSource=currentImage();if(imgSource){var car=await loadImage(imgSource),ratio=Math.min(1600/car.width,900/car.height),iw=car.width*ratio,ih=car.height*ratio;g.save();if(!state.photos[state.current]&&state.current==="right"&&state.model==="bmw"){g.translate(1600,0);g.scale(-1,1)}g.drawImage(car,(1600-iw)/2,(900-ih)/2,iw,ih);g.restore()}else{g.font="32px Arial";g.fillStyle="#ddd";g.textAlign="center";g.fillText("INSIRA A FOTO DESTA VISTA",800,450)}
 for(var i=0;i<currentSlots().length;i++){var s=currentSlots()[i];if(s.visible===false)continue;var x=s.x*16,y=s.y*9,w=s.w*16,h=s.h*9;g.save();drawRound(g,x,y,w,h,4);g.fillStyle=s.type==="official"?"rgba(0,0,0,.80)":"rgba(8,8,10,.58)";g.fill();g.strokeStyle="#fff";g.lineWidth=s.type==="official"?2:1.5;if(s.type==="sponsor")g.setLineDash([9,6]);g.stroke();g.setLineDash([]);if(s.logo){try{var mark=await loadImage(s.logo),scale=Math.min((w-16)/mark.width,(h-12)/mark.height);g.drawImage(mark,x+(w-mark.width*scale)/2,y+(h-mark.height*scale)/2,mark.width*scale,mark.height*scale)}catch(e){}}else{g.fillStyle="#fff";g.textAlign="center";g.textBaseline="middle";g.font="bold "+Math.max(11,Math.min(28,h*.28,w/Math.max(5,s.name.length*.58)))+"px Arial";g.fillText(s.name,x+w/2,y+h/2,w-12)}g.restore()}
-g.textAlign="right";g.fillStyle="rgba(255,255,255,.75)";g.font="18px monospace";g.fillText("WINF PARTNERS™  /  CARRO MÍDIA",1555,860);return canvas}
+g.textAlign="right";g.fillStyle="rgba(255,255,255,.75)";g.font="18px monospace";g.fillText("MEDIACAR™ BY WINF PARTNERS™ / 08 / PRÉVIA COMERCIAL",1555,860);return canvas}
+function captureCurrentModel(){
+ if(!state.modelAssets||typeof state.modelAssets!=="object")state.modelAssets={};
+ state.modelAssets[state.model]={slots:state.slots,photos:state.photos,vehicle:state.vehicle};
+}
+function chooseModel(modelId){
+ if(!MC_MODELS[modelId]||modelId===state.model)return;
+ captureCurrentModel();
+ var chosenData=state.modelAssets[modelId];
+ state.model=modelId;
+ state.slots=chosenData&&chosenData.slots?chosenData.slots:makeSlots();
+ state.photos=chosenData&&chosenData.photos?chosenData.photos:blankPhotos();
+ state.vehicle=chosenData&&chosenData.vehicle?chosenData.vehicle:MC_MODELS[modelId].label;
+ state.current="left";state.selected="A2";
+ state=upgradeState(state);
+ $("vehicle").value=state.vehicle;
+ render();persist();toast("Veículo selecionado: "+MC_MODELS[modelId].label+".");
+}
+document.querySelectorAll("[data-mc-model]").forEach(function(button){
+ button.addEventListener("click",function(){chooseModel(button.dataset.mcModel);});
+});
+function refreshProjects(){
+ if(!db||!db.objectStoreNames.contains("projects"))return;
+ try{
+  var req=db.transaction("projects","readonly").objectStore("projects").getAll();
+  req.onsuccess=function(){
+   var select=$("mcSavedProjects"),remember=select.value;
+   select.replaceChildren();var initial=document.createElement("option");initial.value="";initial.textContent="Escolha um projeto salvo";select.appendChild(initial);
+   req.result.sort(function(a,b){return b.updated-a.updated}).forEach(function(p){
+    var o=document.createElement("option");o.value=p.id;o.textContent=(p.label||"Projeto MediaCar")+" · "+(p.city||"Sem território");select.appendChild(o);
+   });
+   if(req.result.some(function(p){return p.id===remember}))select.value=remember;
+  };
+ }catch(e){toast("Não foi possível listar os projetos locais.")}
+}
+$("mcSaveLocal").onclick=function(){
+ if(!db||!db.objectStoreNames.contains("projects")){toast("O armazenamento local não está disponível. Exporte o JSON.");return}
+ captureCurrentModel();
+ if(!state.projectId)state.projectId="mc-"+Date.now().toString(36)+"-"+Math.floor(Math.random()*100000).toString(36);
+ var label=(state.vehicle||"MediaCar")+" / "+(state.licenseName||"Licenciado");
+ var record={id:state.projectId,label:label,city:state.city||"",updated:Date.now(),data:JSON.parse(JSON.stringify(state))};
+ try{
+  var req=db.transaction("projects","readwrite").objectStore("projects").put(record,record.id);
+  req.onsuccess=function(){refreshProjects();toast("Projeto armazenado neste navegador: "+label);persist()};
+  req.onerror=function(){toast("Espaço insuficiente. Use Salvar projeto para exportar JSON.")};
+ }catch(e){toast("Não foi possível salvar localmente. Exporte um JSON.")}
+};
+$("mcLoadLocal").onclick=function(){
+ if(!db||!db.objectStoreNames.contains("projects"))return;
+ var id=$("mcSavedProjects").value;if(!id){toast("Escolha um projeto na lista.");return}
+ var req=db.transaction("projects","readonly").objectStore("projects").get(id);
+ req.onsuccess=function(){if(!req.result){toast("Projeto não encontrado.");return}state=upgradeState(req.result.data);state.projectId=id;["licenseName","city","vehicle"].forEach(function(k){$(k).value=state[k]||""});render();persist();toast("Projeto recuperado: "+req.result.label)};
+};
+$("mcDeleteLocal").onclick=function(){
+ if(!db||!db.objectStoreNames.contains("projects"))return;
+ var id=$("mcSavedProjects").value;if(!id){toast("Escolha um projeto para excluir.");return}
+ if(!confirm("Excluir este projeto salvo neste navegador? Exporte um JSON antes, se precisar dele."))return;
+ var req=db.transaction("projects","readwrite").objectStore("projects").delete(id);
+ req.onsuccess=function(){if(state.projectId===id)state.projectId=null;refreshProjects();toast("Projeto local excluído.")};
+};
 $("photoBtn").onclick=function(){$("photoInput").click()};
 $("photoInput").onchange=async function(e){var f=e.target.files&&e.target.files[0];if(!f)return;try{state.photos[state.current]=await compress(f,2200,"image/jpeg");renderStage();persist();toast("Foto adicionada à vista "+labels[state.current]+".")}catch(error){toast("Use JPG, PNG ou WEBP de um veículo.")}e.target.value=""};
 $("addSlot").onclick=function(){var id="N"+(state.next++);var slot={id:id,type:"sponsor",name:"NOVA COTA",x:35,y:53,w:19,h:12,status:"available",price:0,logo:null,visible:true};currentSlots().push(slot);state.selected=id;render();persist();toast("Nova cota criada. Arraste para posicionar.")};
