@@ -201,3 +201,19 @@ body.assets-missing .brand-card-media, body.assets-missing .article-cover { back
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .reveal, .reveal-group { opacity: 1; filter: none; transform: none; }
 }
+
+
+/* WINF | Acendimento suave das fotografias ao hover.
+   Exclui logomarcas, simbolos e SVGs de interface; respeita toque e movimento reduzido. */
+@media (hover:hover) and (pointer:fine) {
+  img:not([src*="logo"]):not([src*="mark"]):not([src*="symbol"]):not([class*="logo"]):not([class*="mark"]):not([class*="ghost"]):not([src$=".svg"]) {
+    transition:filter .42s ease,opacity .42s ease;
+  }
+  img:not([src*="logo"]):not([src*="mark"]):not([src*="symbol"]):not([class*="logo"]):not([class*="mark"]):not([class*="ghost"]):not([src$=".svg"]):hover,
+  :is(.brand-card,.product-card,.editorial,.gs-card,.gs-product,.portfolio-item,.gallery-item,.image-card,figure):hover img:not([src*="logo"]):not([src*="mark"]):not([src*="symbol"]):not([class*="logo"]):not([class*="mark"]):not([class*="ghost"]):not([src$=".svg"]) {
+    filter:brightness(1.2) contrast(1.04) !important;
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  img{transition-duration:0ms!important}
+}
