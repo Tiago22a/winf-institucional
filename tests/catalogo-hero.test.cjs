@@ -24,16 +24,23 @@ test("título geral é editorial, em caixa alta e com fonte institucional",()=>{
  assert.match(source,/#hero-title\.winf-catalog-hero-all\{\s*font-family:Gustavo,Impact,Arial,sans-serif!important/);
  assert.match(source,/font-weight:700!important/);
 });
-test("tipografia forte é restrita à aba geral, com breakpoint mobile",()=>{
- assert.match(source,/heading\.classList\.toggle\('winf-catalog-hero-all',cat==='all'\)/);
- assert.match(source,/getElementById\('catalog-hero'\)\?\.classList\.toggle\('is-universe',cat==='all'\)/);
+test("todas as abas compartilham a tipografia editorial da WINF, inclusive no celular",()=>{
+ assert.match(source,/heading\.classList\.add\('winf-catalog-hero-all'\)/);
+ assert.match(source,/getElementById\('catalog-hero'\)\?\.classList\.add\('is-universe'\)/);
  assert.match(source,/@media\(max-width:640px\)/);
  assert.match(source,/font-size:clamp\(29px,8vw,44px\)!important/);
  assert.match(source,/label: 'Divisão de Conforto Arquitetônico'/);
 });
 
-test("Ceramic Armoring usa imagem própria do produto, não referência genérica de Partners",()=>{
- assert.match(source,/<a href="\/aerocore\/ceramic-armoring\/"><img src="\/images\/ceramic-hero\.webp"/);
- assert.doesNotMatch(source,/src="\/partners\/media\/reference-detailing\.webp"/);
- assert.match(source,/id: 'ceramic-armoring',[\s\S]{0,300}image: '\/images\/ceramic-hero\.webp'/);
+test("troca as referências do Porsche na vitrine sem sobreposição textual no card Ceramic",()=>{
+ const section=source.match(/<div class="winf-catalog-paths">([\s\S]*?)<\/div>/)?.[0];
+ assert.ok(section,"Grade das quatro marcas existe");
+ assert.match(section,/<a href="\/aerocore\/"><img class="winf-card-aerocore-image" src="\/images\/ceramic-hero\.webp"/);
+ assert.match(section,/<a href="\/aerocore\/ceramic-armoring\/"><video class="winf-card-ceramic-video"/);
+ assert.match(section,/ceramic-armoring-detailing\.mp4/);
+ assert.doesNotMatch(section,/porsche-911-highway-20261103-poster\.webp/);
+ assert.doesNotMatch(section,/src="\/images\/ceramic-hero\.webp"[^>]*>[^<]*CERAMIC ARMORING/i);
+ assert.doesNotMatch(section,/reference-detailing\.webp/);
+ assert.match(section,/PROTEÇÃO CERÂMICA/);
+ assert.match(section,/CERAMIC ARMORING<sup>™<\/sup>/);
 });
