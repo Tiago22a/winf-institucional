@@ -121,6 +121,38 @@
 @media(max-width:650px){
  .top .brand img.maw-agency-mark{width:clamp(150px,40vw,183px)}
 }
+
+/* Marca M.A.W. — arranjo referenciado: Ghost acima de MAW e nome completo embaixo.
+   Preservar proporção vetorial; não comprimir como PNG ou limitar a 35px. */
+.top .top-in{min-height:104px;padding-block:8px}
+.top .brand{gap:clamp(9px,1.2vw,17px);flex:0 0 auto}
+.top .brand img.maw-agency-mark{
+  width:clamp(215px,17.5vw,242px);
+  height:auto;
+  max-height:none;
+  aspect-ratio:416 / 164;
+  object-fit:contain;
+  flex:0 0 auto;
+}
+.top .brand img.maw-parent-mark{
+  width:clamp(72px,6.8vw,90px);
+  height:auto;
+  max-height:none;
+  aspect-ratio:109 / 36;
+  object-fit:contain;
+}
+.top .brand .bar{height:35px}
+@media(max-width:900px){
+  .top .top-in{min-height:96px}
+  .top .brand img.maw-agency-mark{width:clamp(170px,24vw,216px)}
+  .top .brand img.maw-parent-mark{width:clamp(64px,9vw,83px)}
+}
+@media(max-width:650px){
+  .top .top-in{min-height:92px;padding-block:10px}
+  .top .brand img.maw-agency-mark{width:clamp(158px,43vw,189px)}
+  .top .brand img.maw-parent-mark{width:clamp(62px,16vw,75px)}
+  .top .brand .bar{height:27px}
+}
 </style>
 
 <!-- WINF social / previews oficiais e URLs canônicas sem parâmetros -->
@@ -1399,7 +1431,7 @@
 <body class="winf-page-maw">
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 <header class="top"><div class="wrap top-in">
-<a class="brand" href="/partners/" aria-label="M.A.W.™ — agência da WINF"><img class="maw-agency-mark" src="/maw/maw-mark-reference.svg?v=maw-subtitle-20261111" alt="MAW — Marketing Advanced Windowfilm" width="336" height="110"><span class="bar" aria-hidden="true"></span><img class="maw-parent-mark" src="/winf-logo.svg" alt="WINF™" width="85" height="29"></a>
+<a class="brand" href="/partners/" aria-label="M.A.W.™ — agência da WINF"><img class="maw-agency-mark" src="/maw/maw-mark-reference.svg?v=maw-stacked-20261111" alt="M.A.W. — Marketing Advanced Windowfilm, Ghost acima da marca" width="416" height="164"><span class="bar" aria-hidden="true"></span><img class="maw-parent-mark" src="/winf-logo.svg" alt="WINF™" width="85" height="29"></a>
 <nav class="nav" aria-label="Navegação M.A.W."><a href="#estrutura">O QUE FAZEMOS</a><a href="#motor">INTELIGÊNCIA ARTIFICIAL</a><a href="/partners/ecossistema/">ECOSSISTEMA</a><a class="nav-ig" href="https://www.instagram.com/maw.winf/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a></nav>
 </div></header>
 <main id="conteudo">
