@@ -29,7 +29,7 @@ test("A animação da BMW aparece dentro da abertura, atrás do título",()=>{
  assert.match(hero,/class="hero-media"/);
  assert.match(hero,/id="mediacar-title"/);
  assert.match(hero,/O CARRO<br>VIRA <em>MÍDIA\.<\/em>/);
- assert.ok(hero.indexOf('mediacar-bmw.mp4')<hero.indexOf('mediacar-title'));
+ assert.ok(hero.indexOf('mediacar-bmw.mp4')<hero.indexOf('id="mediacar-title"'));
  assert.match(html,/\.hero-media video\.wc-playing\{opacity:1\}/);
  assert.match(html,/@media\(prefers-reduced-motion:reduce\)/);
 });
