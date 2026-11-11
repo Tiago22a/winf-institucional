@@ -48,6 +48,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--sf-ice);outline-off
 .sf-hero-copy{max-width:920px}
 .sf-hero h1{font-size:clamp(95px,10.8vw,184px);margin:32px 0 19px;text-shadow:0 8px 65px #03030ca8;text-wrap:balance}
 .sf-hero h1 span{display:block}
+.sf-hero h1 .sf-line-tight{font-size:.73em;letter-spacing:-.025em}
 .sf-hero h1 .sf-accent-text,.sf-accent-text{color:#ffb3e2;background:linear-gradient(93deg,#ff8ec9 0%,#ffc2e5 39%,#93dafa 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .sf-hero-lead{max-width:610px;color:#f3eaf8;font-size:clamp(17px,1.54vw,22px);line-height:1.6;font-weight:600;margin:24px 0 0;text-shadow:0 3px 22px #05060f}
 .sf-hero-detail{max-width:590px;color:#bec2d4;font-size:14px;line-height:1.75;margin:17px 0 0}
@@ -120,7 +121,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--sf-ice);outline-off
 .sf-enter:after{content:"";position:absolute;z-index:1;inset:0;background:linear-gradient(90deg,#07081999,transparent 27%,transparent 73%,#070819a6)}
 .sf-enter-content{position:relative;z-index:2;padding-block:clamp(125px,13vw,190px)}
 .sf-enter h2{font-size:clamp(95px,11vw,175px);line-height:.87;margin:20px 0 28px;letter-spacing:0}
-.sf-enter h2 em{font-style:normal;color:#f6a5d8}
+.sf-enter h2 em{font-style:normal;color:#f6a5d8;font-size:.87em;letter-spacing:-.017em}
 .sf-enter p{font-size:clamp(16px,1.5vw,20px);color:#d8d3e6;max-width:540px;margin:0 auto}
 .sf-enter .sf-actions{justify-content:center}
 .sf-footer{background:#060711;border-top:1px solid #fff3}
@@ -211,8 +212,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--sf-ice);outline-off
  .sf-footer-bottom{display:block;padding-block:20px 26px;line-height:2}
 }
 @media(max-width:360px){
- .sf-hero h1{font-size:69px}
- .sf-enter h2{font-size:70px}
+ .sf-hero h1{font-size:62px}
+ .sf-enter h2{font-size:62px}
  .sf-wordmark-name{font-size:18px}
 }
 @media(prefers-reduced-motion:reduce){
