@@ -399,6 +399,29 @@ body.winf-catalog-page #hero-title.winf-catalog-hero-all span{
 .winf-catalog-paths small{font:650 9px/1.4 Inter,Arial,sans-serif;letter-spacing:.12em;color:#aab0b8}
 .winf-catalog-paths strong{font:500 clamp(17px,1.8vw,24px)/1.3 Inter,Arial,sans-serif;letter-spacing:-.025em}
 .winf-catalog-paths em{font:750 9px/1.4 Inter,Arial,sans-serif;letter-spacing:.1em;font-style:normal;color:#f2f2f2}
+
+/* Vitrine de marcas WINF™ — atalhos diretos, mídia limpa e cartões uniformes. */
+.winf-catalog-quicklinks{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:0 0 22px}
+.winf-catalog-quicklinks-label{font:700 10px/1.35 'JetBrains Mono',monospace;letter-spacing:.13em;color:#8e9299;margin-right:8px}
+.winf-catalog-quicklinks>a{display:inline-flex;justify-content:space-between;align-items:center;gap:14px;border:1px solid #ffffff36;background:#15171a;color:#f5f5f5;padding:10px 12px;font:700 10px/1.35 'JetBrains Mono',monospace;letter-spacing:.045em;text-decoration:none;transition:border-color .2s,background .2s,transform .2s}
+.winf-catalog-quicklinks>a:hover,.winf-catalog-quicklinks>a:focus-visible{border-color:#fff;background:#25272a;transform:translateY(-2px)}
+.winf-catalog-quicklinks>a>span{font-size:13px}
+.winf-catalog-paths>a{display:flex;flex-direction:column;min-width:0}
+.winf-catalog-paths>a> :is(img,video){height:auto;aspect-ratio:8/5;object-fit:cover;background:#111418;filter:brightness(.92);transition:filter .35s ease,transform .55s ease}
+.winf-catalog-paths>a:hover> :is(img,video){filter:brightness(1);transform:scale(1.015)}
+.winf-catalog-paths>a>span{flex:1 1 auto;min-height:128px;position:relative;z-index:1;background:#141518}
+.winf-catalog-paths>a>span>em{margin-top:auto}
+.winf-catalog-paths .winf-card-aerocore-image{object-position:50% 48%}
+.winf-catalog-paths .winf-card-ceramic-video{object-position:center center}
+@media(max-width:700px){
+ .winf-catalog-quicklinks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+ .winf-catalog-quicklinks-label{grid-column:1/-1}
+ .winf-catalog-quicklinks>a{font-size:9px;padding:10px 9px;gap:5px}
+ .winf-catalog-paths>a>span{min-height:115px;padding:12px}
+}
+@media(prefers-reduced-motion:reduce){
+ .winf-catalog-quicklinks>a,.winf-catalog-paths>a> :is(img,video){transition:none!important;transform:none!important}
+}
 .winf-catalog-members{font:400 12px/1.7 Inter,Arial,sans-serif;color:#afb1b7;margin-top:26px}
 .winf-catalog-members a{color:#fff;text-decoration:underline;text-underline-offset:4px}
 .winf-catalog-return:not([hidden]){display:flex;flex-wrap:wrap;gap:10px 19px;align-items:center;padding:14px 17px;margin-bottom:32px;border:1px solid #ffffff36;background:#16181b;font-size:12px}
@@ -965,11 +988,18 @@ body.winf-catalog-page #hero-title.winf-catalog-hero-all span{
       <p class="winf-catalog-eyebrow">CATÁLOGO COMPLETO / EXPLORE AS TECNOLOGIAS</p>
       <h2 id="winf-catalog-journeys-title">ESCOLHA A LINHA.<br><span>CONHEÇA O DETALHE.</span></h2>
       <p class="winf-catalog-intro">Explore os produtos e suas especificações. Para conhecer aplicações, imagens e benefícios em profundidade, visite a página oficial de cada marca.</p>
+      <nav class="winf-catalog-quicklinks" aria-label="Acesso direto aos sites oficiais das marcas">
+        <span class="winf-catalog-quicklinks-label">IR DIRETO À MARCA</span>
+        <a href="/aerocore/winf-select/">WINF SELECT <span aria-hidden="true">↗</span></a>
+        <a href="/aerocore/">AEROCORE <span aria-hidden="true">↗</span></a>
+        <a href="/aerocore/neoskin/">NEOSKIN <span aria-hidden="true">↗</span></a>
+        <a href="/aerocore/ceramic-armoring/">CERAMIC ARMORING <span aria-hidden="true">↗</span></a>
+      </nav>
       <div class="winf-catalog-paths">
         <a href="/aerocore/winf-select/"><img src="/images/invisible-poster-1.webp" alt="Ambiente envidraçado com iluminação natural, representando as películas arquitetônicas WINF Select™" loading="lazy"><span><small>ARQUITETURA / GLASS + HOME</small><span class="winf-mark winf-mark--select"><img src="/winf-logo.svg" alt="WINF™" width="94" height="31" loading="lazy" decoding="async"><span class="winf-mark-select-label">SELECT<sup>™</sup></span></span><em>VER PÁGINA DA MARCA ↗</em></span></a>
-        <a href="/aerocore/"><img class="winf-card-aerocore-image" src="/images/ceramic-hero.webp" alt="Porsche da apresentação automotiva AeroCore™" loading="lazy" decoding="async"><span><small>PELÍCULAS AUTOMOTIVAS</small><span class="winf-mark winf-mark--aerocore">AEROCORE<sup>™</sup></span><em>VER PÁGINA DA MARCA ↗</em></span></a>
+        <a href="/aerocore/"><img class="winf-card-aerocore-image" src="/images/catalogo/aerocore-porsche-clean.webp" alt="Porsche branco com películas automotivas AeroCore™, sem inscrições sobre a imagem" loading="lazy" decoding="async" width="560" height="350"><span><small>PELÍCULAS AUTOMOTIVAS</small><span class="winf-mark winf-mark--aerocore">AEROCORE<sup>™</sup></span><em>VER PÁGINA DA MARCA ↗</em></span></a>
         <a href="/aerocore/neoskin/"><img src="/aerocore/public/neoskin-hero-20261105.webp" alt="Automóvel com visualização ilustrativa de proteção de pintura NeoSkin™ PPF" loading="lazy"><span><small>PROTEÇÃO PPF</small><span class="winf-mark winf-mark--neoskin">NEOSKIN<sup>™</sup></span><em>VER PÁGINA DA MARCA ↗</em></span></a>
-        <a href="/aerocore/ceramic-armoring/"><img class="winf-card-ceramic-image" src="/images/ceramic-coating-surface.svg" alt="Superfície com gotas de água, ilustrando a proteção hidrofóbica Ceramic Armoring™" loading="lazy" decoding="async"><span><small>PROTEÇÃO CERÂMICA</small><span class="winf-mark winf-mark--ceramic">CERAMIC ARMORING<sup>™</sup></span><em>VER PÁGINA DA MARCA ↗</em></span></a>
+        <a href="/aerocore/ceramic-armoring/"><video class="winf-card-ceramic-video" muted loop playsinline preload="none" poster="/images/catalogo/ceramic-red-products.webp" aria-label="Vídeo de demonstração Ceramic Armoring™ com carro vermelho e frascos de proteção" width="560" height="350"><source data-src="/aerocore/assets/ceramic-armoring-detailing.mp4" type="video/mp4"></video><span><small>PROTEÇÃO CERÂMICA</small><span class="winf-mark winf-mark--ceramic">CERAMIC ARMORING<sup>™</sup></span><em>VER PÁGINA DA MARCA ↗</em></span></a>
       </div>
       <p class="winf-catalog-members">Produtos profissionais WINF são destinados ao atendimento pelas unidades e à rede autorizada. <a href="/ghost-shop/">GHOST SHOP™</a> é uma vitrine separada de acessórios e itens de marca, com compra reservada a membros.</p>
     </div>
@@ -1969,6 +1999,29 @@ function shareAll() {
             </div>
           </div>
         </footer>
+<script>
+/* Vídeo demonstrativo carregado apenas quando o usuário interage com o card.
+   A imagem de capa continua visível em mobile, economia de dados e movimento reduzido. */
+document.addEventListener('DOMContentLoaded',()=>{
+  const video=document.querySelector('.winf-card-ceramic-video');
+  if(!video)return;
+  const source=video.querySelector('source[data-src]');
+  if(!source)return;
+  const motionOK=()=>!window.matchMedia('(prefers-reduced-motion: reduce)').matches&&!navigator.connection?.saveData;
+  const play=()=>{
+    if(!motionOK())return;
+    if(!source.src){source.src=source.dataset.src;video.load();}
+    const pending=video.play();if(pending?.catch)pending.catch(()=>{});
+  };
+  const stop=()=>{video.pause();};
+  const card=video.closest('a');
+  card?.addEventListener('mouseenter',play);
+  card?.addEventListener('mouseleave',stop);
+  card?.addEventListener('focusin',play);
+  card?.addEventListener('focusout',stop);
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});
+});
+</script>
 </body>
 </html>
 
