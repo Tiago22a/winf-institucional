@@ -1,0 +1,43 @@
+/* WINF Cinematic Experience System • 2026-11-11 • progressive enhancement, no frameworks */
+.wc-section{background:#0b0c0f;color:#f5f6f7;border-block:1px solid #ffffff20;padding:clamp(38px,6vw,86px) max(18px,calc((100vw - 1260px)/2));font-family:Inter,Arial,sans-serif;overflow:hidden}
+.wc-section *, .wc-section *::before,.wc-section *::after{box-sizing:border-box}
+.wc-section a{color:inherit}
+.wc-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin:0 0 clamp(20px,3vw,36px)}
+.wc-head .wc-kicker{font-size:10px;font-weight:800;letter-spacing:.22em;color:#b9bbc1;margin:0 0 14px;text-transform:uppercase}
+.wc-head h2{font:400 clamp(38px,5.8vw,78px)/1.04 Anton,Impact,'Arial Narrow',sans-serif;letter-spacing:-.01em;text-transform:uppercase;margin:0}
+.wc-head h2 em{font-style:normal;color:#94979f}
+.wc-head>p{font-size:14px;color:#b9bdc7;line-height:1.8;max-width:390px;margin:0}
+.wc-film-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.wc-film-grid--one{grid-template-columns:1fr}
+.wc-film{position:relative;min-width:0;background:#15171b;border:1px solid #ffffff2d;overflow:hidden;margin:0}
+.wc-film-media{position:relative;aspect-ratio:16/9;overflow:hidden;background:#15181d;isolation:isolate}
+.wc-film-media:after{content:"";position:absolute;inset:0;z-index:3;background:linear-gradient(0deg,rgba(0,0,0,.36),transparent 46%);pointer-events:none}
+.wc-film-poster,.wc-film video{display:block;width:100%;height:100%;position:absolute;inset:0;object-fit:cover}
+.wc-film-poster{z-index:1;filter:saturate(.82);opacity:.95}
+.wc-film video{z-index:2;opacity:0;transition:opacity .5s ease;pointer-events:none;background:transparent}
+.wc-film video.wc-playing{opacity:1}
+.wc-film[data-wc-error] video{display:none}
+.wc-film-caption{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:19px 22px;min-height:77px;background:#0f1013}
+.wc-film-caption strong{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.wc-film-caption span{font-size:10px;color:#9fa3af;letter-spacing:.12em;text-align:right}
+.wc-brand-lockup{position:absolute;left:22px;top:18px;z-index:4;pointer-events:none;display:flex;align-items:center;gap:9px;text-shadow:0 2px 14px #000}
+.wc-brand-lockup img{width:31px;height:40px;object-fit:contain;filter:drop-shadow(0 1px 5px #0009)}
+.wc-brand-lockup span{font-size:10px;letter-spacing:.16em;font-weight:800;color:white}
+.wc-section--briefing{padding-top:0;padding-bottom:clamp(42px,7vw,88px);border-top:0;background:#131314}
+.wc-section--briefing .wc-film{border-color:#ffffff29;background:linear-gradient(135deg,#181a1f,#0e1013)}
+.wc-section--briefing .wc-film-media{aspect-ratio:16/6.8;background:linear-gradient(125deg,#171b22 0%,#0d1014 50%,#11161e 100%)}
+.wc-section--briefing .wc-film video{object-position:center 58%}
+.wc-section--briefing .wc-film-caption{background:#121316}
+.wc-no-media .wc-film-poster{filter:grayscale(.25)}
+.wc-link{display:inline-flex;align-items:center;min-height:46px;padding:10px 17px;border:1px solid #ffffff64;color:white;text-decoration:none;font:800 11px/1.5 Inter,sans-serif;letter-spacing:.07em;text-transform:uppercase}
+.wc-link:hover{background:white;color:black}
+.wc-actions{margin-top:25px;display:flex;gap:10px;flex-wrap:wrap}
+.wc-section--light{background:#ecebea;color:#141414}
+.wc-section--light .wc-head h2 em{color:#6d7179}
+.wc-section--light .wc-head p{color:#50545c}
+.wc-section--light .wc-film{border-color:#0000002b}
+.wc-section--light .wc-film-caption{background:#191a1d;color:white}
+.wc-section--light .wc-link{border-color:#111;color:#111}
+.wc-section--light .wc-link:hover{background:#111;color:white}
+@media(max-width:800px){.wc-head{display:block}.wc-head>p{margin-top:18px}.wc-film-grid{grid-template-columns:1fr}.wc-section--briefing .wc-film-media{aspect-ratio:16/9}.wc-film-caption{padding:15px;min-height:70px}.wc-film-caption strong{font-size:11px}.wc-film-caption span{font-size:9px}.wc-brand-lockup{left:12px;top:10px}}
+@media(prefers-reduced-motion:reduce){.wc-film video{display:none!important}.wc-film-poster{opacity:1}.wc-section *, .wc-section *::before,.wc-section *::after{transition:none!important}}
