@@ -1,0 +1,14 @@
+/* MediaCar™ Studio | modo cliente em janela independente, sem alterar layout V2 */
+.mc-client-dialog{border:1px solid #ffffff50;border-radius:14px;padding:0;background:#0d1116;color:#f4f6f8;width:min(1100px,calc(100vw - 22px));max-width:1100px;max-height:calc(100vh - 22px);box-shadow:0 25px 90px #000b}
+.mc-client-dialog::backdrop{background:#000d;backdrop-filter:blur(7px)}
+.mc-client-dialog-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:15px 18px;background:#171d24;border-bottom:1px solid #ffffff28}
+.mc-client-dialog-head strong{font-size:17px;font-weight:900;letter-spacing:-.02em}
+.mc-client-dialog-head strong em{font-style:normal;color:#d9fc45}
+.mc-client-dialog-note{font:11px/1.5 Arial,sans-serif;color:#b4bdc8;margin:0;padding:10px 18px;border-bottom:1px solid #ffffff24}
+.mc-client-dialog iframe{display:block;border:0;width:100%;height: min(72vh,820px);background:#10141b}
+.mc-client-dialog:focus{outline:2px solid #d9fc45;outline-offset:2px}
+.mc-client-dialog[open]{animation:mcClientIn .2s ease-out}
+@keyframes mcClientIn{from{opacity:.5;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:600px){.mc-client-dialog{margin:8px auto;max-height:calc(100dvh - 16px)}.mc-client-dialog-head{padding:10px 12px}.mc-client-dialog-head strong{font-size:13px}.mc-client-dialog iframe{height:72dvh}.mc-client-dialog-note{padding:9px 12px}}
+@media(prefers-reduced-motion:reduce){.mc-client-dialog[open]{animation:none}}
+@media print{.mc-client-dialog{display:none!important}}
