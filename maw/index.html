@@ -82,7 +82,7 @@
   width:clamp(180px,18.4vw,238px);
   height:auto;
   max-height:none;
-  aspect-ratio:336 / 97;
+  aspect-ratio:336 / 110;
   object-fit:contain;
   image-rendering:auto;
 }
@@ -108,6 +108,18 @@
   .brand{gap:clamp(7px,2vw,12px)}
   .brand .bar{height:23px}
   .hero-frame>img:first-child{object-position:56% center}
+}
+
+/* Assinatura M.A.W.™: respeita proporção do SVG e não comprime o subtítulo. */
+.top .brand img.maw-agency-mark{
+ width:clamp(195px,19vw,242px);
+ height:auto;
+ aspect-ratio:336/110;
+ max-height:none;
+ flex-shrink:0;
+}
+@media(max-width:650px){
+ .top .brand img.maw-agency-mark{width:clamp(150px,40vw,183px)}
 }
 </style>
 
@@ -1368,7 +1380,7 @@
 <body class="winf-page-maw">
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 <header class="top"><div class="wrap top-in">
-<a class="brand" href="/partners/" aria-label="M.A.W.™ — agência da WINF"><img class="maw-agency-mark" src="/maw/maw-mark-reference.svg" alt="MAW — Marketing Advanced Windowfilm" width="200" height="58"><span class="bar" aria-hidden="true"></span><img class="maw-parent-mark" src="/winf-logo.svg" alt="WINF™" width="85" height="29"></a>
+<a class="brand" href="/partners/" aria-label="M.A.W.™ — agência da WINF"><img class="maw-agency-mark" src="/maw/maw-mark-reference.svg?v=maw-subtitle-20261111" alt="MAW — Marketing Advanced Windowfilm" width="336" height="110"><span class="bar" aria-hidden="true"></span><img class="maw-parent-mark" src="/winf-logo.svg" alt="WINF™" width="85" height="29"></a>
 <nav class="nav" aria-label="Navegação M.A.W."><a href="#estrutura">O QUE FAZEMOS</a><a href="#motor">INTELIGÊNCIA ARTIFICIAL</a><a href="/partners/ecossistema/">ECOSSISTEMA</a><a class="nav-ig" href="https://www.instagram.com/maw.winf/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a></nav>
 </div></header>
 <main id="conteudo">
