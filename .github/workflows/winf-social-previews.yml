@@ -46,3 +46,39 @@ jobs:
             git commit -m "fix(previews): publish clean versioned cards for all WINF share links"
             git push origin HEAD:main
           fi
+      - name: Invalidar HTMLs de compartilhamento no Cloudflare
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+        run: |
+          python3 - <<'PY'
+          import json, os, time, urllib.request, urllib.error
+          report=json.load(open('docs/seo/winf-social-audit.json',encoding='utf-8'))
+          token=os.environ.get('CLOUDFLARE_API_TOKEN')
+          zone=os.environ.get('CLOUDFLARE_ZONE_ID')
+          if not token or not zone:
+              raise SystemExit('Cloudflare secrets ausentes: previews foram geradas, mas cache precisa de limpeza manual.')
+          urls=set()
+          for item in report['indexPages']:
+              route=item['route']
+              for host in ('https://www.winf.com.br','https://winf.com.br'):
+                  urls.add(host+route)
+                  urls.add(host+(route if route=='/' else route+'index.html'))
+          endpoint='https://api.cloudflare.com/client/v4/zones/'+zone+'/purge_cache'
+          urls=sorted(urls)
+          for start in range(0,len(urls),30):
+              batch=urls[start:start+30]
+              req=urllib.request.Request(endpoint,data=json.dumps({'files':batch}).encode(),method='POST',headers={'Authorization':'Bearer '+token,'Content-Type':'application/json'})
+              for retry in range(4):
+                  try:
+                      with urllib.request.urlopen(req,timeout=40) as resp: result=json.load(resp)
+                      if not result.get('success'): raise RuntimeError('Cloudflare API não confirmou purge')
+                      break
+                  except urllib.error.HTTPError as err:
+                      if err.code in (429,500,502,503,504) and retry<3:
+                          time.sleep(4*(retry+1))
+                          continue
+                      raise
+              print('Purge confirmado',start+1,'a',start+len(batch))
+          print('Previews atualizadas: ',len(report['indexPages']),'páginas; URLs invalidadas:',len(urls))
+          PY
