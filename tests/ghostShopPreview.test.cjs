@@ -6,19 +6,20 @@ const path=require('node:path');
 const root=path.join(__dirname,'..');
 const read=file=>fs.readFileSync(path.join(root,file),'utf8');
 const html=read('ghost-shop/index.html');
+const vitrine=read('ghost-shop/vitrine/index.html');
 const css=read('css/winf-ghost-shop.css');
 const login='https://painel-os.winf.com.br/login/';
 test('GHOST SHOP™ inclui 23 conceitos, sem preço ou checkout fictício',()=>{
- const cards=[...html.matchAll(/class="gs-product(?: gs-product--slice)?" data-category="[^"]+" href="([^"]+)"/g)];
+ const cards=[...vitrine.matchAll(/class="gs-product(?: gs-product--slice)?" data-category="[^"]+" href="([^"]+)"/g)];
  assert.equal(cards.length,23);
  for(const item of cards)assert.equal(item[1],login);
- assert.match(html,/VITRINE CONCEITUAL/);
- assert.match(html,/Sem preços/);
- assert.doesNotMatch(html,/R\$\s*[\d.,]+|data-price|add-to-cart|checkout\//i);
+ assert.match(vitrine,/VITRINE CONCEITUAL/);
+ assert.match(vitrine,/Sem preços/);
+ assert.doesNotMatch(vitrine,/R\$\s*[\d.,]+|data-price|add-to-cart|checkout\//i);
 });
 test('os 11 itens individuais de acervo e a prancha original usam imagens existentes',()=>{
  // Conta apenas os 11 itens de acervo; a nova capa cinematográfica não é produto.
- const urls=[...html.matchAll(/<span class="gs-product-visual"><img src="(\/images\/shop\/blackshop%20\(\d+\)\.webp)"/g)].map(x=>x[1]);
+ const urls=[...vitrine.matchAll(/<span class="gs-product-visual"><img src="(\/images\/shop\/blackshop%20\(\d+\)\.webp)"/g)].map(x=>x[1]);
  assert.equal(urls.length,11);
  assert.equal(new Set(urls).size,11);
  for(const url of urls){
@@ -27,7 +28,7 @@ test('os 11 itens individuais de acervo e a prancha original usam imagens existe
  }
 });
 test('fotografia número 1 foi dividida em 12 quadrados independentes sem mostrar a montagem completa',()=>{
- const coords=[...html.matchAll(/gs-mosaic-crop--c([0-3])-r([0-2])/g)].map(x=>x[1]+','+x[2]);
+ const coords=[...vitrine.matchAll(/gs-mosaic-crop--c([0-3])-r([0-2])/g)].map(x=>x[1]+','+x[2]);
  assert.equal(coords.length,12);
  assert.equal(new Set(coords).size,12);
  assert.ok(fs.existsSync(path.join(root,'images/shop/blackshop (45).webp')));
@@ -47,10 +48,10 @@ test('catálogo oficial WINF inclui boutique como seção sem misturar o grid t�
  assert.ok(start>=0&&start<products);
 });
 test('filtros permitem navegação sem eliminar a rota de login',()=>{
- const js=html.match(/<script>\s*(\(\(\)=>\{[\s\S]*?\}\)\(\);)\s*<\/script>/)?.[1];
+ const js=vitrine.match(/<script>\s*(\(\(\)=>\{[\s\S]*?\}\)\(\);)\s*<\/script>/)?.[1];
  assert.ok(js,'filtro JavaScript presente');
  assert.doesNotThrow(()=>new Function(js));
- for(const value of ['todos','vestuário','acessórios','objetos','colecionáveis'])assert.ok(html.includes('data-filter="'+value+'"'));
+ for(const value of ['todos','vestuário','acessórios','objetos','colecionáveis'])assert.ok(vitrine.includes('data-filter="'+value+'"'));
 });
 test('teasers e acesso à loja presentes nos principais sites e marcas',()=>{
  for(const file of ['index.html','aerocore/index.html','partners/index.html','aerocore/neoskin/index.html','aerocore/ceramic-armoring/index.html','aerocore/winf-select/index.html']){
@@ -82,4 +83,12 @@ test('GHOST SHOP™ aparece diretamente nos sete rodapés territoriais e no site
   assert.ok(!markup.includes('GHOST SHOP™ / EM IMPLANTAÇÃO'),cidade);
  }
  assert.match(read('sitemap.xml'),/<loc>https:\/\/winf\.com\.br\/ghost-shop\/<\/loc>/);
+});
+
+test('site institucional apresenta campanha original e CTA para vitrine reservada',()=>{
+ assert.match(html,/NÃƒO Ã‰ PARA TODOS|NÃƒO Ã‰ PARA TODOS|Não é para todos/i);
+ for(const name of ['ghost-shop-products.webp','ghost-shop-operation.webp','ghost-shop-products.mp4','ghost-shop-operation.mp4','ghost-shop-team.mp4'])assert.ok(html.includes(name),name);
+ assert.match(html,/href="\\/ghost-shop\\/vitrine\\/"/);
+ assert.match(html,/href="https:\\/\\/painel-os\\.winf\\.com\\.br\\/login\\/"/);
+ assert.doesNotMatch(html,/checkout\\/|add-to-cart/i);
 });
