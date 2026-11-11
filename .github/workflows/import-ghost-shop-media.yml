@@ -1,0 +1,62 @@
+name: GHOST SHOP — Publicar mídias originais
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'uploads/ghost-shop-media.zip'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: ghost-shop-media-publish
+  cancel-in-progress: false
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Importar as cinco mídias aprovadas (sem substituições)
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import sys,zipfile,pathlib
+          zippath=pathlib.Path('uploads/ghost-shop-media.zip')
+          if not zippath.exists():
+              print('Nenhum pacote pendente.')
+              sys.exit(0)
+          allowed={f'media/ecossistema/{n}' for n in (
+            'ghost-shop-products.webp',
+            'ghost-shop-operation.webp',
+            'ghost-shop-products.mp4',
+            'ghost-shop-operation.mp4',
+            'ghost-shop-team.mp4'
+          )}
+          with zipfile.ZipFile(zippath) as z:
+              names=set(z.namelist())
+              assert names==allowed, f'Pacote não corresponde às mídias: {names ^ allowed}'
+              for n in sorted(allowed):
+                  info=z.getinfo(n)
+                  assert 5000 < info.file_size < 25000000, f'Tamanho inválido: {n}'
+                  raw=z.read(n)
+                  if n.endswith('.webp'):
+                      assert raw[:4]==b'RIFF' and raw[8:12]==b'WEBP',f'WebP inválido: {n}'
+                  else:
+                      assert b'ftyp' in raw[:32], f'MP4 inválido: {n}'
+                  dest=pathlib.Path(n)
+                  dest.parent.mkdir(parents=True,exist_ok=True)
+                  dest.write_bytes(raw)
+                  print('PUBLICADO',n,len(raw))
+          PY
+      - name: Versionar os vídeos e pôsteres no repositório
+        shell: bash
+        run: |
+          if [ ! -f uploads/ghost-shop-media.zip ]; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add media/ecossistema/ghost-shop-{products,operation,team}.mp4 media/ecossistema/ghost-shop-{products,operation}.webp
+          git rm -- uploads/ghost-shop-media.zip
+          git commit -m "media(ghost-shop): publicar fotos e animações originais"
+          git push
