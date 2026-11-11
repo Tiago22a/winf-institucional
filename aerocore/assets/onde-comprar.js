@@ -78,14 +78,13 @@
     empty.hidden = matched.length + extraMatched.length !== 0;
     enquiry.hidden = mode !== 'territorios';
     const activeCount = matched.filter(item => item.status === 'ativa').length + extraMatched.length;
-    const pagesCount = matched.length + extraMatched.length;
     count.textContent = mode === 'ativas'
-      ? pagesCount + (pagesCount === 1 ? ' página regional publicada' : ' páginas regionais publicadas') + ' · ' + activeCount + (activeCount === 1 ? ' unidade operacional confirmada' : ' unidades operacionais confirmadas')
-      : matched.length + (matched.length === 1 ? ' território com ativação confirmada' : ' territórios com ativação confirmada');
+      ? activeCount + (activeCount === 1 ? ' unidade operacional confirmada' : ' unidades operacionais confirmadas')
+      : matched.length + (matched.length === 1 ? ' território em análise (sem ativação confirmada)' : ' territórios em análise (sem ativação confirmada)');
     const activeNotice = document.querySelector('.directory-active-toggle');
     if (activeNotice) activeNotice.hidden = mode !== 'ativas';
-    document.getElementById('directory-kicker').textContent = mode === 'ativas' ? 'LOCATOR WINF // PÁGINAS E UNIDADES' : 'WINF PARTNERS // CONSULTA DE EXPANSÃO';
-    document.getElementById('directory-title').textContent = mode === 'ativas' ? 'Páginas regionais e unidades operacionais' : 'Onde você quer começar?';
+    document.getElementById('directory-kicker').textContent = mode === 'ativas' ? 'LOCATOR WINF // OPERAÇÕES CONFIRMADAS' : 'WINF PARTNERS // PRÉ-ATIVAÇÃO E CONSULTA';
+    document.getElementById('directory-title').textContent = mode === 'ativas' ? 'Unidades com operação confirmada' : 'Cidades em pré-ativação e consulta';
     document.getElementById('directory-empty-title').textContent = mode === 'ativas' ? 'Vamos encontrar seu atendimento.' : 'Consulte a cidade que você tem em mente.';
     document.getElementById('directory-empty-copy').textContent = mode === 'ativas' ? 'Ainda não há páginas regionais cadastradas que correspondam à sua busca. Fale com a central para confirmar o atendimento na sua região.' : 'A lista de territórios disponíveis será exibida conforme as confirmações da equipe. Você também pode informar uma cidade abaixo e solicitar uma consulta.';
     const contact = document.getElementById('directory-empty-contact');
