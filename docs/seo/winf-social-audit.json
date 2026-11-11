@@ -39,7 +39,7 @@
     },
     {
       "route": "/aerocore/ceramic-armoring/",
-      "title": "Ceramic Armoring™ | Blindagem Molecular Absoluta",
+      "title": "Ceramic Armoring™ | Revestimentos Cerâmicos e Hidrofobia",
       "ogImage": "/images/og/winf-share-aerocore-ceramic-armoring-1200x630.jpg",
       "topic": "CERAMIC ARMORING™",
       "alt": "CUIDADO QUE SE PERCEBE."
@@ -332,6 +332,13 @@
       "alt": "M .A.W.™"
     },
     {
+      "route": "/mediacar/",
+      "title": "MediaCar™ | Mídia sobre rodas — WINF",
+      "ogImage": "/images/og/winf-share-mediacar-1200x630.jpg",
+      "topic": "WINF™",
+      "alt": "M EDIACAR™"
+    },
+    {
       "route": "/miniblind-venetian/",
       "title": "MINIBLIND &amp; VENETIAN™ — WINF™",
       "ogImage": "/images/og/winf-share-miniblind-venetian-1200x630.jpg",
@@ -465,11 +472,11 @@
       "alt": "SEGURANÇA EXIGE ESPECIFICAÇÃO."
     },
     {
-      "route": "/winf-home/",
-      "title": "WINF Home™ — Todas as Linhas WINF",
-      "ogImage": "/images/og/winf-share-winf-home-1200x630.jpg",
+      "route": "/synthwave/",
+      "title": "SYNTHWAVE.fm | Rádio e experiências sonoras WINF",
+      "ogImage": "/images/og/winf-share-synthwave-1200x630.jpg",
       "topic": "WINF™",
-      "alt": "ESCOLHA SUA LINHA. CONHEÇA A WINF."
+      "alt": "S YNTHWAVE.FM"
     }
   ],
   "excluded": [
@@ -503,6 +510,14 @@
     },
     {
       "route": "partners/carro-midia",
+      "reason": "noindex"
+    },
+    {
+      "route": "partners/universo-dark",
+      "reason": "noindex"
+    },
+    {
+      "route": "winf-home",
       "reason": "noindex"
     }
   ]
