@@ -1,0 +1,22 @@
+@font-face{font-family:Gustavo;src:url('/fonts/gustavo-regular.otf') format('opentype');font-display:swap}
+*{box-sizing:border-box}
+body{margin:0;background:#101112;color:#f7f7f7;font-family:Gustavo,system-ui,sans-serif;line-height:1.6}
+a{color:inherit;text-underline-offset:.22em}
+a:focus-visible{outline:2px solid #a6cffc;outline-offset:4px}
+.wrap{width:min(100% - 2.5rem,68rem);margin-inline:auto}
+header,footer{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;padding-block:1.15rem}
+header img{display:block}
+.hero{padding-block:clamp(4rem,12vw,9rem);background:linear-gradient(90deg,#101112 10%,#101112ad),url('/images/dualreflect-poster-2.webp') center/cover}
+h1,h2,p{margin-top:0}
+h1{max-width:16ch;font-size:clamp(2.5rem,7vw,5rem);line-height:1.03;margin-bottom:1.4rem}
+h2{font-size:clamp(1.5rem,4vw,2.4rem);line-height:1.16}
+p{max-width:64ch}
+.eyebrow{letter-spacing:.13em;text-transform:uppercase;font-size:.8rem}
+.hero nav{display:flex;flex-wrap:wrap;gap:.75rem}
+.button{display:inline-block;background:#f7f7f7;color:#111;padding:.75rem 1.1rem;text-decoration:none;font-weight:bold}
+.secondary{border:1px solid #bfc2c6;background:#18191b;color:#fff}
+.note{margin-top:1rem}
+.section{padding-block:2.5rem;border-bottom:1px solid #414245}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr));list-style:none;padding:0;gap:1rem}
+.products li{padding:1rem;border:1px solid #414245;background:#18191b}
+.products p{margin:0}

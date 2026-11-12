@@ -3,7 +3,10 @@
 (() => {
   const root = document.querySelector('.ac-directory');
   if (!root) return;
-  const source = Array.isArray(globalThis.WINF_CIDADES) ? globalThis.WINF_CIDADES : [];
+  const source = [
+    ...(globalThis.WINF_CIDADES || []),
+    ...(globalThis.WINF_PAGINAS_REGIONAIS || [])
+  ];
   // Demonstration records are never advertised as real units or available territories.
   const cities = source.filter(city => city && city.exemplo === false && ['ativa', 'pre_ativacao', 'nao_ativa'].includes(city.status));
   const extras = Array.isArray(globalThis.WINF_UNIDADES_EXTRAS) ? globalThis.WINF_UNIDADES_EXTRAS.filter(city => city && city.exemplo === false && city.status === 'ativa') : [];
