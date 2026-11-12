@@ -37,7 +37,7 @@ if(app && $("mcSyncPanel")){
     const slots={};
     for(const [id,v] of Object.entries(s.slots)){
       const n=Number(v.price)||0;
-      slots[id]={sponsor:String(v.sponsor||"").slice(0,80),priceCents:Math.round(n*100)};
+      slots[id]={sponsor:String(v.sponsor||"").slice(0,80),priceCents:Math.round(n*100),logo:typeof v.logo==="string"?v.logo:null};
     }
     return {territoryId,vehicleId:s.car,styleId:s.style,name:"MediaCar / "+s.territory,slots};
   }
@@ -80,10 +80,10 @@ if(app && $("mcSyncPanel")){
     const data=await request("GET","/campaigns/"+encodeURIComponent(id));
     if(!confirm("Abrir a campanha e substituir a simulação exibida?"))return;
     const slots={};for(const [key,v] of Object.entries(data.slots||{})){
-      slots[key]={sponsor:v.sponsor||"",price:(v.priceCents||0)/100};
+      slots[key]={sponsor:v.sponsor||"",price:(v.priceCents||0)/100,logo:v.logo||null};
     }
     app.set({territory:(data.name||"").replace(/^MediaCar \/ /,"")||data.territoryId,car:data.vehicleId,style:data.styleId,slots});
-    activeId=data.id;message("Campanha recuperada do Firestore. Arquivos de logomarca permanecem locais até integrar o Storage.");
+    activeId=data.id;message("Campanha e logomarcas recuperadas do Firestore.");
   }));
   $("mcSyncList").addEventListener("change",()=>{activeId=$("mcSyncList").value||null;});
   $("mcSyncApi").value=endpoint;
