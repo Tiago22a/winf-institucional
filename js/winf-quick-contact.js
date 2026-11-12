@@ -78,6 +78,10 @@
 
   function init() {
     if (document.getElementById('winf-quick-contact') || !document.body) return;
+    // Um único dock por página: respeitar widgets territoriais e de produto.
+    // Esses widgets podem estar no HTML inicial ou ter sido montados por outro script.
+    const nativeDock = document.querySelector('#ws-product-contact, #winf-global-dock, [data-winf-territory-dock], .winf-city-dock');
+    if (nativeDock) return;
     // Eliminar o dock legado quando HTML previamente em cache ainda estiver disponível.
     document.getElementById('winf-global-dock')?.remove();
     addStyle();
