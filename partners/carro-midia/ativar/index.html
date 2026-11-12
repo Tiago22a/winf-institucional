@@ -101,7 +101,16 @@ main{padding-top:36px}.heading{margin-bottom:23px}.panel{box-shadow:0 18px 55px 
       <div class="total full"><small>Receita prevista nas cotas preenchidas</small><strong id="sum">R$ 0</strong></div>
       <div class="buttons full"><button class="btn" id="save" type="button">Salvar projeto</button><button class="btn ghost" id="draft" type="button">Ver minuta</button></div>
       <div class="buttons full" style="margin-top:9px"><button class="btn ghost" id="export" type="button">Exportar projeto</button><button class="btn ghost" id="reset" type="button">Novo projeto</button></div>
-      <div id="status" class="status full" role="status"></div>
+      <div id="status" class="status full" role="status"></div><details id="mcSyncPanel" class="full" style="grid-column:1/-1;margin-top:18px;border-top:1px solid #343840;padding-top:16px">
+  <summary style="cursor:pointer;font-weight:650;padding:7px 0">Salvar e abrir na nuvem · WINF OS™</summary>
+  <p class="hint" style="margin:8px 0 14px">Acesso restrito a administradores autorizados. Nenhuma reserva, contrato ou pagamento é criado aqui.</p>
+  <div class="field"><label for="mcSyncApi">Endereço do backend WINF (HTTPS)</label><input id="mcSyncApi" type="url" placeholder="https://seu-backend.onrender.com" autocomplete="url"></div>
+  <div class="buttons"><button type="button" id="mcSyncConnect" class="btn ghost">Entrar com Google</button><button type="button" id="mcSyncSave" class="btn">Salvar na nuvem</button></div>
+  <p class="hint" style="margin:11px 0">Conta: <span id="mcSyncAccount">Não conectado</span></p>
+  <div class="field"><label for="mcSyncList">Campanhas do território informado acima</label><select id="mcSyncList"><option value="">Selecionar campanha salva</option></select></div>
+  <div class="buttons"><button type="button" id="mcSyncRefresh" class="btn ghost">Atualizar lista</button><button type="button" id="mcSyncLoad" class="btn ghost">Abrir campanha</button></div>
+  <p id="mcSyncStatus" class="hint" role="status" aria-live="polite" style="margin-top:12px"></p>
+ </details>
    </div></aside>
   </div>
 </main>
@@ -178,4 +187,10 @@ $("draft").addEventListener("click",()=>{
 $("closeContract").addEventListener("click",()=>{$("contract").classList.remove("visible");document.body.style.overflow="";});
 try{const saved=JSON.parse(localStorage.getItem(storageKey)||"null");if(saved&&saved.slots&&saved.car&&saved.style&&Object.keys(slotLabels).every(k=>saved.slots[k])){state={...empty(),...saved};setStatus("Projeto anterior recuperado deste navegador.");}}catch(_){}
 render();
-</script></body></html>
+window.MediaCarApp={
+ get:()=>{captureHeader();return JSON.parse(JSON.stringify(state));},
+ set:next=>{const base=empty();state={...base,...next,slots:{...base.slots,...(next.slots||{})}};selected="porta";render();}
+};
+</script>
+<script type="module" src="/js/mediacar-sync.js?v=20261112-1"></script>
+</body></html>
