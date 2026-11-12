@@ -8,8 +8,7 @@
     a.textContent = text;
     a.href = href;
     a.title = title;
-    a.rel = 'noopener noreferrer';
-    a.target = '_blank';
+    if (/^https?:\/\//.test(href)) { a.rel = 'noopener noreferrer'; a.target = '_blank'; }
     return a;
   }
   function ensureCredit() {
@@ -27,7 +26,7 @@
     divider.setAttribute('aria-hidden', 'true');
     host.replaceChildren(
       lead,
-      addLink('M.A.W.™', 'https://www.instagram.com/maw.partners/', 'M.A.W.™ — Marketing Advanced Windowfilm'),
+      addLink('M.A.W.™', '/maw/', 'Conheça a M.A.W.™ — Marketing Advanced Windowfilm'),
       divider,
       addLink('NEXA BLUE™', 'https://nexablue.com.br/', 'Nexa Blue — tecnologia e desenvolvimento')
     );
