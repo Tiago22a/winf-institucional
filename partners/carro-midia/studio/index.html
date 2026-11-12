@@ -1,525 +1,196 @@
 <!doctype html>
-<html lang="pt-BR">
-<head>
-<script>if(new URLSearchParams(location.search).get('embed')==='1')document.documentElement.classList.add('mc-embedded');</script>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#eef0f3">
-<meta name="robots" content="noindex,nofollow">
-<title>MediaCar™ — Simulador de Mídia em Veículos | M.A.W.™</title>
-<meta name="description" content="Simule a aplicação de marcas no carro do licenciado WINF, configure cotas de publicidade e gere uma apresentação visual.">
-<link rel="canonical" href="https://winf.com.br/partners/carro-midia/studio/">
-<link rel="icon" href="/winf-logo.svg">
-<link rel="stylesheet" href="/css/winf-footer-reference.css?v=20261103-reference-2">
-<link rel="stylesheet" href="/css/winf-signoff.css"><link rel="stylesheet" href="/css/mediacar-studio-v2.css?v=20261111-1">
-<link rel="stylesheet" href="/css/mediacar-client-preview.css?v=20261111-1"><link rel="stylesheet" href="/css/mediacar-premium.css?v=20261112-scroll-mobile-1">
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0a0b0e"><meta name="robots" content="index,follow"><meta name="description" content="Conheça o MediaCar WINF Partners e simule sua campanha de publicidade em veículos com cotas e marcas."><link rel="canonical" href="https://winf.com.br/partners/carro-midia/studio/">
+<title>MediaCar™ — Estúdio de campanhas | WINF Partners</title>
 <style>
-@font-face{font-family:Gustavo;src:url('/fonts/gustavo-bold.otf') format('opentype');font-display:swap;font-weight:700}
-@font-face{font-family:JetBrains;src:url('/fonts/jetbrains-mono-var.woff2') format('woff2');font-display:swap}
-:root{color-scheme:dark;--bg:#09090b;--panel:#141417;--stroke:#303034;--secondary:#a4a4ab;--soft:#777780;--white:#fff;--accent:#d9f99d}
-[hidden]{display:none!important}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:Arial,Helvetica,sans-serif;font-size:14px}button,input,select{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}input,select{max-width:100%;color:#fff;background:#1c1c20;border:1px solid #39393f;border-radius:7px;padding:12px;outline:0}input:focus,select:focus,button:focus-visible{outline:2px solid #ddd;outline-offset:2px}input[type=number]{appearance:textfield}input[type=checkbox]{accent-color:#f5f5f5}small{color:var(--secondary)}.mono{font-family:JetBrains,monospace;letter-spacing:.08em;text-transform:uppercase;font-size:10px}.shell{max-width:1540px;margin:0 auto;padding:0 clamp(16px,3.1vw,46px)}.topbar{border-bottom:1px solid #252528;background:rgba(9,9,11,.95)}.topbar .shell{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:baseline;gap:13px}.brand strong{font-family:Gustavo,Arial,sans-serif;font-size:29px;letter-spacing:-.11em;font-style:italic}.brand span{font-family:JetBrains,monospace;font-size:11px;letter-spacing:.18em}.back{border:1px solid #404045;color:#ddd;padding:11px 14px;border-radius:5px;white-space:nowrap}.back:hover{border-color:white}.hero{padding-top:46px;padding-bottom:35px;display:flex;justify-content:space-between;align-items:end;gap:30px}.eyebrow{display:flex;gap:9px;align-items:center;color:#b8b8bc}.dot{width:7px;height:7px;border-radius:50%;background:#e0e0e3;display:inline-block}.hero h1{font-family:Gustavo,Arial,sans-serif;text-transform:uppercase;font-size:clamp(31px,4.4vw,64px);letter-spacing:-.055em;line-height:1.06;margin:15px 0 12px}.hero h1 em{font-style:normal;color:#a6a6ad}.hero p{color:#b1b1b8;line-height:1.6;max-width:800px;font-size:15px;margin:0}.prototype{border:1px solid #444448;border-radius:99px;padding:9px 13px;color:#d0d0d5;white-space:nowrap}.layout{display:grid;grid-template-columns:minmax(0,1fr) 344px;gap:22px;align-items:start;padding-bottom:45px}.panel{background:var(--panel);border:1px solid #28282e;border-radius:12px;overflow:hidden}.panelhead{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:22px 23px;border-bottom:1px solid #2a2a2f}.panelhead h2{font-family:Gustavo,Arial,sans-serif;font-size:20px;letter-spacing:-.025em;margin:0}.stack{display:flex;flex-wrap:wrap;gap:9px}.btn{background:#f5f5f5;color:#111;border:1px solid #f5f5f5;padding:12px 14px;border-radius:7px;font-family:JetBrains,monospace;font-size:11px;font-weight:700;letter-spacing:.02em;min-height:42px}.btn:hover{background:#dcdce0}.btn.secondary{background:#1c1c20;color:#f2f2f2;border-color:#404044}.btn.secondary:hover{background:#29292f}.btn.danger{background:#2b171b;color:#ffbaba;border-color:#65353b}.btn.full{width:100%}.btn:disabled{opacity:.35;cursor:not-allowed}.views{padding:16px 18px 4px;display:flex;flex-wrap:wrap;gap:7px}.view{border:1px solid #35353a;background:#1b1b1f;color:#aaaab3;border-radius:5px;padding:10px 12px;min-height:39px;font-family:JetBrains,monospace;font-size:10px}.view.active{border-color:#f4f4f4;background:#ededed;color:#0a0a0b;font-weight:bold}.stage-wrap{padding:16px 18px}.stage{width:100%;aspect-ratio:16/9;background:radial-gradient(circle at 50% 60%,#313137,#17171b 70%);position:relative;overflow:hidden;border:1px solid #33333a;border-radius:9px;touch-action:none;user-select:none}.stage::after{content:"WINF PARTNERS™  /  CARRO MÍDIA";pointer-events:none;position:absolute;right:2.3%;bottom:2.5%;font-family:JetBrains,monospace;color:rgba(255,255,255,.45);font-size:clamp(6px,.8vw,11px);letter-spacing:.14em}.car-image{display:block;width:100%;height:100%;object-fit:contain;pointer-events:none}.photoempty{position:absolute;inset:0;display:grid;place-content:center;text-align:center;gap:15px;color:#adadb4;pointer-events:none;padding:20px}.photoempty b{color:white;font-size:18px}.zone{position:absolute;border:1.5px dashed rgba(255,255,255,.9);background:rgba(7,7,10,.52);border-radius:3px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-width:0;min-height:0;overflow:visible;cursor:grab;touch-action:none;user-select:none;text-align:center;padding:4px}.zone:active{cursor:grabbing}.zone.official{border-style:solid;background:rgba(8,8,10,.72)}.zone.active{outline:2px solid var(--accent);outline-offset:1px;z-index:5}.zone .zone-name{color:white;font-weight:800;font-family:Arial,sans-serif;letter-spacing:-.02em;font-size:clamp(7px,1vw,14px);max-width:95%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.zone .zone-meta{font-family:JetBrains,monospace;color:#dedee2;font-size:clamp(5px,.6vw,9px);line-height:1.3}.zone img{display:block;max-width:90%;max-height:75%;object-fit:contain;pointer-events:none}.zone .handle{position:absolute;right:-7px;bottom:-7px;width:17px;height:17px;border:2px solid #17171b;background:#fff;border-radius:4px;cursor:nwse-resize;touch-action:none}.zone:not(.active) .handle{display:none}.stage-note{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:2px 20px 20px;color:#9f9fa6;font-size:11px;line-height:1.6}.actions{display:flex;flex-wrap:wrap;gap:8px;padding:17px 19px;border-top:1px solid #29292e}.actions .btn{flex:1 0 auto}.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid #2a2a30}.metric{padding:18px 20px;border-right:1px solid #2a2a30}.metric:last-child{border-right:0}.metric small{display:block;font-family:JetBrains,monospace;text-transform:uppercase;font-size:9px;letter-spacing:.08em}.metric strong{display:block;margin-top:10px;font-size:clamp(18px,2vw,26px);letter-spacing:-.035em}.sidebar{display:flex;flex-direction:column;gap:18px}.editor-body{padding:18px 20px 21px}.field{display:flex;flex-direction:column;gap:7px;margin-bottom:14px}.field label{font-size:11px;color:#bbbcc4}.field input,.field select{width:100%}.aside-title{margin:0 0 16px;font-family:JetBrains,monospace;font-size:11px;letter-spacing:.11em;text-transform:uppercase}.hint{line-height:1.6;font-size:12px;color:#a6a6ad}.rule{height:1px;background:#333338;margin:21px 0}.fields2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.status-legend{display:flex;flex-wrap:wrap;gap:6px;padding:0 19px 18px}.pill{font-family:JetBrains,monospace;font-size:9px;text-transform:uppercase;border:1px solid #3d3d42;padding:6px 8px;border-radius:30px;color:#c8c8cc}.inventory{padding:0 19px 20px;display:grid;gap:8px}.inv{padding:10px 12px;border:1px solid #323239;border-radius:7px;background:#1c1c20;display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;color:inherit;text-align:left}.inv:hover,.inv.chosen{border-color:#e1e1e5}.inv b{font-size:12px}.inv small{font-size:10px}.inv .right{text-align:right;white-space:nowrap}.checkline{display:flex;align-items:center;gap:8px;color:#d5d5d8;font-size:12px;margin-bottom:15px}.checkline input{width:17px;height:17px}.notice{border-top:1px solid #25252a;margin-top:15px;padding-top:15px;color:#95959c;font-size:11px;line-height:1.7}.footnote{padding:25px 0 55px;color:#94949d;font-size:12px;line-height:1.6}.toast{position:fixed;right:18px;bottom:18px;max-width:360px;background:#f7f7f7;color:#171717;padding:14px 18px;border-radius:8px;z-index:90;box-shadow:0 15px 45px #0009;font-size:13px}.printheader{display:none}
-@media(max-width:1040px){.layout{grid-template-columns:1fr}.sidebar{display:grid;grid-template-columns:1fr 1fr;align-items:start}}.metrics .metric small{line-height:1.5}@media(max-width:660px){.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.metrics .metric:nth-child(2){border-right:0}.metrics .metric{border-bottom:1px solid #2a2a30}.topbar .shell{min-height:67px}.brand strong{font-size:23px}.brand span{font-size:9px}.back{font-size:11px;padding:9px}.hero{display:block;padding-top:35px}.prototype{display:inline-block;margin-top:15px}.layout{gap:14px}.sidebar{display:flex}.panelhead{padding:17px}.panelhead h2{font-size:18px}.views{padding:12px 12px 0}.view{padding:10px 9px;font-size:9px}.stage-wrap{padding:11px}.stage-note{padding:0 12px 12px}.actions{padding:13px}.actions .btn{flex:1 1 40%}.metrics .metric{padding:15px 9px}.metrics .metric strong{font-size:16px}.metrics .metric small{font-size:8px}.zone .zone-name{font-size:clamp(5px,1.65vw,10px)}.zone .zone-meta{font-size:5px}.zone .handle{width:14px;height:14px}.panelhead h2{max-width:220px}}@media print{body{color:#000;background:#fff}.topbar,.hero .prototype,.views,.actions,.sidebar,.stage-note,.footnote,.back,.wf-reference-footer{display:none!important}.hero{padding:5px 0 15px}.hero h1{font-size:30px}.hero p{color:#333}.layout{display:block}.panel{border:0;background:#fff}.panelhead{border:0;padding:10px 0}.panelhead button{display:none}.stage-wrap{padding:10px 0}.stage{border:1px solid #aaa;-webkit-print-color-adjust:exact;print-color-adjust:exact}.metrics{border:1px solid #ccc}.metric{border-color:#ccc}.metric small{color:#444}.printheader{display:block;font-size:12px;line-height:1.5;margin:15px 0;white-space:pre-line}.zone{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+:root{color-scheme:dark;--bg:#090a0d;--p:#13151a;--line:#292d34;--soft:#9a9ea8;--white:#f5f6f8;--accent:#e9eef5}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;font-size:14px}
+button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #afc8ff;outline-offset:3px}
+a{color:inherit;text-decoration:none}.shell{width:min(1150px,calc(100% - 36px));margin:auto}.top{height:76px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:15px}
+.brand{font-size:18px;font-weight:850;letter-spacing:-.07em}.brand em{font-style:normal;font-weight:400;color:var(--soft);letter-spacing:.01em}.back{color:var(--soft);font-size:12px}
+main{padding:49px 0 80px}.eyebrow{letter-spacing:.15em;font-size:10px;color:#a2a9b4;font-weight:700}.heading{display:flex;justify-content:space-between;align-items:end;gap:22px;margin:12px 0 32px}
+h1{font-size:clamp(32px,5vw,58px);line-height:1.02;letter-spacing:-.065em;margin:0 0 14px;font-weight:750}p{line-height:1.6;margin:0;color:var(--soft)}
+.heading p{max-width:570px}.tag{font-size:11px;border:1px solid var(--line);border-radius:100px;padding:9px 13px;color:#cbd0d7;white-space:nowrap}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 350px;gap:19px;align-items:start}.panel{background:var(--p);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.panelhead{padding:20px 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;align-items:center}
+.panelhead strong{font-size:13px}.panelhead small{font-size:11px;color:var(--soft)}
+.stage{padding:28px 22px 16px;background:radial-gradient(ellipse at 50% 55%,#252b35 0%,#171b22 50%,#11141a 100%)}
+.visual{position:relative;width:100%;aspect-ratio:2.25;max-height:335px;display:flex;align-items:center}
+.visual svg{width:100%;height:100%;overflow:visible}.zone{position:absolute;border:1px dashed rgba(255,255,255,.76);background:rgba(0,0,0,.28);border-radius:4px;color:#fff;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;gap:3px;padding:4px;overflow:hidden;box-shadow:inset 0 0 25px #0003;transition:.15s;z-index:2}
+.zone b{font-size:11px}.zone span{font-size:10px;opacity:.78}.zone.is-selected{border:2px solid #fff;background:rgba(75,107,157,.3)}.zone img{width:100%;height:100%;object-fit:contain;max-width:100%;max-height:100%}
+.zone[data-slot="porta"]{left:34%;top:48%;width:34%;height:23%}
+.zone[data-slot="frente"]{left:72%;top:52%;width:12%;height:16%}
+.zone[data-slot="traseira"]{left:16%;top:52%;width:13%;height:16%}
+.zone[data-slot="vidro"]{left:43%;top:29%;width:22%;height:12%}
+.stagefoot{display:flex;justify-content:space-between;color:#b2b7c0;font-size:11px;padding-top:9px;gap:10px}
+.legend{border-top:1px solid var(--line);padding:20px 22px;display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.slot{border:1px solid var(--line);border-radius:9px;padding:12px 7px;background:#181a20;text-align:center;color:#d6d9df}
+.slot.active{border-color:#e7ebf2;background:#2b303a}.slot b{display:block;font-size:12px}.slot small{display:block;color:#a8afba;font-size:10px;margin-top:4px}
+.steps{display:flex;gap:10px;align-items:center;margin-bottom:19px;font-size:11px;color:#9b9fa9}.steps b{color:#f4f4f4}
+.formbody{padding:20px}.field{display:grid;gap:7px;margin-bottom:15px}.field label{font-size:11px;color:#c8cbd3}
+input,select{width:100%;background:#1b1e24;border:1px solid #393d47;border-radius:8px;color:#f4f4f6;padding:12px;min-height:43px}
+input[type=file]{font-size:11px;padding:10px}.hint{font-size:11px;color:#a6abb5;line-height:1.5}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:11px}.divider{height:1px;background:var(--line);margin:20px 0}
+.btn{display:flex;justify-content:center;align-items:center;gap:8px;width:100%;min-height:45px;padding:11px 15px;border:1px solid #eee;border-radius:8px;background:#eff1f4;color:#141820;font-weight:750}
+.btn.ghost{background:#17191e;color:#eef0f5;border-color:#3b404a}.btn:disabled{opacity:.45;cursor:not-allowed}
+.buttons{display:grid;grid-template-columns:1fr 1fr;gap:9px}.total{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:17px 0}.total small{color:#aeb3bb}.total strong{font-size:23px;letter-spacing:-.04em}
+.notice{font-size:11px;color:#9fa5ae;line-height:1.65;padding:0 22px 20px}.status{margin-top:17px;color:#b9c6d8;font-size:12px;min-height:20px}
+.footer{border-top:1px solid var(--line);padding:24px 0;color:#878c96;font-size:11px;line-height:1.6}
+#contract{display:none}#contract.visible{display:block;position:fixed;inset:0;overflow:auto;background:#fff;color:#151515;z-index:50;padding:40px max(22px,calc((100vw - 750px)/2))}
+#contract h2{font-size:24px;line-height:1.3}#contract p,#contract li{color:#333;line-height:1.7}#contract .actions{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px}
+#contract .actions button{background:#161616;color:#fff;border:none;border-radius:6px;padding:12px 17px}#contract .document{padding:30px;border:1px solid #ddd}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.formbody{display:grid;grid-template-columns:1fr 1fr;gap:0 13px}.formbody .full,.formbody .divider,.formbody .total,.formbody .buttons,.formbody .status,.formbody .steps{grid-column:1/-1}}
+@media(max-width:560px){main{padding-top:30px}.heading{display:block}.heading .tag{display:inline-block;margin-top:16px}.legend{padding:13px;gap:5px}.slot{padding:10px 4px}.slot b{font-size:10px}.slot small{font-size:9px}.stage{padding:14px 8px 8px}.zone b{font-size:8px}.zone span{font-size:7px}.formbody{display:block;padding:16px}.panelhead{padding:16px}.two{grid-template-columns:1fr 1fr}#contract{padding:17px}#contract .document{padding:17px}}
+@media print{body>*:not(#contract){display:none!important}#contract{position:static!important;display:block!important;overflow:visible;padding:0!important}#contract .actions{display:none!important}#contract .document{border:0;padding:0}body{background:#fff;color:#111} @page{size:A4;margin:18mm}}
 
-/* MediaCar™ | UI editorial aprimorada sem mudar IDs, arquivos salvos ou mecânica do simulador */
-:root{--accent:#f2f2f4;--panel:#121419;--stroke:#353740}
-body{font-family:Inter,Arial,Helvetica,sans-serif;background:radial-gradient(ellipse at 50% -150px,#22252d 0%,#09090b 55%);line-height:1.5}
-.topbar{position:sticky;top:0;z-index:30;backdrop-filter:blur(18px);background:rgba(9,9,11,.87)}
-.brand{align-items:center;flex-wrap:wrap}.brand strong{font-family:Gustavo,Arial,sans-serif;font-size:clamp(22px,2.5vw,32px);font-style:normal;letter-spacing:-.055em}.brand span{color:#b7bac2}
-.hero{padding-top:clamp(42px,5vw,76px);padding-bottom:clamp(28px,4vw,54px)}.hero h1{max-width:960px;font-size:clamp(40px,5.1vw,78px);line-height:1.03}.hero p{max-width:680px;color:#c5c8cf}
-.prototype{border-color:#ffffff45;background:#ffffff0a;font-size:10px}
-.layout{grid-template-columns:minmax(0,1fr) minmax(315px,360px);gap:clamp(14px,2vw,28px)}
-.panel{background:linear-gradient(160deg,#17191e,#101115);border:1px solid #ffffff24;border-radius:13px;box-shadow:0 20px 55px #0003}
-.panelhead{background:#ffffff04;padding:20px 23px}.panelhead h2{font-size:clamp(18px,2vw,24px)}
-.stage{background:radial-gradient(ellipse at 50% 45%,#393c45,#16171d 76%);border-color:#ffffff45;border-radius:10px;box-shadow:inset 0 0 60px #0005}
-.stage-wrap{padding:17px 20px}.views{padding:17px 20px 0}
-.view{border-radius:6px;transition:background .2s,border-color .2s,color .2s}.view:hover:not(.active){color:white;border-color:#fff8}
-.btn{border-radius:6px;transition:background .2s,border-color .2s,transform .2s}.btn:hover:not(:disabled){transform:translateY(-1px)}.btn.secondary{background:#22242b}.btn.secondary:hover{background:#30333c}
-.editor-body{padding:21px 23px 25px}.field label{font-size:12px;font-weight:600;color:#d4d6dc}.field input,.field select{border-radius:7px;background:#0e1014;border-color:#484b55}.field input:focus,.field select:focus{border-color:#fff}
-.inv{border-radius:8px;transition:border-color .2s,background .2s}.inv:hover,.inv.chosen{background:#292b32}.zone.active{outline-color:#fff}
-.metric{background:#ffffff04}.metric strong{font-size:clamp(19px,2vw,29px)}.sidebar{gap:16px}
-@media(max-width:1040px){.layout{grid-template-columns:1fr}.sidebar{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:660px){.topbar{position:relative}.sidebar{display:flex}.hero h1{font-size:clamp(35px,8.6vw,53px)}.panelhead{flex-wrap:wrap}.panelhead #photoBtn{width:100%}.stage-wrap{padding:10px}.stage{aspect-ratio:4/3}.actions .btn{flex:1 1 45%}}
-@media(prefers-reduced-motion:reduce){.btn,.view,.inv{transition:none!important;transform:none!important}}
-
-.mediacar-story{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(25px,4vw,65px);align-items:center;padding:0 0 clamp(55px,7vw,100px);margin-top:14px}
-.mediacar-story-media{position:relative;min-height:clamp(370px,40vw,590px);overflow:hidden;background:#101216;border:1px solid #ffffff30}
-.mediacar-story-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.76) saturate(.95);transition:filter .55s,transform .8s}
-.mediacar-story-media:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#050608e8,transparent 60%);pointer-events:none}
-.mediacar-story-overlay{position:absolute;z-index:2;left:clamp(22px,3vw,45px);bottom:30px;right:18px}.mediacar-story-overlay span{display:block;font:700 10px JetBrains,monospace;letter-spacing:.15em;margin-bottom:13px}.mediacar-story-overlay strong{font:700 clamp(30px,3.4vw,50px)/1.08 Gustavo,Arial,sans-serif}
-.mediacar-story-copy .mono{color:#aeb2bb}.mediacar-story-copy h2{font:700 clamp(35px,3.8vw,60px)/1.08 Gustavo,Arial,sans-serif;letter-spacing:-.04em;margin:20px 0}.mediacar-story-copy h2 em{font-style:normal;color:#abb1bc}
-.mediacar-story-copy p{color:#c0c3cc;font-size:clamp(14px,1.15vw,17px);line-height:1.75}.mediacar-story-copy .btn{display:inline-block;margin-top:16px;text-decoration:none}
-#mediacar-simulador{scroll-margin-top:105px}
-@media(hover:hover){.mediacar-story-media:hover img{filter:brightness(1.02) saturate(1.07);transform:scale(1.035)}}
-@media(max-width:850px){.mediacar-story{grid-template-columns:1fr}.mediacar-story-media{min-height:350px}}
-@media(prefers-reduced-motion:reduce){.mediacar-story-media img{transition:none}}
-
-/* P1 — navegação guiada, sem alterar o mecanismo de cotas ou o IndexedDB. */
-.sim-guide{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0 0 20px}
-.sim-guide-item{display:grid;grid-template-columns:40px minmax(0,1fr);gap:12px;align-items:start;padding:19px 20px;border:1px solid #ffffff28;border-radius:9px;background:linear-gradient(145deg,#1b1d24,#101115)}
-.sim-guide-number{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;border:1px solid #ffffff69;color:#fff;font:700 11px JetBrains,monospace}
-.sim-guide-item strong{display:block;font:700 12px/1.5 JetBrains,monospace;letter-spacing:.05em;text-transform:uppercase}
-.sim-guide-item p{margin:6px 0 0;color:#c3c5ce;font-size:12px;line-height:1.55}
-.stage{touch-action:pan-y}/* No celular, tocar fora das cotas não bloqueia a rolagem. */
-.zone{touch-action:none}/* Apenas arrastar/redimensionar cotas captura o gesto. */
-@media(max-width:850px){.sim-guide{grid-template-columns:1fr}.sim-guide-item{padding:15px}}
-@media print{.sim-guide{display:none!important}}
-
-/* MediaCar embed inside the brand page — editor only, full-screen mode remains available */
-.mc-embedded body{background:#0d0f13!important}
-.mc-embedded :is(.topbar,.hero,.mediacar-story,.footnote,.wf-reference-footer,footer){display:none!important}
-.mc-embedded .shell{max-width:none;width:100%;padding:0!important}
-.mc-embedded .layout{padding:16px 14px 20px;margin:0;gap:16px}
-.mc-embedded .panel{box-shadow:none}
-@media(max-width:660px){.mc-embedded .layout{padding:10px 8px 15px}.mc-embedded .stage-wrap{padding:8px}}
-@media print{.mc-embedded :is(.topbar,.hero,.mediacar-story,.footnote,footer){display:none!important}}
-</style>
-<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"}}</script>
-</head>
-<body>
-<header class="topbar"><div class="shell">
-<a class="brand" href="/maw/" aria-label="M.A.W. — MediaCar"><strong>MEDIACAR™</strong><span>BY WINF PARTNERS™ · M.A.W.™</span></a>
-<a class="back mono" href="/mediacar/">← Voltar ao MediaCar™</a>
-</div></header>
-<div class="shell">
-
-<section id="mediacar-3d" class="mc3-app" aria-label="Configurador 3D MediaCar WINF">
-  <div class="mc3-header">
-    <div class="mc3-brand"><img src="/briefing/media/winf-logo-black-official.png" alt="WINF™ — From Brazil to the World"><i aria-hidden="true"></i><strong>MediaCar™</strong></div>
-    <div class="mc3-header-right"><span class="mc3-location">Santos / SP <small>· demonstração</small></span><a href="/partners/" aria-label="Sair do configurador" class="mc3-exit">Sair ↗</a></div>
-  </div>
-  <nav class="mc3-steps" aria-label="Etapas do configurador">
-    <button type="button" class="is-active" role="tab" aria-selected="true" data-mc3d-tab="vehicle"><span>01</span> Veículo</button>
-    <button type="button" role="tab" aria-selected="false" data-mc3d-tab="paint"><span>02</span> Personalização</button>
-    <button type="button" role="tab" aria-selected="false" data-mc3d-tab="ads"><span>03</span> Patrocinadores</button>
-    <button type="button" role="tab" aria-selected="false" data-mc3d-tab="project"><span>04</span> Projeto</button>
-  </nav>
-  <div class="mc3-scene">
-    <div class="mc3-intro"><div class="mc3-overline">MEDIACAR / CONFIGURADOR 3D</div><h1>Seu carro.<br><em>Sua mídia.</em></h1><p>Uma identidade pronta para rodar. Personalize o veículo e ocupe as cotas disponíveis.</p></div>
-    <div class="mc3-viewport" id="mc3dCanvas"><div class="mc-3d-placeholder" id="mc3dMessage">Preparando visualização 3D…</div></div>
-    <div class="mc3-orbit-actions" aria-label="Controles de visualização"><button type="button" id="mc3dTouchToggle" hidden aria-pressed="false">Girar veículo 360°</button><button type="button" id="mc3dZoomOut" aria-label="Afastar câmera">−</button><button type="button" id="mc3dZoomIn" aria-label="Aproximar câmera">+</button></div>
-    <div class="mc3-view-tools" aria-label="Ângulos da câmera">
-      <button type="button" data-mc3d-view="perspective" class="is-active" title="Vista 3/4">3/4</button>
-      <button type="button" data-mc3d-view="front" title="Frente">Frente</button>
-      <button type="button" data-mc3d-view="rear" title="Traseira">Trás</button>
-      <button type="button" data-mc3d-view="left" title="Lateral esquerda">Esq.</button>
-      <button type="button" data-mc3d-view="right" title="Lateral direita">Dir.</button>
-      <button type="button" data-mc3d-view="roof" title="Vista de cima">Teto</button>
-    </div>
-    <div class="mc3-scene-foot"><span>SHOWROOM 360° · ARRASTE PARA GIRAR · ROLE A PÁGINA NORMALMENTE</span><button type="button" id="mc3dReset" aria-label="Centralizar câmera" title="Centralizar câmera">⟲</button></div>
-  </div>
-  <div class="mc3-controls">
-    <div class="mc3-pane" data-mc3d-pane="vehicle" role="tabpanel">
-      <span class="mc3-pane-title">Escolha seu veículo</span>
-      <div class="mc3-choices mc3-models">
-        <button type="button" class="is-active" data-mc3d-model="coupe">01 · Esportivo</button>
-        <button type="button" data-mc3d-model="sedan">02 · Sedã</button>
-        <button type="button" data-mc3d-model="suv">03 · SUV</button>
-        <button type="button" data-mc3d-model="van">04 · Utilitário</button>
+/* MediaCar main experience — compact, confident and touch-friendly */
+:root{--bg:#0d0e11;--p:#17191e;--line:#31353c}
+main{padding-top:36px}.heading{margin-bottom:23px}.panel{box-shadow:0 18px 55px #0002}
+.stage{padding:18px 18px 12px;min-height:340px;background:linear-gradient(135deg,#dfe3e9,#aeb6c2);position:relative}
+.visual{aspect-ratio:2.15;min-height:270px}
+.visual>svg{filter:drop-shadow(0 18px 14px #29374633)}
+.zone{box-shadow:0 0 0 1px #fff4,inset 0 0 10px #0002;background:#16213265;backdrop-filter:blur(3px)}
+.zone.is-selected{border:2px solid #e6f4ff;background:#2059a582}
+.stagefoot{color:#4b5360}.slot{transition:border-color .15s,background .15s}.slot:focus-visible{outline:2px solid white}
+.mc-welcome{padding:16px 21px;border-bottom:1px solid var(--line);display:flex;gap:15px;align-items:center;justify-content:space-between}
+.mc-welcome strong{font-size:14px}.mc-welcome span{font-size:11px;color:#a2a9b2}
+.mc-advanced{display:inline-flex;gap:8px;align-items:center;padding:10px 13px;border-radius:9px;border:1px solid #424650;font-size:11px;color:#d3d8e0;white-space:nowrap}
+.mc-advanced:hover{background:#252a32}
+@media(max-width:560px){.stage{min-height:230px;padding:12px 8px}.visual{min-height:180px}.mc-welcome{flex-wrap:wrap}.mc-advanced{width:100%;justify-content:center}.heading p{font-size:13px}.stagefoot{font-size:9px;flex-wrap:wrap}}
+</style></head><body>
+<header class="top shell"><a class="brand" href="/partners/">WINF™ <em>/ PARTNERS</em></a><a class="back" href="/partners/carro-midia/studio/360/">Estúdio 360° ↗</a></header>
+<main class="shell">
+  <div class="eyebrow">MEDIACAR™ BY WINF PARTNERS™ · M.A.W.™</div>
+  <div class="heading"><div><h1>Um carro.<br>Várias marcas.</h1><p>Escolha um veículo, personalize as cotas e apresente sua campanha de 6 meses. Tudo em uma tela.</p></div><span class="tag">6 meses de publicidade</span></div>
+  <div class="layout">
+   <section class="panel"><div class="mc-welcome"><div><strong>Monte sua campanha</strong><span>Escolha uma cota e aplique a marca da empresa</span></div><a class="mc-advanced" href="/partners/carro-midia/studio/360/">Girar carro em 360° ↗</a></div><div class="panelhead"><strong>Prévia do veículo</strong><small id="carLabel">Jeep Compass · Esportivo</small></div>
+    <div class="stage"><div class="visual" id="visual">
+     <img id="vehiclePhoto" alt="Prévia do veículo escolhido" loading="eager" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:1;display:none" />
+     <svg viewBox="0 0 800 340" role="img" aria-label="Representação estilizada de um automóvel, para simulação visual">
+       <ellipse cx="397" cy="265" rx="345" ry="23" fill="#000" opacity=".32"/>
+       <path id="carShape" d="M54 225 L65 168 Q73 147 120 145 L188 137 L253 75 Q274 51 330 49 L536 49 Q575 50 613 107 L665 148 L740 166 Q768 172 769 207 L763 245 L52 245 Z" fill="#f0f2f5" stroke="#8996a9" stroke-width="4"/>
+       <path id="windows" d="M207 139 L268 82 Q286 66 332 66 L398 66 L398 142 Z M413 66 L531 66 Q555 68 587 120 L604 142 L413 142 Z" fill="#263a50" stroke="#8495aa" stroke-width="4"/>
+       <path d="M403 146 L403 241 M181 148 L181 239 M635 148 L635 242" stroke="#93a0af" stroke-width="3"/>
+       <path d="M452 159 L482 159 M249 159 L279 159" stroke="#5c697a" stroke-width="5" stroke-linecap="round"/>
+       <path id="stripe" d="M85 191 L743 191 L743 203 L83 203 Z" fill="#2563eb" opacity=".6"/>
+       <circle cx="194" cy="247" r="51" fill="#12151b" stroke="#5b6776" stroke-width="6"/><circle cx="194" cy="247" r="24" fill="#b7c1cd"/>
+       <circle cx="624" cy="247" r="51" fill="#12151b" stroke="#5b6776" stroke-width="6"/><circle cx="624" cy="247" r="24" fill="#b7c1cd"/>
+       <path d="M754 199 L768 201 L768 221 L747 221 Z" fill="#f1aab2"/>
+     </svg>
+     <button type="button" class="zone is-selected" data-slot="porta" aria-label="Selecionar cota portas"><b>01</b><span>Portas</span></button>
+     <button type="button" class="zone" data-slot="frente" aria-label="Selecionar cota dianteira"><b>02</b><span>Dianteira</span></button>
+     <button type="button" class="zone" data-slot="traseira" aria-label="Selecionar cota traseira"><b>03</b><span>Traseira</span></button>
+     <button type="button" class="zone" data-slot="vidro" aria-label="Selecionar cota superior"><b>04</b><span>Superior</span></button>
+    </div><div class="stagefoot"><span>Arraste o projeto no estúdio 360°. Aqui, preencha as cotas.</span><span>Prévia comercial · não é arte final</span></div></div>
+    <div class="legend" id="slotButtons"></div>
+    <p class="notice">Demonstração local. Para produção, a M.A.W.™ deverá validar o gabarito do veículo real. Reservas e contratos definitivos exigem integração ao WINF OS™.</p>
+   </section>
+   <aside class="panel"><div class="panelhead"><strong>Configurar campanha</strong><small>4 passos</small></div><div class="formbody">
+      <div class="steps"><b>01</b> Veículo <span>·</span> <b>02</b> Estilo <span>·</span> <b>03</b> Cota <span>·</span> <b>04</b> Salvar</div>
+      <div class="field"><label for="territory">Território / cidade</label><input id="territory" maxlength="65" placeholder="Ex.: Santos / SP"></div>
+      <div class="two">
+       <div class="field"><label for="car">Veículo</label><select id="car"><option value="hatch">01 · Compacto</option><option value="sedan">02 · Sedã</option><option value="suv">03 · SUV</option><option value="van">04 · Utilitário</option></select></div>
+       <div class="field"><label for="style">Estilo</label><select id="style"><option value="sport">Esportivo</option><option value="classic">Clássico</option><option value="dark">Black</option></select></div>
       </div>
-      <label class="mc3-visually-hidden">Modelo<select id="mc3dModel"><option value="coupe">Coupé</option><option value="sedan">Sedã</option><option value="suv">SUV</option><option value="van">Van</option></select></label>
-      <p class="mc3-hint" id="mc3dSource">Carregando o modelo detalhado. Se a conexão falhar, o configurador mantém o veículo conceitual.</p>
-    </div>
-    <div class="mc3-pane" data-mc3d-pane="paint" role="tabpanel" hidden>
-      <div class="mc3-settings-group"><span>Cor</span><div class="mc3-swatches">
-        <button type="button" data-mc3d-color="#101820" style="--swatch:#101820" aria-label="Preto" class="is-active"></button>
-        <button type="button" data-mc3d-color="#f0f1ec" style="--swatch:#f0f1ec" aria-label="Branco"></button>
-        <button type="button" data-mc3d-color="#a7adb4" style="--swatch:#a7adb4" aria-label="Cinza"></button>
-        <button type="button" data-mc3d-color="#153d6d" style="--swatch:#153d6d" aria-label="Azul"></button>
-        <button type="button" data-mc3d-color="#c41e3a" style="--swatch:#c41e3a" aria-label="Vermelho"></button>
-        <label class="mc3-custom-color" title="Escolher uma cor personalizada">+<input id="mc3dColor" type="color" value="#101820" aria-label="Cor personalizada"></label>
-      </div></div>
-      <div class="mc3-settings-group"><span>Vidros</span><div class="mc3-choices">
-        <button type="button" data-mc3d-tint="clear">Claro</button><button type="button" class="is-active" data-mc3d-tint="medium">Médio</button><button type="button" data-mc3d-tint="dark">Escuro</button>
-      </div></div>
-      <div class="mc3-settings-group"><span>Acabamento</span><div class="mc3-choices"><button type="button" class="is-active" data-mc3d-finish="gloss">Brilho</button><button type="button" data-mc3d-finish="matte">Fosco</button><button type="button" data-mc3d-finish="metallic">Metalizado</button></div><label class="mc3-visually-hidden">Acabamento<select id="mc3dFinish"><option value="gloss">Brilhante</option><option value="matte">Fosco</option><option value="metallic">Metálico</option></select></label></div>
-    </div>
-    <div class="mc3-pane" data-mc3d-pane="ads" role="tabpanel" hidden>
-      <div class="mc3-brand-line"><div><strong>Identidade WINF aplicada</strong><small>WINF™ · WINF Select™ · AeroCore™ · NeoSkin™ · 08</small></div><span class="mc3-applied">Padrão ativo</span></div>
-      <div class="mc3-sponsor-form">
-        <label>Área disponível<select id="mc3dSlotSelect"><option value="left">Lateral esquerda</option><option value="right">Lateral direita</option><option value="rear">Traseira</option><option value="roof">Teto</option></select></label>
-        <label>Patrocinador<input id="mc3dSponsorName" type="text" maxlength="60" placeholder="Nome da marca"></label>
-        <label class="mc3-upload">Logomarca PNG / WEBP<input id="mc3dSponsorFile" type="file" accept="image/png,image/webp"></label>
-        <button type="button" id="mc3dSponsorApply">Aplicar na cota</button>
-        <button type="button" id="mc3dSponsorRemove" class="mc3-light-btn">Liberar cota</button>
-      </div>
-      <div id="mc3dSlotList" class="mc3-slots" aria-live="polite">4 cotas disponíveis</div>
-      <label class="mc3-visually-hidden">Texto publicitário<input id="mc3dAdText" type="text" maxlength="22" value=""></label>
-      <button type="button" id="mc3dApplyAd" hidden>Aplicar texto</button><button type="button" id="mc3dClearAd" hidden>Remover texto</button>
-    </div>
-    <div class="mc3-pane" data-mc3d-pane="project" role="tabpanel" hidden>
-      <div class="mc3-brand-line"><div><strong>Seu projeto MediaCar™</strong><small>Campanha de 6 meses · Pré-venda com 3 meses de antecedência</small></div></div>
-      <div class="mc3-save-actions"><button type="button" id="mc3dSaveDevice">Salvar neste aparelho</button><button type="button" id="mc3dLoadDevice">Abrir projeto local</button><button type="button" id="mc3dCloudSave">Salvar na nuvem</button><button type="button" id="mc3dCloudLoad">Abrir da nuvem</button></div>
-      <p class="mc3-hint">Salvar neste aparelho funciona sem login. A nuvem exige autenticação Firebase e API habilitada.</p>
-    </div>
-    <div class="mc3-continue"><span id="mc3dStatus" role="status">Preparando configurador…</span><button type="button" id="mc3dNext">Continuar <span>→</span></button></div>
+      
+      <div class="divider"></div>
+      <div class="field"><label for="sponsor">Anunciante — <span id="slotName">Portas (01)</span></label><input id="sponsor" maxlength="60" placeholder="Nome da empresa"></div>
+      <div class="field"><label for="logo">Logomarca (PNG, JPG, WEBP)</label><input id="logo" type="file" accept="image/png,image/jpeg,image/webp"><div class="hint">Arquivo até 600 KB. A imagem é exibida apenas no seu navegador.</div></div>
+      <div class="field"><label for="quotaPrice">Valor total da cota pelos 6 meses (R$)</label><input id="quotaPrice" type="number" min="0" max="1000000" step="0.01" placeholder="Ex.: 900"></div>
+      <button class="btn ghost full" id="apply" type="button">Aplicar nesta cota</button>
+      <div class="total full"><small>Receita prevista nas cotas preenchidas</small><strong id="sum">R$ 0</strong></div>
+      <div class="buttons full"><button class="btn" id="save" type="button">Salvar projeto</button><button class="btn ghost" id="draft" type="button">Ver minuta</button></div>
+      <div class="buttons full" style="margin-top:9px"><button class="btn ghost" id="export" type="button">Exportar projeto</button><button class="btn ghost" id="reset" type="button">Novo projeto</button></div>
+      <div id="status" class="status full" role="status"></div><details id="mcSyncPanel" class="full" style="grid-column:1/-1;margin-top:18px;border-top:1px solid #343840;padding-top:16px">
+  <summary style="cursor:pointer;font-weight:650;padding:7px 0">Salvar e abrir na nuvem · WINF OS™</summary>
+  <p class="hint" style="margin:8px 0 14px">Acesso restrito a administradores autorizados. Nenhuma reserva, contrato ou pagamento é criado aqui.</p>
+  <div class="field"><label for="mcSyncApi">Endereço do backend WINF (HTTPS)</label><input id="mcSyncApi" type="url" placeholder="https://seu-backend.onrender.com" autocomplete="url"></div>
+  <div class="buttons"><button type="button" id="mcSyncConnect" class="btn ghost">Entrar com Google</button><button type="button" id="mcSyncSave" class="btn">Salvar na nuvem</button></div>
+  <p class="hint" style="margin:11px 0">Conta: <span id="mcSyncAccount">Não conectado</span></p>
+  <div class="field"><label for="mcSyncList">Campanhas do território informado acima</label><select id="mcSyncList"><option value="">Selecionar campanha salva</option></select></div>
+  <div class="buttons"><button type="button" id="mcSyncRefresh" class="btn ghost">Atualizar lista</button><button type="button" id="mcSyncLoad" class="btn ghost">Abrir campanha</button></div>
+  <p id="mcSyncStatus" class="hint" role="status" aria-live="polite" style="margin-top:12px"></p>
+ </details>
+   </div></aside>
   </div>
-</section>
-
-<details class="mc3-legacy"><summary>Editor clássico, propostas e biblioteca de projetos</summary>
-<section class="hero" aria-labelledby="title">
-<div><div class="eyebrow mono"><span class="dot"></span> M.A.W.™ / MÍDIA EM MOVIMENTO</div><h1 id="title">A CIDADE É A MÍDIA.<br><em>SEU CARRO É A TELA.</em></h1>
-<p>Transforme veículos em mídia local. Visualize cotas comerciais, posicione marcas nas diferentes vistas do carro e prepare uma proposta para potenciais anunciantes. Para operações WINF, preserve os espaços institucionais da marca.</p></div>
-<span class="prototype mono">STUDIO V2 · VERSÃO DEMONSTRATIVA</span>
-</section>
-<section class="mediacar-story" aria-labelledby="mediacar-story-title">
-<div class="mediacar-story-media"><img src="/media/ecossistema/mediacar-team.webp" loading="eager" fetchpriority="high" alt="Equipe WINF com BMW M4 personalizada para o MediaCar™ — mídia publicitária sobre rodas" width="1280" height="720" decoding="async"><div class="mediacar-story-overlay"><span>MEDIACAR™ / MEDIA IN MOTION</span><strong>UM VEÍCULO.<br>INÚMERAS CONEXÕES.</strong></div></div>
-<div class="mediacar-story-copy"><span class="mono">01 / O CONCEITO</span><h2 id="mediacar-story-title">O CARRO SE MOVE.<br><em>A MARCA ACOMPANHA.</em></h2><p>MediaCar™ transforma a mobilidade cotidiana em uma oportunidade de presença publicitária local. Cada veículo pode ser apresentado com espaços reservados para marcas e campanhas, de forma visual e personalizável.</p><p>Na experiência abaixo você escolhe a vista do carro, posiciona as cotas, insere artes, define valores e exporta uma proposta. É uma simulação: publicidade real exige aprovação das marcas, medidas e regras aplicáveis.</p><a class="btn" href="/partners/carro-midia/ativar/">ATIVAR MINHA CAMPANHA →</a></div></section>
-<section class="sim-guide" aria-label="Como utilizar o simulador MediaCar">
-<div class="sim-guide-item"><span class="sim-guide-number" aria-hidden="true">01</span><div><strong>Escolha uma vista e uma foto</strong><p>Escolha BMW M4, Porsche 911, Volvo EX90, Mustang, Sprinter ou o seu carro; depois selecione o ângulo.</p></div></div>
-<div class="sim-guide-item"><span class="sim-guide-number" aria-hidden="true">02</span><div><strong>Posicione e personalize as cotas</strong><p>As marcas WINF e o 08 ficam fixos. Arraste somente cotas comerciais e anexe os logos de anunciantes.</p></div></div>
-<div class="sim-guide-item"><span class="sim-guide-number" aria-hidden="true">03</span><div><strong>Exporte sua apresentação</strong><p>Salve o arquivo editável, exporte a imagem ou imprima a proposta em PDF antes de apresentar.</p></div></div>
-</section>
-<section class="mc-collection" aria-labelledby="mc-collection-title" id="colecao">
- <div class="mc-collection-head"><div><span class="mono">WINF PARTNERS™ / FROTA MEDIACAR™</span><h2 id="mc-collection-title">COLEÇÃO DE PROJETOS <span style="color:#d9fc45">08</span></h2></div><small>Selecione o veículo. O BMW tem base aprovada; os demais exibem conceitos visuais e pedem fotos ou renders próprios em cada vista. As cotas institucionais são protegidas.</small></div>
- <div class="mc-model-grid" role="group" aria-label="Escolher veículo para projeto">
- <button class="mc-model" type="button" data-mc-model="bmw" aria-pressed="true"><span class="mc-model-visual"><img src="/media/ecossistema/mediacar-bmw.webp" alt="BMW M4 personalizada MediaCar" loading="lazy"><span class="mc-08">08</span></span><span class="mc-model-title">BMW M4 / MEDIA CAR</span><span class="mc-model-sub">Imagem original MediaCar™ · vista editorial</span><span class="mc-model-state">BASE DISPONÍVEL</span></button>
- <button class="mc-model" type="button" data-mc-model="porsche" aria-pressed="false"><span class="mc-model-visual"><img src="/media/ecossistema/mediacar-porsche-911-concept.svg" loading="lazy" alt="Desenho de referência do Porsche 911 para a frota 08"><span class="mc-08">08</span></span><span class="mc-model-title">PORSCHE 911 / GT</span><span class="mc-model-sub">Conceito ilustrado · anexe vistas aprovadas</span><span class="mc-model-state">ANEXAR IMAGENS</span></button>
- <button class="mc-model" type="button" data-mc-model="volvo" aria-pressed="false"><span class="mc-model-visual"><img src="/media/ecossistema/mediacar-volvo-ex90-concept.svg" loading="lazy" alt="Desenho de referência do SUV elétrico Volvo EX90"><span class="mc-08">08</span></span><span class="mc-model-title">VOLVO EX90 / ELÉTRICO</span><span class="mc-model-sub">Conceito ilustrado · anexe vistas aprovadas</span><span class="mc-model-state">ANEXAR IMAGENS</span></button>
- <button class="mc-model" type="button" data-mc-model="mustang" aria-pressed="false"><span class="mc-model-visual"><img src="/media/ecossistema/mediacar-mustang-fastback-concept.svg" loading="lazy" alt="Desenho de referência de Mustang Fastback clássico"><span class="mc-08">08</span></span><span class="mc-model-title">MUSTANG FASTBACK / CLÁSSICO</span><span class="mc-model-sub">Conceito ilustrado · anexe vistas aprovadas</span><span class="mc-model-state">ANEXAR IMAGENS</span></button>
-<button class="mc-model" type="button" data-mc-model="sprinter" aria-pressed="false"><span class="mc-model-visual"><img src="/media/ecossistema/mediacar-sprinter-concept.svg" loading="lazy" alt="Desenho de referência de Sprinter para hub de mídia móvel"><span class="mc-08">08</span></span><span class="mc-model-title">SPRINTER / HUB MÓVEL</span><span class="mc-model-sub">Conceito ilustrado · anexe vistas aprovadas</span><span class="mc-model-state">ANEXAR IMAGENS</span></button>
-<button class="mc-model" type="button" data-mc-model="custom" aria-pressed="false"><span class="mc-model-visual"><em>+ VEÍCULO</em><span class="mc-08">08</span></span><span class="mc-model-title">CARRO DO LICENCIADO</span><span class="mc-model-sub">Envie suas fotos em cada ângulo</span><span class="mc-model-state">PERSONALIZADO</span></button>
- </div>
-</section>
-<section class="mc-prompt-library" id="mediacar-prompts" aria-labelledby="mc-prompt-title">
-  <div class="mc-prompt-head"><div><span class="mono">FROTA 08 / ESTÚDIO DE IMAGENS</span><h2 id="mc-prompt-title">PROMPTS PARA CADA CARRO E CADA ÂNGULO</h2><p>Gere cinco vistas coerentes e anexe as fotografias ou renders aprovados no simulador. As marcas WINF e as cotas são inseridas pelo aplicativo, não pela IA.</p></div><span class="mc-prompt-pill">6 MODELOS · 5 VISTAS</span></div>
-  <div class="mc-prompt-controls"><label>Modelo<select id="mcPromptModel" aria-label="Modelo para gerar prompt"></select></label><label>Vista<select id="mcPromptView" aria-label="Ângulo para gerar prompt"></select></label></div>
-  <label class="mc-prompt-label" for="mcPromptOutput">Briefing visual para o gerador de imagem</label>
-  <textarea id="mcPromptOutput" rows="8" readonly spellcheck="false" aria-label="Prompt detalhado para imagem automotiva"></textarea>
-  <div class="mc-prompt-actions"><button class="btn" type="button" id="mcPromptCopy">Copiar prompt</button><button class="btn secondary" type="button" id="mcPromptDownload">Baixar .TXT</button><a class="btn secondary" href="#mediacar-simulador">Enviar imagem no simulador ↓</a></div>
-  <p id="mcPromptNotice" class="mc-prompt-notice" aria-live="polite">Conceitos ilustrativos. Cada veículo precisa de imagens homologadas para apresentação comercial.</p>
-</section>
-<section class="mc-library" aria-label="Projetos do licenciado"><span class="mc-label">PROJETOS NO NAVEGADOR</span><select id="mcSavedProjects" aria-label="Projetos salvos no navegador"><option value="">Escolha um projeto salvo</option></select><button class="btn secondary" type="button" id="mcSaveLocal">Guardar projeto</button><button class="btn secondary" type="button" id="mcLoadLocal">Abrir</button><button class="btn danger" type="button" id="mcDeleteLocal">Excluir</button><span class="mc-library-help">Projetos são separados por identificador e salvos neste navegador. A sincronização remota opcional está disponível abaixo para administradores autenticados. Para transferir a outro dispositivo, use “Salvar projeto” (JSON).</span></section>
-<section class="mc-cloud" id="mediacar-nuvem" aria-label="Projetos MediaCar na nuvem">
-<h2>PROJETOS NA NUVEM <span class="mc-cloud-beta">ACESSO ADMINISTRATIVO</span></h2>
-<p>Conecte a API WINF e use sua sessão Firebase para salvar e abrir projetos em outros dispositivos. O armazenamento local e a exportação JSON continuam funcionando separadamente.</p>
-<div class="mc-cloud-fields"><label>URL da API WINF<input id="mcCloudApi" type="url" inputmode="url" placeholder="https://seu-backend.onrender.com" autocomplete="off"></label><label>Token temporário Firebase ID<input id="mcCloudToken" type="password" placeholder="Token de sessão autenticada" autocomplete="off" spellcheck="false"></label></div>
-<div class="mc-cloud-actions"><button type="button" class="btn secondary" id="mcCloudConnect">Testar conexão</button><button type="button" class="btn" id="mcCloudSave">Salvar na nuvem</button><button type="button" class="btn secondary" id="mcCloudRefresh">Atualizar lista</button><select id="mcCloudProjects" aria-label="Projetos na nuvem"><option value="">Selecione um projeto remoto</option></select><button type="button" class="btn secondary" id="mcCloudLoad">Abrir</button><button type="button" class="btn danger" id="mcCloudDelete">Excluir</button></div>
-<p id="mcCloudStatus" role="status" aria-live="polite">Aguardando conexão. Nunca envie credenciais por WhatsApp ou conversas.</p>
-</section>
-<main class="layout" id="mediacar-simulador">
-<section class="panel" aria-label="Área de simulação">
-<div class="panelhead"><h2>01 / SEU CARRO • NÚMERO 08</h2><button class="btn secondary" type="button" id="photoBtn">+ Inserir foto do carro</button><input type="file" id="photoInput" accept="image/jpeg,image/png,image/webp" hidden></div>
-<div class="views" id="viewTabs" role="group" aria-label="Vista do carro"></div>
-<div class="stage-wrap"><div class="stage" id="stage" aria-label="Prévia de aplicação de marcas no veículo"><img id="carImage" class="car-image" alt="Imagem do veículo para aplicação das cotas"><div id="emptyPhoto" class="photoempty" hidden><b>Adicione a foto desta vista</b><span>Use uma imagem frontal, lateral, traseira ou do teto.</span></div><div id="zones"></div></div></div>
-<div class="stage-note"><span>Arraste uma cota para posicionar. Use o quadrado branco para ajustar o tamanho.</span><span id="viewName" class="mono">LATERAL ESQUERDA</span></div>
-<div class="actions"><button class="btn secondary" id="addSlot">+ Nova cota comercial</button><button class="btn secondary" id="saveProject">Salvar projeto</button><button class="btn secondary" id="loadProject">Abrir projeto</button><input id="projectInput" type="file" accept=".json,application/json" hidden><button class="btn" id="exportJpg">Exportar imagem JPG</button><button class="btn secondary" id="printProposal">Imprimir / PDF</button><button class="btn" id="mcClientPreview" type="button">Visualizar como cliente</button><button class="btn secondary" id="mcClientExport" type="button">Baixar apresentação HTML</button></div>
-<div class="metrics"><div class="metric"><small>Cotas livres</small><strong id="freeCount">0</strong></div><div class="metric"><small>Potencial mensal</small><strong id="potential">R$ 0</strong></div><div class="metric"><small>Mensalidades vendidas</small><strong id="soldValue">R$ 0</strong></div><div class="metric"><small>Potencial em 6 meses</small><strong id="cycleValue">R$ 0</strong></div></div>
-<div id="printDetails" class="printheader"></div>
-</section>
-<aside class="sidebar">
-<section class="panel"><div class="panelhead"><h2>02 / IDENTIFICAÇÃO TERRITORIAL</h2></div><div class="editor-body">
-<div class="field"><label for="licenseName">Nome do licenciado / empresa</label><input id="licenseName" placeholder="Ex.: WINF Select — Santos"></div>
-<div class="fields2"><div class="field"><label for="city">Cidade / UF</label><input id="city" placeholder="Santos / SP"></div><div class="field"><label for="vehicle">Veículo</label><input id="vehicle" placeholder="Modelo / ano"></div></div>
-<p class="hint">Para vistas sem render cadastrado, anexe uma foto real do veículo no ângulo correto. Cada modelo possui suas próprias cotas.</p>
-</div></section>
-<section class="panel"><div class="panelhead"><h2>03 / EDITAR ESPAÇO</h2></div><div class="editor-body"><div id="slotEditor"></div></div></section>
-<section class="panel"><div class="panelhead"><h2>04 / COTAS E PATROCINADORES</h2></div><div class="status-legend"><span class="pill">Disponível</span><span class="pill">Reservada</span><span class="pill">Vendida</span></div><div class="inventory" id="inventory"></div>
-<div class="editor-body" style="padding-top:0"><button class="btn secondary full" id="copySummary">Copiar proposta comercial</button><div class="notice">O campo de valor representa a mensalidade proposta por cota, em um ciclo comercial de 6 meses. Os valores são definidos pelo licenciado e não representam tabela oficial WINF. Uma cota marcada como “vendida” é apenas um registro visual: esta versão não processa pagamentos nem confirma reservas.</div><div class="rule"></div><button class="btn danger full" id="resetProject">Reiniciar projeto</button></div></section>
-</aside></main>
-<div class="footnote"><span class="mono">MEDIACAR™ / BY WINF PARTNERS™ / NÚMERO OFICIAL 08</span><p>Simulação conceitual para licenciado autorizado. WINF™, AeroCore™, NeoSkin™, Ceramic Armoring™ e o numeral 08 permanecem fixos na arte de apresentação. Valide artes, dimensões, legislação local e autorizações antes da aplicação física. As imagens e marcas enviadas ficam no seu navegador, sem upload para um servidor neste protótipo.</p></div>
-</details>
-</div>
-<dialog id="mcClientDialog" class="mc-client-dialog" aria-label="Prévia de apresentação comercial MediaCar 08"><div class="mc-client-dialog-head"><strong>MEDIACAR™ <em>08</em> / VISÃO DO CLIENTE</strong><button class="btn secondary" type="button" id="mcClientClose">Fechar</button></div><p class="mc-client-dialog-note" id="mcPreviewNote">Apresentação estática do projeto atual.</p><iframe id="mcClientFrame" title="Apresentação comercial MediaCar para anunciantes" sandbox=""></iframe></dialog>
-<footer id="winf-global-footer" class="wf-reference-footer" aria-label="Rodapé do ecossistema WINF" data-footer-version="20261103-reference-2">
-<span id="privacy" aria-hidden="true"></span><span id="politica-de-privacidade" aria-hidden="true"></span>
-<div class="wf-ref-wrap">
-<a href="/aerocore/" class="wf-ref-brand" aria-label="AeroCore — página principal"><span>AEROCORE</span><sup>™</sup></a>
-<nav class="wf-ref-primary" aria-label="Ecossistema WINF">
-<a href="/aerocore/neoskin/">NEOSKIN™ PPF</a>
-<a href="/aerocore/aerocore/">AEROCORE™</a>
-<a href="/aerocore/ceramic-armoring/">CERAMIC ARMORING™</a>
-<a href="/partners/">WINF PARTNERS™</a>
-<a href="/aerocore/winf-select/">WINF SELECT™ ARQUITETURA</a>
-<a href="/catalogo/">CATÁLOGO 2026</a>
-<a href="/partners/universo-dark/">UNIVERSO DARK™</a>
-<a href="/synthwave/">SYNTHWAVE.fm</a>
-<a href="/blog/">WINF JOURNAL</a>
-</nav>
-<div class="wf-ref-countries" role="group" aria-label="Conexões globais: Brasil, Estados Unidos e China"><span><i class="wf-ref-dot-br" aria-hidden="true"></i>BR</span><span><i class="wf-ref-dot-us" aria-hidden="true"></i>US</span><span><i class="wf-ref-dot-cn" aria-hidden="true"></i>CN</span></div>
-<nav class="wf-ref-institutional" aria-label="Informações institucionais">
-<a href="/aerocore/policies/#certificacoes">Certificações</a>
-<a href="/aerocore/licenciamento/">Licenciamento</a>
-<a href="/aerocore/policies/#pd">P&amp;D</a>
-<a href="/aerocore/policies/#juridico">Jurídico</a>
-<a href="/aerocore/policies/#privacidade">Privacidade</a>
-<a href="/catalogo/">Catálogo</a>
-<a href="/aerocore/onde-comprar/">Contato</a>
-</nav>
-<div class="wf-ref-social" role="group" aria-label="Canais oficiais da AeroCore">
-<a href="https://www.instagram.com/aerocoreofc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram AeroCore"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-<span class="wf-ref-social-pending" role="img" aria-label="X AeroCore — link oficial pendente" title="X AeroCore — link oficial a confirmar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 3h4.5L20 21h-4.5L4 3Zm16 0L4 21"/></svg></span>
-<span class="wf-ref-social-pending" role="img" aria-label="YouTube AeroCore — link oficial pendente" title="YouTube AeroCore — link oficial a confirmar"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="5" fill="currentColor"/><path d="m10 8 6 4-6 4Z" fill="#000"/></svg></span>
-<a href="https://wa.me/5513981113001" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp oficial WINF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.7 7.7L3 21l1.5-4.9A8.5 8.5 0 1 1 20.5 11.6Z"/><path d="M8.2 7.4c.3-.3.7-.2.8.1l1 2c.1.3 0 .5-.5 1 .7 1.5 1.7 2.5 3.2 3.2.5-.5.7-.9 1-.8l2 .9c.4.2.4.5.2.9-.4.9-1.1 1.3-2 1.1-3.7-.8-6.6-3.7-7.1-6.5-.1-.8.5-1.6 1.4-1.9Z"/></svg></a>
-<span class="wf-ref-social-pending" role="img" aria-label="LinkedIn AeroCore — link oficial pendente" title="LinkedIn AeroCore — link oficial a confirmar"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="1.5" fill="currentColor"/><circle cx="7" cy="7" r="1.2" fill="#000"/><path d="M7 10v7m4-7v7m0-4a3 3 0 0 1 6 0v4" fill="none" stroke="#000" stroke-width="1.8"/></svg></span>
-</div>
-<div class="winf-footer-signoff">
-<p class="winf-footer-motto">Engenharia Invisível. Performance Inabalável.</p>
-<p class="winf-footer-credit"><span>Desenvolvido por</span> <a href="https://www.instagram.com/nexablue.agencia/" target="_blank" rel="noopener noreferrer" title="NEXA BLUE™ no Instagram">NEXA BLUE™</a><span aria-hidden="true">/</span><a href="https://www.instagram.com/maw.partners/" target="_blank" rel="noopener noreferrer" title="MAW™ — Marketing Advanced Windowfilm no Instagram">MAW™</a> <span class="winf-footer-maw-description">(Marketing Advanced Windowfilm)</span></p>
-<p class="winf-footer-legal">© <span data-current-year>2026</span>. Todos os direitos reservados. Marcas de terceiros pertencem aos respectivos titulares. <span aria-hidden="true">•</span> <a href="/aerocore/policies/#privacidade">Privacidade</a></p>
-</div>
-</div>
-</footer>
-<div id="toast" class="toast" role="status" hidden></div>
+</main>
+<footer class="footer"><div class="shell">WINF Partners™ · MediaCar™ · Prévia funcional local. Não registra vendas, pagamentos ou contratos oficiais. O fechamento comercial exige acesso autenticado e backend homologado.</div></footer>
+<section id="contract" aria-label="Minuta demonstrativa de publicidade"><div class="actions"><button id="closeContract" type="button">← Voltar</button><button type="button" onclick="window.print()">Imprimir / salvar PDF</button></div><div class="document" id="document"></div></section>
 <script>
-(function(){
 "use strict";
-var labels={left:"Lateral esquerda",right:"Lateral direita",front:"Frente",back:"Traseira",roof:"Teto"};
-var keys=Object.keys(labels);
-var demoSvg='<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675"><defs><linearGradient id="b" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#c8c8cc"/><stop offset=".45" stop-color="#909198"/><stop offset="1" stop-color="#52545b"/></linearGradient><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#49535c"/><stop offset="1" stop-color="#121820"/></linearGradient></defs><rect width="1200" height="675" fill="#18191d"/><path d="M0 565h1200" stroke="#44474d" stroke-width="2"/><ellipse cx="595" cy="575" rx="511" ry="33" fill="#000" opacity=".38"/><path d="M106 437c25-50 111-66 194-83l108-93c26-24 54-34 99-35h216c43 0 75 21 107 48l98 74 99 18c48 12 68 39 71 84l-8 75-82 18H173l-83-21-13-35c-7-20-5-42 29-50Z" fill="url(#b)" stroke="#d8d8dd" stroke-width="5"/><path d="m349 354 81-77c18-17 42-24 72-24h203c30 0 54 12 78 33l72 70Z" fill="url(#g)" stroke="#c5c8cc" stroke-width="4"/><path d="m577 257 1 98m201 0 22-61" stroke="#7f868f" stroke-width="5"/><path d="M343 359h514M571 360v159m240-160-9 135M141 449h888" fill="none" stroke="#555960" stroke-width="3"/><path d="M553 390h31m169 0h34" stroke="#ebeaed" stroke-width="9" stroke-linecap="round"/><path d="m106 448 62-2-27 26H88" fill="#f0f0e9"/><path d="m1040 431 50 16 8 29-74-13" fill="#e3e7e9"/><path d="M110 511h967" stroke="#393c42" stroke-width="6"/><circle cx="316" cy="526" r="91" fill="#0e0f12"/><circle cx="316" cy="526" r="61" fill="#858890" stroke="#b5b6bd" stroke-width="5"/><circle cx="316" cy="526" r="27" fill="#373a42"/><circle cx="887" cy="526" r="91" fill="#0e0f12"/><circle cx="887" cy="526" r="61" fill="#858890" stroke="#b5b6bd" stroke-width="5"/><circle cx="887" cy="526" r="27" fill="#373a42"/><path d="M78 511v17l106 15m818-7 88-15" stroke="#25272c" stroke-width="10"/><text x="600" y="118" text-anchor="middle" fill="#55575e" font-family="Arial" font-size="15" letter-spacing="9">DEMONSTRAÇÃO · ADICIONE SUA FOTO</text></svg>';
-var demo="data:image/svg+xml;charset=utf-8,"+encodeURIComponent(demoSvg);
-var $=function(id){return document.getElementById(id)};
-// WINF Partners™: número imutável 08 e marcas institucionais protegidas.
-var MC_MODELS={
- // Só a BMW possui fotografia institucional aprovada no momento.
- // Os outros veículos têm miniatura conceitual no card, nunca vista falsamente aprovada no simulador.
- bmw:{label:"BMW M4 / MediaCar",views:{left:"/media/ecossistema/mediacar-bmw.webp",right:"/media/ecossistema/mediacar-bmw.webp"}},
- porsche:{label:"Porsche 911 / GT",views:{}},
- volvo:{label:"Volvo EX90 / elétrico",views:{}},
- mustang:{label:"Mustang Fastback / clássico",views:{}},
- sprinter:{label:"Sprinter / hub móvel",views:{}},
- custom:{label:"Carro do licenciado",views:{}}
-};
-var MC_BRANDS=[
- {id:"W0",name:"WINF™",logo:"/media/brands/winf-logo-horizontal-official.png",x:34,y:61,w:16,h:9},
- {id:"W2",name:"AEROCORE™",x:37,y:77,w:15,h:8},
- {id:"W3",name:"NEOSKIN™",x:53,y:77,w:14,h:8},
- {id:"W4",name:"CERAMIC ARMORING™",x:68,y:77,w:21,h:8},
- {id:"WM",name:"MEDIACAR™",x:37,y:67,w:17,h:8},
- {id:"R08",name:"08",x:55,y:53,w:13,h:20}
-];
-function slotFactory(id,type,name,x,y,w,h){return{id:id,type:type,name:name,x:x,y:y,w:w,h:h,status:"available",price:0,logo:null,visible:true}}
-function mandatoryFor(view){
- var isSide=view==="left"||view==="right";
- return MC_BRANDS.map(function(o){
-  var base=isSide?o:{...o,x:Math.min(o.x+8,83),y:Math.min(o.y-8,83),w:Math.min(o.w,19)};
-  return{...slotFactory(o.id,"official",o.name,base.x,base.y,base.w,base.h),logo:o.logo||null,visible:true}
+const $=id=>document.getElementById(id);
+const slotLabels={porta:"Portas",frente:"Dianteira",traseira:"Traseira",vidro:"Superior"};
+const carLabels={hatch:"Compacto",sedan:"Sedã",suv:"SUV",van:"Utilitário"};
+const vehicleAssets={hatch:"/media/ecossistema/mediacar-porsche-911-concept.svg",sedan:"/media/ecossistema/mediacar-bmw.webp",suv:"/media/ecossistema/mediacar-volvo-ex90-concept.svg",van:"/media/ecossistema/mediacar-sprinter-concept.svg"};
+const styleLabels={sport:"Esportivo",classic:"Clássico",dark:"Black"};
+const storageKey="winf-mediacar-demo-v1";
+function empty(){return {territory:"",car:"sedan",customCar:"",style:"sport",slots:{porta:{},frente:{},traseira:{},vidro:{}}};}
+let state=empty(), selected="porta";
+const money=n=>new Intl.NumberFormat("pt-BR",{style:"currency",currency:"BRL"}).format(n||0);
+const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function setStatus(m){$("status").textContent=m;}
+function captureHeader(){state.territory=$("territory").value.trim();state.car=$("car").value;state.style=$("style").value;}
+function render(){
+ $("territory").value=state.territory||"";$("car").value=state.car;$("style").value=state.style;
+ 
+ const current=state.slots[selected]||{};
+ $("sponsor").value=current.sponsor||"";$("quotaPrice").value=current.price??"";
+ $("logo").value="";
+ $("slotName").textContent=slotLabels[selected]+" ("+(Object.keys(slotLabels).indexOf(selected)+1).toString().padStart(2,"0")+")";
+ $("carLabel").textContent=carLabels[state.car]+" · "+styleLabels[state.style];
+ const photo=$("vehiclePhoto");
+ const src=vehicleAssets[state.car];
+ if(photo.dataset.model!==state.car){
+   photo.style.display="none";
+   photo.dataset.model=state.car;
+   photo.onload=()=>{photo.style.display="block";document.querySelector("#visual svg").style.opacity="0";};
+   photo.onerror=()=>{photo.style.display="none";document.querySelector("#visual svg").style.opacity="1";};
+   photo.src=src;
+ }
+ photo.style.filter=state.style==="dark"?"contrast(1.15) brightness(.78)":state.style==="classic"?"contrast(1.04) saturate(.78)":"none";
+ const palette=state.style==="dark"?["#333842","#cfd5db","#111b28"]:state.style==="classic"?["#faf5ea","#c62237","#475665"]:["#f0f2f5","#2563eb","#263a50"];
+ $("carShape").setAttribute("fill",palette[0]);$("stripe").setAttribute("fill",palette[1]);$("windows").setAttribute("fill",palette[2]);
+ if(state.car==="hatch") $("carShape").setAttribute("d","M54 225 L65 168 Q73 147 120 145 L188 137 L253 75 Q274 51 330 49 L474 49 Q512 50 555 112 L615 146 L740 166 Q768 172 769 207 L763 245 L52 245 Z");
+ else $("carShape").setAttribute("d","M54 225 L65 168 Q73 147 120 145 L188 137 L253 75 Q274 51 330 49 L536 49 Q575 50 613 107 L665 148 L740 166 Q768 172 769 207 L763 245 L52 245 Z");
+ document.querySelectorAll(".zone").forEach(z=>{
+  const id=z.dataset.slot,s=state.slots[id]||{};z.classList.toggle("is-selected",id===selected);
+  z.replaceChildren();
+  if(s.logo){const img=document.createElement("img");img.alt="Marca "+(s.sponsor||"anunciante");img.src=s.logo;z.append(img);}
+  else {const b=document.createElement("b");b.textContent=String(Object.keys(slotLabels).indexOf(id)+1).padStart(2,"0");const t=document.createElement("span");t.textContent=s.sponsor||slotLabels[id];z.append(b,t);}
  });
+ $("slotButtons").replaceChildren();
+ Object.entries(slotLabels).forEach(([id,label])=>{const s=state.slots[id]||{};const b=document.createElement("button");b.className="slot"+(id===selected?" active":"");b.type="button";const t=document.createElement("b");t.textContent=label;const small=document.createElement("small");small.textContent=s.sponsor?"Preenchida":"Disponível";b.append(t,small);b.addEventListener("click",()=>pick(id));$("slotButtons").append(b);});
+ $("sum").textContent=money(Object.values(state.slots).reduce((a,s)=>a+(Number(s.price)||0),0));
 }
-function sponsorDefaults(view){
- var isSide=view==="left"||view==="right";
- return isSide?[
-  slotFactory("A1","sponsor","COTA A1",14,61,17,12),
-  slotFactory("A2","sponsor","COTA A2",70,57,17,12),
-  slotFactory("A3","sponsor","COTA A3",80,68,13,9)
- ]:[slotFactory("A1","sponsor","COTA A1",20,60,18,13),slotFactory("A2","sponsor","COTA A2",66,60,18,13)];
-}
-function makeSlots(){var slots={};keys.forEach(function(view){slots[view]=mandatoryFor(view).concat(sponsorDefaults(view))});return slots}
-function blankPhotos(){return{left:null,right:null,front:null,back:null,roof:null}}
-function seed(){
- return{version:1,model:"bmw",projectId:null,licenseName:"",city:"",vehicle:"BMW M4 / MediaCar",current:"left",photos:blankPhotos(),slots:makeSlots(),modelAssets:{},next:1,selected:"A2"};
-}
-function upgradeState(saved){
- if(!saved||saved.version!==1||!saved.slots||!saved.photos)return seed();
- if(!MC_MODELS[saved.model])saved.model=keys.some(function(k){return !!saved.photos[k]})?"custom":"bmw";
- if(!saved.modelAssets||typeof saved.modelAssets!=="object")saved.modelAssets={};
- keys.forEach(function(view){
-  var prior=Array.isArray(saved.slots[view])?saved.slots[view]:[];
-  var commercials=prior.filter(function(s){return s&&s.type==="sponsor"&&typeof s.id==="string"&&Number.isFinite(Number(s.x))}).map(function(s){return {...s,x:Math.max(0,Math.min(100,Number(s.x))),y:Math.max(0,Math.min(100,Number(s.y))),w:Math.max(6,Math.min(100,Number(s.w))),h:Math.max(5,Math.min(100,Number(s.h)))}}).slice(0,60);
-  saved.slots[view]=mandatoryFor(view).concat(commercials);
-  if(typeof saved.photos[view]!=="string")saved.photos[view]=null;
- });
- if(!saved.current||!labels[saved.current])saved.current="left";
- saved.selected=(saved.slots[saved.current].find(function(s){return s.type==="sponsor"&&s.id===saved.selected})||saved.slots[saved.current].find(function(s){return s.type==="sponsor"})||{}).id||null;
- saved.next=Math.max(1,Number(saved.next)||1);
- return saved;
-}
-var state=seed(),isReady=false,saveTimer=0,db=null,toastTimer=0;
-function allSlots(){return keys.flatMap(function(k){return state.slots[k]||[]})}
-function currentSlots(){return state.slots[state.current]||[]}
-function chosen(){return currentSlots().find(function(s){return s.id===state.selected})}
-function cash(n){return(Number(n)||0).toLocaleString("pt-BR",{style:"currency",currency:"BRL",maximumFractionDigits:0})}
-function safe(n){return Math.max(0,Number(n)||0)}
-function clamp(v,min,max){return Math.max(min,Math.min(max,v))}
-function toast(message){var el=$("toast");el.textContent=message;el.hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(function(){el.hidden=true},3500)}
-function persist(){if(!isReady||!db)return;clearTimeout(saveTimer);saveTimer=setTimeout(function(){try{var tx=db.transaction("draft","readwrite");tx.objectStore("draft").put(state,"last");tx.onerror=function(){toast("Limite do armazenamento local. Use Salvar projeto.")}}catch(e){}},600)}
-function bindText(id,key){$(id).value=state[key]||"";$(id).addEventListener("input",function(e){state[key]=e.target.value;persist();renderPrint()})}
-function tabs(){var nav=$("viewTabs");nav.replaceChildren();keys.forEach(function(key){var btn=document.createElement("button");btn.type="button";btn.className="view"+(key===state.current?" active":"");btn.textContent=labels[key];btn.setAttribute("aria-pressed",String(key===state.current));btn.onclick=function(){state.current=key;state.selected=(currentSlots().find(function(s){return s.type==="sponsor"})||currentSlots()[0]||{}).id||null;render();persist()};nav.appendChild(btn)})}
-function templateSource(){return(MC_MODELS[state.model]||MC_MODELS.custom).views[state.current]||null}
-function currentImage(){return state.photos[state.current]||templateSource()}
-function renderModelCollection(){
- document.querySelectorAll("[data-mc-model]").forEach(function(button){button.setAttribute("aria-pressed",String(button.dataset.mcModel===state.model))});
-}
-function renderStage(){
- var image=currentImage(),img=$("carImage");
- img.hidden=!image;
- if(image)img.src=image;else img.removeAttribute("src");
- img.style.transform=(!state.photos[state.current]&&state.current==="right"&&state.model==="bmw")?"scaleX(-1)":"none";
- $("emptyPhoto").hidden=!!image;
- $("zones").hidden=!image;
- $("emptyPhoto").querySelector("span").textContent="Envie uma foto ou render aprovado desta vista para a aplicação dos patrocinadores.";
- $("viewName").textContent=labels[state.current].toUpperCase();
- renderModelCollection();renderZones();
-}
-function renderZones(){var holder=$("zones");holder.replaceChildren();currentSlots().forEach(function(slot){if(slot.visible===false)return;var box=document.createElement("div");box.className="zone "+slot.type+(slot.id===state.selected?" active":"");box.style.left=slot.x+"%";box.style.top=slot.y+"%";box.style.width=slot.w+"%";box.style.height=slot.h+"%";box.setAttribute("role","button");box.setAttribute("tabindex","0");box.setAttribute("aria-label",slot.name+" - editar cota");box.dataset.id=slot.id;box.dataset.status=slot.status;box.setAttribute("aria-label",slot.type==="official"?slot.name+" — identidade institucional protegida":slot.name+" — editar cota");
-if(slot.logo){var im=document.createElement("img");im.src=slot.logo;im.alt="";box.appendChild(im)}else{var t=document.createElement("span");t.className="zone-name";t.textContent=slot.name;box.appendChild(t)}
-if(slot.type==="sponsor"&&!slot.logo){var meta=document.createElement("span");meta.className="zone-meta";meta.textContent=slot.status==="sold"?"VENDIDA":slot.status==="reserved"?"RESERVADA":"DISPONÍVEL";box.appendChild(meta)}
-if(slot.type==="sponsor"){var handle=document.createElement("span");handle.className="handle";handle.title="Redimensionar";box.appendChild(handle)}
-box.addEventListener("pointerdown",function(e){if(slot.type==="official"){state.selected=slot.id;renderInspector();renderInventory();return}if(e.button!==0&&e.pointerType==="mouse")return;e.preventDefault();e.stopPropagation();state.selected=slot.id;document.querySelectorAll(".zone").forEach(function(z){z.classList.toggle("active",z.dataset.id===slot.id)});renderInspector();renderInventory();var rect=$("stage").getBoundingClientRect(),sx=e.clientX,sy=e.clientY,old={x:slot.x,y:slot.y,w:slot.w,h:slot.h},resize=e.target.classList.contains("handle");box.setPointerCapture(e.pointerId);
-function move(ev){var dx=(ev.clientX-sx)/rect.width*100,dy=(ev.clientY-sy)/rect.height*100;if(resize){slot.w=clamp(old.w+dx,6,100-slot.x);slot.h=clamp(old.h+dy,5,100-slot.y)}else{slot.x=clamp(old.x+dx,0,100-slot.w);slot.y=clamp(old.y+dy,0,100-slot.h)}box.style.left=slot.x+"%";box.style.top=slot.y+"%";box.style.width=slot.w+"%";box.style.height=slot.h+"%"}
-function done(){box.removeEventListener("pointermove",move);box.removeEventListener("pointerup",done);box.removeEventListener("pointercancel",done);persist()}
-box.addEventListener("pointermove",move);box.addEventListener("pointerup",done);box.addEventListener("pointercancel",done)});
-box.addEventListener("keydown",function(e){if(slot.type==="official")return;if(!["ArrowLeft","ArrowRight","ArrowUp","ArrowDown"].includes(e.key))return;e.preventDefault();var step=e.shiftKey?2:.5;if(e.key==="ArrowLeft")slot.x=clamp(slot.x-step,0,100-slot.w);if(e.key==="ArrowRight")slot.x=clamp(slot.x+step,0,100-slot.w);if(e.key==="ArrowUp")slot.y=clamp(slot.y-step,0,100-slot.h);if(e.key==="ArrowDown")slot.y=clamp(slot.y+step,0,100-slot.h);renderZones();persist()});holder.appendChild(box)})}
-function renderInspector(){var s=chosen(),container=$("slotEditor");container.replaceChildren();if(!s){var p=document.createElement("p");p.className="hint";p.textContent="Escolha uma cota no carro ou crie um novo espaço comercial.";container.appendChild(p);return}
-var isOfficial=s.type==="official";
-container.innerHTML='<div class="field"><label for="slotName">Identificação da área</label><input id="slotName" maxlength="55"></div><div class="field" id="priceField"><label for="slotPrice">Mensalidade da cota (R$ / mês)</label><input id="slotPrice" type="number" min="0" step="50" placeholder="Defina o valor"></div><div class="field" id="statusField"><label for="slotStatus">Situação comercial</label><select id="slotStatus"><option value="available">Disponível</option><option value="reserved">Reservada</option><option value="sold">Vendida</option></select></div><div class="field"><label>Logomarca aplicada</label><button class="btn secondary full" type="button" id="uploadLogo">+ Anexar logomarca</button><input id="logoFile" type="file" accept="image/png,image/jpeg,image/webp" hidden></div><div class="stack"><button class="btn secondary" type="button" id="removeLogo">Remover logo</button><button class="btn danger" type="button" id="removeSlot">Excluir cota</button></div><div class="rule"></div><label class="checkline"><input type="checkbox" id="slotVisible"> Exibir esta área no carro</label><p id="officialHelp" class="hint"></p>';
-$("slotName").value=s.name;$("slotName").readOnly=isOfficial;$("slotPrice").value=s.price||"";$("slotStatus").value=s.status;$("priceField").hidden=isOfficial;$("statusField").hidden=isOfficial;$("removeSlot").hidden=isOfficial;$("uploadLogo").hidden=isOfficial;$("removeLogo").hidden=isOfficial;$("slotVisible").disabled=isOfficial;$("slotVisible").checked=true;
-$("officialHelp").textContent=isOfficial?"Identidade permanente WINF Partners™ e numeral 08. Não pode ser vendida, movida, ocultada, renomeada nem substituída. WINF usa o arquivo oficial; as demais marcas mantêm as denominações oficiais até vincular seus arquivos de logotipo.":"A posição e a dimensão podem ser alteradas diretamente na imagem. O valor indicado é mensal; campanhas propostas em ciclos de 6 meses. Não inclui impressão, aplicação nem tributos.";
-$("slotName").oninput=function(e){if(isOfficial)return;s.name=e.target.value;renderZones();renderInventory();persist();renderPrint()};
-$("slotPrice").oninput=function(e){s.price=safe(e.target.value);renderTotals();renderInventory();renderPrint();persist()};
-$("slotStatus").onchange=function(e){s.status=e.target.value;renderZones();renderInventory();renderTotals();renderPrint();persist()};
-$("slotVisible").onchange=function(e){if(isOfficial){e.target.checked=true;return}s.visible=e.target.checked;renderZones();renderTotals();renderInventory();renderPrint();persist()};
-$("uploadLogo").onclick=function(){if(isOfficial)return;$("logoFile").click()};
-$("logoFile").onchange=async function(e){if(isOfficial)return;var file=e.target.files&&e.target.files[0];if(!file)return;try{if(file.type==="image/svg+xml"){toast("Para preservar a segurança, envie a logomarca em PNG ou WEBP.");return}s.logo=await compress(file,900,"image/png");renderZones();renderInventory();persist();toast("Logomarca aplicada à cota.")}catch(err){toast("Não foi possível abrir a logomarca.")}};
-$("removeLogo").onclick=function(){if(isOfficial)return;s.logo=null;renderZones();persist()};
-$("removeSlot").onclick=function(){if(s.type==="official")return;state.slots[state.current]=currentSlots().filter(function(x){return x.id!==s.id});state.selected=currentSlots()[0]?currentSlots()[0].id:null;render();persist()}
-}
-function renderTotals(){var sp=allSlots().filter(function(s){return s.type==="sponsor"&&s.visible!==false});$("freeCount").textContent=sp.filter(function(s){return s.status==="available"}).length;var total=sp.reduce(function(n,s){return n+safe(s.price)},0);var sold=sp.filter(function(s){return s.status==="sold"}).reduce(function(n,s){return n+safe(s.price)},0);$("potential").textContent=cash(total);$("soldValue").textContent=cash(sold);$("cycleValue").textContent=cash(total*6)}
-function renderInventory(){var area=$("inventory");area.replaceChildren();currentSlots().forEach(function(s){var btn=document.createElement("button");btn.type="button";btn.className="inv"+(s.id===state.selected?" chosen":"");var left=document.createElement("span"),right=document.createElement("span");right.className="right";var n=document.createElement("b"),sm=document.createElement("small");n.textContent=s.name;sm.textContent=(s.type==="official"?"Institucional":"Comercial")+(s.visible===false?" · Oculta":"");left.append(n,document.createElement("br"),sm);var val=document.createElement("b"),stat=document.createElement("small");val.textContent=s.type==="official"?"RESERVADA":(s.price?cash(s.price):"A definir");stat.textContent=s.type==="official"?"WINF":({available:"Livre",reserved:"Reservada",sold:"Vendida"}[s.status]||"Livre");right.append(val,document.createElement("br"),stat);btn.append(left,right);btn.onclick=function(){state.selected=s.id;renderZones();renderInspector();renderInventory()};area.appendChild(btn)});if(!currentSlots().length){area.textContent="Nenhuma área nesta vista. Envie a foto e adicione uma cota."}}
-function renderPrint(){var lines=["MediaCar™ 08 · "+(MC_MODELS[state.model]||MC_MODELS.custom).label,state.licenseName||"Licenciado não informado",state.city||"Cidade não informada",(state.vehicle||"Veículo não informado"),"Vista: "+labels[state.current]];allSlots().forEach(function(s){if(s.type==="sponsor"&&s.visible!==false)lines.push(s.name+" / "+cash(s.price)+" / "+({available:"Disponível",reserved:"Reservada",sold:"Vendida"}[s.status]))});$("printDetails").textContent=lines.join("\n")}
-function render(){tabs();renderStage();renderInspector();renderInventory();renderTotals();renderPrint()}
-function compress(file,maxSize,mime){return new Promise(function(resolve,reject){if(!file.type.startsWith("image/")||file.type==="image/svg+xml"){reject(Error("invalid"));return}var url=URL.createObjectURL(file),img=new Image();img.onload=function(){var factor=Math.min(1,maxSize/Math.max(img.naturalWidth,img.naturalHeight));var c=document.createElement("canvas");c.width=Math.max(1,Math.round(img.naturalWidth*factor));c.height=Math.max(1,Math.round(img.naturalHeight*factor));var context=c.getContext("2d");context.drawImage(img,0,0,c.width,c.height);URL.revokeObjectURL(url);resolve(c.toDataURL(mime,mime==="image/jpeg"?.87:undefined))};img.onerror=function(){URL.revokeObjectURL(url);reject(Error("bad image"))};img.src=url})}
-function saveFile(data,name,mime){var blob=data instanceof Blob?data:new Blob([data],{type:mime});var a=document.createElement("a"),url=URL.createObjectURL(blob);a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url)},5000)}
-function slug(){return(state.licenseName||"licenciado").normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/gi,"-").toLowerCase().replace(/^-|-$/g,"").slice(0,35)}
-function loadImage(src){return new Promise(function(resolve,reject){var im=new Image();im.onload=function(){resolve(im)};im.onerror=reject;im.src=src})}
-function drawRound(ctx,x,y,w,h,r){r=Math.min(r,w/2,h/2);ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath()}
-async function exportCanvas(){var canvas=document.createElement("canvas");canvas.width=1600;canvas.height=900;var g=canvas.getContext("2d");g.fillStyle="#18191d";g.fillRect(0,0,1600,900);var imgSource=currentImage();if(imgSource){var car=await loadImage(imgSource),ratio=Math.min(1600/car.width,900/car.height),iw=car.width*ratio,ih=car.height*ratio;g.save();if(!state.photos[state.current]&&state.current==="right"&&state.model==="bmw"){g.translate(1600,0);g.scale(-1,1)}g.drawImage(car,(1600-iw)/2,(900-ih)/2,iw,ih);g.restore()}else{g.font="32px Arial";g.fillStyle="#ddd";g.textAlign="center";g.fillText("ADICIONE FOTO DESTA VISTA — PRÉVIA NÃO HOMOLOGADA",800,450)}
-for(var i=0;i<currentSlots().length;i++){var s=currentSlots()[i];if(s.visible===false)continue;var x=s.x*16,y=s.y*9,w=s.w*16,h=s.h*9;g.save();drawRound(g,x,y,w,h,4);g.fillStyle=s.type==="official"?"rgba(0,0,0,.80)":"rgba(8,8,10,.58)";g.fill();g.strokeStyle="#fff";g.lineWidth=s.type==="official"?2:1.5;if(s.type==="sponsor")g.setLineDash([9,6]);g.stroke();g.setLineDash([]);if(s.logo){try{var mark=await loadImage(s.logo),scale=Math.min((w-16)/mark.width,(h-12)/mark.height);g.drawImage(mark,x+(w-mark.width*scale)/2,y+(h-mark.height*scale)/2,mark.width*scale,mark.height*scale)}catch(e){}}else{g.fillStyle="#fff";g.textAlign="center";g.textBaseline="middle";g.font="bold "+Math.max(11,Math.min(28,h*.28,w/Math.max(5,s.name.length*.58)))+"px Arial";g.fillText(s.name,x+w/2,y+h/2,w-12)}g.restore()}
-g.textAlign="right";g.fillStyle="rgba(255,255,255,.75)";g.font="18px monospace";g.fillText("MEDIACAR™ BY WINF PARTNERS™ / 08 / PRÉVIA COMERCIAL",1555,860);return canvas}
-function captureCurrentModel(){
- if(!state.modelAssets||typeof state.modelAssets!=="object")state.modelAssets={};
- state.modelAssets[state.model]={slots:state.slots,photos:state.photos,vehicle:state.vehicle};
-}
-function chooseModel(modelId){
- if(!MC_MODELS[modelId]||modelId===state.model)return;
- captureCurrentModel();
- var chosenData=state.modelAssets[modelId];
- state.model=modelId;
- state.slots=chosenData&&chosenData.slots?chosenData.slots:makeSlots();
- state.photos=chosenData&&chosenData.photos?chosenData.photos:blankPhotos();
- state.vehicle=chosenData&&chosenData.vehicle?chosenData.vehicle:MC_MODELS[modelId].label;
- state.current="left";state.selected="A2";
- state=upgradeState(state);
- $("vehicle").value=state.vehicle;
- render();persist();toast("Veículo selecionado: "+MC_MODELS[modelId].label+".");
-}
-document.querySelectorAll("[data-mc-model]").forEach(function(button){
- button.addEventListener("click",function(){chooseModel(button.dataset.mcModel);});
+function pick(id){selected=id;render();}
+document.querySelectorAll(".zone").forEach(z=>z.addEventListener("click",()=>pick(z.dataset.slot)));
+["territory","car","style"].forEach(id=>$(id).addEventListener("change",()=>{captureHeader();render();}));
+
+$("apply").addEventListener("click",async()=>{
+ const file=$("logo").files[0], sponsor=$("sponsor").value.trim(), raw=$("quotaPrice").value;
+ if(file && (!["image/png","image/jpeg","image/webp"].includes(file.type)||file.size>600000)){setStatus("Use imagem PNG, JPG ou WEBP de até 600 KB.");return;}
+ if(raw && (!Number.isFinite(Number(raw))||Number(raw)<0||Number(raw)>1000000)){setStatus("Informe um valor válido.");return;}
+ let data=state.slots[selected].logo||"";
+ if(file){data=await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(String(reader.result));reader.onerror=reject;reader.readAsDataURL(file);}).catch(()=>null);if(!data){setStatus("Não foi possível ler a logomarca.");return;}}
+ state.slots[selected]={sponsor,price:raw?Number(raw):0,logo:data};
+ captureHeader();render();setStatus("Cota atualizada na prévia. Salve o projeto para guardar.");});
+$("save").addEventListener("click",()=>{captureHeader();try{localStorage.setItem(storageKey,JSON.stringify(state));setStatus("Projeto salvo neste navegador.");}catch(_){setStatus("Sem espaço para salvar. Exporte o projeto em arquivo.");}});
+$("export").addEventListener("click",()=>{captureHeader();const json=JSON.stringify({...state,exportedAt:new Date().toISOString()},null,2);const url=URL.createObjectURL(new Blob([json],{type:"application/json"}));const a=document.createElement("a");a.href=url;a.download="mediacar-projeto.json";document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),500);setStatus("Arquivo JSON exportado.");});
+$("reset").addEventListener("click",()=>{if(!confirm("Limpar esta simulação? O projeto salvo poderá ser recuperado somente se você não sobrescrevê-lo."))return;state=empty();selected="porta";render();setStatus("Nova simulação iniciada.");});
+$("draft").addEventListener("click",()=>{
+ captureHeader();
+ const date=new Date().toLocaleDateString("pt-BR");
+ const filled=Object.entries(state.slots).filter(([,s])=>s.sponsor);
+ $("document").innerHTML='<p><b>WINF PARTNERS™ / MEDIACAR™</b></p><h2>Minuta demonstrativa de campanha publicitária</h2><p><strong>Gerado em:</strong> '+esc(date)+'</p><p><strong>Território:</strong> '+esc(state.territory||"Não informado")+'</p><p><strong>Veículo:</strong> '+esc(carLabels[state.car])+'</p><p><strong>Identidade:</strong> '+esc(styleLabels[state.style])+'</p><p><strong>Exposição prevista:</strong> 6 meses, contados a partir da ativação comprovada do veículo adesivado, com datas a definir pelas partes.</p><h3>Participações simuladas</h3><ol>'+(filled.length?filled.map(([k,s])=>'<li>'+esc(slotLabels[k])+' — '+esc(s.sponsor)+' — '+esc(money(s.price))+'</li>').join(""):"<li>Sem anunciantes definidos.</li>")+'</ol><p><strong>Total estimado de cotas:</strong> '+esc(money(filled.reduce((a,[,s])=>a+(Number(s.price)||0),0)))+'</p><h3>Condições a formalizar</h3><p>Identificação legal das partes, definição da cota, aprovação da arte, pagamento, manutenção, indisponibilidade, cancelamento, proteção de dados e assinaturas devem constar do contrato individual definitivo.</p><p><strong>ATENÇÃO:</strong> Documento demonstrativo, sem valor contratual, sem assinatura, sem reserva comercial e sem confirmação de pagamento. Precisa de revisão jurídica antes do uso em vendas.</p>';
+ $("contract").classList.add("visible");document.body.style.overflow="hidden";
 });
-function refreshProjects(){
- if(!db||!db.objectStoreNames.contains("projects"))return;
- try{
-  var req=db.transaction("projects","readonly").objectStore("projects").getAll();
-  req.onsuccess=function(){
-   var select=$("mcSavedProjects"),remember=select.value;
-   select.replaceChildren();var initial=document.createElement("option");initial.value="";initial.textContent="Escolha um projeto salvo";select.appendChild(initial);
-   req.result.sort(function(a,b){return b.updated-a.updated}).forEach(function(p){
-    var o=document.createElement("option");o.value=p.id;o.textContent=(p.label||"Projeto MediaCar")+" · "+(p.city||"Sem território");select.appendChild(o);
-   });
-   if(req.result.some(function(p){return p.id===remember}))select.value=remember;
-  };
- }catch(e){toast("Não foi possível listar os projetos locais.")}
-}
-$("mcSaveLocal").onclick=function(){
- if(!db||!db.objectStoreNames.contains("projects")){toast("O armazenamento local não está disponível. Exporte o JSON.");return}
- captureCurrentModel();
- if(!state.projectId)state.projectId="mc-"+Date.now().toString(36)+"-"+Math.floor(Math.random()*100000).toString(36);
- var label=(state.vehicle||"MediaCar")+" / "+(state.licenseName||"Licenciado");
- var record={id:state.projectId,label:label,city:state.city||"",updated:Date.now(),data:JSON.parse(JSON.stringify(state))};
- try{
-  var req=db.transaction("projects","readwrite").objectStore("projects").put(record,record.id);
-  req.onsuccess=function(){refreshProjects();toast("Projeto armazenado neste navegador: "+label);persist()};
-  req.onerror=function(){toast("Espaço insuficiente. Use Salvar projeto para exportar JSON.")};
- }catch(e){toast("Não foi possível salvar localmente. Exporte um JSON.")}
+$("closeContract").addEventListener("click",()=>{$("contract").classList.remove("visible");document.body.style.overflow="";});
+try{const saved=JSON.parse(localStorage.getItem(storageKey)||"null");if(saved&&saved.slots&&saved.car&&saved.style&&Object.keys(slotLabels).every(k=>saved.slots[k])){state={...empty(),...saved};setStatus("Projeto anterior recuperado deste navegador.");}}catch(_){}
+render();
+window.MediaCarApp={
+ get:()=>{captureHeader();return JSON.parse(JSON.stringify(state));},
+ set:next=>{const base=empty();state={...base,...next,slots:{...base.slots,...(next.slots||{})}};selected="porta";render();}
 };
-$("mcLoadLocal").onclick=function(){
- if(!db||!db.objectStoreNames.contains("projects"))return;
- var id=$("mcSavedProjects").value;if(!id){toast("Escolha um projeto na lista.");return}
- var req=db.transaction("projects","readonly").objectStore("projects").get(id);
- req.onsuccess=function(){if(!req.result){toast("Projeto não encontrado.");return}state=upgradeState(req.result.data);state.projectId=id;["licenseName","city","vehicle"].forEach(function(k){$(k).value=state[k]||""});render();persist();toast("Projeto recuperado: "+req.result.label)};
-};
-$("mcDeleteLocal").onclick=function(){
- if(!db||!db.objectStoreNames.contains("projects"))return;
- var id=$("mcSavedProjects").value;if(!id){toast("Escolha um projeto para excluir.");return}
- if(!confirm("Excluir este projeto salvo neste navegador? Exporte um JSON antes, se precisar dele."))return;
- var req=db.transaction("projects","readwrite").objectStore("projects").delete(id);
- req.onsuccess=function(){if(state.projectId===id)state.projectId=null;refreshProjects();toast("Projeto local excluído.")};
-};
-function presentationImages(){
- var images={};
- keys.forEach(function(view){
-  var source=state.photos[view]||((MC_MODELS[state.model]||MC_MODELS.custom).views[view]||null);
-  if(source)images[view]={src:source,flip:!state.photos[view]&&view==="right"&&state.model==="bmw"};
- });
- return images;
-}
-$("mcClientPreview").onclick=async function(){
- var btn=this;btn.disabled=true;
- try{
-  if(!window.MediacarPresentation)throw Error("O visualizador comercial não está disponível.");
-  await window.MediacarPresentation.show(state,presentationImages());
- }catch(error){toast(error&&error.message?error.message:"Não foi possível abrir a apresentação.")}
- finally{btn.disabled=false}
-};
-$("mcClientExport").onclick=async function(){
- var btn=this;btn.disabled=true;
- try{
-  if(!window.MediacarPresentation)throw Error("O exportador comercial não está disponível.");
-  await window.MediacarPresentation.exportHtml(state,presentationImages());
-  toast("Apresentação comercial salva. Envie o arquivo HTML aos interessados.");
- }catch(error){toast(error&&error.message?error.message:"Não foi possível gerar a apresentação.")}
- finally{btn.disabled=false}
-};
-$("mcClientClose").onclick=function(){
- $("mcClientDialog").close();
- $("mcClientFrame").srcdoc="";
-};
-$("photoBtn").onclick=function(){$("photoInput").click()};
-$("photoInput").onchange=async function(e){var f=e.target.files&&e.target.files[0];if(!f)return;try{state.photos[state.current]=await compress(f,2200,"image/jpeg");renderStage();persist();toast("Foto adicionada à vista "+labels[state.current]+".")}catch(error){toast("Use JPG, PNG ou WEBP de um veículo.")}e.target.value=""};
-$("addSlot").onclick=function(){var id="N"+(state.next++);var slot={id:id,type:"sponsor",name:"NOVA COTA",x:35,y:53,w:19,h:12,status:"available",price:0,logo:null,visible:true};currentSlots().push(slot);state.selected=id;render();persist();toast("Nova cota criada. Arraste para posicionar.")};
-$("saveProject").onclick=function(){captureCurrentModel();saveFile(JSON.stringify(state,null,2),"mediacar-08-"+slug()+".json","application/json");toast("Projeto salvo em arquivo JSON.")};
-$("loadProject").onclick=function(){$("projectInput").click()};
-$("projectInput").onchange=async function(e){var file=e.target.files&&e.target.files[0];if(!file)return;try{if(file.size>26000000)throw Error("size");var data=JSON.parse(await file.text());if(data.version!==1||!data.slots||!data.photos||!keys.every(function(k){return Array.isArray(data.slots[k])}))throw Error("invalid");state=upgradeState(data);state.projectId=null;state.modelAssets={};["licenseName","city","vehicle"].forEach(function(k){$(k).value=state[k]||""});render();persist();toast("Projeto recuperado.")}catch(error){toast("O arquivo não é um projeto WINF válido.")}e.target.value=""};
-$("exportJpg").onclick=async function(){if(!currentImage()){toast("Adicione uma foto ou render desta vista antes de exportar.");return}var btn=this;btn.disabled=true;try{var can=await exportCanvas();can.toBlob(function(blob){if(blob){saveFile(blob,"winf-carro-midia-"+slug()+"-"+state.current+".jpg","image/jpeg");toast("Prévia JPG exportada.")}btn.disabled=false},"image/jpeg",.94)}catch(e){toast("Falha ao exportar a imagem.");btn.disabled=false}};
-$("printProposal").onclick=function(){renderPrint();window.print()};
-$("copySummary").onclick=async function(){var lines=["MEDIACAR™ / WINF PARTNERS™ / 08",state.licenseName||"Licenciado: a definir",state.city||"Cidade: a definir","Veículo: "+(state.vehicle||"a definir"),"","COTAS COMERCIAIS"];keys.forEach(function(k){var items=state.slots[k].filter(function(s){return s.type==="sponsor"&&s.visible!==false});if(!items.length)return;lines.push("— "+labels[k]);items.forEach(function(s){lines.push(s.name+" | "+cash(s.price)+" | "+({available:"Disponível",reserved:"Reservada",sold:"Vendida"}[s.status]))})});lines.push("","Potencial mensal bruto das cotas: "+$("potential").textContent,"Potencial bruto no ciclo de seis meses: "+$("cycleValue").textContent,"Valores mensais indicativos; campanha proposta de 6 meses, com renovação do envelopamento. Sujeito a contrato e aprovação.");var result=lines.join("\n");try{await navigator.clipboard.writeText(result);toast("Resumo comercial copiado.")}catch(e){saveFile(result,"winf-cotas-"+slug()+".txt","text/plain");toast("Resumo salvo como texto.")}};
-$("resetProject").onclick=function(){if(!confirm("Reiniciar o rascunho atual? Seus projetos guardados continuam na biblioteca deste navegador."))return;state=seed();["licenseName","city","vehicle"].forEach(function(k){$(k).value=""});render();persist();toast("Novo projeto iniciado.")};
-function init(){
- ["licenseName","city","vehicle"].forEach(function(k){bindText(k,k)});
- $("vehicle").value=state.vehicle;
- render();isReady=true;
- try{
-  var request=indexedDB.open("winf-carro-midia",2);
-  request.onupgradeneeded=function(){
-   var data=request.result;
-   if(!data.objectStoreNames.contains("draft"))data.createObjectStore("draft");
-   if(!data.objectStoreNames.contains("projects"))data.createObjectStore("projects");
-  };
-  request.onerror=function(){toast("Armazenamento local indisponível. Use Salvar projeto (JSON).")};
-  request.onsuccess=function(){
-   db=request.result;refreshProjects();
-   var tx=db.transaction("draft","readonly"),get=tx.objectStore("draft").get("last");
-   get.onsuccess=function(){
-    var saved=get.result;if(!saved||saved.version!==1||!saved.slots)return;
-    state=upgradeState(saved);
-    ["licenseName","city","vehicle"].forEach(function(k){$(k).value=state[k]||""});
-    render();toast("Rascunho recuperado deste navegador.");
-   };
-  };
- }catch(e){toast("Armazenamento local indisponível. Use Salvar projeto (JSON).")}
-}
-window.MediaCarStudioBridge={
- snapshot:function(){captureCurrentModel();return JSON.parse(JSON.stringify(state));},
- restore:function(saved){if(!saved||saved.version!==1||!saved.slots||!saved.photos||!keys.every(function(k){return Array.isArray(saved.slots[k])}))throw Error("Projeto inválido");state=upgradeState(saved);["licenseName","city","vehicle"].forEach(function(k){$(k).value=state[k]||""});render();persist();},
- currentId:function(){return state.projectId;},
- setId:function(id){state.projectId=id;persist();}
-};
-init();
-})();
 </script>
-<script src="/js/mediacar-cloud.js?v=20261111-2" defer></script>
-<script src="/js/mediacar-image-prompts.js?v=20261111-1" defer></script>
-<script src="/js/mediacar-client-preview.js?v=20261111-1" defer></script>
-<script src="/js/winf-footer.js?v=20261111-mediacar-mobile" defer></script>
-<script type="module" src="/js/mediacar-3d.js?v=20261112-scroll-mobile-1"></script>
-</body>
-</html>
+<script type="module" src="/js/mediacar-sync.js?v=20261112-1"></script>
+</body></html>
