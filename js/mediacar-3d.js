@@ -34,7 +34,7 @@ try{
  const hubMaterial=new THREE.MeshStandardMaterial({color:0x828c93,metalness:.85,roughness:.28});
  function applyHeight(){if(bodyGroup)bodyGroup.position.y=({extreme:-.29,low:-.15,stock:0})[heightPreset]||0;}
  function applyTint(){const cfg={clear:{color:0x718b9a,opacity:.42},medium:{color:0x273b49,opacity:.78},dark:{color:0x080e14,opacity:.97}}[tintPreset];glass.color.set(cfg.color);glass.opacity=cfg.opacity;glass.needsUpdate=true;}
- function applyWheels(){hubMaterial.color.set(({sport:0x828c93,dark:0x161c21,original:0xadb4b7})[wheelPreset]);wheelHubs.forEach(h=>h.scale.set(wheelPreset==="sport"?1.1:wheelPreset==="dark"?.92:1,1,1));}
+ function applyWheels(){hubMaterial.color.set(({sport:0x828c93,dark:0x161c21,original:0xadb4b7})[wheelPreset]);wheelHubs.forEach(h=>h.scale.set(wheelPreset==="sport"?1.1:wheelPreset==="dark" ? .92 : 1,1,1));}
  function box(group,w,h,d,x,y,z,material,bevel=0){
   let geometry=new THREE.BoxGeometry(w,h,d);
   if(bevel){geometry=new THREE.BoxGeometry(w,h,d)}
