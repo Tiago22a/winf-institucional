@@ -360,6 +360,13 @@
       "alt": "ENCONTRE SEU ATENDIMENTO WINF."
     },
     {
+      "route": "/partners/carro-midia/",
+      "title": "MediaCar™ — Simulador de campanhas | WINF Partners",
+      "ogImage": "/images/og/winf-share-partners-carro-midia-1200x630-r2.jpg",
+      "topic": "WINF PARTNERS™",
+      "alt": "SUA MARCA. EM MOVIMENTO."
+    },
+    {
       "route": "/partners/cuidar-e-conectar/",
       "title": "Cuidar &amp; Conectar™ | Educação, tecnologia e comunidade — WINF",
       "ogImage": "/images/og/winf-share-partners-cuidar-e-conectar-1200x630-r2.jpg",
@@ -386,6 +393,13 @@
       "ogImage": "/images/og/winf-share-partners-1200x630-r2.jpg",
       "topic": "WINF PARTNERS™",
       "alt": "SEU TERRITÓRIO. NOVAS POSSIBILIDADES."
+    },
+    {
+      "route": "/partners/padrinho-modern/",
+      "title": "Padrinho Modern™ | Invista no talento de um profissional — WINF Partners",
+      "ogImage": "/images/og/winf-share-partners-padrinho-modern-1200x630-r2.jpg",
+      "topic": "WINF PARTNERS™",
+      "alt": "PADRINHO MODERN™"
     },
     {
       "route": "/partners/varejistas/",
@@ -523,8 +537,16 @@
       "reason": "noindex"
     },
     {
-      "route": "partners/carro-midia",
+      "route": "partners/carro-midia/ativar",
+      "reason": "redirecionamento"
+    },
+    {
+      "route": "partners/carro-midia/studio/360",
       "reason": "noindex"
+    },
+    {
+      "route": "partners/carro-midia/studio",
+      "reason": "redirecionamento"
     },
     {
       "route": "partners/universo-dark",
