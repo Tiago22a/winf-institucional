@@ -7,6 +7,7 @@ on:
       - 'partners/**'
       - 'briefing/**'
       - 'tests/partnersBriefing.test.cjs'
+      - 'tests/padrinho-modern.test.cjs'
       - '.github/workflows/partners-briefing.yml'
   pull_request:
     paths:
@@ -30,6 +31,8 @@ jobs:
           node-version: '22'
       - name: Conferir arquivos, navegação, imagens e SEO
         run: node --test tests/partnersBriefing.test.cjs
+      - name: Validar Padrinho Modern e estrutura digital do Asset Light
+        run: node --test tests/padrinho-modern.test.cjs
       - name: Validar script da Partners
         run: node --check partners/landing.js
       - name: Validar scripts do Briefing
