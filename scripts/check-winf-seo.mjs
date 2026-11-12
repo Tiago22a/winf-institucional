@@ -9,10 +9,13 @@ const read=p=>readFileSync(resolve(root,p),'utf8');
 const cfg=JSON.parse(read('config/winf-active-cities.json'));
 const siteMap=read('sitemap.xml');
 const uniqueTitles=new Set(),uniqueDescriptions=new Set(),uniqueImages=new Set();
+const metaOgForCity=html=>html.match(/<meta property="og:image" content="([^"]*)"/)?.[1];
 for(const city of cfg.cities){
  const page=read(city.slug+'/index.html');
  const canonical='https://winf.com.br/'+city.slug+'/';
- const image='https://winf.com.br/images/og/winf-select-'+city.origin+'-1200x630.jpg';
+ const imageBase='https://winf.com.br/images/og/winf-select-'+city.origin+'-1200x630';
+ const image=metaOgForCity(page) || imageBase+'.jpg';
+ assert.ok([imageBase+'.jpg',imageBase+'-r2.jpg'].includes(image),'Imagem OG com nome territorial conhecido: '+city.city);
  const meta=(field,key)=>page.match(new RegExp('<meta '+field+'="'+key.replace(/\./g,'\\.')+'" content="([^"]*)"'))?.[1];
  const title=page.match(/<title>(.*?)<\/title>/)?.[1]||'';
  const description=meta('name','description');
@@ -46,7 +49,7 @@ for(const city of cfg.cities){
  if(city.instagram)assert.ok(local.sameAs.includes('https://www.instagram.com/'+city.instagram+'/'),'Instagram local');
  for(const m of page.matchAll(/<img\b[^>]*>/g))assert.ok(/\balt\s*=/.test(m[0]),'Imagem sem alt '+city.city);
  assert.ok(!uniqueImages.has(image),'Imagem OG duplicada');uniqueImages.add(image);
- const file='images/og/winf-select-'+city.origin+'-1200x630.jpg';
+ const file=image.replace('https://winf.com.br/','');
  assert.ok(existsSync(resolve(root,file)),'Imagem ausente '+file);
  const metadata=await sharp(resolve(root,file)).metadata();
  assert.equal(metadata.width,1200);assert.equal(metadata.height,630);assert.equal(metadata.format,'jpeg');
