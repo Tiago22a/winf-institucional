@@ -109,8 +109,14 @@
     min-height:clamp(670px,88svh,860px);
     padding:110px 0 70px;
   }
+  /* Prolonga o filme atrás da assinatura WINF PARTNERS, sem deslocar o conteúdo. */
+  #topo .briefing-hero-film{
+    top:-54px;
+    bottom:0;
+    height:calc(100% + 54px);
+  }
   #topo .briefing-hero-poster,
-  #topo .briefing-hero-motion{object-position:60% 62%}
+  #topo .briefing-hero-motion{object-position:60% 69%}
   #topo .briefing-hero-shade{
     background:
       linear-gradient(0deg,rgba(4,8,12,.58) 0%,rgba(4,8,12,.24) 56%,rgba(4,8,12,.37) 100%),
