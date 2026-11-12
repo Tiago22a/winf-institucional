@@ -23,13 +23,13 @@ test('imagens profissionais de marcas são arquivos locais e não contêm títul
 });
 test('briefing preserva VSL voluntária com fonte e fallback acessíveis',()=>{
  assert.match(briefing,/id="partners-manifesto"/);
- assert.match(briefing,/data-src="\\/partners\\/media\\/manifesto\\.mp4"/);
- assert.match(briefing,/href="\\/partners\\/media\\/manifesto\\.mp4"/);
+ assert.ok(briefing.includes('data-src="/partners/media/manifesto.mp4"'));
+ assert.ok(briefing.includes('href="/partners/media/manifesto.mp4"'));
  assert.match(briefing,/data-play-manifesto/);
  assert.doesNotMatch(briefing,/autoplay[^>]*id="partners-manifesto"/);
  assert.doesNotMatch(briefing,/id="briefing-hero-motion"/);
- assert.match(briefing,/\\/js\\/winf-cinema\\.js\\?v=/);
- assert.match(briefing,/hero-motion\\.css\\?v=/);
+ assert.ok(briefing.includes('/js/winf-cinema.js?v='));
+ assert.ok(briefing.includes('hero-motion.css?v='));
 });
 
 test('animações param ou não iniciam com movimento reduzido/economia de dados',()=>{
