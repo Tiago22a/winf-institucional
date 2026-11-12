@@ -4,9 +4,9 @@
  */
 (() => {
   "use strict";
-  const container = document.getElementById("winf-active-cards");
-  if (!container) return;
-  const cards = container.querySelectorAll(":scope > article.winf-active-card");
+  // Os sites estão em grades regionais (013, 015 e outras). Conte todos eles.
+  const cards = document.querySelectorAll("#unidades-ativas article.winf-active-card");
+  if (!cards.length) return;
   const count = document.getElementById("winf-active-total");
   if (count) count.textContent = cards.length + " sites regionais publicados";
 })();
