@@ -1,0 +1,19 @@
+/* WINF Asset Light™ — entrega territorial digital, identidade Briefing / Partners. */
+.al-ready{box-sizing:border-box;max-width:1160px;margin:36px auto 44px;padding:36px clamp(18px,3vw,38px);background:linear-gradient(145deg,#191b20,#0d0e11 72%);border:1px solid rgba(255,255,255,.17);border-radius:14px;color:#f5f5f5;font-family:Inter,Arial,sans-serif}
+.al-ready *{box-sizing:border-box}
+.al-ready__intro{display:flex;justify-content:space-between;align-items:flex-end;gap:26px;margin:0 0 24px}
+.al-ready__eyebrow{display:block;font-size:10px;font-weight:800;letter-spacing:.21em;color:#b2bdcf;text-transform:uppercase;margin-bottom:11px}
+.al-ready h3{font:400 clamp(27px,3.7vw,43px)/1.08 Anton,Impact,Inter,Arial,sans-serif;letter-spacing:.015em;text-transform:uppercase;margin:0 0 13px;color:#fff}
+.al-ready__intro p{font:400 14px/1.65 Inter,Arial,sans-serif;color:#b4b7c0;max-width:680px;margin:0}
+.al-ready__stamp{flex:0 0 auto;padding:9px 12px;border:1px solid rgba(255,255,255,.4);font:700 10px/1.4 Inter,Arial,sans-serif;letter-spacing:.12em;color:#fff;text-transform:uppercase}
+.al-ready__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.14)}
+.al-ready__item{background:#13151a;padding:22px 20px;min-width:0}
+.al-ready__item small{display:block;font:800 10px/1.2 Inter,Arial,sans-serif;letter-spacing:.15em;color:#8ca8c9;margin-bottom:11px}
+.al-ready__item strong{display:block;font:700 15px/1.4 Inter,Arial,sans-serif;color:#f0f1f5;margin-bottom:8px}
+.al-ready__item p{font:400 12px/1.65 Inter,Arial,sans-serif;color:#abb1bc;margin:0}
+.al-ready__footer{font:400 11px/1.65 Inter,Arial,sans-serif;color:#929ba9;margin:18px 0 0}
+.al-ready__footer strong{color:#d8dce6;font-weight:700}
+.al-ready a{color:inherit}
+@media(max-width:900px){.al-ready__grid{grid-template-columns:repeat(2,minmax(0,1fr))}.al-ready__intro{align-items:flex-start;flex-direction:column}.al-ready{margin:24px auto 34px}}
+@media(max-width:550px){.al-ready{padding:23px 15px;border-radius:8px}.al-ready__grid{grid-template-columns:1fr}.al-ready__item{padding:18px 16px}.al-ready__stamp{font-size:9px}.al-ready h3{font-size:30px}.al-ready__intro p{font-size:13px}}
+@media(prefers-reduced-motion:reduce){.al-ready *{transition:none!important}}
