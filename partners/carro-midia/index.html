@@ -65,6 +65,7 @@ main{padding-top:36px}.heading{margin-bottom:23px}.panel{box-shadow:0 18px 55px 
   <div class="layout">
    <section class="panel"><div class="mc-welcome"><div><strong>Monte sua campanha</strong><span>Escolha uma cota e aplique a marca da empresa</span></div><a class="mc-advanced" href="/partners/carro-midia/studio/">Visualizar no 360° ↗</a></div><div class="panelhead"><strong>Prévia do veículo</strong><small id="carLabel">Jeep Compass · Esportivo</small></div>
     <div class="stage"><div class="visual" id="visual">
+     <img id="vehiclePhoto" alt="Prévia do veículo escolhido" loading="eager" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:1;display:none" />
      <svg viewBox="0 0 800 340" role="img" aria-label="Representação estilizada de um automóvel, para simulação visual">
        <ellipse cx="397" cy="265" rx="345" ry="23" fill="#000" opacity=".32"/>
        <path id="carShape" d="M54 225 L65 168 Q73 147 120 145 L188 137 L253 75 Q274 51 330 49 L536 49 Q575 50 613 107 L665 148 L740 166 Q768 172 769 207 L763 245 L52 245 Z" fill="#f0f2f5" stroke="#8996a9" stroke-width="4"/>
@@ -111,9 +112,10 @@ main{padding-top:36px}.heading{margin-bottom:23px}.panel{box-shadow:0 18px 55px 
 const $=id=>document.getElementById(id);
 const slotLabels={porta:"Portas",frente:"Dianteira",traseira:"Traseira",vidro:"Superior"};
 const carLabels={hatch:"Compacto",sedan:"Sedã",suv:"SUV",van:"Utilitário"};
+const vehicleAssets={hatch:"/media/ecossistema/mediacar-porsche-911-concept.svg",sedan:"/media/ecossistema/mediacar-bmw.webp",suv:"/media/ecossistema/mediacar-volvo-ex90-concept.svg",van:"/media/ecossistema/mediacar-sprinter-concept.svg"};
 const styleLabels={sport:"Esportivo",classic:"Clássico",dark:"Black"};
 const storageKey="winf-mediacar-demo-v1";
-function empty(){return {territory:"",car:"hatch",customCar:"",style:"sport",slots:{porta:{},frente:{},traseira:{},vidro:{}}};}
+function empty(){return {territory:"",car:"sedan",customCar:"",style:"sport",slots:{porta:{},frente:{},traseira:{},vidro:{}}};}
 let state=empty(), selected="porta";
 const money=n=>new Intl.NumberFormat("pt-BR",{style:"currency",currency:"BRL"}).format(n||0);
 const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -127,6 +129,16 @@ function render(){
  $("logo").value="";
  $("slotName").textContent=slotLabels[selected]+" ("+(Object.keys(slotLabels).indexOf(selected)+1).toString().padStart(2,"0")+")";
  $("carLabel").textContent=carLabels[state.car]+" · "+styleLabels[state.style];
+ const photo=$("vehiclePhoto");
+ const src=vehicleAssets[state.car];
+ if(photo.dataset.model!==state.car){
+   photo.style.display="none";
+   photo.dataset.model=state.car;
+   photo.onload=()=>{photo.style.display="block";document.querySelector("#visual svg").style.opacity="0";};
+   photo.onerror=()=>{photo.style.display="none";document.querySelector("#visual svg").style.opacity="1";};
+   photo.src=src;
+ }
+ photo.style.filter=state.style==="dark"?"contrast(1.15) brightness(.78)":state.style==="classic"?"contrast(1.04) saturate(.78)":"none";
  const palette=state.style==="dark"?["#333842","#cfd5db","#111b28"]:state.style==="classic"?["#faf5ea","#c62237","#475665"]:["#f0f2f5","#2563eb","#263a50"];
  $("carShape").setAttribute("fill",palette[0]);$("stripe").setAttribute("fill",palette[1]);$("windows").setAttribute("fill",palette[2]);
  if(state.car==="hatch") $("carShape").setAttribute("d","M54 225 L65 168 Q73 147 120 145 L188 137 L253 75 Q274 51 330 49 L474 49 Q512 50 555 112 L615 146 L740 166 Q768 172 769 207 L763 245 L52 245 Z");
