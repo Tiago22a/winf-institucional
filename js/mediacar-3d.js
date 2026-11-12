@@ -92,7 +92,11 @@ try{
  function finish(){paint.color.set(colorInput.value);const f=finishInput.value;paint.roughness=f==="matte"?.9:f==="metallic"?.3:.16;paint.metalness=f==="metallic"?.8:.24;paint.clearcoat=f==="matte"?0:1}
  colorInput.addEventListener("input",finish);finishInput.addEventListener("change",finish);
  document.getElementById("mc3dReset").addEventListener("click",()=>{camera.position.set(7,4.2,8.8);controls.target.set(0,.75,0);controls.update()});
- build("coupe");finish();
+ window.MediaCar3D={
+ get:function(){return {model:modelInput.value,color:colorInput.value,finish:finishInput.value,camera:[camera.position.x,camera.position.y,camera.position.z]};},
+ set:function(saved){if(!saved||!["coupe","sedan","suv","van"].includes(saved.model)||!/^#[0-9a-fA-F]{6}$/.test(saved.color)||!["gloss","matte","metallic"].includes(saved.finish))throw Error("Configuração 3D inválida");modelInput.value=saved.model;colorInput.value=saved.color;finishInput.value=saved.finish;build(saved.model);finish();if(Array.isArray(saved.camera)&&saved.camera.length===3&&saved.camera.every(Number.isFinite)){camera.position.set(...saved.camera);controls.update();}}
+};
+build("coupe");finish();
  const observer=new ResizeObserver(()=>{const w=root.clientWidth,h=root.clientHeight;if(!w||!h)return;camera.aspect=w/h;camera.updateProjectionMatrix();renderer.setSize(w,h,false)});observer.observe(root);
  let running=true;function loop(){if(!running)return;requestAnimationFrame(loop);controls.update();renderer.render(scene,camera)}loop();
  window.addEventListener("pagehide",()=>{running=false;observer.disconnect();renderer.dispose()},{once:true});
