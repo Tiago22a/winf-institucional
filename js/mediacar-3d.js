@@ -31,15 +31,16 @@ if (root) {
  try {
    const THREE = await import("three");
    const { OrbitControls } = await import("three/addons/controls/OrbitControls.js");
+   const { GLTFLoader } = await import("three/addons/loaders/GLTFLoader.js");
    const scene = new THREE.Scene();
-   scene.background = new THREE.Color(0xe7e9ec);
+   scene.background = new THREE.Color(0xdde2e8);
    const camera = new THREE.PerspectiveCamera(36, 1, .1, 90);
    camera.position.set(7,3.7,8);
    const renderer = new THREE.WebGLRenderer({antialias:true,alpha:false,powerPreference:"default"});
    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.65));
    renderer.outputColorSpace = THREE.SRGBColorSpace;
    renderer.toneMapping = THREE.ACESFilmicToneMapping;
-   renderer.toneMappingExposure = 1.55;
+   renderer.toneMappingExposure = 1.36;
    renderer.shadowMap.enabled = true;
    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
    renderer.domElement.setAttribute("aria-label", "Visualizador do veículo em 360 graus. Arraste para girar e faça pinça para zoom.");
@@ -57,8 +58,26 @@ if (root) {
    key.shadow.camera.left=-11;key.shadow.camera.right=11;key.shadow.camera.top=11;key.shadow.camera.bottom=-11;
    key.shadow.bias = -.0005;scene.add(key);
    const rim = new THREE.DirectionalLight(0xf5f7fd,2.1);rim.position.set(-7,3,-6);scene.add(rim);
-   const ground = new THREE.Mesh(new THREE.PlaneGeometry(200,200),new THREE.MeshStandardMaterial({color:0xdce0e5,roughness:.83}));
+   
+   // Immersive showroom: a curved horizon, polished floor and soft contact shadow.
+   const backdropCanvas=document.createElement("canvas");
+   backdropCanvas.width=16;backdropCanvas.height=512;
+   const bg=backdropCanvas.getContext("2d");
+   const fade=bg.createLinearGradient(0,0,0,512);
+   fade.addColorStop(0,"#d5dae2");fade.addColorStop(.55,"#e9ebef");fade.addColorStop(.73,"#f6f7f8");fade.addColorStop(1,"#e2e5e8");
+   bg.fillStyle=fade;bg.fillRect(0,0,16,512);
+   const backdropTexture=new THREE.CanvasTexture(backdropCanvas);backdropTexture.colorSpace=THREE.SRGBColorSpace;
+   const backdrop=new THREE.Mesh(new THREE.CylinderGeometry(19,19,22,64,1,true),new THREE.MeshBasicMaterial({map:backdropTexture,side:THREE.BackSide,depthWrite:false}));
+   backdrop.position.y=8;scene.add(backdrop);
+   const ground = new THREE.Mesh(new THREE.PlaneGeometry(200,200),new THREE.MeshPhysicalMaterial({color:0xe8eaee,roughness:.33,metalness:.12,clearcoat:.45,clearcoatRoughness:.30}));
    ground.rotation.x=-Math.PI/2;ground.position.y=-.02;ground.receiveShadow=true;scene.add(ground);
+   const shadowCanvas=document.createElement("canvas");shadowCanvas.width=256;shadowCanvas.height=256;
+   const sx=shadowCanvas.getContext("2d"),sg=sx.createRadialGradient(128,128,8,128,128,124);
+   sg.addColorStop(0,"rgba(30,40,48,.35)");sg.addColorStop(.6,"rgba(30,40,48,.10)");sg.addColorStop(1,"rgba(30,40,48,0)");
+   sx.fillStyle=sg;sx.fillRect(0,0,256,256);
+   const contactShadow=new THREE.Mesh(new THREE.PlaneGeometry(8,6.5),new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(shadowCanvas),transparent:true,depthWrite:false}));
+   contactShadow.rotation.x=-Math.PI/2;contactShadow.position.y=.004;scene.add(contactShadow);
+
    const paint = new THREE.MeshPhysicalMaterial({color:"#101820",metalness:.48,roughness:.18,clearcoat:1,clearcoatRoughness:.11});
    const glass = new THREE.MeshPhysicalMaterial({color:0x273b49,metalness:.32,roughness:.17,transparent:true,opacity:.79,depthWrite:false});
    const trim = new THREE.MeshStandardMaterial({color:0x131619,metalness:.2,roughness:.6});
@@ -68,6 +87,85 @@ if (root) {
    const rearLight = new THREE.MeshStandardMaterial({color:0x970a15,emissive:0x9a0611,emissiveIntensity:.55});
    const templateMat = new THREE.MeshBasicMaterial({color:0x151a1e,transparent:true,opacity:.6,side:THREE.DoubleSide});
    let car=null,carBody=null,bodyInfo=null;
+   let activeImported=null,importToken=0,importPaint=[],importGlass=[];
+   const loader=new GLTFLoader();
+   const assetBase="https://cdn.jsdelivr.net/gh/pedrosoandre/carros@2d18dfd9db96bbf0d9cffa949deaf7f571388cbf/assets/";
+   const models={
+     coupe:{name:"Porsche 911 C4S",file:"porsche-911-c4s.glb",author:"JK3Dstudios",paint:null},
+     sedan:{name:"BMW M4 CSL",file:"bmw-m4-csl.glb",author:"Black Snow",paint:null},
+     suv:{name:"Volvo XC90",file:"volvo-xc90.glb",author:"Spiicy",paint:["Material_0"]},
+     van:{name:"Mercedes-Benz Sprinter",file:"mercedes-benz-sprinter.glb",author:"Savelliy 07",paint:["Color_A10"]}
+   };
+   function setSource(model,loaded){
+     const el=$("mc3dSource"),meta=models[model];
+     if(!el||!meta)return;
+     const line=loaded?"Modelo 3D detalhado • CC BY 4.0 • autor: ":"Prévia geométrica • modelo detalhado indisponível. Autor do arquivo: ";
+     const link=document.createElement("a");
+     link.href="https://github.com/pedrosoandre/carros/blob/main/CREDITS.md";
+     link.target="_blank";link.rel="noopener noreferrer";link.textContent=meta.author+" ↗";
+     el.replaceChildren(document.createTextNode(line),link);
+   }
+   function applyImportedMaterials(){
+     for(const mat of importPaint){mat.color?.set(config.color);mat.roughness=config.finish==="matte"?.83:.27;mat.metalness=config.finish==="metallic"?.73:.4;mat.needsUpdate=true}
+     const tint={clear:{c:"#677781",o:.30},medium:{c:"#1b2b35",o:.64},dark:{c:"#081218",o:.90}}[config.tintPreset];
+     for(const mat of importGlass){mat.transparent=true;mat.depthWrite=false;mat.opacity=tint.o;mat.color?.set(tint.c);mat.needsUpdate=true}
+   }
+   function loadDetailedModel(kind){
+     const serial=++importToken,meta=models[kind];
+     setSource(kind,false);
+     status.textContent="Carregando "+meta.name+" em 3D…";
+     loader.load(assetBase+meta.file,gltf=>{
+       if(serial!==importToken)return;
+       try{
+         const model=gltf.scene;
+         const rawBox=new THREE.Box3().setFromObject(model);
+         const dims=new THREE.Vector3();rawBox.getSize(dims);
+         if(dims.x>dims.z*1.14)model.rotation.y=Math.PI/2;
+         model.updateMatrixWorld(true);
+         const orientedBox=new THREE.Box3().setFromObject(model);
+         const size=new THREE.Vector3();orientedBox.getSize(size);
+         if(Math.max(size.x,size.z)<.01)throw Error("Geometria 3D vazia");
+         const scale=(kind==="van"?5.8:kind==="suv"?5.0:4.75)/Math.max(size.x,size.z);
+         model.scale.multiplyScalar(scale);
+         model.updateMatrixWorld(true);
+         const finalBox=new THREE.Box3().setFromObject(model);
+         const min=finalBox.min,max=finalBox.max;
+         model.position.set(-(min.x+max.x)/2,-min.y+.035,-(min.z+max.z)/2);
+         model.updateMatrixWorld(true);
+         const bounded=new THREE.Box3().setFromObject(model),width=bounded.max.x-bounded.min.x,length=bounded.max.z-bounded.min.z,height=bounded.max.y-bounded.min.y;
+         // Only replace the procedural fallback after the real model is ready.
+         if(car){scene.remove(car);car.traverse(o=>{if(o.geometry)o.geometry.dispose()})}
+         car=new THREE.Group();carBody=new THREE.Group();scene.add(car);car.add(carBody);carBody.add(model);
+         activeImported=model;importPaint=[];importGlass=[];
+         const paintedNames=(meta.paint||[]).map(s=>s.toLowerCase());
+         model.traverse(node=>{
+           if(!node.isMesh)return;
+           node.castShadow=true;node.receiveShadow=true;
+           const mats=Array.isArray(node.material)?node.material:[node.material];
+           const copy=mats.map(m=>m?.clone?.()||m);
+           node.material=Array.isArray(node.material)?copy:copy[0];
+           for(const mat of copy){
+             if(!mat)return;
+             const name=((mat.name||"")+" "+(node.name||"")).toLowerCase();
+             if(/glass|window|windshield|windscreen|vidro|parabrisa/.test(name))importGlass.push(mat);
+             else if(paintedNames.some(x=>name.includes(x))||/car.?paint|body.?paint|carroceria|exterior.?paint/.test(name))importPaint.push(mat);
+           }
+         });
+         const y=Math.min(.95,Math.max(.65,height*.56));
+         bodyInfo=[width,length,y,height];
+         addBrands(width,length,y,height);
+         renderSponsors();
+         applyImportedMaterials();
+         setSource(kind,true);
+         status.textContent=meta.name+" · showroom 360°";
+       }catch(err){console.error("[MediaCar] GLB",err);build(kind,true);status.textContent="Prévia 3D simplificada disponível";}
+     },undefined,error=>{
+       if(serial!==importToken)return;
+       console.warn("[MediaCar] 3D download failed",error);
+       setSource(kind,false);status.textContent="Usando prévia 3D enquanto o modelo detalhado não carrega.";
+     });
+   }
+
    let config={model:"coupe",color:"#101820",finish:"gloss",tintPreset:"medium",camera:[7,3.7,8],slots:{}};
    const id = v => typeof v==="string" && /^[a-z0-9-]{1,25}$/.test(v);
    const validSlot = v => ["left","right","rear","roof"].includes(v);
@@ -165,7 +263,9 @@ if (root) {
        el.textContent=title+" · "+(config.slots[key]?.name||"disponível");return el;
      }));
    }
-   function build(model){
+   function build(model,skipDownload=false){
+     if(!skipDownload)importToken++;
+     activeImported=null;importPaint=[];importGlass=[];
      if(car){scene.remove(car);car.traverse(o=>{if(o.geometry)o.geometry.dispose()})}
      const van=model==="van",suv=model==="suv",sedan=model==="sedan";
      const l=van?6.15:suv?5.2:sedan?5.05:4.75;
@@ -214,7 +314,8 @@ if (root) {
        }
      }
      addBrands(w,l,y,roofY);renderSponsors();refreshUi();
-     status.textContent="Modelo 3D · "+({coupe:"Coupé",sedan:"Sedã",suv:"SUV",van:"Van"}[model]);
+     status.textContent="Preparando "+models[model].name+"…";
+     if(!skipDownload)loadDetailedModel(model);
    }
    function finish(){
      paint.color.set(config.color);
@@ -223,7 +324,7 @@ if (root) {
      paint.clearcoat=config.finish==="matte"?0:1;
      const t={clear:{c:0x718b97,o:.48},medium:{c:0x263845,o:.81},dark:{c:0x071017,o:.97}}[config.tintPreset]||{c:0x263845,o:.81};
      glass.color.set(t.c);glass.opacity=t.o;glass.needsUpdate=true;
-     refreshUi();
+     applyImportedMaterials();refreshUi();
    }
    function refreshUi(){
      active("[data-mc3d-model]",el=>el.dataset.mc3dModel===config.model);
