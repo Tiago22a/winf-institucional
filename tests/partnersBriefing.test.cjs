@@ -108,7 +108,11 @@ test('nomenclatura e afirmacoes comerciais permanecem corretas', () => {
   const corpus = pages.map(read).join('\n');
   assert.doesNotMatch(corpus, /Satellite|Satélite|Black Shop|R\$\s*450\.000/i);
   const briefing = read('briefing/index.html');
-  assert.match(briefing, /45 metros lineares/);
+  assert.match(briefing, /Kit inicial de materiais para começar\./);
+  assert.doesNotMatch(briefing, /45 metros lineares|15 m lineares|15 m de (?:DualReflect|BlackPro|Invisible)/i);
+  const assetLight = read('briefing/asset-light/index.html');
+  assert.match(assetLight, /kit inicial de materiais/i);
+  assert.doesNotMatch(assetLight, /45 metros lineares|15 m de (?:DualReflect|BlackPro|Invisible)/i);
   assert.match(briefing, /R\$\s*15\.000/);
   assert.match(read('briefing/flagship/index.html'), /R\$\s*250\.000/);
   assert.match(read('briefing/quiosque/index.html'), /Asset Light/);
