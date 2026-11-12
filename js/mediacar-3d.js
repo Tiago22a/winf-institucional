@@ -5,8 +5,8 @@ if(root){
 const message=document.getElementById("mc3dMessage");
 const status=document.getElementById("mc3dStatus");
 try{
- const THREE=await import("https://esm.sh/three@0.169.0");
- const {OrbitControls}=await import("https://esm.sh/three@0.169.0/examples/jsm/controls/OrbitControls.js");
+ const THREE=await import("https://esm.sh/three@0.169.0?bundle");
+ const {OrbitControls}=await import("https://esm.sh/three@0.169.0/examples/jsm/controls/OrbitControls.js?bundle");
  const scene=new THREE.Scene();scene.background=new THREE.Color(0x0a1016);
  const camera=new THREE.PerspectiveCamera(36,1,.1,100);camera.position.set(7,4.2,8.8);
  const renderer=new THREE.WebGLRenderer({antialias:true,alpha:false,powerPreference:"high-performance"});
@@ -37,7 +37,7 @@ try{
  }
  function build(model){
   if(car){scene.remove(car);car.traverse(o=>{if(o.geometry)o.geometry.dispose()})}
-  car=new THREE.Group();scene.add(car);
+  car=new THREE.Group();scene.add(car);adPlanes=[];
   const suv=model==="suv",van=model==="van",sedan=model==="sedan";
   const length=van?6.1:suv?5.25:sedan?5.05:4.7;
   const width=van?2.12:2.02;
@@ -85,16 +85,51 @@ try{
   const plaque=new THREE.Mesh(new THREE.PlaneGeometry(.82,.41),new THREE.MeshBasicMaterial({map:texture,side:THREE.DoubleSide}));
   plaque.position.set(-width/2-.014,chassisY+.17,-.4);plaque.rotation.y=-Math.PI/2;car.add(plaque);
   const plaqueOther=plaque.clone();plaqueOther.position.x=width/2+.014;plaqueOther.rotation.y=Math.PI/2;car.add(plaqueOther);
-  status.textContent="Modelo conceitual 3D · "+({coupe:"Coupé",sedan:"Sedã",suv:"SUV",van:"Van"}[model]);
+  applyAd(adText);syncUi();status.textContent="Modelo conceitual 3D · "+({coupe:"Coupé",sedan:"Sedã",suv:"SUV",van:"Van"}[model]);
  }
  const modelInput=document.getElementById("mc3dModel"),colorInput=document.getElementById("mc3dColor"),finishInput=document.getElementById("mc3dFinish");
+ const adInput=document.getElementById("mc3dAdText");
+ let adText="MEDIACAR";
+ let adPlanes=[];
+ function applyAd(value){
+  adText=(value||"").trim().slice(0,22);
+  adPlanes.forEach(mesh=>{car.remove(mesh);mesh.geometry.dispose();mesh.material.map?.dispose();mesh.material.dispose()});adPlanes=[];
+  if(!adText)return;
+  const canvas=document.createElement("canvas");canvas.width=1024;canvas.height=256;
+  const ctx=canvas.getContext("2d");ctx.clearRect(0,0,1024,256);
+  ctx.fillStyle="#e1ff4c";ctx.fillRect(0,0,1024,256);
+  ctx.fillStyle="#101820";ctx.textAlign="center";ctx.textBaseline="middle";ctx.font="bold 100px Arial";ctx.fillText(adText,512,128,960);
+  const texture=new THREE.CanvasTexture(canvas);texture.colorSpace=THREE.SRGBColorSpace;
+  for(const side of [-1,1]){
+   const plane=new THREE.Mesh(new THREE.PlaneGeometry(2.1,.52),new THREE.MeshBasicMaterial({map:texture,side:THREE.DoubleSide,transparent:true}));
+   plane.position.set(side*1.025,.88,0);plane.rotation.y=side*Math.PI/2;car.add(plane);adPlanes.push(plane);
+  }
+ }
+ document.querySelectorAll("[data-mc3d-tab]").forEach(btn=>btn.addEventListener("click",()=>{
+  document.querySelectorAll("[data-mc3d-tab]").forEach(el=>{const active=el===btn;el.classList.toggle("is-active",active);el.setAttribute("aria-selected",String(active))});
+  document.querySelectorAll("[data-mc3d-pane]").forEach(el=>{const active=el.dataset.mc3dPane===btn.dataset.mc3dTab;el.hidden=!active;el.classList.toggle("is-active",active)});
+ }));
+ document.querySelectorAll("[data-mc3d-model]").forEach(btn=>btn.addEventListener("click",()=>{modelInput.value=btn.dataset.mc3dModel;modelInput.dispatchEvent(new Event("change"))}));
+ document.querySelectorAll("[data-mc3d-color]").forEach(btn=>btn.addEventListener("click",()=>{colorInput.value=btn.dataset.mc3dColor;colorInput.dispatchEvent(new Event("input"))}));
+ document.querySelectorAll("[data-mc3d-finish]").forEach(btn=>btn.addEventListener("click",()=>{finishInput.value=btn.dataset.mc3dFinish;finishInput.dispatchEvent(new Event("change"))}));
+ document.getElementById("mc3dApplyAd")?.addEventListener("click",()=>applyAd(adInput.value));
+ document.getElementById("mc3dClearAd")?.addEventListener("click",()=>{adInput.value="";applyAd("")});
+ function syncUi(){
+  document.querySelectorAll("[data-mc3d-model]").forEach(el=>el.classList.toggle("is-active",el.dataset.mc3dModel===modelInput.value));
+  document.querySelectorAll("[data-mc3d-finish]").forEach(el=>el.classList.toggle("is-active",el.dataset.mc3dFinish===finishInput.value));
+  document.querySelectorAll("[data-mc3d-color]").forEach(el=>el.classList.toggle("is-active",el.dataset.mc3dColor.toLowerCase()===colorInput.value.toLowerCase()));
+ }
+ const localKey="winf-mediacar-3d-device-v1";
+ document.getElementById("mc3dSaveDevice")?.addEventListener("click",()=>{try{localStorage.setItem(localKey,JSON.stringify(window.MediaCar3D.get()));status.textContent="Garagem salva neste aparelho ✓"}catch(e){status.textContent="Armazenamento indisponível"}});
+ document.getElementById("mc3dLoadDevice")?.addEventListener("click",()=>{try{const saved=JSON.parse(localStorage.getItem(localKey)||"null");if(!saved)throw Error("Nenhuma garagem salva");window.MediaCar3D.set(saved);status.textContent="Garagem recuperada ✓"}catch(e){status.textContent=e.message}});
+
  modelInput.addEventListener("change",()=>build(modelInput.value));
- function finish(){paint.color.set(colorInput.value);const f=finishInput.value;paint.roughness=f==="matte"?.9:f==="metallic"?.3:.16;paint.metalness=f==="metallic"?.8:.24;paint.clearcoat=f==="matte"?0:1}
+ function finish(){paint.color.set(colorInput.value);const f=finishInput.value;paint.roughness=f==="matte"?.9:f==="metallic"?.3:.16;paint.metalness=f==="metallic"?.8:.24;paint.clearcoat=f==="matte"?0:1;syncUi()}
  colorInput.addEventListener("input",finish);finishInput.addEventListener("change",finish);
  document.getElementById("mc3dReset").addEventListener("click",()=>{camera.position.set(7,4.2,8.8);controls.target.set(0,.75,0);controls.update()});
  window.MediaCar3D={
- get:function(){return {model:modelInput.value,color:colorInput.value,finish:finishInput.value,camera:[camera.position.x,camera.position.y,camera.position.z]};},
- set:function(saved){if(!saved||!["coupe","sedan","suv","van"].includes(saved.model)||!/^#[0-9a-fA-F]{6}$/.test(saved.color)||!["gloss","matte","metallic"].includes(saved.finish))throw Error("Configuração 3D inválida");modelInput.value=saved.model;colorInput.value=saved.color;finishInput.value=saved.finish;build(saved.model);finish();if(Array.isArray(saved.camera)&&saved.camera.length===3&&saved.camera.every(Number.isFinite)){camera.position.set(...saved.camera);controls.update();}}
+ get:function(){return {model:modelInput.value,color:colorInput.value,finish:finishInput.value,camera:[camera.position.x,camera.position.y,camera.position.z],adText};},
+ set:function(saved){if(!saved||!["coupe","sedan","suv","van"].includes(saved.model)||!/^#[0-9a-fA-F]{6}$/.test(saved.color)||!["gloss","matte","metallic"].includes(saved.finish))throw Error("Configuração 3D inválida");modelInput.value=saved.model;colorInput.value=saved.color;finishInput.value=saved.finish;build(saved.model);finish();if(adInput){adInput.value=typeof saved.adText==="string"?saved.adText.slice(0,22):"MEDIACAR";applyAd(adInput.value)}if(Array.isArray(saved.camera)&&saved.camera.length===3&&saved.camera.every(Number.isFinite)){camera.position.set(...saved.camera);controls.update();}}
 };
 build("coupe");finish();
  const observer=new ResizeObserver(()=>{const w=root.clientWidth,h=root.clientHeight;if(!w||!h)return;camera.aspect=w/h;camera.updateProjectionMatrix();renderer.setSize(w,h,false)});observer.observe(root);
