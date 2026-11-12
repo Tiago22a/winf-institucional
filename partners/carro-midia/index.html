@@ -26,7 +26,7 @@ input:focus-visible,select:focus-visible{outline:2px solid #bad5ff;outline-offse
 const $=id=>document.getElementById(id);
 const SLOT_IDS=['a','b','c','d'];
 const LABELS={a:'Portas',b:'Capô',c:'Traseira',d:'Lateral'};
-const CAR_IDS=['hatch','sedan','suv','van'];
+const CAR_IDS=['hatch','sedan','suv','suvpremium'];
 const STYLE_API={winf:'sport',dark:'dark',classic:'classic'};
 const STYLE_APP={sport:'winf',dark:'dark',classic:'classic'};
 const POS={a:[.57,.45,.21,.20],b:[.23,.32,.23,.14],c:[.80,.40,.11,.14],d:[.46,.37,.11,.11]};
@@ -142,7 +142,7 @@ $('close').addEventListener('click',()=>{$('draft').classList.remove('show');doc
 $('print').addEventListener('click',()=>window.print());
 window.MediaCarApp={
  get(){capture();return {territory:state.territory,car:CAR_IDS[state.car],style:STYLE_API[state.style],slots:{porta:{sponsor:state.slots.a.brand,price:state.slots.a.value,logo:state.slots.a.logo},frente:{sponsor:state.slots.b.brand,price:state.slots.b.value,logo:state.slots.b.logo},traseira:{sponsor:state.slots.c.brand,price:state.slots.c.value,logo:state.slots.c.logo},vidro:{sponsor:state.slots.d.brand,price:state.slots.d.value,logo:state.slots.d.logo}}};},
- set(data){const next=blank();const n=CAR_IDS.indexOf(data.car);next.car=n<0?0:n;next.style=STYLE_APP[data.style]||'winf';next.territory=data.territory||'';for(const [id,remote] of Object.entries({a:'porta',b:'frente',c:'traseira',d:'vidro'})){const q=data.slots?.[remote]||{};next.slots[id]={brand:q.sponsor||'',value:q.price||0,logo:q.logo||null};}state=sanitize(next);selected='a';render();saveLocal();}
+ set(data){const next=blank();const n=CAR_IDS.indexOf(data.car==='van'?'suvpremium':data.car);next.car=n<0?0:n;next.style=STYLE_APP[data.style]||'winf';next.territory=data.territory||'';for(const [id,remote] of Object.entries({a:'porta',b:'frente',c:'traseira',d:'vidro'})){const q=data.slots?.[remote]||{};next.slots[id]={brand:q.sponsor||'',value:q.price||0,logo:q.logo||null};}state=sanitize(next);selected='a';render();saveLocal();}
 };
 loadSaved();render();
 </script><script type="module" src="/js/mediacar-sync.js?v=20261112-v3"></script></body></html>
