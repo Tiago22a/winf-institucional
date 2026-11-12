@@ -1,0 +1,48 @@
+/* WINF OS™ — acesso no Briefing WINF Partners.
+   Reutiliza exclusivamente o Ghost oficial, sem alterar o desenho. */
+.partners-page .partners-site-header .briefing-os-launch {
+  display: inline-flex; align-items: center; justify-content: center; gap: 11px;
+  flex: 0 0 auto; min-height: 54px; padding: 8px 15px 8px 12px;
+  margin-inline: auto 16px; color: #fff; text-decoration: none;
+  border: 1px solid rgba(180,208,238,.53);
+  border-radius: 18px 6px 18px 6px;
+  background: linear-gradient(115deg,rgba(8,25,47,.92),rgba(6,11,23,.79));
+  box-shadow: 0 10px 32px rgba(0,0,0,.22), inset 0 1px rgba(255,255,255,.11);
+  -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
+  position: relative; isolation: isolate;
+  transition: border-color .2s ease, background .2s ease, transform .2s ease;
+}
+.partners-page .partners-site-header .briefing-os-launch:before{
+  content:""; position:absolute; inset:7px auto 7px 0; width:2px;
+  background:#7cc7ff; border-radius:2px; opacity:.75;
+}
+.partners-page .partners-site-header .briefing-os-launch img.briefing-os-ghost{
+  width:29px; height:34px; object-fit:contain; flex:0 0 auto;
+  filter:drop-shadow(0 1px 6px rgba(255,255,255,.23));
+}
+.briefing-os-copy{display:flex;flex-direction:column;gap:1px;white-space:nowrap}
+.briefing-os-copy small{font-family:Inter,system-ui,sans-serif;font-size:8px;font-weight:600;letter-spacing:.24em;color:#bdd3ea}
+.briefing-os-copy strong{font-family:Gustavo,Inter,system-ui,sans-serif;font-size:15px;letter-spacing:.025em;line-height:1.1;font-weight:700}
+.briefing-os-copy em{font-style:normal;color:#9cd5ff}
+.briefing-os-copy sup{font-size:7px;vertical-align:super;margin-left:2px}
+.briefing-os-arrow{font-size:17px;line-height:1;color:#c5d7e8;margin-left:5px}
+.partners-page .partners-site-header .briefing-os-launch:is(:hover,:focus-visible){
+  border-color:#d8ecff; background:linear-gradient(115deg,rgba(14,43,72,.95),rgba(9,20,38,.88));
+  transform:translateY(-2px);
+}
+.partners-page .partners-site-header .briefing-os-launch:focus-visible{outline:2px solid #fff;outline-offset:4px}
+@media(max-width:800px){
+ .partners-page .partners-site-header .briefing-os-launch{min-height:48px;gap:7px;padding:7px 10px;margin-right:7px}
+ .briefing-os-copy small,.briefing-os-arrow{display:none}
+ .briefing-os-copy strong{font-size:13px}
+ .partners-page .partners-site-header .briefing-os-launch img.briefing-os-ghost{width:24px;height:29px}
+}
+@media(max-width:420px){
+ .partners-page .partners-site-header .briefing-os-launch{padding:7px 8px;gap:5px;margin-right:4px;min-height:43px}
+ .briefing-os-copy strong{font-size:11px}
+ .partners-page .partners-site-header .briefing-os-launch img.briefing-os-ghost{width:20px;height:24px}
+}
+@media(prefers-reduced-motion:reduce){
+ .partners-page .partners-site-header .briefing-os-launch{transition:none}
+ .partners-page .partners-site-header .briefing-os-launch:is(:hover,:focus-visible){transform:none}
+}
