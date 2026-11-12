@@ -32,6 +32,7 @@ if (root) {
    const THREE = await import("three");
    const { OrbitControls } = await import("three/addons/controls/OrbitControls.js");
    const { GLTFLoader } = await import("three/addons/loaders/GLTFLoader.js");
+   const { MeshoptDecoder } = await import("three/addons/libs/meshopt_decoder.module.js");
    const scene = new THREE.Scene();
    scene.background = new THREE.Color(0xdde2e8);
    const camera = new THREE.PerspectiveCamera(36, 1, .1, 90);
@@ -51,6 +52,22 @@ if (root) {
    orbit.minDistance = 4.3;orbit.maxDistance = 18;
    orbit.minPolarAngle = .06;orbit.maxPolarAngle = Math.PI/2-.025;
    orbit.enablePan = false;
+   // Wheel is reserved for page scrolling. Zoom uses explicit buttons.
+   renderer.domElement.style.touchAction="pan-y";
+   const coarse=()=>window.matchMedia("(pointer: coarse)").matches;
+   let touchEditing=false;
+   function syncTouchMode(){
+     orbit.enabled=!coarse()||touchEditing;
+     renderer.domElement.style.touchAction=coarse()?(touchEditing?"none":"pan-y"):"auto";
+     const toggle=document.getElementById("mc3dTouchToggle");
+     if(toggle){toggle.hidden=!coarse();toggle.textContent=touchEditing?"Concluir giro":"Girar veículo 360°";toggle.setAttribute("aria-pressed",String(touchEditing));}
+   }
+   document.getElementById("mc3dTouchToggle")?.addEventListener("click",()=>{touchEditing=!touchEditing;syncTouchMode();});
+   window.matchMedia("(pointer: coarse)").addEventListener?.("change",()=>{touchEditing=false;syncTouchMode();});
+   syncTouchMode();
+   renderer.domElement.addEventListener("wheel",e=>e.stopImmediatePropagation(),{capture:true,passive:true});
+   document.getElementById("mc3dZoomIn")?.addEventListener("click",()=>{const v=camera.position.clone().sub(orbit.target).multiplyScalar(.88);camera.position.copy(orbit.target).add(v);orbit.update();});
+   document.getElementById("mc3dZoomOut")?.addEventListener("click",()=>{const v=camera.position.clone().sub(orbit.target).multiplyScalar(1.13);camera.position.copy(orbit.target).add(v);orbit.update();});
    const hemi = new THREE.HemisphereLight(0xffffff,0x858c94,3.2);scene.add(hemi);
    const key = new THREE.DirectionalLight(0xffffff,3.2);
    key.position.set(3.5,10,5);key.castShadow=true;
@@ -89,6 +106,7 @@ if (root) {
    let car=null,carBody=null,bodyInfo=null;
    let activeImported=null,importToken=0,importPaint=[],importGlass=[];
    const loader=new GLTFLoader();
+   loader.setMeshoptDecoder(MeshoptDecoder);
    const assetBase="https://cdn.jsdelivr.net/gh/pedrosoandre/carros@2d18dfd9db96bbf0d9cffa949deaf7f571388cbf/assets/";
    const models={
      coupe:{name:"Porsche 911 C4S",file:"porsche-911-c4s.glb",author:"JK3Dstudios",source:"https://sketchfab.com/3d-models/none-ee69c474a1cc4085944cde4cb7ae87db",paint:null},
@@ -168,7 +186,7 @@ if (root) {
      });
    }
 
-   let config={model:"coupe",color:"#101820",finish:"gloss",tintPreset:"medium",camera:[7,3.7,8],slots:{}};
+   let config={model:"coupe",color:"#f5f5f5",finish:"gloss",tintPreset:"medium",camera:[7,3.7,8],slots:{}};
    const id = v => typeof v==="string" && /^[a-z0-9-]{1,25}$/.test(v);
    const validSlot = v => ["left","right","rear","roof"].includes(v);
    const modelInput=$("mc3dModel"),colorInput=$("mc3dColor"),finishInput=$("mc3dFinish");
@@ -342,7 +360,7 @@ if (root) {
    }
    document.querySelectorAll("[data-mc3d-view]").forEach(el=>el.addEventListener("click",()=>setView(el.dataset.mc3dView)));
    $("mc3dReset")?.addEventListener("click",()=>setView("perspective"));
-   function changeModel(m){if(!["coupe","sedan","suv","van"].includes(m))return;config.model=m;modelInput.value=m;build(m)}
+   function changeModel(m){if(!["coupe","sedan","suv","van"].includes(m))return;config.model=m;modelInput.value=m;config.color="#f5f5f5";colorInput.value=config.color;build(m);finish();setView("perspective");}
    document.querySelectorAll("[data-mc3d-model]").forEach(el=>el.addEventListener("click",()=>changeModel(el.dataset.mc3dModel)));
    modelInput.addEventListener("change",()=>changeModel(modelInput.value));
    document.querySelectorAll("[data-mc3d-color]").forEach(el=>el.addEventListener("click",()=>{config.color=el.dataset.mc3dColor;colorInput.value=config.color;finish()}));
