@@ -1,0 +1,26 @@
+name: WINF Partners — Acesso ao WINF OS
+on:
+  push:
+    branches: [feature/partners-winf-os-login-entry-20261111]
+    paths:
+      - 'partners/index.html'
+      - 'hub/index.html'
+      - 'tests/partners-winf-os-login-entry.test.mjs'
+      - '.github/workflows/partners-winf-os-login-entry.yml'
+  pull_request:
+    paths:
+      - 'partners/index.html'
+      - 'hub/index.html'
+      - 'tests/partners-winf-os-login-entry.test.mjs'
+      - '.github/workflows/partners-winf-os-login-entry.yml'
+jobs:
+  portal:
+    runs-on: ubuntu-latest
+    permissions: {contents: read}
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test tests/partners-winf-os-login-entry.test.mjs

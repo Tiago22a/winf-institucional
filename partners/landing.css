@@ -314,3 +314,22 @@ body.wp-menu-open{overflow:hidden}
   .winf-partners-site .wp-header .partners-lockup-wordmark,
   .winf-partners-site .wp-footer-base .partners-lockup-wordmark{font-size:21px;padding-left:7px}
 }
+
+/* Header WINF™ | PARTNERS™ — assinatura horizontal, sem microtexto sob o logo.
+   Mantém o SVG oficial e a linha divisória; o rodapé conserva sua assinatura. */
+.winf-partners-site .wp-header .wp-parent-logo{gap:0}
+.winf-partners-site .wp-header .partners-landing-lockup{gap:12px;white-space:nowrap}
+.winf-partners-site .wp-header .partners-lockup-wordmark{
+  align-items:center;
+  padding-left:13px;
+  border-left:1px solid rgba(255,255,255,.65);
+}
+@media(max-width:760px){
+  .winf-partners-site .wp-header .partners-landing-lockup{gap:9px}
+  .winf-partners-site .wp-header .partners-lockup-wordmark{padding-left:9px;font-size:clamp(19px,4vw,25px)}
+}
+@media(max-width:420px){
+  .winf-partners-site .wp-header .partners-landing-lockup{gap:6px}
+  .winf-partners-site .wp-header .wp-parent-logo img{height:clamp(22px,6vw,26px)}
+  .winf-partners-site .wp-header .partners-lockup-wordmark{padding-left:7px;font-size:clamp(17px,4.4vw,20px)}
+}
