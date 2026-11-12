@@ -6,7 +6,7 @@ const path=require("node:path");
 const vm=require("node:vm");
 const root=path.resolve(__dirname,"..");
 const read=p=>fs.readFileSync(path.join(root,p),"utf8");
-const studio=read("partners/carro-midia/index.html");
+const studio=read("partners/carro-midia/studio/360/index.html");
 const preview=read("js/mediacar-client-preview.js");
 const tiny="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO7aM4EAAAAASUVORK5CYII=";
 function previewAPI(){

@@ -1,0 +1,24 @@
+/* MediaCar™ footer — WINF Partners / Briefing visual language, not AeroCore. */
+.mc-p-footer{clear:both;background:#090a0c;color:#b9bdc5;border-top:1px solid #ffffff29;font:400 13px/1.7 Inter,Arial,sans-serif;padding:64px 24px 36px;text-align:left}
+.mc-p-footer *{box-sizing:border-box}
+.mc-p-footer-inner{max-width:1180px;margin:0 auto}
+.mc-p-footer-top{display:flex;align-items:start;justify-content:space-between;gap:35px;padding-bottom:40px}
+.mc-p-footer-identity{flex:1;min-width:240px}
+.mc-p-footer-lockup{display:inline-flex;align-items:center;gap:15px;text-decoration:none;color:#fff}
+.mc-p-footer-lockup img{width:105px;height:auto;display:block}
+.mc-p-footer-lockup strong{font:400 23px/1 Anton,Impact,sans-serif;letter-spacing:.08em;border-left:1px solid #ffffff5c;padding-left:15px}
+.mc-p-footer-identity p{margin:16px 0 0;max-width:350px;color:#9a9fa8;font-size:13px}
+.mc-p-footer-nav{display:grid;grid-template-columns:repeat(2,minmax(140px,1fr));gap:42px;flex:1.2}
+.mc-p-footer-nav nav{display:grid;align-content:start;gap:10px}
+.mc-p-footer-nav strong{font:800 10px/1.5 Inter,Arial,sans-serif;letter-spacing:.18em;color:#f0f1f4;margin-bottom:4px}
+.mc-p-footer a{color:#cdd0d7;text-decoration:none}
+.mc-p-footer a:hover{color:#fff}
+.mc-p-footer a:focus-visible{outline:2px solid #fff;outline-offset:4px}
+.mc-p-footer-bottom{border-top:1px solid #ffffff28;padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.mc-p-footer-bottom>p:first-child{margin:0;color:#999da7;font-size:11px;letter-spacing:.08em}
+.mc-p-footer .winf-site-signature{border:0;margin:0;padding:0;text-align:right;font:500 11px/1.7 Inter,Arial,sans-serif}
+.mc-p-footer .winf-site-signature a{color:#eee;text-decoration:underline;text-underline-offset:4px}
+.mc-p-footer-bottom .mc-p-footer-note{flex-basis:100%;font-size:11px;line-height:1.6;color:#8d929d;margin:5px 0 0}
+@media(max-width:750px){.mc-p-footer{padding:44px 18px 28px}.mc-p-footer-top{display:grid;grid-template-columns:1fr;gap:29px}.mc-p-footer-nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.mc-p-footer-lockup img{width:84px}.mc-p-footer-lockup strong{font-size:19px}.mc-p-footer-bottom{display:block}.mc-p-footer .winf-site-signature{margin-top:10px;text-align:left}}
+@media(max-width:400px){.mc-p-footer-nav{grid-template-columns:1fr;gap:25px}}
+@media print{.mc-p-footer{display:none!important}}

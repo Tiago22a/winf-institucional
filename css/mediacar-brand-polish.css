@@ -1,0 +1,35 @@
+/* MediaCar™ simulation — matches the approved black/cinematic institutional landing.
+   Only visual rules: no changes to quotas, storage, calculation or cloud integration. */
+.mc-brand-screen{font-family:Inter,Arial,sans-serif;background:#090a0c}
+.mc-brand-screen .mc-sim-header{
+  background:#090a0b;border-bottom:1px solid #ffffff30;
+  min-height:82px;padding:16px max(18px,calc((100vw - 1180px)/2));
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+}
+.mc-sim-brand{display:inline-flex;align-items:center;gap:14px;min-width:0;text-decoration:none;color:#fff}
+.mc-sim-brand img{width:88px;height:auto;max-height:34px;object-fit:contain}
+.mc-sim-brand strong{font:400 26px/1 Anton,Impact,sans-serif;letter-spacing:.03em;white-space:nowrap}
+.mc-sim-brand span{color:#aab0bb;font:700 10px/1.6 Inter,Arial,sans-serif;letter-spacing:.13em;white-space:nowrap}
+.mc-sim-back{
+  display:inline-flex;align-items:center;justify-content:center;min-height:42px;
+  padding:10px 13px;border:1px solid #ffffff50;
+  color:#e5e7eb!important;text-decoration:none;font:700 10px/1.45 Inter,Arial,sans-serif;letter-spacing:.1em;
+  white-space:nowrap;
+}
+.mc-sim-back:hover{border-color:#fff;background:#ffffff12}
+.mc-brand-screen h1{font-family:Anton,Impact,sans-serif;font-weight:400;line-height:1.02;letter-spacing:-.012em;text-transform:uppercase;font-size:clamp(43px,5vw,66px)}
+.mc-brand-screen .eyebrow{font-weight:800;letter-spacing:.2em;font-size:10px}
+.mc-brand-screen .panel{background:#15161a;border-color:#ffffff2e;border-radius:11px}
+.mc-brand-screen .head{border-color:#ffffff2e}
+.mc-brand-screen .btn{border-radius:6px}
+.mc-brand-screen a:focus-visible,.mc-sim-header a:focus-visible{outline:2px solid white;outline-offset:4px}
+@media(max-width:750px){
+ .mc-brand-screen .mc-sim-header{padding:13px 16px;min-height:72px;gap:9px}
+ .mc-sim-brand{gap:9px}.mc-sim-brand img{width:56px}
+ .mc-sim-brand strong{font-size:20px}
+ .mc-sim-brand span{display:none}
+ .mc-sim-back{font-size:9px;white-space:normal;text-align:center;max-width:130px}
+ .mc-brand-screen h1{font-size:clamp(40px,10vw,56px)}
+}
+@media(max-width:360px){.mc-sim-brand img{width:44px}.mc-sim-brand strong{font-size:18px}.mc-sim-back{font-size:8px;max-width:113px;padding:8px}}
+@media print{.mc-brand-screen .mc-sim-header{display:none}}
