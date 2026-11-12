@@ -1,0 +1,33 @@
+name: WINF Select - Centrais DDD 013 e 015
+on:
+  pull_request:
+    paths:
+      - 'insulfilm-residencial-sorocaba-sp/**'
+      - 'pelicula-de-controle-solar-pilar-do-sul-sp/**'
+      - 'pelicula-de-controle-solar-santos-sp/**'
+      - 'pelicula-de-controle-solar-guaruja-sp/**'
+      - 'pelicula-de-controle-solar-praia-grande-sp/**'
+      - 'tests/regionais-whatsapp.test.cjs'
+      - '.github/workflows/regionais-whatsapp.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'insulfilm-residencial-sorocaba-sp/**'
+      - 'pelicula-de-controle-solar-pilar-do-sul-sp/**'
+      - 'pelicula-de-controle-solar-santos-sp/**'
+      - 'pelicula-de-controle-solar-guaruja-sp/**'
+      - 'pelicula-de-controle-solar-praia-grande-sp/**'
+      - 'tests/regionais-whatsapp.test.cjs'
+      - '.github/workflows/regionais-whatsapp.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test tests/regionais-whatsapp.test.cjs
