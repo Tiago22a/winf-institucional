@@ -58,10 +58,26 @@ for(const mode of modes) {
           whatsapp:!!nav,
           logo:[...document.querySelectorAll('img')].filter(x=>x.src.includes('winf-logo')).map(x=>({loaded:x.complete&&x.naturalWidth>0,width:x.naturalWidth})),
           badAlt:[...document.querySelectorAll('img')].filter(x=>!x.hasAttribute('alt')).length,
-          wrongRegionText:(document.body.innerText.match(/(?:CUIABÁ|CAMPINA GRANDE)\s*\/\s*SP\b/)||[])[0]||null
+          wrongRegionText:(document.body.innerText.match(/(?:CUIABÁ|CAMPINA GRANDE)\s*\/\s*SP\b/)||[])[0]||null,
+          dockState:(()=>{
+            const dock=document.querySelector('.santos-contact-dock');
+            const links=dock?[...dock.querySelectorAll(':scope > a')]:[];
+            const rects=links.map(x=>x.getBoundingClientRect());
+            const intersects=rects.length===2&&rects[0].left<rects[1].right&&rects[0].right>rects[1].left&&rects[0].top<rects[1].bottom&&rects[0].bottom>rects[1].top;
+            const globalSelectors='#winf-quick-contact,#winf-global-dock,.winf-global-floating-dock,#floating-contact-dock';
+            const globalVisible=[...document.querySelectorAll(globalSelectors)].filter(el=>{const style=getComputedStyle(el);return style.display!=='none'&&style.visibility!=='hidden'}).length;
+            return {localCount:document.querySelectorAll('.santos-contact-dock').length,buttons:links.length,
+              ghosts:links.filter(x=>x.classList.contains('santos-contact-ghost')).length,
+              whatsapp:links.filter(x=>x.classList.contains('santos-contact-whatsapp')).length,
+              globalVisible,intersects,
+              withinViewport:rects.every(x=>x.left>=0&&x.right<=innerWidth&&x.top>=0&&x.bottom<=innerHeight)};
+          })()
         }
       });
       check.metrics = a;
+      if(a.dockState.localCount!==1||a.dockState.buttons!==2||a.dockState.ghosts!==1||a.dockState.whatsapp!==1)check.errors.push('Dock local duplicado ou incompleto: '+JSON.stringify(a.dockState));
+      if(a.dockState.globalVisible!==0)check.errors.push('Botões globais ainda sobrepostos ao dock da cidade');
+      if(a.dockState.intersects||!a.dockState.withinViewport)check.errors.push('Dock local fora da tela ou com botões sobrepostos');
       if(a.h1Count!==1)check.errors.push('H1: '+a.h1Count);
       if(a.canonical!==CANONICAL_BASE+'/'+path+'/')check.errors.push('Canonical incorreto');
       if(a.robots.toLowerCase().includes('noindex'))check.errors.push('Página noindex');
