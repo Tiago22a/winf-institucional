@@ -1,6 +1,6 @@
 /**
  * Cadastro de 100 territórios WINF — relação informada pelo responsável da rede.
- * Sete páginas regionais publicadas; status operacional é tratado separadamente.
+ * O status operacional é tratado separadamente das páginas regionais.
  * As demais estão não ativas; esse status não confirma disponibilidade territorial.
  *
  * status: "ativa" | "pre_ativacao" | "nao_ativa" (situação operacional).
@@ -1455,14 +1455,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "95",
     "cidade": "Itapetininga",
     "uf": "SP",
-    "status": "nao_ativa",
-    "tipoAtendimento": null,
-    "numero": null,
-    "url": null,
+    "status": "pre_ativacao",
+    "tipoAtendimento": "residencial",
+    "numero": "5515997909049",
+    "url": "/pelicula-para-vidro-controle-solar-itapetininga-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Atendimento pela Central WINF Select™ DDD 015. Instalação e agenda sob consulta.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "santana-de-parnaiba-sp",
@@ -1556,6 +1557,94 @@ globalThis.WINF_UNIDADES_EXTRAS = [
     "url": "/pelicula-de-controle-solar-pilar-do-sul-sp/",
     "instagram": "https://www.instagram.com/winfselect.pilardosul/",
     "observacoes": "Atendimento pela Central WINF Select™ DDD 015, com identificação da cidade; instalação e agenda sob consulta.",
+    "disponivelParaAtivacao": false,
+    "exemplo": false
+  }
+];
+
+// Páginas regionais fora da lista original de 100 territórios.
+globalThis.WINF_PAGINAS_REGIONAIS = [
+  {
+    "id": "votorantim-sp",
+    "cidade": "Votorantim",
+    "uf": "SP",
+    "status": "pre_ativacao",
+    "siteAtivo": true,
+    "tipoAtendimento": "residencial",
+    "numero": "5515997909049",
+    "url": "/pelicula-para-vidro-controle-solar-votorantim-sp/",
+    "observacoes": "Atendimento pela Central WINF Select™ DDD 015. Instalação e agenda sob consulta.",
+    "instagram": null,
+    "disponivelParaAtivacao": false,
+    "exemplo": false
+  },
+  {
+    "id": "aracoiaba-da-serra-sp",
+    "cidade": "Araçoiaba da Serra",
+    "uf": "SP",
+    "status": "pre_ativacao",
+    "siteAtivo": true,
+    "tipoAtendimento": "residencial",
+    "numero": "5515997909049",
+    "url": "/pelicula-para-vidro-controle-solar-aracoiaba-da-serra-sp/",
+    "observacoes": "Atendimento pela Central WINF Select™ DDD 015. Instalação e agenda sob consulta.",
+    "instagram": null,
+    "disponivelParaAtivacao": false,
+    "exemplo": false
+  },
+  {
+    "id": "salto-de-pirapora-sp",
+    "cidade": "Salto de Pirapora",
+    "uf": "SP",
+    "status": "pre_ativacao",
+    "siteAtivo": true,
+    "tipoAtendimento": "residencial",
+    "numero": "5515997909049",
+    "url": "/pelicula-para-vidro-controle-solar-salto-de-pirapora-sp/",
+    "observacoes": "Atendimento pela Central WINF Select™ DDD 015. Instalação e agenda sob consulta.",
+    "instagram": null,
+    "disponivelParaAtivacao": false,
+    "exemplo": false
+  },
+  {
+    "id": "piedade-sp",
+    "cidade": "Piedade",
+    "uf": "SP",
+    "status": "pre_ativacao",
+    "siteAtivo": true,
+    "tipoAtendimento": "residencial",
+    "numero": "5515997909049",
+    "url": "/pelicula-para-vidro-controle-solar-piedade-sp/",
+    "observacoes": "Atendimento pela Central WINF Select™ DDD 015. Instalação e agenda sob consulta.",
+    "instagram": null,
+    "disponivelParaAtivacao": false,
+    "exemplo": false
+  },
+  {
+    "id": "ipero-sp",
+    "cidade": "Iperó",
+    "uf": "SP",
+    "status": "pre_ativacao",
+    "siteAtivo": true,
+    "tipoAtendimento": "residencial",
+    "numero": "5515997909049",
+    "url": "/pelicula-para-vidro-controle-solar-ipero-sp/",
+    "observacoes": "Atendimento pela Central WINF Select™ DDD 015. Instalação e agenda sob consulta.",
+    "instagram": null,
+    "disponivelParaAtivacao": false,
+    "exemplo": false
+  },
+  {
+    "id": "capela-do-alto-sp",
+    "cidade": "Capela do Alto",
+    "uf": "SP",
+    "status": "pre_ativacao",
+    "siteAtivo": true,
+    "tipoAtendimento": "residencial",
+    "numero": "5515997909049",
+    "url": "/pelicula-para-vidro-controle-solar-capela-do-alto-sp/",
+    "observacoes": "Atendimento pela Central WINF Select™ DDD 015. Instalação e agenda sob consulta.",
+    "instagram": null,
     "disponivelParaAtivacao": false,
     "exemplo": false
   }

@@ -2546,9 +2546,13 @@ body.winf-catalog-page #hero-title.winf-catalog-hero-all span{
 // ===================== LOGICA DO PARAMETRO WHATSAPP PARTNER =====================
 const urlParams = new URLSearchParams(window.location.search);
 const partnerParam = (urlParams.get('partner')||'').replace(/\D/g,'');
-const WHATSAPP_NUMBER = /^55\d{10,11}$/.test(partnerParam) ? partnerParam : '5513981113001';
 const CATALOG_ORIGIN = (urlParams.get('origem')||'').toLowerCase().replace(/[^a-z-]/g,'').slice(0,36); // Sem origem explícita, 5513981113001 é contato GLOBAL, não Santos.
-const ORIGIN_PAGE = ({santos:'/pelicula-de-controle-solar-santos-sp/', 'praia-grande':'/pelicula-de-controle-solar-praia-grande-sp/', guaruja:'/pelicula-de-controle-solar-guaruja-sp/', sorocaba:'/insulfilm-residencial-sorocaba-sp/', 'pilar-do-sul':'/pelicula-de-controle-solar-pilar-do-sul-sp/', 'campina-grande':'/pelicula-de-controle-solar-campina-grande-pb/'})[CATALOG_ORIGIN]||'';
+const REGIONAL_ORIGIN = new Map(Object.entries({"votorantim":["Votorantim","/pelicula-para-vidro-controle-solar-votorantim-sp/"],"aracoiaba-da-serra":["Araçoiaba da Serra","/pelicula-para-vidro-controle-solar-aracoiaba-da-serra-sp/"],"salto-de-pirapora":["Salto de Pirapora","/pelicula-para-vidro-controle-solar-salto-de-pirapora-sp/"],"piedade":["Piedade","/pelicula-para-vidro-controle-solar-piedade-sp/"],"itapetininga":["Itapetininga","/pelicula-para-vidro-controle-solar-itapetininga-sp/"],"ipero":["Iperó","/pelicula-para-vidro-controle-solar-ipero-sp/"],"capela-do-alto":["Capela do Alto","/pelicula-para-vidro-controle-solar-capela-do-alto-sp/"]})).get(CATALOG_ORIGIN);
+const ORIGIN_PAGE = REGIONAL_ORIGIN?.[1] || ({santos:'/pelicula-de-controle-solar-santos-sp/', 'praia-grande':'/pelicula-de-controle-solar-praia-grande-sp/', guaruja:'/pelicula-de-controle-solar-guaruja-sp/', sorocaba:'/insulfilm-residencial-sorocaba-sp/', 'pilar-do-sul':'/pelicula-de-controle-solar-pilar-do-sul-sp/', 'campina-grande':'/pelicula-de-controle-solar-campina-grande-pb/'})[CATALOG_ORIGIN]||'';
+const WHATSAPP_NUMBER = REGIONAL_ORIGIN ? '5515997909049' : /^55\d{10,11}$/.test(partnerParam) ? partnerParam : '5513981113001';
+function regionalQuote(message) {
+  return REGIONAL_ORIGIN ? message + '\nCidade: ' + REGIONAL_ORIGIN[0] + '/SP.' : message;
+}
 function productLink(p) {
   const base=getProductPage(p);
   const params=new URLSearchParams();
@@ -2972,7 +2976,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
   if(ORIGIN_PAGE){
-    const originLabel=({santos:'Santos','praia-grande':'Praia Grande',guaruja:'Guarujá',sorocaba:'Sorocaba','pilar-do-sul':'Pilar do Sul','campina-grande':'Campina Grande'})[CATALOG_ORIGIN]||'WINF';
+    const originLabel=REGIONAL_ORIGIN?.[0] || ({santos:'Santos','praia-grande':'Praia Grande',guaruja:'Guarujá',sorocaba:'Sorocaba','pilar-do-sul':'Pilar do Sul','campina-grande':'Campina Grande'})[CATALOG_ORIGIN]||'WINF';
     const notice=document.getElementById('winf-catalog-return');
     if(notice){
       notice.hidden=false;
@@ -2982,6 +2986,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     const home=document.getElementById('catalog-home-link');
     if(home){home.href=ORIGIN_PAGE;home.setAttribute('aria-label','Voltar à WINF '+originLabel);}
+  }
+  if (REGIONAL_ORIGIN) {
+    const contact = document.getElementById('catalogo-contato-ddd15');
+    contact.href = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' +
+      encodeURIComponent(regionalQuote('Olá! Vim pelo catálogo WINF Select e gostaria de consultar um orçamento.'));
+    contact.textContent = 'WHATSAPP (15) 99790-9049 ↗';
   }
   const requestedLine=urlParams.get('linha');
   if (['all','arch','aerocore','neoskin','ceramic'].includes(requestedLine)) setCategory(requestedLine);
@@ -3274,11 +3284,11 @@ function hideToast() {
 function falarConsultorProduto(e, name) {
   if (e && e.stopPropagation) e.stopPropagation();
   const msg = `Olá! Tenho interesse no produto *${name}* do Catálogo WINF™. Poderia me ajudar com mais informações?`;
-  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(regionalQuote(msg))}`, '_blank');
 }
 function falarConsultor() {
   const msg = `Olá! Estou acessando o *Catálogo Oficial WINF™* e gostaria de falar com um consultor para conhecer melhor as soluções disponíveis.`;
-  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(regionalQuote(msg))}`, '_blank');
 }
 // mantido por compatibilidade caso seja chamado do modal
 function shareProduct(e, id, name) {
@@ -3376,7 +3386,7 @@ function shareAll() {
                 <a href="/blog/">WINF JOURNAL™</a>
                 <a href="/catalogo/">CATÁLOGO DIGITAL</a>
                 <a href="https://painel-os.winf.com.br/login/" target="_blank" rel="noopener noreferrer">WINF OS™ / LOGIN ↗</a>
-                <a href="https://wa.me/5513981113001?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20com%20a%20WINF%20sobre%20solu%C3%A7%C3%B5es%20e%20instala%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer">ATENDIMENTO OFICIAL / WHATSAPP ↗</a>
+                <a href="https://wa.me/5513981113001?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20com%20a%20WINF%20sobre%20solu%C3%A7%C3%B5es%20e%20instala%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" id="catalogo-contato-ddd15">ATENDIMENTO OFICIAL / WHATSAPP ↗</a>
                 <a href="/ghost-shop/">GHOST SHOP™ / COLEÇÕES ↗</a>
                 <span class="whr-pending">CUIDAR &amp; CONECTAR / EM ESTRUTURAÇÃO</span>
               </div>
