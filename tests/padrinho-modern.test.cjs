@@ -42,7 +42,7 @@ test("Briefing e Partners oferecem Padrinho em todos os modelos e como última c
 test("A estrutura digital turnkey Asset Light está descrita nos três pontos comerciais",()=>{
  for(const html of [asset,briefing,partners]){
    assert.match(html,/id="estrutura-digital-territorial"/);
-   for(const term of ['SITE DA CIDADE','INSTAGRAM','WHATSAPP','CONTA GOOGLE','GOOGLE DRIVE','SISTEMA \+ IA'])assert.match(html,new RegExp(term));
+   for(const term of ['SITE DA CIDADE','INSTAGRAM','WHATSAPP','CONTA GOOGLE','GOOGLE DRIVE','SISTEMA + IA'])assert.ok(html.includes(term),term);
    assert.match(html,/WINF OS™/);
    assert.match(html,/asset-light-ready-kit\.css/);
  }
