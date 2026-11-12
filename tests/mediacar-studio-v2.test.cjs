@@ -101,3 +101,15 @@ test("MediaCar: biblioteca de prompts para seis modelos e cinco vistas está con
  assert.match(modelsBlock,/bmw:\{label:"BMW M4 \/ MediaCar",views:\{left:"\/media\/ecossistema\/mediacar-bmw\.webp"/);
  for(const model of ["porsche","volvo","mustang","sprinter","custom"])assert.match(modelsBlock,new RegExp(model+':\\{label:"[^"]+",views:\\{\\}\\}'));
 });
+
+test("MediaCar cloud: API UI and simulator bridge are connected without local token persistence",()=>{
+ const cloud=read("js/mediacar-cloud.js");
+ assert.doesNotThrow(()=>new Function(cloud));
+ for(const id of ["mcCloudApi","mcCloudToken","mcCloudSave","mcCloudLoad","mcCloudDelete","mcCloudRefresh","mcCloudConnect","mcCloudProjects"])assert.match(studio,new RegExp('id="'+id+'"'));
+ assert.match(studio,/window\.MediaCarStudioBridge=/);
+ assert.match(studio,/src="\/js\/mediacar-cloud\.js/);
+ assert.match(cloud,/Authorization/);
+ assert.match(cloud,/Bearer /);
+ assert.doesNotMatch(cloud,/localStorage|sessionStorage/);
+ assert.match(cloud,/\/api\/mediacar/);
+});
