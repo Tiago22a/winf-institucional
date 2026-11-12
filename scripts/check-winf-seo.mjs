@@ -56,11 +56,14 @@ for(const city of cfg.cities){
  console.log('✓ WINF Select SEO',city.city,city.uf);
 }
 const catalog=read('catalogo/index.html');
-const catalogOg='https://winf.com.br/images/og/winf-catalogo-1200x630.jpg';
-assert.ok(catalog.includes('<meta property="og:image" content="'+catalogOg+'"'));
-assert.ok(catalog.includes('<meta name="twitter:image" content="'+catalogOg+'"'));
-assert.ok(siteMap.includes('<image:loc>'+catalogOg+'</image:loc>'));
-const catalogImage=await sharp(resolve(root,'images/og/winf-catalogo-1200x630.jpg')).metadata();
+const catalogBase='https://winf.com.br/images/og/winf-catalogo-1200x630';
+const catalogOg=catalog.match(/<meta property="og:image" content="([^"]*)"/)?.[1];
+assert.ok([catalogBase+'.jpg',catalogBase+'-r2.jpg'].includes(catalogOg),'Imagem social catalogo no dominio oficial');
+assert.ok(catalog.includes('<meta name="twitter:image" content="'+catalogOg+'"'),'Twitter deve usar capa social idêntica');
+assert.ok(siteMap.includes('<image:loc>'+catalogOg+'</image:loc>'),'Sitemap deve usar a mesma imagem social do catalogo');
+const catalogFile=catalogOg.replace('https://winf.com.br/','');
+assert.ok(existsSync(resolve(root,catalogFile)),'Imagem social do catálogo inexistente');
+const catalogImage=await sharp(resolve(root,catalogFile)).metadata();
 assert.equal(catalogImage.width,1200);assert.equal(catalogImage.height,630);assert.equal(catalogImage.format,'jpeg');
 console.log('✓ OG catálogo WINF, imagem JPEG 1200x630');
 console.log('✓ '+cfg.cities.length+' cidades com SEO distinto + '+(cfg.cities.length+1)+' capas sociais disponíveis.');
