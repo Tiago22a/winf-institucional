@@ -55,4 +55,20 @@ $("mcCloudDelete").onclick=()=>busy($("mcCloudDelete"),async()=>{
  if(!confirm("Excluir definitivamente o projeto remoto "+id+"?"))return;
  await request("DELETE","/projects/"+encodeURIComponent(id));await refresh();status("Projeto removido da nuvem.");
 });
+
+function configId(){const id=bridge&&bridge.currentId();if(!id)throw Error("Salve primeiro o projeto na nuvem para vincular a configuração 3D.");return id;}
+const save3d=$("mc3dCloudSave"),load3d=$("mc3dCloudLoad");
+if(save3d)save3d.onclick=()=>busy(save3d,async()=>{
+ if(!window.MediaCar3D)throw Error("Aguarde o carregamento do visualizador 3D.");
+ const state=bridge.snapshot();
+ const territoryId=(state.city||"").trim().toLowerCase().normalize("NFD").replace(/[\\u0300-\\u036f]/g,"").replace(/[^a-z0-9_-]+/g,"-").replace(/^-|-$/g,"").slice(0,90);
+ if(!territoryId)throw Error("Informe a cidade do projeto.");
+ await request("PUT","/configurations/"+encodeURIComponent(configId()),{...window.MediaCar3D.get(),territoryId,projectId:configId()});
+ status("Cor, modelo, acabamento e câmera 3D salvos na nuvem.");
+});
+if(load3d)load3d.onclick=()=>busy(load3d,async()=>{
+ if(!window.MediaCar3D)throw Error("Aguarde o carregamento do visualizador 3D.");
+ const data=await request("GET","/configurations/"+encodeURIComponent(configId()));
+ window.MediaCar3D.set(data);status("Configuração 3D restaurada.");
+});
 })();
