@@ -79,3 +79,17 @@ button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid 
 .mc-model[aria-pressed=true] .mc-model-visual img[src$="-concept.svg"]{filter:saturate(1)}
 @media(max-width:850px){.mc-model-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:540px){.mc-prompt-controls{grid-template-columns:1fr}.mc-prompt-actions .btn{flex:1;min-width:120px}}
+
+/* MediaCar authenticated cloud workspace: local simulator remains fully operational. */
+.mc-cloud{padding:22px;margin:0 0 24px;background:#111820;border:1px solid #66715c;border-radius:13px;color:#f5f6f4}
+.mc-cloud h2{margin:0 0 10px;font-size:clamp(20px,2vw,29px);line-height:1.2}
+.mc-cloud p{color:#bdc8c9;font-size:13px;line-height:1.6}
+.mc-cloud-beta{font:700 10px monospace;letter-spacing:.05em;color:#d9fc45}
+.mc-cloud-fields{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
+.mc-cloud-fields label{display:grid;gap:8px;font:700 11px monospace}
+.mc-cloud-fields input{box-sizing:border-box;width:100%;padding:13px;border-radius:7px;border:1px solid #607067;background:#0a1014;color:white;min-height:44px}
+.mc-cloud-actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.mc-cloud-actions select{flex:1;min-width:200px;min-height:43px}
+.mc-cloud-actions .btn{min-height:43px}
+#mcCloudStatus{margin:15px 0 0}
+@media(max-width:680px){.mc-cloud-fields{grid-template-columns:1fr}.mc-cloud-actions .btn{flex:1}.mc-cloud-actions select{flex-basis:100%}}
