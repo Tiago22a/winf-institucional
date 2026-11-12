@@ -7,3 +7,8 @@
 .pm-last-call__kicker{display:block;font:800 10px/1.2 Inter,Arial,sans-serif;letter-spacing:.2em;color:#a6b9d1;margin-bottom:18px}.pm-last-call h2{font:400 clamp(31px,5vw,61px)/1.1 Anton,Impact,Inter,Arial,sans-serif;text-transform:uppercase;max-width:890px;margin:0 auto 20px;color:#fff}.pm-last-call h2 em{font-style:normal;color:#bbcadf}.pm-last-call p{font:400 14px/1.7 Inter,Arial,sans-serif;color:#b9c0cd;max-width:720px;margin:0 auto 28px}.pm-last-call .pm-mini__link{background:#f4f5f8;color:#0c1017!important;min-height:50px;padding:13px 22px}.pm-last-call .pm-mini__link:hover{background:#dbe3ee}
 .pm-last-call .pm-last-call__note{font-size:11px;color:#969eab;margin:18px auto 0}
 @media(max-width:650px){.pm-mini{flex-direction:column;align-items:stretch;padding:17px}.pm-mini__link{width:100%}.pm-last-call{padding:48px 18px}.pm-last-call h2{font-size:clamp(30px,8vw,45px)}}
+
+/* Small cross-sell link inside the three model cards. */
+.pm-model-link{display:inline-block!important;margin:12px 0 4px!important;padding:8px 0!important;color:#c7d8ee!important;background:transparent!important;border:0!important;border-bottom:1px solid #9aacc5!important;font:800 10px/1.4 Inter,Arial,sans-serif!important;letter-spacing:.07em!important;text-decoration:none!important;text-transform:uppercase!important}
+.pm-model-link:hover{color:#fff!important;border-bottom-color:#fff!important}
+.pm-model-link:focus-visible{outline:2px solid white;outline-offset:3px}
