@@ -12,7 +12,7 @@
 <link rel="icon" href="/winf-logo.svg">
 <link rel="stylesheet" href="/css/winf-footer-reference.css?v=20261103-reference-2">
 <link rel="stylesheet" href="/css/winf-signoff.css"><link rel="stylesheet" href="/css/mediacar-studio-v2.css?v=20261111-1">
-<link rel="stylesheet" href="/css/mediacar-client-preview.css?v=20261111-1">
+<link rel="stylesheet" href="/css/mediacar-client-preview.css?v=20261111-1"><link rel="stylesheet" href="/css/mediacar-premium.css?v=20261112-1">
 <style>
 @font-face{font-family:Gustavo;src:url('/fonts/gustavo-bold.otf') format('opentype');font-display:swap;font-weight:700}
 @font-face{font-family:JetBrains;src:url('/fonts/jetbrains-mono-var.woff2') format('woff2');font-display:swap}
@@ -73,6 +73,7 @@ body{font-family:Inter,Arial,Helvetica,sans-serif;background:radial-gradient(ell
 @media(max-width:660px){.mc-embedded .layout{padding:10px 8px 15px}.mc-embedded .stage-wrap{padding:8px}}
 @media print{.mc-embedded :is(.topbar,.hero,.mediacar-story,.footnote,footer){display:none!important}}
 </style>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"}}</script>
 </head>
 <body>
 <header class="topbar"><div class="shell">
@@ -80,6 +81,80 @@ body{font-family:Inter,Arial,Helvetica,sans-serif;background:radial-gradient(ell
 <a class="back mono" href="/mediacar/">← Voltar ao MediaCar™</a>
 </div></header>
 <div class="shell">
+
+<section id="mediacar-3d" class="mc3-app" aria-label="Configurador 3D MediaCar WINF">
+  <div class="mc3-header">
+    <div class="mc3-brand"><img src="/briefing/media/winf-logo-black-official.png" alt="WINF™ — From Brazil to the World"><i aria-hidden="true"></i><strong>MediaCar™</strong></div>
+    <div class="mc3-header-right"><span class="mc3-location">Santos / SP <small>· demonstração</small></span><a href="/partners/" aria-label="Sair do configurador" class="mc3-exit">Sair ↗</a></div>
+  </div>
+  <nav class="mc3-steps" aria-label="Etapas do configurador">
+    <button type="button" class="is-active" role="tab" aria-selected="true" data-mc3d-tab="vehicle"><span>01</span> Veículo</button>
+    <button type="button" role="tab" aria-selected="false" data-mc3d-tab="paint"><span>02</span> Personalização</button>
+    <button type="button" role="tab" aria-selected="false" data-mc3d-tab="ads"><span>03</span> Patrocinadores</button>
+    <button type="button" role="tab" aria-selected="false" data-mc3d-tab="project"><span>04</span> Projeto</button>
+  </nav>
+  <div class="mc3-scene">
+    <div class="mc3-intro"><div class="mc3-overline">MEDIACAR / CONFIGURADOR 3D</div><h1>Seu carro.<br><em>Sua mídia.</em></h1><p>Uma identidade pronta para rodar. Personalize o veículo e ocupe as cotas disponíveis.</p></div>
+    <div class="mc3-viewport" id="mc3dCanvas"><div class="mc-3d-placeholder" id="mc3dMessage">Preparando visualização 3D…</div></div>
+    <div class="mc3-view-tools" aria-label="Ângulos da câmera">
+      <button type="button" data-mc3d-view="perspective" class="is-active" title="Vista 3/4">3/4</button>
+      <button type="button" data-mc3d-view="front" title="Frente">Frente</button>
+      <button type="button" data-mc3d-view="rear" title="Traseira">Trás</button>
+      <button type="button" data-mc3d-view="left" title="Lateral esquerda">Esq.</button>
+      <button type="button" data-mc3d-view="right" title="Lateral direita">Dir.</button>
+      <button type="button" data-mc3d-view="roof" title="Vista de cima">Teto</button>
+    </div>
+    <div class="mc3-scene-foot"><span>360° · Arraste para girar · Pinça para zoom</span><button type="button" id="mc3dReset" aria-label="Centralizar câmera" title="Centralizar câmera">⟲</button></div>
+  </div>
+  <div class="mc3-controls">
+    <div class="mc3-pane" data-mc3d-pane="vehicle" role="tabpanel">
+      <span class="mc3-pane-title">Escolha seu veículo</span>
+      <div class="mc3-choices mc3-models">
+        <button type="button" class="is-active" data-mc3d-model="coupe">Coupé</button>
+        <button type="button" data-mc3d-model="sedan">Sedã</button>
+        <button type="button" data-mc3d-model="suv">SUV</button>
+        <button type="button" data-mc3d-model="van">Van</button>
+      </div>
+      <label class="mc3-visually-hidden">Modelo<select id="mc3dModel"><option value="coupe">Coupé</option><option value="sedan">Sedã</option><option value="suv">SUV</option><option value="van">Van</option></select></label>
+      <p class="mc3-hint">Carro 3D conceitual para testar ângulos e composição. A geometria exata dos modelos depende de arquivos 3D homologados.</p>
+    </div>
+    <div class="mc3-pane" data-mc3d-pane="paint" role="tabpanel" hidden>
+      <div class="mc3-settings-group"><span>Cor</span><div class="mc3-swatches">
+        <button type="button" data-mc3d-color="#101820" style="--swatch:#101820" aria-label="Preto" class="is-active"></button>
+        <button type="button" data-mc3d-color="#f0f1ec" style="--swatch:#f0f1ec" aria-label="Branco"></button>
+        <button type="button" data-mc3d-color="#a7adb4" style="--swatch:#a7adb4" aria-label="Cinza"></button>
+        <button type="button" data-mc3d-color="#153d6d" style="--swatch:#153d6d" aria-label="Azul"></button>
+        <button type="button" data-mc3d-color="#c41e3a" style="--swatch:#c41e3a" aria-label="Vermelho"></button>
+        <label class="mc3-custom-color" title="Escolher uma cor personalizada">+<input id="mc3dColor" type="color" value="#101820" aria-label="Cor personalizada"></label>
+      </div></div>
+      <div class="mc3-settings-group"><span>Vidros</span><div class="mc3-choices">
+        <button type="button" data-mc3d-tint="clear">Claro</button><button type="button" class="is-active" data-mc3d-tint="medium">Médio</button><button type="button" data-mc3d-tint="dark">Escuro</button>
+      </div></div>
+      <div class="mc3-settings-group"><span>Acabamento</span><div class="mc3-choices"><button type="button" class="is-active" data-mc3d-finish="gloss">Brilho</button><button type="button" data-mc3d-finish="matte">Fosco</button><button type="button" data-mc3d-finish="metallic">Metalizado</button></div><label class="mc3-visually-hidden">Acabamento<select id="mc3dFinish"><option value="gloss">Brilhante</option><option value="matte">Fosco</option><option value="metallic">Metálico</option></select></label></div>
+    </div>
+    <div class="mc3-pane" data-mc3d-pane="ads" role="tabpanel" hidden>
+      <div class="mc3-brand-line"><div><strong>Identidade WINF aplicada</strong><small>WINF™ · WINF Select™ · AeroCore™ · NeoSkin™ · 08</small></div><span class="mc3-applied">Padrão ativo</span></div>
+      <div class="mc3-sponsor-form">
+        <label>Área disponível<select id="mc3dSlotSelect"><option value="left">Lateral esquerda</option><option value="right">Lateral direita</option><option value="rear">Traseira</option><option value="roof">Teto</option></select></label>
+        <label>Patrocinador<input id="mc3dSponsorName" type="text" maxlength="60" placeholder="Nome da marca"></label>
+        <label class="mc3-upload">Logomarca PNG / WEBP<input id="mc3dSponsorFile" type="file" accept="image/png,image/webp"></label>
+        <button type="button" id="mc3dSponsorApply">Aplicar na cota</button>
+        <button type="button" id="mc3dSponsorRemove" class="mc3-light-btn">Liberar cota</button>
+      </div>
+      <div id="mc3dSlotList" class="mc3-slots" aria-live="polite">4 cotas disponíveis</div>
+      <label class="mc3-visually-hidden">Texto publicitário<input id="mc3dAdText" type="text" maxlength="22" value=""></label>
+      <button type="button" id="mc3dApplyAd" hidden>Aplicar texto</button><button type="button" id="mc3dClearAd" hidden>Remover texto</button>
+    </div>
+    <div class="mc3-pane" data-mc3d-pane="project" role="tabpanel" hidden>
+      <div class="mc3-brand-line"><div><strong>Seu projeto MediaCar™</strong><small>Campanha de 6 meses · Pré-venda com 3 meses de antecedência</small></div></div>
+      <div class="mc3-save-actions"><button type="button" id="mc3dSaveDevice">Salvar neste aparelho</button><button type="button" id="mc3dLoadDevice">Abrir projeto local</button><button type="button" id="mc3dCloudSave">Salvar na nuvem</button><button type="button" id="mc3dCloudLoad">Abrir da nuvem</button></div>
+      <p class="mc3-hint">Salvar neste aparelho funciona sem login. A nuvem exige autenticação Firebase e API habilitada.</p>
+    </div>
+    <div class="mc3-continue"><span id="mc3dStatus" role="status">Preparando configurador…</span><button type="button" id="mc3dNext">Continuar <span>→</span></button></div>
+  </div>
+</section>
+
+<details class="mc3-legacy"><summary>Editor clássico, propostas e biblioteca de projetos</summary>
 <section class="hero" aria-labelledby="title">
 <div><div class="eyebrow mono"><span class="dot"></span> M.A.W.™ / MÍDIA EM MOVIMENTO</div><h1 id="title">A CIDADE É A MÍDIA.<br><em>SEU CARRO É A TELA.</em></h1>
 <p>Transforme veículos em mídia local. Visualize cotas comerciais, posicione marcas nas diferentes vistas do carro e prepare uma proposta para potenciais anunciantes. Para operações WINF, preserve os espaços institucionais da marca.</p></div>
@@ -112,17 +187,6 @@ body{font-family:Inter,Arial,Helvetica,sans-serif;background:radial-gradient(ell
   <div class="mc-prompt-actions"><button class="btn" type="button" id="mcPromptCopy">Copiar prompt</button><button class="btn secondary" type="button" id="mcPromptDownload">Baixar .TXT</button><a class="btn secondary" href="#mediacar-simulador">Enviar imagem no simulador ↓</a></div>
   <p id="mcPromptNotice" class="mc-prompt-notice" aria-live="polite">Conceitos ilustrativos. Cada veículo precisa de imagens homologadas para apresentação comercial.</p>
 </section>
-<section id="mediacar-3d" class="mc-game" aria-label="MediaCar Studio 3D">
-<div class="mc-game-top"><div class="mc-game-brand"><span class="mc-game-eyebrow">WINF PARTNERS / MEDIACAR™</span><strong>GARAGEM <span>08</span></strong></div><div class="mc-game-top-actions"><span id="mc3dStatus" role="status">Preparando garagem 3D</span><button type="button" id="mc3dReset" aria-label="Reiniciar câmera" title="Centralizar câmera">⟲</button></div></div>
-<div class="mc-game-stage" id="mc3dCanvas"><div class="mc-3d-placeholder" id="mc3dMessage">Iniciando garagem interativa…</div><div class="mc-game-stage-label">ARRASTE PARA GIRAR <span>·</span> PINÇA PARA ZOOM</div></div>
-<div class="mc-game-panel">
-<div class="mc-game-tabs" role="tablist" aria-label="Ferramentas do carro"><button type="button" class="is-active" data-mc3d-tab="vehicle" role="tab" aria-selected="true">01 · CARRO</button><button type="button" data-mc3d-tab="paint" role="tab" aria-selected="false">02 · PINTURA</button><button type="button" data-mc3d-tab="ads" role="tab" aria-selected="false">03 · PUBLICIDADE</button><button type="button" data-mc3d-tab="project" role="tab" aria-selected="false">04 · PROJETO</button></div>
-<div class="mc-game-pane is-active" data-mc3d-pane="vehicle" role="tabpanel"><div class="mc-game-models"><button type="button" data-mc3d-model="coupe" class="is-active">COUPÉ</button><button type="button" data-mc3d-model="sedan">SEDÃ</button><button type="button" data-mc3d-model="suv">SUV</button><button type="button" data-mc3d-model="van">VAN</button></div><label class="mc-game-hidden-label">Modelo<select id="mc3dModel"><option value="coupe">Coupé</option><option value="sedan">Sedã</option><option value="suv">SUV</option><option value="van">Van</option></select></label><div class="mc-game-setup"><div class="mc-game-setup-group"><span>ALTURA</span><div class="mc-game-choice" data-mc3d-height-group><button type="button" data-mc3d-height="low" class="is-active">BAIXO</button><button type="button" data-mc3d-height="extreme">EXTREMO</button><button type="button" data-mc3d-height="stock">ORIGINAL</button></div></div><div class="mc-game-setup-group"><span>RODAS</span><div class="mc-game-choice" data-mc3d-wheels-group><button type="button" data-mc3d-wheels="sport" class="is-active">ESPORTIVAS</button><button type="button" data-mc3d-wheels="dark">BLACK</button><button type="button" data-mc3d-wheels="original">ORIGINAIS</button></div></div></div><p>Visualização conceitual 3D. Modelos específicos exigem arquivos licenciados e geometria homologada.</p></div>
-<div class="mc-game-pane" data-mc3d-pane="paint" role="tabpanel" hidden><div class="mc-game-swatches" aria-label="Cores rápidas"><button type="button" data-mc3d-color="#101820" style="--swatch:#101820" aria-label="Preto" title="Preto"></button><button type="button" data-mc3d-color="#f0f1ec" style="--swatch:#f0f1ec" aria-label="Branco" title="Branco"></button><button type="button" data-mc3d-color="#bcbec1" style="--swatch:#bcbec1" aria-label="Prata" title="Prata"></button><button type="button" data-mc3d-color="#c41e3a" style="--swatch:#c41e3a" aria-label="Vermelho" title="Vermelho"></button><button type="button" data-mc3d-color="#153d6d" style="--swatch:#153d6d" aria-label="Azul" title="Azul"></button><label class="mc-game-color-custom" title="Escolher outra cor">+<input id="mc3dColor" type="color" value="#101820" aria-label="Cor personalizada"></label></div><div class="mc-game-finishes"><button type="button" class="is-active" data-mc3d-finish="gloss">BRILHANTE</button><button type="button" data-mc3d-finish="matte">FOSCO</button><button type="button" data-mc3d-finish="metallic">METÁLICO</button></div><div class="mc-game-setup-group mc-game-glass"><span>PELÍCULA NOS VIDROS</span><div class="mc-game-choice"><button type="button" data-mc3d-tint="clear">CLARO</button><button type="button" data-mc3d-tint="medium" class="is-active">MÉDIO</button><button type="button" data-mc3d-tint="dark">ESCURO</button></div></div><label class="mc-game-hidden-label">Acabamento<select id="mc3dFinish"><option value="gloss">Brilhante</option><option value="matte">Fosco</option><option value="metallic">Metálico</option></select></label></div>
-<div class="mc-game-pane" data-mc3d-pane="ads" role="tabpanel" hidden><div class="mc-game-ad-tools"><label>Texto publicitário<input type="text" id="mc3dAdText" maxlength="22" placeholder="SUA MARCA" value="MEDIACAR"></label><button type="button" id="mc3dApplyAd">APLICAR NA LATERAL</button><button type="button" id="mc3dClearAd">REMOVER</button></div><p>Prévia de publicidade aplicada à carroceria 3D. Arquivos de logomarca e áreas comerciais avançadas serão integrados em uma próxima etapa.</p></div>
-<div class="mc-game-pane" data-mc3d-pane="project" role="tabpanel" hidden><div class="mc-game-save"><button type="button" id="mc3dSaveDevice">SALVAR NESTE APARELHO</button><button type="button" id="mc3dLoadDevice">RECUPERAR</button><button type="button" id="mc3dCloudSave">SALVAR NA NUVEM</button><button type="button" id="mc3dCloudLoad">ABRIR DA NUVEM</button></div><p>O salvamento local funciona sem login. A nuvem exige autenticação Firebase e backend configurado.</p></div>
-</div>
-</section>
 <section class="mc-library" aria-label="Projetos do licenciado"><span class="mc-label">PROJETOS NO NAVEGADOR</span><select id="mcSavedProjects" aria-label="Projetos salvos no navegador"><option value="">Escolha um projeto salvo</option></select><button class="btn secondary" type="button" id="mcSaveLocal">Guardar projeto</button><button class="btn secondary" type="button" id="mcLoadLocal">Abrir</button><button class="btn danger" type="button" id="mcDeleteLocal">Excluir</button><span class="mc-library-help">Projetos são separados por identificador e salvos neste navegador. A sincronização remota opcional está disponível abaixo para administradores autenticados. Para transferir a outro dispositivo, use “Salvar projeto” (JSON).</span></section>
 <section class="mc-cloud" id="mediacar-nuvem" aria-label="Projetos MediaCar na nuvem">
 <h2>PROJETOS NA NUVEM <span class="mc-cloud-beta">ACESSO ADMINISTRATIVO</span></h2>
@@ -152,6 +216,7 @@ body{font-family:Inter,Arial,Helvetica,sans-serif;background:radial-gradient(ell
 <div class="editor-body" style="padding-top:0"><button class="btn secondary full" id="copySummary">Copiar proposta comercial</button><div class="notice">O campo de valor representa a mensalidade proposta por cota, em um ciclo comercial de 6 meses. Os valores são definidos pelo licenciado e não representam tabela oficial WINF. Uma cota marcada como “vendida” é apenas um registro visual: esta versão não processa pagamentos nem confirma reservas.</div><div class="rule"></div><button class="btn danger full" id="resetProject">Reiniciar projeto</button></div></section>
 </aside></main>
 <div class="footnote"><span class="mono">MEDIACAR™ / BY WINF PARTNERS™ / NÚMERO OFICIAL 08</span><p>Simulação conceitual para licenciado autorizado. WINF™, AeroCore™, NeoSkin™, Ceramic Armoring™ e o numeral 08 permanecem fixos na arte de apresentação. Valide artes, dimensões, legislação local e autorizações antes da aplicação física. As imagens e marcas enviadas ficam no seu navegador, sem upload para um servidor neste protótipo.</p></div>
+</details>
 </div>
 <dialog id="mcClientDialog" class="mc-client-dialog" aria-label="Prévia de apresentação comercial MediaCar 08"><div class="mc-client-dialog-head"><strong>MEDIACAR™ <em>08</em> / VISÃO DO CLIENTE</strong><button class="btn secondary" type="button" id="mcClientClose">Fechar</button></div><p class="mc-client-dialog-note" id="mcPreviewNote">Apresentação estática do projeto atual.</p><iframe id="mcClientFrame" title="Apresentação comercial MediaCar para anunciantes" sandbox=""></iframe></dialog>
 <footer id="winf-global-footer" class="wf-reference-footer" aria-label="Rodapé do ecossistema WINF" data-footer-version="20261103-reference-2">
@@ -454,6 +519,6 @@ init();
 <script src="/js/mediacar-image-prompts.js?v=20261111-1" defer></script>
 <script src="/js/mediacar-client-preview.js?v=20261111-1" defer></script>
 <script src="/js/winf-footer.js?v=20261111-mediacar-mobile" defer></script>
-<script type="module" src="/js/mediacar-3d.js?v=20261112-game-1"></script>
+<script type="module" src="/js/mediacar-3d.js?v=20261112-premium-1"></script>
 </body>
 </html>
