@@ -112,6 +112,12 @@ body{font-family:Inter,Arial,Helvetica,sans-serif;background:radial-gradient(ell
   <div class="mc-prompt-actions"><button class="btn" type="button" id="mcPromptCopy">Copiar prompt</button><button class="btn secondary" type="button" id="mcPromptDownload">Baixar .TXT</button><a class="btn secondary" href="#mediacar-simulador">Enviar imagem no simulador ↓</a></div>
   <p id="mcPromptNotice" class="mc-prompt-notice" aria-live="polite">Conceitos ilustrativos. Cada veículo precisa de imagens homologadas para apresentação comercial.</p>
 </section>
+<section id="mediacar-3d" class="mc-3d" aria-label="Configurador de veículo tridimensional">
+<div class="mc-3d-heading"><div><span class="mono">MEDIACAR™ / ESTÚDIO INTERATIVO</span><h2>CONFIGURADOR 3D <em>08</em></h2><p>Gire o veículo com o dedo ou mouse, altere a cor e aproxime para visualizar os detalhes. Prévia geométrica 3D — modelos oficiais de fábrica exigem arquivos 3D licenciados.</p></div><span class="mc-3d-pill">360° INTERATIVO</span></div>
+<div class="mc-3d-controls"><label>Modelo<select id="mc3dModel"><option value="coupe">Esportivo / Coupé</option><option value="sedan">Sedã / MediaCar</option><option value="suv">SUV / Elétrico</option><option value="van">Van / Hub móvel</option></select></label><label>Cor da carroceria<input id="mc3dColor" type="color" value="#101820" aria-label="Selecionar cor da carroceria"></label><label>Acabamento<select id="mc3dFinish"><option value="gloss">Brilhante</option><option value="matte">Fosco</option><option value="metallic">Metálico</option></select></label><button type="button" class="btn secondary" id="mc3dReset">Centralizar vista</button></div>
+<div class="mc-3d-canvas" id="mc3dCanvas"><div class="mc-3d-placeholder" id="mc3dMessage">Carregando visualizador tridimensional…</div></div>
+<div class="mc-3d-bottom"><span>ARRASTE PARA GIRAR · PINÇA OU SCROLL PARA ZOOM</span><span id="mc3dStatus" role="status">Aguardando renderização 3D</span></div>
+</section>
 <section class="mc-library" aria-label="Projetos do licenciado"><span class="mc-label">PROJETOS NO NAVEGADOR</span><select id="mcSavedProjects" aria-label="Projetos salvos no navegador"><option value="">Escolha um projeto salvo</option></select><button class="btn secondary" type="button" id="mcSaveLocal">Guardar projeto</button><button class="btn secondary" type="button" id="mcLoadLocal">Abrir</button><button class="btn danger" type="button" id="mcDeleteLocal">Excluir</button><span class="mc-library-help">Projetos são separados por identificador e salvos neste navegador. A sincronização remota opcional está disponível abaixo para administradores autenticados. Para transferir a outro dispositivo, use “Salvar projeto” (JSON).</span></section>
 <section class="mc-cloud" id="mediacar-nuvem" aria-label="Projetos MediaCar na nuvem">
 <h2>PROJETOS NA NUVEM <span class="mc-cloud-beta">ACESSO ADMINISTRATIVO</span></h2>
@@ -443,5 +449,6 @@ init();
 <script src="/js/mediacar-image-prompts.js?v=20261111-1" defer></script>
 <script src="/js/mediacar-client-preview.js?v=20261111-1" defer></script>
 <script src="/js/winf-footer.js?v=20261111-mediacar-mobile" defer></script>
+<script type="module" src="/js/mediacar-3d.js?v=20261111-1"></script>
 </body>
 </html>
