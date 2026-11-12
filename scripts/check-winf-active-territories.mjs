@@ -15,19 +15,23 @@ for(const city of all){
  assert.ok(city.url?.startsWith('/'),'Site faltando '+city.cidade);
  assert.ok(read(city.url.slice(1)+'index.html').includes('https://winf.com.br/'+city.url.slice(1)),'Página local não gerada '+city.cidade);
  assert.ok(doc.includes('href="'+city.url+'"'),'Site ausente no global: '+city.cidade);
- assert.equal(city.numero,'5513981113001','Telefone central temporário: '+city.cidade);
+ const is015=['sorocaba-sp','pilar-do-sul-sp'].includes(city.id);
+ const expectedNumber=is015?'5515997909049':'5513981113001';
+ assert.equal(city.numero,expectedNumber,'Telefone correto da Central Regional: '+city.cidade);
  const marker=doc.indexOf('aria-label="WINF Select '+city.cidade+', '+city.uf+'"');
  assert.ok(marker>=0,'Card de território ausente '+city.cidade);
  const article=doc.slice(marker,doc.indexOf('</article>',marker));
- assert.match(article,/wa\.me\/5513981113001\?text=/,'WhatsApp com origem '+city.cidade);
+ assert.ok(article.includes('wa.me/'+expectedNumber+'?text='),'WhatsApp regional com origem '+city.cidade);
  assert.ok(article.includes(encodeURIComponent(city.cidade)),'Mensagem deve registrar local '+city.cidade);
  assert.equal((article.match(/<a class="winf-active-card-link\s/g)||[]).length,3,'Três links em cada card: '+city.cidade);
  assert.ok(article.includes('href="'+city.url+'"'),'Link próprio da cidade: '+city.cidade);
- assert.ok(article.includes('aria-label="WhatsApp central WINF para '+city.cidade+'"'),'WhatsApp da cidade '+city.cidade);
+ assert.ok(article.includes('aria-label="'+(is015?'WhatsApp Central 015 para ':'WhatsApp central WINF para ')+city.cidade+'"'),'WhatsApp da cidade '+city.cidade);
  assert.ok(article.includes('https://www.instagram.com/'),'Instagram oficial '+city.cidade);
  if(city.instagram)assert.ok(article.includes(city.instagram),'Instagram da unidade '+city.cidade);
  else assert.ok(article.includes('https://www.instagram.com/winf.ofc/'),'Sem perfil local confirmado '+city.cidade);
 }
+for(const heading of ['winf-region-013','winf-region-015','winf-region-outros'])assert.ok(doc.includes('id="'+heading+'"'),'Grupo regional ausente: '+heading);
+assert.ok(doc.includes('Itapetininga'),'Próximas cidades devem ser identificadas como planejadas');
 const portalScript=read('js/winf-active-territories.js');
 assert.ok(!portalScript.includes('replaceChildren'),'O script legado não deve apagar cards completos');
 assert.ok(!portalScript.includes('status === "ativa"'),'Sites publicados não devem ser filtrados por status de operação local');

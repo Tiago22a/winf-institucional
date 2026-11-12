@@ -8,6 +8,8 @@ on:
       - "aerocore/assets/onde-comprar.css"
       - "aerocore/assets/onde-comprar.js"
       - "js/cidades.js"
+      - "config/winf-active-cities.json"
+      - "scripts/check-winf-active-territories.mjs"
       - "js/winf-locator-menu.js"
       - "js/winf-active-territories.js"
       - "css/winf-locator.css"
@@ -22,6 +24,8 @@ on:
       - "aerocore/onde-comprar/index.html"
       - "aerocore/assets/onde-comprar.css"
       - "js/cidades.js"
+      - "config/winf-active-cities.json"
+      - "scripts/check-winf-active-territories.mjs"
       - "tests/check-locators.mjs"
 jobs:
   static-locator-check:
@@ -34,3 +38,4 @@ jobs:
         with:
           node-version: "22"
       - run: node tests/check-locators.mjs
+      - run: node scripts/check-winf-active-territories.mjs
