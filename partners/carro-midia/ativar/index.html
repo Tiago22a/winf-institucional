@@ -46,7 +46,7 @@ input[type=file]{font-size:11px;padding:10px}.hint{font-size:11px;color:#a6abb5;
 <header class="top shell"><a class="brand" href="/partners/">WINF™ <em>/ PARTNERS</em></a><a class="back" href="/partners/carro-midia/">← Conhecer o MediaCar</a></header>
 <main class="shell">
   <div class="eyebrow">MEDIACAR™ / ATIVAÇÃO DE CAMPANHA</div>
-  <div class="heading"><div><h1>Seu carro.<br>Suas marcas.</h1><p>Escolha o veículo, configure as cotas e monte a campanha. Simples assim.</p></div><span class="tag">6 meses de publicidade</span></div>
+  <div class="heading"><div><h1>Seu carro.<br>Suas marcas.</h1><p>Quatro bases brancas. Escolha o estilo WINF, aplique sua marca e preencha as cotas.</p></div><span class="tag">6 meses de publicidade</span></div>
   <div class="layout">
    <section class="panel"><div class="panelhead"><strong>Prévia do veículo</strong><small id="carLabel">Jeep Compass · Esportivo</small></div>
     <div class="stage"><div class="visual" id="visual">
@@ -65,7 +65,7 @@ input[type=file]{font-size:11px;padding:10px}.hint{font-size:11px;color:#a6abb5;
      <button type="button" class="zone" data-slot="frente" aria-label="Selecionar cota dianteira"><b>02</b><span>Dianteira</span></button>
      <button type="button" class="zone" data-slot="traseira" aria-label="Selecionar cota traseira"><b>03</b><span>Traseira</span></button>
      <button type="button" class="zone" data-slot="vidro" aria-label="Selecionar cota superior"><b>04</b><span>Superior</span></button>
-    </div><div class="stagefoot"><span>Toque em uma cota para editar</span><span>Imagem conceitual · não é gabarito de impressão</span></div></div>
+    </div><div class="stagefoot"><span>Base conceitual. Fotos realistas e gabaritos técnicos dependem da M.A.W.™</span><span>Imagem conceitual · não é gabarito de impressão</span></div></div>
     <div class="legend" id="slotButtons"></div>
     <p class="notice">A M.A.W.™ deverá homologar a arte do modelo/ano real antes da impressão. Os contratos e as cotas desta prévia são demonstrativos e ficam salvos somente neste navegador.</p>
    </section>
@@ -73,10 +73,10 @@ input[type=file]{font-size:11px;padding:10px}.hint{font-size:11px;color:#a6abb5;
       <div class="steps"><b>01</b> Veículo <span>·</span> <b>02</b> Estilo <span>·</span> <b>03</b> Cota <span>·</span> <b>04</b> Salvar</div>
       <div class="field"><label for="territory">Território / cidade</label><input id="territory" maxlength="65" placeholder="Ex.: Santos / SP"></div>
       <div class="two">
-       <div class="field"><label for="car">Veículo</label><select id="car"><option value="compass">Jeep Compass</option><option value="sedan">Sedã</option><option value="hatch">Hatch</option><option value="suv">SUV</option><option value="custom">Meu veículo</option></select></div>
+       <div class="field"><label for="car">Veículo</label><select id="car"><option value="hatch">01 · Compacto</option><option value="sedan">02 · Sedã</option><option value="suv">03 · SUV</option><option value="van">04 · Utilitário</option></select></div>
        <div class="field"><label for="style">Estilo</label><select id="style"><option value="sport">Esportivo</option><option value="classic">Clássico</option><option value="dark">Black</option></select></div>
       </div>
-      <div class="field" id="customWrap" hidden><label for="customCar">Marca, modelo, ano e versão</label><input id="customCar" maxlength="100" placeholder="Ex.: Jeep Compass 2021 Longitude"><div class="hint">A agência precisará criar ou validar um template para o veículo real.</div></div>
+      
       <div class="divider"></div>
       <div class="field"><label for="sponsor">Anunciante — <span id="slotName">Portas (01)</span></label><input id="sponsor" maxlength="60" placeholder="Nome da empresa"></div>
       <div class="field"><label for="logo">Logomarca (PNG, JPG, WEBP)</label><input id="logo" type="file" accept="image/png,image/jpeg,image/webp"><div class="hint">Arquivo até 600 KB. A imagem é exibida apenas no seu navegador.</div></div>
@@ -95,23 +95,23 @@ input[type=file]{font-size:11px;padding:10px}.hint{font-size:11px;color:#a6abb5;
 "use strict";
 const $=id=>document.getElementById(id);
 const slotLabels={porta:"Portas",frente:"Dianteira",traseira:"Traseira",vidro:"Superior"};
-const carLabels={compass:"Jeep Compass",sedan:"Sedã",hatch:"Hatch",suv:"SUV",custom:"Veículo personalizado"};
+const carLabels={hatch:"Compacto",sedan:"Sedã",suv:"SUV",van:"Utilitário"};
 const styleLabels={sport:"Esportivo",classic:"Clássico",dark:"Black"};
 const storageKey="winf-mediacar-demo-v1";
-function empty(){return {territory:"",car:"compass",customCar:"",style:"sport",slots:{porta:{},frente:{},traseira:{},vidro:{}}};}
+function empty(){return {territory:"",car:"hatch",customCar:"",style:"sport",slots:{porta:{},frente:{},traseira:{},vidro:{}}};}
 let state=empty(), selected="porta";
 const money=n=>new Intl.NumberFormat("pt-BR",{style:"currency",currency:"BRL"}).format(n||0);
 const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 function setStatus(m){$("status").textContent=m;}
-function captureHeader(){state.territory=$("territory").value.trim();state.car=$("car").value;state.customCar=$("customCar").value.trim();state.style=$("style").value;}
+function captureHeader(){state.territory=$("territory").value.trim();state.car=$("car").value;state.style=$("style").value;}
 function render(){
  $("territory").value=state.territory||"";$("car").value=state.car;$("style").value=state.style;
- $("customCar").value=state.customCar||"";$("customWrap").hidden=state.car!=="custom";
+ 
  const current=state.slots[selected]||{};
  $("sponsor").value=current.sponsor||"";$("quotaPrice").value=current.price??"";
  $("logo").value="";
  $("slotName").textContent=slotLabels[selected]+" ("+(Object.keys(slotLabels).indexOf(selected)+1).toString().padStart(2,"0")+")";
- $("carLabel").textContent=(state.car==="custom"?(state.customCar||"Seu veículo"):carLabels[state.car])+" · "+styleLabels[state.style];
+ $("carLabel").textContent=carLabels[state.car]+" · "+styleLabels[state.style];
  const palette=state.style==="dark"?["#333842","#cfd5db","#111b28"]:state.style==="classic"?["#faf5ea","#c62237","#475665"]:["#f0f2f5","#2563eb","#263a50"];
  $("carShape").setAttribute("fill",palette[0]);$("stripe").setAttribute("fill",palette[1]);$("windows").setAttribute("fill",palette[2]);
  if(state.car==="hatch") $("carShape").setAttribute("d","M54 225 L65 168 Q73 147 120 145 L188 137 L253 75 Q274 51 330 49 L474 49 Q512 50 555 112 L615 146 L740 166 Q768 172 769 207 L763 245 L52 245 Z");
@@ -128,8 +128,8 @@ function render(){
 }
 function pick(id){selected=id;render();}
 document.querySelectorAll(".zone").forEach(z=>z.addEventListener("click",()=>pick(z.dataset.slot)));
-["territory","car","customCar","style"].forEach(id=>$(id).addEventListener("change",()=>{captureHeader();render();}));
-$("customCar").addEventListener("input",()=>{captureHeader();$("carLabel").textContent=(state.customCar||"Seu veículo")+" · "+styleLabels[state.style];});
+["territory","car","style"].forEach(id=>$(id).addEventListener("change",()=>{captureHeader();render();}));
+
 $("apply").addEventListener("click",async()=>{
  const file=$("logo").files[0], sponsor=$("sponsor").value.trim(), raw=$("quotaPrice").value;
  if(file && (!["image/png","image/jpeg","image/webp"].includes(file.type)||file.size>600000)){setStatus("Use imagem PNG, JPG ou WEBP de até 600 KB.");return;}
@@ -145,7 +145,7 @@ $("draft").addEventListener("click",()=>{
  captureHeader();
  const date=new Date().toLocaleDateString("pt-BR");
  const filled=Object.entries(state.slots).filter(([,s])=>s.sponsor);
- $("document").innerHTML='<p><b>WINF PARTNERS™ / MEDIACAR™</b></p><h2>Minuta demonstrativa de campanha publicitária</h2><p><strong>Gerado em:</strong> '+esc(date)+'</p><p><strong>Território:</strong> '+esc(state.territory||"Não informado")+'</p><p><strong>Veículo:</strong> '+esc(state.car==="custom"?(state.customCar||"A definir"):carLabels[state.car])+'</p><p><strong>Identidade:</strong> '+esc(styleLabels[state.style])+'</p><p><strong>Exposição prevista:</strong> 6 meses, contados a partir da ativação comprovada do veículo adesivado, com datas a definir pelas partes.</p><h3>Participações simuladas</h3><ol>'+(filled.length?filled.map(([k,s])=>'<li>'+esc(slotLabels[k])+' — '+esc(s.sponsor)+' — '+esc(money(s.price))+'</li>').join(""):"<li>Sem anunciantes definidos.</li>")+'</ol><p><strong>Total estimado de cotas:</strong> '+esc(money(filled.reduce((a,[,s])=>a+(Number(s.price)||0),0)))+'</p><h3>Condições a formalizar</h3><p>Identificação legal das partes, definição da cota, aprovação da arte, pagamento, manutenção, indisponibilidade, cancelamento, proteção de dados e assinaturas devem constar do contrato individual definitivo.</p><p><strong>ATENÇÃO:</strong> Documento demonstrativo, sem valor contratual, sem assinatura, sem reserva comercial e sem confirmação de pagamento. Precisa de revisão jurídica antes do uso em vendas.</p>';
+ $("document").innerHTML='<p><b>WINF PARTNERS™ / MEDIACAR™</b></p><h2>Minuta demonstrativa de campanha publicitária</h2><p><strong>Gerado em:</strong> '+esc(date)+'</p><p><strong>Território:</strong> '+esc(state.territory||"Não informado")+'</p><p><strong>Veículo:</strong> '+esc(carLabels[state.car])+'</p><p><strong>Identidade:</strong> '+esc(styleLabels[state.style])+'</p><p><strong>Exposição prevista:</strong> 6 meses, contados a partir da ativação comprovada do veículo adesivado, com datas a definir pelas partes.</p><h3>Participações simuladas</h3><ol>'+(filled.length?filled.map(([k,s])=>'<li>'+esc(slotLabels[k])+' — '+esc(s.sponsor)+' — '+esc(money(s.price))+'</li>').join(""):"<li>Sem anunciantes definidos.</li>")+'</ol><p><strong>Total estimado de cotas:</strong> '+esc(money(filled.reduce((a,[,s])=>a+(Number(s.price)||0),0)))+'</p><h3>Condições a formalizar</h3><p>Identificação legal das partes, definição da cota, aprovação da arte, pagamento, manutenção, indisponibilidade, cancelamento, proteção de dados e assinaturas devem constar do contrato individual definitivo.</p><p><strong>ATENÇÃO:</strong> Documento demonstrativo, sem valor contratual, sem assinatura, sem reserva comercial e sem confirmação de pagamento. Precisa de revisão jurídica antes do uso em vendas.</p>';
  $("contract").classList.add("visible");document.body.style.overflow="hidden";
 });
 $("closeContract").addEventListener("click",()=>{$("contract").classList.remove("visible");document.body.style.overflow="";});
