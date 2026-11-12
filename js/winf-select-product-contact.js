@@ -10,6 +10,12 @@
     '/miniblind-venetian/': {name:'MiniBlind & Venetian™',subject:'películas de privacidade decorativa'}
   };
   const current = options[route];
+  // O atendimento específico do produto tem prioridade sobre o dock global.
+  // Evita sobreposição independentemente da ordem de carregamento dos scripts.
+  if (current) {
+    document.getElementById('winf-quick-contact')?.remove();
+    document.documentElement.classList.remove('winf-quick-dock-active');
+  }
   if (!current || document.getElementById('ws-product-contact')) return;
   const origin = new URLSearchParams(location.search).get('origem');
   const isSantos = origin === 'santos';
