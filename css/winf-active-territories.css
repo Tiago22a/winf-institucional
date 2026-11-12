@@ -36,3 +36,16 @@
 .winf-active-card .winf-active-card-link:focus-visible{outline:2px solid #fff}
 @media(max-width:630px){.winf-active-card{min-height:220px}.winf-active-card .winf-active-card-link{font-size:11px;min-height:46px}}
 @media(max-width:365px){.winf-active-card-links{grid-template-columns:1fr}.winf-active-card .winf-active-card-link--site{grid-column:auto}}
+
+/* Diretório regional WINF Select — grupos reais e novos territórios sem links fictícios. */
+.winf-active-region-head{grid-column:1/-1;display:grid;grid-template-columns:1fr auto;gap:3px 20px;align-items:end;margin:19px 0 2px;padding:15px 1px 12px;border-bottom:1px solid #ffffff39;color:#e6e8ee}
+.winf-active-region-head:first-child{margin-top:0}
+.winf-active-region-head>span{font:700 11px/1.4 'JetBrains Mono',monospace;letter-spacing:.11em;color:#c0cfdf}
+.winf-active-region-head>strong{font:600 11px/1.45 Gustavo,Inter,Arial,sans-serif;color:#f8f8f8;text-align:right}
+.winf-active-region-head>p{grid-column:1/-1;max-width:750px;margin:4px 0 0;font:400 12px/1.7 Gustavo,Inter,Arial,sans-serif;color:#aeb4c0}
+.winf-active-next{display:flex;justify-content:space-between;align-items:center;gap:26px;margin-top:25px;padding:22px 24px;border:1px solid #ffffff2f;background:#ffffff06}
+.winf-active-next span{display:block;margin-bottom:9px;font:700 10px/1.5 'JetBrains Mono',monospace;letter-spacing:.13em;color:#c4d3e7}
+.winf-active-next p{margin:0;max-width:760px;font:400 13px/1.7 Gustavo,Inter,Arial,sans-serif;color:#b3bac5}
+.winf-active-next a{flex:none;border:1px solid #ffffff65;padding:12px 15px;color:#fff;text-decoration:none;font:700 10px/1.4 Gustavo,Inter,Arial,sans-serif;letter-spacing:.04em}
+.winf-active-next a:hover,.winf-active-next a:focus-visible{background:#fff;color:#111}
+@media(max-width:630px){.winf-active-region-head{grid-template-columns:1fr}.winf-active-region-head>strong{text-align:left}.winf-active-next{align-items:stretch;flex-direction:column;padding:19px}.winf-active-next a{text-align:center}}
