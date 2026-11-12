@@ -112,3 +112,14 @@ button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid 
 .mc-3d-bottom{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:11px;color:#9eaeb6;font:700 10px monospace}
 @media(max-width:540px){.mc-3d-heading{flex-direction:column;gap:6px}.mc-3d-controls label{flex:1;min-width:120px}.mc-3d-controls .btn{flex:1}.mc-3d-canvas{height:400px}}
 @media print{.mc-3d{display:none!important}}
+
+/* Compact game presets — minimal controls, one action at a time */
+.mc-game-setup{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:16px 0}
+.mc-game-setup-group{display:grid;gap:10px;min-width:0}
+.mc-game-setup-group>span{font:700 11px/1.3 Arial,sans-serif;letter-spacing:.11em;color:#a8b2ba}
+.mc-game-choice{display:flex;align-items:stretch;gap:5px;flex-wrap:wrap}
+.mc-game-choice button{border:1px solid rgba(255,255,255,.17);border-radius:8px;background:rgba(255,255,255,.035);color:#d8dee3;padding:10px 12px;min-height:43px;font:700 11px/1.2 Arial,sans-serif;cursor:pointer}
+.mc-game-choice button.is-active{color:#101417;background:#d9ff3b;border-color:#d9ff3b}
+.mc-game-choice button:focus-visible{outline:2px solid #d9ff3b;outline-offset:3px}
+.mc-game-glass{margin-top:18px}
+@media(max-width:640px){.mc-game-setup{grid-template-columns:1fr;gap:17px}.mc-game-choice button{flex:1 1 auto;padding:12px 8px}}
