@@ -93,3 +93,22 @@ button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid 
 .mc-cloud-actions .btn{min-height:43px}
 #mcCloudStatus{margin:15px 0 0}
 @media(max-width:680px){.mc-cloud-fields{grid-template-columns:1fr}.mc-cloud-actions .btn{flex:1}.mc-cloud-actions select{flex-basis:100%}}
+
+/* MediaCar™ interactive WebGL studio */
+.mc-3d{margin:0 0 24px;padding:clamp(15px,2.8vw,30px);border:1px solid #465045;border-radius:17px;background:linear-gradient(145deg,#171d23,#0b0e12);color:#f5f7f7}
+.mc-3d-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:18px}
+.mc-3d-heading h2{margin:7px 0 10px;font:800 clamp(24px,3vw,38px)/1.1 Gustavo,Arial,sans-serif}
+.mc-3d-heading h2 em{font-style:normal;color:#d9ff3b}
+.mc-3d-heading p{max-width:750px;font-size:13px;color:#aab4bc;line-height:1.65;margin:0 0 16px}
+.mc-3d-pill{border:1px solid #d9ff3b;padding:9px;border-radius:30px;color:#d9ff3b;font:700 10px monospace;white-space:nowrap}
+.mc-3d-controls{display:flex;flex-wrap:wrap;align-items:end;gap:12px;margin:13px 0}
+.mc-3d-controls label{display:grid;gap:6px;min-width:150px;font:700 11px monospace;color:#d7e1e3}
+.mc-3d-controls select{min-height:44px;padding:10px;border-radius:8px;border:1px solid #46545d;background:#101820;color:white}
+.mc-3d-controls input[type=color]{height:44px;width:85px;border:1px solid #46545d;background:#101820;border-radius:8px;cursor:pointer}
+.mc-3d-controls .btn{min-height:44px}
+.mc-3d-canvas{height:clamp(330px,48vw,630px);position:relative;border:1px solid #39464c;border-radius:12px;overflow:hidden;background:#0a1016;touch-action:none}
+.mc-3d-canvas canvas{display:block;width:100%;height:100%;touch-action:none}
+.mc-3d-placeholder{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:#d9ff3b;font:700 13px monospace;padding:20px}
+.mc-3d-bottom{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:11px;color:#9eaeb6;font:700 10px monospace}
+@media(max-width:540px){.mc-3d-heading{flex-direction:column;gap:6px}.mc-3d-controls label{flex:1;min-width:120px}.mc-3d-controls .btn{flex:1}.mc-3d-canvas{height:400px}}
+@media print{.mc-3d{display:none!important}}
