@@ -15,11 +15,12 @@ for(const city of all){
  assert.ok(city.url?.startsWith('/'),'Site faltando '+city.cidade);
  assert.ok(read(city.url.slice(1)+'index.html').includes('https://winf.com.br/'+city.url.slice(1)),'Página local não gerada '+city.cidade);
  assert.ok(doc.includes('href="'+city.url+'"'),'Site ausente no global: '+city.cidade);
- assert.equal(city.numero,'5513981113001','Telefone central temporário: '+city.cidade);
+ const expectedPhone=['sorocaba-sp','pilar-do-sul-sp'].includes(city.id)?'5515997909049':'5513981113001';
+ assert.equal(city.numero,expectedPhone,'Telefone da central regional: '+city.cidade);
  const marker=doc.indexOf('aria-label="WINF Select '+city.cidade+', '+city.uf+'"');
  assert.ok(marker>=0,'Card de território ausente '+city.cidade);
  const article=doc.slice(marker,doc.indexOf('</article>',marker));
- assert.match(article,/wa\.me\/5513981113001\?text=/,'WhatsApp com origem '+city.cidade);
+ assert.ok(article.includes('wa.me/'+expectedPhone+'?text='),'WhatsApp da regional com origem '+city.cidade);
  assert.ok(article.includes(encodeURIComponent(city.cidade)),'Mensagem deve registrar local '+city.cidade);
  assert.equal((article.match(/<a class="winf-active-card-link\s/g)||[]).length,3,'Três links em cada card: '+city.cidade);
  assert.ok(article.includes('href="'+city.url+'"'),'Link próprio da cidade: '+city.cidade);
