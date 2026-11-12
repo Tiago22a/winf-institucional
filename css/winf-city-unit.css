@@ -223,3 +223,15 @@ body.menu-open .santos-contact-dock,body:has(#menu-overlay[aria-hidden="false"])
 .santos-quote-form textarea:focus-visible{outline:2px solid white;outline-offset:2px}
 .santos-product-card{cursor:pointer}
 @media(prefers-reduced-motion:reduce){.santos-fast-contact .santos-talk-now{transition:none}}
+
+/* Site territorial WINF Select™: o par local Ghost + WhatsApp é a única camada flutuante.
+   Protege também contra scripts globais antigos ainda presentes no cache de celulares. */
+body:has(.santos-contact-dock) #winf-quick-contact,
+body:has(.santos-contact-dock) #winf-global-dock,
+body:has(.santos-contact-dock) .winf-global-floating-dock,
+body:has(.santos-contact-dock) #floating-contact-dock {display:none!important}
+@media (max-width:620px){
+ .santos-contact-dock{right:max(12px,env(safe-area-inset-right,0px));bottom:calc(15px + env(safe-area-inset-bottom,0px));gap:11px}
+ .santos-contact-dock>a{width:56px;height:56px;min-width:56px;min-height:56px;flex:none;font-size:7px;text-align:center}
+ .santos-contact-dock small{display:block;max-width:76px;text-align:center;line-height:1.2;white-space:normal}
+}
