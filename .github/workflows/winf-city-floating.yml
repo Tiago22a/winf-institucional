@@ -1,0 +1,46 @@
+name: WINF Select - Testar dock único nas cidades
+on:
+  pull_request:
+    paths:
+      - 'js/winf-quick-contact.js'
+      - 'js/winf-footer.js'
+      - 'js/winf-return.js'
+      - 'js/winf-active-territories.js'
+      - 'css/winf-city-unit.css'
+      - 'pelicula-de-controle-solar-*/**'
+      - 'insulfilm-residencial-sorocaba-sp/**'
+      - 'index.html'
+      - 'js/cidades.js'
+      - 'config/winf-active-cities.json'
+      - 'scripts/check-winf-active-territories.mjs'
+      - 'tests/winf-city-floating.test.cjs'
+      - '.github/workflows/winf-city-floating.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'js/winf-quick-contact.js'
+      - 'js/winf-footer.js'
+      - 'js/winf-return.js'
+      - 'js/winf-active-territories.js'
+      - 'css/winf-city-unit.css'
+      - 'pelicula-de-controle-solar-*/**'
+      - 'insulfilm-residencial-sorocaba-sp/**'
+      - 'index.html'
+      - 'js/cidades.js'
+      - 'config/winf-active-cities.json'
+      - 'scripts/check-winf-active-territories.mjs'
+      - 'tests/winf-city-floating.test.cjs'
+      - '.github/workflows/winf-city-floating.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  regional:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test tests/winf-city-floating.test.cjs
+      - run: node scripts/check-winf-active-territories.mjs
