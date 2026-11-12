@@ -21,15 +21,15 @@ test('imagens profissionais de marcas são arquivos locais e não contêm títul
  assert.ok(grid);
  assert.doesNotMatch(grid,/src="\/images\/ceramic-hero\.webp"/);
 });
-test('briefing usa um único filme editorial abaixo do hero e preserva VSL voluntária',()=>{
- assert.match(briefing,/id="dominio-absoluto-filme"/);
- assert.match(briefing,/data-src="\/briefing\/media\/winf-dominio-absoluto-manha\.mp4"/);
- assert.match(briefing,/data-fallback-src="\/partners\/media\/hero\.mp4"/);
- assert.doesNotMatch(briefing,/id="briefing-hero-motion"/);
+test('briefing preserva VSL voluntária com fonte e fallback acessíveis',()=>{
  assert.match(briefing,/id="partners-manifesto"/);
+ assert.match(briefing,/data-src="\\/partners\\/media\\/manifesto\\.mp4"/);
+ assert.match(briefing,/href="\\/partners\\/media\\/manifesto\\.mp4"/);
  assert.match(briefing,/data-play-manifesto/);
- assert.match(briefing,/\/js\/winf-cinema\.js\?v=/);
- assert.match(briefing,/hero-motion\.css\?v=/);
+ assert.doesNotMatch(briefing,/autoplay[^>]*id="partners-manifesto"/);
+ assert.doesNotMatch(briefing,/id="briefing-hero-motion"/);
+ assert.match(briefing,/\\/js\\/winf-cinema\\.js\\?v=/);
+ assert.match(briefing,/hero-motion\\.css\\?v=/);
 });
 
 test('animações param ou não iniciam com movimento reduzido/economia de dados',()=>{
