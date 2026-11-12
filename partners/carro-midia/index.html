@@ -58,6 +58,7 @@ function capture(){
  current.brand=$('brand').value.trim().slice(0,65);
  const n=Number($('value').value);
  current.value=Number.isFinite(n)&&n>=0&&n<=1e6?n:0;
+ $('sum').textContent=fmt(SLOT_IDS.reduce((total,id)=>total+(Number(state.slots[id].value)||0),0));
  dirty=true;
 }
 function render(){
@@ -127,6 +128,8 @@ for(const btn of document.querySelectorAll('.zone'))btn.addEventListener('click'
 $('car').addEventListener('change',()=>{capture();render();});
 $('style').addEventListener('change',()=>{capture();render();});
 $('territory').addEventListener('change',()=>{capture();render();});
+$('brand').addEventListener('input',capture);
+$('value').addEventListener('input',capture);
 $('apply').addEventListener('click',apply);
 $('logo').addEventListener('change',async()=>{const f=$('logo').files[0];if(!f)return;try{const url=await compressedLogo(f);capture();state.slots[selected].logo=url;render();saveLocal();status('Logomarca aplicada à cota '+selected.toUpperCase()+'.');}catch(e){status(e.message,true)}});
 $('save').addEventListener('click',()=>{capture();if(saveLocal())status('Campanha salva neste navegador.');});
