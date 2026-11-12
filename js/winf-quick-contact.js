@@ -11,6 +11,9 @@
   if (/^\/(pelicula-de-controle-solar-santos-sp|insulfilm-residencial-sorocaba-sp)(?:\/|$)/.test(path)) return;
   // Não criar widgets comerciais em aplicativos internos, checkout ou painel de gestão.
   if (/^\/(admin|adm|app|apps|os|sistema|checkout|painel)(?:\/|$)/.test(path)) return;
+  // MediaCar is a working visual editor: floating contact buttons obscure vehicle cards and controls on mobile.
+  // Contact remains available through the institutional footer.
+  if (/^\/partners\/carro-midia(?:\/|$)/.test(path)) return;
   const forPartners = /^\/(partners|briefing)(?:\/|$)/.test(path);
   const pageName = forPartners ? 'WINF Partners™' : /^\/aerocore/.test(path) ? 'AeroCore™ e WINF' : 'WINF™';
   const salesPhone = '5513981113001', partnerPhone = '5513997815375';
