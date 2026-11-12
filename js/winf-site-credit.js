@@ -15,7 +15,7 @@
   function ensureCredit() {
     const footers = document.querySelectorAll('footer');
     const footer = document.getElementById('winf-global-footer') || footers[footers.length - 1];
-    const oldCredit = footer && footer.querySelector('.winf-footer-credit');
+    const oldCredit = footer && footer.querySelector('.winf-footer-credit, .winf-site-signature');
     const host = oldCredit || document.createElement('p');
     if (host.dataset.creditNetworkVersion === '20261112') return true;
     host.dataset.creditNetworkVersion = '20261112';
