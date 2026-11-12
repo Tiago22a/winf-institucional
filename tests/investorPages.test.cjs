@@ -43,7 +43,7 @@ test("preços do licenciamento e limites de previsão financeira continuam coere
  assert.match(brief,/R\$ 95\.000/);
  assert.match(brief,/R\$ 250\.000/);
  assert.match(brief,/<small>A partir de<\/small> R\$ 95\.000/);
- assert.match(brief,/45 metros lineares/);
+ assert.match(brief,/Composição do kit apresentada na proposta de adesão/);
  assert.match(brief,/Não há promessa de faturamento, margem, retorno ou prazo de recuperação do investimento/);
 });
 test("o briefing não atribui certificações e aprovações automáticas",()=>{

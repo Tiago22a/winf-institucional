@@ -1,0 +1,14 @@
+/* Padrinho Modern™ — discretas últimas chamadas nos formatos WINF Partners. */
+.pm-mini{margin:24px 0 10px;padding:21px 22px;border:1px solid #ffffff40;background:linear-gradient(110deg,#22262caa,#0c0f13aa);display:flex;align-items:center;justify-content:space-between;gap:20px;text-align:left;color:#f4f5f8;font-family:Inter,Arial,sans-serif;border-radius:7px}
+.pm-mini__body{min-width:0}.pm-mini__eyebrow{display:block;font-size:10px;letter-spacing:.18em;font-weight:800;color:#a5b4c7;margin-bottom:6px}.pm-mini strong{display:block;font-size:clamp(15px,1.9vw,19px);line-height:1.32;color:#fff}.pm-mini p{font:400 12px/1.6 Inter,Arial,sans-serif;color:#b6bbc5;margin:6px 0 0}
+.pm-mini__link{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;padding:11px 14px;min-height:44px;border:1px solid #e5e8ee;color:#fff!important;background:#ffffff0a;text-decoration:none!important;font:800 11px/1.3 Inter,Arial,sans-serif;letter-spacing:.07em;text-align:center}
+.pm-mini__link:hover{background:#fff;color:#16191f!important}.pm-mini__link:focus-visible{outline:2px solid white;outline-offset:4px}
+.pm-last-call{border-top:1px solid #ffffff24;border-bottom:1px solid #ffffff24;background:radial-gradient(circle at 73% 60%,#37527154,transparent 45%),#101216;padding:clamp(42px,6vw,84px) max(18px,calc((100vw - 1130px)/2));color:#f4f5f8;font-family:Inter,Arial,sans-serif;text-align:center}
+.pm-last-call__kicker{display:block;font:800 10px/1.2 Inter,Arial,sans-serif;letter-spacing:.2em;color:#a6b9d1;margin-bottom:18px}.pm-last-call h2{font:400 clamp(31px,5vw,61px)/1.1 Anton,Impact,Inter,Arial,sans-serif;text-transform:uppercase;max-width:890px;margin:0 auto 20px;color:#fff}.pm-last-call h2 em{font-style:normal;color:#bbcadf}.pm-last-call p{font:400 14px/1.7 Inter,Arial,sans-serif;color:#b9c0cd;max-width:720px;margin:0 auto 28px}.pm-last-call .pm-mini__link{background:#f4f5f8;color:#0c1017!important;min-height:50px;padding:13px 22px}.pm-last-call .pm-mini__link:hover{background:#dbe3ee}
+.pm-last-call .pm-last-call__note{font-size:11px;color:#969eab;margin:18px auto 0}
+@media(max-width:650px){.pm-mini{flex-direction:column;align-items:stretch;padding:17px}.pm-mini__link{width:100%}.pm-last-call{padding:48px 18px}.pm-last-call h2{font-size:clamp(30px,8vw,45px)}}
+
+/* Small cross-sell link inside the three model cards. */
+.pm-model-link{display:inline-block!important;margin:12px 0 4px!important;padding:8px 0!important;color:#c7d8ee!important;background:transparent!important;border:0!important;border-bottom:1px solid #9aacc5!important;font:800 10px/1.4 Inter,Arial,sans-serif!important;letter-spacing:.07em!important;text-decoration:none!important;text-transform:uppercase!important}
+.pm-model-link:hover{color:#fff!important;border-bottom-color:#fff!important}
+.pm-model-link:focus-visible{outline:2px solid white;outline-offset:3px}
