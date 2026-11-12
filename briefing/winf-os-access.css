@@ -1,48 +1,103 @@
-/* WINF OS™ — acesso no Briefing WINF Partners.
-   Reutiliza exclusivamente o Ghost oficial, sem alterar o desenho. */
-.partners-page .partners-site-header .briefing-os-launch {
-  display: inline-flex; align-items: center; justify-content: center; gap: 11px;
-  flex: 0 0 auto; min-height: 54px; padding: 8px 15px 8px 12px;
-  margin-inline: auto 16px; color: #fff; text-decoration: none;
-  border: 1px solid rgba(180,208,238,.53);
-  border-radius: 18px 6px 18px 6px;
-  background: linear-gradient(115deg,rgba(8,25,47,.92),rgba(6,11,23,.79));
-  box-shadow: 0 10px 32px rgba(0,0,0,.22), inset 0 1px rgba(255,255,255,.11);
-  -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
+/* WINF OS / InfoOS — botão circular oficial: Ghost original, contorno fino, LED branco.
+   Utilizado no briefing e no cabeçalho do WINF Partners; CSS isolado, sem JS.
+   O clique abre o login existente. Não alteramos mascote, autenticação ou animação. */
+.winf-os-power-link {
+  --os-size: 66px;
+  flex: 0 0 auto;
+  display: inline-flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: calc(var(--os-size) + 12px);
+  min-width: calc(var(--os-size) + 12px);
+  min-height: calc(var(--os-size) + 26px);
+  margin: 0 12px 0 auto;
+  padding: 3px 0 0;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  line-height: 1;
+  color: #858990;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+.winf-os-power-link::before, .winf-os-power-link::after { display: none !important; }
+.winf-os-power {
   position: relative; isolation: isolate;
-  transition: border-color .2s ease, background .2s ease, transform .2s ease;
+  display: grid; place-items: center;
+  width: var(--os-size); height: var(--os-size);
+  border-radius: 50%;
+  background: linear-gradient(140deg,#8c9297 0%,#23262b 10%,#030405 25%,#3b4045 57%,#050506 76%,#565b60 94%,#0b0d0e 100%);
+  border: 1px solid #272b2e;
+  box-shadow: 0 8px 15px rgba(0,0,0,.52),0 2px 4px rgba(0,0,0,.55),inset 0 1px 1px rgba(255,255,255,.48),inset 0 -2px 3px #000;
+  transition: transform .2s ease, box-shadow .3s ease;
 }
-.partners-page .partners-site-header .briefing-os-launch:before{
-  content:""; position:absolute; inset:7px auto 7px 0; width:2px;
-  background:#7cc7ff; border-radius:2px; opacity:.75;
+.winf-os-power::before{
+  content:""; position:absolute; inset:4px; border-radius:50%;
+  background:linear-gradient(150deg,#090a0b,#2a2d31 18%,#080a0c 69%,#30343a);
+  box-shadow: inset 0 2px 4px #000,0 1px 0 #7776;
 }
-.partners-page .partners-site-header .briefing-os-launch img.briefing-os-ghost{
-  width:29px; height:34px; object-fit:contain; flex:0 0 auto;
-  filter:drop-shadow(0 1px 6px rgba(255,255,255,.23));
+.winf-os-power::after{
+  content:""; position:absolute; inset:5px; border:1px solid #404448;
+  border-radius:50%; opacity:.85;
+  transition:border-color .25s,box-shadow .25s;
 }
-.briefing-os-copy{display:flex;flex-direction:column;gap:1px;white-space:nowrap}
-.briefing-os-copy small{font-family:Inter,system-ui,sans-serif;font-size:8px;font-weight:600;letter-spacing:.24em;color:#bdd3ea}
-.briefing-os-copy strong{font-family:Gustavo,Inter,system-ui,sans-serif;font-size:15px;letter-spacing:.025em;line-height:1.1;font-weight:700}
-.briefing-os-copy em{font-style:normal;color:#9cd5ff}
-.briefing-os-copy sup{font-size:7px;vertical-align:super;margin-left:2px}
-.briefing-os-arrow{font-size:17px;line-height:1;color:#c5d7e8;margin-left:5px}
-.partners-page .partners-site-header .briefing-os-launch:is(:hover,:focus-visible){
-  border-color:#d8ecff; background:linear-gradient(115deg,rgba(14,43,72,.95),rgba(9,20,38,.88));
-  transform:translateY(-2px);
+.winf-os-power-face{
+  position:absolute; inset:7px; border-radius:50%;
+  background:radial-gradient(ellipse at 38% 20%,#272a2f,#121519 45%,#070809 83%);
+  box-shadow:inset 0 7px 13px #000b,inset -3px -5px 12px #0009,inset 1px 1px 1px #7775;
 }
-.partners-page .partners-site-header .briefing-os-launch:focus-visible{outline:2px solid #fff;outline-offset:4px}
+.winf-os-ghost-line {
+  position:relative; z-index:1; display:block; width:36%; height:62%;
+  object-fit:contain; opacity:.58; filter:brightness(.40);
+  transition:filter .26s ease,opacity .26s ease;
+}
+.winf-os-engraved{
+  display:block; white-space:nowrap; font: 700 10px/1.15 Inter,system-ui,sans-serif;
+  letter-spacing:.12em; text-transform:none; color:#777a80;
+  text-shadow:0 1px 1px rgba(0,0,0,.97),0 -1px 0 rgba(255,255,255,.23);
+  margin:0; padding:0;
+}
+.winf-os-power-link:is(:hover,:focus-visible) .winf-os-power { transform: translateY(-1px); box-shadow:0 9px 17px #000a,inset 0 1px 1px #fff9,0 0 10px #ffffff26; }
+.winf-os-power-link:is(:hover,:focus-visible) .winf-os-ghost-line {
+  opacity:1;
+  filter:brightness(1) drop-shadow(0 0 2px #fff) drop-shadow(0 0 5px #fffd) drop-shadow(0 0 8px #ffffff85);
+}
+.winf-os-power-link:is(:hover,:focus-visible) .winf-os-power::after {
+  border-color:#eee; box-shadow:0 0 4px #fff8,inset 0 0 3px #fff5;
+}
+.winf-os-power-link:is(:hover,:focus-visible) .winf-os-engraved{
+  color:#d6d6d7; text-shadow:0 1px 1px #000,0 0 5px #ffffff55;
+}
+.winf-os-power-link:active .winf-os-power{ transform:translateY(1px) scale(.975); }
+.winf-os-power-link:focus-visible{outline:2px solid #fff;outline-offset:4px;border-radius:8px !important;}
+/* Sobrescreve especificamente estilos antigos de links do header Partners. */
+.wp-header .wp-header-actions .winf-os-power-link{display:inline-flex!important;margin:0 8px 0 0;}
+.partners-page .partners-site-header .winf-os-power-link{margin:0 12px 0 auto;}
+@media(hover:none),(pointer:coarse){
+  .winf-os-power-link .winf-os-ghost-line {
+    opacity:1;filter:brightness(1) drop-shadow(0 0 2px #fff) drop-shadow(0 0 5px #fffd) drop-shadow(0 0 8px #ffffff85);
+  }
+  .winf-os-power-link .winf-os-power::after{
+    border-color:#eee;box-shadow:0 0 4px #fff8,inset 0 0 3px #fff5;
+  }
+  .winf-os-power-link .winf-os-engraved{color:#c7c8ca;}
+}
 @media(max-width:800px){
- .partners-page .partners-site-header .briefing-os-launch{min-height:48px;gap:7px;padding:7px 10px;margin-right:7px}
- .briefing-os-copy small,.briefing-os-arrow{display:none}
- .briefing-os-copy strong{font-size:13px}
- .partners-page .partners-site-header .briefing-os-launch img.briefing-os-ghost{width:24px;height:29px}
+  .winf-os-power-link{--os-size:55px;gap:2px;min-height:72px;}
+  .winf-os-engraved{font-size:9px;}
+  .partners-page .partners-site-header .winf-os-power-link{margin:0 5px 0 auto;}
+  .wp-header .wp-header-actions .winf-os-power-link{margin-right:3px;}
 }
 @media(max-width:420px){
- .partners-page .partners-site-header .briefing-os-launch{padding:7px 8px;gap:5px;margin-right:4px;min-height:43px}
- .briefing-os-copy strong{font-size:11px}
- .partners-page .partners-site-header .briefing-os-launch img.briefing-os-ghost{width:20px;height:24px}
+  .winf-os-power-link{--os-size:47px;gap:2px;width:52px;min-width:52px;min-height:62px;}
+  .winf-os-engraved{font-size:8px;letter-spacing:.06em;}
+  .partners-page .partners-site-header .winf-os-power-link{margin:0 3px 0 auto;}
 }
 @media(prefers-reduced-motion:reduce){
- .partners-page .partners-site-header .briefing-os-launch{transition:none}
- .partners-page .partners-site-header .briefing-os-launch:is(:hover,:focus-visible){transform:none}
+  .winf-os-power-link *{transition:none!important;}
 }
