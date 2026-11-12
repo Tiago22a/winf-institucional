@@ -1,0 +1,18 @@
+/* Assinatura de desenvolvimento — apenas rodapés, sem alterar a identidade das marcas. */
+.winf-site-signature{
+  box-sizing:border-box;max-width:1200px;margin:28px auto 0;padding:16px 20px 8px;
+  text-align:center;color:#aeb2bc;font:500 11px/1.8 Inter,Gustavo,Arial,sans-serif;
+  letter-spacing:.075em;text-transform:uppercase;
+  border-top:1px solid #ffffff22;
+}
+.winf-site-signature a,
+.winf-footer-signoff .winf-footer-credit a{
+  color:#ebedf2;text-decoration:underline;text-decoration-color:#ffffff60;text-underline-offset:4px;
+}
+.winf-site-signature a:hover,.winf-footer-signoff .winf-footer-credit a:hover{color:#fff;text-decoration-color:#fff}
+.winf-site-signature a:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.winf-site-signature-footer{padding:22px 14px 28px;background:#090a0c;color:#aeb2bc}
+.winf-site-signature-footer .winf-site-signature{margin:0 auto}
+.winf-footer-credit[data-credit-network-version="20261112"]{flex-wrap:wrap;gap:6px!important}
+@media(max-width:600px){.winf-site-signature{padding:16px 12px 6px;font-size:10px;letter-spacing:.035em}}
+@media print{.winf-site-signature,.winf-site-signature-footer{display:none!important}}
