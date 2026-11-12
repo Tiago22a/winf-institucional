@@ -88,3 +88,30 @@ body:has(.mc3-app) .shell{max-width:1650px}
 .mc3-hint a{color:#495b6a;text-decoration:underline;text-underline-offset:2px}
 @media(max-width:800px){.mc3-scene{height:clamp(490px,70svh,700px);min-height:490px}.mc3-intro{max-width:210px}}
 @media(max-width:560px){.mc3-app{min-height:calc(100svh - 36px)}.mc3-scene{height:clamp(435px,68svh,590px);min-height:435px;margin:0 4px}.mc3-viewport{border-radius:0}.mc3-view-tools{bottom:52px}.mc3-intro{max-width:174px}.mc3-intro h1{font-size:24px}.mc3-intro p{max-width:170px;font-size:10px}.mc3-controls{padding-bottom:25px}}
+
+/* MediaCar 360: scrolling must never be captured by the canvas. */
+.mc3-viewport,.mc3-viewport canvas{overscroll-behavior:auto}
+.mc3-orbit-actions{position:absolute;z-index:5;left:clamp(10px,2vw,25px);bottom:46px;display:flex;gap:8px;align-items:center}
+.mc3-orbit-actions button{border:1px solid #d9dde5;border-radius:10px;min-width:42px;min-height:42px;padding:9px 12px;font-weight:700;font-size:14px;background:rgba(255,255,255,.94);color:#25292f;box-shadow:0 4px 16px #0001}
+.mc3-orbit-actions button:focus-visible{outline:2px solid #456a9b;outline-offset:3px}
+.mc3-orbit-actions button[hidden]{display:none!important}
+@media (pointer:coarse){
+ .mc3-viewport,.mc3-viewport canvas{touch-action:pan-y!important}
+ .mc3-viewport.mc3-touch-active,.mc3-viewport.mc3-touch-active canvas{touch-action:none!important}
+ .mc3-orbit-actions{bottom:51px;left:12px}
+ .mc3-orbit-actions button{min-height:44px;min-width:44px}
+}
+@media(max-width:700px){
+ .mc3-scene{height:clamp(380px,86vw,510px);margin:0 6px}
+ .mc3-intro{left:12px;top:12px;max-width:165px}
+ .mc3-intro h1{font-size:clamp(21px,5vw,29px);margin:8px 0}
+ .mc3-intro p{font-size:11px}
+ .mc3-view-tools{right:7px;top:51%;padding:4px;gap:2px}
+ .mc3-view-tools button{min-width:43px;min-height:40px;font-size:10px;padding:5px}
+ .mc3-scene-foot{left:12px;right:8px;bottom:6px;font-size:8px;letter-spacing:0}
+ .mc3-orbit-actions{bottom:50px}
+ .mc3-controls{padding:16px 13px}
+ .mc3-models{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+ .mc3-models button{min-width:0;padding:12px 9px}
+}
+@media (prefers-reduced-motion:reduce){.mc3-app *, .mc3-app *::before,.mc3-app *::after{scroll-behavior:auto!important;transition-duration:0ms!important}}
