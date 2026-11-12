@@ -59,10 +59,10 @@ globalThis.WINF_CIDADES = [
     "status": "pre_ativacao",
     "siteAtivo": true,
     "tipoAtendimento": "residencial",
-    "numero": "5513981113001",
+    "numero": "5515997909049",
     "url": "/insulfilm-residencial-sorocaba-sp/",
     "instagram": "https://www.instagram.com/winfselect.sorocaba/",
-    "observacoes": "Atendimento temporariamente centralizado pela WINF no DDD 13, com identificação da cidade. Consulte disponibilidade de instalação.",
+    "observacoes": "Atendimento comercial pela Central WINF Select DDD 015, com origem identificada de Sorocaba. Instalação e agenda local sob confirmação.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -1552,10 +1552,10 @@ globalThis.WINF_UNIDADES_EXTRAS = [
     "status": "ativa",
     "siteAtivo": true,
     "tipoAtendimento": null,
-    "numero": "5513981113001",
+    "numero": "5515997909049",
     "url": "/pelicula-de-controle-solar-pilar-do-sul-sp/",
     "instagram": "https://www.instagram.com/winfselect.pilardosul/",
-    "observacoes": "Atendimento temporariamente centralizado pela WINF no DDD 13, com identificação da cidade. Consulte disponibilidade de instalação.",
+    "observacoes": "Atendimento comercial pela Central WINF Select DDD 015, com origem identificada de Pilar do Sul. Instalação e agenda local sob confirmação.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   }
