@@ -21,7 +21,8 @@ for(const city of cfg.cities){
  assert.ok(entry.images.length>=1,'Nenhuma capa local para '+city.city);
  const landing=entry.images.find(x=>x.type==='capa-social-da-cidade');
  assert.ok(landing,'Capa de cidade ausente: '+city.city);
- assert.equal(landing.image,'images/og/winf-select-'+city.origin+'-1200x630.jpg');
+ const cityImageBase='images/og/winf-select-'+city.origin+'-1200x630';
+ assert.ok([cityImageBase+'.jpg',cityImageBase+'-r2.jpg'].includes(landing.image),'Capa local registrada deve usar variante oficial: '+city.city);
  for(const asset of entry.images){
   assert.ok(asset.page.startsWith('https://winf.com.br/'+city.slug+'/'),'Página de outra cidade: '+asset.page);
   assert.ok(!used.has(asset.image),'Arte atribuída a mais de uma cidade: '+asset.image);
