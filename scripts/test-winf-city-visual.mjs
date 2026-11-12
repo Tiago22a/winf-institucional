@@ -44,7 +44,8 @@ for(const mode of modes) {
         const og=document.querySelector('meta[property="og:image"]')?.getAttribute('content');
         const robots=document.querySelector('meta[name="robots"]')?.getAttribute('content')||'';
         const grids=['.winf-guide-grid','.winf-intent-grid'];
-        const nav=document.querySelector('a[href*="wa.me/5513981113001"]');
+        const expectedNumber=/sorocaba|pilar-do-sul/.test(location.pathname)?'5515997909049':'5513981113001';
+        const nav=document.querySelector('a[href*="wa.me/'+expectedNumber+'"]');
         return {
           h1Count:h1.length,
           canonical:canon,og,robots,
@@ -96,15 +97,15 @@ for(const mode of modes) {
     results.push(check);
     console.log(JSON.stringify({city:slug,mode:mode.name,status:check.status,ogStatus:check.ogStatus,errors:check.errors,warnings:check.warnings}));
   }
-  // A página inicial tem sete cards, cada um com três canais de contato visíveis.
+  // A página inicial tem sete cards em três regiões, com três canais por cidade.
   const homeCheck={city:'home-cards',mode:mode.name,url:BASE+'/',errors:[],warnings:[]};
   try{
     const response=await page.goto(BASE+'/',{waitUntil:'domcontentloaded',timeout:45000});
     homeCheck.status=response?.status()??null;
     if(homeCheck.status!==200)homeCheck.errors.push('HTTP '+homeCheck.status);
-    await page.locator('#winf-active-cards > article.winf-active-card').first().waitFor({timeout:12000});
+    await page.locator('#unidades-ativas article.winf-active-card').first().waitFor({timeout:12000});
     await page.locator('#winf-quick-contact .wqc-launchers .wqc-circle').first().waitFor({state:'visible',timeout:15000});
-    const cards=await page.locator('#winf-active-cards > article.winf-active-card').evaluateAll(items=>items.map(el=>{
+    const cards=await page.locator('#unidades-ativas article.winf-active-card').evaluateAll(items=>items.map(el=>{
       const links=[...el.querySelectorAll('.winf-active-card-link')];
       return {
         id:el.getAttribute('data-territory'),
@@ -120,7 +121,8 @@ for(const mode of modes) {
       if(card.navDisplay!=='grid')homeCheck.errors.push(card.id+' sem grid de contatos');
       if(card.links.some(x=>x.width<40||x.height<34||!x.visible))homeCheck.errors.push(card.id+' com botão invisível/pequeno');
       if(!card.links.some(x=>x.href?.startsWith('/')))homeCheck.errors.push(card.id+' sem site local');
-      if(!card.links.some(x=>x.href?.includes('wa.me/5513981113001?text=')))homeCheck.errors.push(card.id+' sem WhatsApp central');
+      const expectedPhone=['sorocaba','pilar-do-sul'].includes(card.id)?'5515997909049':'5513981113001';
+      if(!card.links.some(x=>x.href?.includes('wa.me/'+expectedPhone+'?text=')))homeCheck.errors.push(card.id+' sem WhatsApp da central regional');
       if(!card.links.some(x=>x.href?.includes('instagram.com/')))homeCheck.errors.push(card.id+' sem Instagram');
     }
     const dockState=await page.evaluate(()=>{
@@ -163,41 +165,7 @@ for(const mode of modes) {
   results.push(homeCheck);
   console.log(JSON.stringify({city:'home-cards',mode:mode.name,status:homeCheck.status,errors:homeCheck.errors,warnings:homeCheck.warnings}));
 
-  // GHOST SHOP: quatro botões de navegação visíveis e marca d'água sem distorção.
-  const ghostCheck={city:'ghost-shop',mode:mode.name,url:BASE+'/ghost-shop/',errors:[],warnings:[]};
-  try{
-    const response=await page.goto(ghostCheck.url,{waitUntil:'domcontentloaded',timeout:45000});
-    ghostCheck.status=response?.status()??null;
-    if(ghostCheck.status!==200)ghostCheck.errors.push('HTTP '+ghostCheck.status);
-    await page.locator('.gs-nav a').first().waitFor({state:'visible',timeout:12000});
-    const layout=await page.evaluate(()=>{
-      const nav=document.querySelector('.gs-nav');
-      const anchors=[...nav.querySelectorAll('a')];
-      const ghost=document.querySelector('.gs-ghost');
-      const rect=ghost?.getBoundingClientRect();
-      const navRects=anchors.map(a=>{const b=a.getBoundingClientRect();return {width:b.width,height:b.height,left:b.left,right:b.right,top:b.top,bottom:b.bottom};});
-      return {links:anchors.map(a=>a.getAttribute('href')),
-        navDisplay:getComputedStyle(nav).display,
-        navRects,
-        ghost:{naturalWidth:ghost?.naturalWidth,naturalHeight:ghost?.naturalHeight,
-          displayedRatio:ghost?.offsetWidth/ghost?.offsetHeight,
-          nativeRatio:ghost?.naturalWidth/ghost?.naturalHeight,
-          opacity:parseFloat(getComputedStyle(ghost).opacity)},
-        documentOverflow:document.documentElement.scrollWidth-document.documentElement.clientWidth
-      };
-    });
-    ghostCheck.metrics=layout;
-    if(layout.links.length!==4)ghostCheck.errors.push('Esperados 4 links: '+layout.links.length);
-    if(layout.navRects.some(r=>r.height<40||r.width<50||r.left<0||r.right>mode.viewport.width+1))ghostCheck.errors.push('Botões apertados ou fora da tela');
-    if(mode.name==='mobile'&&layout.navDisplay!=='grid')ghostCheck.errors.push('Menu mobile não está em grade');
-    if(!layout.ghost.naturalWidth||Math.abs(layout.ghost.displayedRatio-layout.ghost.nativeRatio)>0.015)ghostCheck.errors.push('Fantasma distorcido');
-    if(layout.ghost.opacity>0.16||layout.ghost.opacity<0.04)ghostCheck.errors.push('Fantasma perdeu a transparência');
-    if(layout.documentOverflow>32)ghostCheck.warnings.push('Rolagem horizontal inesperada: '+layout.documentOverflow);
-    await page.locator('.gs-header').screenshot({path:outDir+'/ghost-shop-'+mode.name+'-header.png',animations:'disabled'});
-    await page.locator('.gs-hero').screenshot({path:outDir+'/ghost-shop-'+mode.name+'-hero.png',animations:'disabled'});
-  }catch(err){ghostCheck.errors.push(String(err).slice(0,450));}
-  results.push(ghostCheck);
-  console.log(JSON.stringify({city:'ghost-shop',mode:mode.name,status:ghostCheck.status,errors:ghostCheck.errors,warnings:ghostCheck.warnings}));
+  // GHOST SHOP™ possui auditoria própria; este job cobre somente os sites regionais WINF Select™.
   await ctx.close();
 }
 await browser.close();
