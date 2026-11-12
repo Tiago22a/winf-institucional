@@ -32,6 +32,7 @@ if (root) {
    const THREE = await import("three");
    const { OrbitControls } = await import("three/addons/controls/OrbitControls.js");
    const { GLTFLoader } = await import("three/addons/loaders/GLTFLoader.js");
+   const { MeshoptDecoder } = await import("three/addons/libs/meshopt_decoder.module.js");
    const scene = new THREE.Scene();
    scene.background = new THREE.Color(0xdde2e8);
    const camera = new THREE.PerspectiveCamera(36, 1, .1, 90);
@@ -105,6 +106,7 @@ if (root) {
    let car=null,carBody=null,bodyInfo=null;
    let activeImported=null,importToken=0,importPaint=[],importGlass=[];
    const loader=new GLTFLoader();
+   loader.setMeshoptDecoder(MeshoptDecoder);
    const assetBase="https://cdn.jsdelivr.net/gh/pedrosoandre/carros@2d18dfd9db96bbf0d9cffa949deaf7f571388cbf/assets/";
    const models={
      coupe:{name:"Porsche 911 C4S",file:"porsche-911-c4s.glb",author:"JK3Dstudios",source:"https://sketchfab.com/3d-models/none-ee69c474a1cc4085944cde4cb7ae87db",paint:null},
