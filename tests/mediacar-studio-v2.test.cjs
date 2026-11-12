@@ -6,7 +6,7 @@ const path=require("node:path");
 const vm=require("node:vm");
 const root=path.resolve(__dirname,"..");
 const read=p=>fs.readFileSync(path.join(root,p),"utf8");
-const studio=read("partners/carro-midia/index.html");
+const studio=read("partners/carro-midia/studio/360/index.html");
 const institutional=read("mediacar/index.html");
 const openTag="<script>",closeTag="</script>";
 const scriptStart=studio.lastIndexOf(openTag);
