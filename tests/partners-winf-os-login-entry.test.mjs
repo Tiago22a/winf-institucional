@@ -20,3 +20,12 @@ test('cartão do hub aponta para a mesma microtela e não para formulário de in
  assert.match(card[0],/sem instalar aplicativo/);
  assert.doesNotMatch(card[0],/partners\/#contact/);
 });
+
+test('cabeçalho WINF oficial | PARTNERS sem slogan sob a marca',()=>{
+ const top=partners.match(/<header class="wp-header"[\s\S]*?<\/header>/);
+ assert.ok(top,'Cabeçalho não encontrado');
+ assert.match(top[0],/winf-logo\.svg\?v=winf-official-vector-20261111/);
+ assert.match(top[0],/alt="WINF™"/);
+ assert.match(top[0],/partners-lockup-wordmark"[^>]*>PARTNERS<sup>™<\/sup>/);
+ assert.doesNotMatch(top[0],/FROM BRAZIL TO THE WORLD/);
+});
