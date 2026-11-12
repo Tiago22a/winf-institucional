@@ -1,5 +1,13 @@
 name: WINF Select — Teste visual de cidades (desktop e mobile)
 on:
+  pull_request:
+    paths:
+      - 'scripts/test-winf-city-visual.mjs'
+      - '.github/workflows/winf-city-visual.yml'
+      - 'css/winf-city-unit.css'
+      - 'js/winf-quick-contact.js'
+      - 'pelicula-de-controle-solar-*/**'
+      - 'insulfilm-residencial-sorocaba-sp/**'
   push:
     branches: [main]
     paths:
