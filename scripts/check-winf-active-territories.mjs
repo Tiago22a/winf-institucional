@@ -25,7 +25,7 @@ for(const city of all){
  assert.ok(article.includes(encodeURIComponent(city.cidade)),'Mensagem deve registrar local '+city.cidade);
  assert.equal((article.match(/<a class="winf-active-card-link\s/g)||[]).length,3,'Três links em cada card: '+city.cidade);
  assert.ok(article.includes('href="'+city.url+'"'),'Link próprio da cidade: '+city.cidade);
- assert.ok(article.includes('aria-label="WhatsApp central WINF para '+city.cidade+'"'),'WhatsApp da cidade '+city.cidade);
+ assert.ok(article.includes('aria-label="'+(regional015?'WhatsApp da Central 015 para ':'WhatsApp central WINF para ')+city.cidade+'"'),'WhatsApp da cidade '+city.cidade);
  assert.ok(article.includes('https://www.instagram.com/'),'Instagram oficial '+city.cidade);
  if(city.instagram)assert.ok(article.includes(city.instagram),'Instagram da unidade '+city.cidade);
  else assert.ok(article.includes('https://www.instagram.com/winf.ofc/'),'Sem perfil local confirmado '+city.cidade);
