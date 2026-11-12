@@ -12,6 +12,12 @@
   // A central usa WhatsApp por região; jamais criar outro conjunto com número global.
   // Guarda por padrão de URL, cobrindo também futuras cidades sem nova alteração.
   if (/^\/(?:pelicula-de-controle-solar-[a-z0-9-]+|insulfilm-residencial-[a-z0-9-]+)(?:\/|$)/.test(path)) return;
+  // Páginas de produtos WINF Select já carregam o dock contextual próprio.
+  // O script do rodapé também carrega este utilitário; sem esta guarda,
+  // dois conjuntos (Ghost/WhatsApp/Ajuda) ficam sobrepostos no mobile.
+  if (/^\/(?:blackpro|dual-reflect|invisible|securityblind|miniblind-venetian)(?:\/|$)/.test(path)) return;
+  // Respeitar outros docks contextuais já existentes na página.
+  if (document.getElementById('ws-product-contact')) return;
   // Não criar widgets comerciais em aplicativos internos, checkout ou painel de gestão.
   if (/^\/(admin|adm|app|apps|os|sistema|checkout|painel)(?:\/|$)/.test(path)) return;
   // MediaCar is a working visual editor: floating contact buttons obscure vehicle cards and controls on mobile.
