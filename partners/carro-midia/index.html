@@ -112,7 +112,14 @@ body{font-family:Inter,Arial,Helvetica,sans-serif;background:radial-gradient(ell
   <div class="mc-prompt-actions"><button class="btn" type="button" id="mcPromptCopy">Copiar prompt</button><button class="btn secondary" type="button" id="mcPromptDownload">Baixar .TXT</button><a class="btn secondary" href="#mediacar-simulador">Enviar imagem no simulador ↓</a></div>
   <p id="mcPromptNotice" class="mc-prompt-notice" aria-live="polite">Conceitos ilustrativos. Cada veículo precisa de imagens homologadas para apresentação comercial.</p>
 </section>
-<section class="mc-library" aria-label="Projetos do licenciado"><span class="mc-label">PROJETOS NO NAVEGADOR</span><select id="mcSavedProjects" aria-label="Projetos salvos no navegador"><option value="">Escolha um projeto salvo</option></select><button class="btn secondary" type="button" id="mcSaveLocal">Guardar projeto</button><button class="btn secondary" type="button" id="mcLoadLocal">Abrir</button><button class="btn danger" type="button" id="mcDeleteLocal">Excluir</button><span class="mc-library-help">Projetos são separados por identificador e salvos neste navegador. Ainda não há login nem sincronização com o WINF OS™. Para transferir a outro dispositivo, use “Salvar projeto” (JSON).</span></section>
+<section class="mc-library" aria-label="Projetos do licenciado"><span class="mc-label">PROJETOS NO NAVEGADOR</span><select id="mcSavedProjects" aria-label="Projetos salvos no navegador"><option value="">Escolha um projeto salvo</option></select><button class="btn secondary" type="button" id="mcSaveLocal">Guardar projeto</button><button class="btn secondary" type="button" id="mcLoadLocal">Abrir</button><button class="btn danger" type="button" id="mcDeleteLocal">Excluir</button><span class="mc-library-help">Projetos são separados por identificador e salvos neste navegador. A sincronização remota opcional está disponível abaixo para administradores autenticados. Para transferir a outro dispositivo, use “Salvar projeto” (JSON).</span></section>
+<section class="mc-cloud" id="mediacar-nuvem" aria-label="Projetos MediaCar na nuvem">
+<h2>PROJETOS NA NUVEM <span class="mc-cloud-beta">ACESSO ADMINISTRATIVO</span></h2>
+<p>Conecte a API WINF e use sua sessão Firebase para salvar e abrir projetos em outros dispositivos. O armazenamento local e a exportação JSON continuam funcionando separadamente.</p>
+<div class="mc-cloud-fields"><label>URL da API WINF<input id="mcCloudApi" type="url" inputmode="url" placeholder="https://seu-backend.onrender.com" autocomplete="off"></label><label>Token temporário Firebase ID<input id="mcCloudToken" type="password" placeholder="Token de sessão autenticada" autocomplete="off" spellcheck="false"></label></div>
+<div class="mc-cloud-actions"><button type="button" class="btn secondary" id="mcCloudConnect">Testar conexão</button><button type="button" class="btn" id="mcCloudSave">Salvar na nuvem</button><button type="button" class="btn secondary" id="mcCloudRefresh">Atualizar lista</button><select id="mcCloudProjects" aria-label="Projetos na nuvem"><option value="">Selecione um projeto remoto</option></select><button type="button" class="btn secondary" id="mcCloudLoad">Abrir</button><button type="button" class="btn danger" id="mcCloudDelete">Excluir</button></div>
+<p id="mcCloudStatus" role="status" aria-live="polite">Aguardando conexão. Nunca envie credenciais por WhatsApp ou conversas.</p>
+</section>
 <main class="layout" id="mediacar-simulador">
 <section class="panel" aria-label="Área de simulação">
 <div class="panelhead"><h2>01 / SEU CARRO • NÚMERO 08</h2><button class="btn secondary" type="button" id="photoBtn">+ Inserir foto do carro</button><input type="file" id="photoInput" accept="image/jpeg,image/png,image/webp" hidden></div>
@@ -423,9 +430,16 @@ function init(){
   };
  }catch(e){toast("Armazenamento local indisponível. Use Salvar projeto (JSON).")}
 }
+window.MediaCarStudioBridge={
+ snapshot:function(){captureCurrentModel();return JSON.parse(JSON.stringify(state));},
+ restore:function(saved){if(!saved||saved.version!==1||!saved.slots||!saved.photos||!keys.every(function(k){return Array.isArray(saved.slots[k])}))throw Error("Projeto inválido");state=upgradeState(saved);["licenseName","city","vehicle"].forEach(function(k){$(k).value=state[k]||""});render();persist();},
+ currentId:function(){return state.projectId;},
+ setId:function(id){state.projectId=id;persist();}
+};
 init();
 })();
 </script>
+<script src="/js/mediacar-cloud.js?v=20261111-2" defer></script>
 <script src="/js/mediacar-image-prompts.js?v=20261111-1" defer></script>
 <script src="/js/mediacar-client-preview.js?v=20261111-1" defer></script>
 <script src="/js/winf-footer.js?v=20261103-reference-2" defer></script>
