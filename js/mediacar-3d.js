@@ -91,19 +91,21 @@ if (root) {
    const loader=new GLTFLoader();
    const assetBase="https://cdn.jsdelivr.net/gh/pedrosoandre/carros@2d18dfd9db96bbf0d9cffa949deaf7f571388cbf/assets/";
    const models={
-     coupe:{name:"Porsche 911 C4S",file:"porsche-911-c4s.glb",author:"JK3Dstudios",paint:null},
-     sedan:{name:"BMW M4 CSL",file:"bmw-m4-csl.glb",author:"Black Snow",paint:null},
-     suv:{name:"Volvo XC90",file:"volvo-xc90.glb",author:"Spiicy",paint:["Material_0"]},
-     van:{name:"Mercedes-Benz Sprinter",file:"mercedes-benz-sprinter.glb",author:"Savelliy 07",paint:["Color_A10"]}
+     coupe:{name:"Porsche 911 C4S",file:"porsche-911-c4s.glb",author:"JK3Dstudios",source:"https://sketchfab.com/3d-models/none-ee69c474a1cc4085944cde4cb7ae87db",paint:null},
+     sedan:{name:"BMW M4 CSL",file:"bmw-m4-csl.glb",author:"Black Snow",source:"https://sketchfab.com/3d-models/none-26d05968e63b4fc28205cbb9abb0ea41",paint:null},
+     suv:{name:"Volvo XC90",file:"volvo-xc90.glb",author:"Spiicy",source:"https://github.com/pedrosoandre/carros/blob/main/CREDITS.md",paint:["Material_0"]},
+     van:{name:"Mercedes-Benz Sprinter",file:"mercedes-benz-sprinter.glb",author:"Savelliy 07",source:"https://github.com/pedrosoandre/carros/blob/main/CREDITS.md",paint:["Color_A10"]}
    };
    function setSource(model,loaded){
      const el=$("mc3dSource"),meta=models[model];
      if(!el||!meta)return;
-     const line=loaded?"Modelo 3D detalhado • CC BY 4.0 • autor: ":"Prévia geométrica • modelo detalhado indisponível. Autor do arquivo: ";
+     const line=loaded?"3D detalhado • arte original: ":"Prévia geométrica • modelo detalhado indisponível • crédito: ";
      const link=document.createElement("a");
-     link.href="https://github.com/pedrosoandre/carros/blob/main/CREDITS.md";
-     link.target="_blank";link.rel="noopener noreferrer";link.textContent=meta.author+" ↗";
-     el.replaceChildren(document.createTextNode(line),link);
+     link.href=meta.source;link.target="_blank";link.rel="noopener noreferrer";link.textContent=meta.author+" ↗";
+     const license=document.createElement("a");
+     license.href="https://creativecommons.org/licenses/by/4.0/";
+     license.target="_blank";license.rel="noopener noreferrer";license.textContent="CC BY 4.0";
+     el.replaceChildren(document.createTextNode(line),link,document.createTextNode(" · "),license);
    }
    function applyImportedMaterials(){
      for(const mat of importPaint){mat.color?.set(config.color);mat.roughness=config.finish==="matte"?.83:.27;mat.metalness=config.finish==="metallic"?.73:.4;mat.needsUpdate=true}
