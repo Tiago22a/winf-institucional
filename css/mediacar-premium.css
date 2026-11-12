@@ -73,3 +73,18 @@ html{scroll-behavior:smooth}
 @media(max-width:800px){.mc3-header{min-height:75px}.mc3-brand img{width:108px}.mc3-brand i{height:30px}.mc3-steps{padding-top:5px}.mc3-scene{height:450px}.mc3-intro{top:15px;max-width:170px}.mc3-intro h1{font-size:28px}.mc3-intro p{font-size:11px}.mc3-view-tools{top:auto;bottom:58px;right:11px;transform:none;flex-direction:row;flex-wrap:wrap;max-width:300px;gap:1px}.mc3-view-tools button{min-width:42px;min-height:38px;font-size:10px}.mc3-scene-foot{bottom:14px}.mc3-settings-group{margin-bottom:15px}}
 @media(max-width:560px){.mc3-app{margin:8px 0 24px;border-radius:12px}.mc3-header{padding:12px 14px;min-height:70px}.mc3-brand{gap:11px}.mc3-brand img{width:91px;max-height:48px}.mc3-brand i{height:24px}.mc3-brand strong{font-size:18px}.mc3-header-right{gap:6px;font-size:10px}.mc3-location small{display:none}.mc3-exit{padding:7px 9px}.mc3-steps{justify-content:space-between;padding:6px 7px 0}.mc3-steps button{padding:11px 3px;font-size:0;min-width:23%;min-height:42px}.mc3-steps button span{display:block;font-size:12px;margin:0}.mc3-steps button.is-active{font-size:9px}.mc3-scene{height:390px;margin:0 6px}.mc3-intro{left:15px;top:12px;max-width:195px}.mc3-overline{font-size:8px}.mc3-intro h1{font-size:26px;margin:6px 0}.mc3-intro p{font-size:10px;max-width:170px}.mc3-view-tools{bottom:51px;right:6px;left:6px;max-width:none;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));padding:4px;gap:1px;backdrop-filter:blur(8px)}.mc3-view-tools button{min-width:0;padding:5px 0;min-height:33px;font-size:10px}.mc3-scene-foot{bottom:10px;left:11px;right:9px;font-size:8px;letter-spacing:.01em}.mc3-scene-foot button{width:31px;height:31px}.mc3-controls{padding:18px 13px}.mc3-pane{min-height:95px}.mc3-choices button{padding:11px 12px;flex:1 0 auto}.mc3-continue{padding-top:14px}.mc3-continue [role=status]{font-size:10px}.mc3-intro{pointer-events:none}.mc3-sponsor-form{gap:8px}.mc3-sponsor-form label{flex:1 1 125px;min-width:120px}.mc3-save-actions button{flex:1 1 45%}#mc3dNext{min-width:130px;padding:11px 16px;min-height:46px}#mc3dNext span{margin-left:6px}}
 @media(prefers-reduced-motion:reduce){.mc3-app *{transition:none!important}}
+
+/* V3: continuous soft showroom on scroll, with a taller stage and visible floor. */
+html:has(.mc3-app),body:has(.mc3-app){background:#eef0f3}
+body:has(.mc3-app) .shell{max-width:1650px}
+.mc3-app{min-height:calc(100svh - 96px);background:linear-gradient(160deg,#f9fafb 0%,#eef0f3 55%,#e8ebef 100%);isolation:isolate}
+.mc3-scene{height:clamp(540px,65svh,780px);min-height:540px}
+.mc3-viewport{background:linear-gradient(180deg,#e1e4e9 0%,#f8f9fb 64%,#dfe3e8 100%)}
+.mc3-intro{z-index:4}
+.mc3-steps{position:relative;z-index:4;background:transparent}
+.mc3-controls{position:relative;z-index:5;background:rgba(248,249,251,.92);border-top:1px solid #dfe2e7}
+.mc3-legacy{background:#090a0d;color:#f7f8fb;padding:0 17px 22px}
+.mc3-legacy .hero,.mc3-legacy .layout,.mc3-legacy .footnote{color:#f6f6f8}
+.mc3-hint a{color:#495b6a;text-decoration:underline;text-underline-offset:2px}
+@media(max-width:800px){.mc3-scene{height:clamp(490px,70svh,700px);min-height:490px}.mc3-intro{max-width:210px}}
+@media(max-width:560px){.mc3-app{min-height:calc(100svh - 36px)}.mc3-scene{height:clamp(435px,68svh,590px);min-height:435px;margin:0 4px}.mc3-viewport{border-radius:0}.mc3-view-tools{bottom:52px}.mc3-intro{max-width:174px}.mc3-intro h1{font-size:24px}.mc3-intro p{max-width:170px;font-size:10px}.mc3-controls{padding-bottom:25px}}
