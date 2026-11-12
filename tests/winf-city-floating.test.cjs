@@ -61,5 +61,5 @@ test("Cadastros de Sorocaba e Pilar do Sul obedecem ao DDD 015",()=>{
   assert.equal(record.phone,"5515997909049",city);
  }
  const script=read("scripts/check-winf-active-territories.mjs");
- assert.match(script,/expectedPhone/);
+ assert.match(script,/expectedNumber/);
 });
