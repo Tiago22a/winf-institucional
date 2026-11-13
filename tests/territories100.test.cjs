@@ -36,3 +36,26 @@ test("jornadas e links da vitrine presentes em Partners, Asset Light, Padrinho e
  assert.ok(html.includes('id="use-location"'));
  assert.ok(html.includes("/partners/padrinho-modern/"));
 });
+
+test("duas centrais cobrem 71 cidades, distintas dos 100 territórios-alvo",()=>{
+ const active=[...(sandbox.WINF_CIDADES||[]),...(sandbox.WINF_PAGINAS_REGIONAIS||[]),...(sandbox.WINF_UNIDADES_EXTRAS||[])].filter(x=>x.status==="ativa"&&x.uf==="SP");
+ assert.equal(active.length,71);
+ assert.equal(new Set(active.map(x=>x.id)).size,71);
+ assert.equal(active.filter(x=>x.numero==="5513981113001").length,22);
+ assert.equal(active.filter(x=>x.numero==="5515997909049").length,49);
+ assert.ok(active.every(x=>x.siteAtivo===true&&x.url.startsWith("/")));
+ const csv=rd("crm/agenda-cobertura-013-015-template.csv").trim().split("\n");
+ assert.equal(csv.length,72);
+ assert.match(csv[0],/agenda_id/);
+ assert.match(csv[0],/instaladores_disponiveis/);
+});
+test("consulta pública separa atendimento regional de disponibilidade de licença",()=>{
+ const s=rd("partners/territorios/territorios.js"),html=rd("partners/territorios/index.html");
+ assert.ok(html.includes('id="coverage-results"'));
+ assert.ok(html.includes('id="central-select"'));
+ assert.ok(html.includes("71</strong> municípios"));
+ assert.ok(s.includes("https://wa.me/"));
+ assert.ok(s.includes("cidade com atendimento regional"));
+ assert.ok(s.includes("agenda") && s.includes("disponibilidade"));
+ assert.doesNotThrow(()=>new Function(s));
+});

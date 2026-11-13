@@ -27,3 +27,22 @@ Fluxo: `MAPEAR` → `QUALIFICAR` → `CONVOCAR` → `CONVERSA` → `EM_ANALISE` 
 3. Integração do cadastro oficial com backend do CRM e leituras públicas somente dos status permitidos, sem exposição de candidatos ou investidores.
 4. Revisão de conteúdo/SEO local, Lighthouse, Search Console e testes de publicação. O Search Console **não garante** indexação ou posicionamento.
 5. Auditoria geral do ecossistema **depois** de construir e validar a vitrine, conforme decisão do projeto.
+
+## Atendimento regional 013/015, agendas e instaladores (decisão de 13/11/2026)
+
+Os 71 municípios marcados como `status: ativa` em `js/cidades.js` integram **cobertura operacional regional** das duas centrais, não 71 unidades licenciadas distintas. São **22 do DDD 013** e **49 do DDD 015**. A vitrine apresenta estes registros em uma seção específica, identificados com **luz verde = atendimento comercial ativo**; a luz verde da **expansão** representa somente exclusividade homologada. Não misturar os conceitos.
+
+### Roteamento do lead
+
+1. Pessoa abre página local/Instagram ou consulta vitrine; seleciona município.
+2. Link de WhatsApp direciona à central correta com texto pré-preenchido contendo cidade e origem. A identificação automática de conversas espontâneas **ainda depende de integração de WhatsApp Business Platform/webhook ou triagem humana**. O link sozinho não cria automação.
+3. CRM registra `municipio_id`, `ddd_central`, `origem`, `servico`, `etapa`, `agenda_id`, `responsavel`, `proxima_acao` e referências da conversa conforme política de retenção.
+4. Agenda é lógica e independente por município (`agenda-<municipio-id>`), operada por pessoa/instalador alocado conforme capacidade e deslocamento. Confirmação do serviço exige disponibilidade real, e cidades próximas podem compartilhar técnico sem duplicar horários.
+5. Sistema precisa contar `instaladores_confirmados`, `instaladores_disponiveis`, pedidos aguardando agendamento e capacidade semanal, calculados por registros reais com data e histórico.
+6. Acesso a escala, dados pessoais, números de técnicos e agendas internas é privado. No site público só mostrar cobertura e contato central; sem números de instaladores não verificados.
+
+O arquivo `crm/agenda-cobertura-013-015-template.csv` possui **71 registros vazios de agenda**, sem informações pessoais de instaladores. Ele é apenas um modelo de importação para o backend privado; não é um calendário conectado nem escala operacional ativa. Não preencher/commitar nele nomes, celulares ou dados privados.
+
+### Posicionamento no Google
+
+As páginas de serviço de cada município podem ser **indexáveis** com conteúdo territorial verificável, endereço canônico, links de navegação interna e sitemap, sempre sem inventar loja, equipe instalada ou endereço físico. Priorizar SEO de intenção de **serviço de película** para as 71 cidades com atendimento regional; páginas de **licenciamento** dos 100 territórios exigem conteúdo editorial próprio antes de sair de `noindex`. Indexação e ranking dependem da avaliação do Google Search Console e da pesquisa orgânica, não são garantidos por links ou criação de página.
