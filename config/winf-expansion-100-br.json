@@ -29,7 +29,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/rio-branco-ac/",
+      "siteLocalPublicado": false
     },
     {
       "id": "maceio-al",
@@ -57,7 +59,9 @@
       "aliases": [
         "Ponta Verde",
         "Jatiúca"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/maceio-al/",
+      "siteLocalPublicado": false
     },
     {
       "id": "manaus-am",
@@ -87,7 +91,9 @@
         "Ponta Negra",
         "Adrianópolis",
         "Vieiralves"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/manaus-am/",
+      "siteLocalPublicado": false
     },
     {
       "id": "macapa-ap",
@@ -109,7 +115,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/macapa-ap/",
+      "siteLocalPublicado": false
     },
     {
       "id": "salvador-ba",
@@ -139,7 +147,9 @@
         "Horto Florestal",
         "Graça",
         "Itaigara"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/salvador-ba/",
+      "siteLocalPublicado": false
     },
     {
       "id": "feira-de-santana-ba",
@@ -167,7 +177,9 @@
       "aliases": [
         "Santa Mônica",
         "Centro"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/feira-de-santana-ba/",
+      "siteLocalPublicado": false
     },
     {
       "id": "vitoria-da-conquista-ba",
@@ -189,7 +201,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/vitoria-da-conquista-ba/",
+      "siteLocalPublicado": false
     },
     {
       "id": "camacari-ba",
@@ -211,7 +225,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/camacari-ba/",
+      "siteLocalPublicado": false
     },
     {
       "id": "lauro-de-freitas-ba",
@@ -239,7 +255,9 @@
       "aliases": [
         "Vilas do Atlântico",
         "Buraquinho"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/lauro-de-freitas-ba/",
+      "siteLocalPublicado": false
     },
     {
       "id": "fortaleza-ce",
@@ -269,7 +287,9 @@
         "Meireles",
         "Aldeota",
         "Cocó"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/fortaleza-ce/",
+      "siteLocalPublicado": false
     },
     {
       "id": "caucaia-ce",
@@ -291,7 +311,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/caucaia-ce/",
+      "siteLocalPublicado": false
     },
     {
       "id": "juazeiro-do-norte-ce",
@@ -313,7 +335,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/juazeiro-do-norte-ce/",
+      "siteLocalPublicado": false
     },
     {
       "id": "brasilia-df",
@@ -343,7 +367,9 @@
         "Lago Sul",
         "Asa Sul",
         "Sudoeste"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/brasilia-df/",
+      "siteLocalPublicado": false
     },
     {
       "id": "vitoria-es",
@@ -373,7 +399,9 @@
         "Praia do Canto",
         "Jardim da Penha",
         "Mata da Praia"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/vitoria-es/",
+      "siteLocalPublicado": false
     },
     {
       "id": "vila-velha-es",
@@ -401,7 +429,9 @@
       "aliases": [
         "Praia da Costa",
         "Itapuã"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/vila-velha-es/",
+      "siteLocalPublicado": false
     },
     {
       "id": "serra-es",
@@ -429,7 +459,9 @@
       "aliases": [
         "Laranjeiras",
         "Manguinhos"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/serra-es/",
+      "siteLocalPublicado": false
     },
     {
       "id": "goiania-go",
@@ -459,7 +491,9 @@
         "Setor Marista",
         "Setor Bueno",
         "Jardim Goiás"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/goiania-go/",
+      "siteLocalPublicado": false
     },
     {
       "id": "anapolis-go",
@@ -487,7 +521,9 @@
       "aliases": [
         "Jundiaí",
         "Centro"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/anapolis-go/",
+      "siteLocalPublicado": false
     },
     {
       "id": "aparecida-de-goiania-go",
@@ -509,7 +545,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/aparecida-de-goiania-go/",
+      "siteLocalPublicado": false
     },
     {
       "id": "rio-verde-go",
@@ -531,7 +569,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/rio-verde-go/",
+      "siteLocalPublicado": false
     },
     {
       "id": "catalao-go",
@@ -553,7 +593,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/catalao-go/",
+      "siteLocalPublicado": false
     },
     {
       "id": "sao-luis-ma",
@@ -581,7 +623,9 @@
       "aliases": [
         "Renascença",
         "Calhau"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/sao-luis-ma/",
+      "siteLocalPublicado": false
     },
     {
       "id": "imperatriz-ma",
@@ -603,7 +647,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/imperatriz-ma/",
+      "siteLocalPublicado": false
     },
     {
       "id": "belo-horizonte-mg",
@@ -633,7 +679,9 @@
         "Lourdes",
         "Belvedere",
         "Savassi"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/belo-horizonte-mg/",
+      "siteLocalPublicado": false
     },
     {
       "id": "uberlandia-mg",
@@ -661,7 +709,9 @@
       "aliases": [
         "Jardim Karaíba",
         "Santa Mônica"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/uberlandia-mg/",
+      "siteLocalPublicado": false
     },
     {
       "id": "uberaba-mg",
@@ -683,7 +733,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/uberaba-mg/",
+      "siteLocalPublicado": false
     },
     {
       "id": "contagem-mg",
@@ -705,7 +757,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/contagem-mg/",
+      "siteLocalPublicado": false
     },
     {
       "id": "betim-mg",
@@ -727,7 +781,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/betim-mg/",
+      "siteLocalPublicado": false
     },
     {
       "id": "juiz-de-fora-mg",
@@ -755,7 +811,9 @@
       "aliases": [
         "São Mateus",
         "Bom Pastor"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/juiz-de-fora-mg/",
+      "siteLocalPublicado": false
     },
     {
       "id": "montes-claros-mg",
@@ -777,7 +835,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/montes-claros-mg/",
+      "siteLocalPublicado": false
     },
     {
       "id": "ipatinga-mg",
@@ -805,7 +865,9 @@
       "aliases": [
         "Horto",
         "Cidade Nobre"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/ipatinga-mg/",
+      "siteLocalPublicado": false
     },
     {
       "id": "divinopolis-mg",
@@ -827,7 +889,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/divinopolis-mg/",
+      "siteLocalPublicado": false
     },
     {
       "id": "pocos-de-caldas-mg",
@@ -849,7 +913,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/pocos-de-caldas-mg/",
+      "siteLocalPublicado": false
     },
     {
       "id": "nova-lima-mg",
@@ -877,7 +943,9 @@
       "aliases": [
         "Vila da Serra",
         "Vale do Sereno"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/nova-lima-mg/",
+      "siteLocalPublicado": false
     },
     {
       "id": "campo-grande-ms",
@@ -905,7 +973,9 @@
       "aliases": [
         "Jardim dos Estados",
         "Chácara Cachoeira"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/campo-grande-ms/",
+      "siteLocalPublicado": false
     },
     {
       "id": "dourados-ms",
@@ -927,7 +997,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/dourados-ms/",
+      "siteLocalPublicado": false
     },
     {
       "id": "tres-lagoas-ms",
@@ -949,7 +1021,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/tres-lagoas-ms/",
+      "siteLocalPublicado": false
     },
     {
       "id": "cuiaba-mt",
@@ -979,7 +1053,9 @@
         "Goiabeiras",
         "Jardim das Américas",
         "Santa Rosa"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/cuiaba-mt/",
+      "siteLocalPublicado": false
     },
     {
       "id": "rondonopolis-mt",
@@ -1001,7 +1077,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/rondonopolis-mt/",
+      "siteLocalPublicado": false
     },
     {
       "id": "varzea-grande-mt",
@@ -1023,7 +1101,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/varzea-grande-mt/",
+      "siteLocalPublicado": false
     },
     {
       "id": "sinop-mt",
@@ -1045,7 +1125,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/sinop-mt/",
+      "siteLocalPublicado": false
     },
     {
       "id": "belem-pa",
@@ -1075,7 +1157,9 @@
         "Umarizal",
         "Nazaré",
         "Batista Campos"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/belem-pa/",
+      "siteLocalPublicado": false
     },
     {
       "id": "ananindeua-pa",
@@ -1097,7 +1181,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/ananindeua-pa/",
+      "siteLocalPublicado": false
     },
     {
       "id": "santarem-pa",
@@ -1119,7 +1205,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/santarem-pa/",
+      "siteLocalPublicado": false
     },
     {
       "id": "joao-pessoa-pb",
@@ -1149,7 +1237,9 @@
         "Manaíra",
         "Altiplano",
         "Cabo Branco"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/joao-pessoa-pb/",
+      "siteLocalPublicado": false
     },
     {
       "id": "campina-grande-pb",
@@ -1177,7 +1267,9 @@
       "aliases": [
         "Catolé",
         "Mirante"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/campina-grande-pb/",
+      "siteLocalPublicado": false
     },
     {
       "id": "recife-pe",
@@ -1207,7 +1299,9 @@
         "Boa Viagem",
         "Casa Forte",
         "Pina"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/recife-pe/",
+      "siteLocalPublicado": false
     },
     {
       "id": "jaboatao-dos-guararapes-pe",
@@ -1235,7 +1329,9 @@
       "aliases": [
         "Piedade",
         "Candeias"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/jaboatao-dos-guararapes-pe/",
+      "siteLocalPublicado": false
     },
     {
       "id": "olinda-pe",
@@ -1257,7 +1353,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/olinda-pe/",
+      "siteLocalPublicado": false
     },
     {
       "id": "caruaru-pe",
@@ -1279,7 +1377,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/caruaru-pe/",
+      "siteLocalPublicado": false
     },
     {
       "id": "teresina-pi",
@@ -1307,7 +1407,9 @@
       "aliases": [
         "Jóquei",
         "Fátima"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/teresina-pi/",
+      "siteLocalPublicado": false
     },
     {
       "id": "parnaiba-pi",
@@ -1329,7 +1431,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/parnaiba-pi/",
+      "siteLocalPublicado": false
     },
     {
       "id": "curitiba-pr",
@@ -1359,7 +1463,9 @@
         "Batel",
         "Ecoville",
         "Água Verde"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/curitiba-pr/",
+      "siteLocalPublicado": false
     },
     {
       "id": "londrina-pr",
@@ -1387,7 +1493,9 @@
       "aliases": [
         "Gleba Palhano",
         "Centro"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/londrina-pr/",
+      "siteLocalPublicado": false
     },
     {
       "id": "maringa-pr",
@@ -1415,7 +1523,9 @@
       "aliases": [
         "Zona 7",
         "Centro"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/maringa-pr/",
+      "siteLocalPublicado": false
     },
     {
       "id": "cascavel-pr",
@@ -1437,7 +1547,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/cascavel-pr/",
+      "siteLocalPublicado": false
     },
     {
       "id": "foz-do-iguacu-pr",
@@ -1459,7 +1571,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/foz-do-iguacu-pr/",
+      "siteLocalPublicado": false
     },
     {
       "id": "ponta-grossa-pr",
@@ -1481,7 +1595,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/ponta-grossa-pr/",
+      "siteLocalPublicado": false
     },
     {
       "id": "sao-jose-dos-pinhais-pr",
@@ -1503,7 +1619,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/sao-jose-dos-pinhais-pr/",
+      "siteLocalPublicado": false
     },
     {
       "id": "colombo-pr",
@@ -1525,7 +1643,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/colombo-pr/",
+      "siteLocalPublicado": false
     },
     {
       "id": "paranagua-pr",
@@ -1547,7 +1667,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/paranagua-pr/",
+      "siteLocalPublicado": false
     },
     {
       "id": "rio-de-janeiro-rj",
@@ -1579,7 +1701,9 @@
         "Ipanema",
         "Barra da Tijuca",
         "Jardim Botânico"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/rio-de-janeiro-rj/",
+      "siteLocalPublicado": false
     },
     {
       "id": "niteroi-rj",
@@ -1609,7 +1733,9 @@
         "Icaraí",
         "São Francisco",
         "Camboinhas"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/niteroi-rj/",
+      "siteLocalPublicado": false
     },
     {
       "id": "duque-de-caxias-rj",
@@ -1631,7 +1757,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/duque-de-caxias-rj/",
+      "siteLocalPublicado": false
     },
     {
       "id": "nova-iguacu-rj",
@@ -1653,7 +1781,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/nova-iguacu-rj/",
+      "siteLocalPublicado": false
     },
     {
       "id": "petropolis-rj",
@@ -1681,7 +1811,9 @@
       "aliases": [
         "Itaipava",
         "Centro"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/petropolis-rj/",
+      "siteLocalPublicado": false
     },
     {
       "id": "volta-redonda-rj",
@@ -1703,7 +1835,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/volta-redonda-rj/",
+      "siteLocalPublicado": false
     },
     {
       "id": "macae-rj",
@@ -1731,7 +1865,9 @@
       "aliases": [
         "Cavaleiros",
         "Glória"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/macae-rj/",
+      "siteLocalPublicado": false
     },
     {
       "id": "campos-dos-goytacazes-rj",
@@ -1759,7 +1895,9 @@
       "aliases": [
         "Pelinca",
         "Parque Tamandaré"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/campos-dos-goytacazes-rj/",
+      "siteLocalPublicado": false
     },
     {
       "id": "cabo-frio-rj",
@@ -1787,7 +1925,9 @@
       "aliases": [
         "Braga",
         "Passagem"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/cabo-frio-rj/",
+      "siteLocalPublicado": false
     },
     {
       "id": "armacao-dos-buzios-rj",
@@ -1815,7 +1955,9 @@
       "aliases": [
         "Geribá",
         "João Fernandes"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/armacao-dos-buzios-rj/",
+      "siteLocalPublicado": false
     },
     {
       "id": "angra-dos-reis-rj",
@@ -1837,7 +1979,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/angra-dos-reis-rj/",
+      "siteLocalPublicado": false
     },
     {
       "id": "resende-rj",
@@ -1859,7 +2003,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/resende-rj/",
+      "siteLocalPublicado": false
     },
     {
       "id": "marica-rj",
@@ -1887,7 +2033,9 @@
       "aliases": [
         "Itaipuaçu",
         "Centro"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/marica-rj/",
+      "siteLocalPublicado": false
     },
     {
       "id": "sao-goncalo-rj",
@@ -1909,7 +2057,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/sao-goncalo-rj/",
+      "siteLocalPublicado": false
     },
     {
       "id": "natal-rn",
@@ -1939,7 +2089,9 @@
         "Ponta Negra",
         "Tirol",
         "Petrópolis"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/natal-rn/",
+      "siteLocalPublicado": false
     },
     {
       "id": "mossoro-rn",
@@ -1961,7 +2113,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/mossoro-rn/",
+      "siteLocalPublicado": false
     },
     {
       "id": "porto-velho-ro",
@@ -1983,7 +2137,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/porto-velho-ro/",
+      "siteLocalPublicado": false
     },
     {
       "id": "ji-parana-ro",
@@ -2005,7 +2161,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/ji-parana-ro/",
+      "siteLocalPublicado": false
     },
     {
       "id": "boa-vista-rr",
@@ -2027,7 +2185,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/boa-vista-rr/",
+      "siteLocalPublicado": false
     },
     {
       "id": "porto-alegre-rs",
@@ -2057,7 +2217,9 @@
         "Moinhos de Vento",
         "Bela Vista",
         "Três Figueiras"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/porto-alegre-rs/",
+      "siteLocalPublicado": false
     },
     {
       "id": "caxias-do-sul-rs",
@@ -2085,7 +2247,9 @@
       "aliases": [
         "Exposição",
         "São Pelegrino"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/caxias-do-sul-rs/",
+      "siteLocalPublicado": false
     },
     {
       "id": "canoas-rs",
@@ -2107,7 +2271,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/canoas-rs/",
+      "siteLocalPublicado": false
     },
     {
       "id": "novo-hamburgo-rs",
@@ -2129,7 +2295,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/novo-hamburgo-rs/",
+      "siteLocalPublicado": false
     },
     {
       "id": "pelotas-rs",
@@ -2151,7 +2319,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/pelotas-rs/",
+      "siteLocalPublicado": false
     },
     {
       "id": "santa-maria-rs",
@@ -2173,7 +2343,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/santa-maria-rs/",
+      "siteLocalPublicado": false
     },
     {
       "id": "passo-fundo-rs",
@@ -2195,7 +2367,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/passo-fundo-rs/",
+      "siteLocalPublicado": false
     },
     {
       "id": "florianopolis-sc",
@@ -2225,7 +2399,9 @@
         "Jurerê",
         "Lagoa da Conceição",
         "Campeche"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/florianopolis-sc/",
+      "siteLocalPublicado": false
     },
     {
       "id": "joinville-sc",
@@ -2253,7 +2429,9 @@
       "aliases": [
         "América",
         "Atiradores"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/joinville-sc/",
+      "siteLocalPublicado": false
     },
     {
       "id": "blumenau-sc",
@@ -2281,7 +2459,9 @@
       "aliases": [
         "Jardim Blumenau",
         "Centro"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/blumenau-sc/",
+      "siteLocalPublicado": false
     },
     {
       "id": "itajai-sc",
@@ -2309,7 +2489,9 @@
       "aliases": [
         "Fazenda",
         "Praia Brava"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/itajai-sc/",
+      "siteLocalPublicado": false
     },
     {
       "id": "balneario-camboriu-sc",
@@ -2337,7 +2519,9 @@
       "aliases": [
         "Barra Sul",
         "Centro"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/balneario-camboriu-sc/",
+      "siteLocalPublicado": false
     },
     {
       "id": "sao-jose-sc",
@@ -2359,7 +2543,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/sao-jose-sc/",
+      "siteLocalPublicado": false
     },
     {
       "id": "criciuma-sc",
@@ -2381,7 +2567,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/criciuma-sc/",
+      "siteLocalPublicado": false
     },
     {
       "id": "chapeco-sc",
@@ -2403,7 +2591,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/chapeco-sc/",
+      "siteLocalPublicado": false
     },
     {
       "id": "jaragua-do-sul-sc",
@@ -2425,7 +2615,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/jaragua-do-sul-sc/",
+      "siteLocalPublicado": false
     },
     {
       "id": "aracaju-se",
@@ -2453,7 +2645,9 @@
       "aliases": [
         "Jardins",
         "13 de Julho"
-      ]
+      ],
+      "siteLocalPlanejado": "/winf-select/cidades/aracaju-se/",
+      "siteLocalPublicado": false
     },
     {
       "id": "nossa-senhora-do-socorro-se",
@@ -2475,7 +2669,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/nossa-senhora-do-socorro-se/",
+      "siteLocalPublicado": false
     },
     {
       "id": "palmas-to",
@@ -2497,7 +2693,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/palmas-to/",
+      "siteLocalPublicado": false
     },
     {
       "id": "araguaina-to",
@@ -2519,7 +2717,9 @@
       "escopo": "municipio",
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
-      "aliases": []
+      "aliases": [],
+      "siteLocalPlanejado": "/winf-select/cidades/araguaina-to/",
+      "siteLocalPublicado": false
     }
   ]
 }

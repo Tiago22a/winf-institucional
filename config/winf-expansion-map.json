@@ -1715,7 +1715,8 @@
       "prioridadeComercial": "capital",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/rio-branco-ac/"
+      "url": "/partners/territorios/rio-branco-ac/",
+      "siteLocalPlanejado": "/winf-select/cidades/rio-branco-ac/"
     },
     {
       "id": "maceio-al",
@@ -1732,7 +1733,8 @@
         "Ponta Verde",
         "Jatiúca"
       ],
-      "url": "/partners/territorios/maceio-al/"
+      "url": "/partners/territorios/maceio-al/",
+      "siteLocalPlanejado": "/winf-select/cidades/maceio-al/"
     },
     {
       "id": "manaus-am",
@@ -1750,7 +1752,8 @@
         "Adrianópolis",
         "Vieiralves"
       ],
-      "url": "/partners/territorios/manaus-am/"
+      "url": "/partners/territorios/manaus-am/",
+      "siteLocalPlanejado": "/winf-select/cidades/manaus-am/"
     },
     {
       "id": "macapa-ap",
@@ -1764,7 +1767,8 @@
       "prioridadeComercial": "capital",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/macapa-ap/"
+      "url": "/partners/territorios/macapa-ap/",
+      "siteLocalPlanejado": "/winf-select/cidades/macapa-ap/"
     },
     {
       "id": "salvador-ba",
@@ -1782,7 +1786,8 @@
         "Graça",
         "Itaigara"
       ],
-      "url": "/partners/territorios/salvador-ba/"
+      "url": "/partners/territorios/salvador-ba/",
+      "siteLocalPlanejado": "/winf-select/cidades/salvador-ba/"
     },
     {
       "id": "feira-de-santana-ba",
@@ -1799,7 +1804,8 @@
         "Santa Mônica",
         "Centro"
       ],
-      "url": "/partners/territorios/feira-de-santana-ba/"
+      "url": "/partners/territorios/feira-de-santana-ba/",
+      "siteLocalPlanejado": "/winf-select/cidades/feira-de-santana-ba/"
     },
     {
       "id": "vitoria-da-conquista-ba",
@@ -1813,7 +1819,8 @@
       "prioridadeComercial": "polo_prioritario",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/vitoria-da-conquista-ba/"
+      "url": "/partners/territorios/vitoria-da-conquista-ba/",
+      "siteLocalPlanejado": "/winf-select/cidades/vitoria-da-conquista-ba/"
     },
     {
       "id": "camacari-ba",
@@ -1827,7 +1834,8 @@
       "prioridadeComercial": "polo_regional",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/camacari-ba/"
+      "url": "/partners/territorios/camacari-ba/",
+      "siteLocalPlanejado": "/winf-select/cidades/camacari-ba/"
     },
     {
       "id": "lauro-de-freitas-ba",
@@ -1844,7 +1852,8 @@
         "Vilas do Atlântico",
         "Buraquinho"
       ],
-      "url": "/partners/territorios/lauro-de-freitas-ba/"
+      "url": "/partners/territorios/lauro-de-freitas-ba/",
+      "siteLocalPlanejado": "/winf-select/cidades/lauro-de-freitas-ba/"
     },
     {
       "id": "fortaleza-ce",
@@ -1862,7 +1871,8 @@
         "Aldeota",
         "Cocó"
       ],
-      "url": "/partners/territorios/fortaleza-ce/"
+      "url": "/partners/territorios/fortaleza-ce/",
+      "siteLocalPlanejado": "/winf-select/cidades/fortaleza-ce/"
     },
     {
       "id": "caucaia-ce",
@@ -1876,7 +1886,8 @@
       "prioridadeComercial": "polo_prioritario",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/caucaia-ce/"
+      "url": "/partners/territorios/caucaia-ce/",
+      "siteLocalPlanejado": "/winf-select/cidades/caucaia-ce/"
     },
     {
       "id": "juazeiro-do-norte-ce",
@@ -1890,7 +1901,8 @@
       "prioridadeComercial": "polo_prioritario",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/juazeiro-do-norte-ce/"
+      "url": "/partners/territorios/juazeiro-do-norte-ce/",
+      "siteLocalPlanejado": "/winf-select/cidades/juazeiro-do-norte-ce/"
     },
     {
       "id": "brasilia-df",
@@ -1908,7 +1920,8 @@
         "Asa Sul",
         "Sudoeste"
       ],
-      "url": "/partners/territorios/brasilia-df/"
+      "url": "/partners/territorios/brasilia-df/",
+      "siteLocalPlanejado": "/winf-select/cidades/brasilia-df/"
     },
     {
       "id": "vitoria-es",
@@ -1926,7 +1939,8 @@
         "Jardim da Penha",
         "Mata da Praia"
       ],
-      "url": "/partners/territorios/vitoria-es/"
+      "url": "/partners/territorios/vitoria-es/",
+      "siteLocalPlanejado": "/winf-select/cidades/vitoria-es/"
     },
     {
       "id": "vila-velha-es",
@@ -1943,7 +1957,8 @@
         "Praia da Costa",
         "Itapuã"
       ],
-      "url": "/partners/territorios/vila-velha-es/"
+      "url": "/partners/territorios/vila-velha-es/",
+      "siteLocalPlanejado": "/winf-select/cidades/vila-velha-es/"
     },
     {
       "id": "serra-es",
@@ -1960,7 +1975,8 @@
         "Laranjeiras",
         "Manguinhos"
       ],
-      "url": "/partners/territorios/serra-es/"
+      "url": "/partners/territorios/serra-es/",
+      "siteLocalPlanejado": "/winf-select/cidades/serra-es/"
     },
     {
       "id": "goiania-go",
@@ -1978,7 +1994,8 @@
         "Setor Bueno",
         "Jardim Goiás"
       ],
-      "url": "/partners/territorios/goiania-go/"
+      "url": "/partners/territorios/goiania-go/",
+      "siteLocalPlanejado": "/winf-select/cidades/goiania-go/"
     },
     {
       "id": "anapolis-go",
@@ -1995,7 +2012,8 @@
         "Jundiaí",
         "Centro"
       ],
-      "url": "/partners/territorios/anapolis-go/"
+      "url": "/partners/territorios/anapolis-go/",
+      "siteLocalPlanejado": "/winf-select/cidades/anapolis-go/"
     },
     {
       "id": "aparecida-de-goiania-go",
@@ -2009,7 +2027,8 @@
       "prioridadeComercial": "polo_prioritario",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/aparecida-de-goiania-go/"
+      "url": "/partners/territorios/aparecida-de-goiania-go/",
+      "siteLocalPlanejado": "/winf-select/cidades/aparecida-de-goiania-go/"
     },
     {
       "id": "rio-verde-go",
@@ -2023,7 +2042,8 @@
       "prioridadeComercial": "polo_regional",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/rio-verde-go/"
+      "url": "/partners/territorios/rio-verde-go/",
+      "siteLocalPlanejado": "/winf-select/cidades/rio-verde-go/"
     },
     {
       "id": "catalao-go",
@@ -2037,7 +2057,8 @@
       "prioridadeComercial": "polo_regional",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/catalao-go/"
+      "url": "/partners/territorios/catalao-go/",
+      "siteLocalPlanejado": "/winf-select/cidades/catalao-go/"
     },
     {
       "id": "sao-luis-ma",
@@ -2054,7 +2075,8 @@
         "Renascença",
         "Calhau"
       ],
-      "url": "/partners/territorios/sao-luis-ma/"
+      "url": "/partners/territorios/sao-luis-ma/",
+      "siteLocalPlanejado": "/winf-select/cidades/sao-luis-ma/"
     },
     {
       "id": "imperatriz-ma",
@@ -2068,7 +2090,8 @@
       "prioridadeComercial": "polo_prioritario",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/imperatriz-ma/"
+      "url": "/partners/territorios/imperatriz-ma/",
+      "siteLocalPlanejado": "/winf-select/cidades/imperatriz-ma/"
     },
     {
       "id": "belo-horizonte-mg",
@@ -2086,7 +2109,8 @@
         "Belvedere",
         "Savassi"
       ],
-      "url": "/partners/territorios/belo-horizonte-mg/"
+      "url": "/partners/territorios/belo-horizonte-mg/",
+      "siteLocalPlanejado": "/winf-select/cidades/belo-horizonte-mg/"
     },
     {
       "id": "uberlandia-mg",
@@ -2103,7 +2127,8 @@
         "Jardim Karaíba",
         "Santa Mônica"
       ],
-      "url": "/partners/territorios/uberlandia-mg/"
+      "url": "/partners/territorios/uberlandia-mg/",
+      "siteLocalPlanejado": "/winf-select/cidades/uberlandia-mg/"
     },
     {
       "id": "uberaba-mg",
@@ -2117,7 +2142,8 @@
       "prioridadeComercial": "polo_prioritario",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/uberaba-mg/"
+      "url": "/partners/territorios/uberaba-mg/",
+      "siteLocalPlanejado": "/winf-select/cidades/uberaba-mg/"
     },
     {
       "id": "contagem-mg",
@@ -2131,7 +2157,8 @@
       "prioridadeComercial": "polo_regional",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/contagem-mg/"
+      "url": "/partners/territorios/contagem-mg/",
+      "siteLocalPlanejado": "/winf-select/cidades/contagem-mg/"
     },
     {
       "id": "betim-mg",
@@ -2145,7 +2172,8 @@
       "prioridadeComercial": "polo_regional",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/betim-mg/"
+      "url": "/partners/territorios/betim-mg/",
+      "siteLocalPlanejado": "/winf-select/cidades/betim-mg/"
     },
     {
       "id": "juiz-de-fora-mg",
@@ -2162,7 +2190,8 @@
         "São Mateus",
         "Bom Pastor"
       ],
-      "url": "/partners/territorios/juiz-de-fora-mg/"
+      "url": "/partners/territorios/juiz-de-fora-mg/",
+      "siteLocalPlanejado": "/winf-select/cidades/juiz-de-fora-mg/"
     },
     {
       "id": "montes-claros-mg",
@@ -2176,7 +2205,8 @@
       "prioridadeComercial": "polo_regional",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/montes-claros-mg/"
+      "url": "/partners/territorios/montes-claros-mg/",
+      "siteLocalPlanejado": "/winf-select/cidades/montes-claros-mg/"
     },
     {
       "id": "ipatinga-mg",
@@ -2193,7 +2223,8 @@
         "Horto",
         "Cidade Nobre"
       ],
-      "url": "/partners/territorios/ipatinga-mg/"
+      "url": "/partners/territorios/ipatinga-mg/",
+      "siteLocalPlanejado": "/winf-select/cidades/ipatinga-mg/"
     },
     {
       "id": "divinopolis-mg",
@@ -2207,7 +2238,8 @@
       "prioridadeComercial": "polo_regional",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/divinopolis-mg/"
+      "url": "/partners/territorios/divinopolis-mg/",
+      "siteLocalPlanejado": "/winf-select/cidades/divinopolis-mg/"
     },
     {
       "id": "pocos-de-caldas-mg",
@@ -2221,7 +2253,8 @@
       "prioridadeComercial": "polo_regional",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/pocos-de-caldas-mg/"
+      "url": "/partners/territorios/pocos-de-caldas-mg/",
+      "siteLocalPlanejado": "/winf-select/cidades/pocos-de-caldas-mg/"
     },
     {
       "id": "nova-lima-mg",
@@ -2238,7 +2271,8 @@
         "Vila da Serra",
         "Vale do Sereno"
       ],
-      "url": "/partners/territorios/nova-lima-mg/"
+      "url": "/partners/territorios/nova-lima-mg/",
+      "siteLocalPlanejado": "/winf-select/cidades/nova-lima-mg/"
     },
     {
       "id": "campo-grande-ms",
@@ -2255,7 +2289,8 @@
         "Jardim dos Estados",
         "Chácara Cachoeira"
       ],
-      "url": "/partners/territorios/campo-grande-ms/"
+      "url": "/partners/territorios/campo-grande-ms/",
+      "siteLocalPlanejado": "/winf-select/cidades/campo-grande-ms/"
     },
     {
       "id": "dourados-ms",
@@ -2269,7 +2304,8 @@
       "prioridadeComercial": "polo_prioritario",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/dourados-ms/"
+      "url": "/partners/territorios/dourados-ms/",
+      "siteLocalPlanejado": "/winf-select/cidades/dourados-ms/"
     },
     {
       "id": "tres-lagoas-ms",
@@ -2283,7 +2319,8 @@
       "prioridadeComercial": "polo_prioritario",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/tres-lagoas-ms/"
+      "url": "/partners/territorios/tres-lagoas-ms/",
+      "siteLocalPlanejado": "/winf-select/cidades/tres-lagoas-ms/"
     },
     {
       "id": "cuiaba-mt",
@@ -2301,7 +2338,8 @@
         "Jardim das Américas",
         "Santa Rosa"
       ],
-      "url": "/partners/territorios/cuiaba-mt/"
+      "url": "/partners/territorios/cuiaba-mt/",
+      "siteLocalPlanejado": "/winf-select/cidades/cuiaba-mt/"
     },
     {
       "id": "rondonopolis-mt",
@@ -2315,7 +2353,8 @@
       "prioridadeComercial": "polo_prioritario",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/rondonopolis-mt/"
+      "url": "/partners/territorios/rondonopolis-mt/",
+      "siteLocalPlanejado": "/winf-select/cidades/rondonopolis-mt/"
     },
     {
       "id": "varzea-grande-mt",
@@ -2329,7 +2368,8 @@
       "prioridadeComercial": "polo_prioritario",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/varzea-grande-mt/"
+      "url": "/partners/territorios/varzea-grande-mt/",
+      "siteLocalPlanejado": "/winf-select/cidades/varzea-grande-mt/"
     },
     {
       "id": "sinop-mt",
@@ -2343,7 +2383,8 @@
       "prioridadeComercial": "polo_regional",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/sinop-mt/"
+      "url": "/partners/territorios/sinop-mt/",
+      "siteLocalPlanejado": "/winf-select/cidades/sinop-mt/"
     },
     {
       "id": "belem-pa",
@@ -2361,7 +2402,8 @@
         "Nazaré",
         "Batista Campos"
       ],
-      "url": "/partners/territorios/belem-pa/"
+      "url": "/partners/territorios/belem-pa/",
+      "siteLocalPlanejado": "/winf-select/cidades/belem-pa/"
     },
     {
       "id": "ananindeua-pa",
@@ -2375,7 +2417,8 @@
       "prioridadeComercial": "polo_prioritario",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/ananindeua-pa/"
+      "url": "/partners/territorios/ananindeua-pa/",
+      "siteLocalPlanejado": "/winf-select/cidades/ananindeua-pa/"
     },
     {
       "id": "santarem-pa",
@@ -2389,7 +2432,8 @@
       "prioridadeComercial": "polo_prioritario",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/santarem-pa/"
+      "url": "/partners/territorios/santarem-pa/",
+      "siteLocalPlanejado": "/winf-select/cidades/santarem-pa/"
     },
     {
       "id": "joao-pessoa-pb",
@@ -2407,7 +2451,8 @@
         "Altiplano",
         "Cabo Branco"
       ],
-      "url": "/partners/territorios/joao-pessoa-pb/"
+      "url": "/partners/territorios/joao-pessoa-pb/",
+      "siteLocalPlanejado": "/winf-select/cidades/joao-pessoa-pb/"
     },
     {
       "id": "campina-grande-pb",
@@ -2424,7 +2469,8 @@
         "Catolé",
         "Mirante"
       ],
-      "url": "/partners/territorios/campina-grande-pb/"
+      "url": "/partners/territorios/campina-grande-pb/",
+      "siteLocalPlanejado": "/winf-select/cidades/campina-grande-pb/"
     },
     {
       "id": "recife-pe",
@@ -2442,7 +2488,8 @@
         "Casa Forte",
         "Pina"
       ],
-      "url": "/partners/territorios/recife-pe/"
+      "url": "/partners/territorios/recife-pe/",
+      "siteLocalPlanejado": "/winf-select/cidades/recife-pe/"
     },
     {
       "id": "jaboatao-dos-guararapes-pe",
@@ -2459,7 +2506,8 @@
         "Piedade",
         "Candeias"
       ],
-      "url": "/partners/territorios/jaboatao-dos-guararapes-pe/"
+      "url": "/partners/territorios/jaboatao-dos-guararapes-pe/",
+      "siteLocalPlanejado": "/winf-select/cidades/jaboatao-dos-guararapes-pe/"
     },
     {
       "id": "olinda-pe",
@@ -2473,7 +2521,8 @@
       "prioridadeComercial": "polo_prioritario",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/olinda-pe/"
+      "url": "/partners/territorios/olinda-pe/",
+      "siteLocalPlanejado": "/winf-select/cidades/olinda-pe/"
     },
     {
       "id": "caruaru-pe",
@@ -2487,7 +2536,8 @@
       "prioridadeComercial": "polo_regional",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/caruaru-pe/"
+      "url": "/partners/territorios/caruaru-pe/",
+      "siteLocalPlanejado": "/winf-select/cidades/caruaru-pe/"
     },
     {
       "id": "teresina-pi",
@@ -2504,7 +2554,8 @@
         "Jóquei",
         "Fátima"
       ],
-      "url": "/partners/territorios/teresina-pi/"
+      "url": "/partners/territorios/teresina-pi/",
+      "siteLocalPlanejado": "/winf-select/cidades/teresina-pi/"
     },
     {
       "id": "parnaiba-pi",
@@ -2518,7 +2569,8 @@
       "prioridadeComercial": "polo_prioritario",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/parnaiba-pi/"
+      "url": "/partners/territorios/parnaiba-pi/",
+      "siteLocalPlanejado": "/winf-select/cidades/parnaiba-pi/"
     },
     {
       "id": "curitiba-pr",
@@ -2536,7 +2588,8 @@
         "Ecoville",
         "Água Verde"
       ],
-      "url": "/partners/territorios/curitiba-pr/"
+      "url": "/partners/territorios/curitiba-pr/",
+      "siteLocalPlanejado": "/winf-select/cidades/curitiba-pr/"
     },
     {
       "id": "londrina-pr",
@@ -2553,7 +2606,8 @@
         "Gleba Palhano",
         "Centro"
       ],
-      "url": "/partners/territorios/londrina-pr/"
+      "url": "/partners/territorios/londrina-pr/",
+      "siteLocalPlanejado": "/winf-select/cidades/londrina-pr/"
     },
     {
       "id": "maringa-pr",
@@ -2570,7 +2624,8 @@
         "Zona 7",
         "Centro"
       ],
-      "url": "/partners/territorios/maringa-pr/"
+      "url": "/partners/territorios/maringa-pr/",
+      "siteLocalPlanejado": "/winf-select/cidades/maringa-pr/"
     },
     {
       "id": "cascavel-pr",
@@ -2584,7 +2639,8 @@
       "prioridadeComercial": "polo_regional",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/cascavel-pr/"
+      "url": "/partners/territorios/cascavel-pr/",
+      "siteLocalPlanejado": "/winf-select/cidades/cascavel-pr/"
     },
     {
       "id": "foz-do-iguacu-pr",
@@ -2598,7 +2654,8 @@
       "prioridadeComercial": "polo_regional",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/foz-do-iguacu-pr/"
+      "url": "/partners/territorios/foz-do-iguacu-pr/",
+      "siteLocalPlanejado": "/winf-select/cidades/foz-do-iguacu-pr/"
     },
     {
       "id": "ponta-grossa-pr",
@@ -2612,7 +2669,8 @@
       "prioridadeComercial": "polo_regional",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/ponta-grossa-pr/"
+      "url": "/partners/territorios/ponta-grossa-pr/",
+      "siteLocalPlanejado": "/winf-select/cidades/ponta-grossa-pr/"
     },
     {
       "id": "sao-jose-dos-pinhais-pr",
@@ -2626,7 +2684,8 @@
       "prioridadeComercial": "polo_regional",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/sao-jose-dos-pinhais-pr/"
+      "url": "/partners/territorios/sao-jose-dos-pinhais-pr/",
+      "siteLocalPlanejado": "/winf-select/cidades/sao-jose-dos-pinhais-pr/"
     },
     {
       "id": "colombo-pr",
@@ -2640,7 +2699,8 @@
       "prioridadeComercial": "polo_regional",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/colombo-pr/"
+      "url": "/partners/territorios/colombo-pr/",
+      "siteLocalPlanejado": "/winf-select/cidades/colombo-pr/"
     },
     {
       "id": "paranagua-pr",
@@ -2654,7 +2714,8 @@
       "prioridadeComercial": "polo_regional",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/paranagua-pr/"
+      "url": "/partners/territorios/paranagua-pr/",
+      "siteLocalPlanejado": "/winf-select/cidades/paranagua-pr/"
     },
     {
       "id": "rio-de-janeiro-rj",
@@ -2673,7 +2734,8 @@
         "Barra da Tijuca",
         "Jardim Botânico"
       ],
-      "url": "/partners/territorios/rio-de-janeiro-rj/"
+      "url": "/partners/territorios/rio-de-janeiro-rj/",
+      "siteLocalPlanejado": "/winf-select/cidades/rio-de-janeiro-rj/"
     },
     {
       "id": "niteroi-rj",
@@ -2691,7 +2753,8 @@
         "São Francisco",
         "Camboinhas"
       ],
-      "url": "/partners/territorios/niteroi-rj/"
+      "url": "/partners/territorios/niteroi-rj/",
+      "siteLocalPlanejado": "/winf-select/cidades/niteroi-rj/"
     },
     {
       "id": "duque-de-caxias-rj",
@@ -2705,7 +2768,8 @@
       "prioridadeComercial": "polo_prioritario",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/duque-de-caxias-rj/"
+      "url": "/partners/territorios/duque-de-caxias-rj/",
+      "siteLocalPlanejado": "/winf-select/cidades/duque-de-caxias-rj/"
     },
     {
       "id": "nova-iguacu-rj",
@@ -2719,7 +2783,8 @@
       "prioridadeComercial": "polo_regional",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/nova-iguacu-rj/"
+      "url": "/partners/territorios/nova-iguacu-rj/",
+      "siteLocalPlanejado": "/winf-select/cidades/nova-iguacu-rj/"
     },
     {
       "id": "petropolis-rj",
@@ -2736,7 +2801,8 @@
         "Itaipava",
         "Centro"
       ],
-      "url": "/partners/territorios/petropolis-rj/"
+      "url": "/partners/territorios/petropolis-rj/",
+      "siteLocalPlanejado": "/winf-select/cidades/petropolis-rj/"
     },
     {
       "id": "volta-redonda-rj",
@@ -2750,7 +2816,8 @@
       "prioridadeComercial": "polo_regional",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/volta-redonda-rj/"
+      "url": "/partners/territorios/volta-redonda-rj/",
+      "siteLocalPlanejado": "/winf-select/cidades/volta-redonda-rj/"
     },
     {
       "id": "macae-rj",
@@ -2767,7 +2834,8 @@
         "Cavaleiros",
         "Glória"
       ],
-      "url": "/partners/territorios/macae-rj/"
+      "url": "/partners/territorios/macae-rj/",
+      "siteLocalPlanejado": "/winf-select/cidades/macae-rj/"
     },
     {
       "id": "campos-dos-goytacazes-rj",
@@ -2784,7 +2852,8 @@
         "Pelinca",
         "Parque Tamandaré"
       ],
-      "url": "/partners/territorios/campos-dos-goytacazes-rj/"
+      "url": "/partners/territorios/campos-dos-goytacazes-rj/",
+      "siteLocalPlanejado": "/winf-select/cidades/campos-dos-goytacazes-rj/"
     },
     {
       "id": "cabo-frio-rj",
@@ -2801,7 +2870,8 @@
         "Braga",
         "Passagem"
       ],
-      "url": "/partners/territorios/cabo-frio-rj/"
+      "url": "/partners/territorios/cabo-frio-rj/",
+      "siteLocalPlanejado": "/winf-select/cidades/cabo-frio-rj/"
     },
     {
       "id": "armacao-dos-buzios-rj",
@@ -2818,7 +2888,8 @@
         "Geribá",
         "João Fernandes"
       ],
-      "url": "/partners/territorios/armacao-dos-buzios-rj/"
+      "url": "/partners/territorios/armacao-dos-buzios-rj/",
+      "siteLocalPlanejado": "/winf-select/cidades/armacao-dos-buzios-rj/"
     },
     {
       "id": "angra-dos-reis-rj",
@@ -2832,7 +2903,8 @@
       "prioridadeComercial": "polo_regional",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/angra-dos-reis-rj/"
+      "url": "/partners/territorios/angra-dos-reis-rj/",
+      "siteLocalPlanejado": "/winf-select/cidades/angra-dos-reis-rj/"
     },
     {
       "id": "resende-rj",
@@ -2846,7 +2918,8 @@
       "prioridadeComercial": "polo_regional",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/resende-rj/"
+      "url": "/partners/territorios/resende-rj/",
+      "siteLocalPlanejado": "/winf-select/cidades/resende-rj/"
     },
     {
       "id": "marica-rj",
@@ -2863,7 +2936,8 @@
         "Itaipuaçu",
         "Centro"
       ],
-      "url": "/partners/territorios/marica-rj/"
+      "url": "/partners/territorios/marica-rj/",
+      "siteLocalPlanejado": "/winf-select/cidades/marica-rj/"
     },
     {
       "id": "sao-goncalo-rj",
@@ -2877,7 +2951,8 @@
       "prioridadeComercial": "polo_regional",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/sao-goncalo-rj/"
+      "url": "/partners/territorios/sao-goncalo-rj/",
+      "siteLocalPlanejado": "/winf-select/cidades/sao-goncalo-rj/"
     },
     {
       "id": "natal-rn",
@@ -2895,7 +2970,8 @@
         "Tirol",
         "Petrópolis"
       ],
-      "url": "/partners/territorios/natal-rn/"
+      "url": "/partners/territorios/natal-rn/",
+      "siteLocalPlanejado": "/winf-select/cidades/natal-rn/"
     },
     {
       "id": "mossoro-rn",
@@ -2909,7 +2985,8 @@
       "prioridadeComercial": "polo_prioritario",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/mossoro-rn/"
+      "url": "/partners/territorios/mossoro-rn/",
+      "siteLocalPlanejado": "/winf-select/cidades/mossoro-rn/"
     },
     {
       "id": "porto-velho-ro",
@@ -2923,7 +3000,8 @@
       "prioridadeComercial": "capital",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/porto-velho-ro/"
+      "url": "/partners/territorios/porto-velho-ro/",
+      "siteLocalPlanejado": "/winf-select/cidades/porto-velho-ro/"
     },
     {
       "id": "ji-parana-ro",
@@ -2937,7 +3015,8 @@
       "prioridadeComercial": "polo_prioritario",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/ji-parana-ro/"
+      "url": "/partners/territorios/ji-parana-ro/",
+      "siteLocalPlanejado": "/winf-select/cidades/ji-parana-ro/"
     },
     {
       "id": "boa-vista-rr",
@@ -2951,7 +3030,8 @@
       "prioridadeComercial": "capital",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/boa-vista-rr/"
+      "url": "/partners/territorios/boa-vista-rr/",
+      "siteLocalPlanejado": "/winf-select/cidades/boa-vista-rr/"
     },
     {
       "id": "porto-alegre-rs",
@@ -2969,7 +3049,8 @@
         "Bela Vista",
         "Três Figueiras"
       ],
-      "url": "/partners/territorios/porto-alegre-rs/"
+      "url": "/partners/territorios/porto-alegre-rs/",
+      "siteLocalPlanejado": "/winf-select/cidades/porto-alegre-rs/"
     },
     {
       "id": "caxias-do-sul-rs",
@@ -2986,7 +3067,8 @@
         "Exposição",
         "São Pelegrino"
       ],
-      "url": "/partners/territorios/caxias-do-sul-rs/"
+      "url": "/partners/territorios/caxias-do-sul-rs/",
+      "siteLocalPlanejado": "/winf-select/cidades/caxias-do-sul-rs/"
     },
     {
       "id": "canoas-rs",
@@ -3000,7 +3082,8 @@
       "prioridadeComercial": "polo_prioritario",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/canoas-rs/"
+      "url": "/partners/territorios/canoas-rs/",
+      "siteLocalPlanejado": "/winf-select/cidades/canoas-rs/"
     },
     {
       "id": "novo-hamburgo-rs",
@@ -3014,7 +3097,8 @@
       "prioridadeComercial": "polo_regional",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/novo-hamburgo-rs/"
+      "url": "/partners/territorios/novo-hamburgo-rs/",
+      "siteLocalPlanejado": "/winf-select/cidades/novo-hamburgo-rs/"
     },
     {
       "id": "pelotas-rs",
@@ -3028,7 +3112,8 @@
       "prioridadeComercial": "polo_regional",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/pelotas-rs/"
+      "url": "/partners/territorios/pelotas-rs/",
+      "siteLocalPlanejado": "/winf-select/cidades/pelotas-rs/"
     },
     {
       "id": "santa-maria-rs",
@@ -3042,7 +3127,8 @@
       "prioridadeComercial": "polo_regional",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/santa-maria-rs/"
+      "url": "/partners/territorios/santa-maria-rs/",
+      "siteLocalPlanejado": "/winf-select/cidades/santa-maria-rs/"
     },
     {
       "id": "passo-fundo-rs",
@@ -3056,7 +3142,8 @@
       "prioridadeComercial": "polo_regional",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/passo-fundo-rs/"
+      "url": "/partners/territorios/passo-fundo-rs/",
+      "siteLocalPlanejado": "/winf-select/cidades/passo-fundo-rs/"
     },
     {
       "id": "florianopolis-sc",
@@ -3074,7 +3161,8 @@
         "Lagoa da Conceição",
         "Campeche"
       ],
-      "url": "/partners/territorios/florianopolis-sc/"
+      "url": "/partners/territorios/florianopolis-sc/",
+      "siteLocalPlanejado": "/winf-select/cidades/florianopolis-sc/"
     },
     {
       "id": "joinville-sc",
@@ -3091,7 +3179,8 @@
         "América",
         "Atiradores"
       ],
-      "url": "/partners/territorios/joinville-sc/"
+      "url": "/partners/territorios/joinville-sc/",
+      "siteLocalPlanejado": "/winf-select/cidades/joinville-sc/"
     },
     {
       "id": "blumenau-sc",
@@ -3108,7 +3197,8 @@
         "Jardim Blumenau",
         "Centro"
       ],
-      "url": "/partners/territorios/blumenau-sc/"
+      "url": "/partners/territorios/blumenau-sc/",
+      "siteLocalPlanejado": "/winf-select/cidades/blumenau-sc/"
     },
     {
       "id": "itajai-sc",
@@ -3125,7 +3215,8 @@
         "Fazenda",
         "Praia Brava"
       ],
-      "url": "/partners/territorios/itajai-sc/"
+      "url": "/partners/territorios/itajai-sc/",
+      "siteLocalPlanejado": "/winf-select/cidades/itajai-sc/"
     },
     {
       "id": "balneario-camboriu-sc",
@@ -3142,7 +3233,8 @@
         "Barra Sul",
         "Centro"
       ],
-      "url": "/partners/territorios/balneario-camboriu-sc/"
+      "url": "/partners/territorios/balneario-camboriu-sc/",
+      "siteLocalPlanejado": "/winf-select/cidades/balneario-camboriu-sc/"
     },
     {
       "id": "sao-jose-sc",
@@ -3156,7 +3248,8 @@
       "prioridadeComercial": "polo_regional",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/sao-jose-sc/"
+      "url": "/partners/territorios/sao-jose-sc/",
+      "siteLocalPlanejado": "/winf-select/cidades/sao-jose-sc/"
     },
     {
       "id": "criciuma-sc",
@@ -3170,7 +3263,8 @@
       "prioridadeComercial": "polo_regional",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/criciuma-sc/"
+      "url": "/partners/territorios/criciuma-sc/",
+      "siteLocalPlanejado": "/winf-select/cidades/criciuma-sc/"
     },
     {
       "id": "chapeco-sc",
@@ -3184,7 +3278,8 @@
       "prioridadeComercial": "polo_regional",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/chapeco-sc/"
+      "url": "/partners/territorios/chapeco-sc/",
+      "siteLocalPlanejado": "/winf-select/cidades/chapeco-sc/"
     },
     {
       "id": "jaragua-do-sul-sc",
@@ -3198,7 +3293,8 @@
       "prioridadeComercial": "polo_regional",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/jaragua-do-sul-sc/"
+      "url": "/partners/territorios/jaragua-do-sul-sc/",
+      "siteLocalPlanejado": "/winf-select/cidades/jaragua-do-sul-sc/"
     },
     {
       "id": "aracaju-se",
@@ -3215,7 +3311,8 @@
         "Jardins",
         "13 de Julho"
       ],
-      "url": "/partners/territorios/aracaju-se/"
+      "url": "/partners/territorios/aracaju-se/",
+      "siteLocalPlanejado": "/winf-select/cidades/aracaju-se/"
     },
     {
       "id": "nossa-senhora-do-socorro-se",
@@ -3229,7 +3326,8 @@
       "prioridadeComercial": "polo_prioritario",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/nossa-senhora-do-socorro-se/"
+      "url": "/partners/territorios/nossa-senhora-do-socorro-se/",
+      "siteLocalPlanejado": "/winf-select/cidades/nossa-senhora-do-socorro-se/"
     },
     {
       "id": "palmas-to",
@@ -3243,7 +3341,8 @@
       "prioridadeComercial": "capital",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/palmas-to/"
+      "url": "/partners/territorios/palmas-to/",
+      "siteLocalPlanejado": "/winf-select/cidades/palmas-to/"
     },
     {
       "id": "araguaina-to",
@@ -3257,7 +3356,8 @@
       "prioridadeComercial": "polo_prioritario",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/araguaina-to/"
+      "url": "/partners/territorios/araguaina-to/",
+      "siteLocalPlanejado": "/winf-select/cidades/araguaina-to/"
     }
   ]
 }
