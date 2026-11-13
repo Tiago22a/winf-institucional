@@ -10,6 +10,11 @@ on:
       - 'winf-select/cidades/**'
       - 'css/winf-select-territory.css'
       - 'js/winf-select-territory.js'
+      - 'winf-select/atendimento/**'
+      - 'css/winf-coverage-directory.css'
+      - 'sitemap.xml'
+      - 'peliculas-de-controle-solar-brasil/index.html'
+      - 'tests/winf-coverage-seo.test.cjs'
       - 'crm/territorios-100-sp.csv'
       - 'crm/territorios-200.csv'
       - 'tests/territories100.test.cjs'
@@ -32,4 +37,4 @@ jobs:
       - run: node --check partners/territorios/contexto.js
       - run: node --check partners/territorios/mapa.js
       - run: node --check js/winf-select-territory.js
-      - run: node --test tests/territories100.test.cjs tests/territories200.test.cjs tests/winf-select-200.test.cjs
+      - run: node --test tests/territories100.test.cjs tests/territories200.test.cjs tests/winf-select-200.test.cjs tests/winf-coverage-seo.test.cjs

@@ -46,3 +46,6 @@ O cadastro deve preservar três dimensões: atendimento operacional, URL existen
 
 ## Contato e Instagram de territórios inativos (13/11/2026)
 Os 200 sites WINF Select em expansão recebem automaticamente links no hero, na seção de pesquisa e no botão fixo para **https://wa.me/5513981113001** com mensagem identificando cidade/UF e código. O Instagram oficial apontado é **@winf.ofc**. Cada cidade tem um `@winfselect.<municipio>` como **proposta**; o link aparece claramente marcado como não verificado, sem afirmar que o perfil local já existe ou pertence à WINF. Centralização em `config/winf-territory-contacts.json`. O CSV de CRM foi ampliado com os dados de contato e um arquivo `crm/inventario-publicacao-200.csv` permite listar todos os 200 locais e seus status. Sites de operação já ativa mantêm contatos anteriores.
+
+## Descoberta orgânica e links do atendimento regional (13/11/2026)
+Criado diretório indexável `/winf-select/atendimento/`, com 71 URLs HTML estáticas de municípios com cobertura comercial pelas centrais 013 (22) e 015 (49). O guia nacional indexável conecta ao diretório; sitemap inclui esse hub e a vitrine nacional `/partners/territorios/`. Os 200 sites de pré-lançamento e fichas individuais permanecem fora do sitemap e com `noindex`. CI inclui `tests/winf-coverage-seo.test.cjs`.
