@@ -37,7 +37,7 @@ test("Script global não cria um segundo dock em qualquer rota territorial",()=>
 test("Diretório agrupa as sete páginas em centrais regionais, sem links falsos",()=>{
  const home=read("index.html");
  assert.equal((home.match(/class="winf-active-card" data-territory=/g)||[]).length,7);
- assert.match(home,/Baixada Santista · 013/);
+ assert.match(home,/Baixada Santista e Vale do Ribeira · 013/);
  assert.match(home,/Sorocaba e região · 015/);
  assert.ok(home.includes("OUTRAS 47 CIDADES MAPEADAS"));
  for(const [city,,phone] of cities){
@@ -61,5 +61,5 @@ test("Cadastros de Sorocaba e Pilar do Sul obedecem ao DDD 015",()=>{
   assert.equal(record.phone,"5515997909049",city);
  }
  const script=read("scripts/check-winf-active-territories.mjs");
- assert.match(script,/expectedNumber/);
+ assert.match(script,/center15/);
 });

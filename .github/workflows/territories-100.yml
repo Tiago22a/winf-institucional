@@ -1,0 +1,50 @@
+name: Vitrine WINF Partners — 200 territórios
+on:
+  pull_request:
+    paths:
+      - 'config/winf-expansion-100-sp.json'
+      - 'config/winf-expansion-100-br.json'
+      - 'config/winf-expansion-200.json'
+      - 'config/winf-expansion-map.json'
+      - 'partners/territorios/**'
+      - 'winf-select/cidades/**'
+      - 'css/winf-select-territory.css'
+      - 'js/winf-select-territory.js'
+      - 'winf-select/atendimento/**'
+      - 'winf-select/proximo/**'
+      - 'pelicula-para-vidro-em-*/**'
+      - 'css/winf-captacao-local.css'
+      - 'config/winf-captacao-piloto-24.json'
+      - 'crm/captacao-municipios-piloto-24.csv'
+      - 'js/winf-proximo.js'
+      - 'css/winf-proximo.css'
+      - 'config/winf-proximidade-brasil.json'
+      - 'tests/winf-proximo.test.cjs'
+      - 'css/winf-coverage-directory.css'
+      - 'sitemap.xml'
+      - 'peliculas-de-controle-solar-brasil/index.html'
+      - 'tests/winf-coverage-seo.test.cjs'
+      - 'crm/territorios-100-sp.csv'
+      - 'crm/territorios-200.csv'
+      - 'tests/territories100.test.cjs'
+      - 'tests/territories200.test.cjs'
+      - 'tests/winf-select-200.test.cjs'
+      - 'partners/index.html'
+      - 'briefing/asset-light/index.html'
+      - 'partners/padrinho-modern/index.html'
+      - 'partners/universo-dark/index.html'
+  workflow_dispatch:
+jobs:
+  validate-territories:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node --check partners/territorios/territorios.js
+      - run: node --check partners/territorios/contexto.js
+      - run: node --check partners/territorios/mapa.js
+      - run: node --check js/winf-select-territory.js
+      - run: node --check js/winf-proximo.js
+      - run: node --test tests/territories100.test.cjs tests/territories200.test.cjs tests/winf-select-200.test.cjs tests/winf-coverage-seo.test.cjs tests/winf-proximo.test.cjs

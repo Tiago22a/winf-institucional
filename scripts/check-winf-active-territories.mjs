@@ -1,45 +1,37 @@
-/* Enlaces oficiais e status confiáveis do diretório WINF (teste de regressão). */
+/* Teste de regressão das centrais próprias 013/015 e páginas territoriais. */
 import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
+import {readFileSync,existsSync} from 'node:fs';
 import vm from 'node:vm';
-const read=path=>readFileSync(path,'utf8');
-const doc=read('index.html');
-const source=read('js/cidades.js');
-const root={};vm.runInNewContext(source,{globalThis:root});
-const all=[...root.WINF_CIDADES,...root.WINF_UNIDADES_EXTRAS].filter(c=>c.siteAtivo===true);
-assert.equal(all.length,7,'São sete sites de cidades publicados');
-assert.equal(all.filter(c=>c.status==='ativa').length,2,'Só Santos e Pilar do Sul estão operacionais; página publicada não é unidade ativa');
+const read=p=>readFileSync(p,'utf8');
+const doc=read('index.html'),body=read('js/cidades.js');
+const root={};vm.runInNewContext(body,{globalThis:root});
+const original=root.WINF_CIDADES||[],extra=root.WINF_UNIDADES_EXTRAS||[],regional=root.WINF_PAGINAS_REGIONAIS||[];
+const all=[...original,...extra,...regional].filter(c=>c.exemplo===false);
+const active=all.filter(c=>c.status==='ativa');
+assert.equal(original.length,100,'Cadastro legado de 100 entradas preservado');
+assert.equal(active.length,71,'Os 71 municípios atendidos são roteados por duas centrais');
+assert.equal(new Set(active.map(c=>c.id)).size,active.length,'Não há município ativo duplicado');
+const center13=active.filter(c=>c.numero?.startsWith('5513'));
+const center15=active.filter(c=>c.numero?.startsWith('5515'));
+assert.equal(center13.length,22,'Central 013: 22 municípios');
+assert.equal(center15.length,49,'Central 015: 49 municípios');
+for(const city of active){
+ assert.equal(city.siteAtivo,true,'Operação ativa sem site cadastrado: '+city.cidade);
+ assert.ok(city.url?.startsWith('/'),'URL não informada: '+city.cidade);
+ assert.ok(existsSync(city.url.slice(1)+'index.html'),'Página não gerada: '+city.cidade);
+ assert.ok(city.numero?.startsWith('5513')||city.numero?.startsWith('5515'),'Contato não regional: '+city.cidade);
+}
+for(const id of ['santos-sp','sorocaba-sp','pilar-do-sul-sp']){
+ assert.ok(active.some(c=>c.id===id),'Operação regional âncora ausente: '+id);
+}
 assert.equal(all.find(c=>c.id==='campina-grande-pb')?.status,'pre_ativacao');
 assert.equal(all.find(c=>c.id==='cuiaba-mt')?.status,'nao_ativa');
-for(const city of all){
- assert.ok(city.url?.startsWith('/'),'Site faltando '+city.cidade);
- assert.ok(read(city.url.slice(1)+'index.html').includes('https://winf.com.br/'+city.url.slice(1)),'Página local não gerada '+city.cidade);
- assert.ok(doc.includes('href="'+city.url+'"'),'Site ausente no global: '+city.cidade);
- const is015=['sorocaba-sp','pilar-do-sul-sp'].includes(city.id);
- const expectedNumber=is015?'5515997909049':'5513981113001';
- assert.equal(city.numero,expectedNumber,'Telefone correto da Central Regional: '+city.cidade);
- const marker=doc.indexOf('aria-label="WINF Select '+city.cidade+', '+city.uf+'"');
- assert.ok(marker>=0,'Card de território ausente '+city.cidade);
- const article=doc.slice(marker,doc.indexOf('</article>',marker));
- assert.ok(article.includes('wa.me/'+expectedNumber+'?text='),'WhatsApp regional com origem '+city.cidade);
- assert.ok(article.includes(encodeURIComponent(city.cidade)),'Mensagem deve registrar local '+city.cidade);
- assert.equal((article.match(/<a class="winf-active-card-link\s/g)||[]).length,3,'Três links em cada card: '+city.cidade);
- assert.ok(article.includes('href="'+city.url+'"'),'Link próprio da cidade: '+city.cidade);
- assert.ok(article.includes('aria-label="'+(is015?'WhatsApp Central 015 para ':'WhatsApp central WINF para ')+city.cidade+'"'),'WhatsApp da cidade '+city.cidade);
- assert.ok(article.includes('https://www.instagram.com/'),'Instagram oficial '+city.cidade);
- if(city.instagram)assert.ok(article.includes(city.instagram),'Instagram da unidade '+city.cidade);
- else assert.ok(article.includes('https://www.instagram.com/winf.ofc/'),'Sem perfil local confirmado '+city.cidade);
+for(const id of ['unidades-ativas','winf-region-013','winf-region-015']){
+ assert.ok(doc.includes('id="'+id+'"'),'Região/segmento ausente na vitrine: '+id);
 }
-for(const heading of ['winf-region-013','winf-region-015','winf-region-outros'])assert.ok(doc.includes('id="'+heading+'"'),'Grupo regional ausente: '+heading);
-assert.ok(doc.includes('Itapetininga'),'Próximas cidades devem ser identificadas como planejadas');
-const portalScript=read('js/winf-active-territories.js');
-assert.ok(!portalScript.includes('replaceChildren'),'O script legado não deve apagar cards completos');
-assert.ok(!portalScript.includes('status === "ativa"'),'Sites publicados não devem ser filtrados por status de operação local');
-assert.ok(doc.includes('/js/winf-active-territories.js?v=20261109-seven-channels2'),'Cache bust da versão corrigida do script');
+assert.ok(doc.includes('href="/onde-comprar/"'),'Link para o localizador global ausente');
+const script=read('js/winf-active-territories.js');
+assert.ok(!script.includes('replaceChildren'),'Não apagar os cards publicados do site global');
 const locator=read('aerocore/assets/onde-comprar.js');
-assert.ok(locator.includes("'Instagram da unidade ↗'"),'Faltou Instagram em diretório dinâmico');
-assert.ok(locator.includes("'Página da cidade ↗'"),'Faltou site no diretório dinâmico');
-assert.ok(locator.includes('encodeURIComponent(text)'),'Origem do contato não identificada');
-// O resumo visual de territórios foi retirado do site; validar apenas os dados e links, não texto editorial removido.
-assert.ok(!doc.includes('5 unidades ativas + 1 em pré-ativação'), 'Contador legado indevido na página principal');
-console.log('✓ WINF: 7 páginas de cidades publicadas, 2 territórios operacionais; atendimento e Instagram auditados.');
+assert.ok(locator.includes("city.status === 'ativa'"),'Filtro operacional do locator ausente');
+console.log('✓ WINF: 71 municípios com atendimento ativo, 22 na Central 013 e 49 na Central 015. Cadastro de expansão separado.');

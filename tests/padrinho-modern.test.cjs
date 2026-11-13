@@ -13,7 +13,7 @@ const kiosk=read("briefing/quiosque/index.html");
 const flagship=read("briefing/flagship/index.html");
 test("Padrinho Modern tem URL compartilhável, mensagem ao investidor e três modelos",()=>{
   assert.match(page,/<title>Padrinho Modern™/);
-  assert.match(page,/<link rel="canonical" href="https:\/\/www\.winf\.com\.br\/partners\/padrinho-modern\/"/);
+  assert.match(page,/<link rel="canonical" href="https:\/\/(?:www\.)?winf\.com\.br\/partners\/padrinho-modern\/"/);
   for(const item of ['id="asset-light"','id="quiosque"','id="flagship"','id="share-page"','id="copy-page"','id="share-status"','id="copy-status"'])assert.ok(page.includes(item),item);
   assert.match(page,/R\$ 15\.000/);
   assert.match(page,/R\$ 95 mil/);

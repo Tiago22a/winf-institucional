@@ -14,9 +14,10 @@ test('P0: cadastro distingue operações ativas de páginas em pré-ativação',
   const list = sandbox.WINF_CIDADES || [];
   const extras = sandbox.WINF_UNIDADES_EXTRAS || [];
   assert.ok(list.length >= 100, 'cadastro territorial preservado');
-  const active = list.concat(extras).filter(x => x.status === 'ativa' && x.exemplo === false);
-  assert.equal(active.length, 2, 'somente as duas operações declaradas');
-  assert.deepEqual(Array.from(active, x => x.cidade).sort(), ['Pilar do Sul', 'Santos']);
+  const active = list.concat(extras, sandbox.WINF_PAGINAS_REGIONAIS || []).filter(x => x.status === 'ativa' && x.exemplo === false);
+  assert.equal(active.length, 71, '71 municípios associados às duas centrais próprias');
+  assert.equal(new Set(active.map(x => x.id)).size, 71, 'municípios ativos não duplicados');
+  assert.ok(active.every(x => x.numero && /^551[35]/.test(x.numero)), 'roteamento apenas pelas centrais DDD 013 e 015');
   assert.ok(list.some(x => x.status === 'pre_ativacao' && x.siteAtivo === true), 'páginas publicadas e sem operação existem');
 });
 
@@ -27,7 +28,7 @@ test('P0: locator AeroCore só inclui status ativa em unidades operacionais', ()
   assert.match(src, /city\.siteAtivo === true \|\| city\.disponivelParaAtivacao === true/);
   assert.match(src, /em análise \(sem ativação confirmada\)/);
   const html = read('aerocore/onde-comprar/index.html');
-  assert.match(html, /Somente Santos e Pilar do Sul possuem operação confirmada/);
+  assert.match(html, /As centrais próprias 013 e 015 recebem solicitações/);
   assert.match(html, /Unidades operacionais/);
 });
 
