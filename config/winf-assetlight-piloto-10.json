@@ -1,0 +1,198 @@
+{
+  "schema": "winf.assetlight.pilot.editorial.v1",
+  "atualizadoEm": "2026-11-13",
+  "status": "fatos_geograficos_referenciados_revisao_editorial_pendente",
+  "cities": [
+    {
+      "id": "sao-paulo-sp",
+      "bairros": [
+        "Pinheiros",
+        "Moema",
+        "Itaim Bibi",
+        "Morumbi"
+      ],
+      "context": "Em São Paulo, a escolha da película pode variar bastante entre apartamentos envidraçados, escritórios e áreas de sacada. Uma fachada voltada ao sol da tarde exige avaliação diferente de uma janela sombreada: a orientação e a composição do vidro vêm antes da escolha da tonalidade.",
+      "case": "Para apartamentos em Pinheiros e Moema, vale conferir normas do condomínio e reflexão externa antes de sugerir DualReflect. Em escritórios no Itaim Bibi, transparência e ofuscamento podem pesar mais. No Morumbi, grandes panos de vidro pedem conferência de medidas e tipo de vidro.",
+      "source": "https://legislacao.prefeitura.sp.gov.br/lei-11220-de-20-de-maio-de-1992/consolidado",
+      "sourceLabel": "Lei municipal de distritos de São Paulo",
+      "questions": [
+        "O condomínio limita películas refletivas?",
+        "A fachada recebe sol direto pela manhã ou à tarde?",
+        "É importante manter a vista completamente transparente?"
+      ],
+      "licenca": "disponivel_para_ativacao",
+      "atendimentoPresencial": "a_confirmar"
+    },
+    {
+      "id": "barueri-sp",
+      "bairros": [
+        "Alphaville",
+        "Jardim Belval",
+        "Tamboré"
+      ],
+      "context": "Barueri combina eixos empresariais e setores residenciais com exigências distintas para vidros. Uma divisória interna pede controle visual e decoração; já a fachada externa precisa equilibrar proteção solar, reflexo e leitura arquitetônica.",
+      "case": "Na análise de projetos associados a Alphaville e Tamboré, a escolha visual entre DualReflect e Invisible deve considerar restrições de fachada. Para imóveis no Jardim Belval, fotos das janelas e da incidência de luz ajudam a evitar indicar uma película escura sem necessidade.",
+      "source": "https://portal.barueri.sp.gov.br/secretarias/secretaria-servicos-municipais/limpeza-urbana",
+      "sourceLabel": "Prefeitura de Barueri — referências de bairros",
+      "questions": [
+        "O vidro separa ambientes internos ou está na fachada?",
+        "Há exigência estética do condomínio ou empreendimento?",
+        "A prioridade é privacidade, calor ou ofuscamento?"
+      ],
+      "licenca": "disponivel_para_ativacao",
+      "atendimentoPresencial": "a_confirmar"
+    },
+    {
+      "id": "santana-de-parnaiba-sp",
+      "bairros": [
+        "Tamboré",
+        "Alphaville",
+        "Centro Histórico"
+      ],
+      "context": "Santana de Parnaíba reúne áreas de condomínios e o núcleo histórico, com linguagens arquitetônicas diferentes. Uma recomendação de película precisa respeitar o tipo do imóvel e eventuais exigências de aprovação, sem tratar toda a cidade como um único padrão de vidro.",
+      "case": "Em residências de Tamboré e Alphaville, começamos comparando a manutenção da transparência com a estética metalizada. Perto do Centro Histórico, a análise também exige atenção às particularidades visuais do patrimônio e às regras aplicáveis ao imóvel.",
+      "source": "https://www.santanadeparnaiba.sp.gov.br/plano_diretor/pmsb/",
+      "sourceLabel": "Prefeitura de Santana de Parnaíba — planejamento urbano",
+      "questions": [
+        "Há norma de condomínio ou proteção patrimonial aplicável?",
+        "Qual aparência externa é permitida?",
+        "O principal incômodo é calor, luminosidade ou exposição visual?"
+      ],
+      "licenca": "disponivel_para_ativacao",
+      "atendimentoPresencial": "a_confirmar"
+    },
+    {
+      "id": "osasco-sp",
+      "bairros": [
+        "Vila Yara",
+        "Vila Campesina",
+        "Centro"
+      ],
+      "context": "O entorno de Vila Yara e Vila Campesina oferece referências relevantes para pesquisar diferentes tipos de janelas e estabelecimentos. Em vitrines, a visibilidade do interior pode ser desejada; em salas e quartos, o controle de luminosidade tende a ganhar prioridade.",
+      "case": "Na Vila Yara, uma fachada voltada ao movimento da via exige decisão diferente de um quarto resguardado. Na Vila Campesina, sugerimos começar pela foto de cada vidro, porque a superfície e a exposição não podem ser deduzidas apenas do bairro.",
+      "source": "https://www.osasco.sp.leg.br/vila-yara",
+      "sourceLabel": "Câmara Municipal de Osasco — Vila Yara",
+      "questions": [
+        "É vidro de vitrine, janela residencial ou fechamento de sacada?",
+        "A privacidade noturna é necessária?",
+        "A iluminação natural deve permanecer semelhante à original?"
+      ],
+      "licenca": "disponivel_para_ativacao",
+      "atendimentoPresencial": "a_confirmar"
+    },
+    {
+      "id": "cotia-sp",
+      "bairros": [
+        "Granja Viana",
+        "Centro",
+        "Eixo Raposo Tavares"
+      ],
+      "context": "A Granja Viana e o corredor da Rodovia Raposo Tavares articulam bairros residenciais, comércio e espaços com amplas aberturas. Nesses projetos, preservar a vista e a luminosidade pode ser tão importante quanto reduzir o desconforto térmico.",
+      "case": "Para casas com portas de vidro voltadas a áreas verdes, a Invisible pode ser apresentada como alternativa discreta após verificar especificações. Em ambientes comerciais do eixo Raposo Tavares, o controle de ofuscamento e a apresentação da vitrine precisam ser avaliados em conjunto.",
+      "source": "https://cotia.sp.gov.br/regiao/",
+      "sourceLabel": "Prefeitura de Cotia — regiões da cidade",
+      "questions": [
+        "O vidro enquadra jardim, varanda ou vitrine?",
+        "A vista externa precisa ser preservada?",
+        "Há incidência solar direta sobre móveis ou superfícies internas?"
+      ],
+      "licenca": "disponivel_para_ativacao",
+      "atendimentoPresencial": "a_confirmar"
+    },
+    {
+      "id": "itapevi-sp",
+      "bairros": [
+        "Amador Bueno",
+        "Vila Dr. Cardoso",
+        "Centro"
+      ],
+      "context": "Itapevi possui núcleos urbanos identificados como Amador Bueno, Vila Dr. Cardoso e Centro. Para uma avaliação útil, não basta informar o bairro: a película indicada para a janela de uma sala pode ser diferente daquela sugerida para uma porta de vidro de acesso comercial.",
+      "case": "No levantamento de um imóvel com diferentes exposições, recomendamos separar fotos de sala, quarto e área de serviço. Para um comércio, é importante informar se a vitrine precisa permitir a visão de produtos durante o dia e à noite.",
+      "source": "https://noticias.itapevi.sp.gov.br/nova-base-da-gcm-garante-mais-seguranca-dentro-do-terminal-de-onibus-no-centro/",
+      "sourceLabel": "Prefeitura de Itapevi — áreas Centro, Amador Bueno e Cardoso",
+      "questions": [
+        "Quantas superfícies de vidro existem no projeto?",
+        "É possível enviar foto ou vídeo e medidas aproximadas?",
+        "Alguma janela recebe sol diretamente no período de uso?"
+      ],
+      "licenca": "disponivel_para_ativacao",
+      "atendimentoPresencial": "a_confirmar"
+    },
+    {
+      "id": "jandira-sp",
+      "bairros": [
+        "Jardim Gabriela",
+        "Centro",
+        "Jardim Nossa Senhora de Fátima"
+      ],
+      "context": "Jandira tem diferentes áreas residenciais e pontos de comércio. A WINF propõe uma avaliação visual simples: primeiro entender o motivo do incômodo, depois conhecer o vidro, e só então apresentar uma opção de película que combine com o ambiente.",
+      "case": "Em uma janela de quarto, privacidade e intensidade luminosa podem ser determinantes; numa cozinha, o cuidado com calor e manutenção pode pesar mais. Para estabelecimentos com vitrine, é essencial verificar se a película fumê compromete a exposição de mercadorias.",
+      "source": "https://www.jandira.sp.gov.br/",
+      "sourceLabel": "Prefeitura de Jandira — portal institucional",
+      "questions": [
+        "O ambiente é quarto, cozinha, escritório ou vitrine?",
+        "O objetivo é reduzir calor ou aumentar privacidade?",
+        "A janela precisa preservar entrada de luz natural?"
+      ],
+      "licenca": "disponivel_para_ativacao",
+      "atendimentoPresencial": "a_confirmar"
+    },
+    {
+      "id": "carapicuiba-sp",
+      "bairros": [
+        "Vila Dirce",
+        "COHAB II",
+        "Ariston"
+      ],
+      "context": "Vila Dirce, COHAB e Ariston são referências geográficas reconhecidas de Carapicuíba. Em situações em que janelas ficam próximas a circulações externas, a análise de privacidade deve ser separada da proteção contra calor e da passagem de luz.",
+      "case": "Em imóveis com janela de rua, vale estudar fumê ou solução decorativa sem prometer privacidade noturna absoluta. Em sacadas e fachadas, a avaliação do tipo de vidro antecede qualquer recomendação de uma película mais refletiva.",
+      "source": "https://carapicuiba.sp.gov.br/noticia/view/4184/guarda-civil-de-carapicuiba-realiza-acao-no-final-de-semana-e-recupera-moto-roubada",
+      "sourceLabel": "Prefeitura de Carapicuíba — bairros do município",
+      "questions": [
+        "A janela fica próxima à rua ou de outra residência?",
+        "A privacidade é necessária também com luz acesa à noite?",
+        "Há vidro temperado ou laminado identificado pelo fabricante?"
+      ],
+      "licenca": "disponivel_para_ativacao",
+      "atendimentoPresencial": "a_confirmar"
+    },
+    {
+      "id": "taboao-da-serra-sp",
+      "bairros": [
+        "Jardim Maria Rosa",
+        "Parque Pinheiros",
+        "Jardim Record"
+      ],
+      "context": "A distribuição de bairros de Taboão da Serra inclui Jardim Maria Rosa, Parque Pinheiros e Jardim Record. Em apartamentos e espaços de trabalho, reflexos em telas e ofuscamento são problemas diferentes da privacidade, embora possam ocorrer no mesmo ambiente.",
+      "case": "Para uma sala com computador ou televisão, primeiro verificamos o ângulo da luz solar. Em janelas voltadas para circulação de pessoas, discutimos tonalidade e privacidade. A decisão final depende das fotos e do tipo de vidro, não de uma recomendação genérica por CEP.",
+      "source": "https://portaltaboao.com/bairros",
+      "sourceLabel": "Portal local — lista de bairros de Taboão da Serra",
+      "questions": [
+        "O incômodo principal ocorre em telas, móveis ou no conforto térmico?",
+        "O ambiente precisa continuar muito iluminado?",
+        "A fachada admite mudança na aparência externa do vidro?"
+      ],
+      "licenca": "disponivel_para_ativacao",
+      "atendimentoPresencial": "a_confirmar"
+    },
+    {
+      "id": "embu-das-artes-sp",
+      "bairros": [
+        "Centro",
+        "Jardim Santa Tereza",
+        "Jardim Vazame"
+      ],
+      "context": "Embu das Artes reúne um Centro com vocação turística e regiões residenciais como Jardim Santa Tereza e Jardim Vazame. A escolha de uma película pode envolver o desejo de preservar a leitura das fachadas, além das necessidades de calor e privacidade.",
+      "case": "Para uma vitrine de comércio ou ateliê, avalia-se a entrada de luz e o quanto os produtos precisam ficar visíveis. Em uma residência, o foco pode ser preservar a transparência e reduzir ofuscamento. Uma solução decorativa deve combinar com a função da divisória.",
+      "source": "https://cidadeembudasartes.sp.gov.br/mapas-dos-bairros/",
+      "sourceLabel": "Prefeitura de Embu das Artes — mapas de bairros",
+      "questions": [
+        "É vitrine, ambiente residencial ou divisória interna?",
+        "Há exigência arquitetônica ou de preservação visual?",
+        "O cliente quer película quase incolor ou um efeito decorativo?"
+      ],
+      "licenca": "disponivel_para_ativacao",
+      "atendimentoPresencial": "a_confirmar"
+    }
+  ]
+}
