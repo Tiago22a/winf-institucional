@@ -314,3 +314,25 @@ body.wp-menu-open{overflow:hidden}
   .winf-partners-site .wp-header .partners-lockup-wordmark,
   .winf-partners-site .wp-footer-base .partners-lockup-wordmark{font-size:21px;padding-left:7px}
 }
+
+
+/* WINF Asset Light™ — dupla editorial fotográfica; logotipos oficiais intocados. */
+.wp-al-editorial{background:#0d0e0e;border-top:1px solid #ffffff24;border-bottom:1px solid #ffffff24}
+.wp-al-editorial__intro{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(20px,5vw,72px);align-items:end;margin-bottom:30px}
+.wp-al-editorial__intro h2{font-size:clamp(2.1rem,4.5vw,4.8rem);line-height:1.06;letter-spacing:-.055em;margin:14px 0 0}
+.wp-al-editorial__intro h2 span{color:#aeb7b1}
+.wp-al-editorial__intro p:not(.wp-kicker){max-width:570px;color:#c3c9c6;font-size:15px;line-height:1.75}
+.wp-al-editorial__link{display:inline-flex;gap:18px;align-items:center;margin-top:14px;padding:13px 0;border-bottom:1px solid #aab3ad;color:#f1f4f2;text-decoration:none;font-weight:700;font-size:11px;letter-spacing:.12em}
+.wp-al-editorial__link:focus-visible{outline:2px solid #fff;outline-offset:5px}
+.wp-al-editorial__gallery{display:grid;grid-template-columns:5fr 7fr;gap:16px}
+.wp-al-editorial__photo{position:relative;min-height:340px;height:clamp(340px,37vw,540px);overflow:hidden;background:#1b1f1e;margin:0}
+.wp-al-editorial__photo::after{content:"";position:absolute;inset:38% 0 0;background:linear-gradient(transparent,#000000b8);pointer-events:none}
+.wp-al-editorial__photo img{display:block;width:100%;height:100%;object-fit:cover}
+.wp-al-editorial__photo--mobile img{object-position:center 36%}
+.wp-al-editorial__photo--execution img{object-position:center}
+.wp-al-editorial__photo figcaption{position:absolute;z-index:1;left:clamp(16px,2vw,30px);bottom:clamp(18px,2.4vw,33px);right:16px;display:grid;gap:5px;color:#fff}
+.wp-al-editorial__photo figcaption small{font-size:10px;letter-spacing:.17em;font-weight:700;color:#e1e6e2}
+.wp-al-editorial__photo figcaption strong{font-size:clamp(1.13rem,2vw,2rem);line-height:1.1;font-weight:650;letter-spacing:-.035em}
+.wp-al-editorial__notice{font-size:11px;line-height:1.5;color:#9ca7a1;margin:15px 0 0}
+@media(max-width:800px){.wp-al-editorial__intro{grid-template-columns:1fr;gap:10px}.wp-al-editorial__gallery{grid-template-columns:1fr 1fr;gap:10px}.wp-al-editorial__photo{height:360px;min-height:0}}
+@media(max-width:580px){.wp-al-editorial__gallery{grid-template-columns:1fr}.wp-al-editorial__photo{height:330px}.wp-al-editorial__photo--mobile img{object-position:center 45%}}
