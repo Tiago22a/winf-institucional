@@ -68,7 +68,7 @@ footer{border-top:1px solid #ffffff32;padding:48px 0 30px;background:#090a0b}.fo
   <p class="lead">Existem profissionais que já sabem trabalhar, atender e transformar a vida de clientes — mas ainda não tiveram os recursos necessários para construir um negócio estruturado.</p>
   <p class="sublead">O Padrinho Modern™ apresenta uma possibilidade de aproximar esses talentos de pessoas dispostas a apoiá-los. Você pode viabilizar o início de uma operação WINF, avaliar uma parceria ou contribuir para que um profissional dê seu próximo passo.</p>
   <div class="actions"><a class="btn" href="#como-funciona">Conhecer a proposta ↗</a><button class="btn secondary" type="button" id="share-page">Compartilhar esta oportunidade ↗</button></div>
-  <p id="share-status" class="share-status" role="status" aria-live="polite"></p>
+  <p id="share-status" class="share-status" role="status" aria-live="polite"></p><div data-territory-context hidden style="margin-top:16px;padding:17px;border:1px solid #7791b4;background:#141d29"><span class="eyebrow">PROJETO TERRITORIAL COMPARTILHADO</span><strong data-territory-city style="display:block;font-size:22px"></strong><p data-territory-status style="color:#b2c5db;font-size:13px"></p><a data-territory-link href="/partners/territorios/">Consultar este território ↗</a> · <a data-dark-link href="/partners/universo-dark/">Universo Dark™ ↗</a></div>
  </div></section>
  <section class="section" id="oportunidade"><div class="wrap"><div class="intro"><span class="eyebrow">01 / POR QUE EXISTE</span><h2>Oportunidade não pode depender <em>apenas de capital.</em></h2><p class="muted">O profissional entra com seu conhecimento, dedicação e capacidade de execução. O padrinho pode contribuir com os recursos e a visão necessários para estruturar a operação. A WINF Partners oferece um modelo de marca, suporte e processos, conforme o contrato de licenciamento e a implantação efetiva.</p></div><p class="quote">Não se trata de comprar uma promessa.<br><em>Trata-se de avaliar uma pessoa e um projeto.</em></p></div></section>
  <section class="section" id="modelos"><div class="wrap">
@@ -93,7 +93,7 @@ footer{border-top:1px solid #ffffff32;padding:48px 0 30px;background:#090a0b}.fo
 <footer><div class="wrap"><div class="footer-top"><div><a class="brand" href="/partners/"><img src="/winf-logo.svg" width="95" height="35" alt="WINF™"><span>PARTNERS™</span></a><p>Do Brasil para o mundo. Expansão com propósito, critérios e responsabilidade.</p></div><nav class="footer-nav" aria-label="Links institucionais"><a href="/partners/">WINF Partners</a><a href="/briefing/">Briefing</a><a href="/maw/">M.A.W.™</a><a href="/aerocore/policies/#privacidade">Privacidade</a></nav></div><div class="footer-bottom"><small>© <span id="year">2026</span> WINF.inc® / WINF PARTNERS™</small><p class="winf-site-signature" data-credit-network-version="20261112"><span>Desenvolvido por </span><a href="/maw/">M.A.W.™</a><span aria-hidden="true"> · </span><a href="https://nexablue.com.br/" target="_blank" rel="noopener noreferrer">NEXA BLUE™</a></p></div></div></footer>
 <script>
 (function(){
- const pageUrl=()=>new URL('/partners/padrinho-modern/',window.location.origin).href;
+ const pageUrl=()=>{const u=new URL('/partners/padrinho-modern/',window.location.origin);const id=new URLSearchParams(location.search).get('territorio');if(id&&/^[a-z0-9-]{3,90}$/.test(id))u.searchParams.set('territorio',id);return u.href};
  const feedback=(id,msg)=>{const e=document.getElementById(id);if(e)e.textContent=msg};
  async function copy(id){try{await navigator.clipboard.writeText(pageUrl());feedback(id,'Link copiado. Você já pode compartilhar.')}catch(_){window.prompt('Copie este link para compartilhar:',pageUrl());feedback(id,'Copie o endereço exibido para enviar.')}}
  document.getElementById('share-page').addEventListener('click',async()=>{if(navigator.share){try{await navigator.share({title:'Padrinho Modern™ — WINF Partners',text:'Conheça uma oportunidade de apoiar o talento de um profissional.',url:pageUrl()});return}catch(e){if(e.name==='AbortError')return}}await copy('share-status')});
@@ -101,6 +101,6 @@ footer{border-top:1px solid #ffffff32;padding:48px 0 30px;background:#090a0b}.fo
  document.getElementById('year').textContent=new Date().getFullYear();
 })();
 </script>
-<script src="/js/winf-site-credit.js?v=20261112-1" defer></script>
+<script src="/partners/territorios/contexto.js?v=20261113-1" defer></script><script src="/js/winf-site-credit.js?v=20261112-1" defer></script>
 </body>
 </html>

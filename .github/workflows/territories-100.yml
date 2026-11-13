@@ -1,0 +1,24 @@
+name: Vitrine WINF Partners — 100 territórios
+on:
+  pull_request:
+    paths:
+      - 'config/winf-expansion-100-sp.json'
+      - 'partners/territorios/**'
+      - 'crm/territorios-100-sp.csv'
+      - 'tests/territories100.test.cjs'
+      - 'partners/index.html'
+      - 'briefing/asset-light/index.html'
+      - 'partners/padrinho-modern/index.html'
+      - 'partners/universo-dark/index.html'
+  workflow_dispatch:
+jobs:
+  validate-territories:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node --check partners/territorios/territorios.js
+      - run: node --check partners/territorios/contexto.js
+      - run: node --test tests/territories100.test.cjs
