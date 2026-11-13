@@ -19,3 +19,21 @@ test("27 diretórios estaduais contêm todos os 5.571 municípios e polos reais"
  assert.equal(sum,5571);
  assert.doesNotThrow(()=>new Function(read("js/winf-proximo-uf.js")));
 });
+
+test("24 páginas locais de captação têm serviço real de consulta e três referências",()=>{
+ const rows=JSON.parse(read("config/winf-captacao-piloto-24.json"));const ids=new Set(d.cities.map(c=>c[0]));
+ assert.equal(rows.length,24);assert.equal(new Set(rows.map(c=>c.id)).size,24);
+ const sitemap=read("sitemap.xml"),national=read("winf-select/proximo/index.html");
+ for(const x of rows){
+  assert.ok(ids.has(x.id),x.id);
+  const slug=x.slug,html=read(slug.slice(1)+"index.html");
+  assert.ok(html.includes('name="robots" content="index,follow'),slug);
+  assert.ok(html.includes('rel="canonical" href="https://winf.com.br'+slug+'"'),slug);
+  assert.ok(html.includes('href="https://wa.me/5513981113001?text='),slug);
+  assert.ok(html.includes('href="/invisible/"')&&html.includes('href="/blackpro/"')&&html.includes('href="/dual-reflect/"'),slug);
+  assert.equal((html.match(/class="city-pole"/g)||[]).length,3,slug);
+  assert.ok(!html.includes('"@type":"LocalBusiness"'),slug);
+  assert.ok(sitemap.includes('<loc>https://winf.com.br'+slug+'</loc>'),slug);
+  assert.ok(national.includes('href="'+slug+'"'),slug);
+ }
+});
