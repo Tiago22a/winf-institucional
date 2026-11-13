@@ -1,0 +1,35 @@
+name: WINF SEO — Antispam territorial
+on:
+  pull_request:
+    paths:
+      - 'winf-select/cidades/**'
+      - 'partners/territorios/**'
+      - 'config/seo-territorios-aprovados.json'
+      - 'sitemap.xml'
+      - 'robots.txt'
+      - 'tests/seo-territory-release-gate.test.cjs'
+      - 'docs/politica-seo-publicacao-territorial.md'
+      - '.github/workflows/seo-territory-gate.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'winf-select/cidades/**'
+      - 'partners/territorios/**'
+      - 'config/seo-territorios-aprovados.json'
+      - 'sitemap.xml'
+      - 'robots.txt'
+      - 'tests/seo-territory-release-gate.test.cjs'
+      - '.github/workflows/seo-territory-gate.yml'
+  workflow_dispatch:
+jobs:
+  check-territory-seo-policy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check tests/seo-territory-release-gate.test.cjs
+      - run: node --test tests/seo-territory-release-gate.test.cjs
