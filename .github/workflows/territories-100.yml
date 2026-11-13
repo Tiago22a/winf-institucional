@@ -7,10 +7,14 @@ on:
       - 'config/winf-expansion-200.json'
       - 'config/winf-expansion-map.json'
       - 'partners/territorios/**'
+      - 'winf-select/cidades/**'
+      - 'css/winf-select-territory.css'
+      - 'js/winf-select-territory.js'
       - 'crm/territorios-100-sp.csv'
       - 'crm/territorios-200.csv'
       - 'tests/territories100.test.cjs'
       - 'tests/territories200.test.cjs'
+      - 'tests/winf-select-200.test.cjs'
       - 'partners/index.html'
       - 'briefing/asset-light/index.html'
       - 'partners/padrinho-modern/index.html'
@@ -27,4 +31,5 @@ jobs:
       - run: node --check partners/territorios/territorios.js
       - run: node --check partners/territorios/contexto.js
       - run: node --check partners/territorios/mapa.js
-      - run: node --test tests/territories100.test.cjs tests/territories200.test.cjs
+      - run: node --check js/winf-select-territory.js
+      - run: node --test tests/territories100.test.cjs tests/territories200.test.cjs tests/winf-select-200.test.cjs

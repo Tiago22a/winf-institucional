@@ -31,3 +31,15 @@ O cadastro deve preservar três dimensões: atendimento operacional, URL existen
 4. 71 cidades com atendimento regional permanecem visíveis, sob as centrais 013 e 015.
 5. CSV importável para CRM, sem revelar contatos pessoais.
 6. Somente após revisão visual no celular, testes, integração do CRM e aprovação, liberar o PR para publicação.
+
+## Estrutura das 200 páginas WINF Select com SEO local — verificação de 13/11/2026
+
+- Foram criadas **200 URLs de páginas locais de pré-lançamento**, além das 200 fichas de expansão, em `/winf-select/cidades/<id>/`.
+- A identidade visual e o repertório de imagens, vídeos e logos oficiais são compartilhados entre as páginas e seguem a direção do site WINF Select Santos. A página operacional de Santos não foi alterada.
+- Cada local possui `title`, `meta description`, `og:title`, `og:url`, canonical, região geográfica, dados `Organization` e `Place` sem endereço comercial nem falso `LocalBusiness`, código IBGE e ponto municipal OSM.
+- O cadastro de pesquisa dos bairros é **preliminar** e não equivale a informação estatística de renda nem disponibilidade de aplicação.
+- As **200 URLs permanecem noindex**, pois uma franquia/unidade regional não pode ser anunciada como operante sem validação. Só depois de conteúdo local próprio, comprovação de equipe e atendimento regional, remoção de noindex e nova revisão do sitemap/Search Console.
+- A planilha CSV do CRM lista as 200 rotas preparadas, com campo `site_local_publicado=nao`; sem importação automática no banco privado.
+- O teste `tests/winf-select-200.test.cjs` verifica todas as 200 páginas, canônicos, schema, geocódigos, logos, links, SEO e ausência de endereço/contato falso.
+
+**Atenção**: conteúdo programático igual ao de Santos não significa que os 200 territórios possuem 200 unidades operacionais. O material de pré-lançamento é de expansão e pesquisa local.

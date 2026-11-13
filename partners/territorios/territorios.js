@@ -40,6 +40,8 @@
       "Consulte as condições de candidatura."));
     if(t.bairrosParaValidar?.length)a.append(el("p","neighborhood-hint","Bairros em pesquisa: "+t.bairrosParaValidar.slice(0,3).join(", ")+". "));
     a.append(link("Ver ficha territorial ↗","/partners/territorios/"+encodeURIComponent(t.id)+"/"));
+    a.append(el("span","territory-detail-divider"," · "));
+    a.append(link("Site WINF Select™ ↗","/winf-select/cidades/"+encodeURIComponent(t.id)+"/"));
     return a;
   };
   const coverageCard=(c)=>{
