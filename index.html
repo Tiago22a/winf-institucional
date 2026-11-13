@@ -2016,8 +2016,8 @@
       <main id="conteudo" class="w-full min-h-screen bg-black text-white">
         <section id="topo" class="hero-section relative z-10 flex min-h-screen w-full select-none flex-col justify-between overflow-hidden p-6 sm:p-10 md:p-14">
           <div class="hero-media absolute inset-0 z-0 overflow-hidden pointer-events-none">
-            <video id="hero-video" class="h-full w-full scale-105 object-cover opacity-75 mix-blend-screen" playsinline muted loop autoplay preload="metadata" poster="/images/dualreflect-poster-1.webp">
-              <source src="/videos/dualreflect-hero.mp4" type="video/mp4" />
+            <video id="hero-video" class="h-full w-full scale-105 object-cover opacity-75 mix-blend-screen" playsinline muted loop preload="none" poster="/images/dualreflect-poster-1.webp" aria-hidden="true">
+              <source data-src="/videos/dualreflect-hero.mp4" type="video/mp4" />
             </video>
             <div class="absolute inset-0 bg-black/20"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/40"></div>
@@ -2471,7 +2471,7 @@
   <!-- Um único dock fixo é inserido pelo rodapé compartilhado; sem duplicação de ícones. -->
     <script src="/js/cidades.js?v=20261113-centrais" defer></script>
     <script src="/js/winf-active-territories.js?v=20261109-seven-channels2" defer></script>
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
 
     <script charset="utf-8" src="/js/winf-footer.js?v=20261110-single-dock" defer></script>
   <script src="/js/winf-site-credit.js?v=20261112-1" defer></script></body>
