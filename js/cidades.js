@@ -25,14 +25,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "01",
     "cidade": "São Paulo",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-sao-paulo-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "santos-sp",
@@ -88,14 +89,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "05",
     "cidade": "Rio de Janeiro",
     "uf": "RJ",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-rio-de-janeiro-rj/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "belo-horizonte-mg",
@@ -103,14 +105,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "06",
     "cidade": "Belo Horizonte",
     "uf": "MG",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-belo-horizonte-mg/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "curitiba-pr",
@@ -118,14 +121,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "07",
     "cidade": "Curitiba",
     "uf": "PR",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-curitiba-pr/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "florianopolis-sc",
@@ -133,14 +137,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "08",
     "cidade": "Florianópolis",
     "uf": "SC",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-florianopolis-sc/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "salvador-ba",
@@ -148,14 +153,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "09",
     "cidade": "Salvador",
     "uf": "BA",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-salvador-ba/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "recife-pe",
@@ -163,14 +169,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "10",
     "cidade": "Recife",
     "uf": "PE",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-recife-pe/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "brasilia-df",
@@ -178,14 +185,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "11",
     "cidade": "Brasília",
     "uf": "DF",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-brasilia-df/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "belem-pa",
@@ -193,14 +201,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "12",
     "cidade": "Belém",
     "uf": "PA",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-belem-pa/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "campinas-sp",
@@ -208,14 +217,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "13",
     "cidade": "Campinas",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-campinas-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "jundiai-sp",
@@ -223,14 +233,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "14",
     "cidade": "Jundiaí",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-jundiai-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "sao-jose-dos-campos-sp",
@@ -238,14 +249,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "15",
     "cidade": "São José dos Campos",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-sao-jose-dos-campos-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "ribeirao-preto-sp",
@@ -253,14 +265,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "16",
     "cidade": "Ribeirão Preto",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-ribeirao-preto-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "santo-andre-sp",
@@ -268,14 +281,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "17",
     "cidade": "Santo André",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-santo-andre-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "sao-bernardo-do-campo-sp",
@@ -283,14 +297,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "18",
     "cidade": "São Bernardo do Campo",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-sao-bernardo-do-campo-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "sao-caetano-do-sul-sp",
@@ -298,14 +313,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "19",
     "cidade": "São Caetano do Sul",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-sao-caetano-do-sul-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "barueri-alphaville-sp",
@@ -313,14 +329,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "20",
     "cidade": "Barueri / Alphaville",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-barueri-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "mogi-das-cruzes-sp",
@@ -328,14 +345,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "21",
     "cidade": "Mogi das Cruzes",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-mogi-das-cruzes-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "piracicaba-sp",
@@ -343,14 +361,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "22",
     "cidade": "Piracicaba",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-piracicaba-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "bauru-sp",
@@ -358,14 +377,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "23",
     "cidade": "Bauru",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-bauru-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "marilia-sp",
@@ -373,14 +393,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "24",
     "cidade": "Marília",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-marilia-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "sao-jose-do-rio-preto-sp",
@@ -388,14 +409,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "25",
     "cidade": "São José do Rio Preto",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-sao-jose-do-rio-preto-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "presidente-prudente-sp",
@@ -403,14 +425,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "26",
     "cidade": "Presidente Prudente",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-presidente-prudente-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "franca-sp",
@@ -418,14 +441,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "27",
     "cidade": "Franca",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-franca-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "limeira-sp",
@@ -433,14 +457,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "28",
     "cidade": "Limeira",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-limeira-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "sao-vicente-sp",
@@ -647,14 +672,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "41",
     "cidade": "Niterói",
     "uf": "RJ",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-niteroi-rj/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "petropolis-rj",
@@ -662,14 +688,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "42",
     "cidade": "Petrópolis",
     "uf": "RJ",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-petropolis-rj/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "volta-redonda-rj",
@@ -677,14 +704,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "43",
     "cidade": "Volta Redonda",
     "uf": "RJ",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-volta-redonda-rj/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "nova-iguacu-rj",
@@ -692,14 +720,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "44",
     "cidade": "Nova Iguaçu",
     "uf": "RJ",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-nova-iguacu-rj/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "cabo-frio-rj",
@@ -707,14 +736,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "45",
     "cidade": "Cabo Frio",
     "uf": "RJ",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-cabo-frio-rj/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "campos-dos-goytacazes-rj",
@@ -722,14 +752,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "46",
     "cidade": "Campos dos Goytacazes",
     "uf": "RJ",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-campos-dos-goytacazes-rj/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "vitoria-es",
@@ -737,14 +768,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "47",
     "cidade": "Vitória",
     "uf": "ES",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-vitoria-es/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "vila-velha-es",
@@ -752,14 +784,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "48",
     "cidade": "Vila Velha",
     "uf": "ES",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-vila-velha-es/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "linhares-es",
@@ -767,14 +800,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "49",
     "cidade": "Linhares",
     "uf": "ES",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-linhares-es/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "nova-lima-mg",
@@ -782,14 +816,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "50",
     "cidade": "Nova Lima",
     "uf": "MG",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-nova-lima-mg/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "contagem-mg",
@@ -797,14 +832,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "51",
     "cidade": "Contagem",
     "uf": "MG",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-contagem-mg/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "uberlandia-mg",
@@ -812,14 +848,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "52",
     "cidade": "Uberlândia",
     "uf": "MG",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-uberlandia-mg/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "juiz-de-fora-mg",
@@ -827,14 +864,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "53",
     "cidade": "Juiz de Fora",
     "uf": "MG",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-juiz-de-fora-mg/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "uberaba-mg",
@@ -842,14 +880,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "54",
     "cidade": "Uberaba",
     "uf": "MG",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-uberaba-mg/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "ipatinga-mg",
@@ -857,14 +896,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "55",
     "cidade": "Ipatinga",
     "uf": "MG",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-ipatinga-mg/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "governador-valadares-mg",
@@ -872,14 +912,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "56",
     "cidade": "Governador Valadares",
     "uf": "MG",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-governador-valadares-mg/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "montes-claros-mg",
@@ -887,14 +928,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "57",
     "cidade": "Montes Claros",
     "uf": "MG",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-montes-claros-mg/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "divinopolis-mg",
@@ -902,14 +944,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "58",
     "cidade": "Divinópolis",
     "uf": "MG",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-divinopolis-mg/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "londrina-pr",
@@ -917,14 +960,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "59",
     "cidade": "Londrina",
     "uf": "PR",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-londrina-pr/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "fortaleza-ce",
@@ -932,14 +976,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "60",
     "cidade": "Fortaleza",
     "uf": "CE",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-fortaleza-ce/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "goiania-go",
@@ -947,14 +992,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "61",
     "cidade": "Goiânia",
     "uf": "GO",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-goiania-go/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "cuiaba-mt",
@@ -978,14 +1024,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "63",
     "cidade": "Campo Grande",
     "uf": "MS",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-campo-grande-ms/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "manaus-am",
@@ -993,14 +1040,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "64",
     "cidade": "Manaus",
     "uf": "AM",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-manaus-am/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "porto-alegre-rs",
@@ -1008,14 +1056,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "65",
     "cidade": "Porto Alegre",
     "uf": "RS",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-porto-alegre-rs/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "guarulhos-sp",
@@ -1023,14 +1072,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "66",
     "cidade": "Guarulhos",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-guarulhos-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "osasco-sp",
@@ -1038,14 +1088,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "67",
     "cidade": "Osasco",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-osasco-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "maua-sp",
@@ -1053,14 +1104,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "68",
     "cidade": "Mauá",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-maua-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "diadema-sp",
@@ -1068,14 +1120,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "69",
     "cidade": "Diadema",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-diadema-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "carapicuiba-sp",
@@ -1083,14 +1136,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "70",
     "cidade": "Carapicuíba",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-carapicuiba-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "itaquaquecetuba-sp",
@@ -1098,14 +1152,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "71",
     "cidade": "Itaquaquecetuba",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-itaquaquecetuba-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "taubate-sp",
@@ -1113,14 +1168,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "72",
     "cidade": "Taubaté",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-taubate-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "suzano-sp",
@@ -1128,14 +1184,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "73",
     "cidade": "Suzano",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-suzano-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "sumare-sp",
@@ -1143,14 +1200,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "74",
     "cidade": "Sumaré",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-sumare-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "cotia-sp",
@@ -1158,14 +1216,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "75",
     "cidade": "Cotia",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-cotia-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "taboao-da-serra-sp",
@@ -1173,14 +1232,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "76",
     "cidade": "Taboão da Serra",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-taboao-da-serra-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "indaiatuba-sp",
@@ -1188,14 +1248,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "77",
     "cidade": "Indaiatuba",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-indaiatuba-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "sao-carlos-sp",
@@ -1203,14 +1264,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "78",
     "cidade": "São Carlos",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-sao-carlos-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "embu-das-artes-sp",
@@ -1218,14 +1280,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "79",
     "cidade": "Embu das Artes",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-embu-das-artes-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "araraquara-sp",
@@ -1233,14 +1296,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "80",
     "cidade": "Araraquara",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-araraquara-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "jacarei-sp",
@@ -1248,14 +1312,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "81",
     "cidade": "Jacareí",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-jacarei-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "americana-sp",
@@ -1263,14 +1328,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "82",
     "cidade": "Americana",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-americana-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "hortolandia-sp",
@@ -1278,14 +1344,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "83",
     "cidade": "Hortolândia",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-hortolandia-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "itapevi-sp",
@@ -1293,14 +1360,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "84",
     "cidade": "Itapevi",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-itapevi-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "rio-claro-sp",
@@ -1308,14 +1376,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "85",
     "cidade": "Rio Claro",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-rio-claro-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "aracatuba-sp",
@@ -1323,14 +1392,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "86",
     "cidade": "Araçatuba",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-aracatuba-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "santa-barbara-d-oeste-sp",
@@ -1338,14 +1408,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "87",
     "cidade": "Santa Bárbara d'Oeste",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-santa-barbara-d-oeste-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "ferraz-de-vasconcelos-sp",
@@ -1353,14 +1424,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "88",
     "cidade": "Ferraz de Vasconcelos",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-ferraz-de-vasconcelos-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "braganca-paulista-sp",
@@ -1368,14 +1440,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "89",
     "cidade": "Bragança Paulista",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-braganca-paulista-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "itu-sp",
@@ -1383,14 +1456,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "90",
     "cidade": "Itu",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-itu-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "pindamonhangaba-sp",
@@ -1398,14 +1472,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "91",
     "cidade": "Pindamonhangaba",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-pindamonhangaba-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "francisco-morato-sp",
@@ -1413,14 +1488,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "92",
     "cidade": "Francisco Morato",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-francisco-morato-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "atibaia-sp",
@@ -1428,14 +1504,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "93",
     "cidade": "Atibaia",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-atibaia-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "itapecerica-da-serra-sp",
@@ -1443,14 +1520,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "94",
     "cidade": "Itapecerica da Serra",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-itapecerica-da-serra-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "itapetininga-sp",
@@ -1474,14 +1552,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "96",
     "cidade": "Santana de Parnaíba",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-santana-de-parnaiba-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "mogi-guacu-sp",
@@ -1489,14 +1568,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "97",
     "cidade": "Mogi Guaçu",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-mogi-guacu-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "botucatu-sp",
@@ -1504,14 +1584,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "98",
     "cidade": "Botucatu",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-botucatu-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "franco-da-rocha-sp",
@@ -1519,14 +1600,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "99",
     "cidade": "Franco da Rocha",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-franco-da-rocha-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   },
   {
     "id": "caraguatatuba-sp",
@@ -1534,14 +1616,15 @@ globalThis.WINF_CIDADES = [
     "referencia": "100",
     "cidade": "Caraguatatuba",
     "uf": "SP",
-    "status": "nao_ativa",
+    "status": "pre_ativacao",
     "tipoAtendimento": null,
     "numero": null,
-    "url": null,
+    "url": "/pelicula-para-vidro-controle-solar-caraguatatuba-sp/",
     "instagram": null,
-    "observacoes": "Unidade não ativa. Disponibilidade para ativação a confirmar.",
+    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
     "disponivelParaAtivacao": false,
-    "exemplo": false
+    "exemplo": false,
+    "siteAtivo": true
   }
 ];
 
