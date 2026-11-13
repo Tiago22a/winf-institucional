@@ -1,11 +1,16 @@
-name: Vitrine WINF Partners — 100 territórios
+name: Vitrine WINF Partners — 200 territórios
 on:
   pull_request:
     paths:
       - 'config/winf-expansion-100-sp.json'
+      - 'config/winf-expansion-100-br.json'
+      - 'config/winf-expansion-200.json'
+      - 'config/winf-expansion-map.json'
       - 'partners/territorios/**'
       - 'crm/territorios-100-sp.csv'
+      - 'crm/territorios-200.csv'
       - 'tests/territories100.test.cjs'
+      - 'tests/territories200.test.cjs'
       - 'partners/index.html'
       - 'briefing/asset-light/index.html'
       - 'partners/padrinho-modern/index.html'
@@ -21,4 +26,5 @@ jobs:
           node-version: 22
       - run: node --check partners/territorios/territorios.js
       - run: node --check partners/territorios/contexto.js
-      - run: node --test tests/territories100.test.cjs
+      - run: node --check partners/territorios/mapa.js
+      - run: node --test tests/territories100.test.cjs tests/territories200.test.cjs
