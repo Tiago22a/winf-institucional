@@ -34,6 +34,22 @@ footer{border-top:1px solid #ffffff32;padding:48px 0 30px;background:#090a0b}.fo
 @media(max-width:800px){.tiles,.steps{grid-template-columns:1fr}.paper{grid-template-columns:1fr}.topnav{gap:12px}.hero-content{padding:78px 0 80px}.footer-top{display:block}.footer-nav{margin-top:25px}.footer-bottom{display:block}.footer-bottom .winf-site-signature{text-align:left;margin-top:12px}}
 @media(max-width:480px){.top{min-height:74px}.brand img{width:68px}.brand span{font-size:17px;padding-left:10px}.topnav{font-size:9px}.topnav a:first-child{display:none}.hero-content{padding:68px 0 74px}h1{font-size:clamp(49px,13vw,70px)}.actions .btn{width:100%;font-size:11px}.tile{padding:24px 20px}.paper{padding:25px 20px}.final{padding:68px 0 76px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Padrinho Modern — editorial visual WINF Asset Light. Logos institucionais intactos. */
+.pm-editorial{background:#0d1013}
+.pm-editorial .intro{max-width:840px}
+.pm-editorial-grid{display:grid;grid-template-columns:1.22fr .84fr .84fr;gap:12px}
+.pm-editorial-card{position:relative;margin:0;min-width:0;min-height:380px;overflow:hidden;background:#171b1d;border:1px solid #ffffff22}
+.pm-editorial-card img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(.85) contrast(1.03)}
+.pm-editorial-card--feature img{object-position:center 45%}
+.pm-editorial-card:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,#000c);pointer-events:none}
+.pm-editorial-card figcaption{position:absolute;z-index:1;bottom:24px;left:24px;right:20px;display:grid;gap:9px}
+.pm-editorial-card figcaption span{color:#dce0e4;font-size:10px;font-weight:700;letter-spacing:.12em}
+.pm-editorial-card figcaption strong{font:400 clamp(20px,2vw,29px)/1.12 Anton,Impact,sans-serif;letter-spacing:.02em;color:white}
+.pm-editorial-note{font-size:11px;color:#acb4bd;line-height:1.6;margin:20px 0 12px}
+.pm-editorial-link{display:inline-block;margin-top:5px}
+@media(max-width:1000px){.pm-editorial-grid{grid-template-columns:1fr 1fr}.pm-editorial-card--feature{grid-column:1/-1;min-height:400px}.pm-editorial-card{min-height:320px}}
+@media(max-width:640px){.pm-editorial-grid{grid-template-columns:1fr}.pm-editorial-card--feature{grid-column:auto}.pm-editorial-card{min-height:340px}.pm-editorial-card figcaption{bottom:18px;left:18px}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Padrinho Modern™ — WINF Partners","description":"Página de apresentação a apoiadores potenciais do talento profissional e de projetos licenciados WINF. Não é uma oferta pública de valores mobiliários.","inLanguage":"pt-BR","url":"https://www.winf.com.br/partners/padrinho-modern/","isPartOf":{"@type":"WebSite","url":"https://www.winf.com.br/"}}</script>
 
@@ -59,7 +75,7 @@ footer{border-top:1px solid #ffffff32;padding:48px 0 30px;background:#090a0b}.fo
 <body>
 <header class="wrap top">
  <a class="brand" href="/partners/" aria-label="Voltar ao WINF Partners"><img src="/winf-logo.svg" width="95" height="35" alt="WINF™"><span>PARTNERS™</span></a>
- <nav class="topnav" aria-label="Navegação"><a href="/briefing/">Briefing</a><a href="/partners/">WINF Partners</a><a href="#modelos">Modelos ↗</a><a href="/partners/territorios/">Territórios ↗</a></nav>
+ <nav class="topnav" aria-label="Navegação"><a href="/briefing/">Briefing</a><a href="/partners/">WINF Partners</a><a href="#modelos">Modelos ↗</a><a href="/partners/#territorios">Territórios ↗</a></nav>
 </header>
 <main id="conteudo">
  <section class="hero" aria-labelledby="padrinho-title"><div class="wrap hero-content">
@@ -68,9 +84,33 @@ footer{border-top:1px solid #ffffff32;padding:48px 0 30px;background:#090a0b}.fo
   <p class="lead">Existem profissionais que já sabem trabalhar, atender e transformar a vida de clientes — mas ainda não tiveram os recursos necessários para construir um negócio estruturado.</p>
   <p class="sublead">O Padrinho Modern™ apresenta uma possibilidade de aproximar esses talentos de pessoas dispostas a apoiá-los. Você pode viabilizar o início de uma operação WINF, avaliar uma parceria ou contribuir para que um profissional dê seu próximo passo.</p>
   <div class="actions"><a class="btn" href="#como-funciona">Conhecer a proposta ↗</a><button class="btn secondary" type="button" id="share-page">Compartilhar esta oportunidade ↗</button></div>
-  <p id="share-status" class="share-status" role="status" aria-live="polite"></p><div data-territory-context hidden style="margin-top:16px;padding:17px;border:1px solid #7791b4;background:#141d29"><span class="eyebrow">PROJETO TERRITORIAL COMPARTILHADO</span><strong data-territory-city style="display:block;font-size:22px"></strong><p data-territory-status style="color:#b2c5db;font-size:13px"></p><a data-territory-link href="/partners/territorios/">Consultar este território ↗</a> · <a data-dark-link href="/partners/universo-dark/">Universo Dark™ ↗</a></div>
+  <p id="share-status" class="share-status" role="status" aria-live="polite"></p><div data-territory-context hidden style="margin-top:16px;padding:17px;border:1px solid #7791b4;background:#141d29"><span class="eyebrow">PROJETO TERRITORIAL COMPARTILHADO</span><strong data-territory-city style="display:block;font-size:22px"></strong><p data-territory-status style="color:#b2c5db;font-size:13px"></p><a data-territory-link href="/partners/#territorios">Consultar este território ↗</a> · <a data-dark-link href="/partners/universo-dark/">Universo Dark™ ↗</a></div>
  </div></section>
  <section class="section" id="oportunidade"><div class="wrap"><div class="intro"><span class="eyebrow">01 / POR QUE EXISTE</span><h2>Oportunidade não pode depender <em>apenas de capital.</em></h2><p class="muted">O profissional entra com seu conhecimento, dedicação e capacidade de execução. O padrinho pode contribuir com os recursos e a visão necessários para estruturar a operação. A WINF Partners oferece um modelo de marca, suporte e processos, conforme o contrato de licenciamento e a implantação efetiva.</p></div><p class="quote">Não se trata de comprar uma promessa.<br><em>Trata-se de avaliar uma pessoa e um projeto.</em></p></div></section>
+ <section class="section pm-editorial" id="historias" aria-labelledby="pm-editorial-title">
+  <div class="wrap">
+   <div class="intro"><span class="eyebrow">WINF PARTNERS™ / PADRINHO MODERN™</span>
+    <h2 id="pm-editorial-title">Talento encontra <em>oportunidade.</em></h2>
+    <p class="muted">O Padrinho Modern™ aproxima experiência, iniciativa e apoio estratégico. O WINF Asset Light™ oferece um caminho de operação digital territorial; a execução arquitetônica continua exigindo profissionais habilitados, processos e acompanhamento.</p>
+   </div>
+   <div class="pm-editorial-grid">
+    <figure class="pm-editorial-card pm-editorial-card--feature">
+     <img src="/briefing/media/asset-light-gestao-2026.webp" alt="Profissional utilizando ferramentas digitais em ambiente contemporâneo, cena ilustrativa do modelo WINF Asset Light" width="1100" height="825" loading="lazy" decoding="async">
+     <figcaption><span>01 / VISÃO &amp; PLANEJAMENTO</span><strong>UMA IDEIA. UM TERRITÓRIO. UM PLANO.</strong></figcaption>
+    </figure>
+    <figure class="pm-editorial-card">
+     <img src="/briefing/media/asset-light-mobilidade-2026.webp" alt="Profissional com ferramentas digitais em ambiente externo, representando mobilidade comercial" width="688" height="860" loading="lazy" decoding="async">
+     <figcaption><span>02 / WINF ASSET LIGHT™</span><strong>MOBILIDADE PARA EMPREENDER.</strong></figcaption>
+    </figure>
+    <figure class="pm-editorial-card">
+     <img src="/briefing/media/asset-light-execucao-2026.webp" alt="Aplicação de película em vidros de arquitetura contemporânea, cena conceitual de execução técnica" width="1147" height="860" loading="lazy" decoding="async">
+     <figcaption><span>03 / PROFISSÃO &amp; ENTREGA</span><strong>NEGÓCIO DIGITAL. TRABALHO REAL.</strong></figcaption>
+    </figure>
+   </div>
+   <p class="pm-editorial-note">Imagens editoriais ilustrativas da família WINF Partners™ e do modelo WINF Asset Light™. Não representam oportunidades de investimento aprovadas, equipes locais contratadas ou resultados assegurados.</p>
+   <a class="textlink pm-editorial-link" href="/briefing/asset-light/">Entenda o modelo WINF Asset Light™ ↗</a>
+  </div>
+ </section>
  <section class="section" id="modelos"><div class="wrap">
   <div class="intro"><span class="eyebrow">02 / FORMAS DE APOIAR</span><h2>Um talento. <em>Três caminhos possíveis.</em></h2><p class="muted">Os valores abaixo são referências dos formatos WINF, não garantias de custo total ou retorno. O tipo de apoio e as condições econômicas devem ser acordados separadamente entre as partes.</p></div>
   <div class="tiles">
@@ -87,7 +127,7 @@ footer{border-top:1px solid #ffffff32;padding:48px 0 30px;background:#090a0b}.fo
   </div>
   <div class="paper"><div><span class="eyebrow">O QUE MUDA COM A ESTRUTURA WINF</span><h3>O talento não precisa construir tudo do zero.</h3><p>Na modalidade Asset Light™, a implantação prevista contempla site comercial da cidade, Instagram profissional territorial preparado pela M.A.W.™, WhatsApp Business configurado, conta Google/Gmail, biblioteca organizada no Drive e acesso aos módulos habilitados do WINF OS™ com recursos de IA. A disponibilidade de cada entrega é confirmada na ativação e no contrato.</p></div><div><p class="check">Marca e identidade territorial</p><p class="check">Presença digital preparada para o mercado local</p><p class="check">Biblioteca comercial, gestão e suporte</p><p class="check">Operação real, com responsabilidade do profissional</p></div></div>
  </div></section>
- <section class="section" id="consultar-territorio"><div class="wrap"><span class="eyebrow">TERRITÓRIO / SELEÇÃO DE PROJETOS</span><h2>QUAL CIDADE VOCÊ <em>DESEJA APOIAR?</em></h2><p class="muted">Consulte a vitrine territorial para identificar municípios em avaliação e conhecer o fluxo de candidatura. Apoio financeiro depende de análise e documentação específica.</p><a class="btn" href="/partners/territorios/">Consultar os 200 territórios ↗</a> <a class="btn secondary" href="/partners/universo-dark/">Conhecer Universo Dark™ ↗</a></div></section><section class="section" id="transparencia"><div class="wrap"><div class="intro"><span class="eyebrow">04 / TRANSPARÊNCIA</span><h2>Respeito ao dinheiro. <em>Respeito ao talento.</em></h2><p class="muted">A proposta não é uma campanha de arrecadação, uma venda de participação pronta ou uma promessa de lucro. A WINF não intermedeia automaticamente pagamentos por esta página. Cada eventual parceria depende da análise do profissional, do investidor, do território, da viabilidade econômica e de contratos apropriados. Não há garantia de faturamento, recuperação de capital ou retorno financeiro.</p></div></div></section>
+ <section class="section" id="consultar-territorio"><div class="wrap"><span class="eyebrow">TERRITÓRIO / SELEÇÃO DE PROJETOS</span><h2>QUAL CIDADE VOCÊ <em>DESEJA APOIAR?</em></h2><p class="muted">Consulte a vitrine territorial para identificar municípios em avaliação e conhecer o fluxo de candidatura. Apoio financeiro depende de análise e documentação específica.</p><a class="btn" href="/partners/#territorios">Consultar os 200 territórios ↗</a> <a class="btn secondary" href="/partners/universo-dark/">Conhecer Universo Dark™ ↗</a></div></section><section class="section" id="transparencia"><div class="wrap"><div class="intro"><span class="eyebrow">04 / TRANSPARÊNCIA</span><h2>Respeito ao dinheiro. <em>Respeito ao talento.</em></h2><p class="muted">A proposta não é uma campanha de arrecadação, uma venda de participação pronta ou uma promessa de lucro. A WINF não intermedeia automaticamente pagamentos por esta página. Cada eventual parceria depende da análise do profissional, do investidor, do território, da viabilidade econômica e de contratos apropriados. Não há garantia de faturamento, recuperação de capital ou retorno financeiro.</p></div></div></section>
  <section class="final" id="conversar"><div class="wrap"><span class="eyebrow">05 / A CONVERSA PODE COMEÇAR AQUI</span><h2>Talento existe.<br><em>Falta encontrar quem acredita.</em></h2><p>Se você recebeu esta página de alguém que admira ou de um profissional em quem acredita, conheça a história dessa pessoa e converse sobre as possibilidades. O primeiro passo é uma apresentação — não um pagamento.</p><div class="actions" style="justify-content:center"><a class="btn" href="https://wa.me/5513981113001?text=Ol%C3%A1%21%20Conheci%20o%20Padrinho%20Modern%20da%20WINF%20Partners%20e%20quero%20conversar%20sobre%20uma%20poss%C3%ADvel%20parceria." target="_blank" rel="noopener noreferrer">Quero conhecer a oportunidade ↗</a><button class="btn secondary" type="button" id="copy-page">Copiar link para apresentar ↗</button></div><p id="copy-status" class="share-status" role="status" aria-live="polite"></p></div></section>
 </main>
 <footer><div class="wrap"><div class="footer-top"><div><a class="brand" href="/partners/"><img src="/winf-logo.svg" width="95" height="35" alt="WINF™"><span>PARTNERS™</span></a><p>Do Brasil para o mundo. Expansão com propósito, critérios e responsabilidade.</p></div><nav class="footer-nav" aria-label="Links institucionais"><a href="/partners/">WINF Partners</a><a href="/briefing/">Briefing</a><a href="/maw/">M.A.W.™</a><a href="/aerocore/policies/#privacidade">Privacidade</a></nav></div><div class="footer-bottom"><small>© <span id="year">2026</span> WINF.inc® / WINF PARTNERS™</small><p class="winf-site-signature" data-credit-network-version="20261112"><span>Desenvolvido por </span><a href="/maw/">M.A.W.™</a><span aria-hidden="true"> · </span><a href="https://nexablue.com.br/" target="_blank" rel="noopener noreferrer">NEXA BLUE™</a></p></div></div></footer>

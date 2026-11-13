@@ -1,0 +1,19 @@
+name: Padrinho Modern — Galeria WINF Asset Light
+on:
+  pull_request:
+    paths:
+      - "partners/padrinho-modern/index.html"
+      - "tests/padrinho-modern-galeria.test.cjs"
+      - ".github/workflows/padrinho-modern-galeria.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node --test tests/padrinho-modern-galeria.test.cjs
