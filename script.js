@@ -154,14 +154,29 @@
     else setupVideo(video);
   });
 
+  // Hero mobile/tablet: mantém o poster oficial e poupa o download do MP4 (2+ MB).
+  // Desktop: carrega somente após o carregamento da página, respeitando economia
+  // de dados e a preferência por movimento reduzido.
   const heroVideo = document.getElementById('hero-video');
   if (heroVideo) {
+    const source = heroVideo.querySelector('source[data-src]');
+    const motionOK = window.matchMedia('(min-width: 1024px)').matches &&
+      !window.matchMedia('(prefers-reduced-motion: reduce)').matches &&
+      !(navigator.connection && navigator.connection.saveData);
     heroVideo.addEventListener('error', () => {
       markAssetError(heroVideo);
       body.classList.add('assets-missing');
     });
-    heroVideo.addEventListener('canplay', () => body.classList.remove('assets-missing'), { once: true });
-    heroVideo.play().catch(() => {});
+    if (source && motionOK) {
+      const startHero = () => {
+        if (source.src) return;
+        source.src = source.dataset.src;
+        heroVideo.load();
+        heroVideo.play().catch(() => {});
+      };
+      if (document.readyState === 'complete') startHero();
+      else window.addEventListener('load', startHero, { once: true });
+    }
   }
 
   const revealElements = document.querySelectorAll('.reveal, .reveal-group');
