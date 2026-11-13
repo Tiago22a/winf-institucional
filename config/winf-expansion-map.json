@@ -15,8 +15,16 @@
       "longitude": -46.6395,
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
-      "bairrosParaValidar": [],
-      "url": "/partners/territorios/sao-paulo-sp/"
+      "bairrosParaValidar": [
+        "Pinheiros",
+        "Itaim Bibi",
+        "Jardins",
+        "Moema",
+        "Morumbi"
+      ],
+      "url": "/partners/territorios/sao-paulo-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/sao-paulo-sp/"
     },
     {
       "id": "barueri-sp",
@@ -29,8 +37,13 @@
       "longitude": -46.879,
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
-      "bairrosParaValidar": [],
-      "url": "/partners/territorios/barueri-sp/"
+      "bairrosParaValidar": [
+        "Alphaville",
+        "Jardim Belval"
+      ],
+      "url": "/partners/territorios/barueri-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/barueri-sp/"
     },
     {
       "id": "santana-de-parnaiba-sp",
@@ -43,8 +56,13 @@
       "longitude": -46.9178,
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
-      "bairrosParaValidar": [],
-      "url": "/partners/territorios/santana-de-parnaiba-sp/"
+      "bairrosParaValidar": [
+        "Tamboré",
+        "Alphaville"
+      ],
+      "url": "/partners/territorios/santana-de-parnaiba-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/santana-de-parnaiba-sp/"
     },
     {
       "id": "osasco-sp",
@@ -57,8 +75,13 @@
       "longitude": -46.7916,
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
-      "bairrosParaValidar": [],
-      "url": "/partners/territorios/osasco-sp/"
+      "bairrosParaValidar": [
+        "Vila Yara",
+        "Campesina"
+      ],
+      "url": "/partners/territorios/osasco-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/osasco-sp/"
     },
     {
       "id": "cotia-sp",
@@ -71,8 +94,12 @@
       "longitude": -46.919,
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
-      "bairrosParaValidar": [],
-      "url": "/partners/territorios/cotia-sp/"
+      "bairrosParaValidar": [
+        "Granja Viana"
+      ],
+      "url": "/partners/territorios/cotia-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/cotia-sp/"
     },
     {
       "id": "itapevi-sp",
@@ -86,7 +113,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/itapevi-sp/"
+      "url": "/partners/territorios/itapevi-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/itapevi-sp/"
     },
     {
       "id": "jandira-sp",
@@ -100,7 +129,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/jandira-sp/"
+      "url": "/partners/territorios/jandira-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/jandira-sp/"
     },
     {
       "id": "carapicuiba-sp",
@@ -114,7 +145,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/carapicuiba-sp/"
+      "url": "/partners/territorios/carapicuiba-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/carapicuiba-sp/"
     },
     {
       "id": "taboao-da-serra-sp",
@@ -128,7 +161,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/taboao-da-serra-sp/"
+      "url": "/partners/territorios/taboao-da-serra-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/taboao-da-serra-sp/"
     },
     {
       "id": "embu-das-artes-sp",
@@ -142,7 +177,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/embu-das-artes-sp/"
+      "url": "/partners/territorios/embu-das-artes-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/embu-das-artes-sp/"
     },
     {
       "id": "itapecerica-da-serra-sp",
@@ -156,7 +193,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/itapecerica-da-serra-sp/"
+      "url": "/partners/territorios/itapecerica-da-serra-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/itapecerica-da-serra-sp/"
     },
     {
       "id": "sao-caetano-do-sul-sp",
@@ -169,8 +208,13 @@
       "longitude": -46.5548,
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
-      "bairrosParaValidar": [],
-      "url": "/partners/territorios/sao-caetano-do-sul-sp/"
+      "bairrosParaValidar": [
+        "Santa Paula",
+        "Santo Antônio"
+      ],
+      "url": "/partners/territorios/sao-caetano-do-sul-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/sao-caetano-do-sul-sp/"
     },
     {
       "id": "santo-andre-sp",
@@ -183,8 +227,13 @@
       "longitude": -46.5432,
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
-      "bairrosParaValidar": [],
-      "url": "/partners/territorios/santo-andre-sp/"
+      "bairrosParaValidar": [
+        "Bairro Jardim",
+        "Campestre"
+      ],
+      "url": "/partners/territorios/santo-andre-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/santo-andre-sp/"
     },
     {
       "id": "sao-bernardo-do-campo-sp",
@@ -197,8 +246,14 @@
       "longitude": -46.5646,
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
-      "bairrosParaValidar": [],
-      "url": "/partners/territorios/sao-bernardo-do-campo-sp/"
+      "bairrosParaValidar": [
+        "Jardim do Mar",
+        "Rudge Ramos",
+        "Nova Petrópolis"
+      ],
+      "url": "/partners/territorios/sao-bernardo-do-campo-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/sao-bernardo-do-campo-sp/"
     },
     {
       "id": "diadema-sp",
@@ -212,7 +267,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/diadema-sp/"
+      "url": "/partners/territorios/diadema-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/diadema-sp/"
     },
     {
       "id": "maua-sp",
@@ -226,7 +283,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/maua-sp/"
+      "url": "/partners/territorios/maua-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/maua-sp/"
     },
     {
       "id": "ribeirao-pires-sp",
@@ -240,7 +299,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/ribeirao-pires-sp/"
+      "url": "/partners/territorios/ribeirao-pires-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/ribeirao-pires-sp/"
     },
     {
       "id": "guarulhos-sp",
@@ -253,8 +314,13 @@
       "longitude": -46.5333,
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
-      "bairrosParaValidar": [],
-      "url": "/partners/territorios/guarulhos-sp/"
+      "bairrosParaValidar": [
+        "Jardim Maia",
+        "Vila Augusta"
+      ],
+      "url": "/partners/territorios/guarulhos-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/guarulhos-sp/"
     },
     {
       "id": "aruja-sp",
@@ -267,8 +333,12 @@
       "longitude": -46.32,
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
-      "bairrosParaValidar": [],
-      "url": "/partners/territorios/aruja-sp/"
+      "bairrosParaValidar": [
+        "Arujazinho"
+      ],
+      "url": "/partners/territorios/aruja-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/aruja-sp/"
     },
     {
       "id": "mairipora-sp",
@@ -282,7 +352,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/mairipora-sp/"
+      "url": "/partners/territorios/mairipora-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/mairipora-sp/"
     },
     {
       "id": "caieiras-sp",
@@ -296,7 +368,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/caieiras-sp/"
+      "url": "/partners/territorios/caieiras-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/caieiras-sp/"
     },
     {
       "id": "cajamar-sp",
@@ -310,7 +384,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/cajamar-sp/"
+      "url": "/partners/territorios/cajamar-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/cajamar-sp/"
     },
     {
       "id": "vargem-grande-paulista-sp",
@@ -324,7 +400,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/vargem-grande-paulista-sp/"
+      "url": "/partners/territorios/vargem-grande-paulista-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/vargem-grande-paulista-sp/"
     },
     {
       "id": "campinas-sp",
@@ -337,8 +415,15 @@
       "longitude": -47.0659,
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
-      "bairrosParaValidar": [],
-      "url": "/partners/territorios/campinas-sp/"
+      "bairrosParaValidar": [
+        "Cambuí",
+        "Taquaral",
+        "Nova Campinas",
+        "Sousas"
+      ],
+      "url": "/partners/territorios/campinas-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/campinas-sp/"
     },
     {
       "id": "valinhos-sp",
@@ -351,8 +436,12 @@
       "longitude": -46.9974,
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
-      "bairrosParaValidar": [],
-      "url": "/partners/territorios/valinhos-sp/"
+      "bairrosParaValidar": [
+        "Jardim Paiquerê"
+      ],
+      "url": "/partners/territorios/valinhos-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/valinhos-sp/"
     },
     {
       "id": "vinhedo-sp",
@@ -365,8 +454,12 @@
       "longitude": -46.9833,
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
-      "bairrosParaValidar": [],
-      "url": "/partners/territorios/vinhedo-sp/"
+      "bairrosParaValidar": [
+        "Vista Alegre"
+      ],
+      "url": "/partners/territorios/vinhedo-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/vinhedo-sp/"
     },
     {
       "id": "indaiatuba-sp",
@@ -379,8 +472,13 @@
       "longitude": -47.2101,
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
-      "bairrosParaValidar": [],
-      "url": "/partners/territorios/indaiatuba-sp/"
+      "bairrosParaValidar": [
+        "Jardim Esplanada",
+        "Cidade Nova"
+      ],
+      "url": "/partners/territorios/indaiatuba-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/indaiatuba-sp/"
     },
     {
       "id": "paulinia-sp",
@@ -394,7 +492,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/paulinia-sp/"
+      "url": "/partners/territorios/paulinia-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/paulinia-sp/"
     },
     {
       "id": "americana-sp",
@@ -407,8 +507,12 @@
       "longitude": -47.3331,
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
-      "bairrosParaValidar": [],
-      "url": "/partners/territorios/americana-sp/"
+      "bairrosParaValidar": [
+        "Jardim Girassol"
+      ],
+      "url": "/partners/territorios/americana-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/americana-sp/"
     },
     {
       "id": "santa-barbara-d-oeste-sp",
@@ -422,7 +526,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/santa-barbara-d-oeste-sp/"
+      "url": "/partners/territorios/santa-barbara-d-oeste-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/santa-barbara-d-oeste-sp/"
     },
     {
       "id": "nova-odessa-sp",
@@ -436,7 +542,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/nova-odessa-sp/"
+      "url": "/partners/territorios/nova-odessa-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/nova-odessa-sp/"
     },
     {
       "id": "sumare-sp",
@@ -450,7 +558,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/sumare-sp/"
+      "url": "/partners/territorios/sumare-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/sumare-sp/"
     },
     {
       "id": "hortolandia-sp",
@@ -464,7 +574,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/hortolandia-sp/"
+      "url": "/partners/territorios/hortolandia-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/hortolandia-sp/"
     },
     {
       "id": "jaguariuna-sp",
@@ -477,8 +589,12 @@
       "longitude": -46.9851,
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
-      "bairrosParaValidar": [],
-      "url": "/partners/territorios/jaguariuna-sp/"
+      "bairrosParaValidar": [
+        "Capotuna"
+      ],
+      "url": "/partners/territorios/jaguariuna-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/jaguariuna-sp/"
     },
     {
       "id": "holambra-sp",
@@ -492,7 +608,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/holambra-sp/"
+      "url": "/partners/territorios/holambra-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/holambra-sp/"
     },
     {
       "id": "pedreira-sp",
@@ -506,7 +624,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/pedreira-sp/"
+      "url": "/partners/territorios/pedreira-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/pedreira-sp/"
     },
     {
       "id": "cosmopolis-sp",
@@ -520,7 +640,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/cosmopolis-sp/"
+      "url": "/partners/territorios/cosmopolis-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/cosmopolis-sp/"
     },
     {
       "id": "artur-nogueira-sp",
@@ -534,7 +656,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/artur-nogueira-sp/"
+      "url": "/partners/territorios/artur-nogueira-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/artur-nogueira-sp/"
     },
     {
       "id": "piracicaba-sp",
@@ -547,8 +671,13 @@
       "longitude": -47.6476,
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
-      "bairrosParaValidar": [],
-      "url": "/partners/territorios/piracicaba-sp/"
+      "bairrosParaValidar": [
+        "São Dimas",
+        "Nova Piracicaba"
+      ],
+      "url": "/partners/territorios/piracicaba-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/piracicaba-sp/"
     },
     {
       "id": "limeira-sp",
@@ -562,7 +691,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/limeira-sp/"
+      "url": "/partners/territorios/limeira-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/limeira-sp/"
     },
     {
       "id": "rio-claro-sp",
@@ -576,7 +707,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/rio-claro-sp/"
+      "url": "/partners/territorios/rio-claro-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/rio-claro-sp/"
     },
     {
       "id": "araras-sp",
@@ -590,7 +723,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/araras-sp/"
+      "url": "/partners/territorios/araras-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/araras-sp/"
     },
     {
       "id": "cordeiropolis-sp",
@@ -604,7 +739,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/cordeiropolis-sp/"
+      "url": "/partners/territorios/cordeiropolis-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/cordeiropolis-sp/"
     },
     {
       "id": "jundiai-sp",
@@ -617,8 +754,14 @@
       "longitude": -46.8974,
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
-      "bairrosParaValidar": [],
-      "url": "/partners/territorios/jundiai-sp/"
+      "bairrosParaValidar": [
+        "Anhangabaú",
+        "Eloy Chaves",
+        "Medeiros"
+      ],
+      "url": "/partners/territorios/jundiai-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/jundiai-sp/"
     },
     {
       "id": "itupeva-sp",
@@ -632,7 +775,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/itupeva-sp/"
+      "url": "/partners/territorios/itupeva-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/itupeva-sp/"
     },
     {
       "id": "louveira-sp",
@@ -646,7 +791,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/louveira-sp/"
+      "url": "/partners/territorios/louveira-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/louveira-sp/"
     },
     {
       "id": "itatiba-sp",
@@ -660,7 +807,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/itatiba-sp/"
+      "url": "/partners/territorios/itatiba-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/itatiba-sp/"
     },
     {
       "id": "campo-limpo-paulista-sp",
@@ -674,7 +823,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/campo-limpo-paulista-sp/"
+      "url": "/partners/territorios/campo-limpo-paulista-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/campo-limpo-paulista-sp/"
     },
     {
       "id": "atibaia-sp",
@@ -687,8 +838,13 @@
       "longitude": -46.5563,
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
-      "bairrosParaValidar": [],
-      "url": "/partners/territorios/atibaia-sp/"
+      "bairrosParaValidar": [
+        "Alvinópolis",
+        "Jardim do Lago"
+      ],
+      "url": "/partners/territorios/atibaia-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/atibaia-sp/"
     },
     {
       "id": "braganca-paulista-sp",
@@ -702,7 +858,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/braganca-paulista-sp/"
+      "url": "/partners/territorios/braganca-paulista-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/braganca-paulista-sp/"
     },
     {
       "id": "amparo-sp",
@@ -716,7 +874,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/amparo-sp/"
+      "url": "/partners/territorios/amparo-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/amparo-sp/"
     },
     {
       "id": "serra-negra-sp",
@@ -730,7 +890,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/serra-negra-sp/"
+      "url": "/partners/territorios/serra-negra-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/serra-negra-sp/"
     },
     {
       "id": "socorro-sp",
@@ -744,7 +906,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/socorro-sp/"
+      "url": "/partners/territorios/socorro-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/socorro-sp/"
     },
     {
       "id": "aguas-de-lindoia-sp",
@@ -758,7 +922,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/aguas-de-lindoia-sp/"
+      "url": "/partners/territorios/aguas-de-lindoia-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/aguas-de-lindoia-sp/"
     },
     {
       "id": "mogi-guacu-sp",
@@ -772,7 +938,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/mogi-guacu-sp/"
+      "url": "/partners/territorios/mogi-guacu-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/mogi-guacu-sp/"
     },
     {
       "id": "mogi-mirim-sp",
@@ -786,7 +954,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/mogi-mirim-sp/"
+      "url": "/partners/territorios/mogi-mirim-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/mogi-mirim-sp/"
     },
     {
       "id": "sao-joao-da-boa-vista-sp",
@@ -800,7 +970,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/sao-joao-da-boa-vista-sp/"
+      "url": "/partners/territorios/sao-joao-da-boa-vista-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/sao-joao-da-boa-vista-sp/"
     },
     {
       "id": "sao-jose-dos-campos-sp",
@@ -813,8 +985,14 @@
       "longitude": -45.8841,
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
-      "bairrosParaValidar": [],
-      "url": "/partners/territorios/sao-jose-dos-campos-sp/"
+      "bairrosParaValidar": [
+        "Jardim Aquarius",
+        "Urbanova",
+        "Vila Ema"
+      ],
+      "url": "/partners/territorios/sao-jose-dos-campos-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/sao-jose-dos-campos-sp/"
     },
     {
       "id": "jacarei-sp",
@@ -828,7 +1006,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/jacarei-sp/"
+      "url": "/partners/territorios/jacarei-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/jacarei-sp/"
     },
     {
       "id": "taubate-sp",
@@ -841,8 +1021,13 @@
       "longitude": -45.5593,
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
-      "bairrosParaValidar": [],
-      "url": "/partners/territorios/taubate-sp/"
+      "bairrosParaValidar": [
+        "Jardim das Nações",
+        "Independência"
+      ],
+      "url": "/partners/territorios/taubate-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/taubate-sp/"
     },
     {
       "id": "cacapava-sp",
@@ -856,7 +1041,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/cacapava-sp/"
+      "url": "/partners/territorios/cacapava-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/cacapava-sp/"
     },
     {
       "id": "pindamonhangaba-sp",
@@ -870,7 +1057,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/pindamonhangaba-sp/"
+      "url": "/partners/territorios/pindamonhangaba-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/pindamonhangaba-sp/"
     },
     {
       "id": "tremembe-sp",
@@ -884,7 +1073,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/tremembe-sp/"
+      "url": "/partners/territorios/tremembe-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/tremembe-sp/"
     },
     {
       "id": "guaratingueta-sp",
@@ -898,7 +1089,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/guaratingueta-sp/"
+      "url": "/partners/territorios/guaratingueta-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/guaratingueta-sp/"
     },
     {
       "id": "lorena-sp",
@@ -912,7 +1105,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/lorena-sp/"
+      "url": "/partners/territorios/lorena-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/lorena-sp/"
     },
     {
       "id": "cruzeiro-sp",
@@ -926,7 +1121,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/cruzeiro-sp/"
+      "url": "/partners/territorios/cruzeiro-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/cruzeiro-sp/"
     },
     {
       "id": "campos-do-jordao-sp",
@@ -939,8 +1136,13 @@
       "longitude": -45.5833,
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
-      "bairrosParaValidar": [],
-      "url": "/partners/territorios/campos-do-jordao-sp/"
+      "bairrosParaValidar": [
+        "Capivari",
+        "Abernéssia"
+      ],
+      "url": "/partners/territorios/campos-do-jordao-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/campos-do-jordao-sp/"
     },
     {
       "id": "caraguatatuba-sp",
@@ -953,8 +1155,13 @@
       "longitude": -45.4125,
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
-      "bairrosParaValidar": [],
-      "url": "/partners/territorios/caraguatatuba-sp/"
+      "bairrosParaValidar": [
+        "Indaiá",
+        "Massaguaçu"
+      ],
+      "url": "/partners/territorios/caraguatatuba-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/caraguatatuba-sp/"
     },
     {
       "id": "sao-sebastiao-sp",
@@ -967,8 +1174,13 @@
       "longitude": -45.4143,
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
-      "bairrosParaValidar": [],
-      "url": "/partners/territorios/sao-sebastiao-sp/"
+      "bairrosParaValidar": [
+        "Maresias",
+        "Juquehy"
+      ],
+      "url": "/partners/territorios/sao-sebastiao-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/sao-sebastiao-sp/"
     },
     {
       "id": "ilhabela-sp",
@@ -981,8 +1193,13 @@
       "longitude": -45.3552,
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
-      "bairrosParaValidar": [],
-      "url": "/partners/territorios/ilhabela-sp/"
+      "bairrosParaValidar": [
+        "Perequê",
+        "Feiticeira"
+      ],
+      "url": "/partners/territorios/ilhabela-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/ilhabela-sp/"
     },
     {
       "id": "ubatuba-sp",
@@ -995,8 +1212,13 @@
       "longitude": -45.0834,
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
-      "bairrosParaValidar": [],
-      "url": "/partners/territorios/ubatuba-sp/"
+      "bairrosParaValidar": [
+        "Itaguá",
+        "Praia Grande"
+      ],
+      "url": "/partners/territorios/ubatuba-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/ubatuba-sp/"
     },
     {
       "id": "aparecida-sp",
@@ -1010,7 +1232,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/aparecida-sp/"
+      "url": "/partners/territorios/aparecida-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/aparecida-sp/"
     },
     {
       "id": "ribeirao-preto-sp",
@@ -1023,8 +1247,13 @@
       "longitude": -47.8099,
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
-      "bairrosParaValidar": [],
-      "url": "/partners/territorios/ribeirao-preto-sp/"
+      "bairrosParaValidar": [
+        "Jardim Botânico",
+        "Ribeirânia"
+      ],
+      "url": "/partners/territorios/ribeirao-preto-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/ribeirao-preto-sp/"
     },
     {
       "id": "sertaozinho-sp",
@@ -1038,7 +1267,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/sertaozinho-sp/"
+      "url": "/partners/territorios/sertaozinho-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/sertaozinho-sp/"
     },
     {
       "id": "franca-sp",
@@ -1052,7 +1283,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/franca-sp/"
+      "url": "/partners/territorios/franca-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/franca-sp/"
     },
     {
       "id": "batatais-sp",
@@ -1066,7 +1299,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/batatais-sp/"
+      "url": "/partners/territorios/batatais-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/batatais-sp/"
     },
     {
       "id": "barretos-sp",
@@ -1080,7 +1315,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/barretos-sp/"
+      "url": "/partners/territorios/barretos-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/barretos-sp/"
     },
     {
       "id": "olimpia-sp",
@@ -1094,7 +1331,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/olimpia-sp/"
+      "url": "/partners/territorios/olimpia-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/olimpia-sp/"
     },
     {
       "id": "bebedouro-sp",
@@ -1108,7 +1347,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/bebedouro-sp/"
+      "url": "/partners/territorios/bebedouro-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/bebedouro-sp/"
     },
     {
       "id": "jaboticabal-sp",
@@ -1122,7 +1363,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/jaboticabal-sp/"
+      "url": "/partners/territorios/jaboticabal-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/jaboticabal-sp/"
     },
     {
       "id": "sao-joaquim-da-barra-sp",
@@ -1136,7 +1379,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/sao-joaquim-da-barra-sp/"
+      "url": "/partners/territorios/sao-joaquim-da-barra-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/sao-joaquim-da-barra-sp/"
     },
     {
       "id": "araraquara-sp",
@@ -1149,8 +1394,12 @@
       "longitude": -48.178,
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
-      "bairrosParaValidar": [],
-      "url": "/partners/territorios/araraquara-sp/"
+      "bairrosParaValidar": [
+        "Vila Harmonia"
+      ],
+      "url": "/partners/territorios/araraquara-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/araraquara-sp/"
     },
     {
       "id": "sao-carlos-sp",
@@ -1163,8 +1412,12 @@
       "longitude": -47.886,
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
-      "bairrosParaValidar": [],
-      "url": "/partners/territorios/sao-carlos-sp/"
+      "bairrosParaValidar": [
+        "Parque Faber"
+      ],
+      "url": "/partners/territorios/sao-carlos-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/sao-carlos-sp/"
     },
     {
       "id": "matao-sp",
@@ -1178,7 +1431,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/matao-sp/"
+      "url": "/partners/territorios/matao-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/matao-sp/"
     },
     {
       "id": "mococa-sp",
@@ -1192,7 +1447,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/mococa-sp/"
+      "url": "/partners/territorios/mococa-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/mococa-sp/"
     },
     {
       "id": "orlandia-sp",
@@ -1206,7 +1463,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/orlandia-sp/"
+      "url": "/partners/territorios/orlandia-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/orlandia-sp/"
     },
     {
       "id": "monte-alto-sp",
@@ -1220,7 +1479,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/monte-alto-sp/"
+      "url": "/partners/territorios/monte-alto-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/monte-alto-sp/"
     },
     {
       "id": "sao-jose-do-rio-preto-sp",
@@ -1233,8 +1494,13 @@
       "longitude": -49.3758,
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
-      "bairrosParaValidar": [],
-      "url": "/partners/territorios/sao-jose-do-rio-preto-sp/"
+      "bairrosParaValidar": [
+        "Jardim Vivendas",
+        "Redentora"
+      ],
+      "url": "/partners/territorios/sao-jose-do-rio-preto-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/sao-jose-do-rio-preto-sp/"
     },
     {
       "id": "mirassol-sp",
@@ -1248,7 +1514,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/mirassol-sp/"
+      "url": "/partners/territorios/mirassol-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/mirassol-sp/"
     },
     {
       "id": "catanduva-sp",
@@ -1262,7 +1530,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/catanduva-sp/"
+      "url": "/partners/territorios/catanduva-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/catanduva-sp/"
     },
     {
       "id": "votuporanga-sp",
@@ -1276,7 +1546,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/votuporanga-sp/"
+      "url": "/partners/territorios/votuporanga-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/votuporanga-sp/"
     },
     {
       "id": "aracatuba-sp",
@@ -1289,8 +1561,12 @@
       "longitude": -50.4401,
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
-      "bairrosParaValidar": [],
-      "url": "/partners/territorios/aracatuba-sp/"
+      "bairrosParaValidar": [
+        "Jardim Nova Iorque"
+      ],
+      "url": "/partners/territorios/aracatuba-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/aracatuba-sp/"
     },
     {
       "id": "birigui-sp",
@@ -1304,7 +1580,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/birigui-sp/"
+      "url": "/partners/territorios/birigui-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/birigui-sp/"
     },
     {
       "id": "bauru-sp",
@@ -1317,8 +1595,13 @@
       "longitude": -49.0871,
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
-      "bairrosParaValidar": [],
-      "url": "/partners/territorios/bauru-sp/"
+      "bairrosParaValidar": [
+        "Jardim Estoril",
+        "Vila Aviação"
+      ],
+      "url": "/partners/territorios/bauru-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/bauru-sp/"
     },
     {
       "id": "jau-sp",
@@ -1332,7 +1615,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/jau-sp/"
+      "url": "/partners/territorios/jau-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/jau-sp/"
     },
     {
       "id": "botucatu-sp",
@@ -1346,7 +1631,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/botucatu-sp/"
+      "url": "/partners/territorios/botucatu-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/botucatu-sp/"
     },
     {
       "id": "marilia-sp",
@@ -1359,8 +1646,12 @@
       "longitude": -49.9501,
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
-      "bairrosParaValidar": [],
-      "url": "/partners/territorios/marilia-sp/"
+      "bairrosParaValidar": [
+        "Esmeralda"
+      ],
+      "url": "/partners/territorios/marilia-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/marilia-sp/"
     },
     {
       "id": "assis-sp",
@@ -1374,7 +1665,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/assis-sp/"
+      "url": "/partners/territorios/assis-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/assis-sp/"
     },
     {
       "id": "presidente-prudente-sp",
@@ -1387,8 +1680,12 @@
       "longitude": -51.3925,
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
-      "bairrosParaValidar": [],
-      "url": "/partners/territorios/presidente-prudente-sp/"
+      "bairrosParaValidar": [
+        "Jardim Bongiovani"
+      ],
+      "url": "/partners/territorios/presidente-prudente-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/presidente-prudente-sp/"
     },
     {
       "id": "ourinhos-sp",
@@ -1402,7 +1699,9 @@
       "prioridadeComercial": "sp_em_validacao",
       "statusExclusividade": "em_validacao",
       "bairrosParaValidar": [],
-      "url": "/partners/territorios/ourinhos-sp/"
+      "url": "/partners/territorios/ourinhos-sp/",
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/ourinhos-sp/"
     },
     {
       "id": "rio-branco-ac",

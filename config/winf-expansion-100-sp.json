@@ -42,7 +42,17 @@
         "Jardins",
         "Moema",
         "Morumbi"
-      ]
+      ],
+      "bairrosParaValidar": [
+        "Pinheiros",
+        "Itaim Bibi",
+        "Jardins",
+        "Moema",
+        "Morumbi"
+      ],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/sao-paulo-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "barueri-sp",
@@ -57,7 +67,14 @@
       "escopo": "municipio",
       "aliases": [
         "Alphaville"
-      ]
+      ],
+      "bairrosParaValidar": [
+        "Alphaville",
+        "Jardim Belval"
+      ],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/barueri-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "santana-de-parnaiba-sp",
@@ -73,7 +90,14 @@
       "aliases": [
         "Tamboré",
         "Alphaville"
-      ]
+      ],
+      "bairrosParaValidar": [
+        "Tamboré",
+        "Alphaville"
+      ],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/santana-de-parnaiba-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "osasco-sp",
@@ -86,7 +110,14 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [
+        "Vila Yara",
+        "Campesina"
+      ],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/osasco-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "cotia-sp",
@@ -99,7 +130,13 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [
+        "Granja Viana"
+      ],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/cotia-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "itapevi-sp",
@@ -112,7 +149,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/itapevi-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "jandira-sp",
@@ -125,7 +166,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/jandira-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "carapicuiba-sp",
@@ -138,7 +183,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/carapicuiba-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "taboao-da-serra-sp",
@@ -151,7 +200,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/taboao-da-serra-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "embu-das-artes-sp",
@@ -164,7 +217,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/embu-das-artes-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "itapecerica-da-serra-sp",
@@ -177,7 +234,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/itapecerica-da-serra-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "sao-caetano-do-sul-sp",
@@ -190,7 +251,14 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [
+        "Santa Paula",
+        "Santo Antônio"
+      ],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/sao-caetano-do-sul-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "santo-andre-sp",
@@ -203,7 +271,14 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [
+        "Bairro Jardim",
+        "Campestre"
+      ],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/santo-andre-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "sao-bernardo-do-campo-sp",
@@ -216,7 +291,15 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [
+        "Jardim do Mar",
+        "Rudge Ramos",
+        "Nova Petrópolis"
+      ],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/sao-bernardo-do-campo-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "diadema-sp",
@@ -229,7 +312,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/diadema-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "maua-sp",
@@ -242,7 +329,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/maua-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "ribeirao-pires-sp",
@@ -255,7 +346,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/ribeirao-pires-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "guarulhos-sp",
@@ -268,7 +363,14 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [
+        "Jardim Maia",
+        "Vila Augusta"
+      ],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/guarulhos-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "aruja-sp",
@@ -281,7 +383,13 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [
+        "Arujazinho"
+      ],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/aruja-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "mairipora-sp",
@@ -294,7 +402,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/mairipora-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "caieiras-sp",
@@ -307,7 +419,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/caieiras-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "cajamar-sp",
@@ -320,7 +436,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/cajamar-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "vargem-grande-paulista-sp",
@@ -333,7 +453,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/vargem-grande-paulista-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "campinas-sp",
@@ -346,7 +470,16 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [
+        "Cambuí",
+        "Taquaral",
+        "Nova Campinas",
+        "Sousas"
+      ],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/campinas-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "valinhos-sp",
@@ -359,7 +492,13 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [
+        "Jardim Paiquerê"
+      ],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/valinhos-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "vinhedo-sp",
@@ -372,7 +511,13 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [
+        "Vista Alegre"
+      ],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/vinhedo-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "indaiatuba-sp",
@@ -385,7 +530,14 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [
+        "Jardim Esplanada",
+        "Cidade Nova"
+      ],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/indaiatuba-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "paulinia-sp",
@@ -398,7 +550,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/paulinia-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "americana-sp",
@@ -411,7 +567,13 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [
+        "Jardim Girassol"
+      ],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/americana-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "santa-barbara-d-oeste-sp",
@@ -424,7 +586,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/santa-barbara-d-oeste-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "nova-odessa-sp",
@@ -437,7 +603,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/nova-odessa-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "sumare-sp",
@@ -450,7 +620,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/sumare-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "hortolandia-sp",
@@ -463,7 +637,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/hortolandia-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "jaguariuna-sp",
@@ -476,7 +654,13 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [
+        "Capotuna"
+      ],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/jaguariuna-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "holambra-sp",
@@ -489,7 +673,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/holambra-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "pedreira-sp",
@@ -502,7 +690,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/pedreira-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "cosmopolis-sp",
@@ -515,7 +707,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/cosmopolis-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "artur-nogueira-sp",
@@ -528,7 +724,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/artur-nogueira-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "piracicaba-sp",
@@ -541,7 +741,14 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [
+        "São Dimas",
+        "Nova Piracicaba"
+      ],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/piracicaba-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "limeira-sp",
@@ -554,7 +761,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/limeira-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "rio-claro-sp",
@@ -567,7 +778,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/rio-claro-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "araras-sp",
@@ -580,7 +795,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/araras-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "cordeiropolis-sp",
@@ -593,7 +812,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/cordeiropolis-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "jundiai-sp",
@@ -606,7 +829,15 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [
+        "Anhangabaú",
+        "Eloy Chaves",
+        "Medeiros"
+      ],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/jundiai-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "itupeva-sp",
@@ -619,7 +850,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/itupeva-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "louveira-sp",
@@ -632,7 +867,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/louveira-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "itatiba-sp",
@@ -645,7 +884,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/itatiba-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "campo-limpo-paulista-sp",
@@ -658,7 +901,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/campo-limpo-paulista-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "atibaia-sp",
@@ -671,7 +918,14 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [
+        "Alvinópolis",
+        "Jardim do Lago"
+      ],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/atibaia-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "braganca-paulista-sp",
@@ -684,7 +938,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/braganca-paulista-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "amparo-sp",
@@ -697,7 +955,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/amparo-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "serra-negra-sp",
@@ -710,7 +972,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/serra-negra-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "socorro-sp",
@@ -723,7 +989,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/socorro-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "aguas-de-lindoia-sp",
@@ -736,7 +1006,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/aguas-de-lindoia-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "mogi-guacu-sp",
@@ -749,7 +1023,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/mogi-guacu-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "mogi-mirim-sp",
@@ -762,7 +1040,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/mogi-mirim-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "sao-joao-da-boa-vista-sp",
@@ -775,7 +1057,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/sao-joao-da-boa-vista-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "sao-jose-dos-campos-sp",
@@ -788,7 +1074,15 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [
+        "Jardim Aquarius",
+        "Urbanova",
+        "Vila Ema"
+      ],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/sao-jose-dos-campos-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "jacarei-sp",
@@ -801,7 +1095,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/jacarei-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "taubate-sp",
@@ -814,7 +1112,14 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [
+        "Jardim das Nações",
+        "Independência"
+      ],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/taubate-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "cacapava-sp",
@@ -827,7 +1132,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/cacapava-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "pindamonhangaba-sp",
@@ -840,7 +1149,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/pindamonhangaba-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "tremembe-sp",
@@ -853,7 +1166,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/tremembe-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "guaratingueta-sp",
@@ -866,7 +1183,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/guaratingueta-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "lorena-sp",
@@ -879,7 +1200,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/lorena-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "cruzeiro-sp",
@@ -892,7 +1217,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/cruzeiro-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "campos-do-jordao-sp",
@@ -905,7 +1234,14 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [
+        "Capivari",
+        "Abernéssia"
+      ],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/campos-do-jordao-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "caraguatatuba-sp",
@@ -918,7 +1254,14 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [
+        "Indaiá",
+        "Massaguaçu"
+      ],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/caraguatatuba-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "sao-sebastiao-sp",
@@ -931,7 +1274,14 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [
+        "Maresias",
+        "Juquehy"
+      ],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/sao-sebastiao-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "ilhabela-sp",
@@ -944,7 +1294,14 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [
+        "Perequê",
+        "Feiticeira"
+      ],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/ilhabela-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "ubatuba-sp",
@@ -957,7 +1314,14 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [
+        "Itaguá",
+        "Praia Grande"
+      ],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/ubatuba-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "aparecida-sp",
@@ -970,7 +1334,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/aparecida-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "ribeirao-preto-sp",
@@ -983,7 +1351,14 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [
+        "Jardim Botânico",
+        "Ribeirânia"
+      ],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/ribeirao-preto-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "sertaozinho-sp",
@@ -996,7 +1371,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/sertaozinho-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "franca-sp",
@@ -1009,7 +1388,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/franca-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "batatais-sp",
@@ -1022,7 +1405,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/batatais-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "barretos-sp",
@@ -1035,7 +1422,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/barretos-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "olimpia-sp",
@@ -1048,7 +1439,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/olimpia-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "bebedouro-sp",
@@ -1061,7 +1456,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/bebedouro-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "jaboticabal-sp",
@@ -1074,7 +1473,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/jaboticabal-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "sao-joaquim-da-barra-sp",
@@ -1087,7 +1490,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/sao-joaquim-da-barra-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "araraquara-sp",
@@ -1100,7 +1507,13 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [
+        "Vila Harmonia"
+      ],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/araraquara-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "sao-carlos-sp",
@@ -1113,7 +1526,13 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [
+        "Parque Faber"
+      ],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/sao-carlos-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "matao-sp",
@@ -1126,7 +1545,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/matao-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "mococa-sp",
@@ -1139,7 +1562,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/mococa-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "orlandia-sp",
@@ -1152,7 +1579,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/orlandia-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "monte-alto-sp",
@@ -1165,7 +1596,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/monte-alto-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "sao-jose-do-rio-preto-sp",
@@ -1178,7 +1613,14 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [
+        "Jardim Vivendas",
+        "Redentora"
+      ],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/sao-jose-do-rio-preto-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "mirassol-sp",
@@ -1191,7 +1633,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/mirassol-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "catanduva-sp",
@@ -1204,7 +1650,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/catanduva-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "votuporanga-sp",
@@ -1217,7 +1667,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/votuporanga-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "aracatuba-sp",
@@ -1230,7 +1684,13 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [
+        "Jardim Nova Iorque"
+      ],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/aracatuba-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "birigui-sp",
@@ -1243,7 +1703,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/birigui-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "bauru-sp",
@@ -1256,7 +1720,14 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [
+        "Jardim Estoril",
+        "Vila Aviação"
+      ],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/bauru-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "jau-sp",
@@ -1269,7 +1740,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/jau-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "botucatu-sp",
@@ -1282,7 +1757,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/botucatu-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "marilia-sp",
@@ -1295,7 +1774,13 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [
+        "Esmeralda"
+      ],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/marilia-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "assis-sp",
@@ -1308,7 +1793,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/assis-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "presidente-prudente-sp",
@@ -1321,7 +1810,13 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [
+        "Jardim Bongiovani"
+      ],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/presidente-prudente-sp/",
+      "siteLocalPublicado": false
     },
     {
       "id": "ourinhos-sp",
@@ -1334,7 +1829,11 @@
       "aberturaInteresse": true,
       "disponibilidadeConfirmada": false,
       "escopo": "municipio",
-      "aliases": []
+      "aliases": [],
+      "bairrosParaValidar": [],
+      "statusPesquisaBairros": "pendente_validacao_local",
+      "siteLocalPlanejado": "/winf-select/cidades/ourinhos-sp/",
+      "siteLocalPublicado": false
     }
   ]
 }
