@@ -3,7 +3,7 @@
   "whatsappInativos": "5513981113001",
   "instagramOficial": "winf.ofc",
   "instagramOficialUrl": "https://www.instagram.com/winf.ofc/",
-  "observacao": "Perfis locais são nomes propostos, sem comprovação de titularidade ou ativação. Os 200 territórios estão inativos na expansão; manter contato via central 013 até homologação.",
+  "observacao": "200 territórios comercialmente disponíveis para licenciamento WINF Asset Light™ / Turnkey, com atendimento digital online pela central 013. A inexistência de operador local contratado não impede a presença digital. Instalação em cidade específica requer confirmação. Instagram local é um perfil futuro, sem titularidade verificada.",
   "territorios": [
     {
       "id": "sao-paulo-sp",
@@ -12,7 +12,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.saopaulo",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "barueri-sp",
@@ -21,7 +26,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.barueri",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "santana-de-parnaiba-sp",
@@ -30,7 +40,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.santanadeparnaiba",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "osasco-sp",
@@ -39,7 +54,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.osasco",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "cotia-sp",
@@ -48,7 +68,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.cotia",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "itapevi-sp",
@@ -57,7 +82,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.itapevi",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "jandira-sp",
@@ -66,7 +96,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.jandira",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "carapicuiba-sp",
@@ -75,7 +110,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.carapicuiba",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "taboao-da-serra-sp",
@@ -84,7 +124,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.taboaodaserra",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "embu-das-artes-sp",
@@ -93,7 +138,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.embudasartes",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "itapecerica-da-serra-sp",
@@ -102,7 +152,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.itapecericadaserra",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "sao-caetano-do-sul-sp",
@@ -111,7 +166,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.saocaetanodosul",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "santo-andre-sp",
@@ -120,7 +180,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.santoandre",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "sao-bernardo-do-campo-sp",
@@ -129,7 +194,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.saobernardodocampo",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "diadema-sp",
@@ -138,7 +208,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.diadema",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "maua-sp",
@@ -147,7 +222,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.maua",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "ribeirao-pires-sp",
@@ -156,7 +236,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.ribeiraopires",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "guarulhos-sp",
@@ -165,7 +250,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.guarulhos",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "aruja-sp",
@@ -174,7 +264,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.aruja",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "mairipora-sp",
@@ -183,7 +278,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.mairipora",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "caieiras-sp",
@@ -192,7 +292,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.caieiras",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "cajamar-sp",
@@ -201,7 +306,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.cajamar",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "vargem-grande-paulista-sp",
@@ -210,7 +320,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.vargemgrandepaulist",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "campinas-sp",
@@ -219,7 +334,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.campinas",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "valinhos-sp",
@@ -228,7 +348,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.valinhos",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "vinhedo-sp",
@@ -237,7 +362,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.vinhedo",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "indaiatuba-sp",
@@ -246,7 +376,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.indaiatuba",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "paulinia-sp",
@@ -255,7 +390,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.paulinia",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "americana-sp",
@@ -264,7 +404,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.americana",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "santa-barbara-d-oeste-sp",
@@ -273,7 +418,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.santabarbaradoeste",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "nova-odessa-sp",
@@ -282,7 +432,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.novaodessa",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "sumare-sp",
@@ -291,7 +446,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.sumare",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "hortolandia-sp",
@@ -300,7 +460,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.hortolandia",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "jaguariuna-sp",
@@ -309,7 +474,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.jaguariuna",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "holambra-sp",
@@ -318,7 +488,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.holambra",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "pedreira-sp",
@@ -327,7 +502,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.pedreira",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "cosmopolis-sp",
@@ -336,7 +516,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.cosmopolis",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "artur-nogueira-sp",
@@ -345,7 +530,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.arturnogueira",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "piracicaba-sp",
@@ -354,7 +544,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.piracicaba",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "limeira-sp",
@@ -363,7 +558,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.limeira",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "rio-claro-sp",
@@ -372,7 +572,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.rioclaro",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "araras-sp",
@@ -381,7 +586,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.araras",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "cordeiropolis-sp",
@@ -390,7 +600,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.cordeiropolis",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "jundiai-sp",
@@ -399,7 +614,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.jundiai",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "itupeva-sp",
@@ -408,7 +628,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.itupeva",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "louveira-sp",
@@ -417,7 +642,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.louveira",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "itatiba-sp",
@@ -426,7 +656,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.itatiba",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "campo-limpo-paulista-sp",
@@ -435,7 +670,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.campolimpopaulista",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "atibaia-sp",
@@ -444,7 +684,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.atibaia",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "braganca-paulista-sp",
@@ -453,7 +698,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.bragancapaulista",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "amparo-sp",
@@ -462,7 +712,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.amparo",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "serra-negra-sp",
@@ -471,7 +726,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.serranegra",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "socorro-sp",
@@ -480,7 +740,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.socorro",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "aguas-de-lindoia-sp",
@@ -489,7 +754,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.aguasdelindoia",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "mogi-guacu-sp",
@@ -498,7 +768,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.mogiguacu",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "mogi-mirim-sp",
@@ -507,7 +782,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.mogimirim",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "sao-joao-da-boa-vista-sp",
@@ -516,7 +796,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.saojoaodaboavista",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "sao-jose-dos-campos-sp",
@@ -525,7 +810,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.saojosedoscampos",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "jacarei-sp",
@@ -534,7 +824,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.jacarei",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "taubate-sp",
@@ -543,7 +838,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.taubate",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "cacapava-sp",
@@ -552,7 +852,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.cacapava",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "pindamonhangaba-sp",
@@ -561,7 +866,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.pindamonhangaba",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "tremembe-sp",
@@ -570,7 +880,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.tremembe",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "guaratingueta-sp",
@@ -579,7 +894,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.guaratingueta",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "lorena-sp",
@@ -588,7 +908,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.lorena",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "cruzeiro-sp",
@@ -597,7 +922,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.cruzeiro",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "campos-do-jordao-sp",
@@ -606,7 +936,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.camposdojordao",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "caraguatatuba-sp",
@@ -615,7 +950,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.caraguatatuba",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "sao-sebastiao-sp",
@@ -624,7 +964,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.saosebastiao",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "ilhabela-sp",
@@ -633,7 +978,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.ilhabela",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "ubatuba-sp",
@@ -642,7 +992,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.ubatuba",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "aparecida-sp",
@@ -651,7 +1006,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.aparecida",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "ribeirao-preto-sp",
@@ -660,7 +1020,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.ribeiraopreto",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "sertaozinho-sp",
@@ -669,7 +1034,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.sertaozinho",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "franca-sp",
@@ -678,7 +1048,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.franca",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "batatais-sp",
@@ -687,7 +1062,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.batatais",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "barretos-sp",
@@ -696,7 +1076,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.barretos",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "olimpia-sp",
@@ -705,7 +1090,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.olimpia",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "bebedouro-sp",
@@ -714,7 +1104,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.bebedouro",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "jaboticabal-sp",
@@ -723,7 +1118,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.jaboticabal",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "sao-joaquim-da-barra-sp",
@@ -732,7 +1132,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.saojoaquimdabarra",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "araraquara-sp",
@@ -741,7 +1146,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.araraquara",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "sao-carlos-sp",
@@ -750,7 +1160,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.saocarlos",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "matao-sp",
@@ -759,7 +1174,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.matao",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "mococa-sp",
@@ -768,7 +1188,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.mococa",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "orlandia-sp",
@@ -777,7 +1202,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.orlandia",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "monte-alto-sp",
@@ -786,7 +1216,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.montealto",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "sao-jose-do-rio-preto-sp",
@@ -795,7 +1230,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.saojosedoriopreto",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "mirassol-sp",
@@ -804,7 +1244,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.mirassol",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "catanduva-sp",
@@ -813,7 +1258,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.catanduva",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "votuporanga-sp",
@@ -822,7 +1272,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.votuporanga",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "aracatuba-sp",
@@ -831,7 +1286,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.aracatuba",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "birigui-sp",
@@ -840,7 +1300,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.birigui",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "bauru-sp",
@@ -849,7 +1314,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.bauru",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "jau-sp",
@@ -858,7 +1328,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.jau",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "botucatu-sp",
@@ -867,7 +1342,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.botucatu",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "marilia-sp",
@@ -876,7 +1356,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.marilia",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "assis-sp",
@@ -885,7 +1370,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.assis",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "presidente-prudente-sp",
@@ -894,7 +1384,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.presidenteprudente",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "ourinhos-sp",
@@ -903,7 +1398,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.ourinhos",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "rio-branco-ac",
@@ -912,7 +1412,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.riobranco",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "maceio-al",
@@ -921,7 +1426,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.maceio",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "manaus-am",
@@ -930,7 +1440,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.manaus",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "macapa-ap",
@@ -939,7 +1454,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.macapa",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "salvador-ba",
@@ -948,7 +1468,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.salvador",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "feira-de-santana-ba",
@@ -957,7 +1482,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.feiradesantana",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "vitoria-da-conquista-ba",
@@ -966,7 +1496,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.vitoriadaconquista",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "camacari-ba",
@@ -975,7 +1510,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.camacari",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "lauro-de-freitas-ba",
@@ -984,7 +1524,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.laurodefreitas",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "fortaleza-ce",
@@ -993,7 +1538,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.fortaleza",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "caucaia-ce",
@@ -1002,7 +1552,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.caucaia",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "juazeiro-do-norte-ce",
@@ -1011,7 +1566,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.juazeirodonorte",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "brasilia-df",
@@ -1020,7 +1580,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.brasilia",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "vitoria-es",
@@ -1029,7 +1594,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.vitoria",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "vila-velha-es",
@@ -1038,7 +1608,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.vilavelha",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "serra-es",
@@ -1047,7 +1622,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.serra",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "goiania-go",
@@ -1056,7 +1636,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.goiania",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "anapolis-go",
@@ -1065,7 +1650,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.anapolis",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "aparecida-de-goiania-go",
@@ -1074,7 +1664,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.aparecidadegoiania",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "rio-verde-go",
@@ -1083,7 +1678,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.rioverde",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "catalao-go",
@@ -1092,7 +1692,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.catalao",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "sao-luis-ma",
@@ -1101,7 +1706,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.saoluis",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "imperatriz-ma",
@@ -1110,7 +1720,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.imperatriz",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "belo-horizonte-mg",
@@ -1119,7 +1734,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.belohorizonte",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "uberlandia-mg",
@@ -1128,7 +1748,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.uberlandia",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "uberaba-mg",
@@ -1137,7 +1762,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.uberaba",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "contagem-mg",
@@ -1146,7 +1776,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.contagem",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "betim-mg",
@@ -1155,7 +1790,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.betim",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "juiz-de-fora-mg",
@@ -1164,7 +1804,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.juizdefora",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "montes-claros-mg",
@@ -1173,7 +1818,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.montesclaros",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "ipatinga-mg",
@@ -1182,7 +1832,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.ipatinga",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "divinopolis-mg",
@@ -1191,7 +1846,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.divinopolis",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "pocos-de-caldas-mg",
@@ -1200,7 +1860,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.pocosdecaldas",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "nova-lima-mg",
@@ -1209,7 +1874,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.novalima",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "campo-grande-ms",
@@ -1218,7 +1888,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.campogrande",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "dourados-ms",
@@ -1227,7 +1902,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.dourados",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "tres-lagoas-ms",
@@ -1236,7 +1916,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.treslagoas",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "cuiaba-mt",
@@ -1245,7 +1930,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.cuiaba",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "rondonopolis-mt",
@@ -1254,7 +1944,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.rondonopolis",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "varzea-grande-mt",
@@ -1263,7 +1958,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.varzeagrande",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "sinop-mt",
@@ -1272,7 +1972,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.sinop",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "belem-pa",
@@ -1281,7 +1986,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.belem",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "ananindeua-pa",
@@ -1290,7 +2000,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.ananindeua",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "santarem-pa",
@@ -1299,7 +2014,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.santarem",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "joao-pessoa-pb",
@@ -1308,7 +2028,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.joaopessoa",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "campina-grande-pb",
@@ -1317,7 +2042,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.campinagrande",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "recife-pe",
@@ -1326,7 +2056,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.recife",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "jaboatao-dos-guararapes-pe",
@@ -1335,7 +2070,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.jaboataoguararapes",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "olinda-pe",
@@ -1344,7 +2084,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.olinda",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "caruaru-pe",
@@ -1353,7 +2098,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.caruaru",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "teresina-pi",
@@ -1362,7 +2112,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.teresina",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "parnaiba-pi",
@@ -1371,7 +2126,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.parnaiba",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "curitiba-pr",
@@ -1380,7 +2140,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.curitiba",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "londrina-pr",
@@ -1389,7 +2154,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.londrina",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "maringa-pr",
@@ -1398,7 +2168,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.maringa",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "cascavel-pr",
@@ -1407,7 +2182,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.cascavel",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "foz-do-iguacu-pr",
@@ -1416,7 +2196,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.fozdoiguacu",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "ponta-grossa-pr",
@@ -1425,7 +2210,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.pontagrossa",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "sao-jose-dos-pinhais-pr",
@@ -1434,7 +2224,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.saojosedospinhais",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "colombo-pr",
@@ -1443,7 +2238,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.colombo",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "paranagua-pr",
@@ -1452,7 +2252,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.paranagua",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "rio-de-janeiro-rj",
@@ -1461,7 +2266,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.riodejaneiro",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "niteroi-rj",
@@ -1470,7 +2280,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.niteroi",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "duque-de-caxias-rj",
@@ -1479,7 +2294,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.duquedecaxias",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "nova-iguacu-rj",
@@ -1488,7 +2308,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.novaiguacu",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "petropolis-rj",
@@ -1497,7 +2322,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.petropolis",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "volta-redonda-rj",
@@ -1506,7 +2336,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.voltaredonda",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "macae-rj",
@@ -1515,7 +2350,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.macae",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "campos-dos-goytacazes-rj",
@@ -1524,7 +2364,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.camposdosgoytacazes",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "cabo-frio-rj",
@@ -1533,7 +2378,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.cabofrio",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "armacao-dos-buzios-rj",
@@ -1542,7 +2392,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.armacaodosbuzios",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "angra-dos-reis-rj",
@@ -1551,7 +2406,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.angradosreis",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "resende-rj",
@@ -1560,7 +2420,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.resende",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "marica-rj",
@@ -1569,7 +2434,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.marica",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "sao-goncalo-rj",
@@ -1578,7 +2448,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.saogoncalo",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "natal-rn",
@@ -1587,7 +2462,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.natal",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "mossoro-rn",
@@ -1596,7 +2476,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.mossoro",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "porto-velho-ro",
@@ -1605,7 +2490,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.portovelho",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "ji-parana-ro",
@@ -1614,7 +2504,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.jiparana",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "boa-vista-rr",
@@ -1623,7 +2518,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.boavista",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "porto-alegre-rs",
@@ -1632,7 +2532,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.portoalegre",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "caxias-do-sul-rs",
@@ -1641,7 +2546,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.caxiasdosul",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "canoas-rs",
@@ -1650,7 +2560,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.canoas",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "novo-hamburgo-rs",
@@ -1659,7 +2574,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.novohamburgo",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "pelotas-rs",
@@ -1668,7 +2588,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.pelotas",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "santa-maria-rs",
@@ -1677,7 +2602,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.santamaria",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "passo-fundo-rs",
@@ -1686,7 +2616,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.passofundo",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "florianopolis-sc",
@@ -1695,7 +2630,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.florianopolis",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "joinville-sc",
@@ -1704,7 +2644,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.joinville",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "blumenau-sc",
@@ -1713,7 +2658,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.blumenau",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "itajai-sc",
@@ -1722,7 +2672,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.itajai",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "balneario-camboriu-sc",
@@ -1731,7 +2686,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.balneariocamboriu",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "sao-jose-sc",
@@ -1740,7 +2700,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.saojose",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "criciuma-sc",
@@ -1749,7 +2714,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.criciuma",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "chapeco-sc",
@@ -1758,7 +2728,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.chapeco",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "jaragua-do-sul-sc",
@@ -1767,7 +2742,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.jaraguadosul",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "aracaju-se",
@@ -1776,7 +2756,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.aracaju",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "nossa-senhora-do-socorro-se",
@@ -1785,7 +2770,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.nossasenhorasocorro",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "palmas-to",
@@ -1794,7 +2784,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.palmas",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     },
     {
       "id": "araguaina-to",
@@ -1803,7 +2798,12 @@
       "statusOperacional": "inativo",
       "whatsappAtivo": null,
       "instagramLocalPlanejado": "winfselect.araguaina",
-      "instagramLocalVerificado": false
+      "instagramLocalVerificado": false,
+      "statusAtendimentoDigital": "ativo",
+      "statusComercial": "disponivel_para_licenciamento",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "titularLocalStatus": "aguardando_novo_operador"
     }
   ]
 }

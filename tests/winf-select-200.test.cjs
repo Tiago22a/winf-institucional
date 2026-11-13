@@ -49,7 +49,7 @@ test("200 contatos provisórios são centralizados na Central 013",()=>{
  assert.equal(cfg.territorios.length,200);assert.equal(cfg.whatsappInativos,"5513981113001");
  assert.equal(cfg.instagramOficial,"winf.ofc");
  for(const c of cfg.territorios){
-  assert.equal(c.statusOperacional,"inativo");assert.equal(c.instagramLocalVerificado,false);
+  assert.equal(c.statusOperacional,"inativo");assert.equal(c.statusAtendimentoDigital,"ativo");assert.equal(c.statusComercial,"disponivel_para_licenciamento");assert.equal(c.modeloLicenciamento,"WINF Asset Light™");assert.equal(c.instagramLocalVerificado,false);
   assert.ok(/^winfselect\.[a-z0-9._]+$/.test(c.instagramLocalPlanejado));
   assert.ok(c.instagramLocalPlanejado.length<=30&&!h.has(c.instagramLocalPlanejado));
   h.add(c.instagramLocalPlanejado);

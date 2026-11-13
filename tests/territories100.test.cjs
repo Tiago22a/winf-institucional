@@ -17,7 +17,7 @@ test("100 municípios distintos de SP fora das centrais próprias",()=>{
 test("não anunciar disponibilidade territorial sem confirmação",()=>{
  assert.equal(list.centraisProprias.length,2);
  assert.ok(list.centraisProprias.every(x=>x.statusOperacional==="ativa"));
- assert.ok(list.territorios.every(x=>x.statusExclusividade==="em_validacao"&&!x.disponibilidadeConfirmada));
+ assert.ok(list.territorios.every(x=>x.statusExclusividade==="disponivel"&&x.disponibilidadeConfirmada===true));
 });
 test("100 fichas individuais preparadas, com noindex até revisão",()=>{
  for(const t of list.territorios){

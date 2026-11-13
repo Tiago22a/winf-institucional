@@ -14,7 +14,7 @@
       "latitude": -23.5329,
       "longitude": -46.6395,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Pinheiros",
         "Itaim Bibi",
@@ -24,7 +24,11 @@
       ],
       "url": "/partners/territorios/sao-paulo-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/sao-paulo-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/sao-paulo-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "barueri-sp",
@@ -36,14 +40,18 @@
       "latitude": -23.5057,
       "longitude": -46.879,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Alphaville",
         "Jardim Belval"
       ],
       "url": "/partners/territorios/barueri-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/barueri-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/barueri-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "santana-de-parnaiba-sp",
@@ -55,14 +63,18 @@
       "latitude": -23.4439,
       "longitude": -46.9178,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Tamboré",
         "Alphaville"
       ],
       "url": "/partners/territorios/santana-de-parnaiba-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/santana-de-parnaiba-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/santana-de-parnaiba-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "osasco-sp",
@@ -74,14 +86,18 @@
       "latitude": -23.5324,
       "longitude": -46.7916,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Vila Yara",
         "Campesina"
       ],
       "url": "/partners/territorios/osasco-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/osasco-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/osasco-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "cotia-sp",
@@ -93,13 +109,17 @@
       "latitude": -23.6022,
       "longitude": -46.919,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Granja Viana"
       ],
       "url": "/partners/territorios/cotia-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/cotia-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/cotia-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "itapevi-sp",
@@ -111,11 +131,15 @@
       "latitude": -23.5488,
       "longitude": -46.9327,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/itapevi-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/itapevi-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/itapevi-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "jandira-sp",
@@ -127,11 +151,15 @@
       "latitude": -23.5275,
       "longitude": -46.9023,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/jandira-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/jandira-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/jandira-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "carapicuiba-sp",
@@ -143,11 +171,15 @@
       "latitude": -23.5235,
       "longitude": -46.8407,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/carapicuiba-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/carapicuiba-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/carapicuiba-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "taboao-da-serra-sp",
@@ -159,11 +191,15 @@
       "latitude": -23.6019,
       "longitude": -46.7526,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/taboao-da-serra-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/taboao-da-serra-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/taboao-da-serra-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "embu-das-artes-sp",
@@ -175,11 +211,15 @@
       "latitude": -23.6437,
       "longitude": -46.8579,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/embu-das-artes-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/embu-das-artes-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/embu-das-artes-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "itapecerica-da-serra-sp",
@@ -191,11 +231,15 @@
       "latitude": -23.7161,
       "longitude": -46.8572,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/itapecerica-da-serra-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/itapecerica-da-serra-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/itapecerica-da-serra-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "sao-caetano-do-sul-sp",
@@ -207,14 +251,18 @@
       "latitude": -23.6229,
       "longitude": -46.5548,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Santa Paula",
         "Santo Antônio"
       ],
       "url": "/partners/territorios/sao-caetano-do-sul-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/sao-caetano-do-sul-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/sao-caetano-do-sul-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "santo-andre-sp",
@@ -226,14 +274,18 @@
       "latitude": -23.6737,
       "longitude": -46.5432,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Bairro Jardim",
         "Campestre"
       ],
       "url": "/partners/territorios/santo-andre-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/santo-andre-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/santo-andre-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "sao-bernardo-do-campo-sp",
@@ -245,7 +297,7 @@
       "latitude": -23.6914,
       "longitude": -46.5646,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Jardim do Mar",
         "Rudge Ramos",
@@ -253,7 +305,11 @@
       ],
       "url": "/partners/territorios/sao-bernardo-do-campo-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/sao-bernardo-do-campo-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/sao-bernardo-do-campo-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "diadema-sp",
@@ -265,11 +321,15 @@
       "latitude": -23.6813,
       "longitude": -46.6205,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/diadema-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/diadema-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/diadema-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "maua-sp",
@@ -281,11 +341,15 @@
       "latitude": -23.6677,
       "longitude": -46.4613,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/maua-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/maua-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/maua-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "ribeirao-pires-sp",
@@ -297,11 +361,15 @@
       "latitude": -23.7067,
       "longitude": -46.4058,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/ribeirao-pires-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/ribeirao-pires-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/ribeirao-pires-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "guarulhos-sp",
@@ -313,14 +381,18 @@
       "latitude": -23.4538,
       "longitude": -46.5333,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Jardim Maia",
         "Vila Augusta"
       ],
       "url": "/partners/territorios/guarulhos-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/guarulhos-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/guarulhos-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "aruja-sp",
@@ -332,13 +404,17 @@
       "latitude": -23.3965,
       "longitude": -46.32,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Arujazinho"
       ],
       "url": "/partners/territorios/aruja-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/aruja-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/aruja-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "mairipora-sp",
@@ -350,11 +426,15 @@
       "latitude": -23.3171,
       "longitude": -46.5897,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/mairipora-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/mairipora-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/mairipora-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "caieiras-sp",
@@ -366,11 +446,15 @@
       "latitude": -23.3607,
       "longitude": -46.7397,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/caieiras-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/caieiras-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/caieiras-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "cajamar-sp",
@@ -382,11 +466,15 @@
       "latitude": -23.355,
       "longitude": -46.8781,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/cajamar-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/cajamar-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/cajamar-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "vargem-grande-paulista-sp",
@@ -398,11 +486,15 @@
       "latitude": -23.5993,
       "longitude": -47.022,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/vargem-grande-paulista-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/vargem-grande-paulista-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/vargem-grande-paulista-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "campinas-sp",
@@ -414,7 +506,7 @@
       "latitude": -22.9053,
       "longitude": -47.0659,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Cambuí",
         "Taquaral",
@@ -423,7 +515,11 @@
       ],
       "url": "/partners/territorios/campinas-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/campinas-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/campinas-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "valinhos-sp",
@@ -435,13 +531,17 @@
       "latitude": -22.9698,
       "longitude": -46.9974,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Jardim Paiquerê"
       ],
       "url": "/partners/territorios/valinhos-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/valinhos-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/valinhos-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "vinhedo-sp",
@@ -453,13 +553,17 @@
       "latitude": -23.0302,
       "longitude": -46.9833,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Vista Alegre"
       ],
       "url": "/partners/territorios/vinhedo-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/vinhedo-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/vinhedo-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "indaiatuba-sp",
@@ -471,14 +575,18 @@
       "latitude": -23.0816,
       "longitude": -47.2101,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Jardim Esplanada",
         "Cidade Nova"
       ],
       "url": "/partners/territorios/indaiatuba-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/indaiatuba-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/indaiatuba-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "paulinia-sp",
@@ -490,11 +598,15 @@
       "latitude": -22.7542,
       "longitude": -47.1488,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/paulinia-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/paulinia-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/paulinia-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "americana-sp",
@@ -506,13 +618,17 @@
       "latitude": -22.7374,
       "longitude": -47.3331,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Jardim Girassol"
       ],
       "url": "/partners/territorios/americana-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/americana-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/americana-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "santa-barbara-d-oeste-sp",
@@ -524,11 +640,15 @@
       "latitude": -22.7553,
       "longitude": -47.4143,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/santa-barbara-d-oeste-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/santa-barbara-d-oeste-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/santa-barbara-d-oeste-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "nova-odessa-sp",
@@ -540,11 +660,15 @@
       "latitude": -22.7832,
       "longitude": -47.2941,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/nova-odessa-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/nova-odessa-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/nova-odessa-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "sumare-sp",
@@ -556,11 +680,15 @@
       "latitude": -22.8204,
       "longitude": -47.2728,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/sumare-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/sumare-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/sumare-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "hortolandia-sp",
@@ -572,11 +700,15 @@
       "latitude": -22.8529,
       "longitude": -47.2143,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/hortolandia-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/hortolandia-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/hortolandia-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "jaguariuna-sp",
@@ -588,13 +720,17 @@
       "latitude": -22.7037,
       "longitude": -46.9851,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Capotuna"
       ],
       "url": "/partners/territorios/jaguariuna-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/jaguariuna-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/jaguariuna-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "holambra-sp",
@@ -606,11 +742,15 @@
       "latitude": -22.6405,
       "longitude": -47.0487,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/holambra-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/holambra-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/holambra-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "pedreira-sp",
@@ -622,11 +762,15 @@
       "latitude": -22.7413,
       "longitude": -46.8948,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/pedreira-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/pedreira-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/pedreira-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "cosmopolis-sp",
@@ -638,11 +782,15 @@
       "latitude": -22.6419,
       "longitude": -47.1926,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/cosmopolis-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/cosmopolis-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/cosmopolis-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "artur-nogueira-sp",
@@ -654,11 +802,15 @@
       "latitude": -22.5727,
       "longitude": -47.1727,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/artur-nogueira-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/artur-nogueira-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/artur-nogueira-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "piracicaba-sp",
@@ -670,14 +822,18 @@
       "latitude": -22.7338,
       "longitude": -47.6476,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "São Dimas",
         "Nova Piracicaba"
       ],
       "url": "/partners/territorios/piracicaba-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/piracicaba-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/piracicaba-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "limeira-sp",
@@ -689,11 +845,15 @@
       "latitude": -22.566,
       "longitude": -47.397,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/limeira-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/limeira-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/limeira-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "rio-claro-sp",
@@ -705,11 +865,15 @@
       "latitude": -22.3984,
       "longitude": -47.5546,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/rio-claro-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/rio-claro-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/rio-claro-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "araras-sp",
@@ -721,11 +885,15 @@
       "latitude": -22.3572,
       "longitude": -47.3842,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/araras-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/araras-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/araras-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "cordeiropolis-sp",
@@ -737,11 +905,15 @@
       "latitude": -22.4778,
       "longitude": -47.4519,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/cordeiropolis-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/cordeiropolis-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/cordeiropolis-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "jundiai-sp",
@@ -753,7 +925,7 @@
       "latitude": -23.1852,
       "longitude": -46.8974,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Anhangabaú",
         "Eloy Chaves",
@@ -761,7 +933,11 @@
       ],
       "url": "/partners/territorios/jundiai-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/jundiai-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/jundiai-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "itupeva-sp",
@@ -773,11 +949,15 @@
       "latitude": -23.1526,
       "longitude": -47.0593,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/itupeva-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/itupeva-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/itupeva-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "louveira-sp",
@@ -789,11 +969,15 @@
       "latitude": -23.0856,
       "longitude": -46.9484,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/louveira-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/louveira-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/louveira-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "itatiba-sp",
@@ -805,11 +989,15 @@
       "latitude": -23.0035,
       "longitude": -46.8464,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/itatiba-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/itatiba-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/itatiba-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "campo-limpo-paulista-sp",
@@ -821,11 +1009,15 @@
       "latitude": -23.2078,
       "longitude": -46.7889,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/campo-limpo-paulista-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/campo-limpo-paulista-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/campo-limpo-paulista-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "atibaia-sp",
@@ -837,14 +1029,18 @@
       "latitude": -23.1171,
       "longitude": -46.5563,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Alvinópolis",
         "Jardim do Lago"
       ],
       "url": "/partners/territorios/atibaia-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/atibaia-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/atibaia-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "braganca-paulista-sp",
@@ -856,11 +1052,15 @@
       "latitude": -22.9527,
       "longitude": -46.5419,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/braganca-paulista-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/braganca-paulista-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/braganca-paulista-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "amparo-sp",
@@ -872,11 +1072,15 @@
       "latitude": -22.7088,
       "longitude": -46.772,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/amparo-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/amparo-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/amparo-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "serra-negra-sp",
@@ -888,11 +1092,15 @@
       "latitude": -22.6139,
       "longitude": -46.7033,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/serra-negra-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/serra-negra-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/serra-negra-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "socorro-sp",
@@ -904,11 +1112,15 @@
       "latitude": -22.5903,
       "longitude": -46.5251,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/socorro-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/socorro-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/socorro-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "aguas-de-lindoia-sp",
@@ -920,11 +1132,15 @@
       "latitude": -22.4733,
       "longitude": -46.6314,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/aguas-de-lindoia-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/aguas-de-lindoia-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/aguas-de-lindoia-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "mogi-guacu-sp",
@@ -936,11 +1152,15 @@
       "latitude": -22.3675,
       "longitude": -46.9428,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/mogi-guacu-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/mogi-guacu-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/mogi-guacu-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "mogi-mirim-sp",
@@ -952,11 +1172,15 @@
       "latitude": -22.4332,
       "longitude": -46.9532,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/mogi-mirim-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/mogi-mirim-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/mogi-mirim-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "sao-joao-da-boa-vista-sp",
@@ -968,11 +1192,15 @@
       "latitude": -21.9707,
       "longitude": -46.7944,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/sao-joao-da-boa-vista-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/sao-joao-da-boa-vista-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/sao-joao-da-boa-vista-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "sao-jose-dos-campos-sp",
@@ -984,7 +1212,7 @@
       "latitude": -23.1896,
       "longitude": -45.8841,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Jardim Aquarius",
         "Urbanova",
@@ -992,7 +1220,11 @@
       ],
       "url": "/partners/territorios/sao-jose-dos-campos-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/sao-jose-dos-campos-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/sao-jose-dos-campos-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "jacarei-sp",
@@ -1004,11 +1236,15 @@
       "latitude": -23.2983,
       "longitude": -45.9658,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/jacarei-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/jacarei-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/jacarei-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "taubate-sp",
@@ -1020,14 +1256,18 @@
       "latitude": -23.0104,
       "longitude": -45.5593,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Jardim das Nações",
         "Independência"
       ],
       "url": "/partners/territorios/taubate-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/taubate-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/taubate-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "cacapava-sp",
@@ -1039,11 +1279,15 @@
       "latitude": -23.0992,
       "longitude": -45.7076,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/cacapava-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/cacapava-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/cacapava-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "pindamonhangaba-sp",
@@ -1055,11 +1299,15 @@
       "latitude": -22.9246,
       "longitude": -45.4613,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/pindamonhangaba-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/pindamonhangaba-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/pindamonhangaba-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "tremembe-sp",
@@ -1071,11 +1319,15 @@
       "latitude": -22.9571,
       "longitude": -45.5475,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/tremembe-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/tremembe-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/tremembe-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "guaratingueta-sp",
@@ -1087,11 +1339,15 @@
       "latitude": -22.8075,
       "longitude": -45.1938,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/guaratingueta-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/guaratingueta-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/guaratingueta-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "lorena-sp",
@@ -1103,11 +1359,15 @@
       "latitude": -22.7334,
       "longitude": -45.1197,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/lorena-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/lorena-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/lorena-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "cruzeiro-sp",
@@ -1119,11 +1379,15 @@
       "latitude": -22.5728,
       "longitude": -44.969,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/cruzeiro-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/cruzeiro-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/cruzeiro-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "campos-do-jordao-sp",
@@ -1135,14 +1399,18 @@
       "latitude": -22.7296,
       "longitude": -45.5833,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Capivari",
         "Abernéssia"
       ],
       "url": "/partners/territorios/campos-do-jordao-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/campos-do-jordao-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/campos-do-jordao-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "caraguatatuba-sp",
@@ -1154,14 +1422,18 @@
       "latitude": -23.6125,
       "longitude": -45.4125,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Indaiá",
         "Massaguaçu"
       ],
       "url": "/partners/territorios/caraguatatuba-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/caraguatatuba-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/caraguatatuba-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "sao-sebastiao-sp",
@@ -1173,14 +1445,18 @@
       "latitude": -23.7951,
       "longitude": -45.4143,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Maresias",
         "Juquehy"
       ],
       "url": "/partners/territorios/sao-sebastiao-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/sao-sebastiao-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/sao-sebastiao-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "ilhabela-sp",
@@ -1192,14 +1468,18 @@
       "latitude": -23.7785,
       "longitude": -45.3552,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Perequê",
         "Feiticeira"
       ],
       "url": "/partners/territorios/ilhabela-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/ilhabela-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/ilhabela-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "ubatuba-sp",
@@ -1211,14 +1491,18 @@
       "latitude": -23.4332,
       "longitude": -45.0834,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Itaguá",
         "Praia Grande"
       ],
       "url": "/partners/territorios/ubatuba-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/ubatuba-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/ubatuba-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "aparecida-sp",
@@ -1230,11 +1514,15 @@
       "latitude": -22.8495,
       "longitude": -45.2325,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/aparecida-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/aparecida-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/aparecida-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "ribeirao-preto-sp",
@@ -1246,14 +1534,18 @@
       "latitude": -21.1699,
       "longitude": -47.8099,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Jardim Botânico",
         "Ribeirânia"
       ],
       "url": "/partners/territorios/ribeirao-preto-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/ribeirao-preto-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/ribeirao-preto-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "sertaozinho-sp",
@@ -1265,11 +1557,15 @@
       "latitude": -21.1316,
       "longitude": -47.9875,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/sertaozinho-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/sertaozinho-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/sertaozinho-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "franca-sp",
@@ -1281,11 +1577,15 @@
       "latitude": -20.5352,
       "longitude": -47.4039,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/franca-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/franca-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/franca-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "batatais-sp",
@@ -1297,11 +1597,15 @@
       "latitude": -20.8929,
       "longitude": -47.5921,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/batatais-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/batatais-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/batatais-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "barretos-sp",
@@ -1313,11 +1617,15 @@
       "latitude": -20.5531,
       "longitude": -48.5698,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/barretos-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/barretos-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/barretos-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "olimpia-sp",
@@ -1329,11 +1637,15 @@
       "latitude": -20.7366,
       "longitude": -48.9106,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/olimpia-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/olimpia-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/olimpia-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "bebedouro-sp",
@@ -1345,11 +1657,15 @@
       "latitude": -20.9491,
       "longitude": -48.4791,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/bebedouro-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/bebedouro-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/bebedouro-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "jaboticabal-sp",
@@ -1361,11 +1677,15 @@
       "latitude": -21.252,
       "longitude": -48.3252,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/jaboticabal-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/jaboticabal-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/jaboticabal-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "sao-joaquim-da-barra-sp",
@@ -1377,11 +1697,15 @@
       "latitude": -20.5812,
       "longitude": -47.8593,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/sao-joaquim-da-barra-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/sao-joaquim-da-barra-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/sao-joaquim-da-barra-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "araraquara-sp",
@@ -1393,13 +1717,17 @@
       "latitude": -21.7845,
       "longitude": -48.178,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Vila Harmonia"
       ],
       "url": "/partners/territorios/araraquara-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/araraquara-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/araraquara-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "sao-carlos-sp",
@@ -1411,13 +1739,17 @@
       "latitude": -22.0174,
       "longitude": -47.886,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Parque Faber"
       ],
       "url": "/partners/territorios/sao-carlos-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/sao-carlos-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/sao-carlos-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "matao-sp",
@@ -1429,11 +1761,15 @@
       "latitude": -21.6025,
       "longitude": -48.364,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/matao-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/matao-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/matao-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "mococa-sp",
@@ -1445,11 +1781,15 @@
       "latitude": -21.4647,
       "longitude": -47.0024,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/mococa-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/mococa-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/mococa-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "orlandia-sp",
@@ -1461,11 +1801,15 @@
       "latitude": -20.7169,
       "longitude": -47.8852,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/orlandia-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/orlandia-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/orlandia-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "monte-alto-sp",
@@ -1477,11 +1821,15 @@
       "latitude": -21.2655,
       "longitude": -48.4971,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/monte-alto-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/monte-alto-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/monte-alto-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "sao-jose-do-rio-preto-sp",
@@ -1493,14 +1841,18 @@
       "latitude": -20.8113,
       "longitude": -49.3758,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Jardim Vivendas",
         "Redentora"
       ],
       "url": "/partners/territorios/sao-jose-do-rio-preto-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/sao-jose-do-rio-preto-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/sao-jose-do-rio-preto-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "mirassol-sp",
@@ -1512,11 +1864,15 @@
       "latitude": -20.8169,
       "longitude": -49.5206,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/mirassol-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/mirassol-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/mirassol-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "catanduva-sp",
@@ -1528,11 +1884,15 @@
       "latitude": -21.1314,
       "longitude": -48.977,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/catanduva-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/catanduva-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/catanduva-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "votuporanga-sp",
@@ -1544,11 +1904,15 @@
       "latitude": -20.4237,
       "longitude": -49.9781,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/votuporanga-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/votuporanga-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/votuporanga-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "aracatuba-sp",
@@ -1560,13 +1924,17 @@
       "latitude": -21.2076,
       "longitude": -50.4401,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Jardim Nova Iorque"
       ],
       "url": "/partners/territorios/aracatuba-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/aracatuba-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/aracatuba-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "birigui-sp",
@@ -1578,11 +1946,15 @@
       "latitude": -21.291,
       "longitude": -50.3432,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/birigui-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/birigui-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/birigui-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "bauru-sp",
@@ -1594,14 +1966,18 @@
       "latitude": -22.3246,
       "longitude": -49.0871,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Jardim Estoril",
         "Vila Aviação"
       ],
       "url": "/partners/territorios/bauru-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/bauru-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/bauru-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "jau-sp",
@@ -1613,11 +1989,15 @@
       "latitude": -22.2936,
       "longitude": -48.5592,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/jau-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/jau-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/jau-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "botucatu-sp",
@@ -1629,11 +2009,15 @@
       "latitude": -22.8837,
       "longitude": -48.4437,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/botucatu-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/botucatu-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/botucatu-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "marilia-sp",
@@ -1645,13 +2029,17 @@
       "latitude": -22.2171,
       "longitude": -49.9501,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Esmeralda"
       ],
       "url": "/partners/territorios/marilia-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/marilia-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/marilia-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "assis-sp",
@@ -1663,11 +2051,15 @@
       "latitude": -22.66,
       "longitude": -50.4183,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/assis-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/assis-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/assis-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "presidente-prudente-sp",
@@ -1679,13 +2071,17 @@
       "latitude": -22.1207,
       "longitude": -51.3925,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Jardim Bongiovani"
       ],
       "url": "/partners/territorios/presidente-prudente-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/presidente-prudente-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/presidente-prudente-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "ourinhos-sp",
@@ -1697,11 +2093,15 @@
       "latitude": -22.9797,
       "longitude": -49.8697,
       "prioridadeComercial": "sp_em_validacao",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/ourinhos-sp/",
       "statusPesquisaBairros": "pendente_validacao_local",
-      "siteLocalPlanejado": "/winf-select/cidades/ourinhos-sp/"
+      "siteLocalPlanejado": "/winf-select/cidades/ourinhos-sp/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "rio-branco-ac",
@@ -1713,10 +2113,14 @@
       "latitude": -9.97499,
       "longitude": -67.8243,
       "prioridadeComercial": "capital",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/rio-branco-ac/",
-      "siteLocalPlanejado": "/winf-select/cidades/rio-branco-ac/"
+      "siteLocalPlanejado": "/winf-select/cidades/rio-branco-ac/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "maceio-al",
@@ -1728,13 +2132,17 @@
       "latitude": -9.66599,
       "longitude": -35.735,
       "prioridadeComercial": "capital",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Ponta Verde",
         "Jatiúca"
       ],
       "url": "/partners/territorios/maceio-al/",
-      "siteLocalPlanejado": "/winf-select/cidades/maceio-al/"
+      "siteLocalPlanejado": "/winf-select/cidades/maceio-al/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "manaus-am",
@@ -1746,14 +2154,18 @@
       "latitude": -3.11866,
       "longitude": -60.0212,
       "prioridadeComercial": "capital",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Ponta Negra",
         "Adrianópolis",
         "Vieiralves"
       ],
       "url": "/partners/territorios/manaus-am/",
-      "siteLocalPlanejado": "/winf-select/cidades/manaus-am/"
+      "siteLocalPlanejado": "/winf-select/cidades/manaus-am/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "macapa-ap",
@@ -1765,10 +2177,14 @@
       "latitude": 0.034934,
       "longitude": -51.0694,
       "prioridadeComercial": "capital",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/macapa-ap/",
-      "siteLocalPlanejado": "/winf-select/cidades/macapa-ap/"
+      "siteLocalPlanejado": "/winf-select/cidades/macapa-ap/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "salvador-ba",
@@ -1780,14 +2196,18 @@
       "latitude": -12.9718,
       "longitude": -38.5011,
       "prioridadeComercial": "capital",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Horto Florestal",
         "Graça",
         "Itaigara"
       ],
       "url": "/partners/territorios/salvador-ba/",
-      "siteLocalPlanejado": "/winf-select/cidades/salvador-ba/"
+      "siteLocalPlanejado": "/winf-select/cidades/salvador-ba/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "feira-de-santana-ba",
@@ -1799,13 +2219,17 @@
       "latitude": -12.2664,
       "longitude": -38.9663,
       "prioridadeComercial": "polo_prioritario",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Santa Mônica",
         "Centro"
       ],
       "url": "/partners/territorios/feira-de-santana-ba/",
-      "siteLocalPlanejado": "/winf-select/cidades/feira-de-santana-ba/"
+      "siteLocalPlanejado": "/winf-select/cidades/feira-de-santana-ba/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "vitoria-da-conquista-ba",
@@ -1817,10 +2241,14 @@
       "latitude": -14.8615,
       "longitude": -40.8442,
       "prioridadeComercial": "polo_prioritario",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/vitoria-da-conquista-ba/",
-      "siteLocalPlanejado": "/winf-select/cidades/vitoria-da-conquista-ba/"
+      "siteLocalPlanejado": "/winf-select/cidades/vitoria-da-conquista-ba/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "camacari-ba",
@@ -1832,10 +2260,14 @@
       "latitude": -12.6996,
       "longitude": -38.3263,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/camacari-ba/",
-      "siteLocalPlanejado": "/winf-select/cidades/camacari-ba/"
+      "siteLocalPlanejado": "/winf-select/cidades/camacari-ba/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "lauro-de-freitas-ba",
@@ -1847,13 +2279,17 @@
       "latitude": -12.8978,
       "longitude": -38.321,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Vilas do Atlântico",
         "Buraquinho"
       ],
       "url": "/partners/territorios/lauro-de-freitas-ba/",
-      "siteLocalPlanejado": "/winf-select/cidades/lauro-de-freitas-ba/"
+      "siteLocalPlanejado": "/winf-select/cidades/lauro-de-freitas-ba/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "fortaleza-ce",
@@ -1865,14 +2301,18 @@
       "latitude": -3.71664,
       "longitude": -38.5423,
       "prioridadeComercial": "capital",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Meireles",
         "Aldeota",
         "Cocó"
       ],
       "url": "/partners/territorios/fortaleza-ce/",
-      "siteLocalPlanejado": "/winf-select/cidades/fortaleza-ce/"
+      "siteLocalPlanejado": "/winf-select/cidades/fortaleza-ce/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "caucaia-ce",
@@ -1884,10 +2324,14 @@
       "latitude": -3.72797,
       "longitude": -38.6619,
       "prioridadeComercial": "polo_prioritario",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/caucaia-ce/",
-      "siteLocalPlanejado": "/winf-select/cidades/caucaia-ce/"
+      "siteLocalPlanejado": "/winf-select/cidades/caucaia-ce/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "juazeiro-do-norte-ce",
@@ -1899,10 +2343,14 @@
       "latitude": -7.19621,
       "longitude": -39.3076,
       "prioridadeComercial": "polo_prioritario",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/juazeiro-do-norte-ce/",
-      "siteLocalPlanejado": "/winf-select/cidades/juazeiro-do-norte-ce/"
+      "siteLocalPlanejado": "/winf-select/cidades/juazeiro-do-norte-ce/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "brasilia-df",
@@ -1914,14 +2362,18 @@
       "latitude": -15.7795,
       "longitude": -47.9297,
       "prioridadeComercial": "capital",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Lago Sul",
         "Asa Sul",
         "Sudoeste"
       ],
       "url": "/partners/territorios/brasilia-df/",
-      "siteLocalPlanejado": "/winf-select/cidades/brasilia-df/"
+      "siteLocalPlanejado": "/winf-select/cidades/brasilia-df/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "vitoria-es",
@@ -1933,14 +2385,18 @@
       "latitude": -20.3155,
       "longitude": -40.3128,
       "prioridadeComercial": "capital",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Praia do Canto",
         "Jardim da Penha",
         "Mata da Praia"
       ],
       "url": "/partners/territorios/vitoria-es/",
-      "siteLocalPlanejado": "/winf-select/cidades/vitoria-es/"
+      "siteLocalPlanejado": "/winf-select/cidades/vitoria-es/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "vila-velha-es",
@@ -1952,13 +2408,17 @@
       "latitude": -20.3417,
       "longitude": -40.2875,
       "prioridadeComercial": "polo_prioritario",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Praia da Costa",
         "Itapuã"
       ],
       "url": "/partners/territorios/vila-velha-es/",
-      "siteLocalPlanejado": "/winf-select/cidades/vila-velha-es/"
+      "siteLocalPlanejado": "/winf-select/cidades/vila-velha-es/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "serra-es",
@@ -1970,13 +2430,17 @@
       "latitude": -20.121,
       "longitude": -40.3074,
       "prioridadeComercial": "polo_prioritario",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Laranjeiras",
         "Manguinhos"
       ],
       "url": "/partners/territorios/serra-es/",
-      "siteLocalPlanejado": "/winf-select/cidades/serra-es/"
+      "siteLocalPlanejado": "/winf-select/cidades/serra-es/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "goiania-go",
@@ -1988,14 +2452,18 @@
       "latitude": -16.6864,
       "longitude": -49.2643,
       "prioridadeComercial": "capital",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Setor Marista",
         "Setor Bueno",
         "Jardim Goiás"
       ],
       "url": "/partners/territorios/goiania-go/",
-      "siteLocalPlanejado": "/winf-select/cidades/goiania-go/"
+      "siteLocalPlanejado": "/winf-select/cidades/goiania-go/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "anapolis-go",
@@ -2007,13 +2475,17 @@
       "latitude": -16.3281,
       "longitude": -48.953,
       "prioridadeComercial": "polo_prioritario",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Jundiaí",
         "Centro"
       ],
       "url": "/partners/territorios/anapolis-go/",
-      "siteLocalPlanejado": "/winf-select/cidades/anapolis-go/"
+      "siteLocalPlanejado": "/winf-select/cidades/anapolis-go/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "aparecida-de-goiania-go",
@@ -2025,10 +2497,14 @@
       "latitude": -16.8198,
       "longitude": -49.2469,
       "prioridadeComercial": "polo_prioritario",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/aparecida-de-goiania-go/",
-      "siteLocalPlanejado": "/winf-select/cidades/aparecida-de-goiania-go/"
+      "siteLocalPlanejado": "/winf-select/cidades/aparecida-de-goiania-go/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "rio-verde-go",
@@ -2040,10 +2516,14 @@
       "latitude": -17.7923,
       "longitude": -50.9192,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/rio-verde-go/",
-      "siteLocalPlanejado": "/winf-select/cidades/rio-verde-go/"
+      "siteLocalPlanejado": "/winf-select/cidades/rio-verde-go/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "catalao-go",
@@ -2055,10 +2535,14 @@
       "latitude": -18.1656,
       "longitude": -47.944,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/catalao-go/",
-      "siteLocalPlanejado": "/winf-select/cidades/catalao-go/"
+      "siteLocalPlanejado": "/winf-select/cidades/catalao-go/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "sao-luis-ma",
@@ -2070,13 +2554,17 @@
       "latitude": -2.53874,
       "longitude": -44.2825,
       "prioridadeComercial": "capital",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Renascença",
         "Calhau"
       ],
       "url": "/partners/territorios/sao-luis-ma/",
-      "siteLocalPlanejado": "/winf-select/cidades/sao-luis-ma/"
+      "siteLocalPlanejado": "/winf-select/cidades/sao-luis-ma/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "imperatriz-ma",
@@ -2088,10 +2576,14 @@
       "latitude": -5.51847,
       "longitude": -47.4777,
       "prioridadeComercial": "polo_prioritario",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/imperatriz-ma/",
-      "siteLocalPlanejado": "/winf-select/cidades/imperatriz-ma/"
+      "siteLocalPlanejado": "/winf-select/cidades/imperatriz-ma/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "belo-horizonte-mg",
@@ -2103,14 +2595,18 @@
       "latitude": -19.9102,
       "longitude": -43.9266,
       "prioridadeComercial": "capital",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Lourdes",
         "Belvedere",
         "Savassi"
       ],
       "url": "/partners/territorios/belo-horizonte-mg/",
-      "siteLocalPlanejado": "/winf-select/cidades/belo-horizonte-mg/"
+      "siteLocalPlanejado": "/winf-select/cidades/belo-horizonte-mg/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "uberlandia-mg",
@@ -2122,13 +2618,17 @@
       "latitude": -18.9141,
       "longitude": -48.2749,
       "prioridadeComercial": "polo_prioritario",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Jardim Karaíba",
         "Santa Mônica"
       ],
       "url": "/partners/territorios/uberlandia-mg/",
-      "siteLocalPlanejado": "/winf-select/cidades/uberlandia-mg/"
+      "siteLocalPlanejado": "/winf-select/cidades/uberlandia-mg/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "uberaba-mg",
@@ -2140,10 +2640,14 @@
       "latitude": -19.7472,
       "longitude": -47.9381,
       "prioridadeComercial": "polo_prioritario",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/uberaba-mg/",
-      "siteLocalPlanejado": "/winf-select/cidades/uberaba-mg/"
+      "siteLocalPlanejado": "/winf-select/cidades/uberaba-mg/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "contagem-mg",
@@ -2155,10 +2659,14 @@
       "latitude": -19.9321,
       "longitude": -44.0539,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/contagem-mg/",
-      "siteLocalPlanejado": "/winf-select/cidades/contagem-mg/"
+      "siteLocalPlanejado": "/winf-select/cidades/contagem-mg/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "betim-mg",
@@ -2170,10 +2678,14 @@
       "latitude": -19.9668,
       "longitude": -44.2008,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/betim-mg/",
-      "siteLocalPlanejado": "/winf-select/cidades/betim-mg/"
+      "siteLocalPlanejado": "/winf-select/cidades/betim-mg/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "juiz-de-fora-mg",
@@ -2185,13 +2697,17 @@
       "latitude": -21.7595,
       "longitude": -43.3398,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "São Mateus",
         "Bom Pastor"
       ],
       "url": "/partners/territorios/juiz-de-fora-mg/",
-      "siteLocalPlanejado": "/winf-select/cidades/juiz-de-fora-mg/"
+      "siteLocalPlanejado": "/winf-select/cidades/juiz-de-fora-mg/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "montes-claros-mg",
@@ -2203,10 +2719,14 @@
       "latitude": -16.7282,
       "longitude": -43.8578,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/montes-claros-mg/",
-      "siteLocalPlanejado": "/winf-select/cidades/montes-claros-mg/"
+      "siteLocalPlanejado": "/winf-select/cidades/montes-claros-mg/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "ipatinga-mg",
@@ -2218,13 +2738,17 @@
       "latitude": -19.4703,
       "longitude": -42.5476,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Horto",
         "Cidade Nobre"
       ],
       "url": "/partners/territorios/ipatinga-mg/",
-      "siteLocalPlanejado": "/winf-select/cidades/ipatinga-mg/"
+      "siteLocalPlanejado": "/winf-select/cidades/ipatinga-mg/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "divinopolis-mg",
@@ -2236,10 +2760,14 @@
       "latitude": -20.1446,
       "longitude": -44.8912,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/divinopolis-mg/",
-      "siteLocalPlanejado": "/winf-select/cidades/divinopolis-mg/"
+      "siteLocalPlanejado": "/winf-select/cidades/divinopolis-mg/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "pocos-de-caldas-mg",
@@ -2251,10 +2779,14 @@
       "latitude": -21.78,
       "longitude": -46.5692,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/pocos-de-caldas-mg/",
-      "siteLocalPlanejado": "/winf-select/cidades/pocos-de-caldas-mg/"
+      "siteLocalPlanejado": "/winf-select/cidades/pocos-de-caldas-mg/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "nova-lima-mg",
@@ -2266,13 +2798,17 @@
       "latitude": -19.9758,
       "longitude": -43.8509,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Vila da Serra",
         "Vale do Sereno"
       ],
       "url": "/partners/territorios/nova-lima-mg/",
-      "siteLocalPlanejado": "/winf-select/cidades/nova-lima-mg/"
+      "siteLocalPlanejado": "/winf-select/cidades/nova-lima-mg/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "campo-grande-ms",
@@ -2284,13 +2820,17 @@
       "latitude": -20.4486,
       "longitude": -54.6295,
       "prioridadeComercial": "capital",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Jardim dos Estados",
         "Chácara Cachoeira"
       ],
       "url": "/partners/territorios/campo-grande-ms/",
-      "siteLocalPlanejado": "/winf-select/cidades/campo-grande-ms/"
+      "siteLocalPlanejado": "/winf-select/cidades/campo-grande-ms/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "dourados-ms",
@@ -2302,10 +2842,14 @@
       "latitude": -22.2231,
       "longitude": -54.812,
       "prioridadeComercial": "polo_prioritario",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/dourados-ms/",
-      "siteLocalPlanejado": "/winf-select/cidades/dourados-ms/"
+      "siteLocalPlanejado": "/winf-select/cidades/dourados-ms/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "tres-lagoas-ms",
@@ -2317,10 +2861,14 @@
       "latitude": -20.7849,
       "longitude": -51.7007,
       "prioridadeComercial": "polo_prioritario",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/tres-lagoas-ms/",
-      "siteLocalPlanejado": "/winf-select/cidades/tres-lagoas-ms/"
+      "siteLocalPlanejado": "/winf-select/cidades/tres-lagoas-ms/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "cuiaba-mt",
@@ -2332,14 +2880,18 @@
       "latitude": -15.601,
       "longitude": -56.0974,
       "prioridadeComercial": "capital",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Goiabeiras",
         "Jardim das Américas",
         "Santa Rosa"
       ],
       "url": "/partners/territorios/cuiaba-mt/",
-      "siteLocalPlanejado": "/winf-select/cidades/cuiaba-mt/"
+      "siteLocalPlanejado": "/winf-select/cidades/cuiaba-mt/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "rondonopolis-mt",
@@ -2351,10 +2903,14 @@
       "latitude": -16.4673,
       "longitude": -54.6372,
       "prioridadeComercial": "polo_prioritario",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/rondonopolis-mt/",
-      "siteLocalPlanejado": "/winf-select/cidades/rondonopolis-mt/"
+      "siteLocalPlanejado": "/winf-select/cidades/rondonopolis-mt/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "varzea-grande-mt",
@@ -2366,10 +2922,14 @@
       "latitude": -15.6458,
       "longitude": -56.1322,
       "prioridadeComercial": "polo_prioritario",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/varzea-grande-mt/",
-      "siteLocalPlanejado": "/winf-select/cidades/varzea-grande-mt/"
+      "siteLocalPlanejado": "/winf-select/cidades/varzea-grande-mt/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "sinop-mt",
@@ -2381,10 +2941,14 @@
       "latitude": -11.8604,
       "longitude": -55.5091,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/sinop-mt/",
-      "siteLocalPlanejado": "/winf-select/cidades/sinop-mt/"
+      "siteLocalPlanejado": "/winf-select/cidades/sinop-mt/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "belem-pa",
@@ -2396,14 +2960,18 @@
       "latitude": -1.4554,
       "longitude": -48.4898,
       "prioridadeComercial": "capital",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Umarizal",
         "Nazaré",
         "Batista Campos"
       ],
       "url": "/partners/territorios/belem-pa/",
-      "siteLocalPlanejado": "/winf-select/cidades/belem-pa/"
+      "siteLocalPlanejado": "/winf-select/cidades/belem-pa/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "ananindeua-pa",
@@ -2415,10 +2983,14 @@
       "latitude": -1.36391,
       "longitude": -48.3743,
       "prioridadeComercial": "polo_prioritario",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/ananindeua-pa/",
-      "siteLocalPlanejado": "/winf-select/cidades/ananindeua-pa/"
+      "siteLocalPlanejado": "/winf-select/cidades/ananindeua-pa/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "santarem-pa",
@@ -2430,10 +3002,14 @@
       "latitude": -2.43849,
       "longitude": -54.6996,
       "prioridadeComercial": "polo_prioritario",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/santarem-pa/",
-      "siteLocalPlanejado": "/winf-select/cidades/santarem-pa/"
+      "siteLocalPlanejado": "/winf-select/cidades/santarem-pa/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "joao-pessoa-pb",
@@ -2445,14 +3021,18 @@
       "latitude": -7.11509,
       "longitude": -34.8641,
       "prioridadeComercial": "capital",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Manaíra",
         "Altiplano",
         "Cabo Branco"
       ],
       "url": "/partners/territorios/joao-pessoa-pb/",
-      "siteLocalPlanejado": "/winf-select/cidades/joao-pessoa-pb/"
+      "siteLocalPlanejado": "/winf-select/cidades/joao-pessoa-pb/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "campina-grande-pb",
@@ -2464,13 +3044,17 @@
       "latitude": -7.22196,
       "longitude": -35.8731,
       "prioridadeComercial": "polo_prioritario",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Catolé",
         "Mirante"
       ],
       "url": "/partners/territorios/campina-grande-pb/",
-      "siteLocalPlanejado": "/winf-select/cidades/campina-grande-pb/"
+      "siteLocalPlanejado": "/winf-select/cidades/campina-grande-pb/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "recife-pe",
@@ -2482,14 +3066,18 @@
       "latitude": -8.04666,
       "longitude": -34.8771,
       "prioridadeComercial": "capital",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Boa Viagem",
         "Casa Forte",
         "Pina"
       ],
       "url": "/partners/territorios/recife-pe/",
-      "siteLocalPlanejado": "/winf-select/cidades/recife-pe/"
+      "siteLocalPlanejado": "/winf-select/cidades/recife-pe/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "jaboatao-dos-guararapes-pe",
@@ -2501,13 +3089,17 @@
       "latitude": -8.11298,
       "longitude": -35.015,
       "prioridadeComercial": "polo_prioritario",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Piedade",
         "Candeias"
       ],
       "url": "/partners/territorios/jaboatao-dos-guararapes-pe/",
-      "siteLocalPlanejado": "/winf-select/cidades/jaboatao-dos-guararapes-pe/"
+      "siteLocalPlanejado": "/winf-select/cidades/jaboatao-dos-guararapes-pe/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "olinda-pe",
@@ -2519,10 +3111,14 @@
       "latitude": -8.01017,
       "longitude": -34.8545,
       "prioridadeComercial": "polo_prioritario",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/olinda-pe/",
-      "siteLocalPlanejado": "/winf-select/cidades/olinda-pe/"
+      "siteLocalPlanejado": "/winf-select/cidades/olinda-pe/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "caruaru-pe",
@@ -2534,10 +3130,14 @@
       "latitude": -8.28455,
       "longitude": -35.9699,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/caruaru-pe/",
-      "siteLocalPlanejado": "/winf-select/cidades/caruaru-pe/"
+      "siteLocalPlanejado": "/winf-select/cidades/caruaru-pe/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "teresina-pi",
@@ -2549,13 +3149,17 @@
       "latitude": -5.09194,
       "longitude": -42.8034,
       "prioridadeComercial": "capital",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Jóquei",
         "Fátima"
       ],
       "url": "/partners/territorios/teresina-pi/",
-      "siteLocalPlanejado": "/winf-select/cidades/teresina-pi/"
+      "siteLocalPlanejado": "/winf-select/cidades/teresina-pi/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "parnaiba-pi",
@@ -2567,10 +3171,14 @@
       "latitude": -2.90585,
       "longitude": -41.7754,
       "prioridadeComercial": "polo_prioritario",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/parnaiba-pi/",
-      "siteLocalPlanejado": "/winf-select/cidades/parnaiba-pi/"
+      "siteLocalPlanejado": "/winf-select/cidades/parnaiba-pi/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "curitiba-pr",
@@ -2582,14 +3190,18 @@
       "latitude": -25.4195,
       "longitude": -49.2646,
       "prioridadeComercial": "capital",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Batel",
         "Ecoville",
         "Água Verde"
       ],
       "url": "/partners/territorios/curitiba-pr/",
-      "siteLocalPlanejado": "/winf-select/cidades/curitiba-pr/"
+      "siteLocalPlanejado": "/winf-select/cidades/curitiba-pr/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "londrina-pr",
@@ -2601,13 +3213,17 @@
       "latitude": -23.304,
       "longitude": -51.1691,
       "prioridadeComercial": "polo_prioritario",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Gleba Palhano",
         "Centro"
       ],
       "url": "/partners/territorios/londrina-pr/",
-      "siteLocalPlanejado": "/winf-select/cidades/londrina-pr/"
+      "siteLocalPlanejado": "/winf-select/cidades/londrina-pr/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "maringa-pr",
@@ -2619,13 +3235,17 @@
       "latitude": -23.4205,
       "longitude": -51.9333,
       "prioridadeComercial": "polo_prioritario",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Zona 7",
         "Centro"
       ],
       "url": "/partners/territorios/maringa-pr/",
-      "siteLocalPlanejado": "/winf-select/cidades/maringa-pr/"
+      "siteLocalPlanejado": "/winf-select/cidades/maringa-pr/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "cascavel-pr",
@@ -2637,10 +3257,14 @@
       "latitude": -24.9573,
       "longitude": -53.459,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/cascavel-pr/",
-      "siteLocalPlanejado": "/winf-select/cidades/cascavel-pr/"
+      "siteLocalPlanejado": "/winf-select/cidades/cascavel-pr/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "foz-do-iguacu-pr",
@@ -2652,10 +3276,14 @@
       "latitude": -25.5427,
       "longitude": -54.5827,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/foz-do-iguacu-pr/",
-      "siteLocalPlanejado": "/winf-select/cidades/foz-do-iguacu-pr/"
+      "siteLocalPlanejado": "/winf-select/cidades/foz-do-iguacu-pr/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "ponta-grossa-pr",
@@ -2667,10 +3295,14 @@
       "latitude": -25.0916,
       "longitude": -50.1668,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/ponta-grossa-pr/",
-      "siteLocalPlanejado": "/winf-select/cidades/ponta-grossa-pr/"
+      "siteLocalPlanejado": "/winf-select/cidades/ponta-grossa-pr/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "sao-jose-dos-pinhais-pr",
@@ -2682,10 +3314,14 @@
       "latitude": -25.5313,
       "longitude": -49.2031,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/sao-jose-dos-pinhais-pr/",
-      "siteLocalPlanejado": "/winf-select/cidades/sao-jose-dos-pinhais-pr/"
+      "siteLocalPlanejado": "/winf-select/cidades/sao-jose-dos-pinhais-pr/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "colombo-pr",
@@ -2697,10 +3333,14 @@
       "latitude": -25.2925,
       "longitude": -49.2262,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/colombo-pr/",
-      "siteLocalPlanejado": "/winf-select/cidades/colombo-pr/"
+      "siteLocalPlanejado": "/winf-select/cidades/colombo-pr/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "paranagua-pr",
@@ -2712,10 +3352,14 @@
       "latitude": -25.5161,
       "longitude": -48.5225,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/paranagua-pr/",
-      "siteLocalPlanejado": "/winf-select/cidades/paranagua-pr/"
+      "siteLocalPlanejado": "/winf-select/cidades/paranagua-pr/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "rio-de-janeiro-rj",
@@ -2727,7 +3371,7 @@
       "latitude": -22.9129,
       "longitude": -43.2003,
       "prioridadeComercial": "capital",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Leblon",
         "Ipanema",
@@ -2735,7 +3379,11 @@
         "Jardim Botânico"
       ],
       "url": "/partners/territorios/rio-de-janeiro-rj/",
-      "siteLocalPlanejado": "/winf-select/cidades/rio-de-janeiro-rj/"
+      "siteLocalPlanejado": "/winf-select/cidades/rio-de-janeiro-rj/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "niteroi-rj",
@@ -2747,14 +3395,18 @@
       "latitude": -22.8832,
       "longitude": -43.1034,
       "prioridadeComercial": "polo_prioritario",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Icaraí",
         "São Francisco",
         "Camboinhas"
       ],
       "url": "/partners/territorios/niteroi-rj/",
-      "siteLocalPlanejado": "/winf-select/cidades/niteroi-rj/"
+      "siteLocalPlanejado": "/winf-select/cidades/niteroi-rj/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "duque-de-caxias-rj",
@@ -2766,10 +3418,14 @@
       "latitude": -22.7858,
       "longitude": -43.3049,
       "prioridadeComercial": "polo_prioritario",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/duque-de-caxias-rj/",
-      "siteLocalPlanejado": "/winf-select/cidades/duque-de-caxias-rj/"
+      "siteLocalPlanejado": "/winf-select/cidades/duque-de-caxias-rj/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "nova-iguacu-rj",
@@ -2781,10 +3437,14 @@
       "latitude": -22.7556,
       "longitude": -43.4603,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/nova-iguacu-rj/",
-      "siteLocalPlanejado": "/winf-select/cidades/nova-iguacu-rj/"
+      "siteLocalPlanejado": "/winf-select/cidades/nova-iguacu-rj/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "petropolis-rj",
@@ -2796,13 +3456,17 @@
       "latitude": -22.52,
       "longitude": -43.1926,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Itaipava",
         "Centro"
       ],
       "url": "/partners/territorios/petropolis-rj/",
-      "siteLocalPlanejado": "/winf-select/cidades/petropolis-rj/"
+      "siteLocalPlanejado": "/winf-select/cidades/petropolis-rj/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "volta-redonda-rj",
@@ -2814,10 +3478,14 @@
       "latitude": -22.5202,
       "longitude": -44.0996,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/volta-redonda-rj/",
-      "siteLocalPlanejado": "/winf-select/cidades/volta-redonda-rj/"
+      "siteLocalPlanejado": "/winf-select/cidades/volta-redonda-rj/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "macae-rj",
@@ -2829,13 +3497,17 @@
       "latitude": -22.3768,
       "longitude": -41.7848,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Cavaleiros",
         "Glória"
       ],
       "url": "/partners/territorios/macae-rj/",
-      "siteLocalPlanejado": "/winf-select/cidades/macae-rj/"
+      "siteLocalPlanejado": "/winf-select/cidades/macae-rj/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "campos-dos-goytacazes-rj",
@@ -2847,13 +3519,17 @@
       "latitude": -21.7622,
       "longitude": -41.3181,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Pelinca",
         "Parque Tamandaré"
       ],
       "url": "/partners/territorios/campos-dos-goytacazes-rj/",
-      "siteLocalPlanejado": "/winf-select/cidades/campos-dos-goytacazes-rj/"
+      "siteLocalPlanejado": "/winf-select/cidades/campos-dos-goytacazes-rj/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "cabo-frio-rj",
@@ -2865,13 +3541,17 @@
       "latitude": -22.8894,
       "longitude": -42.0286,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Braga",
         "Passagem"
       ],
       "url": "/partners/territorios/cabo-frio-rj/",
-      "siteLocalPlanejado": "/winf-select/cidades/cabo-frio-rj/"
+      "siteLocalPlanejado": "/winf-select/cidades/cabo-frio-rj/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "armacao-dos-buzios-rj",
@@ -2883,13 +3563,17 @@
       "latitude": -22.7528,
       "longitude": -41.8846,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Geribá",
         "João Fernandes"
       ],
       "url": "/partners/territorios/armacao-dos-buzios-rj/",
-      "siteLocalPlanejado": "/winf-select/cidades/armacao-dos-buzios-rj/"
+      "siteLocalPlanejado": "/winf-select/cidades/armacao-dos-buzios-rj/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "angra-dos-reis-rj",
@@ -2901,10 +3585,14 @@
       "latitude": -23.0011,
       "longitude": -44.3196,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/angra-dos-reis-rj/",
-      "siteLocalPlanejado": "/winf-select/cidades/angra-dos-reis-rj/"
+      "siteLocalPlanejado": "/winf-select/cidades/angra-dos-reis-rj/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "resende-rj",
@@ -2916,10 +3604,14 @@
       "latitude": -22.4705,
       "longitude": -44.4509,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/resende-rj/",
-      "siteLocalPlanejado": "/winf-select/cidades/resende-rj/"
+      "siteLocalPlanejado": "/winf-select/cidades/resende-rj/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "marica-rj",
@@ -2931,13 +3623,17 @@
       "latitude": -22.9354,
       "longitude": -42.8246,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Itaipuaçu",
         "Centro"
       ],
       "url": "/partners/territorios/marica-rj/",
-      "siteLocalPlanejado": "/winf-select/cidades/marica-rj/"
+      "siteLocalPlanejado": "/winf-select/cidades/marica-rj/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "sao-goncalo-rj",
@@ -2949,10 +3645,14 @@
       "latitude": -22.8268,
       "longitude": -43.0634,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/sao-goncalo-rj/",
-      "siteLocalPlanejado": "/winf-select/cidades/sao-goncalo-rj/"
+      "siteLocalPlanejado": "/winf-select/cidades/sao-goncalo-rj/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "natal-rn",
@@ -2964,14 +3664,18 @@
       "latitude": -5.79357,
       "longitude": -35.1986,
       "prioridadeComercial": "capital",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Ponta Negra",
         "Tirol",
         "Petrópolis"
       ],
       "url": "/partners/territorios/natal-rn/",
-      "siteLocalPlanejado": "/winf-select/cidades/natal-rn/"
+      "siteLocalPlanejado": "/winf-select/cidades/natal-rn/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "mossoro-rn",
@@ -2983,10 +3687,14 @@
       "latitude": -5.18374,
       "longitude": -37.3474,
       "prioridadeComercial": "polo_prioritario",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/mossoro-rn/",
-      "siteLocalPlanejado": "/winf-select/cidades/mossoro-rn/"
+      "siteLocalPlanejado": "/winf-select/cidades/mossoro-rn/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "porto-velho-ro",
@@ -2998,10 +3706,14 @@
       "latitude": -8.76077,
       "longitude": -63.8999,
       "prioridadeComercial": "capital",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/porto-velho-ro/",
-      "siteLocalPlanejado": "/winf-select/cidades/porto-velho-ro/"
+      "siteLocalPlanejado": "/winf-select/cidades/porto-velho-ro/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "ji-parana-ro",
@@ -3013,10 +3725,14 @@
       "latitude": -10.8777,
       "longitude": -61.9322,
       "prioridadeComercial": "polo_prioritario",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/ji-parana-ro/",
-      "siteLocalPlanejado": "/winf-select/cidades/ji-parana-ro/"
+      "siteLocalPlanejado": "/winf-select/cidades/ji-parana-ro/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "boa-vista-rr",
@@ -3028,10 +3744,14 @@
       "latitude": 2.82384,
       "longitude": -60.6753,
       "prioridadeComercial": "capital",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/boa-vista-rr/",
-      "siteLocalPlanejado": "/winf-select/cidades/boa-vista-rr/"
+      "siteLocalPlanejado": "/winf-select/cidades/boa-vista-rr/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "porto-alegre-rs",
@@ -3043,14 +3763,18 @@
       "latitude": -30.0318,
       "longitude": -51.2065,
       "prioridadeComercial": "capital",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Moinhos de Vento",
         "Bela Vista",
         "Três Figueiras"
       ],
       "url": "/partners/territorios/porto-alegre-rs/",
-      "siteLocalPlanejado": "/winf-select/cidades/porto-alegre-rs/"
+      "siteLocalPlanejado": "/winf-select/cidades/porto-alegre-rs/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "caxias-do-sul-rs",
@@ -3062,13 +3786,17 @@
       "latitude": -29.1629,
       "longitude": -51.1792,
       "prioridadeComercial": "polo_prioritario",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Exposição",
         "São Pelegrino"
       ],
       "url": "/partners/territorios/caxias-do-sul-rs/",
-      "siteLocalPlanejado": "/winf-select/cidades/caxias-do-sul-rs/"
+      "siteLocalPlanejado": "/winf-select/cidades/caxias-do-sul-rs/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "canoas-rs",
@@ -3080,10 +3808,14 @@
       "latitude": -29.9128,
       "longitude": -51.1857,
       "prioridadeComercial": "polo_prioritario",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/canoas-rs/",
-      "siteLocalPlanejado": "/winf-select/cidades/canoas-rs/"
+      "siteLocalPlanejado": "/winf-select/cidades/canoas-rs/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "novo-hamburgo-rs",
@@ -3095,10 +3827,14 @@
       "latitude": -29.6875,
       "longitude": -51.1328,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/novo-hamburgo-rs/",
-      "siteLocalPlanejado": "/winf-select/cidades/novo-hamburgo-rs/"
+      "siteLocalPlanejado": "/winf-select/cidades/novo-hamburgo-rs/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "pelotas-rs",
@@ -3110,10 +3846,14 @@
       "latitude": -31.7649,
       "longitude": -52.3371,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/pelotas-rs/",
-      "siteLocalPlanejado": "/winf-select/cidades/pelotas-rs/"
+      "siteLocalPlanejado": "/winf-select/cidades/pelotas-rs/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "santa-maria-rs",
@@ -3125,10 +3865,14 @@
       "latitude": -29.6868,
       "longitude": -53.8149,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/santa-maria-rs/",
-      "siteLocalPlanejado": "/winf-select/cidades/santa-maria-rs/"
+      "siteLocalPlanejado": "/winf-select/cidades/santa-maria-rs/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "passo-fundo-rs",
@@ -3140,10 +3884,14 @@
       "latitude": -28.2576,
       "longitude": -52.4091,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/passo-fundo-rs/",
-      "siteLocalPlanejado": "/winf-select/cidades/passo-fundo-rs/"
+      "siteLocalPlanejado": "/winf-select/cidades/passo-fundo-rs/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "florianopolis-sc",
@@ -3155,14 +3903,18 @@
       "latitude": -27.5945,
       "longitude": -48.5477,
       "prioridadeComercial": "capital",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Jurerê",
         "Lagoa da Conceição",
         "Campeche"
       ],
       "url": "/partners/territorios/florianopolis-sc/",
-      "siteLocalPlanejado": "/winf-select/cidades/florianopolis-sc/"
+      "siteLocalPlanejado": "/winf-select/cidades/florianopolis-sc/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "joinville-sc",
@@ -3174,13 +3926,17 @@
       "latitude": -26.3045,
       "longitude": -48.8487,
       "prioridadeComercial": "polo_prioritario",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "América",
         "Atiradores"
       ],
       "url": "/partners/territorios/joinville-sc/",
-      "siteLocalPlanejado": "/winf-select/cidades/joinville-sc/"
+      "siteLocalPlanejado": "/winf-select/cidades/joinville-sc/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "blumenau-sc",
@@ -3192,13 +3948,17 @@
       "latitude": -26.9155,
       "longitude": -49.0709,
       "prioridadeComercial": "polo_prioritario",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Jardim Blumenau",
         "Centro"
       ],
       "url": "/partners/territorios/blumenau-sc/",
-      "siteLocalPlanejado": "/winf-select/cidades/blumenau-sc/"
+      "siteLocalPlanejado": "/winf-select/cidades/blumenau-sc/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "itajai-sc",
@@ -3210,13 +3970,17 @@
       "latitude": -26.9101,
       "longitude": -48.6705,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Fazenda",
         "Praia Brava"
       ],
       "url": "/partners/territorios/itajai-sc/",
-      "siteLocalPlanejado": "/winf-select/cidades/itajai-sc/"
+      "siteLocalPlanejado": "/winf-select/cidades/itajai-sc/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "balneario-camboriu-sc",
@@ -3228,13 +3992,17 @@
       "latitude": -26.9926,
       "longitude": -48.6352,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Barra Sul",
         "Centro"
       ],
       "url": "/partners/territorios/balneario-camboriu-sc/",
-      "siteLocalPlanejado": "/winf-select/cidades/balneario-camboriu-sc/"
+      "siteLocalPlanejado": "/winf-select/cidades/balneario-camboriu-sc/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "sao-jose-sc",
@@ -3246,10 +4014,14 @@
       "latitude": -27.6136,
       "longitude": -48.6366,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/sao-jose-sc/",
-      "siteLocalPlanejado": "/winf-select/cidades/sao-jose-sc/"
+      "siteLocalPlanejado": "/winf-select/cidades/sao-jose-sc/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "criciuma-sc",
@@ -3261,10 +4033,14 @@
       "latitude": -28.6723,
       "longitude": -49.3729,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/criciuma-sc/",
-      "siteLocalPlanejado": "/winf-select/cidades/criciuma-sc/"
+      "siteLocalPlanejado": "/winf-select/cidades/criciuma-sc/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "chapeco-sc",
@@ -3276,10 +4052,14 @@
       "latitude": -27.1004,
       "longitude": -52.6152,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/chapeco-sc/",
-      "siteLocalPlanejado": "/winf-select/cidades/chapeco-sc/"
+      "siteLocalPlanejado": "/winf-select/cidades/chapeco-sc/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "jaragua-do-sul-sc",
@@ -3291,10 +4071,14 @@
       "latitude": -26.4851,
       "longitude": -49.0713,
       "prioridadeComercial": "polo_regional",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/jaragua-do-sul-sc/",
-      "siteLocalPlanejado": "/winf-select/cidades/jaragua-do-sul-sc/"
+      "siteLocalPlanejado": "/winf-select/cidades/jaragua-do-sul-sc/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "aracaju-se",
@@ -3306,13 +4090,17 @@
       "latitude": -10.9091,
       "longitude": -37.0677,
       "prioridadeComercial": "capital",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [
         "Jardins",
         "13 de Julho"
       ],
       "url": "/partners/territorios/aracaju-se/",
-      "siteLocalPlanejado": "/winf-select/cidades/aracaju-se/"
+      "siteLocalPlanejado": "/winf-select/cidades/aracaju-se/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "nossa-senhora-do-socorro-se",
@@ -3324,10 +4112,14 @@
       "latitude": -10.8468,
       "longitude": -37.1231,
       "prioridadeComercial": "polo_prioritario",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/nossa-senhora-do-socorro-se/",
-      "siteLocalPlanejado": "/winf-select/cidades/nossa-senhora-do-socorro-se/"
+      "siteLocalPlanejado": "/winf-select/cidades/nossa-senhora-do-socorro-se/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "palmas-to",
@@ -3339,10 +4131,14 @@
       "latitude": -10.24,
       "longitude": -48.3558,
       "prioridadeComercial": "capital",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/palmas-to/",
-      "siteLocalPlanejado": "/winf-select/cidades/palmas-to/"
+      "siteLocalPlanejado": "/winf-select/cidades/palmas-to/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     },
     {
       "id": "araguaina-to",
@@ -3354,10 +4150,14 @@
       "latitude": -7.19238,
       "longitude": -48.2044,
       "prioridadeComercial": "polo_prioritario",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "bairrosParaValidar": [],
       "url": "/partners/territorios/araguaina-to/",
-      "siteLocalPlanejado": "/winf-select/cidades/araguaina-to/"
+      "siteLocalPlanejado": "/winf-select/cidades/araguaina-to/",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "statusOperacaoLocal": "aguardando_novo_operador"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "schema": "winf.partners.territorios.v1",
   "versao": "2026-11-13-proposta-1",
-  "observacao": "Seleção estratégica preliminar dos 100 municípios de SP, separada da cobertura das centrais próprias. Não equivale a contrato, reserva ou disponibilidade aprovada.",
+  "observacao": "100 territórios SP definidos pela WINF como disponíveis para comercialização WINF Asset Light™ / Turnkey. Atendimento digital ativo pela Central 013; instalação e equipe municipal sujeitas a confirmação. Titular e operador local ainda não designados.",
   "centraisProprias": [
     {
       "id": "central-013",
@@ -32,9 +32,9 @@
       "regiao": "Grande São Paulo / ABC / Alphaville",
       "cluster": "Metropolitana",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [
         "Pinheiros",
@@ -56,7 +56,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.saopaulo",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "barueri-sp",
@@ -65,9 +71,9 @@
       "regiao": "Grande São Paulo / ABC / Alphaville",
       "cluster": "Metropolitana",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [
         "Alphaville"
@@ -82,7 +88,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.barueri",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "santana-de-parnaiba-sp",
@@ -91,9 +103,9 @@
       "regiao": "Grande São Paulo / ABC / Alphaville",
       "cluster": "Metropolitana",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [
         "Tamboré",
@@ -109,7 +121,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.santanadeparnaiba",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "osasco-sp",
@@ -118,9 +136,9 @@
       "regiao": "Grande São Paulo / ABC / Alphaville",
       "cluster": "Metropolitana",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [
@@ -133,7 +151,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.osasco",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "cotia-sp",
@@ -142,9 +166,9 @@
       "regiao": "Grande São Paulo / ABC / Alphaville",
       "cluster": "Metropolitana",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [
@@ -156,7 +180,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.cotia",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "itapevi-sp",
@@ -165,9 +195,9 @@
       "regiao": "Grande São Paulo / ABC / Alphaville",
       "cluster": "Metropolitana",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -177,7 +207,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.itapevi",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "jandira-sp",
@@ -186,9 +222,9 @@
       "regiao": "Grande São Paulo / ABC / Alphaville",
       "cluster": "Metropolitana",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -198,7 +234,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.jandira",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "carapicuiba-sp",
@@ -207,9 +249,9 @@
       "regiao": "Grande São Paulo / ABC / Alphaville",
       "cluster": "Metropolitana",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -219,7 +261,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.carapicuiba",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "taboao-da-serra-sp",
@@ -228,9 +276,9 @@
       "regiao": "Grande São Paulo / ABC / Alphaville",
       "cluster": "Metropolitana",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -240,7 +288,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.taboaodaserra",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "embu-das-artes-sp",
@@ -249,9 +303,9 @@
       "regiao": "Grande São Paulo / ABC / Alphaville",
       "cluster": "Metropolitana",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -261,7 +315,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.embudasartes",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "itapecerica-da-serra-sp",
@@ -270,9 +330,9 @@
       "regiao": "Grande São Paulo / ABC / Alphaville",
       "cluster": "Metropolitana",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -282,7 +342,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.itapecericadaserra",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "sao-caetano-do-sul-sp",
@@ -291,9 +357,9 @@
       "regiao": "Grande São Paulo / ABC / Alphaville",
       "cluster": "Metropolitana",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [
@@ -306,7 +372,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.saocaetanodosul",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "santo-andre-sp",
@@ -315,9 +387,9 @@
       "regiao": "Grande São Paulo / ABC / Alphaville",
       "cluster": "Metropolitana",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [
@@ -330,7 +402,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.santoandre",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "sao-bernardo-do-campo-sp",
@@ -339,9 +417,9 @@
       "regiao": "Grande São Paulo / ABC / Alphaville",
       "cluster": "Metropolitana",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [
@@ -355,7 +433,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.saobernardodocampo",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "diadema-sp",
@@ -364,9 +448,9 @@
       "regiao": "Grande São Paulo / ABC / Alphaville",
       "cluster": "Metropolitana",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -376,7 +460,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.diadema",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "maua-sp",
@@ -385,9 +475,9 @@
       "regiao": "Grande São Paulo / ABC / Alphaville",
       "cluster": "Metropolitana",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -397,7 +487,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.maua",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "ribeirao-pires-sp",
@@ -406,9 +502,9 @@
       "regiao": "Grande São Paulo / ABC / Alphaville",
       "cluster": "Metropolitana",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -418,7 +514,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.ribeiraopires",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "guarulhos-sp",
@@ -427,9 +529,9 @@
       "regiao": "Grande São Paulo / ABC / Alphaville",
       "cluster": "Metropolitana",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [
@@ -442,7 +544,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.guarulhos",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "aruja-sp",
@@ -451,9 +559,9 @@
       "regiao": "Grande São Paulo / ABC / Alphaville",
       "cluster": "Metropolitana",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [
@@ -465,7 +573,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.aruja",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "mairipora-sp",
@@ -474,9 +588,9 @@
       "regiao": "Grande São Paulo / ABC / Alphaville",
       "cluster": "Metropolitana",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -486,7 +600,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.mairipora",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "caieiras-sp",
@@ -495,9 +615,9 @@
       "regiao": "Grande São Paulo / ABC / Alphaville",
       "cluster": "Metropolitana",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -507,7 +627,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.caieiras",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "cajamar-sp",
@@ -516,9 +642,9 @@
       "regiao": "Grande São Paulo / ABC / Alphaville",
       "cluster": "Metropolitana",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -528,7 +654,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.cajamar",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "vargem-grande-paulista-sp",
@@ -537,9 +669,9 @@
       "regiao": "Grande São Paulo / ABC / Alphaville",
       "cluster": "Metropolitana",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -549,7 +681,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.vargemgrandepaulist",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "campinas-sp",
@@ -558,9 +696,9 @@
       "regiao": "Campinas / Jundiaí / Piracicaba",
       "cluster": "Campinas",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [
@@ -575,7 +713,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.campinas",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "valinhos-sp",
@@ -584,9 +728,9 @@
       "regiao": "Campinas / Jundiaí / Piracicaba",
       "cluster": "Campinas",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [
@@ -598,7 +742,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.valinhos",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "vinhedo-sp",
@@ -607,9 +757,9 @@
       "regiao": "Campinas / Jundiaí / Piracicaba",
       "cluster": "Campinas",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [
@@ -621,7 +771,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.vinhedo",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "indaiatuba-sp",
@@ -630,9 +786,9 @@
       "regiao": "Campinas / Jundiaí / Piracicaba",
       "cluster": "Campinas",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [
@@ -645,7 +801,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.indaiatuba",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "paulinia-sp",
@@ -654,9 +816,9 @@
       "regiao": "Campinas / Jundiaí / Piracicaba",
       "cluster": "Campinas",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -666,7 +828,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.paulinia",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "americana-sp",
@@ -675,9 +843,9 @@
       "regiao": "Campinas / Jundiaí / Piracicaba",
       "cluster": "Campinas",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [
@@ -689,7 +857,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.americana",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "santa-barbara-d-oeste-sp",
@@ -698,9 +872,9 @@
       "regiao": "Campinas / Jundiaí / Piracicaba",
       "cluster": "Campinas",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -710,7 +884,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.santabarbaradoeste",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "nova-odessa-sp",
@@ -719,9 +899,9 @@
       "regiao": "Campinas / Jundiaí / Piracicaba",
       "cluster": "Campinas",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -731,7 +911,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.novaodessa",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "sumare-sp",
@@ -740,9 +926,9 @@
       "regiao": "Campinas / Jundiaí / Piracicaba",
       "cluster": "Campinas",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -752,7 +938,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.sumare",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "hortolandia-sp",
@@ -761,9 +953,9 @@
       "regiao": "Campinas / Jundiaí / Piracicaba",
       "cluster": "Campinas",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -773,7 +965,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.hortolandia",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "jaguariuna-sp",
@@ -782,9 +980,9 @@
       "regiao": "Campinas / Jundiaí / Piracicaba",
       "cluster": "Campinas",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [
@@ -796,7 +994,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.jaguariuna",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "holambra-sp",
@@ -805,9 +1009,9 @@
       "regiao": "Campinas / Jundiaí / Piracicaba",
       "cluster": "Campinas",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -817,7 +1021,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.holambra",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "pedreira-sp",
@@ -826,9 +1036,9 @@
       "regiao": "Campinas / Jundiaí / Piracicaba",
       "cluster": "Campinas",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -838,7 +1048,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.pedreira",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "cosmopolis-sp",
@@ -847,9 +1063,9 @@
       "regiao": "Campinas / Jundiaí / Piracicaba",
       "cluster": "Campinas",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -859,7 +1075,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.cosmopolis",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "artur-nogueira-sp",
@@ -868,9 +1090,9 @@
       "regiao": "Campinas / Jundiaí / Piracicaba",
       "cluster": "Campinas",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -880,7 +1102,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.arturnogueira",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "piracicaba-sp",
@@ -889,9 +1117,9 @@
       "regiao": "Campinas / Jundiaí / Piracicaba",
       "cluster": "Campinas",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [
@@ -904,7 +1132,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.piracicaba",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "limeira-sp",
@@ -913,9 +1147,9 @@
       "regiao": "Campinas / Jundiaí / Piracicaba",
       "cluster": "Campinas",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -925,7 +1159,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.limeira",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "rio-claro-sp",
@@ -934,9 +1174,9 @@
       "regiao": "Campinas / Jundiaí / Piracicaba",
       "cluster": "Campinas",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -946,7 +1186,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.rioclaro",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "araras-sp",
@@ -955,9 +1201,9 @@
       "regiao": "Campinas / Jundiaí / Piracicaba",
       "cluster": "Campinas",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -967,7 +1213,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.araras",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "cordeiropolis-sp",
@@ -976,9 +1228,9 @@
       "regiao": "Campinas / Jundiaí / Piracicaba",
       "cluster": "Campinas",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -988,7 +1240,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.cordeiropolis",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "jundiai-sp",
@@ -997,9 +1255,9 @@
       "regiao": "Campinas / Jundiaí / Piracicaba",
       "cluster": "Campinas",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [
@@ -1013,7 +1271,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.jundiai",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "itupeva-sp",
@@ -1022,9 +1286,9 @@
       "regiao": "Campinas / Jundiaí / Piracicaba",
       "cluster": "Campinas",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -1034,7 +1298,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.itupeva",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "louveira-sp",
@@ -1043,9 +1313,9 @@
       "regiao": "Campinas / Jundiaí / Piracicaba",
       "cluster": "Campinas",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -1055,7 +1325,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.louveira",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "itatiba-sp",
@@ -1064,9 +1340,9 @@
       "regiao": "Campinas / Jundiaí / Piracicaba",
       "cluster": "Campinas",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -1076,7 +1352,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.itatiba",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "campo-limpo-paulista-sp",
@@ -1085,9 +1367,9 @@
       "regiao": "Campinas / Jundiaí / Piracicaba",
       "cluster": "Campinas",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -1097,7 +1379,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.campolimpopaulista",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "atibaia-sp",
@@ -1106,9 +1394,9 @@
       "regiao": "Bragantina / Circuito das Águas",
       "cluster": "Bragantina",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [
@@ -1121,7 +1409,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.atibaia",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "braganca-paulista-sp",
@@ -1130,9 +1424,9 @@
       "regiao": "Bragantina / Circuito das Águas",
       "cluster": "Bragantina",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -1142,7 +1436,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.bragancapaulista",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "amparo-sp",
@@ -1151,9 +1451,9 @@
       "regiao": "Bragantina / Circuito das Águas",
       "cluster": "Bragantina",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -1163,7 +1463,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.amparo",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "serra-negra-sp",
@@ -1172,9 +1478,9 @@
       "regiao": "Bragantina / Circuito das Águas",
       "cluster": "Bragantina",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -1184,7 +1490,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.serranegra",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "socorro-sp",
@@ -1193,9 +1505,9 @@
       "regiao": "Bragantina / Circuito das Águas",
       "cluster": "Bragantina",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -1205,7 +1517,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.socorro",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "aguas-de-lindoia-sp",
@@ -1214,9 +1532,9 @@
       "regiao": "Bragantina / Circuito das Águas",
       "cluster": "Bragantina",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -1226,7 +1544,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.aguasdelindoia",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "mogi-guacu-sp",
@@ -1235,9 +1559,9 @@
       "regiao": "Bragantina / Circuito das Águas",
       "cluster": "Bragantina",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -1247,7 +1571,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.mogiguacu",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "mogi-mirim-sp",
@@ -1256,9 +1586,9 @@
       "regiao": "Bragantina / Circuito das Águas",
       "cluster": "Bragantina",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -1268,7 +1598,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.mogimirim",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "sao-joao-da-boa-vista-sp",
@@ -1277,9 +1613,9 @@
       "regiao": "Bragantina / Circuito das Águas",
       "cluster": "Bragantina",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -1289,7 +1625,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.saojoaodaboavista",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "sao-jose-dos-campos-sp",
@@ -1298,9 +1640,9 @@
       "regiao": "Vale do Paraíba / Litoral Norte",
       "cluster": "Vale",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [
@@ -1314,7 +1656,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.saojosedoscampos",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "jacarei-sp",
@@ -1323,9 +1671,9 @@
       "regiao": "Vale do Paraíba / Litoral Norte",
       "cluster": "Vale",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -1335,7 +1683,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.jacarei",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "taubate-sp",
@@ -1344,9 +1698,9 @@
       "regiao": "Vale do Paraíba / Litoral Norte",
       "cluster": "Vale",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [
@@ -1359,7 +1713,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.taubate",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "cacapava-sp",
@@ -1368,9 +1728,9 @@
       "regiao": "Vale do Paraíba / Litoral Norte",
       "cluster": "Vale",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -1380,7 +1740,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.cacapava",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "pindamonhangaba-sp",
@@ -1389,9 +1755,9 @@
       "regiao": "Vale do Paraíba / Litoral Norte",
       "cluster": "Vale",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -1401,7 +1767,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.pindamonhangaba",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "tremembe-sp",
@@ -1410,9 +1782,9 @@
       "regiao": "Vale do Paraíba / Litoral Norte",
       "cluster": "Vale",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -1422,7 +1794,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.tremembe",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "guaratingueta-sp",
@@ -1431,9 +1809,9 @@
       "regiao": "Vale do Paraíba / Litoral Norte",
       "cluster": "Vale",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -1443,7 +1821,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.guaratingueta",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "lorena-sp",
@@ -1452,9 +1836,9 @@
       "regiao": "Vale do Paraíba / Litoral Norte",
       "cluster": "Vale",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -1464,7 +1848,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.lorena",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "cruzeiro-sp",
@@ -1473,9 +1863,9 @@
       "regiao": "Vale do Paraíba / Litoral Norte",
       "cluster": "Vale",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -1485,7 +1875,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.cruzeiro",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "campos-do-jordao-sp",
@@ -1494,9 +1890,9 @@
       "regiao": "Vale do Paraíba / Litoral Norte",
       "cluster": "Vale",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [
@@ -1509,7 +1905,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.camposdojordao",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "caraguatatuba-sp",
@@ -1518,9 +1920,9 @@
       "regiao": "Vale do Paraíba / Litoral Norte",
       "cluster": "Vale",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [
@@ -1533,7 +1935,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.caraguatatuba",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "sao-sebastiao-sp",
@@ -1542,9 +1950,9 @@
       "regiao": "Vale do Paraíba / Litoral Norte",
       "cluster": "Vale",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [
@@ -1557,7 +1965,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.saosebastiao",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "ilhabela-sp",
@@ -1566,9 +1980,9 @@
       "regiao": "Vale do Paraíba / Litoral Norte",
       "cluster": "Vale",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [
@@ -1581,7 +1995,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.ilhabela",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "ubatuba-sp",
@@ -1590,9 +2010,9 @@
       "regiao": "Vale do Paraíba / Litoral Norte",
       "cluster": "Vale",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [
@@ -1605,7 +2025,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.ubatuba",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "aparecida-sp",
@@ -1614,9 +2040,9 @@
       "regiao": "Vale do Paraíba / Litoral Norte",
       "cluster": "Vale",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -1626,7 +2052,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.aparecida",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "ribeirao-preto-sp",
@@ -1635,9 +2067,9 @@
       "regiao": "Ribeirão Preto / Araraquara / Franca",
       "cluster": "Norte",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [
@@ -1650,7 +2082,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.ribeiraopreto",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "sertaozinho-sp",
@@ -1659,9 +2097,9 @@
       "regiao": "Ribeirão Preto / Araraquara / Franca",
       "cluster": "Norte",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -1671,7 +2109,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.sertaozinho",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "franca-sp",
@@ -1680,9 +2124,9 @@
       "regiao": "Ribeirão Preto / Araraquara / Franca",
       "cluster": "Norte",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -1692,7 +2136,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.franca",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "batatais-sp",
@@ -1701,9 +2151,9 @@
       "regiao": "Ribeirão Preto / Araraquara / Franca",
       "cluster": "Norte",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -1713,7 +2163,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.batatais",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "barretos-sp",
@@ -1722,9 +2178,9 @@
       "regiao": "Ribeirão Preto / Araraquara / Franca",
       "cluster": "Norte",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -1734,7 +2190,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.barretos",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "olimpia-sp",
@@ -1743,9 +2205,9 @@
       "regiao": "Ribeirão Preto / Araraquara / Franca",
       "cluster": "Norte",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -1755,7 +2217,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.olimpia",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "bebedouro-sp",
@@ -1764,9 +2232,9 @@
       "regiao": "Ribeirão Preto / Araraquara / Franca",
       "cluster": "Norte",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -1776,7 +2244,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.bebedouro",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "jaboticabal-sp",
@@ -1785,9 +2259,9 @@
       "regiao": "Ribeirão Preto / Araraquara / Franca",
       "cluster": "Norte",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -1797,7 +2271,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.jaboticabal",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "sao-joaquim-da-barra-sp",
@@ -1806,9 +2286,9 @@
       "regiao": "Ribeirão Preto / Araraquara / Franca",
       "cluster": "Norte",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -1818,7 +2298,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.saojoaquimdabarra",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "araraquara-sp",
@@ -1827,9 +2313,9 @@
       "regiao": "Ribeirão Preto / Araraquara / Franca",
       "cluster": "Norte",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [
@@ -1841,7 +2327,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.araraquara",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "sao-carlos-sp",
@@ -1850,9 +2342,9 @@
       "regiao": "Ribeirão Preto / Araraquara / Franca",
       "cluster": "Norte",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [
@@ -1864,7 +2356,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.saocarlos",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "matao-sp",
@@ -1873,9 +2371,9 @@
       "regiao": "Ribeirão Preto / Araraquara / Franca",
       "cluster": "Norte",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -1885,7 +2383,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.matao",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "mococa-sp",
@@ -1894,9 +2398,9 @@
       "regiao": "Ribeirão Preto / Araraquara / Franca",
       "cluster": "Norte",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -1906,7 +2410,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.mococa",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "orlandia-sp",
@@ -1915,9 +2425,9 @@
       "regiao": "Ribeirão Preto / Araraquara / Franca",
       "cluster": "Norte",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -1927,7 +2437,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.orlandia",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "monte-alto-sp",
@@ -1936,9 +2452,9 @@
       "regiao": "Ribeirão Preto / Araraquara / Franca",
       "cluster": "Norte",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -1948,7 +2464,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.montealto",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "sao-jose-do-rio-preto-sp",
@@ -1957,9 +2479,9 @@
       "regiao": "Noroeste / Centro-Oeste paulista",
       "cluster": "Oeste",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [
@@ -1972,7 +2494,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.saojosedoriopreto",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "mirassol-sp",
@@ -1981,9 +2509,9 @@
       "regiao": "Noroeste / Centro-Oeste paulista",
       "cluster": "Oeste",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -1993,7 +2521,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.mirassol",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "catanduva-sp",
@@ -2002,9 +2536,9 @@
       "regiao": "Noroeste / Centro-Oeste paulista",
       "cluster": "Oeste",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -2014,7 +2548,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.catanduva",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "votuporanga-sp",
@@ -2023,9 +2563,9 @@
       "regiao": "Noroeste / Centro-Oeste paulista",
       "cluster": "Oeste",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -2035,7 +2575,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.votuporanga",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "aracatuba-sp",
@@ -2044,9 +2590,9 @@
       "regiao": "Noroeste / Centro-Oeste paulista",
       "cluster": "Oeste",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [
@@ -2058,7 +2604,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.aracatuba",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "birigui-sp",
@@ -2067,9 +2619,9 @@
       "regiao": "Noroeste / Centro-Oeste paulista",
       "cluster": "Oeste",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -2079,7 +2631,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.birigui",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "bauru-sp",
@@ -2088,9 +2646,9 @@
       "regiao": "Noroeste / Centro-Oeste paulista",
       "cluster": "Oeste",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [
@@ -2103,7 +2661,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.bauru",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "jau-sp",
@@ -2112,9 +2676,9 @@
       "regiao": "Noroeste / Centro-Oeste paulista",
       "cluster": "Oeste",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -2124,7 +2688,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.jau",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "botucatu-sp",
@@ -2133,9 +2703,9 @@
       "regiao": "Noroeste / Centro-Oeste paulista",
       "cluster": "Oeste",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -2145,7 +2715,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.botucatu",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "marilia-sp",
@@ -2154,9 +2730,9 @@
       "regiao": "Noroeste / Centro-Oeste paulista",
       "cluster": "Oeste",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [
@@ -2168,7 +2744,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.marilia",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "assis-sp",
@@ -2177,9 +2759,9 @@
       "regiao": "Noroeste / Centro-Oeste paulista",
       "cluster": "Oeste",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -2189,7 +2771,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.assis",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "presidente-prudente-sp",
@@ -2198,9 +2786,9 @@
       "regiao": "Noroeste / Centro-Oeste paulista",
       "cluster": "Oeste",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [
@@ -2212,7 +2800,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.presidenteprudente",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     },
     {
       "id": "ourinhos-sp",
@@ -2221,9 +2815,9 @@
       "regiao": "Noroeste / Centro-Oeste paulista",
       "cluster": "Oeste",
       "operacao": "nao_ativa",
-      "statusExclusividade": "em_validacao",
+      "statusExclusividade": "disponivel",
       "aberturaInteresse": true,
-      "disponibilidadeConfirmada": false,
+      "disponibilidadeConfirmada": true,
       "escopo": "municipio",
       "aliases": [],
       "bairrosParaValidar": [],
@@ -2233,7 +2827,13 @@
       "instagramOficial": "winf.ofc",
       "instagramLocalPlanejado": "winfselect.ourinhos",
       "instagramLocalVerificado": false,
-      "whatsappInativos": "5513981113001"
+      "whatsappInativos": "5513981113001",
+      "statusComercial": "disponivel_para_licenciamento",
+      "statusAtendimentoDigital": "ativo",
+      "statusOperacaoLocal": "aguardando_novo_operador",
+      "modeloLicenciamento": "WINF Asset Light™",
+      "formatoEntrega": "Turnkey",
+      "whatsappCentral": "5513981113001"
     }
   ]
 }

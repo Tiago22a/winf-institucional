@@ -9,7 +9,7 @@
   const normalize=s=>String(s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().trim();
   const el=(tag,cls,text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=text;return n;};
   const labels={
-    disponivel:["Disponível para candidatura","available"],
+    disponivel:["Disponível para licenciamento","available"],
     em_validacao:["Em avaliação territorial","pending"],
     reservado:["Em reserva formal","reserved"],
     licenciado:["Licenciado · indisponível","licensed"]
@@ -36,13 +36,13 @@
     a.append(el("div","status "+st[1],st[0]));
     a.append(el("h3","",t.municipio+" / "+t.uf));
     a.append(el("p","",t.aberturaInteresse?
-      "Recebendo manifestações de interesse. Exclusividade e condições sujeitas à confirmação pela expansão.":
+      "Território WINF Asset Light™ / Turnkey disponível para contratação. Atendimento digital WINF ativo; operador local em seleção. Condições e exclusividade após contrato.":
       "Consulte as condições de candidatura."));
     if(t.bairrosParaValidar?.length)a.append(el("p","neighborhood-hint","Bairros em pesquisa: "+t.bairrosParaValidar.slice(0,3).join(", ")+". "));
     a.append(link("Ver ficha territorial ↗","/partners/territorios/"+encodeURIComponent(t.id)+"/"));
     a.append(el("span","territory-detail-divider"," · "));
     a.append(link("Site WINF Select™ ↗","/winf-select/cidades/"+encodeURIComponent(t.id)+"/"));
-    if(t.operacao==="nao_ativa"){
+    if(t.statusAtendimentoDigital==="ativo"){
       const wa="Olá! Vim pela vitrine WINF. Tenho interesse em "+t.municipio+"/"+t.uf+" (território "+t.id+"). Preciso de informações sobre disponibilidade de atendimento e expansão.";
       const links=el("div","city-links"),w=link("WhatsApp Central 013 ↗","https://wa.me/5513981113001?text="+encodeURIComponent(wa));
       w.target="_blank";w.rel="noopener noreferrer";links.append(w);
