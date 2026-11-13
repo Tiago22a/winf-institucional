@@ -43,3 +43,20 @@ test("CRM lista exatamente 200 rotas locais sem declarar publicação",()=>{
  for(const row of rows){assert.equal(row[site],"/winf-select/cidades/"+row[id]+"/");assert.equal(row[publish],"nao");assert.equal(row[robots],"noindex,follow");}
 });
 test("vitrine mostra link para os 200 sites",()=>{assert.match(read("partners/territorios/territorios.js"),/Site WINF Select™/);assert.doesNotThrow(()=>new Function(read("js/winf-select-territory.js")));});
+
+test("200 contatos provisórios são centralizados na Central 013",()=>{
+ const cfg=JSON.parse(read("config/winf-territory-contacts.json")),h=new Set();
+ assert.equal(cfg.territorios.length,200);assert.equal(cfg.whatsappInativos,"5513981113001");
+ assert.equal(cfg.instagramOficial,"winf.ofc");
+ for(const c of cfg.territorios){
+  assert.equal(c.statusOperacional,"inativo");assert.equal(c.instagramLocalVerificado,false);
+  assert.ok(/^winfselect\.[a-z0-9._]+$/.test(c.instagramLocalPlanejado));
+  assert.ok(c.instagramLocalPlanejado.length<=30&&!h.has(c.instagramLocalPlanejado));
+  h.add(c.instagramLocalPlanejado);
+ }
+ const s=read("js/winf-select-territory.js"),l=read("partners/territorios/territorios.js");
+ assert.ok(s.includes("https://wa.me/")&&s.includes("5513981113001"));
+ assert.ok(s.includes("winf-territory-contacts.json")&&s.includes("www.instagram.com/winf.ofc"));
+ assert.ok(l.includes("WhatsApp Central 013"));
+ assert.doesNotThrow(()=>new Function(s));
+});

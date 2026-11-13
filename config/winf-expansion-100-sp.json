@@ -52,7 +52,11 @@
       ],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/sao-paulo-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.saopaulo",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "barueri-sp",
@@ -74,7 +78,11 @@
       ],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/barueri-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.barueri",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "santana-de-parnaiba-sp",
@@ -97,7 +105,11 @@
       ],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/santana-de-parnaiba-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.santanadeparnaiba",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "osasco-sp",
@@ -117,7 +129,11 @@
       ],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/osasco-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.osasco",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "cotia-sp",
@@ -136,7 +152,11 @@
       ],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/cotia-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.cotia",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "itapevi-sp",
@@ -153,7 +173,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/itapevi-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.itapevi",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "jandira-sp",
@@ -170,7 +194,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/jandira-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.jandira",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "carapicuiba-sp",
@@ -187,7 +215,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/carapicuiba-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.carapicuiba",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "taboao-da-serra-sp",
@@ -204,7 +236,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/taboao-da-serra-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.taboaodaserra",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "embu-das-artes-sp",
@@ -221,7 +257,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/embu-das-artes-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.embudasartes",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "itapecerica-da-serra-sp",
@@ -238,7 +278,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/itapecerica-da-serra-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.itapecericadaserra",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "sao-caetano-do-sul-sp",
@@ -258,7 +302,11 @@
       ],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/sao-caetano-do-sul-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.saocaetanodosul",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "santo-andre-sp",
@@ -278,7 +326,11 @@
       ],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/santo-andre-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.santoandre",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "sao-bernardo-do-campo-sp",
@@ -299,7 +351,11 @@
       ],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/sao-bernardo-do-campo-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.saobernardodocampo",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "diadema-sp",
@@ -316,7 +372,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/diadema-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.diadema",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "maua-sp",
@@ -333,7 +393,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/maua-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.maua",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "ribeirao-pires-sp",
@@ -350,7 +414,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/ribeirao-pires-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.ribeiraopires",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "guarulhos-sp",
@@ -370,7 +438,11 @@
       ],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/guarulhos-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.guarulhos",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "aruja-sp",
@@ -389,7 +461,11 @@
       ],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/aruja-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.aruja",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "mairipora-sp",
@@ -406,7 +482,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/mairipora-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.mairipora",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "caieiras-sp",
@@ -423,7 +503,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/caieiras-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.caieiras",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "cajamar-sp",
@@ -440,7 +524,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/cajamar-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.cajamar",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "vargem-grande-paulista-sp",
@@ -457,7 +545,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/vargem-grande-paulista-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.vargemgrandepaulist",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "campinas-sp",
@@ -479,7 +571,11 @@
       ],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/campinas-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.campinas",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "valinhos-sp",
@@ -498,7 +594,11 @@
       ],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/valinhos-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.valinhos",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "vinhedo-sp",
@@ -517,7 +617,11 @@
       ],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/vinhedo-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.vinhedo",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "indaiatuba-sp",
@@ -537,7 +641,11 @@
       ],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/indaiatuba-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.indaiatuba",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "paulinia-sp",
@@ -554,7 +662,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/paulinia-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.paulinia",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "americana-sp",
@@ -573,7 +685,11 @@
       ],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/americana-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.americana",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "santa-barbara-d-oeste-sp",
@@ -590,7 +706,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/santa-barbara-d-oeste-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.santabarbaradoeste",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "nova-odessa-sp",
@@ -607,7 +727,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/nova-odessa-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.novaodessa",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "sumare-sp",
@@ -624,7 +748,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/sumare-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.sumare",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "hortolandia-sp",
@@ -641,7 +769,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/hortolandia-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.hortolandia",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "jaguariuna-sp",
@@ -660,7 +792,11 @@
       ],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/jaguariuna-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.jaguariuna",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "holambra-sp",
@@ -677,7 +813,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/holambra-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.holambra",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "pedreira-sp",
@@ -694,7 +834,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/pedreira-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.pedreira",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "cosmopolis-sp",
@@ -711,7 +855,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/cosmopolis-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.cosmopolis",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "artur-nogueira-sp",
@@ -728,7 +876,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/artur-nogueira-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.arturnogueira",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "piracicaba-sp",
@@ -748,7 +900,11 @@
       ],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/piracicaba-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.piracicaba",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "limeira-sp",
@@ -765,7 +921,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/limeira-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.limeira",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "rio-claro-sp",
@@ -782,7 +942,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/rio-claro-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.rioclaro",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "araras-sp",
@@ -799,7 +963,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/araras-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.araras",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "cordeiropolis-sp",
@@ -816,7 +984,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/cordeiropolis-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.cordeiropolis",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "jundiai-sp",
@@ -837,7 +1009,11 @@
       ],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/jundiai-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.jundiai",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "itupeva-sp",
@@ -854,7 +1030,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/itupeva-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.itupeva",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "louveira-sp",
@@ -871,7 +1051,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/louveira-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.louveira",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "itatiba-sp",
@@ -888,7 +1072,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/itatiba-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.itatiba",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "campo-limpo-paulista-sp",
@@ -905,7 +1093,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/campo-limpo-paulista-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.campolimpopaulista",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "atibaia-sp",
@@ -925,7 +1117,11 @@
       ],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/atibaia-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.atibaia",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "braganca-paulista-sp",
@@ -942,7 +1138,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/braganca-paulista-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.bragancapaulista",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "amparo-sp",
@@ -959,7 +1159,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/amparo-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.amparo",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "serra-negra-sp",
@@ -976,7 +1180,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/serra-negra-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.serranegra",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "socorro-sp",
@@ -993,7 +1201,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/socorro-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.socorro",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "aguas-de-lindoia-sp",
@@ -1010,7 +1222,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/aguas-de-lindoia-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.aguasdelindoia",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "mogi-guacu-sp",
@@ -1027,7 +1243,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/mogi-guacu-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.mogiguacu",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "mogi-mirim-sp",
@@ -1044,7 +1264,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/mogi-mirim-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.mogimirim",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "sao-joao-da-boa-vista-sp",
@@ -1061,7 +1285,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/sao-joao-da-boa-vista-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.saojoaodaboavista",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "sao-jose-dos-campos-sp",
@@ -1082,7 +1310,11 @@
       ],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/sao-jose-dos-campos-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.saojosedoscampos",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "jacarei-sp",
@@ -1099,7 +1331,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/jacarei-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.jacarei",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "taubate-sp",
@@ -1119,7 +1355,11 @@
       ],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/taubate-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.taubate",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "cacapava-sp",
@@ -1136,7 +1376,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/cacapava-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.cacapava",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "pindamonhangaba-sp",
@@ -1153,7 +1397,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/pindamonhangaba-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.pindamonhangaba",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "tremembe-sp",
@@ -1170,7 +1418,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/tremembe-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.tremembe",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "guaratingueta-sp",
@@ -1187,7 +1439,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/guaratingueta-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.guaratingueta",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "lorena-sp",
@@ -1204,7 +1460,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/lorena-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.lorena",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "cruzeiro-sp",
@@ -1221,7 +1481,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/cruzeiro-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.cruzeiro",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "campos-do-jordao-sp",
@@ -1241,7 +1505,11 @@
       ],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/campos-do-jordao-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.camposdojordao",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "caraguatatuba-sp",
@@ -1261,7 +1529,11 @@
       ],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/caraguatatuba-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.caraguatatuba",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "sao-sebastiao-sp",
@@ -1281,7 +1553,11 @@
       ],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/sao-sebastiao-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.saosebastiao",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "ilhabela-sp",
@@ -1301,7 +1577,11 @@
       ],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/ilhabela-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.ilhabela",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "ubatuba-sp",
@@ -1321,7 +1601,11 @@
       ],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/ubatuba-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.ubatuba",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "aparecida-sp",
@@ -1338,7 +1622,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/aparecida-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.aparecida",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "ribeirao-preto-sp",
@@ -1358,7 +1646,11 @@
       ],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/ribeirao-preto-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.ribeiraopreto",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "sertaozinho-sp",
@@ -1375,7 +1667,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/sertaozinho-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.sertaozinho",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "franca-sp",
@@ -1392,7 +1688,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/franca-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.franca",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "batatais-sp",
@@ -1409,7 +1709,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/batatais-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.batatais",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "barretos-sp",
@@ -1426,7 +1730,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/barretos-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.barretos",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "olimpia-sp",
@@ -1443,7 +1751,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/olimpia-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.olimpia",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "bebedouro-sp",
@@ -1460,7 +1772,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/bebedouro-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.bebedouro",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "jaboticabal-sp",
@@ -1477,7 +1793,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/jaboticabal-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.jaboticabal",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "sao-joaquim-da-barra-sp",
@@ -1494,7 +1814,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/sao-joaquim-da-barra-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.saojoaquimdabarra",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "araraquara-sp",
@@ -1513,7 +1837,11 @@
       ],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/araraquara-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.araraquara",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "sao-carlos-sp",
@@ -1532,7 +1860,11 @@
       ],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/sao-carlos-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.saocarlos",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "matao-sp",
@@ -1549,7 +1881,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/matao-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.matao",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "mococa-sp",
@@ -1566,7 +1902,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/mococa-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.mococa",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "orlandia-sp",
@@ -1583,7 +1923,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/orlandia-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.orlandia",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "monte-alto-sp",
@@ -1600,7 +1944,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/monte-alto-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.montealto",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "sao-jose-do-rio-preto-sp",
@@ -1620,7 +1968,11 @@
       ],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/sao-jose-do-rio-preto-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.saojosedoriopreto",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "mirassol-sp",
@@ -1637,7 +1989,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/mirassol-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.mirassol",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "catanduva-sp",
@@ -1654,7 +2010,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/catanduva-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.catanduva",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "votuporanga-sp",
@@ -1671,7 +2031,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/votuporanga-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.votuporanga",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "aracatuba-sp",
@@ -1690,7 +2054,11 @@
       ],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/aracatuba-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.aracatuba",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "birigui-sp",
@@ -1707,7 +2075,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/birigui-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.birigui",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "bauru-sp",
@@ -1727,7 +2099,11 @@
       ],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/bauru-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.bauru",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "jau-sp",
@@ -1744,7 +2120,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/jau-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.jau",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "botucatu-sp",
@@ -1761,7 +2141,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/botucatu-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.botucatu",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "marilia-sp",
@@ -1780,7 +2164,11 @@
       ],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/marilia-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.marilia",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "assis-sp",
@@ -1797,7 +2185,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/assis-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.assis",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "presidente-prudente-sp",
@@ -1816,7 +2208,11 @@
       ],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/presidente-prudente-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.presidenteprudente",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "ourinhos-sp",
@@ -1833,7 +2229,11 @@
       "bairrosParaValidar": [],
       "statusPesquisaBairros": "pendente_validacao_local",
       "siteLocalPlanejado": "/winf-select/cidades/ourinhos-sp/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.ourinhos",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     }
   ]
 }

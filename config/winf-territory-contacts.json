@@ -1,0 +1,1809 @@
+{
+  "schema": "winf.partners.contacts.v1",
+  "whatsappInativos": "5513981113001",
+  "instagramOficial": "winf.ofc",
+  "instagramOficialUrl": "https://www.instagram.com/winf.ofc/",
+  "observacao": "Perfis locais são nomes propostos, sem comprovação de titularidade ou ativação. Os 200 territórios estão inativos na expansão; manter contato via central 013 até homologação.",
+  "territorios": [
+    {
+      "id": "sao-paulo-sp",
+      "municipio": "São Paulo",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.saopaulo",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "barueri-sp",
+      "municipio": "Barueri",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.barueri",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "santana-de-parnaiba-sp",
+      "municipio": "Santana de Parnaíba",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.santanadeparnaiba",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "osasco-sp",
+      "municipio": "Osasco",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.osasco",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "cotia-sp",
+      "municipio": "Cotia",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.cotia",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "itapevi-sp",
+      "municipio": "Itapevi",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.itapevi",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "jandira-sp",
+      "municipio": "Jandira",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.jandira",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "carapicuiba-sp",
+      "municipio": "Carapicuíba",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.carapicuiba",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "taboao-da-serra-sp",
+      "municipio": "Taboão da Serra",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.taboaodaserra",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "embu-das-artes-sp",
+      "municipio": "Embu das Artes",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.embudasartes",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "itapecerica-da-serra-sp",
+      "municipio": "Itapecerica da Serra",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.itapecericadaserra",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "sao-caetano-do-sul-sp",
+      "municipio": "São Caetano do Sul",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.saocaetanodosul",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "santo-andre-sp",
+      "municipio": "Santo André",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.santoandre",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "sao-bernardo-do-campo-sp",
+      "municipio": "São Bernardo do Campo",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.saobernardodocampo",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "diadema-sp",
+      "municipio": "Diadema",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.diadema",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "maua-sp",
+      "municipio": "Mauá",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.maua",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "ribeirao-pires-sp",
+      "municipio": "Ribeirão Pires",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.ribeiraopires",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "guarulhos-sp",
+      "municipio": "Guarulhos",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.guarulhos",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "aruja-sp",
+      "municipio": "Arujá",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.aruja",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "mairipora-sp",
+      "municipio": "Mairiporã",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.mairipora",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "caieiras-sp",
+      "municipio": "Caieiras",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.caieiras",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "cajamar-sp",
+      "municipio": "Cajamar",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.cajamar",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "vargem-grande-paulista-sp",
+      "municipio": "Vargem Grande Paulista",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.vargemgrandepaulist",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "campinas-sp",
+      "municipio": "Campinas",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.campinas",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "valinhos-sp",
+      "municipio": "Valinhos",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.valinhos",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "vinhedo-sp",
+      "municipio": "Vinhedo",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.vinhedo",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "indaiatuba-sp",
+      "municipio": "Indaiatuba",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.indaiatuba",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "paulinia-sp",
+      "municipio": "Paulínia",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.paulinia",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "americana-sp",
+      "municipio": "Americana",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.americana",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "santa-barbara-d-oeste-sp",
+      "municipio": "Santa Bárbara d'Oeste",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.santabarbaradoeste",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "nova-odessa-sp",
+      "municipio": "Nova Odessa",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.novaodessa",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "sumare-sp",
+      "municipio": "Sumaré",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.sumare",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "hortolandia-sp",
+      "municipio": "Hortolândia",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.hortolandia",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "jaguariuna-sp",
+      "municipio": "Jaguariúna",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.jaguariuna",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "holambra-sp",
+      "municipio": "Holambra",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.holambra",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "pedreira-sp",
+      "municipio": "Pedreira",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.pedreira",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "cosmopolis-sp",
+      "municipio": "Cosmópolis",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.cosmopolis",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "artur-nogueira-sp",
+      "municipio": "Artur Nogueira",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.arturnogueira",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "piracicaba-sp",
+      "municipio": "Piracicaba",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.piracicaba",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "limeira-sp",
+      "municipio": "Limeira",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.limeira",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "rio-claro-sp",
+      "municipio": "Rio Claro",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.rioclaro",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "araras-sp",
+      "municipio": "Araras",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.araras",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "cordeiropolis-sp",
+      "municipio": "Cordeirópolis",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.cordeiropolis",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "jundiai-sp",
+      "municipio": "Jundiaí",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.jundiai",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "itupeva-sp",
+      "municipio": "Itupeva",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.itupeva",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "louveira-sp",
+      "municipio": "Louveira",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.louveira",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "itatiba-sp",
+      "municipio": "Itatiba",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.itatiba",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "campo-limpo-paulista-sp",
+      "municipio": "Campo Limpo Paulista",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.campolimpopaulista",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "atibaia-sp",
+      "municipio": "Atibaia",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.atibaia",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "braganca-paulista-sp",
+      "municipio": "Bragança Paulista",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.bragancapaulista",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "amparo-sp",
+      "municipio": "Amparo",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.amparo",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "serra-negra-sp",
+      "municipio": "Serra Negra",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.serranegra",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "socorro-sp",
+      "municipio": "Socorro",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.socorro",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "aguas-de-lindoia-sp",
+      "municipio": "Águas de Lindóia",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.aguasdelindoia",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "mogi-guacu-sp",
+      "municipio": "Mogi Guaçu",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.mogiguacu",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "mogi-mirim-sp",
+      "municipio": "Mogi Mirim",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.mogimirim",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "sao-joao-da-boa-vista-sp",
+      "municipio": "São João da Boa Vista",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.saojoaodaboavista",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "sao-jose-dos-campos-sp",
+      "municipio": "São José dos Campos",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.saojosedoscampos",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "jacarei-sp",
+      "municipio": "Jacareí",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.jacarei",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "taubate-sp",
+      "municipio": "Taubaté",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.taubate",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "cacapava-sp",
+      "municipio": "Caçapava",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.cacapava",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "pindamonhangaba-sp",
+      "municipio": "Pindamonhangaba",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.pindamonhangaba",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "tremembe-sp",
+      "municipio": "Tremembé",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.tremembe",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "guaratingueta-sp",
+      "municipio": "Guaratinguetá",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.guaratingueta",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "lorena-sp",
+      "municipio": "Lorena",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.lorena",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "cruzeiro-sp",
+      "municipio": "Cruzeiro",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.cruzeiro",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "campos-do-jordao-sp",
+      "municipio": "Campos do Jordão",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.camposdojordao",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "caraguatatuba-sp",
+      "municipio": "Caraguatatuba",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.caraguatatuba",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "sao-sebastiao-sp",
+      "municipio": "São Sebastião",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.saosebastiao",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "ilhabela-sp",
+      "municipio": "Ilhabela",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.ilhabela",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "ubatuba-sp",
+      "municipio": "Ubatuba",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.ubatuba",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "aparecida-sp",
+      "municipio": "Aparecida",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.aparecida",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "ribeirao-preto-sp",
+      "municipio": "Ribeirão Preto",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.ribeiraopreto",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "sertaozinho-sp",
+      "municipio": "Sertãozinho",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.sertaozinho",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "franca-sp",
+      "municipio": "Franca",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.franca",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "batatais-sp",
+      "municipio": "Batatais",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.batatais",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "barretos-sp",
+      "municipio": "Barretos",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.barretos",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "olimpia-sp",
+      "municipio": "Olímpia",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.olimpia",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "bebedouro-sp",
+      "municipio": "Bebedouro",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.bebedouro",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "jaboticabal-sp",
+      "municipio": "Jaboticabal",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.jaboticabal",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "sao-joaquim-da-barra-sp",
+      "municipio": "São Joaquim da Barra",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.saojoaquimdabarra",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "araraquara-sp",
+      "municipio": "Araraquara",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.araraquara",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "sao-carlos-sp",
+      "municipio": "São Carlos",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.saocarlos",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "matao-sp",
+      "municipio": "Matão",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.matao",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "mococa-sp",
+      "municipio": "Mococa",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.mococa",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "orlandia-sp",
+      "municipio": "Orlândia",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.orlandia",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "monte-alto-sp",
+      "municipio": "Monte Alto",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.montealto",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "sao-jose-do-rio-preto-sp",
+      "municipio": "São José do Rio Preto",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.saojosedoriopreto",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "mirassol-sp",
+      "municipio": "Mirassol",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.mirassol",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "catanduva-sp",
+      "municipio": "Catanduva",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.catanduva",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "votuporanga-sp",
+      "municipio": "Votuporanga",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.votuporanga",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "aracatuba-sp",
+      "municipio": "Araçatuba",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.aracatuba",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "birigui-sp",
+      "municipio": "Birigui",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.birigui",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "bauru-sp",
+      "municipio": "Bauru",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.bauru",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "jau-sp",
+      "municipio": "Jaú",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.jau",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "botucatu-sp",
+      "municipio": "Botucatu",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.botucatu",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "marilia-sp",
+      "municipio": "Marília",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.marilia",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "assis-sp",
+      "municipio": "Assis",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.assis",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "presidente-prudente-sp",
+      "municipio": "Presidente Prudente",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.presidenteprudente",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "ourinhos-sp",
+      "municipio": "Ourinhos",
+      "uf": "SP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.ourinhos",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "rio-branco-ac",
+      "municipio": "Rio Branco",
+      "uf": "AC",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.riobranco",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "maceio-al",
+      "municipio": "Maceió",
+      "uf": "AL",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.maceio",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "manaus-am",
+      "municipio": "Manaus",
+      "uf": "AM",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.manaus",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "macapa-ap",
+      "municipio": "Macapá",
+      "uf": "AP",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.macapa",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "salvador-ba",
+      "municipio": "Salvador",
+      "uf": "BA",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.salvador",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "feira-de-santana-ba",
+      "municipio": "Feira de Santana",
+      "uf": "BA",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.feiradesantana",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "vitoria-da-conquista-ba",
+      "municipio": "Vitória da Conquista",
+      "uf": "BA",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.vitoriadaconquista",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "camacari-ba",
+      "municipio": "Camaçari",
+      "uf": "BA",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.camacari",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "lauro-de-freitas-ba",
+      "municipio": "Lauro de Freitas",
+      "uf": "BA",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.laurodefreitas",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "fortaleza-ce",
+      "municipio": "Fortaleza",
+      "uf": "CE",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.fortaleza",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "caucaia-ce",
+      "municipio": "Caucaia",
+      "uf": "CE",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.caucaia",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "juazeiro-do-norte-ce",
+      "municipio": "Juazeiro do Norte",
+      "uf": "CE",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.juazeirodonorte",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "brasilia-df",
+      "municipio": "Brasília",
+      "uf": "DF",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.brasilia",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "vitoria-es",
+      "municipio": "Vitória",
+      "uf": "ES",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.vitoria",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "vila-velha-es",
+      "municipio": "Vila Velha",
+      "uf": "ES",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.vilavelha",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "serra-es",
+      "municipio": "Serra",
+      "uf": "ES",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.serra",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "goiania-go",
+      "municipio": "Goiânia",
+      "uf": "GO",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.goiania",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "anapolis-go",
+      "municipio": "Anápolis",
+      "uf": "GO",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.anapolis",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "aparecida-de-goiania-go",
+      "municipio": "Aparecida de Goiânia",
+      "uf": "GO",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.aparecidadegoiania",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "rio-verde-go",
+      "municipio": "Rio Verde",
+      "uf": "GO",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.rioverde",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "catalao-go",
+      "municipio": "Catalão",
+      "uf": "GO",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.catalao",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "sao-luis-ma",
+      "municipio": "São Luís",
+      "uf": "MA",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.saoluis",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "imperatriz-ma",
+      "municipio": "Imperatriz",
+      "uf": "MA",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.imperatriz",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "belo-horizonte-mg",
+      "municipio": "Belo Horizonte",
+      "uf": "MG",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.belohorizonte",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "uberlandia-mg",
+      "municipio": "Uberlândia",
+      "uf": "MG",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.uberlandia",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "uberaba-mg",
+      "municipio": "Uberaba",
+      "uf": "MG",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.uberaba",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "contagem-mg",
+      "municipio": "Contagem",
+      "uf": "MG",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.contagem",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "betim-mg",
+      "municipio": "Betim",
+      "uf": "MG",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.betim",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "juiz-de-fora-mg",
+      "municipio": "Juiz de Fora",
+      "uf": "MG",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.juizdefora",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "montes-claros-mg",
+      "municipio": "Montes Claros",
+      "uf": "MG",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.montesclaros",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "ipatinga-mg",
+      "municipio": "Ipatinga",
+      "uf": "MG",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.ipatinga",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "divinopolis-mg",
+      "municipio": "Divinópolis",
+      "uf": "MG",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.divinopolis",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "pocos-de-caldas-mg",
+      "municipio": "Poços de Caldas",
+      "uf": "MG",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.pocosdecaldas",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "nova-lima-mg",
+      "municipio": "Nova Lima",
+      "uf": "MG",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.novalima",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "campo-grande-ms",
+      "municipio": "Campo Grande",
+      "uf": "MS",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.campogrande",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "dourados-ms",
+      "municipio": "Dourados",
+      "uf": "MS",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.dourados",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "tres-lagoas-ms",
+      "municipio": "Três Lagoas",
+      "uf": "MS",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.treslagoas",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "cuiaba-mt",
+      "municipio": "Cuiabá",
+      "uf": "MT",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.cuiaba",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "rondonopolis-mt",
+      "municipio": "Rondonópolis",
+      "uf": "MT",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.rondonopolis",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "varzea-grande-mt",
+      "municipio": "Várzea Grande",
+      "uf": "MT",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.varzeagrande",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "sinop-mt",
+      "municipio": "Sinop",
+      "uf": "MT",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.sinop",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "belem-pa",
+      "municipio": "Belém",
+      "uf": "PA",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.belem",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "ananindeua-pa",
+      "municipio": "Ananindeua",
+      "uf": "PA",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.ananindeua",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "santarem-pa",
+      "municipio": "Santarém",
+      "uf": "PA",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.santarem",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "joao-pessoa-pb",
+      "municipio": "João Pessoa",
+      "uf": "PB",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.joaopessoa",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "campina-grande-pb",
+      "municipio": "Campina Grande",
+      "uf": "PB",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.campinagrande",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "recife-pe",
+      "municipio": "Recife",
+      "uf": "PE",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.recife",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "jaboatao-dos-guararapes-pe",
+      "municipio": "Jaboatão dos Guararapes",
+      "uf": "PE",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.jaboataoguararapes",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "olinda-pe",
+      "municipio": "Olinda",
+      "uf": "PE",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.olinda",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "caruaru-pe",
+      "municipio": "Caruaru",
+      "uf": "PE",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.caruaru",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "teresina-pi",
+      "municipio": "Teresina",
+      "uf": "PI",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.teresina",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "parnaiba-pi",
+      "municipio": "Parnaíba",
+      "uf": "PI",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.parnaiba",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "curitiba-pr",
+      "municipio": "Curitiba",
+      "uf": "PR",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.curitiba",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "londrina-pr",
+      "municipio": "Londrina",
+      "uf": "PR",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.londrina",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "maringa-pr",
+      "municipio": "Maringá",
+      "uf": "PR",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.maringa",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "cascavel-pr",
+      "municipio": "Cascavel",
+      "uf": "PR",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.cascavel",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "foz-do-iguacu-pr",
+      "municipio": "Foz do Iguaçu",
+      "uf": "PR",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.fozdoiguacu",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "ponta-grossa-pr",
+      "municipio": "Ponta Grossa",
+      "uf": "PR",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.pontagrossa",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "sao-jose-dos-pinhais-pr",
+      "municipio": "São José dos Pinhais",
+      "uf": "PR",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.saojosedospinhais",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "colombo-pr",
+      "municipio": "Colombo",
+      "uf": "PR",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.colombo",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "paranagua-pr",
+      "municipio": "Paranaguá",
+      "uf": "PR",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.paranagua",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "rio-de-janeiro-rj",
+      "municipio": "Rio de Janeiro",
+      "uf": "RJ",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.riodejaneiro",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "niteroi-rj",
+      "municipio": "Niterói",
+      "uf": "RJ",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.niteroi",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "duque-de-caxias-rj",
+      "municipio": "Duque de Caxias",
+      "uf": "RJ",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.duquedecaxias",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "nova-iguacu-rj",
+      "municipio": "Nova Iguaçu",
+      "uf": "RJ",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.novaiguacu",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "petropolis-rj",
+      "municipio": "Petrópolis",
+      "uf": "RJ",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.petropolis",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "volta-redonda-rj",
+      "municipio": "Volta Redonda",
+      "uf": "RJ",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.voltaredonda",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "macae-rj",
+      "municipio": "Macaé",
+      "uf": "RJ",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.macae",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "campos-dos-goytacazes-rj",
+      "municipio": "Campos dos Goytacazes",
+      "uf": "RJ",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.camposdosgoytacazes",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "cabo-frio-rj",
+      "municipio": "Cabo Frio",
+      "uf": "RJ",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.cabofrio",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "armacao-dos-buzios-rj",
+      "municipio": "Armação dos Búzios",
+      "uf": "RJ",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.armacaodosbuzios",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "angra-dos-reis-rj",
+      "municipio": "Angra dos Reis",
+      "uf": "RJ",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.angradosreis",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "resende-rj",
+      "municipio": "Resende",
+      "uf": "RJ",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.resende",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "marica-rj",
+      "municipio": "Maricá",
+      "uf": "RJ",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.marica",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "sao-goncalo-rj",
+      "municipio": "São Gonçalo",
+      "uf": "RJ",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.saogoncalo",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "natal-rn",
+      "municipio": "Natal",
+      "uf": "RN",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.natal",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "mossoro-rn",
+      "municipio": "Mossoró",
+      "uf": "RN",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.mossoro",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "porto-velho-ro",
+      "municipio": "Porto Velho",
+      "uf": "RO",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.portovelho",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "ji-parana-ro",
+      "municipio": "Ji-Paraná",
+      "uf": "RO",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.jiparana",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "boa-vista-rr",
+      "municipio": "Boa Vista",
+      "uf": "RR",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.boavista",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "porto-alegre-rs",
+      "municipio": "Porto Alegre",
+      "uf": "RS",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.portoalegre",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "caxias-do-sul-rs",
+      "municipio": "Caxias do Sul",
+      "uf": "RS",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.caxiasdosul",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "canoas-rs",
+      "municipio": "Canoas",
+      "uf": "RS",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.canoas",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "novo-hamburgo-rs",
+      "municipio": "Novo Hamburgo",
+      "uf": "RS",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.novohamburgo",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "pelotas-rs",
+      "municipio": "Pelotas",
+      "uf": "RS",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.pelotas",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "santa-maria-rs",
+      "municipio": "Santa Maria",
+      "uf": "RS",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.santamaria",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "passo-fundo-rs",
+      "municipio": "Passo Fundo",
+      "uf": "RS",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.passofundo",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "florianopolis-sc",
+      "municipio": "Florianópolis",
+      "uf": "SC",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.florianopolis",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "joinville-sc",
+      "municipio": "Joinville",
+      "uf": "SC",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.joinville",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "blumenau-sc",
+      "municipio": "Blumenau",
+      "uf": "SC",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.blumenau",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "itajai-sc",
+      "municipio": "Itajaí",
+      "uf": "SC",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.itajai",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "balneario-camboriu-sc",
+      "municipio": "Balneário Camboriú",
+      "uf": "SC",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.balneariocamboriu",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "sao-jose-sc",
+      "municipio": "São José",
+      "uf": "SC",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.saojose",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "criciuma-sc",
+      "municipio": "Criciúma",
+      "uf": "SC",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.criciuma",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "chapeco-sc",
+      "municipio": "Chapecó",
+      "uf": "SC",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.chapeco",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "jaragua-do-sul-sc",
+      "municipio": "Jaraguá do Sul",
+      "uf": "SC",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.jaraguadosul",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "aracaju-se",
+      "municipio": "Aracaju",
+      "uf": "SE",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.aracaju",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "nossa-senhora-do-socorro-se",
+      "municipio": "Nossa Senhora do Socorro",
+      "uf": "SE",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.nossasenhorasocorro",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "palmas-to",
+      "municipio": "Palmas",
+      "uf": "TO",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.palmas",
+      "instagramLocalVerificado": false
+    },
+    {
+      "id": "araguaina-to",
+      "municipio": "Araguaína",
+      "uf": "TO",
+      "statusOperacional": "inativo",
+      "whatsappAtivo": null,
+      "instagramLocalPlanejado": "winfselect.araguaina",
+      "instagramLocalVerificado": false
+    }
+  ]
+}

@@ -43,3 +43,6 @@ O cadastro deve preservar três dimensões: atendimento operacional, URL existen
 - O teste `tests/winf-select-200.test.cjs` verifica todas as 200 páginas, canônicos, schema, geocódigos, logos, links, SEO e ausência de endereço/contato falso.
 
 **Atenção**: conteúdo programático igual ao de Santos não significa que os 200 territórios possuem 200 unidades operacionais. O material de pré-lançamento é de expansão e pesquisa local.
+
+## Contato e Instagram de territórios inativos (13/11/2026)
+Os 200 sites WINF Select em expansão recebem automaticamente links no hero, na seção de pesquisa e no botão fixo para **https://wa.me/5513981113001** com mensagem identificando cidade/UF e código. O Instagram oficial apontado é **@winf.ofc**. Cada cidade tem um `@winfselect.<municipio>` como **proposta**; o link aparece claramente marcado como não verificado, sem afirmar que o perfil local já existe ou pertence à WINF. Centralização em `config/winf-territory-contacts.json`. O CSV de CRM foi ampliado com os dados de contato e um arquivo `crm/inventario-publicacao-200.csv` permite listar todos os 200 locais e seus status. Sites de operação já ativa mantêm contatos anteriores.

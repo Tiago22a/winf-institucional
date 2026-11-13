@@ -42,6 +42,13 @@
     a.append(link("Ver ficha territorial ↗","/partners/territorios/"+encodeURIComponent(t.id)+"/"));
     a.append(el("span","territory-detail-divider"," · "));
     a.append(link("Site WINF Select™ ↗","/winf-select/cidades/"+encodeURIComponent(t.id)+"/"));
+    if(t.operacao==="nao_ativa"){
+      const wa="Olá! Vim pela vitrine WINF. Tenho interesse em "+t.municipio+"/"+t.uf+" (território "+t.id+"). Preciso de informações sobre disponibilidade de atendimento e expansão.";
+      const links=el("div","city-links"),w=link("WhatsApp Central 013 ↗","https://wa.me/5513981113001?text="+encodeURIComponent(wa));
+      w.target="_blank";w.rel="noopener noreferrer";links.append(w);
+      const official=link("Instagram oficial @winf.ofc ↗","https://www.instagram.com/winf.ofc/");
+      official.target="_blank";official.rel="noopener noreferrer";links.append(official);a.append(links);
+    }
     return a;
   };
   const coverageCard=(c)=>{

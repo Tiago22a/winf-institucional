@@ -31,7 +31,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/rio-branco-ac/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.riobranco",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "maceio-al",
@@ -61,7 +65,11 @@
         "Jatiúca"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/maceio-al/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.maceio",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "manaus-am",
@@ -93,7 +101,11 @@
         "Vieiralves"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/manaus-am/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.manaus",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "macapa-ap",
@@ -117,7 +129,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/macapa-ap/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.macapa",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "salvador-ba",
@@ -149,7 +165,11 @@
         "Itaigara"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/salvador-ba/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.salvador",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "feira-de-santana-ba",
@@ -179,7 +199,11 @@
         "Centro"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/feira-de-santana-ba/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.feiradesantana",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "vitoria-da-conquista-ba",
@@ -203,7 +227,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/vitoria-da-conquista-ba/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.vitoriadaconquista",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "camacari-ba",
@@ -227,7 +255,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/camacari-ba/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.camacari",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "lauro-de-freitas-ba",
@@ -257,7 +289,11 @@
         "Buraquinho"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/lauro-de-freitas-ba/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.laurodefreitas",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "fortaleza-ce",
@@ -289,7 +325,11 @@
         "Cocó"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/fortaleza-ce/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.fortaleza",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "caucaia-ce",
@@ -313,7 +353,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/caucaia-ce/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.caucaia",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "juazeiro-do-norte-ce",
@@ -337,7 +381,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/juazeiro-do-norte-ce/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.juazeirodonorte",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "brasilia-df",
@@ -369,7 +417,11 @@
         "Sudoeste"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/brasilia-df/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.brasilia",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "vitoria-es",
@@ -401,7 +453,11 @@
         "Mata da Praia"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/vitoria-es/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.vitoria",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "vila-velha-es",
@@ -431,7 +487,11 @@
         "Itapuã"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/vila-velha-es/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.vilavelha",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "serra-es",
@@ -461,7 +521,11 @@
         "Manguinhos"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/serra-es/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.serra",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "goiania-go",
@@ -493,7 +557,11 @@
         "Jardim Goiás"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/goiania-go/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.goiania",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "anapolis-go",
@@ -523,7 +591,11 @@
         "Centro"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/anapolis-go/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.anapolis",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "aparecida-de-goiania-go",
@@ -547,7 +619,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/aparecida-de-goiania-go/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.aparecidadegoiania",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "rio-verde-go",
@@ -571,7 +647,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/rio-verde-go/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.rioverde",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "catalao-go",
@@ -595,7 +675,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/catalao-go/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.catalao",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "sao-luis-ma",
@@ -625,7 +709,11 @@
         "Calhau"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/sao-luis-ma/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.saoluis",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "imperatriz-ma",
@@ -649,7 +737,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/imperatriz-ma/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.imperatriz",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "belo-horizonte-mg",
@@ -681,7 +773,11 @@
         "Savassi"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/belo-horizonte-mg/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.belohorizonte",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "uberlandia-mg",
@@ -711,7 +807,11 @@
         "Santa Mônica"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/uberlandia-mg/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.uberlandia",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "uberaba-mg",
@@ -735,7 +835,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/uberaba-mg/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.uberaba",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "contagem-mg",
@@ -759,7 +863,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/contagem-mg/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.contagem",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "betim-mg",
@@ -783,7 +891,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/betim-mg/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.betim",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "juiz-de-fora-mg",
@@ -813,7 +925,11 @@
         "Bom Pastor"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/juiz-de-fora-mg/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.juizdefora",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "montes-claros-mg",
@@ -837,7 +953,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/montes-claros-mg/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.montesclaros",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "ipatinga-mg",
@@ -867,7 +987,11 @@
         "Cidade Nobre"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/ipatinga-mg/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.ipatinga",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "divinopolis-mg",
@@ -891,7 +1015,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/divinopolis-mg/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.divinopolis",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "pocos-de-caldas-mg",
@@ -915,7 +1043,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/pocos-de-caldas-mg/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.pocosdecaldas",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "nova-lima-mg",
@@ -945,7 +1077,11 @@
         "Vale do Sereno"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/nova-lima-mg/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.novalima",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "campo-grande-ms",
@@ -975,7 +1111,11 @@
         "Chácara Cachoeira"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/campo-grande-ms/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.campogrande",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "dourados-ms",
@@ -999,7 +1139,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/dourados-ms/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.dourados",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "tres-lagoas-ms",
@@ -1023,7 +1167,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/tres-lagoas-ms/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.treslagoas",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "cuiaba-mt",
@@ -1055,7 +1203,11 @@
         "Santa Rosa"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/cuiaba-mt/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.cuiaba",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "rondonopolis-mt",
@@ -1079,7 +1231,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/rondonopolis-mt/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.rondonopolis",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "varzea-grande-mt",
@@ -1103,7 +1259,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/varzea-grande-mt/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.varzeagrande",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "sinop-mt",
@@ -1127,7 +1287,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/sinop-mt/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.sinop",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "belem-pa",
@@ -1159,7 +1323,11 @@
         "Batista Campos"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/belem-pa/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.belem",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "ananindeua-pa",
@@ -1183,7 +1351,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/ananindeua-pa/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.ananindeua",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "santarem-pa",
@@ -1207,7 +1379,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/santarem-pa/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.santarem",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "joao-pessoa-pb",
@@ -1239,7 +1415,11 @@
         "Cabo Branco"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/joao-pessoa-pb/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.joaopessoa",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "campina-grande-pb",
@@ -1269,7 +1449,11 @@
         "Mirante"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/campina-grande-pb/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.campinagrande",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "recife-pe",
@@ -1301,7 +1485,11 @@
         "Pina"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/recife-pe/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.recife",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "jaboatao-dos-guararapes-pe",
@@ -1331,7 +1519,11 @@
         "Candeias"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/jaboatao-dos-guararapes-pe/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.jaboataoguararapes",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "olinda-pe",
@@ -1355,7 +1547,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/olinda-pe/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.olinda",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "caruaru-pe",
@@ -1379,7 +1575,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/caruaru-pe/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.caruaru",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "teresina-pi",
@@ -1409,7 +1609,11 @@
         "Fátima"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/teresina-pi/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.teresina",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "parnaiba-pi",
@@ -1433,7 +1637,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/parnaiba-pi/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.parnaiba",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "curitiba-pr",
@@ -1465,7 +1673,11 @@
         "Água Verde"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/curitiba-pr/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.curitiba",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "londrina-pr",
@@ -1495,7 +1707,11 @@
         "Centro"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/londrina-pr/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.londrina",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "maringa-pr",
@@ -1525,7 +1741,11 @@
         "Centro"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/maringa-pr/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.maringa",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "cascavel-pr",
@@ -1549,7 +1769,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/cascavel-pr/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.cascavel",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "foz-do-iguacu-pr",
@@ -1573,7 +1797,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/foz-do-iguacu-pr/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.fozdoiguacu",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "ponta-grossa-pr",
@@ -1597,7 +1825,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/ponta-grossa-pr/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.pontagrossa",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "sao-jose-dos-pinhais-pr",
@@ -1621,7 +1853,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/sao-jose-dos-pinhais-pr/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.saojosedospinhais",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "colombo-pr",
@@ -1645,7 +1881,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/colombo-pr/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.colombo",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "paranagua-pr",
@@ -1669,7 +1909,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/paranagua-pr/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.paranagua",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "rio-de-janeiro-rj",
@@ -1703,7 +1947,11 @@
         "Jardim Botânico"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/rio-de-janeiro-rj/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.riodejaneiro",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "niteroi-rj",
@@ -1735,7 +1983,11 @@
         "Camboinhas"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/niteroi-rj/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.niteroi",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "duque-de-caxias-rj",
@@ -1759,7 +2011,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/duque-de-caxias-rj/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.duquedecaxias",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "nova-iguacu-rj",
@@ -1783,7 +2039,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/nova-iguacu-rj/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.novaiguacu",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "petropolis-rj",
@@ -1813,7 +2073,11 @@
         "Centro"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/petropolis-rj/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.petropolis",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "volta-redonda-rj",
@@ -1837,7 +2101,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/volta-redonda-rj/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.voltaredonda",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "macae-rj",
@@ -1867,7 +2135,11 @@
         "Glória"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/macae-rj/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.macae",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "campos-dos-goytacazes-rj",
@@ -1897,7 +2169,11 @@
         "Parque Tamandaré"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/campos-dos-goytacazes-rj/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.camposdosgoytacazes",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "cabo-frio-rj",
@@ -1927,7 +2203,11 @@
         "Passagem"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/cabo-frio-rj/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.cabofrio",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "armacao-dos-buzios-rj",
@@ -1957,7 +2237,11 @@
         "João Fernandes"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/armacao-dos-buzios-rj/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.armacaodosbuzios",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "angra-dos-reis-rj",
@@ -1981,7 +2265,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/angra-dos-reis-rj/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.angradosreis",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "resende-rj",
@@ -2005,7 +2293,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/resende-rj/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.resende",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "marica-rj",
@@ -2035,7 +2327,11 @@
         "Centro"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/marica-rj/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.marica",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "sao-goncalo-rj",
@@ -2059,7 +2355,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/sao-goncalo-rj/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.saogoncalo",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "natal-rn",
@@ -2091,7 +2391,11 @@
         "Petrópolis"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/natal-rn/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.natal",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "mossoro-rn",
@@ -2115,7 +2419,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/mossoro-rn/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.mossoro",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "porto-velho-ro",
@@ -2139,7 +2447,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/porto-velho-ro/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.portovelho",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "ji-parana-ro",
@@ -2163,7 +2475,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/ji-parana-ro/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.jiparana",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "boa-vista-rr",
@@ -2187,7 +2503,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/boa-vista-rr/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.boavista",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "porto-alegre-rs",
@@ -2219,7 +2539,11 @@
         "Três Figueiras"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/porto-alegre-rs/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.portoalegre",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "caxias-do-sul-rs",
@@ -2249,7 +2573,11 @@
         "São Pelegrino"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/caxias-do-sul-rs/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.caxiasdosul",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "canoas-rs",
@@ -2273,7 +2601,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/canoas-rs/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.canoas",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "novo-hamburgo-rs",
@@ -2297,7 +2629,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/novo-hamburgo-rs/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.novohamburgo",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "pelotas-rs",
@@ -2321,7 +2657,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/pelotas-rs/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.pelotas",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "santa-maria-rs",
@@ -2345,7 +2685,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/santa-maria-rs/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.santamaria",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "passo-fundo-rs",
@@ -2369,7 +2713,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/passo-fundo-rs/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.passofundo",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "florianopolis-sc",
@@ -2401,7 +2749,11 @@
         "Campeche"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/florianopolis-sc/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.florianopolis",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "joinville-sc",
@@ -2431,7 +2783,11 @@
         "Atiradores"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/joinville-sc/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.joinville",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "blumenau-sc",
@@ -2461,7 +2817,11 @@
         "Centro"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/blumenau-sc/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.blumenau",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "itajai-sc",
@@ -2491,7 +2851,11 @@
         "Praia Brava"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/itajai-sc/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.itajai",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "balneario-camboriu-sc",
@@ -2521,7 +2885,11 @@
         "Centro"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/balneario-camboriu-sc/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.balneariocamboriu",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "sao-jose-sc",
@@ -2545,7 +2913,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/sao-jose-sc/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.saojose",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "criciuma-sc",
@@ -2569,7 +2941,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/criciuma-sc/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.criciuma",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "chapeco-sc",
@@ -2593,7 +2969,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/chapeco-sc/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.chapeco",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "jaragua-do-sul-sc",
@@ -2617,7 +2997,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/jaragua-do-sul-sc/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.jaraguadosul",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "aracaju-se",
@@ -2647,7 +3031,11 @@
         "13 de Julho"
       ],
       "siteLocalPlanejado": "/winf-select/cidades/aracaju-se/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.aracaju",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "nossa-senhora-do-socorro-se",
@@ -2671,7 +3059,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/nossa-senhora-do-socorro-se/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.nossasenhorasocorro",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "palmas-to",
@@ -2695,7 +3087,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/palmas-to/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.palmas",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     },
     {
       "id": "araguaina-to",
@@ -2719,7 +3115,11 @@
       "statusPesquisaBairros": "pendente_validacao_local",
       "aliases": [],
       "siteLocalPlanejado": "/winf-select/cidades/araguaina-to/",
-      "siteLocalPublicado": false
+      "siteLocalPublicado": false,
+      "instagramOficial": "winf.ofc",
+      "instagramLocalPlanejado": "winfselect.araguaina",
+      "instagramLocalVerificado": false,
+      "whatsappInativos": "5513981113001"
     }
   ]
 }
