@@ -361,7 +361,7 @@
 
     <!-- Páginas públicas de navegação, expansão e modelos -->
     <url><loc>https://winf.com.br/partners/</loc><lastmod>2026-11-11</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
-    <url><loc>https://winf.com.br/onde-comprar/</loc><lastmod>2026-11-11</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
+    <url><loc>https://winf.com.br/onde-comprar/</loc><lastmod>2026-11-13</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
     <url><loc>https://winf.com.br/redes/</loc><lastmod>2026-11-11</lastmod><changefreq>monthly</changefreq><priority>0.70</priority></url>
     <url><loc>https://winf.com.br/briefing/asset-light/</loc><lastmod>2026-11-11</lastmod><changefreq>monthly</changefreq><priority>0.70</priority></url>
     <url><loc>https://winf.com.br/briefing/quiosque/</loc><lastmod>2026-11-11</lastmod><changefreq>monthly</changefreq><priority>0.70</priority></url>
@@ -370,11 +370,11 @@
     <url><loc>https://winf.com.br/synthwave/</loc><lastmod>2026-11-11</lastmod><changefreq>monthly</changefreq><priority>0.70</priority></url>
     <url><loc>https://winf.com.br/mediacar/</loc><lastmod>2026-11-11</lastmod><changefreq>monthly</changefreq><priority>0.70</priority></url>
     <url><loc>https://winf.com.br/partners/padrinho-modern/</loc><lastmod>2026-11-12</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-votorantim-sp/</loc><lastmod>2026-11-12</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-votorantim-sp/</loc><lastmod>2026-11-13</lastmod></url>
     <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-aracoiaba-da-serra-sp/</loc><lastmod>2026-11-12</lastmod></url>
     <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-salto-de-pirapora-sp/</loc><lastmod>2026-11-12</lastmod></url>
     <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-piedade-sp/</loc><lastmod>2026-11-12</lastmod></url>
-    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-itapetininga-sp/</loc><lastmod>2026-11-12</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-itapetininga-sp/</loc><lastmod>2026-11-13</lastmod></url>
     <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-ipero-sp/</loc><lastmod>2026-11-12</lastmod></url>
     <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-capela-do-alto-sp/</loc><lastmod>2026-11-12</lastmod></url>
     <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-bertioga-sp/</loc><lastmod>2026-11-13</lastmod></url>
@@ -519,5 +519,114 @@
     <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-botucatu-sp/</loc><lastmod>2026-11-13</lastmod></url>
     <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-franco-da-rocha-sp/</loc><lastmod>2026-11-13</lastmod></url>
     <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-caraguatatuba-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-paulinia-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-cajamar-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-louveira-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-sao-sebastiao-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-ilhabela-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-vinhedo-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-jaguariuna-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-salto-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-itupeva-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-aruja-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-itatiba-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-valinhos-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-araras-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-sertaozinho-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-lins-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-guaratingueta-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-mogi-mirim-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-matao-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-cabreuva-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-catanduva-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-barretos-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-amparo-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-lencois-paulista-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-jau-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-cacapava-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-itapira-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-monte-mor-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-nova-odessa-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-jandira-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-caieiras-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-bebedouro-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-sao-joao-da-boa-vista-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-leme-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-ourinhos-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-birigui-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-ribeirao-pires-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-aracariguama-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-varzea-paulista-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-assis-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-poa-sp/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-marica-rj/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-duque-de-caxias-rj/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-saquarema-rj/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-betim-mg/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-joinville-sc/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-itajai-sc/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-sao-luis-ma/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-caxias-do-sul-rs/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-serra-es/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-araucaria-pr/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-sao-jose-dos-pinhais-pr/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-maceio-al/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-natal-rn/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-teresina-pi/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-canoas-rs/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-joao-pessoa-pb/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-maringa-pr/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-camacari-ba/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-sao-francisco-do-conde-ba/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-parauapebas-pa/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-ponta-grossa-pr/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-porto-velho-ro/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-blumenau-sc/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-sao-goncalo-rj/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-macae-rj/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-rio-verde-go/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-aracaju-se/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-feira-de-santana-ba/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-aparecida-de-goiania-go/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-anapolis-go/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-jaboatao-dos-guararapes-pe/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-dourados-ms/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-extrema-mg/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-cariacica-es/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-cascavel-pr/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-macapa-ap/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-boa-vista-rr/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-ipojuca-pe/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-chapeco-sc/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-foz-do-iguacu-pr/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-canaa-dos-carajas-pa/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-rondonopolis-mt/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-cabo-de-santo-agostinho-pe/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-sao-jose-sc/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-gravatai-rs/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-jaragua-do-sul-sc/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-paranagua-pr/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-sete-lagoas-mg/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-tres-lagoas-ms/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-pouso-alegre-mg/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-palmas-to/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-rio-grande-rs/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-passo-fundo-rs/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-sao-joao-da-barra-rj/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-varzea-grande-mt/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-goiana-pe/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-sorriso-mt/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-maracanau-ce/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-santa-cruz-do-sul-rs/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-araruama-rj/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-rio-branco-ac/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-vitoria-da-conquista-ba/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-pelotas-rs/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-criciuma-sc/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-resende-rj/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-novo-hamburgo-rs/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-angra-dos-reis-rj/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-sao-leopoldo-rs/</loc><lastmod>2026-11-13</lastmod></url>
+    <url><loc>https://winf.com.br/pelicula-para-vidro-controle-solar-sinop-mt/</loc><lastmod>2026-11-13</lastmod></url>
 </urlset>
 
