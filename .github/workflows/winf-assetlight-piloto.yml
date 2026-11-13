@@ -1,0 +1,24 @@
+name: WINF Asset Light — sites territoriais
+on:
+  pull_request:
+    paths:
+      - 'winf-select/cidades/**'
+      - 'css/winf-assetlight-territory.css'
+      - 'crm/winf-assetlight-territorios-200.json'
+      - 'config/winf-assetlight-piloto-10.json'
+      - 'tests/winf-assetlight-piloto-10.test.cjs'
+      - 'tests/seo-territory-release-gate.test.cjs'
+      - '.github/workflows/winf-assetlight-piloto.yml'
+  workflow_dispatch:
+jobs:
+  audit-territories:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check tests/winf-assetlight-piloto-10.test.cjs
+      - run: node --test tests/winf-assetlight-piloto-10.test.cjs tests/seo-territory-release-gate.test.cjs
