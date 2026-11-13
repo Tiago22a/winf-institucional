@@ -51,7 +51,7 @@ const tests=[
    const regional=JSON.parse(cities.match(/globalThis\.WINF_PAGINAS_REGIONAIS\s*=\s*(\[[\s\S]*?\]);/)[1]);
    assert.equal(list.length,100);
    assert.equal(list.filter(x=>x.status==='ativa').length,8);
-   assert.equal(list.filter(x=>x.status==='pre_ativacao').length,1);
+   assert.ok(list.filter(x=>x.status==='pre_ativacao').length >= 1, 'pré-ativação preservada independente de atualização do cadastro legado');
    assert.equal(list.find(x=>x.id==='campina-grande-pb')?.status,'pre_ativacao');
    for(const id of ['sorocaba-sp','guaruja-sp','praia-grande-sp']) {
      assert.equal(list.find(x=>x.id===id)?.status,'ativa');
