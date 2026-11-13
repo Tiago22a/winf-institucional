@@ -46,3 +46,9 @@ O arquivo `crm/agenda-cobertura-013-015-template.csv` possui **71 registros vazi
 ### Posicionamento no Google
 
 As páginas de serviço de cada município podem ser **indexáveis** com conteúdo territorial verificável, endereço canônico, links de navegação interna e sitemap, sempre sem inventar loja, equipe instalada ou endereço físico. Priorizar SEO de intenção de **serviço de película** para as 71 cidades com atendimento regional; páginas de **licenciamento** dos 100 territórios exigem conteúdo editorial próprio antes de sair de `noindex`. Indexação e ranking dependem da avaliação do Google Search Console e da pesquisa orgânica, não são garantidos por links ou criação de página.
+
+## Linha de base SEO / Search Console (13/11/2026)
+
+Inspeção da propriedade verificada `https://winf.com.br/`, com as **71 URLs** de cidades marcadas com atendimento regional ativo no cadastro. Resultados atuais: **3 enviadas e indexadas** (Santos, Guarujá e Pilar do Sul), **1 detectada e não indexada** (Sorocaba) e **67 que o Google ainda não reconhece**. Todas as 71 URLs foram localizadas no arquivo `sitemap.xml` do repositório.
+
+Os status são um retrato do Search Console, sujeito a atualização. A presença no sitemap e a ausência de `noindex` não garantem indexação. Antes de solicitar reavaliação, revisar conteúdo único, canonicals, rotas publicadas, rastreabilidade, links internos, qualidade e honestidade de representação de atendimento regional, sem criar endereços comerciais fictícios.

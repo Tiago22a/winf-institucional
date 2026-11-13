@@ -48,7 +48,7 @@
       "Solicitações atendidas pela Central "+ddd(c)+". A agenda por município, a instalação e a capacidade dos profissionais dependem de confirmação operacional."));
     const links=el("div","city-links");
     if(c.url&&c.url.startsWith("/"))links.append(link("Página da cidade ↗",c.url));
-    const text="Olá! Estou em "+c.cidade+"/SP e desejo atendimento WINF Select™ para películas arquitetônicas. Origem: vitrine territorial. Cidade: "+c.cidade+".";
+    const text="Olá! Estou em "+c.cidade+"/SP e desejo atendimento WINF Select™ para películas arquitetônicas. Origem: vitrine territorial. Cidade: "+c.cidade+". Código WINF: "+c.id+".";
     const wa=link("WhatsApp Central "+ddd(c)+" ↗","https://wa.me/"+c.numero+"?text="+encodeURIComponent(text));
     wa.target="_blank";wa.rel="noopener noreferrer";
     links.append(wa);
