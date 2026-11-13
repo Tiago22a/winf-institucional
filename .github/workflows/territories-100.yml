@@ -26,6 +26,9 @@ on:
       - 'tests/winf-coverage-seo.test.cjs'
       - 'crm/territorios-100-sp.csv'
       - 'crm/territorios-200.csv'
+      - 'crm/provisionamento-asset-light-200.csv'
+      - 'docs/processo-provisionamento-asset-light-200.md'
+      - 'tests/winf-provisionamento-200.test.cjs'
       - 'tests/territories100.test.cjs'
       - 'tests/territories200.test.cjs'
       - 'tests/winf-select-200.test.cjs'
@@ -47,4 +50,4 @@ jobs:
       - run: node --check partners/territorios/mapa.js
       - run: node --check js/winf-select-territory.js
       - run: node --check js/winf-proximo.js
-      - run: node --test tests/territories100.test.cjs tests/territories200.test.cjs tests/winf-select-200.test.cjs tests/winf-coverage-seo.test.cjs tests/winf-proximo.test.cjs
+      - run: node --test tests/territories100.test.cjs tests/territories200.test.cjs tests/winf-select-200.test.cjs tests/winf-coverage-seo.test.cjs tests/winf-proximo.test.cjs tests/winf-provisionamento-200.test.cjs
