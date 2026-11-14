@@ -73,7 +73,7 @@ function momentCard(m){
 function mixerPanel(){
  const level=Math.round(SynthwaveAudio.volume*100),amb=Math.round(SynthwaveAudio.ambientVolume*100);
  return '<div class="sw-mixer panel mt-6 p-6 md:p-8"><p class="text-pink uppercase text-[10px] tracking-[.24em] font-black">SUA ATMOSFERA / MIXER</p><h3 class="text-4xl text-white mt-2">MÚSICA + AMBIENTE.</h3><p class="text-gray-400 text-sm mt-2 mb-6">Escolha um som de fundo e ajuste os dois volumes sem alterar a música.</p>'+
- '<div class="flex flex-wrap gap-2 mb-6" role="group" aria-label="Escolher ambiente">'+ambientOptions.map((option,i)=>'<button type="button" class="pill '+(soundscape===option.id?'selected':'')+'" aria-pressed="'+(soundscape===option.id)+'" onclick="chooseSoundscape('+i+')">'+option.label+'</button>').join('')+'</div>'+
+ '<div class="flex flex-wrap gap-2 mb-6" role="group" aria-label="Escolher ambiente">'+ambientOptions.map((option,i)=>'<button type="button" class="pill '+(soundscape===option.id?'selected':'')+'" data-ambient-index="'+i+'" aria-pressed="'+(soundscape===option.id)+'" onclick="chooseSoundscape('+i+')">'+option.label+'</button>').join('')+'</div>'+
  '<div class="grid sm:grid-cols-2 gap-5"><label for="sw-music-level" class="text-xs text-gray-300 font-bold">MÚSICA <span id="sw-music-value">'+level+'%</span><input id="sw-music-level" class="sw-mixer-range w-full mt-3 accent-pink" type="range" min="0" max="100" value="'+level+'" oninput="setMusicLevel(this.value)" aria-label="Volume da música"></label>'+
  '<label for="sw-ambient-level" class="text-xs text-gray-300 font-bold">AMBIENTE <span id="sw-ambient-value">'+amb+'%</span><input id="sw-ambient-level" class="sw-mixer-range w-full mt-3 accent-pink" type="range" min="0" max="100" value="'+amb+'" oninput="setAmbientLevel(this.value)" aria-label="Volume dos sons do ambiente"></label></div>'+
  '<p class="text-xs text-gray-500 mt-5">Ambientes são sintetizados no aparelho. Comece a reprodução para ouvi-los; o botão Pausar interrompe ambos.</p></div>';
@@ -197,7 +197,7 @@ function chooseSoundscape(i){
  const item=ambientOptions[i];if(!item)return;
  soundscape=item.id;
  SynthwaveAudio.setSoundscape(soundscape);
- if(['live','playlists'].includes(activeView))go(activeView);
+ document.querySelectorAll('.sw-mixer [data-ambient-index]').forEach(button=>{const active=Number(button.dataset.ambientIndex)===i;button.classList.toggle('selected',active);button.setAttribute('aria-pressed',String(active))});
 }
 
 function paintVisualizer(){
