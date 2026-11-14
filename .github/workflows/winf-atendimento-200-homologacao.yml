@@ -6,7 +6,7 @@ on:
       - 'onde-comprar/index.html'
       - 'index.html'
       - 'config/winf-territorios-consumidor-200.json'
-      - 'tests/winf-atendimento-200-localizador.test.mjs'
+      - 'tests/winf-atendimento-200-*.test.mjs'
       - '.github/workflows/winf-atendimento-200-homologacao.yml'
   workflow_dispatch:
 jobs:
@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: '22'
       - name: Testar 200 cidades, fallback, CRM separado e URLs
-        run: node --test tests/winf-atendimento-200-localizador.test.mjs
+        run: node --test tests/winf-atendimento-200-*.test.mjs
       - name: Lint sintático do localizador
         run: node --check aerocore/assets/onde-comprar.js
       - name: Garantir regressão do localizador anterior
