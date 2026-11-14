@@ -95,7 +95,8 @@
       const hasExpanded = group.visibleCount > initialCount();
       group.button.hidden = !hasMore;
       group.less.hidden = !hasExpanded;
-      group.button.textContent = 'Ver mais ' + Math.min(step, matches.length - visibleCount) + ' cidades ↓';
+      const next = Math.min(step, matches.length - visibleCount);
+      group.button.textContent = 'Ver mais ' + next + (next === 1 ? ' cidade ↓' : ' cidades ↓');
       group.button.setAttribute('aria-expanded', String(hasExpanded));
       group.less.setAttribute('aria-expanded', String(hasExpanded));
       total += matches.length;
