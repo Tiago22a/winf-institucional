@@ -83,6 +83,12 @@ background-position:center,center,67% 46%;background-size:cover;background-repea
 .final{background-image:linear-gradient(0deg,rgba(5,7,11,.93),rgba(5,7,11,.77)),url("/partners/padrinho-modern/media/winf-padrinho-modern-mentoria-04.webp");background-size:cover;background-position:center 46%;background-repeat:no-repeat}
 @media(max-width:780px){.hero{min-height:auto;background-position:center,center,60% center}.hero-content{padding-top:100px;padding-bottom:85px}}
 @media(max-width:480px){.hero{background-position:center,center,64% center}.hero h1{font-size:clamp(48px,11.4vw,66px)}.hero-content{padding-top:74px;padding-bottom:72px}.lead{font-size:17px;line-height:1.58}.sublead{font-size:13px}}
+
+/* Marca oficial separada da fotografia: evita letras geradas ou bordadas incorretamente. */
+.pm-impact-photo,.pm-editorial-card--feature{position:relative}
+.pm-photo-brand{position:absolute;top:18px;right:18px;z-index:3;display:inline-flex;align-items:center;justify-content:center;padding:9px 12px;min-width:92px;min-height:42px;background:rgba(5,6,8,.79);border:1px solid rgba(255,255,255,.29);pointer-events:none;backdrop-filter:blur(9px)}
+.pm-photo-brand img{display:block!important;position:static!important;width:72px!important;height:auto!important;max-width:none!important;object-fit:contain!important;filter:none!important;transform:none!important;opacity:1!important}
+@media(max-width:600px){.pm-photo-brand{top:12px;right:12px;min-width:78px;min-height:36px;padding:7px 9px}.pm-photo-brand img{width:60px!important}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Padrinho Modern™ — WINF Partners","description":"Página de apresentação a apoiadores potenciais do talento profissional e de projetos licenciados WINF. Não é uma oferta pública de valores mobiliários.","inLanguage":"pt-BR","url":"https://www.winf.com.br/partners/padrinho-modern/","isPartOf":{"@type":"WebSite","url":"https://www.winf.com.br/"}}</script>
 
@@ -122,7 +128,8 @@ background-position:center,center,67% 46%;background-size:cover;background-repea
  <section class="section" id="oportunidade"><div class="wrap"><div class="intro"><span class="eyebrow">01 / POR QUE EXISTE</span><h2>Oportunidade não pode depender <em>apenas de capital.</em></h2><p class="muted">O profissional entra com seu conhecimento, dedicação e capacidade de execução. O padrinho pode contribuir com os recursos e a visão necessários para estruturar a operação. A WINF Partners oferece um modelo de marca, suporte e processos, conforme o contrato de licenciamento e a implantação efetiva.</p></div><p class="quote">Não se trata de comprar uma promessa.<br><em>Trata-se de avaliar uma pessoa e um projeto.</em></p>
  <div class="pm-impact-photos" aria-label="Oportunidade e impacto do empreendedorismo">
   <figure class="pm-impact-photo">
-    <img src="/partners/padrinho-modern/media/winf-padrinho-modern-parceria-01.webp" width="830" height="464" loading="lazy" decoding="async" alt="Cena editorial do Padrinho Modern: profissional com camisa WINF e mentor avaliando oportunidades em um notebook">
+    <span class="pm-photo-brand" aria-hidden="true"><img src="/winf-logo.svg?v=winf-official-vector-20261111" alt="" width="72" height="26"></span>
+    <img src="/partners/media/parceria.webp" width="830" height="464" loading="lazy" decoding="async" alt="Encontro profissional de mentoria e parceria — fotografia conceitual sem aplicação de logotipo em roupas">
     <figcaption><span>MENTORIA &amp; VISÃO</span><strong>Quando a experiência encontra iniciativa.</strong></figcaption>
   </figure>
   <figure class="pm-impact-photo">
@@ -138,7 +145,8 @@ background-position:center,center,67% 46%;background-size:cover;background-repea
    </div>
    <div class="pm-editorial-grid">
     <figure class="pm-editorial-card pm-editorial-card--feature">
-     <img src="/partners/padrinho-modern/media/winf-padrinho-modern-mentoria-01.webp" alt="Mentor experiente e profissional de camisa preta analisando oportunidades em notebook" width="1100" height="825" loading="lazy" decoding="async">
+      <span class="pm-photo-brand" aria-hidden="true"><img src="/winf-logo.svg?v=winf-official-vector-20261111" alt="" width="72" height="26"></span>
+     <img src="/partners/media/convite.webp" alt="Profissionais em conversa sobre oportunidade e colaboração — fotografia conceitual sem logotipo incorporado à roupa" width="1100" height="825" loading="lazy" decoding="async">
      <figcaption><span>01 / VISÃO &amp; PLANEJAMENTO</span><strong>UMA IDEIA. UM TERRITÓRIO. UM PLANO.</strong></figcaption>
     </figure>
     <figure class="pm-editorial-card">
