@@ -324,7 +324,8 @@ test('Experiências volume 01: seis histórias originais completas em duas vozes
   assert.ok(turns.length>=35,'Roteiro superficial: '+item.id);
   assert.ok(turns.some(t=>t[0]==='LIA'));
   assert.ok(turns.some(t=>t[0]==='DAVI'));
-  assert.ok(turns.every(t=>['LIA','DAVI'].includes(t[0])&&t[1].length>=20));
+  assert.ok(turns.every(t=>['LIA','DAVI'].includes(t[0])&&t[1].length>=10));
+  assert.ok(turns.filter(t=>t[1].length>=30).length>=Math.floor(turns.length*.9),'Roteiro precisa ter desenvolvimento, além de falas curtas de transição');
   assert.ok(item.chapters.every(ch=>ch.title&&ch.cue&&ch.lines.length>=5));
  }
 });
