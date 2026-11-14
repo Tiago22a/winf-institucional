@@ -133,7 +133,7 @@ test('entrada SynthWAVE exige no máximo dois cliques, sem identidade ou newslet
  const radio=read('radio/index.html');
  const app=read('app.js');
  assert.ok(landing.includes('href="/synthwave/radio/#live"'), 'Primeiro clique deve abrir diretamente a tela da rádio');
- assert.ok(landing.includes('ENTRAR NA RÁDIO'), 'CTA principal deve ser explícito');
+ assert.ok(landing.includes('OUVIR AGORA · GRÁTIS'), 'CTA principal deve anunciar o acesso gratuito');
  assert.ok(radio.includes('data-nav="live"'), 'A rota de rádio deve existir');
  assert.ok(app.includes("location.hash.replace('#','')||'home'"), 'A rádio deve respeitar #live na primeira navegação');
  assert.ok(app.includes("button('▶ OUVIR AGORA',\"startRadio()\")"), 'Segundo clique inicia a reprodução');
@@ -160,7 +160,7 @@ test('MVP: entrada grátis sem barreira de cadastro ou assinatura premium',()=>{
  assert.match(home,/OUVIR AGORA · GRÁTIS/);
  assert.match(home,/href="\/synthwave\/radio\/#live"/);
  assert.doesNotMatch(radio,/SYNTHWAVE PREMIUM/);
- assert.match(radio,/Rádio livre para ouvir/);
+ assert.match(radio,/rádio de reprodução contínua/i);
  assert.equal(JSON.parse(read('firebase-public-config.json')).enabled,false);
  assert.equal(JSON.parse(read('newsletter/config.json')).enabled,false);
  const editorial=read('PLANO_EDITORIAL_LANCAMENTO.md');
