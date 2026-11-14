@@ -1,0 +1,42 @@
+/* SYNTHWAVE.fm — player v1: moments, personal playlists and ambient mixer */
+.sw-moment-card {
+ background:linear-gradient(160deg,#19231e 0%,#11191b 60%,#14151a 100%);
+ border:1px solid rgba(195,217,195,.24);
+ min-height:250px;
+ transition:transform .2s ease,border-color .2s ease;
+}
+.sw-moment-card:hover {transform:translateY(-3px);border-color:#d5e3cf}
+.sw-moment-icon {font-size:27px;line-height:1}
+.sw-moment-action {
+ display:inline-flex;align-items:center;justify-content:center;
+ padding:12px 18px;min-height:45px;
+ background:#c2d9ca;color:#14231a;border:1px solid #c2d9ca;
+ font-family:"Plus Jakarta Sans",sans-serif;font-size:12px;font-weight:800;
+ letter-spacing:.02em;cursor:pointer;text-decoration:none;
+ transition:background .18s,transform .18s;
+}
+.sw-moment-action:hover {background:#e4f3e7;transform:translateY(-1px)}
+.sw-favorite {
+ display:inline-flex;align-items:center;justify-content:center;
+ font-size:11px;font-weight:750;padding:9px 11px;margin-top:11px;
+ border:1px solid rgba(220,234,217,.35);color:#e2eadf;background:#1a2821;
+}
+.sw-favorite:hover,.sw-favorite:focus-visible {border-color:#fff;background:#293b2e}
+.sw-mixer{background:linear-gradient(125deg,#13231a,#14161b 65%);border-color:rgba(215,238,209,.25)}
+.sw-mixer-range{display:block;cursor:pointer;accent-color:#bcd5bf;height:28px}
+.sw-personal-card{background:#151b1a;border-color:#38473c}
+.sw-personal-card input,.sw-personal-card select{background:#0c110f;color:#f8faf8;border:1px solid #64736a}
+.sw-local-notice{border-left:3px solid #b9d2bc;background:#111c14}
+.sw-personal-card button:focus-visible,.sw-moment-action:focus-visible,.sw-favorite:focus-visible{
+ outline:2px solid #fff;outline-offset:3px
+}
+@media(max-width:640px){
+ .sw-moment-card{min-height:0}
+ .sw-moment-action{min-height:48px}
+ .sw-mixer{margin-inline:0}
+ .sw-personal-card{padding:17px}
+}
+@media(prefers-reduced-motion:reduce){
+ .sw-moment-card,.sw-moment-action{transition:none}
+ .sw-moment-card:hover,.sw-moment-action:hover{transform:none}
+}
