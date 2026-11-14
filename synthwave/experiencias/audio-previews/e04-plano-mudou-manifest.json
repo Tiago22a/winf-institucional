@@ -1,0 +1,21 @@
+{
+  "experienceId": "e04-plano-mudou",
+  "title": "O dia em que o plano mudou",
+  "status": "audio_preview_unreviewed",
+  "speakers": [
+    "LIA",
+    "DAVI"
+  ],
+  "speechEngine": "Piper TTS",
+  "ttsModels": {
+    "LIA": "pt_BR-cadu-medium",
+    "DAVI": "pt_BR-faber-medium"
+  },
+  "soundtrack": "original_synthesized_ambient",
+  "spokenTurns": 39,
+  "durationSecondsApprox": 243.37,
+  "sourceScripts": "synthwave/experiencias/volume-01/ e synthwave/experiencias/capsulas/",
+  "rightsReviewRequired": true,
+  "finalPublicationApproved": false,
+  "sha256": "6355f81bf46627919dd5e5bdfb1a9041a5a0a7ab933b96bf717f25ce1742bce0"
+}

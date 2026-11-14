@@ -1,0 +1,21 @@
+{
+  "experienceId": "e06-maquina-pergunta",
+  "title": "A máquina que fez uma pergunta",
+  "status": "audio_preview_unreviewed",
+  "speakers": [
+    "LIA",
+    "DAVI"
+  ],
+  "speechEngine": "Piper TTS",
+  "ttsModels": {
+    "LIA": "pt_BR-cadu-medium",
+    "DAVI": "pt_BR-faber-medium"
+  },
+  "soundtrack": "original_synthesized_ambient",
+  "spokenTurns": 39,
+  "durationSecondsApprox": 275.41,
+  "sourceScripts": "synthwave/experiencias/volume-01/ e synthwave/experiencias/capsulas/",
+  "rightsReviewRequired": true,
+  "finalPublicationApproved": false,
+  "sha256": "0e98f0adcdab4fe940a88ed8eb2c951c5c1e18673d67a9e92109d6e8a2ef9ae2"
+}

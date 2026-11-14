@@ -1,0 +1,21 @@
+{
+  "experienceId": "c03-primeiro-som",
+  "title": "O primeiro som da manhã",
+  "status": "audio_preview_unreviewed",
+  "speakers": [
+    "LIA",
+    "DAVI"
+  ],
+  "speechEngine": "Piper TTS",
+  "ttsModels": {
+    "LIA": "pt_BR-cadu-medium",
+    "DAVI": "pt_BR-faber-medium"
+  },
+  "soundtrack": "original_synthesized_ambient",
+  "spokenTurns": 15,
+  "durationSecondsApprox": 97.22,
+  "sourceScripts": "synthwave/experiencias/volume-01/ e synthwave/experiencias/capsulas/",
+  "rightsReviewRequired": true,
+  "finalPublicationApproved": false,
+  "sha256": "5c68ac9ccc67e43959ba5563bc02c7c8ea81085c3183683ea2a74023acafbbc7"
+}

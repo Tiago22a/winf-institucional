@@ -1,0 +1,21 @@
+{
+  "experienceId": "c02-caderno-inacabado",
+  "title": "O caderno das coisas inacabadas",
+  "status": "audio_preview_unreviewed",
+  "speakers": [
+    "LIA",
+    "DAVI"
+  ],
+  "speechEngine": "Piper TTS",
+  "ttsModels": {
+    "LIA": "pt_BR-cadu-medium",
+    "DAVI": "pt_BR-faber-medium"
+  },
+  "soundtrack": "original_synthesized_ambient",
+  "spokenTurns": 15,
+  "durationSecondsApprox": 102.91,
+  "sourceScripts": "synthwave/experiencias/volume-01/ e synthwave/experiencias/capsulas/",
+  "rightsReviewRequired": true,
+  "finalPublicationApproved": false,
+  "sha256": "40ad6485ebf6a07d4d1568065e84dcb0acfb7c3910c2e96eeb34a16d3a0fd4b0"
+}

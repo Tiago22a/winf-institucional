@@ -1,0 +1,21 @@
+{
+  "experienceId": "e02-fotografia-gaveta",
+  "title": "A fotografia que ficou na gaveta",
+  "status": "audio_preview_unreviewed",
+  "speakers": [
+    "LIA",
+    "DAVI"
+  ],
+  "speechEngine": "Piper TTS",
+  "ttsModels": {
+    "LIA": "pt_BR-cadu-medium",
+    "DAVI": "pt_BR-faber-medium"
+  },
+  "soundtrack": "original_synthesized_ambient",
+  "spokenTurns": 39,
+  "durationSecondsApprox": 257.78,
+  "sourceScripts": "synthwave/experiencias/volume-01/ e synthwave/experiencias/capsulas/",
+  "rightsReviewRequired": true,
+  "finalPublicationApproved": false,
+  "sha256": "1d61eaa66b6050cdd41bb6ae743b447680f39df959bd744bd084eaeed977f077"
+}

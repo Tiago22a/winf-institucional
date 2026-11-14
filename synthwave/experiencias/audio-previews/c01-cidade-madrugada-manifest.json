@@ -1,0 +1,21 @@
+{
+  "experienceId": "c01-cidade-madrugada",
+  "title": "A cidade que não dorme inteira",
+  "status": "audio_preview_unreviewed",
+  "speakers": [
+    "LIA",
+    "DAVI"
+  ],
+  "speechEngine": "Piper TTS",
+  "ttsModels": {
+    "LIA": "pt_BR-cadu-medium",
+    "DAVI": "pt_BR-faber-medium"
+  },
+  "soundtrack": "original_synthesized_ambient",
+  "spokenTurns": 15,
+  "durationSecondsApprox": 100.92,
+  "sourceScripts": "synthwave/experiencias/volume-01/ e synthwave/experiencias/capsulas/",
+  "rightsReviewRequired": true,
+  "finalPublicationApproved": false,
+  "sha256": "945daa6a347ac2174a8e17424222bf059b40317cb06295524154ebbdf5b78e65"
+}

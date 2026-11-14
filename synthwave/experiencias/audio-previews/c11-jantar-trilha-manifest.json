@@ -1,0 +1,21 @@
+{
+  "experienceId": "c11-jantar-trilha",
+  "title": "O jantar sem trilha perfeita",
+  "status": "audio_preview_unreviewed",
+  "speakers": [
+    "LIA",
+    "DAVI"
+  ],
+  "speechEngine": "Piper TTS",
+  "ttsModels": {
+    "LIA": "pt_BR-cadu-medium",
+    "DAVI": "pt_BR-faber-medium"
+  },
+  "soundtrack": "original_synthesized_ambient",
+  "spokenTurns": 15,
+  "durationSecondsApprox": 97.16,
+  "sourceScripts": "synthwave/experiencias/volume-01/ e synthwave/experiencias/capsulas/",
+  "rightsReviewRequired": true,
+  "finalPublicationApproved": false,
+  "sha256": "8b809fe2fa723fb47bae1c4e0f2709d7460d983b89ca744a94d796e0b941a8ad"
+}

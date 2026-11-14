@@ -1,0 +1,21 @@
+{
+  "experienceId": "c08-cartaz-tres-versoes",
+  "title": "O cartaz de três versões",
+  "status": "audio_preview_unreviewed",
+  "speakers": [
+    "LIA",
+    "DAVI"
+  ],
+  "speechEngine": "Piper TTS",
+  "ttsModels": {
+    "LIA": "pt_BR-cadu-medium",
+    "DAVI": "pt_BR-faber-medium"
+  },
+  "soundtrack": "original_synthesized_ambient",
+  "spokenTurns": 15,
+  "durationSecondsApprox": 97.67,
+  "sourceScripts": "synthwave/experiencias/volume-01/ e synthwave/experiencias/capsulas/",
+  "rightsReviewRequired": true,
+  "finalPublicationApproved": false,
+  "sha256": "d94337b73cc30c71feda2e8c38d5359fbf318255543af11876b6d0d14564d455"
+}

@@ -1,0 +1,21 @@
+{
+  "experienceId": "e01-cinco-sons",
+  "title": "Cinco sons antes do próximo play",
+  "status": "audio_preview_unreviewed",
+  "speakers": [
+    "LIA",
+    "DAVI"
+  ],
+  "speechEngine": "Piper TTS",
+  "ttsModels": {
+    "LIA": "pt_BR-cadu-medium",
+    "DAVI": "pt_BR-faber-medium"
+  },
+  "soundtrack": "original_synthesized_ambient",
+  "spokenTurns": 38,
+  "durationSecondsApprox": 263.68,
+  "sourceScripts": "synthwave/experiencias/volume-01/ e synthwave/experiencias/capsulas/",
+  "rightsReviewRequired": true,
+  "finalPublicationApproved": false,
+  "sha256": "52a8de8723edff21d1472d248a381287eefeac8855c4b661e7ae06b70d5be4ac"
+}

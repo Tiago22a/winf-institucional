@@ -1,0 +1,21 @@
+{
+  "experienceId": "e05-estrada-silencio",
+  "title": "A estrada também tem silêncio",
+  "status": "audio_preview_unreviewed",
+  "speakers": [
+    "LIA",
+    "DAVI"
+  ],
+  "speechEngine": "Piper TTS",
+  "ttsModels": {
+    "LIA": "pt_BR-cadu-medium",
+    "DAVI": "pt_BR-faber-medium"
+  },
+  "soundtrack": "original_synthesized_ambient",
+  "spokenTurns": 39,
+  "durationSecondsApprox": 232.4,
+  "sourceScripts": "synthwave/experiencias/volume-01/ e synthwave/experiencias/capsulas/",
+  "rightsReviewRequired": true,
+  "finalPublicationApproved": false,
+  "sha256": "5448154a9d0e9d5a0403ce8e26080f754663af96dcc2410aef80eaa6357f8d37"
+}

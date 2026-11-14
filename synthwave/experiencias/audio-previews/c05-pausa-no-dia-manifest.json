@@ -1,0 +1,21 @@
+{
+  "experienceId": "c05-pausa-no-dia",
+  "title": "Uma pausa que cabe no dia",
+  "status": "audio_preview_unreviewed",
+  "speakers": [
+    "LIA",
+    "DAVI"
+  ],
+  "speechEngine": "Piper TTS",
+  "ttsModels": {
+    "LIA": "pt_BR-cadu-medium",
+    "DAVI": "pt_BR-faber-medium"
+  },
+  "soundtrack": "original_synthesized_ambient",
+  "spokenTurns": 15,
+  "durationSecondsApprox": 102.11,
+  "sourceScripts": "synthwave/experiencias/volume-01/ e synthwave/experiencias/capsulas/",
+  "rightsReviewRequired": true,
+  "finalPublicationApproved": false,
+  "sha256": "8d816f0e8fda58855cf5ee3297e4cef81fdd4dada2961cdd4131eeb2404bdce4"
+}
