@@ -17,6 +17,6 @@ test('roteiro original de episódio 02 ainda não é apresentado como áudio lan
 });
 test('cada coleção tem descrição e chamada editorial sem fingir lançamento musical',()=>{
  const text=read('COLECOES_COPYS_ORIGINAIS.md');
- for(const title of ['FOCO','ESTRADA','DEPOIS DAS 20H','REFÚGIO','ENCONTRO','CRIAR','COMEÇO DE DIA','PAUSA'])assert.ok(text.includes('## '+['FOCO','ESTRADA','DEPOIS DAS 20H','REFÚGIO','ENCONTRO','CRIAR','COMEÇO DE DIA','PAUSA'].indexOf(title)+1+'. '+title));
+ for(const title of ['FOCO','ESTRADA','DEPOIS DAS 20H','REFÚGIO','ENCONTRO','CRIAR','COMEÇO DE DIA','PAUSA'])assert.ok(text.includes('## '+(['FOCO','ESTRADA','DEPOIS DAS 20H','REFÚGIO','ENCONTRO','CRIAR','COMEÇO DE DIA','PAUSA'].indexOf(title)+1)+'. '+title));
  assert.match(text,/Não anunciar novas músicas ou episódios como disponíveis/);
 });
