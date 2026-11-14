@@ -21,12 +21,17 @@
   const enquiry = document.getElementById('territory-enquiry');
   const template = document.getElementById('directory-card');
   const modes = root.querySelectorAll('[data-directory-mode]');
-  let mode = 'ativas';
+  const more = document.getElementById('directory-more');
+  const selectionBanner = document.getElementById('directory-selection-banner');
+  const serviceField = document.querySelector('.directory-service-field');
+  const networkNote = document.getElementById('directory-network-note');
+  let mode = location.hash === '#territorios' ? 'territorios' : 'ativas';
+  let expanded = false;
   const names = { automotivo: 'Automotivo', residencial: 'Residencial', ambos: 'Automotivo + residencial' };
   const normalize = value => String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
   const eligible = city => mode === 'ativas'
-    ? city.status === 'ativa' // Página publicada não é sinônimo de unidade operacional.
-    : city.status === 'pre_ativacao' || (city.status === 'nao_ativa' && (city.siteAtivo === true || city.disponivelParaAtivacao === true));
+    ? city.status === 'ativa'
+    : city.status !== 'ativa' && (city.siteAtivo === true || city.disponivelParaAtivacao === true);
   function safeUrl(value) {
     if (!value) return null;
     try {
@@ -47,67 +52,130 @@
   states.forEach(uf => { const option = document.createElement('option'); option.value = uf; option.textContent = uf; state.append(option); });
   function render() {
     const q = normalize(query.value);
-    const matchesFilter = city => (!q || normalize(city.cidade + ' ' + city.uf).includes(q)) && (!state.value || city.uf === state.value) && (!service.value || city.tipoAtendimento === service.value || (service.value === 'nao_informado' && !city.tipoAtendimento) || (service.value !== 'ambos' && city.tipoAtendimento === 'ambos'));
+    const matchesFilter = city =>
+      (!q || normalize(city.cidade + ' ' + city.uf).includes(q)) &&
+      (!state.value || city.uf === state.value) &&
+      (mode === 'territorios' || !service.value || city.tipoAtendimento === service.value ||
+      (service.value === 'nao_informado' && !city.tipoAtendimento) ||
+      (service.value !== 'ambos' && city.tipoAtendimento === 'ambos'));
     const matched = cities.filter(city => eligible(city) && matchesFilter(city));
+    const shown = expanded || q || state.value || service.value ? matched : matched.slice(0, 12);
+
     function cardsFor(items) {
       const fragment = document.createDocumentFragment();
       items.forEach(city => {
+        const active = city.status === 'ativa';
         const card = template.content.cloneNode(true);
-        card.querySelector('article').dataset.status = city.status;
-        card.querySelector('.directory-card-state').textContent = city.referencia || city.uf || '';
-        card.querySelector('.directory-card-status').textContent = city.status === 'ativa' ? '● Operação ativa' : city.siteAtivo ? '● Página publicada · sem operação confirmada' : mode === 'territorios' ? 'Ativação sob consulta' : 'Não operacional';
+        const article = card.querySelector('article');
+        article.dataset.status = city.status;
+        article.dataset.journey = active ? 'atendimento' : 'expansao';
+        card.querySelector('.directory-card-state').textContent = city.uf || 'BR';
+        card.querySelector('.directory-card-status').textContent =
+          active ? '● Atendimento WINF' : city.siteAtivo ? '◌ Estrutura digital publicada' : '◌ Seleção sob consulta';
         card.querySelector('.directory-card-city').textContent = city.cidade + (city.uf ? ' — ' + city.uf : '');
-        card.querySelector('.directory-card-segment').textContent = city.siteAtivo ? (names[city.tipoAtendimento] || 'Atendimento sob consulta') : 'Disponibilidade para ativação sob consulta';
-        const tags = city.tipoAtendimento === 'ambos' ? ['Automotivo', 'Residencial'] : [names[city.tipoAtendimento]].filter(Boolean);
-        tags.forEach(text => { const tag = document.createElement('span'); tag.textContent = text; card.querySelector('.directory-card-tags').append(tag); });
+        card.querySelector('.directory-card-segment').textContent = active
+          ? (names[city.tipoAtendimento] || 'Películas para vidros') + ' · Atendimento sob agendamento'
+          : 'WINF Asset Light™ · oportunidade territorial';
+        const claim = card.querySelector('.directory-card-claim');
+        if (!active) {
+          claim.hidden = false;
+          claim.textContent = 'Apenas 1 licenciado selecionado por cidade. Não é para todos.';
+        }
+        const tags = active
+          ? (city.tipoAtendimento === 'ambos' ? ['Automotivo', 'Residencial'] : [names[city.tipoAtendimento] || 'Soluções WINF'])
+          : [city.siteAtivo ? 'Página online' : 'Em preparação', 'Exclusividade territorial'];
+        tags.forEach(label => {
+          const tag = document.createElement('span');
+          tag.textContent = label;
+          card.querySelector('.directory-card-tags').append(tag);
+        });
         const links = card.querySelector('.directory-card-links');
         if (city.siteAtivo === true) {
-          addLink(links, 'Página da cidade ↗', city.url);
-          const whatsapp = /^55\d{10,11}$/.test(String(city.numero || '')) ? city.numero : '5513981113001';
-          const text = 'Olá! Vim da página WINF e gostaria de consultar atendimento em ' + city.cidade + '/' + city.uf + '.';
-          addLink(links, 'WhatsApp ↗', 'https://wa.me/' + whatsapp + '?text=' + encodeURIComponent(text));
-          addLink(links, city.instagram ? 'Instagram da unidade ↗' : 'Instagram WINF global ↗', city.instagram || 'https://www.instagram.com/winf.ofc/');
+          addLink(links, active ? 'Ver página da cidade ↗' : 'Conhecer estrutura pronta ↗', city.url);
+        }
+        if (active) {
+          const whatsapp = /^55\d{10,11}$/.test(String(city.numero || ''))
+            ? city.numero : '5513981113001';
+          const message = 'Olá! Estou em ' + city.cidade + '/' + city.uf +
+            ' e gostaria de consultar atendimento WINF Select. Pode me orientar?';
+          addLink(links, 'Solicitar atendimento ↗',
+            'https://wa.me/' + whatsapp + '?text=' + encodeURIComponent(message));
+          if (city.instagram) addLink(links, 'Instagram ↗', city.instagram);
         } else {
-          addLink(links, 'Consultar ativação ↗', 'https://wa.me/5513997815375?text=' + encodeURIComponent('Olá! Tenho interesse em consultar a disponibilidade de um território WINF em ' + city.cidade + '/' + city.uf + '.'));
+          const message = 'Olá! Vi a estrutura digital WINF da cidade de ' + city.cidade + '/' + city.uf +
+            '. Tenho interesse em ser o único licenciado WINF Asset Light™ do município. ' +
+            'A seleção ainda está disponível? Gostaria de conhecer o pack, as condições de contratação e a ativação.';
+          addLink(links, 'Consultar exclusividade ↗',
+            'https://wa.me/5513997815375?text=' + encodeURIComponent(message));
         }
         fragment.append(card);
       });
       return fragment;
     }
-    results.replaceChildren(cardsFor(matched));
+
+    results.replaceChildren(cardsFor(shown));
     const extraMatched = mode === 'ativas' ? extras.filter(matchesFilter) : [];
     extraResults.replaceChildren(cardsFor(extraMatched));
     extrasSection.hidden = extraMatched.length === 0;
     empty.hidden = matched.length + extraMatched.length !== 0;
     enquiry.hidden = mode !== 'territorios';
-    const activeCount = matched.filter(item => item.status === 'ativa').length + extraMatched.length;
+    selectionBanner.hidden = mode !== 'territorios';
+    serviceField.hidden = mode === 'territorios';
+    more.hidden = matched.length <= shown.length;
     count.textContent = mode === 'ativas'
-      ? activeCount + (activeCount === 1 ? ' cidade com operação ativa' : ' cidades com operação ativa')
-      : matched.length + (matched.length === 1 ? ' território em análise (sem ativação confirmada)' : ' territórios em análise (sem ativação confirmada)');
-    const activeNotice = document.querySelector('.directory-active-toggle');
-    if (activeNotice) activeNotice.hidden = mode !== 'ativas';
-    document.getElementById('directory-kicker').textContent = mode === 'ativas' ? 'LOCATOR WINF // OPERAÇÕES CONFIRMADAS' : 'WINF PARTNERS // PRÉ-ATIVAÇÃO E CONSULTA';
-    document.getElementById('directory-title').textContent = mode === 'ativas' ? 'Cidades com operação ativa' : 'Cidades em pré-ativação e consulta';
-    document.getElementById('directory-empty-title').textContent = mode === 'ativas' ? 'Vamos encontrar seu atendimento.' : 'Consulte a cidade que você tem em mente.';
-    document.getElementById('directory-empty-copy').textContent = mode === 'ativas' ? 'Ainda não há páginas regionais cadastradas que correspondam à sua busca. Fale com a central para confirmar o atendimento na sua região.' : 'A lista de territórios disponíveis será exibida conforme as confirmações da equipe. Você também pode informar uma cidade abaixo e solicitar uma consulta.';
+      ? (matched.length + extraMatched.length) + ' cidades com atendimento WINF'
+      : matched.length + (matched.length === 1 ? ' cidade na vitrine de expansão' : ' cidades na vitrine de expansão');
+    networkNote.hidden = mode !== 'ativas';
+    networkNote.textContent = 'Atendimento e agenda sujeitos à confirmação';
+    document.getElementById('directory-kicker').textContent = mode === 'ativas'
+      ? 'WINF SELECT™ / ATENDIMENTO' : 'WINF PARTNERS™ / TERRITÓRIOS';
+    document.getElementById('directory-title').textContent = mode === 'ativas'
+      ? 'Encontre sua cidade.' : 'Sua cidade pode ser a próxima.';
+    document.getElementById('directory-empty-title').textContent = mode === 'ativas'
+      ? 'Sua cidade pode ser a próxima.' : 'Não encontrou sua cidade?';
+    document.getElementById('directory-empty-copy').textContent = mode === 'ativas'
+      ? 'Explore as cidades com estrutura digital WINF preparada para expansão. A oportunidade de representar sua cidade pode estar aberta.'
+      : 'Conte qual município você deseja desenvolver. Nossa equipe pode verificar o cadastro e as condições de seleção.';
     const contact = document.getElementById('directory-empty-contact');
-    contact.textContent = mode === 'ativas' ? 'Falar com a central →' : 'Falar com a expansão →';
-    contact.href = mode === 'ativas' ? 'https://wa.me/5513981113001' : 'https://wa.me/5513997815375';
+    contact.textContent = mode === 'ativas' ? 'Consultar atendimento →' : 'Falar com expansão →';
+    contact.href = mode === 'ativas'
+      ? 'https://wa.me/5513981113001?text=' + encodeURIComponent('Olá! Quero consultar atendimento WINF na minha cidade.')
+      : 'https://wa.me/5513997815375?text=' + encodeURIComponent('Olá! Quero consultar o território WINF Asset Light™ da minha cidade.');
     empty.querySelector('button[data-directory-mode]').hidden = mode === 'territorios';
     modes.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.directoryMode === mode)));
   }
-  query.addEventListener('input', render);
-  state.addEventListener('change', render);
-  service.addEventListener('change', render);
+  const refresh = () => { expanded = false; render(); };
+  query.addEventListener('input', refresh);
+  state.addEventListener('change', refresh);
+  service.addEventListener('change', refresh);
   document.getElementById('directory-search').addEventListener('submit', event => event.preventDefault());
-  document.getElementById('directory-search').addEventListener('reset', () => { query.value = ''; state.value = ''; service.value = ''; render(); });
-  modes.forEach(button => button.addEventListener('click', () => { mode = button.dataset.directoryMode; render(); }));
+  document.getElementById('directory-search').addEventListener('reset', event => {
+    event.preventDefault();
+    query.value = '';
+    state.value = '';
+    service.value = '';
+    refresh();
+  });
+  modes.forEach(button => button.addEventListener('click', () => {
+    mode = button.dataset.directoryMode;
+    if (mode === 'territorios') service.value = '';
+    expanded = false;
+    render();
+  }));
+  more.addEventListener('click', () => {
+    expanded = true;
+    render();
+  });
   document.getElementById('territory-form').addEventListener('submit', event => {
     event.preventDefault();
     const city = document.getElementById('territory-city').value.trim();
     if (!city) return;
-    const url = 'https://wa.me/5513997815375?text=' + encodeURIComponent('Olá! Gostaria de verificar a disponibilidade para ativação de um território WINF em ' + city + '.');
-    window.open(url, '_blank', 'noopener,noreferrer');
+    const message = 'Olá! Quero verificar a disponibilidade para ser o único licenciado WINF Asset Light™ em ' + city +
+      '. Gostaria de conhecer o pack digital já preparado, as condições e o processo de ativação.';
+    window.open('https://wa.me/5513997815375?text=' + encodeURIComponent(message), '_blank', 'noopener,noreferrer');
+  });
+  window.addEventListener('hashchange', () => {
+    if (location.hash === '#territorios') { mode = 'territorios'; render(); }
   });
   render();
 })();
