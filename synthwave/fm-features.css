@@ -122,3 +122,8 @@
 .sw-capsule-slot .sw-experience-card{background:linear-gradient(140deg,#192d21,#122019)}
 .sw-capsule-slot .sw-experience-card img{max-height:210px}
 @media(max-width:580px){.sw-editorial-index{display:grid;grid-template-columns:1fr}.sw-editorial-index a{width:100%}.sw-capsule-slot-head{align-items:flex-start}.sw-capsule-slot-head .sw-program-now{margin-top:4px}}
+
+/* MP3 de prévia verificado: cartão simples, sem fingir aprovação editorial final. */
+.sw-exp-mp3{margin-top:22px;padding:20px;background:linear-gradient(135deg,#31503e,#203829);border:1px solid #b0ccaa79;border-left:3px solid #eac19f}
+.sw-exp-mp3 audio{accent-color:#d9b38e;min-height:48px}
+.sw-exp-mp3 audio:focus-visible{outline:2px solid #f6eddc;outline-offset:3px}
