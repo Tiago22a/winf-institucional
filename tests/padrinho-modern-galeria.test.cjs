@@ -1,63 +1,52 @@
 "use strict";
-const test=require("node:test"),assert=require("node:assert/strict"),fs=require("node:fs"),path=require("node:path");
+const test=require("node:test");
+const assert=require("node:assert/strict");
+const fs=require("node:fs");
+const path=require("node:path");
 const root=path.resolve(__dirname,"..");
 const page=fs.readFileSync(path.join(root,"partners/padrinho-modern/index.html"),"utf8");
-const section=page.slice(page.indexOf('id="historias"'),page.indexOf('id="modelos"'));
-test("Padrinho Modern destaca WINF Asset Light com imagens existentes",()=>{
- assert.match(section,/WINF Asset Light™/);
- const files=["asset-light-gestao-2026.webp","asset-light-mobilidade-2026.webp","asset-light-execucao-2026.webp"];
- for(const name of files){
-   assert.ok(fs.existsSync(path.join(root,"briefing/media",name)),name);
-   assert.ok(section.includes('/briefing/media/'+name));
- }
- assert.equal((section.match(/<figure\b/g)||[]).length,3);
- for(const tag of section.match(/<img\b[^>]*>/g)||[]){
-   assert.match(tag,/alt="[^"]+"/);assert.match(tag,/loading="lazy"/);assert.match(tag,/decoding="async"/);
+const media="partners/padrinho-modern/media/";
+const names=["oportunidade-04","parceria-01","crescimento-02","mentoria-01","parceria-02","crescimento-04","oportunidade-03","mentoria-04"];
+const filenames=names.map(n=>"winf-padrinho-modern-"+n+".webp");
+test("oito fotografias exclusivas do Padrinho estão versionadas e são WebP válidas",()=>{
+ for(const name of filenames){
+  const full=path.join(root,media,name);
+  assert.ok(fs.existsSync(full),"Arquivo ausente: "+name);
+  const bytes=fs.readFileSync(full);
+  assert.ok(bytes.length>10000&&bytes.length<160000,name+" tamanho inválido");
+  assert.equal(bytes.toString("ascii",0,4),"RIFF");
+  assert.equal(bytes.toString("ascii",8,12),"WEBP");
  }
 });
-test("links de consulta, logo oficial e identidade do modelo preservados",()=>{
+test("uma fotografia por etapa sem reutilizar outra página e sem repetir no mesmo site",()=>{
+ const referenced=[...page.matchAll(/winf-padrinho-modern-([a-z]+-\d{2})\.webp/g)].map(m=>m[1]);
+ assert.equal(referenced.length,8);
+ assert.equal(new Set(referenced).size,8);
+ for(const n of names)assert.ok(referenced.includes(n),n);
+ const imagePaths=[...page.matchAll(/<img\b[^>]*src="([^"]+\.webp)"/g)].map(m=>m[1]);
+ assert.equal(imagePaths.length,6);
+ assert.ok(imagePaths.every(p=>p.startsWith("/"+media)));
+ assert.doesNotMatch(page,/<img\b[^>]*src="\/briefing\/media\//);
+});
+test("imagem de fundo da abertura e encerramento, com contraste e adaptação mobile",()=>{
+ assert.match(page,/\.hero\{[\s\S]*?background-image:[\s\S]*?winf-padrinho-modern-oportunidade-04\.webp/);
+ assert.match(page,/linear-gradient\(90deg,rgba\(5,7,11,\.95\)/);
+ assert.match(page,/\.final\{background-image:[\s\S]*?winf-padrinho-modern-mentoria-04\.webp/);
+ assert.match(page,/@media\(max-width:780px\)/);
+ assert.match(page,/@media\(max-width:480px\)/);
+ assert.match(page,/@media\(max-width:640px\)/);
+ assert.match(page,/text-shadow:/);
+});
+test("legibilidade, textos alternativos e identidade WINF oficial intacta",()=>{
+ const imgTags=[...page.matchAll(/<img\b[^>]*>/g)].map(m=>m[0]);
+ for(const t of imgTags)assert.match(t,/alt="[^"]+"/);
+ assert.match(page,/<img src="\/winf-logo\.svg" width="95" height="35" alt="WINF™">/);
+ assert.match(page,/WINF Asset Light™/);
+ assert.match(page,/Cenas editoriais ilustrativas criadas para o Padrinho Modern™/);
  assert.match(page,/href="\/partners\/#territorios"/);
  assert.doesNotMatch(page,/href="\/partners\/territorios\/"/);
- assert.match(page,/<img src="\/winf-logo.svg" width="95" height="35" alt="WINF™">/);
  assert.match(page,/<link rel="canonical" href="https:\/\/winf.com.br\/partners\/padrinho-modern\/"/);
- assert.match(page,/id="asset-light"/);
- assert.match(page,/Imagens editoriais ilustrativas/);
-});
-test("layout responsivo não quebra navegação",()=>{
- assert.match(page,/\.pm-editorial-grid\{display:grid/);
- assert.match(page,/@media\(max-width:1000px\)/);
- assert.match(page,/@media\(max-width:640px\)/);
  const markup=page.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi,"");
  const ids=[...markup.matchAll(/\bid="([^"]+)"/g)].map(x=>x[1]);
  assert.equal(new Set(ids).size,ids.length);
-});
-
-test("fotografias de parceria, família e operação digital são reais no repositório",()=>{
- const files=[
-  ["partners/padrinho-modern/media/winf-padrinho-modern-mentoria-01.webp","/partners/padrinho-modern/media/winf-padrinho-modern-mentoria-01.webp"],
-  ["briefing/media/asset-light-familia-2026.webp","/briefing/media/asset-light-familia-2026.webp"],
-  ["briefing/media/asset-light-gestao-20261108.webp","/briefing/media/asset-light-gestao-20261108.webp"]
- ];
- for(const [local,url] of files){
-   assert.ok(fs.existsSync(path.join(root,local)),local);
-   assert.ok(page.includes('src="'+url+'"'),url);
- }
- assert.match(page,/class="pm-impact-photos"/);
- assert.match(page,/class="pm-model-photo"/);
- assert.match(page,/@media\(max-width:760px\)/);
- assert.match(page,/decoding="async"/);
- assert.match(page,/loading="lazy"/);
-});
-
-test("foto nova de mentoria foi incorporada como asset WebP real e identidade preservada",()=>{
- const rel="partners/padrinho-modern/media/winf-padrinho-modern-mentoria-01.webp";
- const img=fs.readFileSync(path.join(root,rel));
- assert.ok(img.length>10000&&img.length<150000);
- assert.equal(img.subarray(0,4).toString("ascii"),"RIFF");
- assert.equal(img.subarray(8,12).toString("ascii"),"WEBP");
- assert.match(page,/src="\/partners\/padrinho-modern\/media\/winf-padrinho-modern-mentoria-01\.webp"/);
- assert.match(page,/alt="Cena editorial do Padrinho Modern: profissional com camisa WINF e mentor/);
- assert.match(page,/MENTORIA &amp; VISÃO/);
- assert.match(page,/\.pm-impact-photo--mentor img\{object-position:/);
- assert.match(page,/<img src="\/winf-logo\.svg" width="95" height="35" alt="WINF™">/);
 });
