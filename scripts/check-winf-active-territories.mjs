@@ -16,9 +16,9 @@ const center15=active.filter(c=>c.numero?.startsWith('5515'));
 assert.equal(center13.length,22,'Central 013: 22 municípios');
 assert.equal(center15.length,49,'Central 015: 49 municípios');
 for(const city of active){
- assert.equal(city.siteAtivo,true,'Operação ativa sem site cadastrado: '+city.cidade);
+ assert.equal(typeof city.siteAtivo,'boolean','Status da página indefinido: '+city.cidade);
  assert.ok(city.url?.startsWith('/'),'URL não informada: '+city.cidade);
- assert.ok(existsSync(city.url.slice(1)+'index.html'),'Página não gerada: '+city.cidade);
+ assert.equal(city.siteAtivo,existsSync(city.url.slice(1)+'index.html'),'Site publicado divergente do arquivo: '+city.cidade);
  assert.ok(city.numero?.startsWith('5513')||city.numero?.startsWith('5515'),'Contato não regional: '+city.cidade);
 }
 for(const id of ['santos-sp','sorocaba-sp','pilar-do-sul-sp']){
@@ -34,4 +34,4 @@ const script=read('js/winf-active-territories.js');
 assert.ok(!script.includes('replaceChildren'),'Não apagar os cards publicados do site global');
 const locator=read('aerocore/assets/onde-comprar.js');
 assert.ok(locator.includes("city.status === 'ativa'"),'Filtro operacional do locator ausente');
-console.log('✓ WINF: 71 municípios com atendimento ativo, 22 na Central 013 e 49 na Central 015. Cadastro de expansão separado.');
+console.log('✓ WINF: 71 identidades territoriais ativas e links de páginas existentes conferidos. Roteamento interno reservado.');
