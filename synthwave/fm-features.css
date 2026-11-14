@@ -73,3 +73,14 @@
 .sw-podcast-project:hover{border-color:#fff}
 .sw-podcast-script-link:focus-visible,.sw-podcast-project:focus-visible{outline:2px solid #fff;outline-offset:3px}
 @media(max-width:580px){.sw-podcast-actions>a{flex:1 1 100%}}
+
+/* Grade de seis blocos editoriais: linha do tempo legível em desktop e mobile. */
+.sw-program-timeline{display:grid;gap:0;border-top:1px solid #b9d7c63b}
+.sw-program-slot{display:flex;align-items:center;gap:16px;padding:16px 11px;border-bottom:1px solid #b9d7c638;transition:background .2s}
+.sw-program-slot.sw-program-active{background:#a7cbb422;border-left:3px solid #edb584;padding-left:8px}
+.sw-program-time{flex:none;width:101px;color:#eec9a4;font:800 11px/1.5 'Plus Jakarta Sans',sans-serif;letter-spacing:.05em}
+.sw-program-details{min-width:0;flex:1;display:flex;flex-direction:column;gap:5px}
+.sw-program-details strong{color:#f2f5e9;font-size:12px;letter-spacing:.08em}
+.sw-program-details small{color:#b2c6b9;font-size:11px;line-height:1.5}
+.sw-program-now{flex:none;font:900 9px/1.4 'Plus Jakarta Sans',sans-serif;letter-spacing:.1em;color:#153126;background:#c4e1c8;padding:6px 8px}
+@media(max-width:540px){.sw-program-slot{gap:9px;padding:13px 8px}.sw-program-time{width:80px;font-size:10px}.sw-program-details strong{font-size:11px}.sw-program-now{font-size:8px;padding:5px}}
