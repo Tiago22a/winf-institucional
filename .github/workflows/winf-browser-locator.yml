@@ -1,0 +1,39 @@
+name: WINF — QA navegador real localizador desktop e celular
+on:
+  pull_request:
+    paths:
+      - 'aerocore/assets/onde-comprar.js'
+      - 'onde-comprar/index.html'
+      - 'aerocore/onde-comprar/index.html'
+      - 'tests/winf-browser-locator.test.mjs'
+      - '.github/workflows/winf-browser-locator.yml'
+  workflow_dispatch:
+jobs:
+  chromium-responsive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Instalar Playwright e Chromium reais
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install --with-deps chromium
+      - name: Subir site em servidor local
+        run: |
+          python3 -m http.server 8766 --bind 127.0.0.1 > /tmp/winf-browser-site.log 2>&1 &
+          for i in $(seq 1 20); do curl -fsS http://127.0.0.1:8766/onde-comprar/ >/dev/null && break; sleep 1; done
+          mkdir -p artifacts/browser
+      - name: Fluxos em Chromium desktop e smartphone
+        run: node --test tests/winf-browser-locator.test.mjs
+      - name: Capturas para inspeção
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: winf-site-chromium-desktop-mobile
+          path: artifacts/browser/
+          if-no-files-found: warn

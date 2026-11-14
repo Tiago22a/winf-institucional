@@ -26,7 +26,8 @@ test("o gateway de expansão encaminha ao briefing e à central, sem simular ati
  assert(!partners.includes('href="https://winf.com.br/partners"'));
  assert.match(partners,/href="\/briefing\/"/);
  assert.match(partners,/href="#asset-light"/);
- assert.match(partners,/CONSULTAR MEU TERRITÓRIO/);
+ assert.match(partners,/CONHECER O LICENCIAMENTO/);
+ assert.match(partners,/Consultar território/);
  assert.match(partners,/https:\/\/wa\.me\/5513981113001/);
  assert(!partners.includes("Acessar WINF OS Terminal"));
 });
