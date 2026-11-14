@@ -36,7 +36,7 @@ test('plano das 12 semanas e oito episódios não confundem áudio com roteiro',
  const briefs=read('podcasts/temporada-01/BRIEFINGS_04_A_08.md');
  for(let i=1;i<=12;i++)assert.ok(editorial.includes('| '+String(i).padStart(2,'0')+' |'),'cycle '+i);
  for(let i=4;i<=8;i++)assert.ok(briefs.includes('## EP0'+i),'episode '+i);
- assert.match(editorial,/sem login, WhatsApp, e-mail ou cartão/i);
+ assert.match(editorial,/Não exigir conta, WhatsApp, e-mail ou cartão/i);
  assert.match(editorial,/sem áudio/);
  assert.match(briefs,/Nenhum dos episódios abaixo tem áudio/);
 });
