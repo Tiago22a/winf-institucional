@@ -11,10 +11,11 @@ test("catálogo do consumidor traz exatamente 200 territórios, sem campos inter
  assert.equal(publicIndex.territories.length,200);
  assert.equal(new Set(publicIndex.territories.map(t=>t.id)).size,200);
  assert.deepEqual(new Set(publicIndex.territories.map(t=>t.id)),new Set(privateIndex.territorios.map(t=>t.id)));
- const allowed=["id","cidade","uf","consumerContactPhone"];
+ const allowed=["id","cidade","uf","consumerContactPhone","routingStatus"];
  for(const t of publicIndex.territories){
    assert.deepEqual(Object.keys(t),allowed);
    assert.equal(t.consumerContactPhone,"5513981113001");
+   assert.equal(t.routingStatus,"pre_licenca");
    assert.ok(t.cidade&&t.uf&&t.id);
  }
  assert.ok(!read("config/winf-territorios-consumidor-200.json").includes("emailProposto"));
@@ -26,7 +27,9 @@ test("busca para consumidor é acessível e consulta exclusivamente o WhatsApp 0
  assert.match(page,/id="turnkey-city-results"/);
  assert.match(page,/winf-turnkey-consumidor\.js/);
  assert.match(script,/\/config\/winf-territorios-consumidor-200\.json/);
- assert.match(script,/https:\/\/wa\.me\/5513981113001/);
+ assert.match(script,/routingStatus==="licenca_verificada"/);
+ assert.match(script,/"5513981113001"/);
+ assert.match(script,/"https:\/\/wa\.me\/"\+phone/);
  assert.match(script,/encodeURIComponent\(msg\)/);
  assert.doesNotMatch(script,/5515997909049|5513997815375/);
  assert.doesNotMatch(script,/localStorage|sessionStorage/);
