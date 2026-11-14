@@ -34,7 +34,7 @@ test("layout responsivo não quebra navegação",()=>{
 
 test("fotografias de parceria, família e operação digital são reais no repositório",()=>{
  const files=[
-  ["partners/media/parceria.webp","/partners/media/parceria.webp"],
+  ["partners/padrinho-modern/media/winf-padrinho-modern-mentoria-01.webp","/partners/padrinho-modern/media/winf-padrinho-modern-mentoria-01.webp"],
   ["briefing/media/asset-light-familia-2026.webp","/briefing/media/asset-light-familia-2026.webp"],
   ["briefing/media/asset-light-gestao-20261108.webp","/briefing/media/asset-light-gestao-20261108.webp"]
  ];
@@ -47,4 +47,17 @@ test("fotografias de parceria, família e operação digital são reais no repos
  assert.match(page,/@media\(max-width:760px\)/);
  assert.match(page,/decoding="async"/);
  assert.match(page,/loading="lazy"/);
+});
+
+test("foto nova de mentoria foi incorporada como asset WebP real e identidade preservada",()=>{
+ const rel="partners/padrinho-modern/media/winf-padrinho-modern-mentoria-01.webp";
+ const img=fs.readFileSync(path.join(root,rel));
+ assert.ok(img.length>10000&&img.length<150000);
+ assert.equal(img.subarray(0,4).toString("ascii"),"RIFF");
+ assert.equal(img.subarray(8,12).toString("ascii"),"WEBP");
+ assert.match(page,/src="\/partners\/padrinho-modern\/media\/winf-padrinho-modern-mentoria-01\.webp"/);
+ assert.match(page,/alt="Cena editorial do Padrinho Modern: profissional com camisa WINF e mentor/);
+ assert.match(page,/MENTORIA &amp; VISÃO/);
+ assert.match(page,/\.pm-impact-photo--mentor img\{object-position:/);
+ assert.match(page,/<img src="\/winf-logo\.svg" width="95" height="35" alt="WINF™">/);
 });
