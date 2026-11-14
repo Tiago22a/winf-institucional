@@ -1,0 +1,30 @@
+name: Universo Dark — acesso ao Padrinho Modern
+on:
+  pull_request:
+    paths:
+      - "partners/universo-dark/index.html"
+      - "partners/padrinho-modern/index.html"
+      - "tests/universo-dark-padrinho.test.cjs"
+      - ".github/workflows/universo-dark-padrinho.yml"
+  push:
+    branches: [main]
+    paths:
+      - "partners/universo-dark/index.html"
+      - "partners/padrinho-modern/index.html"
+      - "tests/universo-dark-padrinho.test.cjs"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-links:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validar jornada Dark para Padrinho Modern
+        run: node --test tests/universo-dark-padrinho.test.cjs
