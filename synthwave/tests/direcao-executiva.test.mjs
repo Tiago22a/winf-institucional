@@ -20,6 +20,7 @@ test('episódio 03 é roteiro em revisão e não anúncio de áudio publicado',(
  assert.match(ep,/vozes sintéticas/);
  assert.match(ep,/tensões térmicas/);
  assert.match(catalog,/id:'ep03-invisivel'/);
- assert.match(catalog,/status:'planned'/);
+ assert.match(catalog,/status:'scripted'/);
+ assert.doesNotMatch(catalog,/status:'published'/);
  assert.doesNotMatch(ep,/audioUrl:\s*['"]/);
 });
