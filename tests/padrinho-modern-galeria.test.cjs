@@ -34,7 +34,7 @@ test("layout responsivo não quebra navegação",()=>{
 
 test("fotografias de parceria, família e operação digital são reais no repositório",()=>{
  const files=[
-  ["partners/media/parceria.webp","/partners/media/parceria.webp"],
+  ["partners/padrinho-modern/media/winf-padrinho-modern-mentoria-01.webp","/partners/padrinho-modern/media/winf-padrinho-modern-mentoria-01.webp"],
   ["briefing/media/asset-light-familia-2026.webp","/briefing/media/asset-light-familia-2026.webp"],
   ["briefing/media/asset-light-gestao-20261108.webp","/briefing/media/asset-light-gestao-20261108.webp"]
  ];
