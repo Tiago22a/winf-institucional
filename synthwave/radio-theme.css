@@ -8,9 +8,9 @@ footer{background:#132f29!important;border-color:#acc5b055!important}
 .panel{background:#1b3931;border-color:#9dbca84b;color:#e9ecdf}
 .tile:hover{border-color:#e9a16c!important}
 .paper{background:#eee6d1!important;color:#1d3c33!important;background-image:radial-gradient(#d5c8ad .75px,transparent .75px)}
-.text-pink,.nav.active,.nav:hover{color:#edb584!important}
-.bg-pink{background:#d47d4e!important}
-.border-pink{border-color:#e2a878!important}
+.sw-accent-text,.nav.active,.nav:hover{color:#edb584!important}
+.sw-accent-bg{background:#d47d4e!important}
+.sw-accent-border{border-color:#e2a878!important}
 .btn{background:#d47d4e;color:#182e28}
 .btn:hover{background:#efb785}
 .btn-outline{border-color:#c2c6b09c}
@@ -58,7 +58,7 @@ input:focus,select:focus{outline-color:#edb584}
 
 /* Marca SynthWAVE: lettering em branco monocromático e assinatura GHOST original. */
 .sw-radio-brand{color:#f6f0e6!important;white-space:nowrap}
-.sw-radio-brand>span,.sw-radio-brand .text-pink{color:#f6f0e6!important}
+.sw-radio-brand>span,.sw-radio-brand .sw-accent-text{color:#f6f0e6!important}
 .sw-universe-back{flex:none;display:inline-flex;align-items:center;justify-content:center;color:#f2eadd;background:#ffffff0b;border:1px solid #e9e0cf61;padding:9px 13px;min-height:38px;font:800 9px/1.25 'Plus Jakarta Sans',sans-serif;letter-spacing:.105em;text-transform:uppercase;white-space:nowrap;transition:background .2s,border-color .2s}
 .sw-universe-back:hover,.sw-universe-back:focus-visible{background:#cce0ce19;border-color:#d2e2d4;color:#fff}
 .sw-universe-back:focus-visible{outline:2px solid #e8bc89;outline-offset:3px}
