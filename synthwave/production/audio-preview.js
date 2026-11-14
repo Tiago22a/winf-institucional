@@ -4,7 +4,7 @@
 (()=>{
   'use strict';
   const episodeId=document.documentElement.dataset.audioEpisode;
-  const ids=new Set(['ep01-cuidar-conectar','ep02-padrinho','ep03-invisivel']);
+  const ids=new Set(['ep01-cuidar-conectar','ep02-padrinho','ep03-invisivel','ep04-alem-da-pintura','ep05-recomeco','ep06-cidade','ep07-brasil','ep08-institute']);
   if(!ids.has(episodeId))return;
   const source='/synthwave/podcasts/audio-previews/'+episodeId+'-previa.mp3';
   fetch(source,{method:'HEAD',cache:'no-store'})
