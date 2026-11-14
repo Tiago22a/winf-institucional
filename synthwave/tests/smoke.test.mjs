@@ -23,8 +23,10 @@ test('configurações pessoais permanecem desligadas até provisionamento seguro
  const html=read('radio/index.html');
  assert.ok(html.indexOf('cloud-auth.js')<html.indexOf('my-playlists.js'));
  assert.ok(html.indexOf('my-playlists.js')<html.indexOf('app.js'));
- assert.ok(html.includes('sw-newsletter-mount'));
- assert.ok(html.includes('newsletter/newsletter.js'));
+ assert.ok(!html.includes('sw-newsletter-mount'));
+ assert.ok(!html.includes('newsletter/newsletter.js'));
+ assert.ok(!html.includes('id="modal"'));
+ assert.ok(!html.includes('SYNTHWAVE PREMIUM'));
 });
 
 test('músicas reais do catálogo contêm autoria, arquivo e licença explícitos',()=>{
@@ -123,4 +125,32 @@ test('FM não expõe painel administrativo fictício e usa cores aprovadas',()=>
   assert.ok(!content.includes('#ff007f'));
   assert.ok(!content.includes('text-pink'));
  }
+});
+
+
+test('entrada SynthWAVE exige no máximo dois cliques, sem identidade ou newsletter',()=>{
+ const landing=read('index.html');
+ const radio=read('radio/index.html');
+ const app=read('app.js');
+ assert.ok(landing.includes('href="/synthwave/radio/#live"'), 'Primeiro clique deve abrir diretamente a tela da rádio');
+ assert.ok(landing.includes('ENTRAR NA RÁDIO'), 'CTA principal deve ser explícito');
+ assert.ok(radio.includes('data-nav="live"'), 'A rota de rádio deve existir');
+ assert.ok(app.includes("location.hash.replace('#','')||'home'"), 'A rádio deve respeitar #live na primeira navegação');
+ assert.ok(app.includes("button('▶ OUVIR AGORA',\"startRadio()\")"), 'Segundo clique inicia a reprodução');
+ assert.ok(app.includes("function startRadio(){radioMode=true;radioErrors=0;queue=tracks.map((_,i)=>i);position=0;start(true)}"));
+ assert.ok(!radio.includes('newsletter/newsletter.js'), 'Nenhum formulário de inscrição deve ser montado');
+ assert.ok(!radio.includes('sw-newsletter-mount'));
+ assert.ok(!radio.includes('id="modal"'), 'Sem janela Premium no caminho do Play');
+ assert.ok(!app.includes('openPremium()'));
+ assert.ok(!app.includes('closePremium()'));
+});
+
+test('conta pessoal é opcional e não aparece como requisito da rádio',()=>{
+ const app=read('app.js');
+ const cloud=read('cloud-auth.js');
+ const playlists=read('my-playlists.js');
+ assert.ok(app.includes('Não pedimos nome nem conta.'));
+ assert.ok(playlists.includes('CONTA OPCIONAL / GOOGLE'));
+ assert.ok(cloud.includes('config.enabled!==true'));
+ assert.ok(app.includes('start(true)'), 'O Play deve delegar diretamente à engine');
 });
