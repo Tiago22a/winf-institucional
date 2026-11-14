@@ -50,8 +50,9 @@ const podcasts=(window.SYNTHWAVE_PODCAST_CATALOG||[]).map(item=>({
  ...item,cover:cover(item.artwork),
  stageLabel:item.status==='published'?'ÁUDIO PUBLICADO':item.status==='scripted'?'ROTEIRO EM REVISÃO':'EM PLANEJAMENTO'
 }));
-const schedules=[['00:00 – 06:00','Cyber Nocturne & Night Drive'],['06:00 – 10:00','Morning Transmission & Quantum Focus'],['10:00 – 15:00','Ateliê High-End & Ambient Installation'],['15:00 – 20:00','City Lights & Highway Sessions'],['20:00 – 00:00','AeroCore™ Soundscape & SynthWave Originals']];
+const schedules=window.SynthwaveStation.blocks;
 let queue=tracks.map((t,i)=>t.audioUrl?i:-1).filter(i=>i>=0),position=0,playing=false,elapsed=0,timer=null,activeView='home',filter='Todos',soundscape=null,radioMode=false,radioErrors=0;
+let stationBlock=null,stationCompleted=0,stationSpotActive=false,stationSpotSerial=0,stationSpotTimer=null;
 const $=s=>document.querySelector(s);
 const escapeHtml=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const button=(label,fn,style='btn')=>'<button class="'+style+'" onclick="'+fn+'">'+label+'</button>';
@@ -95,14 +96,23 @@ function home(){return '<section class="hero min-h-[480px] md:min-h-[630px] flex
  '<div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-4">'+moments.slice(0,4).map(momentCard).join('')+'</div>'+
  '<button type="button" class="sw-moment-action mt-7" onclick="go(\'playlists\')">Ver todas as coleções ↗</button></section>'}
 function live(){
- const d=new Date(),h=d.getHours();
- const slot=schedules.find(s=>{const n=parseInt(s[0],10);return h>=n&&h<(n===20?24:n===15?20:n===10?15:n===6?10:6)})||schedules[0];
- return '<section class="max-w-7xl mx-auto py-12">'+heading('É só dar o Play · sem cadastro','SYNTHWAVE RÁDIO','Entrou, apertou Play e já está ouvindo. Nada de login, WhatsApp ou formulários. A música segue enquanto esta página estiver aberta.')+
+ const slot=window.SynthwaveStation.blockAt(new Date());
+ const activeClass=entry=>entry.start===slot.start?' sw-program-active':'';
+ return '<section class="max-w-7xl mx-auto py-12">'+heading('É só dar o Play · sem cadastro','SYNTHWAVE RÁDIO','Música, descobertas e pequenas chamadas originais. Entre, aperte Play e ouça enquanto seu navegador estiver aberto.')+
  '<div class="grid lg:grid-cols-2 gap-7"><div class="panel p-7 md:p-11"><span class="inline-flex gap-2 items-center text-xs font-black sw-accent-text tracking-widest"><span class="w-2 h-2 sw-accent-bg rounded-full"></span> SUA ESTAÇÃO PESSOAL</span>'+
  '<h2 class="text-6xl text-white mt-9">DÊ O PLAY.<br>DEIXE FLUIR.</h2>'+
- '<p class="text-gray-400 mt-5">Curadoria deste momento: '+escapeHtml(slot[1])+'</p><div class="mt-9">'+button('▶ OUVIR AGORA',"startRadio()")+'</div><p class="text-xs text-gray-500 mt-5">É gratuito para começar a ouvir. Não pedimos nome nem conta. A reprodução inicia quando você aperta Play; não é transmissão sincronizada entre ouvintes.</p></div>'+
- '<div class="panel p-7"><h2 class="text-white text-4xl mb-4">PROGRAMAÇÃO EDITORIAL</h2>'+
- schedules.map(entry=>'<div class="border-b border-white/10 py-4 flex gap-5"><span class="sw-accent-text text-xs font-black shrink-0">'+entry[0]+'</span><span class="text-gray-300 text-sm">'+entry[1]+'</span></div>').join('')+'</div></div>'+
+ '<p class="text-gray-300 mt-5">Agora na frequência: <strong id="stationNow">'+escapeHtml(slot.label)+'</strong></p>'+
+ '<p class="text-gray-400 text-sm mt-2">'+escapeHtml(slot.description)+'</p>'+
+ '<div class="mt-9">'+button('▶ OUVIR AGORA',"startRadio()")+'</div>'+
+ '<p class="text-xs text-gray-400 mt-5">Grátis e sem cadastro. A cada cinco músicas, uma vinheta editorial curta pode ser narrada pelo dispositivo. Se a voz não estiver disponível, a música continua.</p>'+
+ '<p class="text-xs text-gray-500 mt-3">Programação por horário local, reproduzida neste navegador — ainda não é uma transmissão ao vivo sincronizada entre ouvintes nem funciona com a página fechada.</p></div>'+
+ '<div class="panel p-7"><h2 class="text-white text-4xl mb-2">PROGRAMAÇÃO 24 HORAS</h2>'+
+ '<p class="text-xs text-gray-400 mb-5">Seis blocos ao longo do dia. A seleção muda ao entrar no próximo horário, sem interromper a faixa atual.</p>'+
+ '<div class="sw-program-timeline">'+schedules.map(entry=>
+  '<div class="sw-program-slot'+activeClass(entry)+'"><span class="sw-program-time">'+escapeHtml(entry.range)+'</span>'+
+  '<span class="sw-program-details"><strong>'+entry.icon+' '+escapeHtml(entry.label)+'</strong><small>'+escapeHtml(entry.description)+'</small></span>'+
+  (entry.start===slot.start?'<span class="sw-program-now">AGORA</span>':'')+'</div>').join('')+
+ '</div><p class="text-xs text-gray-500 mt-5">Chamadas autorais educativas e de descoberta, não anúncios pagos. Sem login, newsletter ou assinatura para ouvir.</p></div></div>'+
  mixerPanel()+'</section>';
 }
 function playlistView(){
@@ -129,15 +139,66 @@ function credits(){
 function about(){return '<section class="max-w-7xl mx-auto py-12">'+heading('The manifesto','WE ARE THE FREQUENCY','Uma plataforma de música e experiências sonoras que conecta cultura, design, tecnologia e movimento.')+'<div class="paper p-8 md:p-16"><h2 class="text-6xl md:text-9xl">A TRILHA SONORA<br>DO FUTURO.</h2><p class="max-w-3xl text-lg mt-7">SYNTHWAVE.fm nasce dentro do ecossistema WINF para traduzir universos visuais em identidades sonoras. Música para criar, dirigir, trabalhar, pensar e sentir.</p><p class="font-brush sw-accent-text text-4xl mt-9">SOUND WITHOUT LIMITS.</p></div><div class="grid md:grid-cols-3 gap-4 mt-7">'+['Cultura','Tecnologia','Movimento'].map(s=>'<div class="panel p-7 text-center"><h3 class="text-4xl text-white">'+s+'</h3></div>').join('')+'</div></section>'}
 
 function go(view){activeView=view;document.querySelectorAll('[data-nav]').forEach(el=>el.classList.toggle('active',el.dataset.nav===view));const render={home,live,playlists:playlistView,podcasts:podcastView,explore,mine:()=>window.SynthwaveLists.render(tracks),about,credits,profile:()=>window.SynthwaveProfile.render()};$('#app').innerHTML=(render[view]||home)();if(view==='mine')window.SynthwaveLists.bind(tracks,indices=>{radioMode=false;queue=indices;position=0;start(true)},()=>go('mine'));window.scrollTo({top:0,behavior:'smooth'});location.hash=view==='home'?'':view}
-function playPlaylist(id){radioMode=false;queue=playlists[id].tracks.slice();position=0;start(true);go('playlists')}
+function playPlaylist(id){cancelStationSpot();radioMode=false;queue=playlists[id].tracks.slice();position=0;start(true);go('playlists')}
 function playMoment(id){
  const moment=moments.find(item=>item.id===id);
  if(!moment)return;
- radioMode=false;queue=moment.tracks.filter(i=>tracks[i]);position=0;start(true);
+ cancelStationSpot();radioMode=false;queue=moment.tracks.filter(i=>tracks[i]);position=0;start(true);
  const l=$('#audioStatus');if(l)l.textContent='Coleção: '+moment.name;
 }
-function playIndex(i){radioMode=false;const real=!!tracks[i].audioUrl;queue=tracks.map((t,j)=>({t,j})).filter(x=>!!x.t.audioUrl===real).map(x=>x.j);position=queue.indexOf(i);start(true)}
-function startRadio(){radioMode=true;radioErrors=0;queue=tracks.map((_,i)=>i);position=0;start(true)}
+function playIndex(i){cancelStationSpot();radioMode=false;const real=!!tracks[i].audioUrl;queue=tracks.map((t,j)=>({t,j})).filter(x=>!!x.t.audioUrl===real).map(x=>x.j);position=queue.indexOf(i);start(true)}
+function startRadio(){
+ cancelStationSpot();radioMode=true;radioErrors=0;stationCompleted=0;
+ stationBlock=window.SynthwaveStation.blockAt(new Date());
+ queue=window.SynthwaveStation.queueFor(tracks,stationBlock);
+ position=0;start(true);
+}
+function cancelStationSpot(){
+ if(!stationSpotActive)return;
+ stationSpotSerial++;stationSpotActive=false;
+ if(stationSpotTimer){clearTimeout(stationSpotTimer);stationSpotTimer=null}
+ if('speechSynthesis' in window)try{window.speechSynthesis.cancel()}catch(_){}
+}
+function advanceRadioTrack(){
+ const newBlock=window.SynthwaveStation.blockAt(new Date());
+ if(!stationBlock||newBlock.start!==stationBlock.start){
+  stationBlock=newBlock;
+  queue=window.SynthwaveStation.queueFor(tracks,newBlock);
+  position=0;
+ }else position=(position+1)%queue.length;
+ const label=$('#stationNow');if(label)label.textContent=newBlock.label;
+ radioErrors=0;
+ if(playing)start(true);else{elapsed=0;updatePlayer()}
+}
+function playStationSpot(){
+ const spot=window.SynthwaveStation.spotFor(stationCompleted,stationBlock);
+ if(!spot||!('speechSynthesis' in window)||typeof window.SpeechSynthesisUtterance!=='function')return false;
+ stationSpotActive=true;
+ if(timer){clearInterval(timer);timer=null}
+ SynthwaveAudio.pause();
+ const token=++stationSpotSerial;
+ const finish=()=>{
+  if(token!==stationSpotSerial||!stationSpotActive)return;
+  stationSpotActive=false;
+  if(stationSpotTimer){clearTimeout(stationSpotTimer);stationSpotTimer=null}
+  if(radioMode&&playing)advanceRadioTrack();
+ };
+ const status=$('#audioStatus');if(status)status.textContent='Vinheta SynthWAVE: '+spot.title;
+ const voice=new window.SpeechSynthesisUtterance(spot.text);
+ voice.lang='pt-BR';voice.rate=1.06;voice.pitch=1;voice.volume=.82;
+ try{
+  const pt=window.speechSynthesis.getVoices().find(item=>/^pt(-BR)?$/i.test(item.lang));
+  if(pt)voice.voice=pt;
+ }catch(_){}
+ voice.onend=finish;voice.onerror=finish;
+ stationSpotTimer=setTimeout(()=>{
+  if(token!==stationSpotSerial)return;
+  try{window.speechSynthesis.cancel()}catch(_){}
+  finish();
+ },26000);
+ try{window.speechSynthesis.speak(voice)}catch(_){finish()}
+ return true;
+}
 function currentTrack(){return tracks[queue[position]??0]}
 /* Audio control delegates to audio-engine.js (Web Audio + optional HTMLAudioElement). */
 function updatePlayer(){
@@ -168,17 +229,18 @@ function start(restart=false){
   if(restart)elapsed=0;
   if(timer)clearInterval(timer);
   playing=true;
-  if(!restart&&SynthwaveAudio.currentTrack===currentTrack()&&!SynthwaveAudio.playing){SynthwaveAudio.resume(currentTrack(),()=>next())}
-  else SynthwaveAudio.play(currentTrack(),()=>next());
+  if(!restart&&SynthwaveAudio.currentTrack===currentTrack()&&!SynthwaveAudio.playing){SynthwaveAudio.resume(currentTrack(),()=>next(true))}
+  else SynthwaveAudio.play(currentTrack(),()=>next(true));
   timer=setInterval(()=>{
     if(!playing)return;
     if(currentTrack().audioUrl){elapsed=SynthwaveAudio.media?SynthwaveAudio.media.currentTime:elapsed}
-    else if((elapsed+=.25)>=currentTrack().duration){next();return}
+    else if((elapsed+=.25)>=currentTrack().duration){next(true);return}
     updateProgress();paintVisualizer();
   },250);
   updatePlayer();
 }
 function pause(){
+  cancelStationSpot();
   playing=false;
   SynthwaveAudio.pause();
   if(timer)clearInterval(timer);
@@ -186,8 +248,23 @@ function pause(){
   updatePlayer();
 }
 function togglePlay(){playing?pause():start()}
-function next(){position=(position+1)%queue.length;if(radioMode)radioErrors=0;playing?start(true):(elapsed=0,updatePlayer())}
-function previous(){position=(position-1+queue.length)%queue.length;playing?start(true):(elapsed=0,updatePlayer())}
+function next(automatic=false){
+ if(stationSpotActive){cancelStationSpot();if(radioMode){advanceRadioTrack();return}}
+ if(radioMode){
+  if(automatic){
+   stationCompleted++;
+   if(window.SynthwaveStation.spotFor(stationCompleted,stationBlock)&&playStationSpot())return;
+  }
+  advanceRadioTrack();return;
+ }
+ position=(position+1)%queue.length;
+ playing?start(true):(elapsed=0,updatePlayer());
+}
+function previous(){
+ if(stationSpotActive)cancelStationSpot();
+ position=(position-1+queue.length)%queue.length;
+ playing?start(true):(elapsed=0,updatePlayer());
+}
 function setVolume(v){
  SynthwaveAudio.setVolume(Number(v)/100);
  const slider=$('#sw-music-level'),value=$('#sw-music-value'),footer=$('#volume');
