@@ -21,6 +21,11 @@ SCRIPTS = {
     "ep01-cuidar-conectar": ROOT / "podcasts/temporada-01/ep01-cuidar-conectar.md",
     "ep02-padrinho": ROOT / "podcasts/temporada-01/ep02-padrinho.md",
     "ep03-invisivel": ROOT / "podcasts/temporada-01/ep03-invisivel.md",
+    "ep04-alem-da-pintura": ROOT / "podcasts/temporada-01/ep04-alem-da-pintura.md",
+    "ep05-recomeco": ROOT / "podcasts/temporada-01/ep05-recomeco.md",
+    "ep06-cidade": ROOT / "podcasts/temporada-01/ep06-cidade.md",
+    "ep07-brasil": ROOT / "podcasts/temporada-01/ep07-brasil.md",
+    "ep08-institute": ROOT / "podcasts/temporada-01/ep08-institute.md",
 }
 CUTOFF = re.compile(r"^## (?:Produção|Checklist antes de publicar|Revisão antes de áudio|Revisão antes de áudio|Fontes e pontos)", re.I)
 TURN = re.compile(r"^\*\*(LIA|DAVI|JUNTOS[^*]*):\*\*\s*(.+)$", re.I)
@@ -133,10 +138,12 @@ def render_one(key: str, voices: dict, output: Path):
 def main():
     cli = argparse.ArgumentParser()
     cli.add_argument("--validate-only", action="store_true")
+    cli.add_argument("--episodes", nargs="+", choices=list(SCRIPTS.keys()), default=list(SCRIPTS.keys()))
     cli.add_argument("--models-dir", type=Path, default=Path("."))
     cli.add_argument("--output-dir", type=Path, default=ROOT / "podcasts/audio-previews")
     opts = cli.parse_args()
-    for key, path in SCRIPTS.items():
+    for key in opts.episodes:
+        path = SCRIPTS[key]
         turns = lines(path)
         print(f"{key}: {len(turns)} falas válidas; LIA={sum(s=='LIA' for s,_ in turns)}, DAVI={sum(s=='DAVI' for s,_ in turns)}")
     if opts.validate_only:
@@ -149,7 +156,7 @@ def main():
         if not path.is_file():
             raise FileNotFoundError(f"Modelo de {key} ausente: {path}")
     voices = {k: make_voice(path) for k, path in paths.items()}
-    for key in SCRIPTS:
+    for key in opts.episodes:
         render_one(key, voices, opts.output_dir)
 
 
