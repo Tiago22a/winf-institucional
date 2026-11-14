@@ -39,7 +39,33 @@ h1 span{display:block;font-size:.93em;white-space:normal}
 @keyframes darkPulse{0%,100%{transform:scale(.92);opacity:.45}50%{transform:scale(1.06);opacity:.85}}
 @media(max-width:780px){h1{font-size:clamp(49px,12vw,90px);line-height:1.03}.lead{font-size:16px}}
 @media(prefers-reduced-motion:reduce){main::before{animation:none}.grid article{transition:none}}
-.wc-section{padding:45px 0;background:transparent;border:0}.wc-section .wc-film-grid{gap:12px}.wc-section .wc-head{margin-top:10px}.wc-section .wc-head h2{font-size:clamp(33px,4vw,65px)}.wc-section .wc-film-caption{font-size:12px}</style>
+.wc-section{padding:45px 0;background:transparent;border:0}.wc-section .wc-film-grid{gap:12px}.wc-section .wc-head{margin-top:10px}.wc-section .wc-head h2{font-size:clamp(33px,4vw,65px)}.wc-section .wc-film-caption{font-size:12px}
+/* Atalho público ao Padrinho Modern: jornada de conhecimento, não captação. */
+.dark-padrinho-access{
+ display:grid;grid-template-columns:minmax(0,1.25fr) minmax(240px,.75fr);
+ align-items:center;gap:clamp(20px,4vw,55px);
+ margin:clamp(28px,4vw,54px) 0;
+ padding:clamp(24px,3.8vw,48px);
+ border:1px solid #6e778887;
+ background:linear-gradient(122deg,#121923,#0b0e13 65%,#171b20);
+}
+.dark-padrinho-access .eyebrow{font-size:10px;color:#bcc8d6}
+.dark-padrinho-access h2{font:900 clamp(31px,4.5vw,59px)/1.02 Impact,'Arial Narrow',Arial,sans-serif;letter-spacing:-.012em;margin:13px 0 20px}
+.dark-padrinho-access p{font-size:14px;line-height:1.75;color:#c7cbd1;max-width:680px}
+.dark-padrinho-access .dark-padrinho-actions{display:grid;gap:12px}
+.dark-padrinho-actions a{
+ display:flex;align-items:center;justify-content:space-between;gap:12px;
+ padding:17px 20px;text-decoration:none;font-size:12px;font-weight:850;
+ text-transform:uppercase;letter-spacing:.08em;min-height:54px;
+ border:1px solid #9da8ba;
+}
+.dark-padrinho-actions a:first-child{background:#e6ebed;color:#0d1217;border-color:#e6ebed}
+.dark-padrinho-actions a:hover{border-color:#fff}
+.dark-padrinho-actions a:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.dark-padrinho-access .dark-padrinho-fine{font-size:11px;color:#adb5c0;line-height:1.65}
+@media(max-width:790px){.dark-padrinho-access{grid-template-columns:1fr}}
+
+</style>
 <link rel="stylesheet" href="/css/winf-cinema.css?v=20261111-2">
 <style>
 /* Universo Dark — cenas próprias; nenhuma mídia emprestada da Flagship. */
@@ -66,7 +92,20 @@ main>.lead{color:#dee1e7}
 <p class="eyebrow">WINF.inc® / PROJETOS ESTRATÉGICOS / UNIVERSO DARK™</p>
 <h1>UNIVERSO <span>DARK™</span></h1>
 <p class="lead">Um espaço institucional dedicado à organização de projetos estratégicos, estudos de estruturação e governança do ecossistema WINF.</p>
-<p class="notice"><strong>Projeto em estruturação.</strong> Esta página não constitui oferta pública de valores mobiliários, promessa de rentabilidade, convite para investimento ou declaração de que operações financeiras já estejam disponíveis.</p><div data-territory-context hidden style="padding:16px;border:1px solid #5f748f;margin-bottom:22px"><p class="eyebrow">TERRITÓRIO DE INTERESSE</p><strong data-territory-city></strong><p data-territory-status></p><a data-territory-link href="/partners/territorios/">Consultar situação territorial ↗</a></div>
+<p class="notice"><strong>Projeto em estruturação.</strong> Esta página não constitui oferta pública de valores mobiliários, promessa de rentabilidade, convite para investimento ou declaração de que operações financeiras já estejam disponíveis.</p>
+<section class="dark-padrinho-access" id="ser-padrinho" aria-labelledby="dark-padrinho-title">
+ <div>
+  <p class="eyebrow">UNIVERSO DARK™ × PADRINHO MODERN™</p>
+  <h2 id="dark-padrinho-title">INVESTE NA VISÃO?<br>APOIE TAMBÉM O TALENTO.</h2>
+  <p>Quem acompanha projetos do Universo Dark pode conhecer o Padrinho Modern™ e avaliar o apoio a um profissional ou território WINF. A apresentação do programa é livre: não exige novo login, cadastro ou pagamento.</p>
+  <p class="dark-padrinho-fine">O interesse em apadrinhamento não cria investimento, prioridade automática, licença territorial, sociedade nem direito a resultados. Qualquer parceria dependerá de análise e formalização específica.</p>
+ </div>
+ <div class="dark-padrinho-actions">
+  <a href="/partners/padrinho-modern/#como-funciona" aria-label="Entender como funciona o Padrinho Modern">CONHECER O PROGRAMA <span aria-hidden="true">↗</span></a>
+  <a href="/partners/padrinho-modern/#conversar" aria-label="Iniciar conversa sobre ser padrinho">QUERO CONVERSAR COMO PADRINHO <span aria-hidden="true">↗</span></a>
+  <span class="dark-padrinho-fine">Você será direcionado à página oficial do Padrinho Modern™. Seus dados de investimento não serão compartilhados por esse link.</span>
+ </div>
+</section><div data-territory-context hidden style="padding:16px;border:1px solid #5f748f;margin-bottom:22px"><p class="eyebrow">TERRITÓRIO DE INTERESSE</p><strong data-territory-city></strong><p data-territory-status></p><a data-territory-link href="/partners/territorios/">Consultar situação territorial ↗</a></div>
 <section class="wc-section" id="filmes" aria-label="Experiências audiovisuais WINF"><div class="wc-head"><div><p class="wc-kicker">WINF UNIVERSO DARK™ / CAPITAL PRIVADO E ESTRATÉGIA</p><h2>VISÃO RESERVADA.<br><em>CRITÉRIOS CLAROS.</em></h2></div><p>Um universo institucional para discutir equity, valuation, governança e oportunidades estratégicas. Sem oferta pública ou promessa de rentabilidade.</p></div><div class="wc-film-grid"><figure class="wc-film"><div class="wc-film-media"><div class="dark-film-fallback" aria-hidden="true"><span>CAPITAL. VISÃO. ESTRATÉGIA.</span></div><img class="wc-film-poster" src="/media/ecossistema/universo-dark-entry.webp" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"><div class="wc-brand-lockup"><img src="/aerocore/assets/ghost-symbol.png" alt="" aria-hidden="true"><span>WINF.inc®</span></div><video data-winf-cinema autoplay muted loop playsinline preload="none" tabindex="-1" aria-hidden="true"><source data-src="/media/ecossistema/universo-dark-entry.mp4" type="video/mp4"></video></div><figcaption class="wc-film-caption"><strong>CAPITAL E ESTRATÉGIA</strong><span>01 / INSTITUCIONAL</span></figcaption></figure>
 <figure class="wc-film"><div class="wc-film-media"><div class="dark-film-fallback" aria-hidden="true"><span>VALOR SE CONSTRÓI COM GOVERNANÇA.</span></div><img class="wc-film-poster" src="/media/ecossistema/universo-dark-equity.webp" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"><div class="wc-brand-lockup"><img src="/aerocore/assets/ghost-symbol.png" alt="" aria-hidden="true"><span>WINF.inc®</span></div><video data-winf-cinema autoplay muted loop playsinline preload="none" tabindex="-1" aria-hidden="true"><source data-src="/media/ecossistema/universo-dark-equity.mp4" type="video/mp4"></video></div><figcaption class="wc-film-caption"><strong>EQUITY & VALUATION</strong><span>02 / GOVERNANÇA</span></figcaption></figure></div></section>
 <section class="wc-section" id="padrinhos"><div class="wrap"><p class="wc-kicker">UNIVERSO DARK™ / PADRINHOS TERRITORIAIS</p><h2>ESCOLHA A PRAÇA.<br><em>ENTENDA A OPORTUNIDADE.</em></h2><p>A vitrine pública permite conhecer os municípios selecionados para expansão WINF. O acompanhamento privado de padrinhos, contratos e aportes ainda depende de implantação e validação jurídica. Nenhum investimento é processado nesta página.</p><p><a href="/partners/territorios/" style="color:#fff;font-weight:800">CONSULTAR TERRITÓRIOS ↗</a> &nbsp; <a href="/partners/padrinho-modern/" style="color:#fff">PADRINHO MODERN™ ↗</a></p></div></section><section class="grid" aria-label="Frentes conceituais em estudo">
