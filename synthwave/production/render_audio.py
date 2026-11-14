@@ -76,8 +76,18 @@ def render_one(key: str, voices: dict, output: Path):
             # Identidade vocal de LIA: inflexão sintética ligeiramente elevada (sem personificar ninguém).
             # Sem alteração no arquivo/modelo de origem; apenas processamento do sinal gerado.
             if speaker == "LIA":
-                # Suaviza volume: evita saltos grandes entre vozes.
-                pass
+                # LIA: brilho/pitch ligeiramente maior, sem emular uma voz humana real.
+                pcm = array("h")
+                pcm.frombytes(audio)
+                ratio = 1.13
+                stretched = array("h")
+                for n in range(int(len(pcm) / ratio)):
+                    pos = n * ratio
+                    left = int(pos)
+                    fract = pos - left
+                    right = min(left + 1, len(pcm) - 1)
+                    stretched.append(int(pcm[left] * (1 - fract) + pcm[right] * fract))
+                audio = stretched.tobytes()
             assembled.writeframes(audio)
             frames_total += len(audio) // 2
             pause = 0.23 if text.rstrip().endswith("?") else 0.30
