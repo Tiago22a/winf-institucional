@@ -163,7 +163,7 @@ test('MVP: entrada grátis sem barreira de cadastro ou assinatura premium',()=>{
  assert.match(home,/OUVIR AGORA · GRÁTIS/);
  assert.match(home,/href="\/synthwave\/radio\/#live"/);
  assert.doesNotMatch(radio,/SYNTHWAVE PREMIUM/);
- assert.match(radio,/rádio de reprodução contínua/i);
+ assert.match(radio,/rádio musical gratuita com playlists/i);
  assert.equal(JSON.parse(read('firebase-public-config.json')).enabled,false);
  assert.equal(JSON.parse(read('newsletter/config.json')).enabled,false);
  const editorial=read('PLANO_EDITORIAL_LANCAMENTO.md');
