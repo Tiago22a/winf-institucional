@@ -1,0 +1,80 @@
+name: SynthWAVE — Renderizar episódios em áudio (prévia)
+on:
+  pull_request:
+    paths:
+      - 'synthwave/production/**'
+      - 'synthwave/podcasts/temporada-01/*.md'
+      - '.github/workflows/synthwave-audio-render.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'synthwave/production/**'
+      - 'synthwave/podcasts/temporada-01/*.md'
+      - '.github/workflows/synthwave-audio-render.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  create-audio:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validar roteiros e falas antes da síntese
+        run: python synthwave/production/render_audio.py --validate-only
+      - name: Instalar renderizador de voz e utilitários
+        if: github.event_name != 'pull_request'
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+          python -m pip install --upgrade pip
+          python -m pip install 'piper-tts>=1.3.0,<2.0'
+      - name: Baixar modelos com vozes de uso permitido, sem salvar pesos no repositório
+        if: github.event_name != 'pull_request'
+        run: |
+          mkdir -p models
+          curl --fail --location --retry 3 --silent --show-error \
+            'https://huggingface.co/rhasspy/piper-voices/resolve/main/pt/pt_BR/cadu/medium/pt_BR-cadu-medium.onnx' -o models/pt_BR-cadu-medium.onnx
+          curl --fail --location --retry 3 --silent --show-error \
+            'https://huggingface.co/rhasspy/piper-voices/resolve/main/pt/pt_BR/cadu/medium/pt_BR-cadu-medium.onnx.json' -o models/pt_BR-cadu-medium.onnx.json
+          curl --fail --location --retry 3 --silent --show-error \
+            'https://huggingface.co/rhasspy/piper-voices/resolve/main/pt/pt_BR/faber/medium/pt_BR-faber-medium.onnx' -o models/pt_BR-faber-medium.onnx
+          curl --fail --location --retry 3 --silent --show-error \
+            'https://huggingface.co/rhasspy/piper-voices/resolve/main/pt/pt_BR/faber/medium/pt_BR-faber-medium.onnx.json' -o models/pt_BR-faber-medium.onnx.json
+          test "$(wc -c < models/pt_BR-cadu-medium.onnx)" -gt 10000000
+          test "$(wc -c < models/pt_BR-faber-medium.onnx)" -gt 10000000
+      - name: Renderizar três podcasts em MP3 e trilha original
+        if: github.event_name != 'pull_request'
+        run: python synthwave/production/render_audio.py --models-dir models
+      - name: Inspecionar MP3 antes de disponibilizar
+        if: github.event_name != 'pull_request'
+        run: |
+          for f in synthwave/podcasts/audio-previews/*.mp3; do
+            test -s "$f"
+            ffprobe -v error -show_entries format=duration -of default=nokey=1:noprint_wrappers=1 "$f" | awk '{if($1 < 120){exit 1}}'
+          done
+          test "$(find synthwave/podcasts/audio-previews -name '*.mp3' | wc -l)" -eq 3
+      - name: Disponibilizar MP3, transcrições e manifestos para revisão
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: synthwave-3-podcasts-audio-previas
+          path: |
+            synthwave/podcasts/audio-previews/*.mp3
+            synthwave/podcasts/audio-previews/*.json
+            synthwave/podcasts/temporada-01/*.md
+          if-no-files-found: error
+          retention-days: 30
+      - name: Atualizar arquivos de áudio no site após validar os três
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        continue-on-error: true
+        run: |
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git config user.name 'github-actions[bot]'
+          git add synthwave/podcasts/audio-previews/
+          if git diff --staged --quiet; then exit 0; fi
+          git commit -m 'SynthWAVE: adicionar três prévias narradas com vozes sintéticas [skip ci]'
+          git push origin HEAD:main
