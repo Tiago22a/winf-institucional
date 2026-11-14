@@ -256,7 +256,7 @@ test('vinheta a cada cinco músicas e fallback sem TTS, mantendo rádio aberta',
  assert.ok(radio.includes("if(radioMode&&playing)advanceRadioTrack()"));
  assert.ok(radio.includes("function next(automatic=false){"));
  assert.ok(radio.includes("next(true)"));
- assert.ok(markup.indexOf('station-programming.js')<markup.indexOf('app.js?v=20261114-24h-1'));
+ assert.ok(markup.indexOf('station-programming.js')<markup.indexOf('app.js?v=20261114-volume01-1'));
  assert.ok(markup.includes('station-programming.js'));
  assert.ok(css.includes('.sw-program-timeline'));
  assert.ok(!radio.includes('window.open('));
