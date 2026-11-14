@@ -12,7 +12,8 @@ test('roteiro original de episódio 02 ainda não é apresentado como áudio lan
  assert.match(ep,/vozes sintéticas/);
  assert.match(ep,/não constitui oferta de investimento/);
  assert.match(catalog,/id:'ep02-padrinho'/);
- assert.match(catalog,/status:'planned'/);
+ assert.match(catalog,/status:'scripted'/);
+ assert.doesNotMatch(catalog,/status:'published'/);
  assert.doesNotMatch(ep,/https:\/\/.*\.mp3/);
 });
 test('cada coleção tem descrição e chamada editorial sem fingir lançamento musical',()=>{
