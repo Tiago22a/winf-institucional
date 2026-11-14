@@ -38,6 +38,12 @@
 
 Os roteiros completos ficam no catálogo de programação; evitar duplicar textos em HTML.
 
+## Publicidade futura: não confundir os canais
+
+**Aquisição paga dentro do ChatGPT:** o projeto pode futuramente anunciar a rádio gratuita no sistema oficial `ads.openai.com` para atrair novos ouvintes; isso **não altera as respostas do ChatGPT** e **não cria anúncios dentro desta rádio**. Oportunidade documentada, sem orçamento nem campanha ativa: [Plano de Anúncios no ChatGPT](PLANO_ANUNCIOS_CHATGPT_2026.md).
+
+**Inserções pagas dentro da SynthWAVE.fm:** são outra hipótese, futura e independente. As chamadas editoriais existentes não representam venda de espaço a patrocinadores. Se a rádio vier a aceitar publicidade, definir identificação clara, revisão de conteúdo, separação editorial e aprovação comercial, sem bloquear o primeiro Play ou exigir cadastro.
+
 ## Direitos e segurança editorial
 
 As músicas devem ter origem e permissões documentadas antes de serem incluídas. **Não monetizar nem cobrar não elimina, por si só, direitos autorais e conexos**. Para o MVP, usar apenas as gravações próprias, sons procedurais e faixas existentes com crédito/licença identificados, revisando os requisitos de execução pública pertinentes antes de uma emissora 24/7 real.
