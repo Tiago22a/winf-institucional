@@ -16,12 +16,12 @@ const tracks=[...window.SYNTHWAVE_LICENSED_TRACKS,...synthTracks,...(window.SYNT
 const playlists=[
 ['AEROCORE SOUNDSCAPE','Atmosferas eletrônicas, tecnologia & movimento','WINF Sound',[0,1,5,9],0,'Seleção musical'],
 ['NEOSKIN APOCALYPSE','Batidas urbanas & texturas intensas','WINF Sound',[3,0,7,6],2,'Seleção musical'],
-['SELECT AMBIENT WORKS','Sons para um espaço tranquilo','Ambient',[2,1,8,9],4,'Seleção musical'],
-['CITY DRIVE / CITY LIGHTS','Synthwave real para percorrer a cidade','Drive',[0,1,4,10,11],5,'Seleção musical'],
+['SELECT AMBIENT WORKS','Sons para um espaço tranquilo','Ambient',[15,16,13,2,1,8,9],4,'Seleção musical'],
+['CITY DRIVE / CITY LIGHTS','Synthwave real para percorrer a cidade','Drive',[14,0,1,4,10,11],5,'Seleção musical'],
 ['HIGHWAY SESSIONS','Uma viagem sonora pela estrada','Drive',[1,0,4,6,10],1,'Seleção musical'],
-['NIGHT DRIVE / AFTER HOURS','Noites, neon e grandes avenidas','Drive',[1,0,2,11,12],6,'Seleção musical'],
-['DEEP FOCUS / LOFI ATELIÊ','Concentração e criatividade','Focus',[2,3,8,9],3,'Seleção musical'],
-['SYNTHWAVE ORIGINALS','Experimentos sonoros sintetizados do site','WINF Sound',[5,6,7,8,9,10,11,12],7,'Sons digitais']
+['NIGHT DRIVE / AFTER HOURS','Noites, neon e grandes avenidas','Drive',[16,14,1,0,2,11,12],6,'Seleção musical'],
+['DEEP FOCUS / LOFI ATELIÊ','Concentração e criatividade','Focus',[13,2,3,8,9],3,'Seleção musical'],
+['SYNTHWAVE ORIGINALS','Experimentos sonoros sintetizados do site','WINF Sound',[13,14,15,16,5,6,7,8,9,10,11,12],7,'Sons digitais']
 ].map((a,i)=>({id:i,title:a[0],subtitle:a[1],category:a[2],tracks:a[3],cover:cover(images[a[4]]),duration:a[5]}));
 // Coleções editoriais por momento. Faixas são índices do catálogo já disponível.
 const moments=[
