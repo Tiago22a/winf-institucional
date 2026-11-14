@@ -59,3 +59,17 @@
 .sw-newsletter-consent a{text-decoration:underline;color:#f9fff9}
 .sw-cloud-card{border:1px solid #3e5a45;background:linear-gradient(125deg,#17241b,#121719)}
 @media(max-width:760px){.sw-newsletter-content{grid-template-columns:1fr}.sw-newsletter-mount{padding:48px 20px}.sw-newsletter-content form{padding:18px}}
+
+/* Editorias SynthWAVE — ações públicas de leitura, sem painel de publicação no browser. */
+.sw-podcast-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.sw-podcast-script-link,.sw-podcast-project{
+ display:inline-flex;align-items:center;justify-content:center;
+ padding:11px 14px;min-height:43px;font-size:12px;font-weight:800;
+ text-decoration:none;transition:background .18s,border-color .18s;
+}
+.sw-podcast-script-link{color:#172b1f;background:#d3e4d4;border:1px solid #d3e4d4}
+.sw-podcast-project{color:#f2ebdc;background:transparent;border:1px solid #a9bcaa7a}
+.sw-podcast-script-link:hover{background:#f1fbf0}
+.sw-podcast-project:hover{border-color:#fff}
+.sw-podcast-script-link:focus-visible,.sw-podcast-project:focus-visible{outline:2px solid #fff;outline-offset:3px}
+@media(max-width:580px){.sw-podcast-actions>a{flex:1 1 100%}}

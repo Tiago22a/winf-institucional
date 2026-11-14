@@ -45,16 +45,11 @@ const ambientOptions=[
   {id:'traffic',label:'Cidade'},
   {id:'static',label:'Estática'}
 ];
-const podcasts=[
- ['CUIDAR & CONECTAR','Pessoas & Propósito','Uma conversa pode abrir uma porta','Duas vozes imaginam como um pequeno gesto pode aproximar gerações, conhecimento e oportunidades.',0],
- ['PADRINHO MODERN','Talento & Mentoria','Quando alguém acredita em você','A diferença entre oferecer uma promessa e construir uma oportunidade responsável.',1],
- ['O INVISÍVEL QUE PROTEGE','Ciência & Tecnologia','Conforto que quase não se vê','Como boas perguntas ajudam a entender películas arquitetônicas e escolhas conscientes.',4],
- ['ALÉM DA PINTURA','Automotivo & Proteção','Por que proteger o que nos move?','Os bastidores de cuidado, durabilidade e estética no universo AeroCore™ e NeoSkin™.',2],
- ['A ARTE DE RECOMEÇAR','Vida & Desenvolvimento','O próximo capítulo começa pequeno','Uma história ficcional sobre aprendizado, disciplina e coragem para pedir ajuda.',3],
- ['A CIDADE QUE CONECTA','Comunidade & Futuro','Tecnologia serve a quem?','Do acesso digital à escuta ativa: como desenhar projetos que façam sentido para pessoas reais.',5],
- ['DO BRASIL PARA O MUNDO','Empreendedorismo','Sonhar grande, construir com método','A experiência de criar sistemas, formar parceiros e expandir com responsabilidade.',6],
- ['UM NOVO JEITO DE APRENDER','WINF Academy','Aprender é um caminho, não um botão','Mentoria e formação de aplicadores: teoria, prática, segurança e evolução.',7]
-].map((a,i)=>({id:i,title:a[0],category:a[1],episode:a[2],story:a[3],cover:cover(images[a[4]]),status:'Em roteiro · áudio não publicado'}));
+// Episódios são gerenciados pelo catálogo editorial versionado, não pelo navegador.
+const podcasts=(window.SYNTHWAVE_PODCAST_CATALOG||[]).map(item=>({
+ ...item,cover:cover(item.artwork),
+ stageLabel:item.status==='published'?'ÁUDIO PUBLICADO':item.status==='scripted'?'ROTEIRO EM REVISÃO':'EM PLANEJAMENTO'
+}));
 const schedules=[['00:00 – 06:00','Cyber Nocturne & Night Drive'],['06:00 – 10:00','Morning Transmission & Quantum Focus'],['10:00 – 15:00','Ateliê High-End & Ambient Installation'],['15:00 – 20:00','City Lights & Highway Sessions'],['20:00 – 00:00','AeroCore™ Soundscape & SynthWave Originals']];
 let queue=tracks.map((t,i)=>t.audioUrl?i:-1).filter(i=>i>=0),position=0,playing=false,elapsed=0,timer=null,activeView='home',filter='Todos',soundscape=null,radioMode=false,radioErrors=0;
 const $=s=>document.querySelector(s);
@@ -80,7 +75,21 @@ function mixerPanel(){
 }
 function saveFavorite(i){window.SynthwaveLists.favorite(tracks,i)}
 function playlistCard(p){return '<article class="panel tile group" onclick="playPlaylist('+p.id+')"><img loading="lazy" class="w-full aspect-[4/3] object-cover" src="'+p.cover+'" alt=""><div class="p-5"><p class="text-[10px] tracking-[.2em] sw-accent-text uppercase font-extrabold">'+p.category+'</p><h3 class="text-white text-2xl mt-2">'+escapeHtml(p.title)+'</h3><p class="text-gray-500 text-xs mt-2">'+escapeHtml(p.subtitle)+'</p><p class="text-gray-400 text-xs mt-4">▶ Ouvir seleção · '+p.tracks.length+' faixas</p></div></article>'}
-function podcastCard(p){return '<article class="panel overflow-hidden"><img loading="lazy" src="'+p.cover+'" alt="" class="w-full aspect-[4/3] object-cover"><div class="p-5"><p class="sw-accent-text text-[10px] font-black tracking-widest uppercase">'+escapeHtml(p.category)+'</p><h3 class="text-white text-3xl mt-2">'+escapeHtml(p.title)+'</h3><p class="text-gray-300 text-sm mt-3">'+escapeHtml(p.episode)+'</p><p class="text-gray-400 text-xs mt-3 leading-relaxed">'+escapeHtml(p.story)+'</p><p class="text-xs sw-accent-text mt-5 uppercase font-bold tracking-wide">'+escapeHtml(p.status)+'</p></div></article>'}
+function podcastCard(p){
+ const script=p.status==='scripted'&&p.scriptUrl
+  ?'<a class="sw-podcast-script-link" href="'+escapeHtml(p.scriptUrl)+'">Ler prévia do roteiro ↗</a>':'';
+ const published=p.status==='published'&&p.audioUrl&&p.transcriptUrl&&p.rightsStatement
+  ?'<div class="mt-5"><p class="text-xs sw-accent-text uppercase font-bold">Áudio disponível · produzido com vozes de IA</p><audio class="w-full mt-3" controls preload="none" src="'+escapeHtml(p.audioUrl)+'" onplay="pause()" aria-label="Ouvir episódio '+escapeHtml(p.title)+'"></audio><a class="block text-xs mt-3 underline" href="'+escapeHtml(p.transcriptUrl)+'">Ler transcrição acessível</a></div>':'';
+ const project=p.projectUrl?'<a class="sw-podcast-project" href="'+escapeHtml(p.projectUrl)+'">Conhecer iniciativa ↗</a>':'';
+ return '<article class="panel overflow-hidden"><img loading="lazy" src="'+p.cover+'" alt="" class="w-full aspect-[4/3] object-cover"><div class="p-5">'+
+ '<p class="sw-accent-text text-[10px] font-black tracking-widest uppercase">'+escapeHtml(p.category)+'</p>'+
+ '<h3 class="text-white text-3xl mt-2">'+escapeHtml(p.series)+'</h3>'+
+ '<p class="text-gray-200 font-bold text-sm mt-3">'+escapeHtml(p.title)+'</p>'+
+ '<p class="text-gray-400 text-xs mt-3 leading-relaxed">'+escapeHtml(p.summary)+'</p>'+
+ '<p class="text-xs sw-accent-text mt-5 uppercase font-bold tracking-wide">'+escapeHtml(p.stageLabel)+'</p>'+
+ '<p class="text-gray-500 text-xs mt-2">'+escapeHtml(p.format)+'</p>'+
+ '<div class="sw-podcast-actions">'+script+project+'</div>'+published+'</div></article>';
+}
 function home(){return '<section class="hero min-h-[480px] md:min-h-[630px] flex items-center relative overflow-hidden"><div class="max-w-7xl mx-auto w-full px-5 py-20 relative z-10"><p class="sw-accent-text font-bold tracking-[.4em] uppercase text-xs mb-5">A new frequency is born // 24.7</p><h1 class="text-white text-[clamp(5rem,14vw,13rem)] leading-[.78] glow">FEEL THE<br><span class="sw-accent-text">FREQUENCY.</span></h1><p class="text-white/70 text-base md:text-xl max-w-xl mt-9">Seu universo sonoro. Músicas licenciadas, paisagens eletrônicas e playlists que acompanham cada jornada.</p><div class="flex flex-wrap gap-3 mt-8">'+button('▶ Sintonizar agora',"go('live');startRadio()")+button('Explorar playlists',"go('playlists')",'btn-outline')+'</div><p class="text-gray-500 text-xs tracking-[.3em] uppercase mt-10">Music · Technology · Motion · Culture</p></div><div class="absolute right-[-12%] top-16 w-[55vw] aspect-square rounded-full border sw-accent-border-subtle shadow-[0_0_160px_40px_#b7d5bc1b]"></div></section><section class="max-w-7xl mx-auto px-5 py-16">'+heading('Curated frequency','SONS PARA CADA MOMENTO','Faixas e soundscapes da experiência SYNTHWAVE.fm.')+'<div class="grid grid-cols-2 lg:grid-cols-4 gap-4">'+tracks.slice(0,4).map((t,i)=>trackCard(t,i)).join('')+'</div></section><section class="paper py-16 px-5"><div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center"><div><p class="sw-accent-text text-xs tracking-widest font-extrabold">EDITORIAL MANIFESTO</p><h2 class="text-6xl md:text-8xl leading-none mt-3">NÃO É SÓ<br>UMA RÁDIO.</h2><p class="mt-6 text-lg">É um território de frequências, tecnologia, movimento e identidade.</p>'+button('Conheça o manifesto',"go('about')",'btn-outline mt-8')+'</div><div class="font-brush text-5xl md:text-7xl rotate-[-6deg] text-[#d7aa7a] text-center">TURN IT UP.</div></div></section><section class="max-w-7xl mx-auto px-5 py-16">'+heading('Selected for you','PLAYLISTS EM DESTAQUE')+'<div class="grid md:grid-cols-3 gap-5">'+playlists.slice(0,3).map(playlistCard).join('')+'</div></section>'+
  '<section class="max-w-7xl mx-auto px-5 py-14">'+heading('Escolha pelo momento','CADA MOMENTO TEM UMA TRILHA','Estudar, trabalhar, viajar, namorar ou relaxar. Comece a ouvir sem cadastro.')+
  '<div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-4">'+moments.slice(0,4).map(momentCard).join('')+'</div>'+
@@ -104,8 +113,8 @@ function playlistView(){
 }
 function podcastView(){
  return '<section class="max-w-7xl mx-auto py-12">'+
- heading('Histórias que ficam','PODCASTS','Em desenvolvimento: diálogos originais entre duas vozes de IA, com storytelling, emoção, aprendizado e responsabilidade.')+
- '<div class="panel p-6 border-l-4 sw-accent-border mb-8"><p class="text-white font-bold">Primeira temporada em elaboração.</p><p class="text-gray-400 text-sm mt-2">Os temas abaixo são propostas editoriais — ainda não há episódios gravados para ouvir. Os áudios serão identificados como vozes geradas por IA e publicados depois de revisão humana.</p></div>'+
+ heading('Histórias que ficam','PODCASTS','Diálogos originais entre duas vozes de IA, com histórias, ideias e experiências humanas. Cada episódio mostra seu estágio real de produção.')+
+ '<div class="panel p-6 border-l-4 sw-accent-border mb-8"><p class="text-white font-bold">Primeira temporada em produção editorial.</p><p class="text-gray-400 text-sm mt-2">O episódio 01 tem roteiro para leitura e revisão. Os demais estão planejados. Nenhum áudio foi lançado nesta etapa; só haverá botão de reprodução para arquivos revisados, com transcrição e direitos documentados.</p></div>'+
  '<div class="grid md:grid-cols-2 xl:grid-cols-4 gap-5">'+podcasts.map(podcastCard).join('')+'</div></section>';
 }
 function explore(){let f=filter.toLowerCase();let results=tracks.map((t,i)=>({t,i})).filter(({t})=>f==='todos'||t.category.toLowerCase()===f);return '<section class="max-w-7xl mx-auto py-12">'+heading('Discover your sound','EXPLORAR','Busque e filtre o catálogo de faixas.')+'<input id="search" placeholder="Pesquisar música ou artista..." aria-label="Pesquisar" oninput="searchTracks(this.value)" class="w-full mb-5"><div class="flex flex-wrap gap-2 mb-8">'+['Todos',...new Set(tracks.map(t=>t.category))].map(c=>'<button class="pill '+(filter===c?'selected':'')+'" onclick="filter=\''+c+'\';go(\'explore\')">'+c+'</button>').join('')+'</div><div id="results" class="grid grid-cols-2 md:grid-cols-4 gap-4">'+results.map(({t,i})=>trackCard(t,i)).join('')+'</div></section>'}
@@ -118,9 +127,8 @@ function credits(){
  '</div><p class="text-sm text-gray-400 mt-9">Arquivos armazenados no Wikimedia Commons e acessados externamente. A disponibilidade dos endereços depende do provedor. Permissões Creative Commons não eliminam eventuais obrigações regulatórias, autorais ou conexas relativas à operação de rádio pública no Brasil.</p></section>';
 }
 function about(){return '<section class="max-w-7xl mx-auto py-12">'+heading('The manifesto','WE ARE THE FREQUENCY','Uma plataforma de música e experiências sonoras que conecta cultura, design, tecnologia e movimento.')+'<div class="paper p-8 md:p-16"><h2 class="text-6xl md:text-9xl">A TRILHA SONORA<br>DO FUTURO.</h2><p class="max-w-3xl text-lg mt-7">SYNTHWAVE.fm nasce dentro do ecossistema WINF para traduzir universos visuais em identidades sonoras. Música para criar, dirigir, trabalhar, pensar e sentir.</p><p class="font-brush sw-accent-text text-4xl mt-9">SOUND WITHOUT LIMITS.</p></div><div class="grid md:grid-cols-3 gap-4 mt-7">'+['Cultura','Tecnologia','Movimento'].map(s=>'<div class="panel p-7 text-center"><h3 class="text-4xl text-white">'+s+'</h3></div>').join('')+'</div></section>'}
-function admin(){let saved=JSON.parse(localStorage.getItem('synthwave_settings')||'{}');return '<section class="max-w-7xl mx-auto py-12">'+heading('Local administration','PAINEL ADMIN','Configurações demonstrativas armazenadas somente neste navegador. Não existe autenticação ou backend administrativo nesta versão estática.')+'<div class="panel p-7 max-w-2xl"><label class="block text-xs font-black uppercase tracking-widest mb-2">Nome da estação</label><input id="station" class="w-full" value="'+escapeHtml(saved.station||'SYNTHWAVE.fm')+'"><label class="block text-xs font-black uppercase tracking-widest mt-6 mb-2">Mensagem editorial</label><textarea id="message" class="w-full" rows="4">'+escapeHtml(saved.message||'Sound without limits.')+'</textarea><button class="btn mt-5" onclick="saveAdmin()">Salvar no navegador</button><p id="saved" class="text-sm mt-3 text-gray-400"></p></div></section>'}
-function saveAdmin(){localStorage.setItem('synthwave_settings',JSON.stringify({station:$('#station').value,message:$('#message').value}));$('#saved').textContent='Preferências salvas localmente.'}
-function go(view){activeView=view;document.querySelectorAll('[data-nav]').forEach(el=>el.classList.toggle('active',el.dataset.nav===view));const render={home,live,playlists:playlistView,podcasts:podcastView,explore,mine:()=>window.SynthwaveLists.render(tracks),about,credits,profile:()=>window.SynthwaveProfile.render(),admin};$('#app').innerHTML=(render[view]||home)();if(view==='mine')window.SynthwaveLists.bind(tracks,indices=>{radioMode=false;queue=indices;position=0;start(true)},()=>go('mine'));window.scrollTo({top:0,behavior:'smooth'});location.hash=view==='home'?'':view}
+
+function go(view){activeView=view;document.querySelectorAll('[data-nav]').forEach(el=>el.classList.toggle('active',el.dataset.nav===view));const render={home,live,playlists:playlistView,podcasts:podcastView,explore,mine:()=>window.SynthwaveLists.render(tracks),about,credits,profile:()=>window.SynthwaveProfile.render()};$('#app').innerHTML=(render[view]||home)();if(view==='mine')window.SynthwaveLists.bind(tracks,indices=>{radioMode=false;queue=indices;position=0;start(true)},()=>go('mine'));window.scrollTo({top:0,behavior:'smooth'});location.hash=view==='home'?'':view}
 function playPlaylist(id){radioMode=false;queue=playlists[id].tracks.slice();position=0;start(true);go('playlists')}
 function playMoment(id){
  const moment=moments.find(item=>item.id===id);
