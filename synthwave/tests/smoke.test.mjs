@@ -194,3 +194,24 @@ test('podcasts 2 e 3 existem apenas em modo roteiro com prévia de leitura, sem 
   assert.match(html,/LIA/);assert.match(html,/DAVI/);
  }
 });
+
+test('pipeline de áudio usa somente roteiros originais e três identidades de episódio',()=>{
+ const render=read('production/render_audio.py');
+ const workflow=read('../.github/workflows/synthwave-audio-render.yml');
+ const preview=read('production/audio-preview.js');
+ assert.match(render,/ep01-cuidar-conectar/);
+ assert.match(render,/ep02-padrinho/);
+ assert.match(render,/ep03-invisivel/);
+ assert.match(render,/synthesize_wav/);
+ assert.match(render,/PiperVoice/);
+ assert.match(render,/original_synthesized_ambient/);
+ assert.match(workflow,/upload-artifact@v4/);
+ assert.match(preview,/method:'HEAD'/);
+ assert.match(preview,/Content-Type/);
+ for(const id of ['ep01-cuidar-conectar','ep02-padrinho','ep03-invisivel']){
+  const html=read('podcasts/temporada-01/'+id+'/index.html');
+  assert.match(html,/audio-preview\.js/);
+  assert.match(html,/Prévia de roteiro|prévia editorial|roteiro original/i);
+  assert.ok(!html.includes('<audio'), 'o player não pode aparecer sem MP3 disponível');
+ }
+});
