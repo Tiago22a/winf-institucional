@@ -8,7 +8,7 @@ const dir=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const read=(file)=>readFileSync(resolve(dir,file),'utf8');
 
 test('scripts principais da FM têm sintaxe válida',()=>{
- for(const file of ['app.js','my-playlists.js','audio-engine.js','station-programming.js','experiencias/voice-player.js','cloud-auth.js','newsletter/newsletter.js',...['e01-cinco-sons','e02-fotografia-gaveta','e03-janela-mundo','e04-plano-mudou','e05-estrada-silencio','e06-maquina-pergunta'].map(id=>'experiencias/volume-01/'+id+'.js')]){
+ for(const file of ['app.js','my-playlists.js','audio-engine.js','station-programming.js','experiencias/voice-player.js','cloud-auth.js','newsletter/newsletter.js',...['e01-cinco-sons','e02-fotografia-gaveta','e03-janela-mundo','e04-plano-mudou','e05-estrada-silencio','e06-maquina-pergunta'].map(id=>'experiencias/volume-01/'+id+'.js'),...['after-hours','first-light','focus-frequency','creative-current','city-drive','night-glow'].map(id=>'experiencias/capsulas/'+id+'.js')]){
   assert.doesNotThrow(()=>new Function(read(file)),file);
  }
  const worker=read('backend/worker.js').replace('export default {','const worker = {');
@@ -222,7 +222,7 @@ test('grade 24 horas tem seis blocos contíguos cobrindo todas as horas locais',
  const win={};new Function('window',read('station-programming.js'))(win);
  const grade=win.SynthwaveStation;
  assert.equal(grade.blocks.length,6);
- assert.equal(grade.spots.length,24);
+ assert.equal(grade.spots.length,36);
  assert.equal(grade.songsPerSpot,5);
  for(let hour=0;hour<24;hour++){
   const slot=grade.blockAt({getHours:()=>hour});
@@ -257,7 +257,7 @@ test('vinheta a cada cinco músicas e fallback sem TTS, mantendo rádio aberta',
  assert.ok(radio.includes("if(radioMode&&playing)advanceRadioTrack()"));
  assert.ok(radio.includes("function next(automatic=false){"));
  assert.ok(radio.includes("next(true)"));
- assert.ok(markup.indexOf('station-programming.js')<markup.indexOf('app.js?v=20261114-volume01-1'));
+ assert.ok(markup.indexOf('station-programming.js')<markup.indexOf('app.js?v=20261114-capsulas-1'));
  assert.ok(markup.includes('station-programming.js'));
  assert.ok(css.includes('.sw-program-timeline'));
  assert.ok(!radio.includes('window.open('));
@@ -340,7 +340,7 @@ test('A rádio exibe as experiências, permite narração local e preserva músi
  assert.ok(tts.includes('global.SpeechSynthesisUtterance'));
  assert.ok(tts.includes('global.speechSynthesis'));
  assert.ok(tts.includes("turn.speaker==='LIA'"),'Vozes devem ter diferenciação de narração');
- assert.ok(radio.indexOf('experiencias/voice-player.js')<radio.indexOf('app.js?v=20261114-volume01-1'));
+ assert.ok(radio.indexOf('experiencias/voice-player.js')<radio.indexOf('app.js?v=20261114-capsulas-1'));
  assert.ok(!radio.includes('sw-newsletter-mount'));
  assert.ok(!radio.includes('newsletter/newsletter.js'));
 });
@@ -355,8 +355,8 @@ test('Os seis programas não dependem de áudio hospedado nem de conta Google',(
  const program=read('station-programming.js');
  assert.ok(program.includes("id:'spot-24'"));
  const w={};new Function('window',program)(w);
- assert.equal(w.SynthwaveStation.spots.length,24);
- assert.equal(new Set(w.SynthwaveStation.spots.map(x=>x.id)).size,24);
+ assert.equal(w.SynthwaveStation.spots.length,36);
+ assert.equal(new Set(w.SynthwaveStation.spots.map(x=>x.id)).size,36);
  assert.ok(w.SynthwaveStation.spots.every(x=>x.text.length>=50&&x.text.length<380));
 });
 
@@ -373,4 +373,61 @@ test('Notas de Frequência inclui oito artigos originais acessíveis e links sem
  assert.ok(radio.includes('href="/synthwave/notas/"'));
  assert.doesNotMatch(page,/<form|type="email"|data-paywall/i);
  assert.match(page,/Conteúdo editorial original/);
+});
+
+test('Cápsulas volume 02: 12 programas, 36 atos, 180 falas, dois locutores',()=>{
+ const win={};
+ const slots=['after-hours','first-light','focus-frequency','creative-current','city-drive','night-glow'];
+ for(const slot of slots)new Function('window',read('experiencias/capsulas/'+slot+'.js'))(win);
+ const capsules=win.SYNTHWAVE_EXPERIENCES;
+ assert.equal(capsules.length,12);
+ assert.equal(new Set(capsules.map(e=>e.id)).size,12);
+ assert.deepEqual(capsules.map(e=>e.number),[7,8,9,10,11,12,13,14,15,16,17,18]);
+ assert.equal(capsules.reduce((sum,e)=>sum+e.chapters.length,0),36);
+ assert.equal(capsules.reduce((sum,e)=>sum+e.chapters.flatMap(c=>c.lines).length,0),180);
+ const requiredSlots=['AFTER HOURS','FIRST LIGHT','FOCUS FREQUENCY','CREATIVE CURRENT','CITY DRIVE','NIGHT GLOW'];
+ for(const slot of requiredSlots)assert.equal(capsules.filter(e=>e.slot===slot).length,2,slot);
+ for(const capsule of capsules){
+  assert.equal(capsule.format,'capsule');
+  assert.equal(capsule.status,'scripted');
+  assert.ok(!capsule.audioUrl);
+  assert.ok(capsule.title&&capsule.tagline&&capsule.summary&&capsule.category);
+  assert.equal(capsule.chapters.length,3);
+  const turns=capsule.chapters.flatMap(ch=>ch.lines);
+  assert.equal(turns.length,15);
+  assert.ok(turns.every(t=>['LIA','DAVI'].includes(t[0])&&t[1].length>=24));
+  assert.ok(turns.some(t=>t[0]==='LIA')&&turns.some(t=>t[0]==='DAVI'));
+  assert.ok(capsule.chapters.every(ch=>ch.title&&ch.cue&&ch.lines.length===5));
+ }
+});
+test('As 12 vinhetas de cápsulas respeitam o horário e não mudam a frequência de inserção',()=>{
+ const w={};new Function('window',read('station-programming.js'))(w);
+ const radio=w.SynthwaveStation;
+ assert.equal(radio.spots.length,36);
+ assert.equal(radio.spots.filter(spot=>spot.kind==='capsula').length,12);
+ assert.equal(radio.songsPerSpot,5);
+ for(const slot of radio.blocks){
+  const first=radio.spotFor(15,slot),second=radio.spotFor(30,slot);
+  assert.equal(first.kind,'capsula');
+  assert.equal(second.kind,'capsula');
+  assert.equal(first.slot,slot.label);
+  assert.equal(second.slot,slot.label);
+  assert.notEqual(first.id,second.id);
+  assert.equal(radio.spotFor(14,slot),null);
+  assert.ok(radio.spotFor(5,slot));
+ }
+});
+test('A aba Experiências separa volume longo e cápsulas por horário sem bloquear o Play',()=>{
+ const radio=read('radio/index.html'),app=read('app.js'),home=read('index.html');
+ assert.ok(app.includes("format==='capsule'"));
+ assert.ok(app.includes('Doze histórias. Seis momentos do dia.'));
+ assert.ok(app.includes('Seis histórias para ficar um pouco mais.'));
+ assert.ok(app.includes("capsules.filter(e=>e.slot===slot.label)"));
+ assert.ok(radio.includes('data-nav="experiences"'));
+ assert.ok(radio.includes('experiencias/capsulas/after-hours.js'));
+ assert.ok(radio.includes('experiencias/capsulas/night-glow.js'));
+ assert.ok(radio.indexOf('experiencias/capsulas/night-glow.js')<radio.indexOf('experiencias/voice-player.js'));
+ assert.ok(radio.indexOf('experiencias/voice-player.js')<radio.indexOf('app.js?v=20261114-capsulas-1'));
+ assert.ok(home.includes('href="/synthwave/radio/#live"'), 'Play direto preservado');
+ assert.doesNotMatch(radio,/newsletter\/newsletter\.js|sw-newsletter-mount|data-required-login/i);
 });
