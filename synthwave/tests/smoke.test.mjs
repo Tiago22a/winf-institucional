@@ -154,3 +154,16 @@ test('conta pessoal é opcional e não aparece como requisito da rádio',()=>{
  assert.ok(cloud.includes('config.enabled!==true'));
  assert.ok(app.includes('start(true)'), 'O Play deve delegar diretamente à engine');
 });
+
+test('MVP: entrada grátis sem barreira de cadastro ou assinatura premium',()=>{
+ const home=read('index.html'),radio=read('radio/index.html');
+ assert.match(home,/OUVIR AGORA · GRÁTIS/);
+ assert.match(home,/href="\/synthwave\/radio\/#live"/);
+ assert.doesNotMatch(radio,/SYNTHWAVE PREMIUM/);
+ assert.match(radio,/Rádio livre para ouvir/);
+ assert.equal(JSON.parse(read('firebase-public-config.json')).enabled,false);
+ assert.equal(JSON.parse(read('newsletter/config.json')).enabled,false);
+ const editorial=read('PLANO_EDITORIAL_LANCAMENTO.md');
+ assert.match(editorial,/GHOST SHOP™/);
+ assert.match(editorial,/Não exigir e-mail para ouvir/);
+});
