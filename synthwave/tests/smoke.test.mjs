@@ -258,7 +258,7 @@ test('vinheta a cada cinco músicas e fallback sem TTS, mantendo rádio aberta',
  assert.ok(radio.includes("if(radioMode&&playing)advanceRadioTrack()"));
  assert.ok(radio.includes("function next(automatic=false){"));
  assert.ok(radio.includes("next(true)"));
- assert.ok(markup.indexOf('station-programming.js')<markup.indexOf('app.js?v=20261114-mp3-1'));
+ assert.ok(markup.indexOf('station-programming.js')<markup.indexOf('app.js?v=20261114-18mp3-release2'));
  assert.ok(markup.includes('station-programming.js'));
  assert.ok(css.includes('.sw-program-timeline'));
  assert.ok(!radio.includes('window.open('));
@@ -341,7 +341,7 @@ test('A rádio exibe as experiências, permite narração local e preserva músi
  assert.ok(tts.includes('global.SpeechSynthesisUtterance'));
  assert.ok(tts.includes('global.speechSynthesis'));
  assert.ok(tts.includes("turn.speaker==='LIA'"),'Vozes devem ter diferenciação de narração');
- assert.ok(radio.indexOf('experiencias/voice-player.js')<radio.indexOf('app.js?v=20261114-mp3-1'));
+ assert.ok(radio.indexOf('experiencias/voice-player.js')<radio.indexOf('app.js?v=20261114-18mp3-release2'));
  assert.ok(!radio.includes('sw-newsletter-mount'));
  assert.ok(!radio.includes('newsletter/newsletter.js'));
 });
@@ -428,7 +428,7 @@ test('A aba Experiências separa volume longo e cápsulas por horário sem bloqu
  assert.ok(radio.includes('experiencias/capsulas/after-hours.js'));
  assert.ok(radio.includes('experiencias/capsulas/night-glow.js'));
  assert.ok(radio.indexOf('experiencias/capsulas/night-glow.js')<radio.indexOf('experiencias/voice-player.js'));
- assert.ok(radio.indexOf('experiencias/voice-player.js')<radio.indexOf('app.js?v=20261114-mp3-1'));
+ assert.ok(radio.indexOf('experiencias/voice-player.js')<radio.indexOf('app.js?v=20261114-18mp3-release2'));
  assert.ok(home.includes('href="/synthwave/radio/#live"'), 'Play direto preservado');
  assert.doesNotMatch(radio,/newsletter\/newsletter\.js|sw-newsletter-mount|data-required-login/i);
 });
@@ -454,10 +454,11 @@ test('prévia de 18 experiências só é exibida após geração real e validaç
   assert.equal(entry.audioUrl,'/synthwave/experiencias/audio-previews/'+id+'-previa.mp3');
   assert.match(entry.sha256,/^[0-9a-f]{64}$/);
  }
- assert.ok(radio.indexOf('experiencias/audio-preview-catalog.js')<radio.indexOf('app.js?v=20261114-mp3-1'));
+ assert.ok(radio.indexOf('experiencias/audio-preview-catalog.js')<radio.indexOf('app.js?v=20261114-18mp3-release2'));
  assert.ok(app.includes('const verifiedAudio='));
  assert.ok(app.includes("knownAudio?.status==='audio_preview_unreviewed'"));
  assert.ok(app.includes('experienceMp3'));
+ assert.ok(app.includes('experienceMp3Status'),'Áudio indisponível deve oferecer fallback legível');
  assert.ok(app.includes('window.SynthwaveExperiencesPlayer.stop()'));
  assert.ok(app.includes('function toggleExperienceVoice(id)'));
  assert.ok(app.includes('if(preview&&!preview.paused)preview.pause();'));
