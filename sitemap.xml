@@ -316,48 +316,12 @@
   <url><loc>https://winf.com.br/partners/varejistas/</loc><lastmod>2026-11-08</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://winf.com.br/partners/ecossistema/</loc><lastmod>2026-11-08</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://winf.com.br/partners/cuidar-e-conectar/</loc><lastmod>2026-11-08</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url>
-  <loc>https://winf.com.br/pelicula-de-controle-solar-praia-grande-sp/</loc>
-  <lastmod>2026-11-09</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.85</priority>
-  <image:image><image:loc>https://winf.com.br/images/og/winf-select-praia-grande-1200x630.jpg</image:loc><image:title>WINF Select Praia Grande — proteção e conforto para vidros</image:title></image:image>
-</url>
-  <url>
-  <loc>https://winf.com.br/pelicula-de-controle-solar-guaruja-sp/</loc>
-  <lastmod>2026-11-09</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.85</priority>
-  <image:image><image:loc>https://winf.com.br/images/og/winf-select-guaruja-1200x630.jpg</image:loc><image:title>WINF Select Guarujá — proteção e conforto para vidros</image:title></image:image>
-</url>
-  <url>
-  <loc>https://winf.com.br/pelicula-de-controle-solar-pilar-do-sul-sp/</loc>
-  <lastmod>2026-11-09</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.85</priority>
-  <image:image><image:loc>https://winf.com.br/images/og/winf-select-pilar-do-sul-1200x630.jpg</image:loc><image:title>WINF Select Pilar do Sul — proteção e conforto para vidros</image:title></image:image>
-</url>
-  <url>
-  <loc>https://winf.com.br/pelicula-de-controle-solar-campina-grande-pb/</loc>
-  <lastmod>2026-11-09</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.85</priority>
-  <image:image><image:loc>https://winf.com.br/images/og/winf-select-campina-grande-1200x630.jpg</image:loc><image:title>WINF Select Campina Grande — proteção e conforto para vidros</image:title></image:image>
-</url>
   <url><loc>https://winf.com.br/aplicacoes/sacadas-varandas/</loc><lastmod>2026-11-09</lastmod><changefreq>monthly</changefreq><priority>0.72</priority></url>
   <url><loc>https://winf.com.br/aplicacoes/janelas-fachadas/</loc><lastmod>2026-11-09</lastmod><changefreq>monthly</changefreq><priority>0.72</priority></url>
   <url><loc>https://winf.com.br/aplicacoes/privacidade/</loc><lastmod>2026-11-09</lastmod><changefreq>monthly</changefreq><priority>0.72</priority></url>
   <url><loc>https://winf.com.br/aplicacoes/seguranca-vidros/</loc><lastmod>2026-11-09</lastmod><changefreq>monthly</changefreq><priority>0.72</priority></url>
   <url><loc>https://winf.com.br/mapa-do-site/</loc><lastmod>2026-11-09</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
-  <url>
-  <loc>https://winf.com.br/pelicula-de-controle-solar-cuiaba-mt/</loc>
-  <lastmod>2026-11-09</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.85</priority>
-  <image:image><image:loc>https://winf.com.br/images/og/winf-select-cuiaba-1200x630.jpg</image:loc><image:title>WINF Select Cuiabá — soluções de controle solar e privacidade para vidros</image:title></image:image>
-</url>
-
-    <!-- Páginas públicas de navegação, expansão e modelos -->
+  <!-- Páginas públicas de navegação, expansão e modelos -->
     <url><loc>https://winf.com.br/partners/</loc><lastmod>2026-11-11</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
     <url><loc>https://winf.com.br/onde-comprar/</loc><lastmod>2026-11-13</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
     <url><loc>https://winf.com.br/redes/</loc><lastmod>2026-11-11</lastmod><changefreq>monthly</changefreq><priority>0.70</priority></url>
