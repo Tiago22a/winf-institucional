@@ -23,7 +23,9 @@
    summary:'O que diferencia uma oportunidade responsável de uma promessa que não se sustenta?',
    hook:'Talento precisa de uma porta aberta. Mas de qual tipo?',
    artwork:'photo-1518709268805-4e9042af9f23',
-   status:'planned',format:'Duas vozes de IA',
+   status:'scripted',format:'Duas vozes de IA · LIA & DAVI',
+   scriptUrl:'/synthwave/podcasts/temporada-01/ep02-padrinho/',
+   label:'Roteiro original em revisão; áudio ainda não gravado',
    projectUrl:'/partners/padrinho-modern/'
   },
   {
@@ -32,7 +34,9 @@
    summary:'Entenda por que fazer as perguntas certas importa mais do que repetir promessas sobre películas para vidro.',
    hook:'Quando o vidro parece igual, o que muda no conforto?',
    artwork:'photo-1486406146926-c627a92ad1ab',
-   status:'planned',format:'Duas vozes de IA',
+   status:'scripted',format:'Duas vozes de IA · LIA & DAVI',
+   scriptUrl:'/synthwave/podcasts/temporada-01/ep03-invisivel/',
+   label:'Roteiro original em revisão; áudio ainda não gravado',
    projectUrl:'/invisible/'
   },
   {
