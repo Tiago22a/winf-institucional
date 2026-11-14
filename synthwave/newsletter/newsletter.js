@@ -16,7 +16,7 @@
  if(!/^\/[a-z0-9/-]+(?:#[a-z0-9-]+)?$/i.test(privacy))return;
  mount.innerHTML=[
   '<div class="sw-newsletter-content"><div>',
-  '<p class="text-pink text-xs font-black tracking-[.2em] uppercase">A FREQUÊNCIA CONTINUA</p>',
+  '<p class="sw-accent-text text-xs font-black tracking-[.2em] uppercase">A FREQUÊNCIA CONTINUA</p>',
   '<h2 class="text-4xl md:text-6xl text-white mt-2">RECEBA NOVIDADES DA SYNTHWAVE.</h2>',
   '<p class="text-sm text-gray-400 mt-3">Novas coleções e episódios. Você pode continuar ouvindo sem informar seus dados.</p>',
   '</div><form id="sw-newsletter-form" class="grid gap-3" autocomplete="on">',

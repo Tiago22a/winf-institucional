@@ -96,10 +96,10 @@ function render(tracks){
    const rows=songs.length?songs.map(track=>
       '<li class="flex justify-between items-center gap-3 py-2 border-b border-white/10">'+
       '<span class="text-xs text-gray-300">'+html(track.title)+' · '+html(track.artist)+'</span>'+
-      '<button class="text-pink text-xs shrink-0" type="button" data-action="remove-song" data-id="'+html(item.id)+'" data-song="'+html(track.id)+'">Remover</button></li>').join('') :
+      '<button class="sw-accent-text text-xs shrink-0" type="button" data-action="remove-song" data-id="'+html(item.id)+'" data-song="'+html(track.id)+'">Remover</button></li>').join('') :
       '<li class="text-gray-500 text-sm py-3">Adicione faixas do catálogo para começar.</li>';
    return '<article class="panel p-6 sw-personal-card">'+
-      '<p class="text-pink uppercase text-[10px] tracking-[.18em] font-bold">SUA SELEÇÃO</p>'+
+      '<p class="sw-accent-text uppercase text-[10px] tracking-[.18em] font-bold">SUA SELEÇÃO</p>'+
       '<h2 class="text-white text-3xl mt-2">'+html(item.name)+'</h2>'+
       '<p class="text-gray-500 text-xs mt-1">'+songs.length+' faixa(s)</p>'+
       '<div class="flex flex-wrap gap-2 mt-5">'+
@@ -112,15 +112,15 @@ function render(tracks){
       '</select><button type="button" data-action="add-song" data-id="'+html(item.id)+'" class="btn-outline">Adicionar +</button></div></article>';
  }).join('');
  return '<section class="max-w-7xl mx-auto px-5 py-12" id="sw-my-lists">'+
-  '<p class="text-pink font-bold uppercase tracking-[.2em] text-xs">A SUA FREQUÊNCIA</p>'+
+  '<p class="sw-accent-text font-bold uppercase tracking-[.2em] text-xs">A SUA FREQUÊNCIA</p>'+
   '<h1 class="text-white text-5xl md:text-7xl mt-3">MINHAS PLAYLISTS.</h1>'+
   '<p class="text-gray-400 mt-4 max-w-3xl">Crie suas coleções e salve músicas da biblioteca SynthWAVE.fm. Ouça sem cadastro e organize seus favoritos.</p>'+
   '<div class="panel p-5 mt-7 mb-8 sw-local-notice"><strong class="text-white">Biblioteca pessoal · cópia local.</strong>'+
-  '<p class="text-sm text-gray-400 mt-2">Suas playlists funcionam imediatamente neste dispositivo. Quando a conta Google estiver ativada, você poderá fazer backup e recuperar suas seleções. Envio público de músicas próprias só virá após a verificação de direitos e moderação.</p></div><div class="panel p-5 mb-8 sw-cloud-card"><p class="text-pink text-[10px] tracking-[.18em] uppercase font-black">CONTA OPCIONAL / GOOGLE</p><h2 class="text-white text-3xl mt-2 mb-4">Leve suas playlists com você.</h2><div id="sw-cloud-controls">'+cloudControls()+'</div></div>'+
+  '<p class="text-sm text-gray-400 mt-2">Suas playlists funcionam imediatamente neste dispositivo. Quando a conta Google estiver ativada, você poderá fazer backup e recuperar suas seleções. Envio público de músicas próprias só virá após a verificação de direitos e moderação.</p></div><div class="panel p-5 mb-8 sw-cloud-card"><p class="sw-accent-text text-[10px] tracking-[.18em] uppercase font-black">CONTA OPCIONAL / GOOGLE</p><h2 class="text-white text-3xl mt-2 mb-4">Leve suas playlists com você.</h2><div id="sw-cloud-controls">'+cloudControls()+'</div></div>'+
   '<form id="sw-create-list" class="flex flex-wrap gap-3 mb-8"><label for="sw-list-name" class="sr-only">Nome da nova playlist</label>'+
   '<input id="sw-list-name" type="text" class="flex-1 min-w-[220px]" maxlength="48" minlength="2" required placeholder="Nome da sua nova playlist">'+
   '<button type="submit" class="sw-moment-action">+ Criar playlist</button></form>'+
-  '<p id="sw-personal-status" role="status" aria-live="polite" class="text-pink text-sm mb-5"></p>'+
+  '<p id="sw-personal-status" role="status" aria-live="polite" class="sw-accent-text text-sm mb-5"></p>'+
   '<div class="grid lg:grid-cols-2 gap-5">'+cards+'</div></section>';
 }
 function bind(tracks,playIndices,redraw){
