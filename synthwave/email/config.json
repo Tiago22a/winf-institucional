@@ -1,0 +1,22 @@
+{
+  "schema": "synthwave.email.lifecycle.v1",
+  "enabled": false,
+  "acceptNewSubscriptions": false,
+  "sendEnabled": false,
+  "senderAddress": null,
+  "senderDisplayName": "SynthWAVE.fm™",
+  "endpoint": null,
+  "provider": null,
+  "consentVersion": "synthwave-email-v1",
+  "source": "synthwave.fm",
+  "listId": "synthwave-editorial",
+  "privacyUrl": "/aerocore/policies/#privacidade",
+  "welcomeTemplate": "welcome-v1",
+  "schedule": {
+    "welcome": "apos_confirmacao",
+    "discovery": "sete_dias_apos_confirmacao",
+    "digest": "quinzenal_com_preferencias"
+  },
+  "maxEditorialMessagesPerMonth": 3,
+  "comment": "Sem cadastro obrigatório; requer remetente verificado, consentimento, confirmação, unsubscribe e integração Hermes homologada."
+}
