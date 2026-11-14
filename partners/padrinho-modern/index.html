@@ -50,6 +50,19 @@ footer{border-top:1px solid #ffffff32;padding:48px 0 30px;background:#090a0b}.fo
 .pm-editorial-link{display:inline-block;margin-top:5px}
 @media(max-width:1000px){.pm-editorial-grid{grid-template-columns:1fr 1fr}.pm-editorial-card--feature{grid-column:1/-1;min-height:400px}.pm-editorial-card{min-height:320px}}
 @media(max-width:640px){.pm-editorial-grid{grid-template-columns:1fr}.pm-editorial-card--feature{grid-column:auto}.pm-editorial-card{min-height:340px}.pm-editorial-card figcaption{bottom:18px;left:18px}}
+
+/* Padrinho Modern™ | sequência editorial com fotografias próprias do acervo WINF, sem alterar logotipos */
+.pm-impact-photos{display:grid;grid-template-columns:1.2fr .8fr;gap:12px;margin-top:30px}
+.pm-impact-photo{position:relative;overflow:hidden;margin:0;min-width:0;height:clamp(280px,30vw,455px);border:1px solid #ffffff22;background:#15191d}
+.pm-impact-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.pm-impact-photo:after{content:"";position:absolute;inset:30% 0 0;pointer-events:none;background:linear-gradient(transparent,#090a0ddf)}
+.pm-impact-photo figcaption{position:absolute;z-index:1;left:clamp(16px,2.5vw,30px);right:18px;bottom:clamp(16px,2.5vw,29px);display:grid;gap:7px}
+.pm-impact-photo figcaption span{font:700 10px/1.45 Inter,Arial,sans-serif;letter-spacing:.16em;color:#d8e4ed}
+.pm-impact-photo figcaption strong{font:400 clamp(24px,2.9vw,40px)/1.12 Anton,Impact,sans-serif;letter-spacing:.015em;color:#fff}
+.pm-model-photo{height:164px;overflow:hidden;margin:-29px -27px 23px;background:#151a1d}
+.pm-model-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 44%}
+@media(max-width:760px){.pm-impact-photos{grid-template-columns:1fr}.pm-impact-photo{height:330px}.pm-model-photo{margin:-24px -20px 20px}}
+@media(max-width:440px){.pm-impact-photo{height:300px}.pm-impact-photo figcaption strong{font-size:25px}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Padrinho Modern™ — WINF Partners","description":"Página de apresentação a apoiadores potenciais do talento profissional e de projetos licenciados WINF. Não é uma oferta pública de valores mobiliários.","inLanguage":"pt-BR","url":"https://www.winf.com.br/partners/padrinho-modern/","isPartOf":{"@type":"WebSite","url":"https://www.winf.com.br/"}}</script>
 
@@ -86,7 +99,17 @@ footer{border-top:1px solid #ffffff32;padding:48px 0 30px;background:#090a0b}.fo
   <div class="actions"><a class="btn" href="#como-funciona">Conhecer a proposta ↗</a><button class="btn secondary" type="button" id="share-page">Compartilhar esta oportunidade ↗</button></div>
   <p id="share-status" class="share-status" role="status" aria-live="polite"></p><div data-territory-context hidden style="margin-top:16px;padding:17px;border:1px solid #7791b4;background:#141d29"><span class="eyebrow">PROJETO TERRITORIAL COMPARTILHADO</span><strong data-territory-city style="display:block;font-size:22px"></strong><p data-territory-status style="color:#b2c5db;font-size:13px"></p><a data-territory-link href="/partners/#territorios">Consultar este território ↗</a> · <a data-dark-link href="/partners/universo-dark/">Universo Dark™ ↗</a></div>
  </div></section>
- <section class="section" id="oportunidade"><div class="wrap"><div class="intro"><span class="eyebrow">01 / POR QUE EXISTE</span><h2>Oportunidade não pode depender <em>apenas de capital.</em></h2><p class="muted">O profissional entra com seu conhecimento, dedicação e capacidade de execução. O padrinho pode contribuir com os recursos e a visão necessários para estruturar a operação. A WINF Partners oferece um modelo de marca, suporte e processos, conforme o contrato de licenciamento e a implantação efetiva.</p></div><p class="quote">Não se trata de comprar uma promessa.<br><em>Trata-se de avaliar uma pessoa e um projeto.</em></p></div></section>
+ <section class="section" id="oportunidade"><div class="wrap"><div class="intro"><span class="eyebrow">01 / POR QUE EXISTE</span><h2>Oportunidade não pode depender <em>apenas de capital.</em></h2><p class="muted">O profissional entra com seu conhecimento, dedicação e capacidade de execução. O padrinho pode contribuir com os recursos e a visão necessários para estruturar a operação. A WINF Partners oferece um modelo de marca, suporte e processos, conforme o contrato de licenciamento e a implantação efetiva.</p></div><p class="quote">Não se trata de comprar uma promessa.<br><em>Trata-se de avaliar uma pessoa e um projeto.</em></p>
+ <div class="pm-impact-photos" aria-label="Oportunidade e impacto do empreendedorismo">
+  <figure class="pm-impact-photo">
+    <img src="/partners/media/parceria.webp" width="1280" height="720" loading="lazy" decoding="async" alt="Cena editorial ilustrativa de profissionais negociando uma parceria em sala de reuniões">
+    <figcaption><span>APOIO E VISÃO</span><strong>Quando a experiência encontra iniciativa.</strong></figcaption>
+  </figure>
+  <figure class="pm-impact-photo">
+    <img src="/briefing/media/asset-light-familia-2026.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Cena editorial ilustrativa de família em ambiente contemporâneo, associada ao propósito do empreendedorismo">
+    <figcaption><span>O IMPACTO DO PROJETO</span><strong>Oportunidades que vão além dos negócios.</strong></figcaption>
+  </figure>
+ </div></div></section>
  <section class="section pm-editorial" id="historias" aria-labelledby="pm-editorial-title">
   <div class="wrap">
    <div class="intro"><span class="eyebrow">WINF PARTNERS™ / PADRINHO MODERN™</span>
@@ -114,7 +137,7 @@ footer{border-top:1px solid #ffffff32;padding:48px 0 30px;background:#090a0b}.fo
  <section class="section" id="modelos"><div class="wrap">
   <div class="intro"><span class="eyebrow">02 / FORMAS DE APOIAR</span><h2>Um talento. <em>Três caminhos possíveis.</em></h2><p class="muted">Os valores abaixo são referências dos formatos WINF, não garantias de custo total ou retorno. O tipo de apoio e as condições econômicas devem ser acordados separadamente entre as partes.</p></div>
   <div class="tiles">
-   <article class="tile" id="asset-light"><small>01 / BASE TERRITORIAL</small><h3>WINF Asset Light™</h3><p>Operação de películas arquitetônicas com presença digital territorial e estrutura enxuta, sem loja física obrigatória. A rota mais acessível para começar com organização.</p><p class="price">R$ 15.000</p><span class="tag">Referência da adesão territorial; despesas adicionais dependem do contrato.</span><a class="textlink" href="/briefing/asset-light/">Conhecer o modelo ↗</a></article>
+   <article class="tile" id="asset-light"><div class="pm-model-photo"><img src="/briefing/media/asset-light-gestao-20261108.webp" width="830" height="468" loading="lazy" decoding="async" alt="Operador do conceito WINF Asset Light utilizando computador e celular em ambiente externo"></div><small>01 / BASE TERRITORIAL</small><h3>WINF Asset Light™</h3><p>Operação de películas arquitetônicas com presença digital territorial e estrutura enxuta, sem loja física obrigatória. A rota mais acessível para começar com organização.</p><p class="price">R$ 15.000</p><span class="tag">Referência da adesão territorial; despesas adicionais dependem do contrato.</span><a class="textlink" href="/briefing/asset-light/">Conhecer o modelo ↗</a></article>
    <article class="tile" id="quiosque"><small>02 / PRESENÇA FÍSICA</small><h3>Quiosque Arquitetônico</h3><p>Um ponto físico de apresentação e captação para profissionais elegíveis do Asset Light™, sujeito à aprovação do local, implantação e condições comerciais.</p><p class="price">A partir de R$ 95 mil</p><span class="tag">Referência preliminar do formato; locação, obra e demais itens são avaliados à parte.</span><a class="textlink" href="/briefing/quiosque/">Conhecer o modelo ↗</a></article>
    <article class="tile" id="flagship"><small>03 / ESTRUTURA REGIONAL</small><h3>Flagship Studio &amp; Hub</h3><p>Projeto de maior porte, com estrutura premium e possível atuação regional, condicionado à análise técnica, comercial e à homologação de cada operação.</p><p class="price">R$ 250.000</p><span class="tag">Referência comercial; não presume inclusão de obras, estoque, equipamentos ou pessoal.</span><a class="textlink" href="/briefing/flagship/">Conhecer o modelo ↗</a></article>
   </div>
