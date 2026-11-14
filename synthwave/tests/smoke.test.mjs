@@ -359,3 +359,18 @@ test('Os seis programas não dependem de áudio hospedado nem de conta Google',(
  assert.equal(new Set(w.SynthwaveStation.spots.map(x=>x.id)).size,24);
  assert.ok(w.SynthwaveStation.spots.every(x=>x.text.length>=50&&x.text.length<380));
 });
+
+test('Notas de Frequência inclui oito artigos originais acessíveis e links sem barreira de cadastro',()=>{
+ const page=read('notas/index.html'),home=read('index.html'),radio=read('radio/index.html');
+ const ids=['primeiro-play','paisagem-sonora','estrada-com-som','criatividade-rascunho','noite-sem-pressa','inteligencia-artificial-som','direitos-e-creditos','pessoas-por-tras-da-radio'];
+ for(const id of ids){
+   assert.ok(page.includes('id="'+id+'"'),'artigo ausente: '+id);
+   assert.ok(page.includes('href="#'+id+'"'),'índice ausente: '+id);
+ }
+ assert.equal((page.match(/class="story" id=/g)||[]).length,8);
+ assert.ok(page.includes('href="/synthwave/radio/#live"'));
+ assert.ok(home.includes('href="/synthwave/notas/"'));
+ assert.ok(radio.includes('href="/synthwave/notas/"'));
+ assert.doesNotMatch(page,/<form|type="email"|data-paywall/i);
+ assert.match(page,/Conteúdo editorial original/);
+});
