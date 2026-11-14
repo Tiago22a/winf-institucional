@@ -1,0 +1,18 @@
+{
+  "episodeId": "ep02-padrinho",
+  "status": "audio_preview_unreviewed",
+  "speakers": [
+    "LIA",
+    "DAVI"
+  ],
+  "speechEngine": "Piper TTS",
+  "ttsModels": {
+    "LIA": "pt_BR-cadu-medium",
+    "DAVI": "pt_BR-faber-medium"
+  },
+  "soundtrack": "original_synthesized_ambient",
+  "spokenTurns": 61,
+  "durationSecondsApprox": 342.54,
+  "sourceScript": "podcasts/temporada-01/ep02-padrinho.md",
+  "publicCatalogStatusUnchanged": true
+}

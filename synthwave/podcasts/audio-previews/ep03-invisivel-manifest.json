@@ -1,0 +1,18 @@
+{
+  "episodeId": "ep03-invisivel",
+  "status": "audio_preview_unreviewed",
+  "speakers": [
+    "LIA",
+    "DAVI"
+  ],
+  "speechEngine": "Piper TTS",
+  "ttsModels": {
+    "LIA": "pt_BR-cadu-medium",
+    "DAVI": "pt_BR-faber-medium"
+  },
+  "soundtrack": "original_synthesized_ambient",
+  "spokenTurns": 46,
+  "durationSecondsApprox": 271.57,
+  "sourceScript": "podcasts/temporada-01/ep03-invisivel.md",
+  "publicCatalogStatusUnchanged": true
+}
