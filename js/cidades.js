@@ -15,7 +15,7 @@
  * bairro / municipio: campos opcionais para localidades dentro de uma cidade.
  *
  * Sem segmento confirmado, o cartão mostra "Atendimento sob consulta".
- * Sem contato local informado, o cartão encaminha para a central identificada.
+ * Contatos oficiais são definidos pelo fluxo de atendimento da WINF.
  */
 
 globalThis.WINF_CIDADES = [
@@ -30,7 +30,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-sao-paulo-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -47,7 +47,7 @@ globalThis.WINF_CIDADES = [
     "numero": "5513981113001",
     "url": "/pelicula-de-controle-solar-santos-sp/",
     "instagram": "https://www.instagram.com/winfselect.santos/",
-    "observacoes": "Atendimento e instalação ativos pela Central 013. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -63,7 +63,7 @@ globalThis.WINF_CIDADES = [
     "numero": "5515997909049",
     "url": "/insulfilm-residencial-sorocaba-sp/",
     "instagram": "https://www.instagram.com/winfselect.sorocaba/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -79,7 +79,7 @@ globalThis.WINF_CIDADES = [
     "numero": "5513981113001",
     "url": "/pelicula-de-controle-solar-campina-grande-pb/",
     "instagram": null,
-    "observacoes": "Página WINF Select em pré-ativação. Contato recebido pela central WINF oficial (DDD 13); confirmação de cobertura e agenda local necessária.",
+    "observacoes": "Página WINF Select em pré-ativação. Solicitações encaminhadas pelo contato oficial; serviços e agenda sujeitos a confirmação.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -94,7 +94,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-rio-de-janeiro-rj/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -110,7 +110,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-belo-horizonte-mg/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -126,7 +126,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-curitiba-pr/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -142,7 +142,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-florianopolis-sc/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -158,7 +158,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-salvador-ba/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -174,7 +174,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-recife-pe/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -190,7 +190,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-brasilia-df/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -206,7 +206,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-belem-pa/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -222,7 +222,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-campinas-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -238,7 +238,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-jundiai-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -254,7 +254,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-sao-jose-dos-campos-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -270,7 +270,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-ribeirao-preto-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -286,7 +286,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-santo-andre-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -302,7 +302,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-sao-bernardo-do-campo-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -318,7 +318,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-sao-caetano-do-sul-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -334,7 +334,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-barueri-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -350,7 +350,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-mogi-das-cruzes-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -366,7 +366,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-piracicaba-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -382,7 +382,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-bauru-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -398,7 +398,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-marilia-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -414,7 +414,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-sao-jose-do-rio-preto-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -430,7 +430,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-presidente-prudente-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -446,7 +446,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-franca-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -462,7 +462,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-limeira-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -478,7 +478,7 @@ globalThis.WINF_CIDADES = [
     "numero": "5513981113001",
     "url": "/pelicula-para-vidro-controle-solar-sao-vicente-sp/",
     "instagram": null,
-    "observacoes": "Atendimento e instalação ativos pela Central 013. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -495,7 +495,7 @@ globalThis.WINF_CIDADES = [
     "numero": "5513981113001",
     "url": "/pelicula-de-controle-solar-guaruja-sp/",
     "instagram": null,
-    "observacoes": "Atendimento e instalação ativos pela Central 013. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -511,7 +511,7 @@ globalThis.WINF_CIDADES = [
     "numero": "5513981113001",
     "url": "/pelicula-de-controle-solar-praia-grande-sp/",
     "instagram": "https://www.instagram.com/winfselect.praiagrande/",
-    "observacoes": "Atendimento e instalação ativos pela Central 013. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -526,7 +526,7 @@ globalThis.WINF_CIDADES = [
     "numero": "5513981113001",
     "url": "/pelicula-para-vidro-controle-solar-cubatao-sp/",
     "instagram": null,
-    "observacoes": "Atendimento e instalação ativos pela Central 013. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -542,7 +542,7 @@ globalThis.WINF_CIDADES = [
     "numero": "5513981113001",
     "url": "/pelicula-para-vidro-controle-solar-bertioga-sp/",
     "instagram": null,
-    "observacoes": "Atendimento e instalação ativos pela Central 013. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -677,7 +677,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-niteroi-rj/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -693,7 +693,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-petropolis-rj/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -709,7 +709,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-volta-redonda-rj/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -725,7 +725,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-nova-iguacu-rj/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -741,7 +741,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-cabo-frio-rj/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -757,7 +757,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-campos-dos-goytacazes-rj/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -773,7 +773,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-vitoria-es/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -789,7 +789,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-vila-velha-es/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -805,7 +805,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-linhares-es/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -821,7 +821,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-nova-lima-mg/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -837,7 +837,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-contagem-mg/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -853,7 +853,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-uberlandia-mg/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -869,7 +869,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-juiz-de-fora-mg/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -885,7 +885,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-uberaba-mg/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -901,7 +901,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-ipatinga-mg/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -917,7 +917,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-governador-valadares-mg/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -933,7 +933,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-montes-claros-mg/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -949,7 +949,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-divinopolis-mg/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -965,7 +965,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-londrina-pr/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -981,7 +981,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-fortaleza-ce/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -997,7 +997,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-goiania-go/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1014,7 +1014,7 @@ globalThis.WINF_CIDADES = [
     "numero": "5513981113001",
     "url": "/pelicula-de-controle-solar-cuiaba-mt/",
     "instagram": "https://www.instagram.com/winfselect.cuiaba/",
-    "observacoes": "Página institucional WINF Select Cuiabá publicada. Território não operacional; eventual atendimento e instalação dependem de confirmação da central.",
+    "observacoes": "Página institucional WINF Select Cuiabá publicada. Seleção territorial sob consulta, sem equipe local confirmada.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -1029,7 +1029,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-campo-grande-ms/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1045,7 +1045,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-manaus-am/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1061,7 +1061,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-porto-alegre-rs/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1077,7 +1077,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-guarulhos-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1093,7 +1093,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-osasco-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1109,7 +1109,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-maua-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1125,7 +1125,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-diadema-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1141,7 +1141,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-carapicuiba-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1157,7 +1157,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-itaquaquecetuba-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1173,7 +1173,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-taubate-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1189,7 +1189,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-suzano-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1205,7 +1205,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-sumare-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1221,7 +1221,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-cotia-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1237,7 +1237,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-taboao-da-serra-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1253,7 +1253,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-indaiatuba-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1269,7 +1269,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-sao-carlos-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1285,7 +1285,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-embu-das-artes-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1301,7 +1301,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-araraquara-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1317,7 +1317,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-jacarei-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1333,7 +1333,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-americana-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1349,7 +1349,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-hortolandia-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1365,7 +1365,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-itapevi-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1381,7 +1381,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-rio-claro-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1397,7 +1397,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-aracatuba-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1413,7 +1413,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-santa-barbara-d-oeste-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1429,7 +1429,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-ferraz-de-vasconcelos-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1445,7 +1445,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-braganca-paulista-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1461,7 +1461,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-itu-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1477,7 +1477,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-pindamonhangaba-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1493,7 +1493,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-francisco-morato-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1509,7 +1509,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-atibaia-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1525,7 +1525,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-itapecerica-da-serra-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1541,7 +1541,7 @@ globalThis.WINF_CIDADES = [
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-itapetininga-sp/",
     "instagram": null,
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1557,7 +1557,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-santana-de-parnaiba-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1573,7 +1573,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-mogi-guacu-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1589,7 +1589,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-botucatu-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1605,7 +1605,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-franco-da-rocha-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1621,7 +1621,7 @@ globalThis.WINF_CIDADES = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-caraguatatuba-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
     "siteAtivo": true
@@ -1642,7 +1642,7 @@ globalThis.WINF_UNIDADES_EXTRAS = [
     "numero": "5515997909049",
     "url": "/pelicula-de-controle-solar-pilar-do-sul-sp/",
     "instagram": "https://www.instagram.com/winfselect.pilardosul/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   }
@@ -1659,7 +1659,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-votorantim-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "instagram": null,
     "disponivelParaAtivacao": false,
     "exemplo": false
@@ -1673,7 +1673,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-aracoiaba-da-serra-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "instagram": null,
     "disponivelParaAtivacao": false,
     "exemplo": false
@@ -1687,7 +1687,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-salto-de-pirapora-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "instagram": null,
     "disponivelParaAtivacao": false,
     "exemplo": false
@@ -1701,7 +1701,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-piedade-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "instagram": null,
     "disponivelParaAtivacao": false,
     "exemplo": false
@@ -1715,7 +1715,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-ipero-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "instagram": null,
     "disponivelParaAtivacao": false,
     "exemplo": false
@@ -1729,7 +1729,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-capela-do-alto-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "instagram": null,
     "disponivelParaAtivacao": false,
     "exemplo": false
@@ -1743,7 +1743,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5513981113001",
     "url": "/pelicula-para-vidro-controle-solar-cajati-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 013. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -1757,7 +1757,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5513981113001",
     "url": "/pelicula-para-vidro-controle-solar-cananeia-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 013. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -1771,7 +1771,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5513981113001",
     "url": "/pelicula-para-vidro-controle-solar-eldorado-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 013. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -1785,7 +1785,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5513981113001",
     "url": "/pelicula-para-vidro-controle-solar-iguape-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 013. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -1799,7 +1799,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5513981113001",
     "url": "/pelicula-para-vidro-controle-solar-ilha-comprida-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 013. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -1813,7 +1813,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5513981113001",
     "url": "/pelicula-para-vidro-controle-solar-itanhaem-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 013. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -1827,7 +1827,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5513981113001",
     "url": "/pelicula-para-vidro-controle-solar-itariri-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 013. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -1841,7 +1841,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5513981113001",
     "url": "/pelicula-para-vidro-controle-solar-jacupiranga-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 013. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -1855,7 +1855,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5513981113001",
     "url": "/pelicula-para-vidro-controle-solar-juquia-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 013. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -1869,7 +1869,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5513981113001",
     "url": "/pelicula-para-vidro-controle-solar-miracatu-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 013. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -1883,7 +1883,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5513981113001",
     "url": "/pelicula-para-vidro-controle-solar-mongagua-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 013. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -1897,7 +1897,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5513981113001",
     "url": "/pelicula-para-vidro-controle-solar-pariquera-acu-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 013. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -1911,7 +1911,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5513981113001",
     "url": "/pelicula-para-vidro-controle-solar-pedro-de-toledo-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 013. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -1925,7 +1925,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5513981113001",
     "url": "/pelicula-para-vidro-controle-solar-peruibe-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 013. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -1939,7 +1939,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5513981113001",
     "url": "/pelicula-para-vidro-controle-solar-registro-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 013. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -1953,7 +1953,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5513981113001",
     "url": "/pelicula-para-vidro-controle-solar-sete-barras-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 013. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -1967,7 +1967,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-alambari-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -1981,7 +1981,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-angatuba-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -1995,7 +1995,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-apiai-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2009,7 +2009,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-barao-de-antonina-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2023,7 +2023,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-barra-do-chapeu-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2037,7 +2037,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-barra-do-turvo-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2051,7 +2051,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-boituva-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2065,7 +2065,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-bom-sucesso-de-itarare-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2079,7 +2079,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-buri-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2093,7 +2093,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-campina-do-monte-alegre-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2107,7 +2107,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-capao-bonito-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2121,7 +2121,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-cerquilho-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2135,7 +2135,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-cesario-lange-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2149,7 +2149,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-guapiara-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2163,7 +2163,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-guarei-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2177,7 +2177,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-ibiuna-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2191,7 +2191,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-iporanga-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2205,7 +2205,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-itabera-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2219,7 +2219,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-itaoca-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2233,7 +2233,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-itapeva-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2247,7 +2247,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-itapirapua-paulista-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2261,7 +2261,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-itaporanga-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2275,7 +2275,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-itarare-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2289,7 +2289,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-jumirim-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2303,7 +2303,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-laranjal-paulista-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2317,7 +2317,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-nova-campina-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2331,7 +2331,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-porangaba-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2345,7 +2345,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-porto-feliz-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2359,7 +2359,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-quadra-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2373,7 +2373,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-ribeira-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2387,7 +2387,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-ribeirao-branco-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2401,7 +2401,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-ribeirao-grande-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2415,7 +2415,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-riversul-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2429,7 +2429,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-sao-miguel-arcanjo-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2443,7 +2443,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-sarapui-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2457,7 +2457,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-tapirai-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2471,7 +2471,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-taquarivai-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2485,7 +2485,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-tatui-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2499,7 +2499,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-tiete-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2513,7 +2513,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-para-vidro-controle-solar-torre-de-pedra-sp/",
-    "observacoes": "Atendimento e instalação ativos pela Central 015. Agendamento pelo WhatsApp.",
+    "observacoes": "Atendimento WINF disponível mediante confirmação de agenda pelo WhatsApp.",
     "disponivelParaAtivacao": false,
     "instagram": null,
     "exemplo": false
@@ -2528,7 +2528,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-paulinia-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -2542,7 +2542,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-cajamar-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -2556,7 +2556,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-louveira-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -2570,7 +2570,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-sao-sebastiao-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -2584,7 +2584,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-ilhabela-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -2598,7 +2598,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-vinhedo-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -2612,7 +2612,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-jaguariuna-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -2626,7 +2626,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-salto-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -2640,7 +2640,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-itupeva-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -2654,7 +2654,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-aruja-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -2668,7 +2668,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-itatiba-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -2682,7 +2682,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-valinhos-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -2696,7 +2696,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-araras-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -2710,7 +2710,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-sertaozinho-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -2724,7 +2724,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-lins-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -2738,7 +2738,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-guaratingueta-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -2752,7 +2752,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-mogi-mirim-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -2766,7 +2766,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-matao-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -2780,7 +2780,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-cabreuva-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -2794,7 +2794,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-catanduva-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -2808,7 +2808,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-barretos-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -2822,7 +2822,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-amparo-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -2836,7 +2836,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-lencois-paulista-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -2850,7 +2850,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-jau-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -2864,7 +2864,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-cacapava-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -2878,7 +2878,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-itapira-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -2892,7 +2892,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-monte-mor-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -2906,7 +2906,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-nova-odessa-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -2920,7 +2920,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-jandira-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -2934,7 +2934,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-caieiras-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -2948,7 +2948,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-bebedouro-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -2962,7 +2962,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-sao-joao-da-boa-vista-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -2976,7 +2976,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-leme-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -2990,7 +2990,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-ourinhos-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3004,7 +3004,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-birigui-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3018,7 +3018,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-ribeirao-pires-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3032,7 +3032,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-aracariguama-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3046,7 +3046,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-varzea-paulista-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3060,7 +3060,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-assis-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3074,7 +3074,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-poa-sp/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3088,7 +3088,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-marica-rj/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3102,7 +3102,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-duque-de-caxias-rj/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3116,7 +3116,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-saquarema-rj/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3130,7 +3130,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-betim-mg/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3144,7 +3144,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-joinville-sc/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3158,7 +3158,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-itajai-sc/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3172,7 +3172,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-sao-luis-ma/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3186,7 +3186,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-caxias-do-sul-rs/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3200,7 +3200,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-serra-es/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3214,7 +3214,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-araucaria-pr/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3228,7 +3228,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-sao-jose-dos-pinhais-pr/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3242,7 +3242,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-maceio-al/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3256,7 +3256,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-natal-rn/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3270,7 +3270,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-teresina-pi/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3284,7 +3284,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-canoas-rs/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3298,7 +3298,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-joao-pessoa-pb/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3312,7 +3312,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-maringa-pr/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3326,7 +3326,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-camacari-ba/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3340,7 +3340,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-sao-francisco-do-conde-ba/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3354,7 +3354,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-parauapebas-pa/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3368,7 +3368,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-ponta-grossa-pr/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3382,7 +3382,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-porto-velho-ro/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3396,7 +3396,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-blumenau-sc/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3410,7 +3410,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-sao-goncalo-rj/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3424,7 +3424,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-macae-rj/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3438,7 +3438,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-rio-verde-go/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3452,7 +3452,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-aracaju-se/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3466,7 +3466,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-feira-de-santana-ba/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3480,7 +3480,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-aparecida-de-goiania-go/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3494,7 +3494,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-anapolis-go/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3508,7 +3508,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-jaboatao-dos-guararapes-pe/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3522,7 +3522,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-dourados-ms/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3536,7 +3536,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-extrema-mg/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3550,7 +3550,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-cariacica-es/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3564,7 +3564,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-cascavel-pr/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3578,7 +3578,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-macapa-ap/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3592,7 +3592,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-boa-vista-rr/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3606,7 +3606,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-ipojuca-pe/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3620,7 +3620,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-chapeco-sc/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3634,7 +3634,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-foz-do-iguacu-pr/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3648,7 +3648,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-canaa-dos-carajas-pa/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3662,7 +3662,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-rondonopolis-mt/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3676,7 +3676,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-cabo-de-santo-agostinho-pe/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3690,7 +3690,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-sao-jose-sc/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3704,7 +3704,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-gravatai-rs/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3718,7 +3718,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-jaragua-do-sul-sc/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3732,7 +3732,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-paranagua-pr/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3746,7 +3746,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-sete-lagoas-mg/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3760,7 +3760,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-tres-lagoas-ms/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3774,7 +3774,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-pouso-alegre-mg/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3788,7 +3788,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-palmas-to/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3802,7 +3802,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-rio-grande-rs/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3816,7 +3816,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-passo-fundo-rs/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3830,7 +3830,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-sao-joao-da-barra-rj/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3844,7 +3844,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-varzea-grande-mt/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3858,7 +3858,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-goiana-pe/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3872,7 +3872,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-sorriso-mt/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3886,7 +3886,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-maracanau-ce/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3900,7 +3900,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-santa-cruz-do-sul-rs/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3914,7 +3914,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-araruama-rj/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3928,7 +3928,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-rio-branco-ac/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3942,7 +3942,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-vitoria-da-conquista-ba/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3956,7 +3956,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-pelotas-rs/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3970,7 +3970,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-criciuma-sc/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3984,7 +3984,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-resende-rj/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -3998,7 +3998,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-novo-hamburgo-rs/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -4012,7 +4012,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-angra-dos-reis-rj/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -4026,7 +4026,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-sao-leopoldo-rs/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   },
@@ -4040,7 +4040,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-sinop-mt/",
     "instagram": null,
-    "observacoes": "Página WINF Select publicada. Consulte a central para confirmar cobertura e instalação.",
+    "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false
   }
