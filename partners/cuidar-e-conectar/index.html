@@ -1352,6 +1352,37 @@
 @media(max-width:800px){.cc-photo-chapter{min-height:720px}.cc-photo-chapter__veil,.cc-photo-chapter--future .cc-photo-chapter__veil{background:linear-gradient(0deg,rgba(5,11,7,.96),rgba(5,11,7,.72) 62%,rgba(5,11,7,.32))}.cc-photo-chapter__image img{object-position:60% center}.cc-photo-chapter h2{font-size:clamp(45px,10.3vw,72px)}.cc-hero .cc-hero-shade{background:linear-gradient(0deg,#051008f5,#051008a8 65%,#05100865)}}
 @media(max-width:520px){.cc-photo-chapter{min-height:730px}.cc-photo-chapter h2{font-size:clamp(42px,10.8vw,61px)}.cc-photo-chapter__content{padding:90px 0}}
 @media(prefers-reduced-motion:reduce){.cc-photo-chapter *{animation:none!important;transition:none!important}}
+</style><style>
+/* Cuidar & Conectar — explicação acessível e participação com responsabilidade. */
+.cc-explain{background:linear-gradient(145deg,#0a170e,#14271a)!important}
+.cc-audience{background:#f0f4eb!important;color:#122018!important}
+.cc-audience .pp-kicker{color:#3a7b30!important}
+.cc-audience .pp-section-heading h2{color:#142219!important}
+.cc-audience .pp-section-heading em{color:#468a3f!important}
+.cc-audience .pp-section-heading p{color:#3f5745!important}
+.cc-explain-grid,.cc-audience-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:28px}
+.cc-explain-grid article{padding:clamp(20px,3vw,34px);background:#15281b;border:1px solid #a3d48d35}
+.cc-explain-grid b{font:800 11px/1.4 Inter,sans-serif;letter-spacing:.13em;color:#9bef6a}
+.cc-explain-grid h3,.cc-audience-grid h3{font:400 clamp(21px,2.3vw,30px)/1.17 Anton,Impact,sans-serif;margin:15px 0 12px}
+.cc-explain-grid p{font:400 14px/1.8 Inter,sans-serif;color:#c9d9c9;margin:0}
+.cc-audience-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.cc-audience-grid article{padding:25px;background:#fff;border:1px solid #c9dac4}
+.cc-audience-grid h3{color:#172f1d;margin-top:0}
+.cc-audience-grid p{font:400 14px/1.75 Inter,sans-serif;color:#47614c;margin:0}
+.cc-explain-action{margin-top:24px;border-left:4px solid #67b633;background:#e0ebdb;padding:25px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.cc-explain-action p{margin:0;max-width:770px;color:#29412d;font-size:14px;line-height:1.8}
+.cc-explain-action .cc-cta{flex-shrink:0;background:#152a19;color:#fff!important;border-color:#152a19}
+.cc-faq{background:#0c1510!important}
+.cc-faq-items{max-width:990px;margin-top:30px;border-top:1px solid #b4dba843}
+.cc-faq-items details{border-bottom:1px solid #b4dba843;padding:0 6px}
+.cc-faq-items summary{cursor:pointer;list-style:none;padding:24px 28px 24px 0;font-weight:750;font-size:16px;color:#f7fff4;position:relative}
+.cc-faq-items summary::-webkit-details-marker{display:none}
+.cc-faq-items summary:after{content:"+";position:absolute;right:0;top:19px;color:#9bea6e;font-size:27px;font-weight:400}
+.cc-faq-items details[open] summary:after{content:"−"}
+.cc-faq-items details p{max-width:790px;padding:0 25px 22px 0;margin:0;color:#c6d6c8;font:400 14px/1.85 Inter,sans-serif}
+.cc-faq-items summary:focus-visible{outline:2px solid #9bea6e;outline-offset:3px}
+@media(max-width:800px){.cc-audience-grid{grid-template-columns:1fr}.cc-explain-action{display:block}.cc-explain-action .cc-cta{margin-top:20px}}
+@media(max-width:600px){.cc-explain-grid{grid-template-columns:1fr}.cc-faq-items summary{font-size:14px;line-height:1.5}.cc-explain-action{padding:20px}}
 </style></head><body class="pp-page pp-social winf-page-cuidar"><a class="pp-skip" href="#conteudo">Pular para o conteúdo</a>
 <header class="pp-header"><div class="pp-wrap pp-nav">
   <a class="pp-brand" href="/partners/" aria-label="WINF Partners — início"><img src="/briefing/media/winf-logo-white-official.png" alt="WINF™ — logomarca oficial" width="109" height="36"><span>PARTNERS<sup>™</sup></span></a>
@@ -1368,7 +1399,7 @@
     <h1 id="cc-title">CUIDAR<br><em>&amp; CONECTAR.</em></h1>
     <p class="cc-lead">Pessoas primeiro. Conexões que abrem portas.</p>
     <p class="cc-sub">Educação, inclusão e tecnologia para aproximar pessoas e criar possibilidades. Um projeto da WINF que começa pela escuta e quer crescer com responsabilidade.</p>
-    <div class="cc-actions"><a class="cc-cta" href="#historias">CONHECER A PROPOSTA ↓</a><a class="cc-cta cc-cta--ghost" href="#filmes">VER FILMES DA CAMPANHA ↗</a></div>
+    <div class="cc-actions"><a class="cc-cta" href="#como-funciona">ENTENDER A INICIATIVA ↓</a><a class="cc-cta cc-cta--ghost" href="#como-funciona">COMO FUNCIONA ↓</a></div>
     <p class="cc-disclaimer">Imagens e animações conceituais. Não representam atividades sociais já realizadas.</p>
   </div>
 </section>
@@ -1426,13 +1457,45 @@
     <p>Projetar oportunidades significa aproximar gerações, fortalecer vínculos e valorizar cada história. Uma proposta para construir com responsabilidade.</p>
   </div>
 </section>
+<section class="cc-explain pp-section" id="como-funciona" aria-labelledby="cc-como-title">
+ <div class="pp-wrap">
+  <p class="pp-kicker">06 / ENTENDA A INICIATIVA</p>
+  <div class="pp-section-heading"><h2 id="cc-como-title">O QUE É O<br><em>CUIDAR &amp; CONECTAR™?</em></h2><p>É uma proposta de iniciativa social do ecossistema WINF.inc® para aproximar pessoas, educação e tecnologia por meio de projetos construídos com parceiros e comunidades. O objetivo é transformar boas conexões em possibilidades reais, sempre com escuta, critérios e acompanhamento.</p></div>
+  <div class="cc-explain-grid">
+   <article><b>01 / ESCUTAR</b><h3>ENTENDER ANTES DE AGIR</h3><p>Conversar com instituições e comunidades para identificar necessidades concretas. Nenhuma atividade começa apenas porque uma imagem ou campanha foi publicada.</p></article>
+   <article><b>02 / DESENHAR</b><h3>CRIAR UM PILOTO VIÁVEL</h3><p>Definir a ação educativa ou comunitária, os responsáveis, o público, os recursos, as autorizações necessárias e como os resultados serão acompanhados.</p></article>
+   <article><b>03 / CONECTAR</b><h3>REUNIR QUEM PODE CONTRIBUIR</h3><p>Aproximar educadores, profissionais, organizações, voluntários e apoiadores conforme as necessidades e a capacidade de cada iniciativa.</p></article>
+   <article><b>04 / PRESTAR CONTAS</b><h3>APRENDER E EVOLUIR</h3><p>Quando um piloto for aprovado e realizado, acompanhar participação, despesas, entregas e aprendizados antes de considerar novas etapas.</p></article>
+  </div>
+ </div>
+</section>
+<section class="cc-audience pp-section" id="participar" aria-labelledby="cc-audience-title"><div class="pp-wrap">
+ <p class="pp-kicker">07 / COMO COLABORAR</p><div class="pp-section-heading"><h2 id="cc-audience-title">CADA CONEXÃO PODE<br><em>TER UM PAPEL.</em></h2><p>A proposta é conversar com potenciais parceiros antes de abrir qualquer iniciativa ao público. Não há cadastro geral de beneficiários ou seleção de voluntários em andamento anunciada nesta página.</p></div>
+ <div class="cc-audience-grid">
+  <article><h3>ORGANIZAÇÕES E COMUNIDADES</h3><p>Podem apresentar demandas locais, ideias para ações educativas e possibilidades de articulação comunitária.</p></article>
+  <article><h3>EDUCADORES E PROFISSIONAIS</h3><p>Podem propor oficinas, conteúdos, orientação ou apoio técnico para futuros pilotos, sujeitos à avaliação.</p></article>
+  <article><h3>EMPRESAS E APOIADORES</h3><p>Podem conversar sobre conhecimento, infraestrutura, materiais ou outras formas de colaboração, sem compromisso ou contrapartida presumida.</p></article>
+ </div>
+ <div class="cc-explain-action"><p><strong>Tem uma proposta concreta?</strong> Informe sua organização, cidade, público pretendido, necessidade, ideia de colaboração e contato. A equipe poderá avaliar a pertinência e a viabilidade.</p><a class="cc-cta" href="https://wa.me/5513997815375?text=Ol%C3%A1%21%20Quero%20apresentar%20uma%20proposta%20ao%20Cuidar%20%26%20Conectar.%20Minha%20organiza%C3%A7%C3%A3o%3A%20%5Bnome%5D.%20Cidade%3A%20%5Bcidade%5D.%20Ideia%3A%20%5Bresumo%5D." target="_blank" rel="noopener noreferrer">APRESENTAR UMA IDEIA ↗</a></div>
+</div></section>
+<section class="cc-faq pp-section" id="perguntas" aria-labelledby="cc-faq-title"><div class="pp-wrap">
+ <p class="pp-kicker">08 / TRANSPARÊNCIA</p><div class="pp-section-heading"><h2 id="cc-faq-title">PERGUNTAS<br><em>FREQUENTES.</em></h2><p>Respostas claras sobre o estágio e os limites da proposta.</p></div>
+ <div class="cc-faq-items">
+  <details><summary>O Cuidar &amp; Conectar™ já realiza ações sociais?</summary><p>A iniciativa é apresentada aqui como conceito em estruturação. As cenas são ilustrativas e não comprovam a realização de oficinas, atendimentos ou projetos anteriores.</p></details>
+  <details><summary>Posso inscrever uma criança, família ou participante?</summary><p>Não há inscrições públicas abertas ou benefícios garantidos. Se houver um piloto aprovado, o público, as condições e as formas de participação precisarão ser divulgados especificamente para aquela ação.</p></details>
+  <details><summary>O programa é uma franquia ou exige compra?</summary><p>Não. Cuidar &amp; Conectar™ é uma proposta social, independente da aquisição de produtos ou do licenciamento comercial WINF Partners™.</p></details>
+  <details><summary>Como uma parceria será analisada?</summary><p>A equipe poderá avaliar a necessidade apresentada, pertinência social, pessoas responsáveis, capacidade operacional, recursos, autorizações, privacidade e formas de acompanhar resultados. O envio não significa aprovação automática.</p></details>
+  <details><summary>Como serão tratadas imagens e informações de participantes?</summary><p>Cada iniciativa deverá prever cuidados de proteção de dados, privacidade e autorizações adequadas, especialmente quando envolver crianças e adolescentes. As imagens desta página são conceituais geradas por IA.</p></details>
+  <details><summary>Existem doações, repasses ou resultados prometidos?</summary><p>Não há anúncio de campanha de arrecadação, repasses, vagas, bolsas, metas de atendimento ou resultados garantidos nesta página. Qualquer iniciativa futura deverá publicar informações específicas e verificáveis.</p></details>
+ </div>
+</div></section>
 <div class="pp-wrap pp-social-note"><p><strong>Estado atual:</strong> conceito em planejamento. Esta página não anuncia benefícios garantidos, inscrições, repasses financeiros ou projetos já executados.</p></div>
 <section class="pp-closing cc-closing-cinema" aria-labelledby="cc-closing-title">
   <div class="cc-closing-shade" aria-hidden="true"></div>
   <div class="pp-wrap cc-closing-content">
-    <p class="pp-kicker">06 / CONEXÃO — CUIDAR &amp; CONECTAR™</p>
+    <p class="pp-kicker">09 / CONEXÃO — CUIDAR &amp; CONECTAR™</p>
     <h2 id="cc-closing-title">UMA BOA IDEIA PRECISA<br>DE RESPONSABILIDADE.</h2>
-    <p>Se você representa uma organização e deseja apresentar uma proposta, envie uma breve descrição para avaliação da equipe.</p>
+    <p>Se você representa uma organização, comunidade ou grupo profissional e tem uma ideia de colaboração, descreva o contexto, a cidade e o público envolvido para uma avaliação inicial. O envio não representa aprovação ou abertura de inscrições.</p>
     <a class="pp-button" href="https://wa.me/5513997815375?text=Ol%C3%A1!%20Gostaria%20de%20apresentar%20uma%20proposta%20de%20colabora%C3%A7%C3%A3o%20para%20o%20Cuidar%20%26%20Conectar%20da%20WINF." target="_blank" rel="noopener noreferrer">APRESENTAR PROPOSTA <span aria-hidden="true">↗</span></a>
   </div>
 </section>
