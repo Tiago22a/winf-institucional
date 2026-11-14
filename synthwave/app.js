@@ -93,7 +93,7 @@ function podcastCard(p){
  '<p class="text-gray-500 text-xs mt-2">'+escapeHtml(p.format)+'</p>'+
  '<div class="sw-podcast-actions">'+script+project+'</div>'+preview+published+'</div></article>';
 }
-function home(){return '<section class="hero min-h-[480px] md:min-h-[630px] flex items-center relative overflow-hidden"><div class="max-w-7xl mx-auto w-full px-5 py-20 relative z-10"><p class="sw-accent-text font-bold tracking-[.4em] uppercase text-xs mb-5">A new frequency is born // 24.7</p><h1 class="text-white text-[clamp(5rem,14vw,13rem)] leading-[.78] glow">FEEL THE<br><span class="sw-accent-text">FREQUENCY.</span></h1><p class="text-white/70 text-base md:text-xl max-w-xl mt-9">Seu universo sonoro. Músicas licenciadas, paisagens eletrônicas e playlists que acompanham cada jornada.</p><div class="flex flex-wrap gap-3 mt-8">'+button('▶ Ouvir sem cadastro',"go('live');startRadio()")+button('Explorar playlists',"go('playlists')",'btn-outline')+'</div><p class="text-gray-500 text-xs tracking-[.3em] uppercase mt-10">Music · Technology · Motion · Culture</p></div><div class="absolute right-[-12%] top-16 w-[55vw] aspect-square rounded-full border sw-accent-border-subtle shadow-[0_0_160px_40px_#b7d5bc1b]"></div></section><section class="max-w-7xl mx-auto px-5 py-16">'+heading('Curated frequency','SONS PARA CADA MOMENTO','Faixas e soundscapes da experiência SYNTHWAVE.fm.')+'<div class="grid grid-cols-2 lg:grid-cols-4 gap-4">'+tracks.slice(0,4).map((t,i)=>trackCard(t,i)).join('')+'</div></section><section class="paper py-16 px-5"><div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center"><div><p class="sw-accent-text text-xs tracking-widest font-extrabold">EDITORIAL MANIFESTO</p><h2 class="text-6xl md:text-8xl leading-none mt-3">NÃO É SÓ<br>UMA RÁDIO.</h2><p class="mt-6 text-lg">É um território de frequências, tecnologia, movimento e identidade.</p>'+button('Conheça o manifesto',"go('about')",'btn-outline mt-8')+'</div><div class="font-brush text-5xl md:text-7xl rotate-[-6deg] text-[#d7aa7a] text-center">TURN IT UP.</div></div></section><section class="max-w-7xl mx-auto px-5 py-16">'+heading('Selected for you','PLAYLISTS EM DESTAQUE')+'<div class="grid md:grid-cols-3 gap-5">'+playlists.slice(0,3).map(playlistCard).join('')+'</div></section>'+
+function home(){return '<section class="hero min-h-[480px] md:min-h-[630px] flex items-center relative overflow-hidden"><div class="max-w-7xl mx-auto w-full px-5 py-20 relative z-10"><p class="sw-accent-text font-bold tracking-[.4em] uppercase text-xs mb-5">A new frequency is born // 24.7</p><h1 class="text-white text-[clamp(5rem,14vw,13rem)] leading-[.78] glow">FEEL THE<br><span class="sw-accent-text">FREQUENCY.</span></h1><p class="text-white/70 text-base md:text-xl max-w-xl mt-9">Seu universo sonoro. Músicas licenciadas, paisagens eletrônicas e playlists que acompanham cada jornada.</p><div class="flex flex-wrap gap-3 mt-8">'+button('▶ Ouvir sem cadastro',"go('live');startRadio()")+button('Explorar playlists',"go('playlists')",'btn-outline')+button('Descobrir experiências',"go('experiences')",'btn-outline')+'</div><p class="text-gray-500 text-xs tracking-[.3em] uppercase mt-10">Music · Technology · Motion · Culture</p></div><div class="absolute right-[-12%] top-16 w-[55vw] aspect-square rounded-full border sw-accent-border-subtle shadow-[0_0_160px_40px_#b7d5bc1b]"></div></section><section class="max-w-7xl mx-auto px-5 py-16">'+heading('Curated frequency','SONS PARA CADA MOMENTO','Faixas e soundscapes da experiência SYNTHWAVE.fm.')+'<div class="grid grid-cols-2 lg:grid-cols-4 gap-4">'+tracks.slice(0,4).map((t,i)=>trackCard(t,i)).join('')+'</div></section><section class="paper py-16 px-5"><div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center"><div><p class="sw-accent-text text-xs tracking-widest font-extrabold">EDITORIAL MANIFESTO</p><h2 class="text-6xl md:text-8xl leading-none mt-3">NÃO É SÓ<br>UMA RÁDIO.</h2><p class="mt-6 text-lg">É um território de frequências, tecnologia, movimento e identidade.</p>'+button('Conheça o manifesto',"go('about')",'btn-outline mt-8')+'</div><div class="font-brush text-5xl md:text-7xl rotate-[-6deg] text-[#d7aa7a] text-center">TURN IT UP.</div></div></section><section class="max-w-7xl mx-auto px-5 py-16">'+heading('Selected for you','PLAYLISTS EM DESTAQUE')+'<div class="grid md:grid-cols-3 gap-5">'+playlists.slice(0,3).map(playlistCard).join('')+'</div></section>'+
  '<section class="max-w-7xl mx-auto px-5 py-14">'+heading('Escolha pelo momento','CADA MOMENTO TEM UMA TRILHA','Estudar, trabalhar, viajar, namorar ou relaxar. Comece a ouvir sem cadastro.')+
  '<div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-4">'+moments.slice(0,4).map(momentCard).join('')+'</div>'+
  '<button type="button" class="sw-moment-action mt-7" onclick="go(\'playlists\')">Ver todas as coleções ↗</button></section>'}
@@ -133,6 +133,49 @@ function podcastView(){
  '<div class="panel p-6 border-l-4 sw-accent-border mb-8"><p class="text-white font-bold">Primeira temporada em produção editorial.</p><p class="text-gray-400 text-sm mt-2">'+escapeHtml(productionNote)+'</p></div>'+
  '<div class="grid md:grid-cols-2 xl:grid-cols-4 gap-5">'+podcasts.map(podcastCard).join('')+'</div></section>';
 }
+function experiencesView(){
+ const items=window.SYNTHWAVE_EXPERIENCES||[];
+ return '<section class="max-w-7xl mx-auto px-5 py-12">'+
+ heading('SYNTHWAVE · VOLUME 01','EXPERIÊNCIAS','Seis histórias originais para ler ou ouvir com vozes sintéticas do seu navegador. São conversas completas entre LIA e DAVI, não anúncios nem áudios de estúdio.')+
+ '<div class="panel p-5 md:p-6 mb-8 border-l-4 sw-accent-border"><p class="text-white text-sm font-bold">A narração é opcional, gratuita e não exige cadastro.</p><p class="text-gray-400 text-xs mt-2">O roteiro integral está disponível mesmo sem voz. O navegador gera a fala na hora; voz, ritmo e funcionamento podem variar por dispositivo. Para ouvir um episódio gravado e finalizado, ainda será necessário produzir e revisar o áudio.</p></div>'+
+ '<div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-5" aria-label="Episódios de experiências">'+items.map(e=>
+  '<article class="panel sw-experience-card overflow-hidden"><img loading="lazy" src="'+cover(e.cover)+'" alt="" class="w-full aspect-[16/9] object-cover">'+
+  '<div class="p-6"><p class="sw-accent-text uppercase tracking-widest text-[10px] font-bold">EXPERIÊNCIA '+String(e.number).padStart(2,'0')+' · '+escapeHtml(e.category)+'</p>'+
+  '<h3 class="text-white text-3xl mt-3">'+escapeHtml(e.title)+'</h3><p class="text-gray-400 text-sm mt-4">'+escapeHtml(e.summary)+'</p>'+
+  '<p class="text-gray-500 text-xs mt-3">'+escapeHtml(e.estimatedMinutes)+' minutos de leitura/narração estimados · roteiro original</p>'+
+  '<button type="button" class="sw-moment-action mt-6" onclick="openExperience(\''+escapeHtml(e.id)+'\')">Ler ou ouvir esta experiência ↗</button></div></article>'
+ ).join('')+'</div><div id="experienceDetail" class="mt-12" aria-live="polite"></div></section>';
+}
+function openExperience(id){
+ const e=(window.SYNTHWAVE_EXPERIENCES||[]).find(item=>item.id===id);
+ if(!e)return;
+ if(window.SynthwaveExperiencesPlayer)window.SynthwaveExperiencesPlayer.stop();
+ const area=$('#experienceDetail');
+ if(!area)return;
+ let index=0;
+ const chapters=e.chapters.map((chapter,i)=>{
+  const lines=chapter.lines.map(([speaker,words])=>
+   '<p class="sw-exp-turn" data-exp-line="'+index+++'"><span class="sw-exp-speaker">'+escapeHtml(speaker)+'</span>'+escapeHtml(words)+'</p>'
+  ).join('');
+  return '<section class="sw-exp-chapter"><h3 class="text-white text-2xl md:text-4xl">'+String(i+1).padStart(2,'0')+' / '+escapeHtml(chapter.title)+'</h3>'+
+    '<p class="sw-exp-cue">DIREÇÃO SONORA · '+escapeHtml(chapter.cue)+'</p>'+lines+'</section>';
+ }).join('');
+ area.innerHTML='<article class="sw-exp-reading"><div class="sw-exp-head">'+
+ '<p class="sw-accent-text text-xs uppercase font-black tracking-widest">EXPERIÊNCIA '+e.number+' · ROTEIRO ORIGINAL</p>'+
+ '<h2 class="text-white text-5xl md:text-7xl mt-3">'+escapeHtml(e.title)+'</h2>'+
+ '<p class="text-gray-300 text-lg mt-4">'+escapeHtml(e.tagline)+'</p>'+
+ '<p class="text-xs text-gray-400 mt-3">LIA e DAVI são vozes sintéticas. História roteirizada; não é entrevista ou relato real.</p>'+
+ '<div class="sw-exp-actions"><button type="button" id="expPlayButton" class="sw-moment-action" onclick="toggleExperienceVoice(\''+escapeHtml(e.id)+'\')">▶ Ouvir narração</button>'+
+ '<button type="button" class="sw-exp-stop" onclick="window.SynthwaveExperiencesPlayer.stop();document.getElementById(\'experienceSpeechStatus\').textContent=\'Narração interrompida.\'">■ Parar</button></div>'+
+ '<p role="status" aria-live="polite" id="experienceSpeechStatus" class="text-xs text-gray-300 mt-3">Ao ouvir, a rádio musical será pausada. Se o navegador não permitir narração, continue lendo aqui.</p></div>'+
+ '<div class="sw-exp-script">'+chapters+'</div><p class="text-xs text-gray-400 mt-6">Fim da história · Áudio narrado pelo dispositivo, não gravação produzida em estúdio.</p></article>';
+ area.scrollIntoView({behavior:'smooth',block:'start'});
+}
+function toggleExperienceVoice(id){
+ if(playing)pause();
+ if(window.SynthwaveExperiencesPlayer)window.SynthwaveExperiencesPlayer.toggle(id);
+}
+
 function explore(){let f=filter.toLowerCase();let results=tracks.map((t,i)=>({t,i})).filter(({t})=>f==='todos'||t.category.toLowerCase()===f);return '<section class="max-w-7xl mx-auto py-12">'+heading('Discover your sound','EXPLORAR','Busque e filtre o catálogo de faixas.')+'<input id="search" placeholder="Pesquisar música ou artista..." aria-label="Pesquisar" oninput="searchTracks(this.value)" class="w-full mb-5"><div class="flex flex-wrap gap-2 mb-8">'+['Todos',...new Set(tracks.map(t=>t.category))].map(c=>'<button class="pill '+(filter===c?'selected':'')+'" onclick="filter=\''+c+'\';go(\'explore\')">'+c+'</button>').join('')+'</div><div id="results" class="grid grid-cols-2 md:grid-cols-4 gap-4">'+results.map(({t,i})=>trackCard(t,i)).join('')+'</div></section>'}
 function searchTracks(q){let found=tracks.map((t,i)=>({t,i})).filter(({t})=>(filter==='Todos'||t.category===filter)&&(t.title+' '+t.artist).toLowerCase().includes(q.toLowerCase()));$('#results').innerHTML=found.map(({t,i})=>trackCard(t,i)).join('')||'<p class="text-gray-500">Nenhum resultado.</p>'}
 function credits(){
@@ -144,7 +187,7 @@ function credits(){
 }
 function about(){return '<section class="max-w-7xl mx-auto py-12">'+heading('The manifesto','WE ARE THE FREQUENCY','Uma plataforma de música e experiências sonoras que conecta cultura, design, tecnologia e movimento.')+'<div class="paper p-8 md:p-16"><h2 class="text-6xl md:text-9xl">A TRILHA SONORA<br>DO FUTURO.</h2><p class="max-w-3xl text-lg mt-7">SYNTHWAVE.fm nasce dentro do ecossistema WINF para traduzir universos visuais em identidades sonoras. Música para criar, dirigir, trabalhar, pensar e sentir.</p><p class="font-brush sw-accent-text text-4xl mt-9">SOUND WITHOUT LIMITS.</p></div><div class="grid md:grid-cols-3 gap-4 mt-7">'+['Cultura','Tecnologia','Movimento'].map(s=>'<div class="panel p-7 text-center"><h3 class="text-4xl text-white">'+s+'</h3></div>').join('')+'</div></section>'}
 
-function go(view){activeView=view;document.querySelectorAll('[data-nav]').forEach(el=>el.classList.toggle('active',el.dataset.nav===view));const render={home,live,playlists:playlistView,podcasts:podcastView,explore,mine:()=>window.SynthwaveLists.render(tracks),about,credits,profile:()=>window.SynthwaveProfile.render()};$('#app').innerHTML=(render[view]||home)();if(view==='mine')window.SynthwaveLists.bind(tracks,indices=>{radioMode=false;queue=indices;position=0;start(true)},()=>go('mine'));window.scrollTo({top:0,behavior:'smooth'});location.hash=view==='home'?'':view}
+function go(view){if(window.SynthwaveExperiencesPlayer)window.SynthwaveExperiencesPlayer.stop();activeView=view;document.querySelectorAll('[data-nav]').forEach(el=>el.classList.toggle('active',el.dataset.nav===view));const render={home,live,playlists:playlistView,podcasts:podcastView,experiences:experiencesView,explore,mine:()=>window.SynthwaveLists.render(tracks),about,credits,profile:()=>window.SynthwaveProfile.render()};$('#app').innerHTML=(render[view]||home)();if(view==='mine')window.SynthwaveLists.bind(tracks,indices=>{radioMode=false;queue=indices;position=0;start(true)},()=>go('mine'));window.scrollTo({top:0,behavior:'smooth'});location.hash=view==='home'?'':view}
 function playPlaylist(id){cancelStationSpot();radioMode=false;queue=playlists[id].tracks.slice();position=0;start(true);go('playlists')}
 function playMoment(id){
  const moment=moments.find(item=>item.id===id);

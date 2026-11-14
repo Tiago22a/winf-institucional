@@ -84,3 +84,27 @@
 .sw-program-details small{color:#b2c6b9;font-size:11px;line-height:1.5}
 .sw-program-now{flex:none;font:900 9px/1.4 'Plus Jakarta Sans',sans-serif;letter-spacing:.1em;color:#153126;background:#c4e1c8;padding:6px 8px}
 @media(max-width:540px){.sw-program-slot{gap:9px;padding:13px 8px}.sw-program-time{width:80px;font-size:10px}.sw-program-details strong{font-size:11px}.sw-program-now{font-size:8px;padding:5px}}
+
+/* SynthWAVE Experiências Vol. 01 — leitura em capítulos, alta legibilidade, narração TTS opcional. */
+#nav{min-width:0;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+#nav::-webkit-scrollbar{display:none}
+#nav>button{flex:none;white-space:nowrap}
+.sw-experience-card{display:flex;flex-direction:column}
+.sw-experience-card>div{display:flex;flex:1;flex-direction:column}
+.sw-experience-card .sw-moment-action{margin-top:auto;align-self:flex-start}
+.sw-exp-reading{background:linear-gradient(150deg,#17271e,#0f1813);border:1px solid #8caa9257;scroll-margin-top:90px}
+.sw-exp-head{padding:clamp(22px,5vw,56px);border-bottom:1px solid #8caa9257}
+.sw-exp-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:27px}
+.sw-exp-stop{border:1px solid #9ab8a37d;background:transparent;color:#fff;min-height:42px;padding:9px 15px;font-size:12px;font-weight:800}
+.sw-exp-stop:focus-visible{outline:2px solid white;outline-offset:3px}
+.sw-exp-script{padding:16px clamp(20px,5vw,55px) 45px;max-width:900px}
+.sw-exp-chapter{padding:36px 0 32px;border-bottom:1px solid #9db99a38}
+.sw-exp-chapter:last-child{border-bottom:none}
+.sw-exp-chapter h3{line-height:1.15}
+.sw-exp-cue{color:#bf9976;font-size:11px;line-height:1.5;letter-spacing:.09em;text-transform:uppercase;margin-top:13px;margin-bottom:26px}
+.sw-exp-turn{padding:15px 18px;background:#29473529;border-left:2px solid #bcd5bd68;margin-bottom:14px;color:#e0e9df;font-size:15px;line-height:1.8;transition:background .2s,border-color .2s}
+.sw-exp-speaker{display:block;font-weight:900;color:#c8e2cd;font-size:10px;letter-spacing:.18em;margin-bottom:4px}
+.sw-exp-turn:nth-of-type(2n) .sw-exp-speaker{color:#e7b78c}
+.sw-exp-turn.sw-exp-speaking{background:#395f46c2;border-left-color:#e8bd95;box-shadow:0 0 0 1px #bce0c34a}
+@media(max-width:620px){.sw-exp-turn{font-size:14px;padding:14px 15px}.sw-exp-head{padding:26px 19px}.sw-exp-script{padding:14px 19px 32px}.sw-exp-actions>button{flex:1 1 100%}}
+@media(prefers-reduced-motion:reduce){.sw-exp-turn{transition:none}}
