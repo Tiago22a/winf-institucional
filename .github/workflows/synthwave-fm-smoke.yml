@@ -26,4 +26,6 @@ jobs:
         with:
           node-version: '22'
       - name: Verificações SynthWAVE
-        run: node --test synthwave/tests/smoke.test.mjs
+        run: |
+          node --check synthwave/email/lifecycle.cjs
+          node --test synthwave/tests/smoke.test.mjs synthwave/email/lifecycle.test.cjs
