@@ -1,0 +1,8 @@
+{
+  "enabled": false,
+  "apiKey": "",
+  "authDomain": "",
+  "projectId": "",
+  "appId": "",
+  "note": "Google Sign-In is disabled until the Firebase project, authorized domain and Firestore rules are configured. Firebase web config is public, but NEVER commit service account credentials."
+}
