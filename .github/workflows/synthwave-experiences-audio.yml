@@ -1,0 +1,115 @@
+name: SynthWAVE — Gerar 18 experiências em áudio de prévia
+on:
+  pull_request:
+    paths:
+      - 'synthwave/production/export_experiences.mjs'
+      - 'synthwave/production/render_experiences.py'
+      - '.github/workflows/synthwave-experiences-audio.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'synthwave/production/export_experiences.mjs'
+      - 'synthwave/production/render_experiences.py'
+      - '.github/workflows/synthwave-experiences-audio.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: synthwave-experiences-audio
+  cancel-in-progress: false
+jobs:
+  render-experiences:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Obter projeto
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
+      - name: Preparar Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Preparar Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validar e exportar os dezoito roteiros
+        run: |
+          node --check synthwave/production/export_experiences.mjs
+          python -m py_compile synthwave/production/render_experiences.py
+          node synthwave/production/export_experiences.mjs --output /tmp/synthwave-experiences.json
+          python synthwave/production/render_experiences.py --catalog /tmp/synthwave-experiences.json --validate-only
+      - name: Instalar ffmpeg e Piper TTS
+        if: github.event_name != 'pull_request'
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+          python -m pip install 'piper-tts>=1.3.0,<2.0'
+      - name: Baixar modelos de voz pt-BR
+        if: github.event_name != 'pull_request'
+        run: |
+          mkdir -p models
+          for voice in cadu faber; do
+            curl --fail --location --retry 3 --silent --show-error \
+              "https://huggingface.co/rhasspy/piper-voices/resolve/main/pt/pt_BR/$voice/medium/pt_BR-$voice-medium.onnx" \
+              -o "models/pt_BR-$voice-medium.onnx"
+            curl --fail --location --retry 3 --silent --show-error \
+              "https://huggingface.co/rhasspy/piper-voices/resolve/main/pt/pt_BR/$voice/medium/pt_BR-$voice-medium.onnx.json" \
+              -o "models/pt_BR-$voice-medium.onnx.json"
+            test "$(wc -c < "models/pt_BR-$voice-medium.onnx")" -gt 10000000
+          done
+      - name: Renderizar 18 MP3 com duas vozes e trilha autoral
+        if: github.event_name != 'pull_request'
+        run: |
+          python synthwave/production/render_experiences.py \
+            --catalog /tmp/synthwave-experiences.json \
+            --models-dir models \
+            --output-dir synthwave/experiencias/audio-previews
+      - name: Validar integridade de todas as prévias geradas
+        if: github.event_name != 'pull_request'
+        run: |
+          python3 - <<'PY'
+          import json, pathlib, subprocess, hashlib
+          stories=json.loads(pathlib.Path('/tmp/synthwave-experiences.json').read_text())['stories']
+          base=pathlib.Path('synthwave/experiencias/audio-previews')
+          assert len(stories)==18
+          for story in stories:
+              mp3=base/(story['id']+'-previa.mp3')
+              meta=base/(story['id']+'-manifest.json')
+              assert mp3.is_file() and mp3.stat().st_size>60000, mp3
+              assert meta.is_file(), meta
+              j=json.loads(meta.read_text())
+              assert j['status']=='audio_preview_unreviewed'
+              assert j['finalPublicationApproved'] is False
+              assert j['sha256']==hashlib.sha256(mp3.read_bytes()).hexdigest()
+              result=subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration','-of','default=nokey=1:noprint_wrappers=1',str(mp3)],text=True)
+              assert float(result.strip())>45, story['id']
+              print(story['id'],round(float(result.strip()),1),'segundos')
+          assert len(list(base.glob('*-previa.mp3')))==18
+          PY
+      - name: Arquivar os 18 MP3 para revisão editorial
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: synthwave-18-experiencias-previas
+          path: |
+            synthwave/experiencias/audio-previews/*.mp3
+            synthwave/experiencias/audio-previews/*.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Versionar MP3 verificados no site, sem aprovar edição final
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git config user.name 'github-actions[bot]'
+          git add synthwave/experiencias/audio-previews/ synthwave/experiencias/audio-preview-catalog.js
+          if git diff --staged --quiet; then
+            echo 'Prévia inalterada.'
+            exit 0
+          fi
+          git commit -m 'SynthWAVE: disponibilizar prévias MP3 verificadas de 18 experiências'
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
