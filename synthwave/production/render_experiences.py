@@ -164,6 +164,32 @@ def main():
     voices = {name: make_voice(path) for name, path in paths.items()}
     for story in stories:
         synthesize_story(story, voices, args.output_dir)
+    # Só expor o player de MP3 quando as 18 prévias e seus manifestos
+    # existirem e tiverem sido gerados pela execução completa.
+    playable = {}
+    for story in stories:
+        sid = story["id"]
+        media = args.output_dir / (sid + "-previa.mp3")
+        meta = args.output_dir / (sid + "-manifest.json")
+        if not media.is_file() or media.stat().st_size < 60000 or not meta.is_file():
+            raise ValueError("MP3/manifesto ausente: " + sid)
+        entry = json.loads(meta.read_text(encoding="utf-8"))
+        if entry["sha256"] != hashlib.sha256(media.read_bytes()).hexdigest():
+            raise ValueError("Hash de MP3 divergente: " + sid)
+        playable[sid] = {
+            "audioUrl": "/synthwave/experiencias/audio-previews/" + sid + "-previa.mp3",
+            "status": "audio_preview_unreviewed",
+            "sha256": entry["sha256"],
+        }
+    catalog_file = ROOT / "experiencias/audio-preview-catalog.js"
+    catalog_file.write_text(
+        "/* Gerado após validar as 18 prévias sonoras reais; ainda não são áudio final aprovado. */\n"
+        + "window.SYNTHWAVE_EXPERIENCE_AUDIO=Object.freeze("
+        + json.dumps(playable, ensure_ascii=False, separators=(",", ":"))
+        + ");\n",
+        encoding="utf-8",
+    )
+    print("Catálogo de MP3 atualizado após validação: " + str(catalog_file), flush=True)
 
 if __name__ == "__main__":
     main()
