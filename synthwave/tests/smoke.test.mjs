@@ -94,3 +94,33 @@ test('regras de acesso restringem playlists ao UID autenticado',()=>{
  assert.ok(rules.includes('allow create, update: if own()'));
  assert.ok(!rules.includes('allow read, write: if true'));
 });
+
+test('catálogo editorial bloqueia episódios publicados sem áudio, transcrição e direitos',()=>{
+ const win={};
+ new Function('window',read('podcast-catalog.js'))(win);
+ const items=win.SYNTHWAVE_PODCAST_CATALOG;
+ assert.equal(items.length,8);
+ assert.equal(items.filter(x=>x.status==='scripted').length,1);
+ assert.equal(items.filter(x=>x.status==='published').length,0);
+ assert.ok(items.every(win.SynthwaveEditorial.validEpisode));
+ const first=items[0];
+ assert.equal(win.SynthwaveEditorial.validEpisode({...first,status:'published',audioUrl:'https://audio.example/test.mp3'}),false);
+ assert.equal(win.SynthwaveEditorial.validEpisode({...first,status:'published',audioUrl:'https://audio.example/test.mp3',transcriptUrl:'/synthwave/transcricao/',rightsStatement:'Original autorizado',rightsApprovedAt:'2026-11-14',productionReviewedAt:'2026-11-14'}),true);
+});
+test('roteiro piloto pode ser lido sem fingir existir um áudio publicado',()=>{
+ const page=read('podcasts/temporada-01/ep01-cuidar-conectar/index.html');
+ assert.ok(page.includes('Prévia de roteiro — não é um episódio publicado'));
+ assert.ok(page.includes('O áudio ainda não foi gravado'));
+ assert.ok(page.includes('class="speaker lia"')&&page.includes('class="speaker davi"'));
+ assert.ok(!page.includes('<audio'));
+});
+test('FM não expõe painel administrativo fictício e usa cores aprovadas',()=>{
+ const app=read('app.js'),html=read('radio/index.html');
+ assert.ok(!app.includes('function admin()'));
+ assert.ok(!app.includes("profile:()=>window.SynthwaveProfile.render(),admin"));
+ assert.ok(html.indexOf('podcast-catalog.js')<html.indexOf('app.js'));
+ for(const content of [app,read('fm-features.css')]){
+  assert.ok(!content.includes('#ff007f'));
+  assert.ok(!content.includes('text-pink'));
+ }
+});
