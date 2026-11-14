@@ -46,6 +46,16 @@ A SynthWAVE.fm™ permite abrir a rádio, tocar Play e ouvir gratuitamente **sem
 3. **Pronto para publicar:** transcrição, normalização/revisão, acessibilidade, direitos revisados e URL estável.
 4. **Publicado:** catálogo alterado para `published` apenas com evidências reais e teste do player.
 
+## Futuro canal de aquisição: anúncios pagos no ChatGPT
+
+**Estratégia documentada, não campanha ativada.** Em 14/11/2026, fontes oficiais da OpenAI indicam disponibilidade do Ads Manager por autoatendimento no Brasil. Uma possível campanha de divulgação da SynthWAVE pode usar anúncios claramente patrocinados no ChatGPT, levando diretamente à rádio gratuita, sem cadastro ou cobrança.
+
+Os anúncios do ChatGPT não modificam as respostas do modelo; a compra e a veiculação são independentes desta conversa. **Não criar conta, campanha, faturamento ou gastos sem autorização explícita.** A abordagem editorial inicial contempla quatro mensagens: rádio sem cadastro, foco, descoberta sonora e histórias narradas. Evitar qualquer alegação de recomendação pela OpenAI.
+
+Documento central com fontes, versões criativas, experimento, metas, limitações, riscos e portões de aprovação: [Plano de Anúncios no ChatGPT](PLANO_ANUNCIOS_CHATGPT_2026.md).
+
+**Distinguir dois mercados:** (1) comprar publicidade *dentro do ChatGPT* para trazer visitantes à SynthWAVE e (2) vender espaços publicitários *dentro da rádio SynthWAVE*, ainda não implementados. Não fazer propaganda disfarçada de programa editorial.
+
 ## Política de mudança
 Produção editorial usa PR e smoke test. Mudanças de playback, pagamentos, e-mail, autenticação ou publicação em massa requerem testes específicos. Não mexer em páginas territoriais e CRM da WINF a partir desta fila.
 
