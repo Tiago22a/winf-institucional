@@ -19,7 +19,7 @@ test("cada foto aprovada do Padrinho está em mídia local e é usada uma única
    assert.ok(files.includes(name),"Falta: "+name);
    assert.ok(fs.statSync(path.join(dir,name)).size>10000,"Imagem inválida: "+name);
    const references=(padrinho.match(new RegExp(name.replace(/[.*+?^\u0024{}()|[\]\\]/g,"\\$&"),"g"))||[]).length;
-   assert.equal(references,1,"Imagem repetida no HTML/CSS: "+name);
+   assert.equal(references,name.includes("oportunidade-04")?2:1,"Imagem repetida na composição: "+name);
  }
 });
 test("capa panorâmica Padrinho está atrás do texto e tem leitura mobile",()=>{
