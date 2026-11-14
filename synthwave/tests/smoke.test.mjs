@@ -8,7 +8,7 @@ const dir=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const read=(file)=>readFileSync(resolve(dir,file),'utf8');
 
 test('scripts principais da FM têm sintaxe válida',()=>{
- for(const file of ['app.js','my-playlists.js','audio-engine.js','station-programming.js','experiencias/voice-player.js','cloud-auth.js','newsletter/newsletter.js',...['e01-cinco-sons','e02-fotografia-gaveta','e03-janela-mundo','e04-plano-mudou','e05-estrada-silencio','e06-maquina-pergunta'].map(id=>'experiencias/volume-01/'+id+'.js'),...['after-hours','first-light','focus-frequency','creative-current','city-drive','night-glow'].map(id=>'experiencias/capsulas/'+id+'.js')]){
+ for(const file of ['app.js','my-playlists.js','audio-engine.js','station-programming.js','experiencias/voice-player.js','experiencias/audio-preview-catalog.js','cloud-auth.js','newsletter/newsletter.js',...['e01-cinco-sons','e02-fotografia-gaveta','e03-janela-mundo','e04-plano-mudou','e05-estrada-silencio','e06-maquina-pergunta'].map(id=>'experiencias/volume-01/'+id+'.js'),...['after-hours','first-light','focus-frequency','creative-current','city-drive','night-glow'].map(id=>'experiencias/capsulas/'+id+'.js')]){
   assert.doesNotThrow(()=>new Function(read(file)),file);
  }
  const worker=read('backend/worker.js').replace('export default {','const worker = {');
@@ -257,7 +257,7 @@ test('vinheta a cada cinco músicas e fallback sem TTS, mantendo rádio aberta',
  assert.ok(radio.includes("if(radioMode&&playing)advanceRadioTrack()"));
  assert.ok(radio.includes("function next(automatic=false){"));
  assert.ok(radio.includes("next(true)"));
- assert.ok(markup.indexOf('station-programming.js')<markup.indexOf('app.js?v=20261114-capsulas-1'));
+ assert.ok(markup.indexOf('station-programming.js')<markup.indexOf('app.js?v=20261114-mp3-1'));
  assert.ok(markup.includes('station-programming.js'));
  assert.ok(css.includes('.sw-program-timeline'));
  assert.ok(!radio.includes('window.open('));
@@ -340,7 +340,7 @@ test('A rádio exibe as experiências, permite narração local e preserva músi
  assert.ok(tts.includes('global.SpeechSynthesisUtterance'));
  assert.ok(tts.includes('global.speechSynthesis'));
  assert.ok(tts.includes("turn.speaker==='LIA'"),'Vozes devem ter diferenciação de narração');
- assert.ok(radio.indexOf('experiencias/voice-player.js')<radio.indexOf('app.js?v=20261114-capsulas-1'));
+ assert.ok(radio.indexOf('experiencias/voice-player.js')<radio.indexOf('app.js?v=20261114-mp3-1'));
  assert.ok(!radio.includes('sw-newsletter-mount'));
  assert.ok(!radio.includes('newsletter/newsletter.js'));
 });
@@ -427,7 +427,40 @@ test('A aba Experiências separa volume longo e cápsulas por horário sem bloqu
  assert.ok(radio.includes('experiencias/capsulas/after-hours.js'));
  assert.ok(radio.includes('experiencias/capsulas/night-glow.js'));
  assert.ok(radio.indexOf('experiencias/capsulas/night-glow.js')<radio.indexOf('experiencias/voice-player.js'));
- assert.ok(radio.indexOf('experiencias/voice-player.js')<radio.indexOf('app.js?v=20261114-capsulas-1'));
+ assert.ok(radio.indexOf('experiencias/voice-player.js')<radio.indexOf('app.js?v=20261114-mp3-1'));
  assert.ok(home.includes('href="/synthwave/radio/#live"'), 'Play direto preservado');
  assert.doesNotMatch(radio,/newsletter\/newsletter\.js|sw-newsletter-mount|data-required-login/i);
+});
+
+
+test('prévia de 18 experiências só é exibida após geração real e validação',()=>{
+ const radio=read('radio/index.html'),app=read('app.js'),source=read('experiencias/audio-preview-catalog.js');
+ const scripts=['after-hours','first-light','focus-frequency','creative-current','city-drive','night-glow'];
+ const original=['e01-cinco-sons','e02-fotografia-gaveta','e03-janela-mundo','e04-plano-mudou','e05-estrada-silencio','e06-maquina-pergunta'];
+ const win={};new Function('window',source)(win);
+ const files=Object.entries(win.SYNTHWAVE_EXPERIENCE_AUDIO||{});
+ assert.ok(files.length===0||files.length===18, 'Catálogo não pode ser parcialmente publicado');
+ const ids=[];
+ for(const id of original)ids.push(id);
+ for(const slot of scripts){
+  const x={};new Function('window',read('experiencias/capsulas/'+slot+'.js'))(x);
+  ids.push(...x.SYNTHWAVE_EXPERIENCES.map(y=>y.id));
+ }
+ assert.equal(new Set(ids).size,18);
+ for(const [id,entry] of files){
+  assert.ok(ids.includes(id));
+  assert.equal(entry.status,'audio_preview_unreviewed');
+  assert.equal(entry.audioUrl,'/synthwave/experiencias/audio-previews/'+id+'-previa.mp3');
+  assert.match(entry.sha256,/^[0-9a-f]{64}$/);
+ }
+ assert.ok(radio.indexOf('experiencias/audio-preview-catalog.js')<radio.indexOf('app.js?v=20261114-mp3-1'));
+ assert.ok(app.includes('const verifiedAudio='));
+ assert.ok(app.includes("knownAudio?.status==='audio_preview_unreviewed'"));
+ assert.ok(app.includes('experienceMp3'));
+ assert.ok(app.includes('window.SynthwaveExperiencesPlayer.stop()'));
+ assert.ok(app.includes('function toggleExperienceVoice(id)'));
+ assert.ok(app.includes('if(preview&&!preview.paused)preview.pause();'));
+ assert.ok(read('production/export_experiences.mjs').includes('stories.length!==18'));
+ assert.ok(read('production/render_experiences.py').includes('audio-preview-catalog.js'));
+ assert.ok(read('../.github/workflows/synthwave-experiences-audio.yml').includes('ffprobe'));
 });
