@@ -159,9 +159,9 @@ function experiencesView(){
    '</div><div class="grid sm:grid-cols-2 gap-5">'+items.map(item=>experienceCard(item,true)).join('')+'</div></section>';
  }).join('');
  return '<section class="max-w-7xl mx-auto px-5 py-12">'+
- heading('SYNTHWAVE · HISTÓRIAS ORIGINAIS','EXPERIÊNCIAS','Uma rádio que também conta histórias. Explore seis programas narrativos e doze cápsulas curtas, com cenas e diálogos de LIA e DAVI. Ler é sempre gratuito; ouvir usa as vozes sintéticas do navegador.')+
+ heading('SYNTHWAVE · HISTÓRIAS ORIGINAIS','EXPERIÊNCIAS','Seis programas e doze cápsulas com LIA e DAVI. Leia gratuitamente, ouça com a voz do navegador e, quando disponível, reproduza as prévias MP3 produzidas para revisão.')+
  '<div class="panel p-5 md:p-6 mb-8 border-l-4 sw-accent-border"><p class="text-white text-sm font-bold">Você escolhe: só música, leitura ou narração. Sem cadastro.</p>'+
- '<p class="text-gray-400 text-xs mt-2">Não é uma transmissão sincronizada nem áudio masterizado de estúdio. Os roteiros originais podem ser narrados pelo dispositivo; a voz pode variar ou não estar disponível. O player musical pausa quando você escolhe ouvir uma história.</p></div>'+
+ '<p class="text-gray-400 text-xs mt-2">A rádio não é transmissão sincronizada. As vozes geradas pelo navegador dependem do dispositivo; as prévias MP3 só aparecem após geração e validação reais. O player musical pausa quando você escolhe ouvir uma história.</p></div>'+
  '<div class="sw-editorial-index"><a href="#programas-longos" onclick="event.preventDefault();document.getElementById(\'programas-longos\')?.scrollIntoView({behavior:\'smooth\'})">6 programas completos</a>'+
  '<a href="#programas-curtos" onclick="event.preventDefault();document.getElementById(\'programas-curtos\')?.scrollIntoView({behavior:\'smooth\'})">12 cápsulas curtas</a>'+
  (now?'<a href="#capsule-'+now.start+'" onclick="event.preventDefault();document.getElementById(\'capsule-'+now.start+'\')?.scrollIntoView({behavior:\'smooth\'})">Ver meu horário ↗</a>':'')+'</div>'+
@@ -178,6 +178,14 @@ function openExperience(id){
  const e=(window.SYNTHWAVE_EXPERIENCES||[]).find(item=>item.id===id);
  if(!e)return;
  if(window.SynthwaveExperiencesPlayer)window.SynthwaveExperiencesPlayer.stop();
+ const knownAudio=window.SYNTHWAVE_EXPERIENCE_AUDIO?.[id];
+ const verifiedAudio=knownAudio?.status==='audio_preview_unreviewed'
+  &&/^\/synthwave\/experiencias\/audio-previews\/[a-z0-9-]+-previa\.mp3$/.test(knownAudio.audioUrl||'');
+ const mp3Panel=verifiedAudio
+  ?'<section class="sw-exp-mp3" aria-label="Prévia sonora produzida"><h3 class="text-white text-xl">▶ Ouvir a prévia sonora</h3>'+
+   '<p class="text-gray-300 text-sm my-3">LIA e DAVI em vozes sintéticas. MP3 produzido para revisão — não é edição final aprovada.</p>'+
+   '<audio id="experienceMp3" class="w-full" controls preload="none" src="'+escapeHtml(knownAudio.audioUrl)+'" onplay="pause();window.SynthwaveExperiencesPlayer.stop()" aria-label="Ouvir a prévia de '+escapeHtml(e.title)+'"></audio></section>'
+  :'';
  const area=$('#experienceDetail');
  if(!area)return;
  let index=0;
@@ -193,6 +201,7 @@ function openExperience(id){
  '<h2 class="text-white text-5xl md:text-7xl mt-3">'+escapeHtml(e.title)+'</h2>'+
  '<p class="text-gray-300 text-lg mt-4">'+escapeHtml(e.tagline)+'</p>'+
  '<p class="text-xs text-gray-400 mt-3">LIA e DAVI são vozes sintéticas. História roteirizada; não é entrevista ou relato real.</p>'+
+ mp3Panel+
  '<div class="sw-exp-actions"><button type="button" id="expPlayButton" class="sw-moment-action" onclick="toggleExperienceVoice(\''+escapeHtml(e.id)+'\')">▶ Ouvir narração</button>'+
  '<button type="button" class="sw-exp-stop" onclick="window.SynthwaveExperiencesPlayer.stop();document.getElementById(\'experienceSpeechStatus\').textContent=\'Narração interrompida.\'">■ Parar</button></div>'+
  '<p role="status" aria-live="polite" id="experienceSpeechStatus" class="text-xs text-gray-300 mt-3">Ao ouvir, a rádio musical será pausada. Se o navegador não permitir narração, continue lendo aqui.</p></div>'+
@@ -200,6 +209,8 @@ function openExperience(id){
  area.scrollIntoView({behavior:'smooth',block:'start'});
 }
 function toggleExperienceVoice(id){
+ const preview=document.getElementById('experienceMp3');
+ if(preview&&!preview.paused)preview.pause();
  if(playing)pause();
  if(window.SynthwaveExperiencesPlayer)window.SynthwaveExperiencesPlayer.toggle(id);
 }
