@@ -108,3 +108,17 @@
 .sw-exp-turn.sw-exp-speaking{background:#395f46c2;border-left-color:#e8bd95;box-shadow:0 0 0 1px #bce0c34a}
 @media(max-width:620px){.sw-exp-turn{font-size:14px;padding:14px 15px}.sw-exp-head{padding:26px 19px}.sw-exp-script{padding:14px 19px 32px}.sw-exp-actions>button{flex:1 1 100%}}
 @media(prefers-reduced-motion:reduce){.sw-exp-turn{transition:none}}
+
+/* Cápsulas Vol. 02 — navegação por horário, sem pop-ups ou barreiras de cadastro. */
+.sw-editorial-index{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 48px}
+.sw-editorial-index a{display:inline-flex;align-items:center;min-height:44px;padding:10px 16px;border:1px solid #a9c7af7d;background:#1a3124;color:#e5f2e7;text-decoration:none;font-size:12px;font-weight:800}
+.sw-editorial-index a:hover{border-color:#e9b997;background:#274532}
+.sw-editorial-index a:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.sw-editorial-section{margin:48px 0 80px;scroll-margin-top:95px}
+.sw-editorial-section>p:not([class*="uppercase"]){max-width:750px}
+.sw-capsule-slot{padding:28px 0 32px;margin-bottom:12px;border-top:1px solid #a5c4aa54;scroll-margin-top:100px}
+.sw-capsule-slot-head{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:25px}
+.sw-capsule-slot-head h3{line-height:1.15}
+.sw-capsule-slot .sw-experience-card{background:linear-gradient(140deg,#192d21,#122019)}
+.sw-capsule-slot .sw-experience-card img{max-height:210px}
+@media(max-width:580px){.sw-editorial-index{display:grid;grid-template-columns:1fr}.sw-editorial-index a{width:100%}.sw-capsule-slot-head{align-items:flex-start}.sw-capsule-slot-head .sw-program-now{margin-top:4px}}
