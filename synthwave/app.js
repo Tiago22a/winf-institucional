@@ -12,27 +12,27 @@ const synthTracks=[
 ['After Hours Telemetry','Night Drive Collective','Drive',96,6,260],
 ['The Sound of Protection (Manifesto Theme)','WINF International Group','Originals',88,7,240]
 ].map((a,i)=>({id:'track-'+i,title:a[0],artist:a[1],category:a[2],bpm:a[3],cover:cover(images[a[4]]),duration:a[5],synthPreset:['aerocore_ambient','cyber_drive','neoskin_pulse','deep_focus_lofi','aerocore_ambient','cyber_drive','night_glide','sunset_highway'][i]}));
-const tracks=[...window.SYNTHWAVE_LICENSED_TRACKS,...synthTracks];
+const tracks=[...window.SYNTHWAVE_LICENSED_TRACKS,...synthTracks,...(window.SYNTHWAVE_ORIGINAL_TRACKS||[])];
 const playlists=[
 ['AEROCORE SOUNDSCAPE','Atmosferas eletrônicas, tecnologia & movimento','WINF Sound',[0,1,5,9],0,'Seleção musical'],
 ['NEOSKIN APOCALYPSE','Batidas urbanas & texturas intensas','WINF Sound',[3,0,7,6],2,'Seleção musical'],
-['SELECT AMBIENT WORKS','Sons para um espaço tranquilo','Ambient',[2,1,8,9],4,'Seleção musical'],
-['CITY DRIVE / CITY LIGHTS','Synthwave real para percorrer a cidade','Drive',[0,1,4,10,11],5,'Seleção musical'],
+['SELECT AMBIENT WORKS','Sons para um espaço tranquilo','Ambient',[15,16,13,2,1,8,9],4,'Seleção musical'],
+['CITY DRIVE / CITY LIGHTS','Synthwave real para percorrer a cidade','Drive',[14,0,1,4,10,11],5,'Seleção musical'],
 ['HIGHWAY SESSIONS','Uma viagem sonora pela estrada','Drive',[1,0,4,6,10],1,'Seleção musical'],
-['NIGHT DRIVE / AFTER HOURS','Noites, neon e grandes avenidas','Drive',[1,0,2,11,12],6,'Seleção musical'],
-['DEEP FOCUS / LOFI ATELIÊ','Concentração e criatividade','Focus',[2,3,8,9],3,'Seleção musical'],
-['SYNTHWAVE ORIGINALS','Experimentos sonoros sintetizados do site','WINF Sound',[5,6,7,8,9,10,11,12],7,'Sons digitais']
+['NIGHT DRIVE / AFTER HOURS','Noites, neon e grandes avenidas','Drive',[16,14,1,0,2,11,12],6,'Seleção musical'],
+['DEEP FOCUS / LOFI ATELIÊ','Concentração e criatividade','Focus',[13,2,3,8,9],3,'Seleção musical'],
+['SYNTHWAVE ORIGINALS','Experimentos sonoros sintetizados do site','WINF Sound',[13,14,15,16,5,6,7,8,9,10,11,12],7,'Sons digitais']
 ].map((a,i)=>({id:i,title:a[0],subtitle:a[1],category:a[2],tracks:a[3],cover:cover(images[a[4]]),duration:a[5]}));
 // Coleções editoriais por momento. Faixas são índices do catálogo já disponível.
 const moments=[
-  {id:'study',name:'PARA ESTUDAR',hint:'Leve, constante, para leitura e aprendizado.',icon:'📚',tracks:[2,8,9,5]},
-  {id:'work',name:'PARA TRABALHAR',hint:'Um fluxo discreto para criar e produzir.',icon:'💻',tracks:[8,9,2,5]},
-  {id:'travel',name:'PARA VIAJAR',hint:'Estrada, movimento e horizontes abertos.',icon:'🚙',tracks:[0,1,10,6,11]},
-  {id:'love',name:'PARA NAMORAR',hint:'Noites tranquilas e conversas sem pressa.',icon:'💞',tracks:[9,11,5,8]},
-  {id:'relax',name:'PARA RELAXAR',hint:'Diminua o ritmo e escolha seu ambiente.',icon:'🌿',tracks:[5,9,8,2]},
-  {id:'sleep',name:'PARA DESCANSAR',hint:'Atmosferas delicadas para a pausa.',icon:'🌙',tracks:[9,5,11]},
-  {id:'create',name:'PARA CRIAR',hint:'Ideias, concentração e inspiração.',icon:'🎨',tracks:[2,8,12,9]},
-  {id:'train',name:'PARA SE MOVIMENTAR',hint:'Mais energia e movimento.',icon:'⚡',tracks:[3,6,7,10]}
+  {id:'study',name:'PARA ESTUDAR',hint:'Leve, constante, para leitura e aprendizado.',icon:'📚',tracks:[13,2,8,9,5]},
+  {id:'work',name:'PARA TRABALHAR',hint:'Um fluxo discreto para criar e produzir.',icon:'💻',tracks:[13,8,9,2,5]},
+  {id:'travel',name:'PARA VIAJAR',hint:'Estrada, movimento e horizontes abertos.',icon:'🚙',tracks:[14,0,1,10,6,11]},
+  {id:'love',name:'PARA NAMORAR',hint:'Noites tranquilas e conversas sem pressa.',icon:'💞',tracks:[16,9,11,5,8]},
+  {id:'relax',name:'PARA RELAXAR',hint:'Diminua o ritmo e escolha seu ambiente.',icon:'🌿',tracks:[15,16,5,9,8,2]},
+  {id:'sleep',name:'PARA DESCANSAR',hint:'Atmosferas delicadas para a pausa.',icon:'🌙',tracks:[16,15,9,5,11]},
+  {id:'create',name:'PARA CRIAR',hint:'Ideias, concentração e inspiração.',icon:'🎨',tracks:[13,2,8,12,9]},
+  {id:'train',name:'PARA SE MOVIMENTAR',hint:'Mais energia e movimento.',icon:'⚡',tracks:[14,3,6,7,10]}
 ];
 const ambientOptions=[
   {id:null,label:'Desligado'},
