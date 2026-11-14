@@ -67,15 +67,10 @@ test('estilos de loja e teaser não têm blocos CSS desbalanceados',()=>{
  }
 });
 
-test('GHOST SHOP™ aparece diretamente nos sete rodapés territoriais e no sitemap',()=>{
+test('GHOST SHOP™ preservado nos sites locais existentes e no sitemap',()=>{
  const cidades=[
   'pelicula-de-controle-solar-santos-sp/index.html',
-  'pelicula-de-controle-solar-praia-grande-sp/index.html',
-  'pelicula-de-controle-solar-guaruja-sp/index.html',
   'insulfilm-residencial-sorocaba-sp/index.html',
-  'pelicula-de-controle-solar-pilar-do-sul-sp/index.html',
-  'pelicula-de-controle-solar-cuiaba-mt/index.html',
-  'pelicula-de-controle-solar-campina-grande-pb/index.html'
  ];
  for(const cidade of cidades){
   const markup=read(cidade);
