@@ -8,7 +8,7 @@ const dir=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const read=(file)=>readFileSync(resolve(dir,file),'utf8');
 
 test('scripts principais da FM têm sintaxe válida',()=>{
- for(const file of ['app.js','my-playlists.js','audio-engine.js','station-programming.js','cloud-auth.js','newsletter/newsletter.js']){
+ for(const file of ['app.js','my-playlists.js','audio-engine.js','station-programming.js','experiencias/voice-player.js','cloud-auth.js','newsletter/newsletter.js',...['e01-cinco-sons','e02-fotografia-gaveta','e03-janela-mundo','e04-plano-mudou','e05-estrada-silencio','e06-maquina-pergunta'].map(id=>'experiencias/volume-01/'+id+'.js')]){
   assert.doesNotThrow(()=>new Function(read(file)),file);
  }
  const worker=read('backend/worker.js').replace('export default {','const worker = {');
@@ -222,7 +222,7 @@ test('grade 24 horas tem seis blocos contíguos cobrindo todas as horas locais',
  const win={};new Function('window',read('station-programming.js'))(win);
  const grade=win.SynthwaveStation;
  assert.equal(grade.blocks.length,6);
- assert.equal(grade.spots.length,12);
+ assert.equal(grade.spots.length,24);
  assert.equal(grade.songsPerSpot,5);
  for(let hour=0;hour<24;hour++){
   const slot=grade.blockAt({getHours:()=>hour});
@@ -257,7 +257,7 @@ test('vinheta a cada cinco músicas e fallback sem TTS, mantendo rádio aberta',
  assert.ok(radio.includes("if(radioMode&&playing)advanceRadioTrack()"));
  assert.ok(radio.includes("function next(automatic=false){"));
  assert.ok(radio.includes("next(true)"));
- assert.ok(markup.indexOf('station-programming.js')<markup.indexOf('app.js?v=20261114-24h-1'));
+ assert.ok(markup.indexOf('station-programming.js')<markup.indexOf('app.js?v=20261114-volume01-1'));
  assert.ok(markup.includes('station-programming.js'));
  assert.ok(css.includes('.sw-program-timeline'));
  assert.ok(!radio.includes('window.open('));
@@ -305,4 +305,57 @@ test('todos os oito podcasts têm MP3 de prévia real e player direto sem exigir
  assert.match(app,/const preview=p.status==='scripted'&&p.previewAudioUrl/);
  assert.match(app,/\+preview\+published\+/);
  assert.match(app,/Nenhuma edição final foi homologada ainda/);
+});
+
+test('Experiências volume 01: seis histórias originais completas em duas vozes',()=>{
+ const win={};
+ const files=['e01-cinco-sons','e02-fotografia-gaveta','e03-janela-mundo','e04-plano-mudou','e05-estrada-silencio','e06-maquina-pergunta'];
+ for(const id of files)new Function('window',read('experiencias/volume-01/'+id+'.js'))(win);
+ const items=win.SYNTHWAVE_EXPERIENCES;
+ assert.equal(items.length,6);
+ assert.equal(new Set(items.map(item=>item.id)).size,6);
+ assert.deepEqual(items.map(e=>e.number),[1,2,3,4,5,6]);
+ for(const item of items){
+  assert.equal(item.status,'scripted');
+  assert.ok(!item.audioUrl,'Roteiro sem áudio final não pode fingir estar publicado');
+  assert.ok(item.title&&item.summary&&item.tagline&&item.category);
+  assert.ok(item.chapters.length>=5,'Experiência precisa de atos distintos');
+  const turns=item.chapters.flatMap(ch=>ch.lines);
+  assert.ok(turns.length>=35,'Roteiro superficial: '+item.id);
+  assert.ok(turns.some(t=>t[0]==='LIA'));
+  assert.ok(turns.some(t=>t[0]==='DAVI'));
+  assert.ok(turns.every(t=>['LIA','DAVI'].includes(t[0])&&t[1].length>=10));
+  assert.ok(turns.filter(t=>t[1].length>=30).length>=Math.floor(turns.length*.9),'Roteiro precisa ter desenvolvimento, além de falas curtas de transição');
+  assert.ok(item.chapters.every(ch=>ch.title&&ch.cue&&ch.lines.length>=5));
+ }
+});
+test('A rádio exibe as experiências, permite narração local e preserva música livre',()=>{
+ const radio=read('radio/index.html'),app=read('app.js'),tts=read('experiencias/voice-player.js');
+ assert.ok(radio.includes('data-nav="experiences"'));
+ assert.ok(app.includes('function experiencesView()'));
+ assert.ok(app.includes('function openExperience(id)'));
+ assert.ok(app.includes("experiences:experiencesView"));
+ assert.ok(app.includes("function toggleExperienceVoice(id)"));
+ assert.ok(app.includes("if(playing)pause()"),'A reprodução da rádio deve pausar durante a narração');
+ assert.ok(tts.includes('global.SpeechSynthesisUtterance'));
+ assert.ok(tts.includes('global.speechSynthesis'));
+ assert.ok(tts.includes("turn.speaker==='LIA'"),'Vozes devem ter diferenciação de narração');
+ assert.ok(radio.indexOf('experiencias/voice-player.js')<radio.indexOf('app.js?v=20261114-volume01-1'));
+ assert.ok(!radio.includes('sw-newsletter-mount'));
+ assert.ok(!radio.includes('newsletter/newsletter.js'));
+});
+test('Os seis programas não dependem de áudio hospedado nem de conta Google',()=>{
+ const mock={};
+ const doc={getElementById:()=>null,querySelectorAll:()=>[]};
+ new Function('window','document',read('experiencias/voice-player.js'))(mock,doc);
+ assert.equal(mock.SynthwaveExperiencesPlayer.available(),false);
+ assert.equal(typeof mock.SynthwaveExperiencesPlayer.play,'function');
+ assert.equal(typeof mock.SynthwaveExperiencesPlayer.stop,'function');
+ assert.equal(mock.SynthwaveExperiencesPlayer.getState().active,false);
+ const program=read('station-programming.js');
+ assert.ok(program.includes("id:'spot-24'"));
+ const w={};new Function('window',program)(w);
+ assert.equal(w.SynthwaveStation.spots.length,24);
+ assert.equal(new Set(w.SynthwaveStation.spots.map(x=>x.id)).size,24);
+ assert.ok(w.SynthwaveStation.spots.every(x=>x.text.length>=50&&x.text.length<380));
 });
