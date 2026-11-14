@@ -74,3 +74,63 @@
   text-transform:none;
 }
 .ac-directory:not(.winf-directory) .directory-card h3{font-family:Outfit,Inter,Arial,sans-serif;font-weight:500}
+
+
+/* WINF Partners // Experience territorial exclusiva (compartilhado com AeroCore) */
+.ac-directory .directory-exclusive-hero{
+  display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;
+  max-width:920px;margin:25px 0 2px;padding:18px 0;border-top:1px solid #ffffff26;border-bottom:1px solid #ffffff26;
+}
+.ac-directory .directory-exclusive-hero strong{
+  color:#fff;font-family:Outfit,Inter,sans-serif;font-size:clamp(15px,1.8vw,21px);font-weight:750;line-height:1.45;
+}
+.ac-directory .directory-exclusive-hero span{
+  color:#a3a9a5;font:500 10px/1.6 ui-monospace,monospace;letter-spacing:.10em;
+}
+.ac-directory .directory-selection-banner{
+  display:flex;flex-wrap:wrap;align-items:center;gap:15px 22px;
+  padding:20px 24px;margin:-7px 0 28px;background:#111410;border:1px solid #ffffff27;
+}
+.ac-directory .directory-selection-banner strong{
+  color:#fff;white-space:nowrap;font:700 14px/1.4 Outfit,Inter,sans-serif;
+}
+.ac-directory .directory-selection-banner span{
+  flex:1;min-width:180px;color:#b9beb9;font:400 13px/1.6 Inter,sans-serif;
+}
+.ac-directory .directory-card[data-journey="expansao"]{
+  background:linear-gradient(145deg,#101310,#090a09 85%);
+}
+.ac-directory .directory-card[data-journey="expansao"] .directory-card-status{color:#e3e9e3}
+.ac-directory .directory-card .directory-card-claim{
+  color:#eff1ef;font:600 13px/1.6 Inter,sans-serif;margin:14px 0 4px;
+}
+.ac-directory .directory-card[data-journey="expansao"] .directory-card-links a:last-child{
+  padding:10px 14px;background:#e7eee9;color:#111711;border:1px solid #e7eee9;
+  text-decoration:none;font-weight:700;
+}
+.ac-directory .directory-card[data-journey="expansao"] .directory-card-links a:last-child:hover{
+  background:white;color:black;
+}
+.ac-directory .directory-more{
+  display:flex;align-items:center;justify-content:center;gap:15px;
+  margin:28px auto 10px;padding:13px 24px;min-height:47px;
+  border:1px solid #ffffff50;color:#eee;font:600 13px/1.5 Inter,sans-serif;
+}
+.ac-directory .directory-more:hover{background:#ffffff13;border-color:#fff}
+.ac-directory .directory-pack-list{display:grid;gap:12px;list-style:none;margin:18px 0 22px;padding:0}
+.ac-directory .directory-pack-list li{position:relative;padding-left:20px;color:#c6cdc8;font:400 13px/1.7 Inter,sans-serif}
+.ac-directory .directory-pack-list li:before{
+  content:"✓";position:absolute;left:0;top:0;color:#cce0d2;font-weight:800;
+}
+.ac-directory .directory-territory-signature{
+  display:block;margin:26px 0 18px;color:#fff;font:800 clamp(14px,1.7vw,18px)/1.5 Outfit,Inter,sans-serif;
+}
+.ac-directory .directory-territory .directory-text-link{display:inline-flex;min-height:37px;align-items:center}
+.ac-directory #territory-form{padding:24px;border:1px solid #ffffff20;background:#050705}
+.ac-directory #territory-form .directory-button{width:100%;min-height:50px}
+.ac-directory [hidden]{display:none!important}
+@media(max-width:650px){
+  .ac-directory .directory-exclusive-hero{gap:9px}
+  .ac-directory .directory-selection-banner{padding:18px}
+  .ac-directory #territory-form{padding:18px}
+}
