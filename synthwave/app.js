@@ -133,18 +133,46 @@ function podcastView(){
  '<div class="panel p-6 border-l-4 sw-accent-border mb-8"><p class="text-white font-bold">Primeira temporada em produção editorial.</p><p class="text-gray-400 text-sm mt-2">'+escapeHtml(productionNote)+'</p></div>'+
  '<div class="grid md:grid-cols-2 xl:grid-cols-4 gap-5">'+podcasts.map(podcastCard).join('')+'</div></section>';
 }
+function experienceCard(e,short=false){
+ return '<article class="panel sw-experience-card overflow-hidden">'+
+ '<img loading="lazy" src="'+cover(e.cover)+'" alt="" class="w-full aspect-[16/9] object-cover">'+
+ '<div class="p-6">'+
+ '<p class="sw-accent-text uppercase tracking-widest text-[10px] font-bold">'+(short?'CÁPSULA ':'EXPERIÊNCIA ')+String(e.number).padStart(2,'0')+' · '+escapeHtml(e.category)+'</p>'+
+ '<h3 class="text-white '+(short?'text-2xl':'text-3xl')+' mt-3">'+escapeHtml(e.title)+'</h3>'+
+ '<p class="text-gray-400 text-sm mt-3">'+escapeHtml(e.summary)+'</p>'+
+ '<p class="text-gray-500 text-xs mt-3">'+escapeHtml(e.estimatedMinutes)+' min estimados · '+(short?'3 atos':'5 capítulos')+' · roteiro original</p>'+
+ '<button type="button" class="sw-moment-action mt-6" onclick="openExperience(\''+escapeHtml(e.id)+'\')">'+(short?'Abrir cápsula':'Ler ou ouvir esta experiência')+' ↗</button></div></article>';
+}
 function experiencesView(){
- const items=window.SYNTHWAVE_EXPERIENCES||[];
+ const all=window.SYNTHWAVE_EXPERIENCES||[];
+ const stories=all.filter(e=>e.format!=='capsule');
+ const capsules=all.filter(e=>e.format==='capsule');
+ const slots=window.SynthwaveStation?.blocks||[];
+ const now=window.SynthwaveStation?.blockAt(new Date());
+ const capsuleSections=slots.map(slot=>{
+  const items=capsules.filter(e=>e.slot===slot.label);
+  if(!items.length)return '';
+  return '<section class="sw-capsule-slot" id="capsule-'+slot.start+'">'+
+   '<div class="sw-capsule-slot-head"><div><p class="text-[10px] font-black sw-accent-text tracking-widest">'+escapeHtml(slot.range)+' · PROGRAMA '+escapeHtml(slot.label)+'</p>'+
+   '<h3 class="text-white text-3xl mt-2">'+escapeHtml(slot.description)+'</h3></div>'+
+   (now&&now.start===slot.start?'<span class="sw-program-now">AGORA</span>':'')+
+   '</div><div class="grid sm:grid-cols-2 gap-5">'+items.map(item=>experienceCard(item,true)).join('')+'</div></section>';
+ }).join('');
  return '<section class="max-w-7xl mx-auto px-5 py-12">'+
- heading('SYNTHWAVE · VOLUME 01','EXPERIÊNCIAS','Seis histórias originais para ler ou ouvir com vozes sintéticas do seu navegador. São conversas completas entre LIA e DAVI, não anúncios nem áudios de estúdio.')+
- '<div class="panel p-5 md:p-6 mb-8 border-l-4 sw-accent-border"><p class="text-white text-sm font-bold">A narração é opcional, gratuita e não exige cadastro.</p><p class="text-gray-400 text-xs mt-2">O roteiro integral está disponível mesmo sem voz. O navegador gera a fala na hora; voz, ritmo e funcionamento podem variar por dispositivo. Para ouvir um episódio gravado e finalizado, ainda será necessário produzir e revisar o áudio.</p></div>'+
- '<div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-5" aria-label="Episódios de experiências">'+items.map(e=>
-  '<article class="panel sw-experience-card overflow-hidden"><img loading="lazy" src="'+cover(e.cover)+'" alt="" class="w-full aspect-[16/9] object-cover">'+
-  '<div class="p-6"><p class="sw-accent-text uppercase tracking-widest text-[10px] font-bold">EXPERIÊNCIA '+String(e.number).padStart(2,'0')+' · '+escapeHtml(e.category)+'</p>'+
-  '<h3 class="text-white text-3xl mt-3">'+escapeHtml(e.title)+'</h3><p class="text-gray-400 text-sm mt-4">'+escapeHtml(e.summary)+'</p>'+
-  '<p class="text-gray-500 text-xs mt-3">'+escapeHtml(e.estimatedMinutes)+' minutos de leitura/narração estimados · roteiro original</p>'+
-  '<button type="button" class="sw-moment-action mt-6" onclick="openExperience(\''+escapeHtml(e.id)+'\')">Ler ou ouvir esta experiência ↗</button></div></article>'
- ).join('')+'</div><div id="experienceDetail" class="mt-12" aria-live="polite"></div></section>';
+ heading('SYNTHWAVE · HISTÓRIAS ORIGINAIS','EXPERIÊNCIAS','Uma rádio que também conta histórias. Explore seis programas narrativos e doze cápsulas curtas, com cenas e diálogos de LIA e DAVI. Ler é sempre gratuito; ouvir usa as vozes sintéticas do navegador.')+
+ '<div class="panel p-5 md:p-6 mb-8 border-l-4 sw-accent-border"><p class="text-white text-sm font-bold">Você escolhe: só música, leitura ou narração. Sem cadastro.</p>'+
+ '<p class="text-gray-400 text-xs mt-2">Não é uma transmissão sincronizada nem áudio masterizado de estúdio. Os roteiros originais podem ser narrados pelo dispositivo; a voz pode variar ou não estar disponível. O player musical pausa quando você escolhe ouvir uma história.</p></div>'+
+ '<div class="sw-editorial-index"><a href="#programas-longos" onclick="event.preventDefault();document.getElementById(\'programas-longos\')?.scrollIntoView({behavior:\'smooth\'})">6 programas completos</a>'+
+ '<a href="#programas-curtos" onclick="event.preventDefault();document.getElementById(\'programas-curtos\')?.scrollIntoView({behavior:\'smooth\'})">12 cápsulas curtas</a>'+
+ (now?'<a href="#capsule-'+now.start+'" onclick="event.preventDefault();document.getElementById(\'capsule-'+now.start+'\')?.scrollIntoView({behavior:\'smooth\'})">Ver meu horário ↗</a>':'')+'</div>'+
+ '<section id="programas-longos" class="sw-editorial-section"><p class="sw-accent-text text-xs uppercase font-black tracking-widest">VOLUME 01 / NARRATIVAS</p>'+
+ '<h2 class="text-white text-4xl md:text-6xl mt-3 mb-7">Seis histórias para ficar um pouco mais.</h2>'+
+ '<div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-5" aria-label="Programas completos">'+stories.map(e=>experienceCard(e)).join('')+'</div></section>'+
+ '<section id="programas-curtos" class="sw-editorial-section"><p class="sw-accent-text text-xs uppercase font-black tracking-widest">VOLUME 02 / PÍLULAS DE RÁDIO</p>'+
+ '<h2 class="text-white text-4xl md:text-6xl mt-3">Doze histórias. Seis momentos do dia.</h2>'+
+ '<p class="text-gray-400 text-sm mt-4 max-w-3xl">Cada horário ganha duas cápsulas próprias: entrada cinematográfica, pequena descoberta e desfecho que combina com a próxima música. Elas são opcionais e não interrompem sua playlist.</p>'+
+ '<div class="mt-9">'+capsuleSections+'</div></section>'+
+ '<div id="experienceDetail" class="mt-12" aria-live="polite"></div></section>';
 }
 function openExperience(id){
  const e=(window.SYNTHWAVE_EXPERIENCES||[]).find(item=>item.id===id);
@@ -161,7 +189,7 @@ function openExperience(id){
     '<p class="sw-exp-cue">DIREÇÃO SONORA · '+escapeHtml(chapter.cue)+'</p>'+lines+'</section>';
  }).join('');
  area.innerHTML='<article class="sw-exp-reading"><div class="sw-exp-head">'+
- '<p class="sw-accent-text text-xs uppercase font-black tracking-widest">EXPERIÊNCIA '+e.number+' · ROTEIRO ORIGINAL</p>'+
+ '<p class="sw-accent-text text-xs uppercase font-black tracking-widest">'+(e.format==='capsule'?'CÁPSULA ':'EXPERIÊNCIA ')+e.number+' · ROTEIRO ORIGINAL</p>'+
  '<h2 class="text-white text-5xl md:text-7xl mt-3">'+escapeHtml(e.title)+'</h2>'+
  '<p class="text-gray-300 text-lg mt-4">'+escapeHtml(e.tagline)+'</p>'+
  '<p class="text-xs text-gray-400 mt-3">LIA e DAVI são vozes sintéticas. História roteirizada; não é entrevista ou relato real.</p>'+
