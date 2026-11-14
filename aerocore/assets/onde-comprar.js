@@ -22,11 +22,21 @@
   const template = document.getElementById('directory-card');
   const modes = root.querySelectorAll('[data-directory-mode]');
   const more = document.getElementById('directory-more');
+  const less = document.createElement('button');
+  less.id = 'directory-less';
+  less.type = 'button';
+  less.className = 'directory-less';
+  less.textContent = 'Ver menos ↑';
+  less.setAttribute('aria-controls', 'directory-results');
+  less.hidden = true;
+  more.insertAdjacentElement('afterend', less);
   const selectionBanner = document.getElementById('directory-selection-banner');
   const serviceField = document.querySelector('.directory-service-field');
   const networkNote = document.getElementById('directory-network-note');
   let mode = location.hash === '#territorios' ? 'territorios' : 'ativas';
-  let expanded = false;
+  const initialCount = () => window.matchMedia('(max-width: 680px)').matches ? 4 : 6;
+  const batchCount = 6;
+  let visibleLimit = initialCount();
   const names = { automotivo: 'Automotivo', residencial: 'Residencial', ambos: 'Automotivo + residencial' };
   const normalize = value => String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
   const eligible = city => mode === 'ativas'
@@ -59,7 +69,7 @@
       (service.value === 'nao_informado' && !city.tipoAtendimento) ||
       (service.value !== 'ambos' && city.tipoAtendimento === 'ambos'));
     const matched = cities.filter(city => eligible(city) && matchesFilter(city));
-    const shown = expanded || q || state.value || service.value ? matched : matched.slice(0, 12);
+    const shown = matched.slice(0, visibleLimit);
 
     function cardsFor(items) {
       const fragment = document.createDocumentFragment();
@@ -122,6 +132,14 @@
     selectionBanner.hidden = mode !== 'territorios';
     serviceField.hidden = mode === 'territorios';
     more.hidden = matched.length <= shown.length;
+    less.hidden = visibleLimit <= initialCount();
+    const remaining = matched.length - shown.length;
+    if (remaining > 0) {
+      const next = Math.min(batchCount, remaining);
+      more.textContent = 'Ver mais ' + next + (next === 1 ? ' cidade ↓' : ' cidades ↓');
+    }
+    more.setAttribute('aria-expanded', String(visibleLimit > initialCount()));
+    less.setAttribute('aria-expanded', String(visibleLimit > initialCount()));
     count.textContent = mode === 'ativas'
       ? (matched.length + extraMatched.length) + ' cidades com atendimento WINF'
       : matched.length + (matched.length === 1 ? ' cidade na vitrine de expansão' : ' cidades na vitrine de expansão');
@@ -144,7 +162,7 @@
     empty.querySelector('button[data-directory-mode]').hidden = mode === 'territorios';
     modes.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.directoryMode === mode)));
   }
-  const refresh = () => { expanded = false; render(); };
+  const refresh = () => { visibleLimit = initialCount(); render(); };
   query.addEventListener('input', refresh);
   state.addEventListener('change', refresh);
   service.addEventListener('change', refresh);
@@ -159,12 +177,20 @@
   modes.forEach(button => button.addEventListener('click', () => {
     mode = button.dataset.directoryMode;
     if (mode === 'territorios') service.value = '';
-    expanded = false;
+    visibleLimit = initialCount();
     render();
   }));
   more.addEventListener('click', () => {
-    expanded = true;
+    visibleLimit += batchCount;
     render();
+  });
+  less.addEventListener('click', () => {
+    visibleLimit = initialCount();
+    render();
+    document.getElementById('directory-title').scrollIntoView({
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+      block: 'start'
+    });
   });
   document.getElementById('territory-form').addEventListener('submit', event => {
     event.preventDefault();

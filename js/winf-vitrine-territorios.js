@@ -36,12 +36,14 @@
     action.rel = 'noopener noreferrer';
     if (active) {
       const phone = /^55\d{10,11}$/.test(String(city.numero || '')) ? city.numero : '5513981113001';
-      action.textContent = 'Solicitar atendimento ↗';
+      action.textContent = 'Agendar atendimento ↗';
+      action.title = 'Abrir o WhatsApp para solicitar atendimento WINF na cidade selecionada';
       action.href = 'https://wa.me/' + phone + '?text=' +
         encodeURIComponent('Olá! Quero consultar atendimento WINF Select para ' + label + '.');
     } else {
       const cityName = label.replace(/\s*\/\s*/, '/');
-      action.textContent = 'Verificar exclusividade ↗';
+      action.textContent = 'Consultar exclusividade ↗';
+      action.title = 'Abrir WhatsApp WINF Partners para verificar se a seleção do território continua disponível. Não é compra automática.';
       action.href = 'https://wa.me/5513997815375?text=' +
         encodeURIComponent('Olá! Vi o território WINF ' + cityName +
         ' na vitrine. Quero saber se ainda posso ser o único licenciado Asset Light™ nesta cidade e receber as condições do pack de ativação.');
@@ -51,38 +53,82 @@
     }
     item.append(state, action);
   });
-  const groups = [...root.querySelectorAll('[data-ver]')].map(button => ({
-    button, items: [...document.getElementById(button.dataset.ver).children], expanded: false
-  }));
+  // Poucos cards por vez: o visitante pode explorar sem abrir 100 cidades de uma vez.
+  const initialCount = () => window.matchMedia('(max-width: 680px)').matches ? 4 : 6;
+  const step = 6;
+  const groups = [...root.querySelectorAll('[data-ver]')].map(button => {
+    const list = document.getElementById(button.dataset.ver);
+    const less = document.createElement('button');
+    less.type = 'button';
+    less.className = 'vitrine-less';
+    less.textContent = 'Ver menos ↑';
+    less.setAttribute('aria-controls', list.id);
+    less.hidden = true;
+    button.insertAdjacentElement('afterend', less);
+    return {
+      button,
+      less,
+      list,
+      items: [...list.children],
+      heading: list.previousElementSibling,
+      visibleCount: initialCount()
+    };
+  });
   const states = new Set(groups.flatMap(group => group.items.map(item =>
     normalize(item.querySelector('a').textContent.split('/').at(-1))
   )));
   function render() {
     const term = searchText(query.value);
-    let count = 0;
+    let total = 0;
+    let shownTotal = 0;
     for (const group of groups) {
       const matches = group.items.filter(item => {
         const label = item.querySelector('a').textContent;
         const uf = normalize(label.split('/').at(-1));
-        if (states.has(term)) {
-          return uf === term;
-        }
-        return searchText(item.textContent).includes(term);
+        return states.has(term) ? uf === term : searchText(label).includes(term);
       });
-      const visible = new Set(matches.slice(0, group.expanded ? matches.length : 8));
+      const visibleCount = Math.min(group.visibleCount, matches.length);
+      const visible = new Set(matches.slice(0, visibleCount));
       for (const item of group.items) item.hidden = !visible.has(item);
-      group.button.hidden = matches.length <= 8;
-      group.button.textContent = group.expanded ? 'Ver menos' : 'Ver mais cidades';
-      group.button.setAttribute('aria-expanded', String(group.expanded && matches.length > 8));
-      count += matches.length;
+      group.heading.hidden = matches.length === 0;
+      const hasMore = matches.length > visibleCount;
+      const hasExpanded = group.visibleCount > initialCount();
+      group.button.hidden = !hasMore;
+      group.less.hidden = !hasExpanded;
+      const next = Math.min(step, matches.length - visibleCount);
+      group.button.textContent = 'Ver mais ' + next + (next === 1 ? ' cidade ↓' : ' cidades ↓');
+      group.button.setAttribute('aria-expanded', String(hasExpanded));
+      group.less.setAttribute('aria-expanded', String(hasExpanded));
+      total += matches.length;
+      shownTotal += visibleCount;
     }
-    status.textContent = term ? count + (count === 1 ? ' território encontrado' : ' territórios encontrados') : '';
+    status.textContent = total
+      ? 'Exibindo ' + shownTotal + ' de ' + total + (total === 1 ? ' cidade.' : ' cidades.') + ' Pesquise para encontrar a sua.'
+      : 'Nenhuma cidade encontrada. Tente outro nome ou UF.';
   }
-  for (const group of groups) group.button.addEventListener('click', () => {
-    group.expanded = !group.expanded;
+  groups.forEach(group => {
+    group.button.addEventListener('click', () => {
+      group.visibleCount += step;
+      render();
+    });
+    group.less.addEventListener('click', () => {
+      group.visibleCount = initialCount();
+      render();
+      // Depois de recolher, retorne ao título da região em vez de perder a referência.
+      if (group.heading && !group.heading.hidden) {
+        const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        group.heading.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+      }
+    });
+  });
+  query.addEventListener('input', () => {
+    groups.forEach(group => { group.visibleCount = initialCount(); });
     render();
   });
-  query.addEventListener('input', render);
+  window.addEventListener('resize', () => {
+    for (const group of groups) group.visibleCount = Math.max(initialCount(), group.visibleCount);
+    render();
+  });
   gps.addEventListener('click', () => {
     if (!navigator.geolocation) {
       local.textContent = 'Localização indisponível. Use a busca por cidade ou UF.';
@@ -97,8 +143,16 @@
       const nearest = Object.entries(positions).reduce((best, item) =>
         distance(item[1]) < distance(best[1]) ? item : best);
       const item = root.querySelector('[data-territorio="' + nearest[0] + '"]');
-      const link = item.querySelector('a').cloneNode(true);
-      local.replaceChildren('Cidade encontrada na vitrine: ', link);
+      const page = item?.querySelector('a');
+      if (page) {
+        query.value = page.textContent.split('/')[0].trim();
+        groups.forEach(group => { group.visibleCount = initialCount(); });
+        render();
+        local.replaceChildren('Cidade mais próxima encontrada no catálogo: ', page.cloneNode(true));
+        root.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        local.textContent = 'Nenhuma cidade próxima identificada. Use o campo de busca.';
+      }
       gps.disabled = false;
     }, () => {
       local.textContent = 'Não foi possível usar a localização. Busque por cidade ou UF.';

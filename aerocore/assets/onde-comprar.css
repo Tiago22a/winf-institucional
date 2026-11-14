@@ -134,3 +134,21 @@
   .ac-directory .directory-selection-banner{padding:18px}
   .ac-directory #territory-form{padding:18px}
 }
+
+
+/* Controles de paginação sem aparência de botão branco ilegível. */
+.ac-directory .directory-more,
+.ac-directory .directory-less{
+  display:inline-flex;justify-content:center;align-items:center;min-width:165px;
+  padding:13px 20px;min-height:47px;margin:24px 10px 6px 0;
+  font:600 13px/1.5 Inter,sans-serif;color:#f2f4f2!important;
+  -webkit-text-fill-color:#f2f4f2!important;
+  background:#151815!important;border:1px solid #525b53!important;
+  cursor:pointer;
+}
+.ac-directory .directory-less{background:#090b09!important;color:#b7c5ba!important;-webkit-text-fill-color:#b7c5ba!important}
+.ac-directory :is(.directory-more,.directory-less):hover{background:#222922!important;border-color:#fff!important}
+.ac-directory .directory-less[hidden]{display:none!important}
+@media(max-width:600px){
+ .ac-directory :is(.directory-more,.directory-less){min-width:0;width:calc(50% - 8px);padding:12px 7px}
+}
