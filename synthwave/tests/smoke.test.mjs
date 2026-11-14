@@ -283,3 +283,25 @@ test('SynthWAVE: oito roteiros preservados e cinco novas prévias condicionadas 
  }
  assert.equal(win.SYNTHWAVE_PODCAST_CATALOG.filter(x=>x.status==='published').length,0);
 });
+
+test('todos os oito podcasts têm MP3 de prévia real e player direto sem exigir login',()=>{
+ const w={};new Function('window',read('podcast-catalog.js'))(w);
+ const items=w.SYNTHWAVE_PODCAST_CATALOG;
+ const app=read('app.js');
+ assert.equal(items.length,8);
+ assert.equal(items.filter(x=>x.status==='published').length,0);
+ for(const p of items){
+   assert.equal(p.status,'scripted');
+   assert.ok(p.previewAudioUrl,'prévia ausente: '+p.id);
+   assert.equal(p.previewAudioUrl,'/synthwave/podcasts/audio-previews/'+p.id+'-previa.mp3');
+   assert.ok(w.SynthwaveEditorial.validEpisode(p));
+   const manifest=JSON.parse(read('podcasts/audio-previews/'+p.id+'-manifest.json'));
+   assert.equal(manifest.status,'audio_preview_unreviewed');
+   assert.deepEqual(manifest.speakers,['LIA','DAVI']);
+   assert.ok(manifest.durationSecondsApprox>120);
+ }
+ assert.match(app,/Prévia sonora · LIA e DAVI · em revisão/);
+ assert.match(app,/const preview=p.status==='scripted'&&p.previewAudioUrl/);
+ assert.match(app,/\+preview\+published\+/);
+ assert.match(app,/Nenhuma edição final foi homologada ainda/);
+});
