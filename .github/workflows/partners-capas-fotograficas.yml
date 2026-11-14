@@ -1,0 +1,22 @@
+name: WINF Padrinho + Asset Light — Capas Fotográficas
+on:
+  pull_request:
+    paths:
+      - "partners/padrinho-modern/index.html"
+      - "partners/padrinho-modern/media/**"
+      - "briefing/asset-light/index.html"
+      - "briefing/model-page.css"
+      - "tests/partners-capas-fotograficas.test.cjs"
+      - ".github/workflows/partners-capas-fotograficas.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  capas:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node --test tests/partners-capas-fotograficas.test.cjs
