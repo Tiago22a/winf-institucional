@@ -229,8 +229,8 @@ test('temporada completa possui 8 roteiros e prévias condicionadas ao MP3 real'
    assert.ok(player.includes("'"+id+"'"));
    const script=read('podcasts/temporada-01/'+id+'.md');
    const html=read('podcasts/temporada-01/'+id+'/index.html');
-   const lia=(script.match(/\\*\\*LIA:\\*\\*/g)||[]).length;
-   const davi=(script.match(/\\*\\*DAVI:\\*\\*/g)||[]).length;
+   const lia=script.split('**LIA:**').length-1;
+   const davi=script.split('**DAVI:**').length-1;
    assert.ok(lia>=10&&davi>=10,id);
    assert.match(html,/Prévia de roteiro — não é um episódio publicado/);
    assert.ok(html.includes('data-audio-episode="'+id+'"'));
