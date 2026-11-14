@@ -1,0 +1,21 @@
+name: WINF Asset Light e Padrinho — Hero Fotográfico
+on:
+  pull_request:
+    paths:
+      - "briefing/asset-light/index.html"
+      - "briefing/model-page.css"
+      - "partners/padrinho-modern/index.html"
+      - "tests/hero-fotografico-padrinho-asset-light.test.cjs"
+      - ".github/workflows/hero-fotografico-padrinho-asset-light.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verificar-capacidade-mobile-e-assets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node --test tests/hero-fotografico-padrinho-asset-light.test.cjs
