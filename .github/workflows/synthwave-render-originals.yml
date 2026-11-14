@@ -1,0 +1,47 @@
+name: SynthWAVE — Renderizar trilhas autorais
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'synthwave/audio-source/**'
+      - '.github/workflows/synthwave-render-originals.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Dependências e síntese autoral
+        run: |
+          python -m pip install --disable-pip-version-check numpy scipy
+          python synthwave/audio-source/render_originals.py
+      - name: Verificar formatos, duração e áudio presente
+        run: |
+          python - <<'PY'
+          import subprocess,glob,json,sys
+          paths=glob.glob('synthwave/audio/original/*.mp3')
+          assert len(paths)==4,paths
+          for path in paths:
+              data=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration,size','-of','json',path]))
+              duration=float(data['format']['duration'])
+              assert 41.0<=duration<=43.0,(path,duration)
+              assert int(data['format']['size'])>=20000
+              print(path,duration)
+          PY
+      - name: Publicar arquivos binários nas posições corretas
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add synthwave/audio/original/*.mp3
+          if ! git diff --cached --quiet; then
+            git commit -m "SynthWAVE: renderizar quatro trilhas instrumentais autorais MP3"
+            git push origin HEAD:main
+          fi
