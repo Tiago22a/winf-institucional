@@ -46,9 +46,9 @@ jobs:
             'https://huggingface.co/rhasspy/piper-voices/resolve/main/pt/pt_BR/faber/medium/pt_BR-faber-medium.onnx.json' -o models/pt_BR-faber-medium.onnx.json
           test "$(wc -c < models/pt_BR-cadu-medium.onnx)" -gt 10000000
           test "$(wc -c < models/pt_BR-faber-medium.onnx)" -gt 10000000
-      - name: Renderizar três podcasts em MP3 e trilha original
+      - name: Renderizar os cinco episódios finais sem alterar os três primeiros
         if: github.event_name != 'pull_request'
-        run: python synthwave/production/render_audio.py --models-dir models
+        run: python synthwave/production/render_audio.py --models-dir models --episodes ep04-alem-da-pintura ep05-recomeco ep06-cidade ep07-brasil ep08-institute
       - name: Inspecionar MP3 antes de disponibilizar
         if: github.event_name != 'pull_request'
         run: |
@@ -56,19 +56,20 @@ jobs:
             test -s "$f"
             ffprobe -v error -show_entries format=duration -of default=nokey=1:noprint_wrappers=1 "$f" | awk '{if($1 < 120){exit 1}}'
           done
-          test "$(find synthwave/podcasts/audio-previews -name '*.mp3' | wc -l)" -eq 3
+          for id in ep04-alem-da-pintura ep05-recomeco ep06-cidade ep07-brasil ep08-institute; do test -s "synthwave/podcasts/audio-previews/${id}-previa.mp3"; done
+          test "$(find synthwave/podcasts/audio-previews -name '*.mp3' | wc -l)" -eq 8
       - name: Disponibilizar MP3, transcrições e manifestos para revisão
         if: github.event_name != 'pull_request'
         uses: actions/upload-artifact@v4
         with:
-          name: synthwave-3-podcasts-audio-previas
+          name: synthwave-temporada01-oito-episodios-previas
           path: |
             synthwave/podcasts/audio-previews/*.mp3
             synthwave/podcasts/audio-previews/*.json
             synthwave/podcasts/temporada-01/*.md
           if-no-files-found: error
           retention-days: 30
-      - name: Atualizar arquivos de áudio no site após validar os três
+      - name: Adicionar cinco novas prévias ao site após validar os oito
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         continue-on-error: true
         run: |
@@ -76,5 +77,5 @@ jobs:
           git config user.name 'github-actions[bot]'
           git add synthwave/podcasts/audio-previews/
           if git diff --staged --quiet; then exit 0; fi
-          git commit -m 'SynthWAVE: adicionar três prévias narradas com vozes sintéticas [skip ci]'
+          git commit -m 'SynthWAVE: adicionar cinco prévias com vozes sintéticas [skip ci]'
           git push origin HEAD:main

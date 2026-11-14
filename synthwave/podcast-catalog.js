@@ -45,7 +45,9 @@
    summary:'Cuidados, limites e escolhas conscientes sobre PPF e tratamento de superfícies.',
    hook:'O que significa proteger a história de um veículo?',
    artwork:'photo-1542282088-72c9c27ed0cd',
-   status:'planned',format:'Duas vozes de IA',
+   status:'scripted',format:'Duas vozes de IA · LIA & DAVI',
+   scriptUrl:'/synthwave/podcasts/temporada-01/ep04-alem-da-pintura/',
+   label:'Roteiro completo em revisão; áudio final não homologado',
    projectUrl:'/aerocore/'
   },
   {
@@ -54,7 +56,9 @@
    summary:'Uma dramatização declaradamente fictícia sobre paciência, aprendizado e recomeços.',
    hook:'E se o próximo passo não precisasse ser gigante?',
    artwork:'photo-1511671782779-c97d3d27a1d4',
-   status:'planned',format:'Duas vozes de IA'
+   status:'scripted',format:'Duas vozes de IA · LIA & DAVI',
+   scriptUrl:'/synthwave/podcasts/temporada-01/ep05-recomeco/',
+   label:'Roteiro completo em revisão; áudio final não homologado'
   },
   {
    id:'ep06-cidade',series:'A CIDADE QUE CONECTA',
@@ -62,7 +66,9 @@
    summary:'Ferramentas úteis surgem da escuta das pessoas, não só da vontade de lançar aplicativos.',
    hook:'E se o primeiro requisito de uma solução fosse escutar?',
    artwork:'photo-1509198397868-475647b2a1e5',
-   status:'planned',format:'Duas vozes de IA'
+   status:'scripted',format:'Duas vozes de IA · LIA & DAVI',
+   scriptUrl:'/synthwave/podcasts/temporada-01/ep06-cidade/',
+   label:'Roteiro completo em revisão; áudio final não homologado'
   },
   {
    id:'ep07-brasil',series:'DO BRASIL PARA O MUNDO',
@@ -70,7 +76,9 @@
    summary:'Uma conversa sobre documentar processos, validar hipóteses e crescer com responsabilidade.',
    hook:'Qual a diferença entre expansão e precipitação?',
    artwork:'photo-1519608487953-e999c86e7455',
-   status:'planned',format:'Duas vozes de IA'
+   status:'scripted',format:'Duas vozes de IA · LIA & DAVI',
+   scriptUrl:'/synthwave/podcasts/temporada-01/ep07-brasil/',
+   label:'Roteiro completo em revisão; áudio final não homologado'
   },
   {
    id:'ep08-institute',series:'UM NOVO JEITO DE APRENDER',
@@ -78,7 +86,9 @@
    summary:'Teoria, prática, segurança e evolução contínua nas formações do WINF Institute™.',
    hook:'Uma aula termina quando alguém fecha a tela?',
    artwork:'photo-1493225457124-a3eb161ffa5f',
-   status:'planned',format:'Duas vozes de IA'
+   status:'scripted',format:'Duas vozes de IA · LIA & DAVI',
+   scriptUrl:'/synthwave/podcasts/temporada-01/ep08-institute/',
+   label:'Roteiro completo em revisão; áudio final não homologado'
   }
  ];
  function validEpisode(item){
