@@ -131,8 +131,11 @@
         if (serviceJourney) {
           const whatsapp = onDemand ? '5513981113001' :
             (/^55\d{10,11}$/.test(String(city.numero || '')) ? city.numero : '5513981113001');
+          const subject = service.value && names[service.value]
+            ? ' Tenho interesse em ' + names[service.value].toLowerCase() + '.' : '';
           const message = 'Olá! Estou em ' + city.cidade + '/' + city.uf +
-            ' e gostaria de solicitar atendimento WINF. Podem confirmar a disponibilidade para meu serviço?';
+            ' e gostaria de solicitar atendimento WINF.' + subject +
+            ' Podem confirmar a disponibilidade para meu serviço?';
           addLink(links, 'Solicitar atendimento ↗',
             'https://wa.me/' + whatsapp + '?text=' + encodeURIComponent(message));
           if (!onDemand && city.instagram) addLink(links, 'Instagram ↗', city.instagram);
@@ -170,7 +173,7 @@
     networkNote.hidden = mode !== 'ativas';
     networkNote.textContent = 'Atendimento WINF sob demanda · execução e agenda sob confirmação';
     document.getElementById('directory-kicker').textContent = mode === 'ativas'
-      ? 'WINF SELECT™ / ATENDIMENTO' : 'WINF PARTNERS™ / TERRITÓRIOS';
+      ? 'WINF™ / ATENDIMENTO' : 'WINF PARTNERS™ / TERRITÓRIOS';
     document.getElementById('directory-title').textContent = mode === 'ativas'
       ? 'Encontre sua cidade.' : 'Sua cidade pode ser a próxima.';
     document.getElementById('directory-empty-title').textContent = mode === 'ativas'
