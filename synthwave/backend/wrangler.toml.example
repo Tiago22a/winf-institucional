@@ -14,6 +14,6 @@ database_name = "synthwave-newsletter"
 database_id = "REPLACE_WITH_REAL_D1_DATABASE_ID"
 
 [vars]
-ALLOWED_ORIGIN = "https://winf.com.br"
+ALLOWED_ORIGINS = "https://winf.com.br,https://www.winf.com.br"
 CONSENT_VERSION = "synthwave-newsletter-v1"
 # Set TURNSTILE_SECRET using wrangler secret put, NEVER here.
