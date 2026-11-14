@@ -8,7 +8,7 @@ const dir=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const read=(file)=>readFileSync(resolve(dir,file),'utf8');
 
 test('scripts principais da FM têm sintaxe válida',()=>{
- for(const file of ['app.js','my-playlists.js','audio-engine.js','cloud-auth.js','newsletter/newsletter.js']){
+ for(const file of ['app.js','my-playlists.js','audio-engine.js','station-programming.js','cloud-auth.js','newsletter/newsletter.js']){
   assert.doesNotThrow(()=>new Function(read(file)),file);
  }
  const worker=read('backend/worker.js').replace('export default {','const worker = {');
@@ -137,7 +137,8 @@ test('entrada SynthWAVE exige no máximo dois cliques, sem identidade ou newslet
  assert.ok(radio.includes('data-nav="live"'), 'A rota de rádio deve existir');
  assert.ok(app.includes("location.hash.replace('#','')||'home'"), 'A rádio deve respeitar #live na primeira navegação');
  assert.ok(app.includes("button('▶ OUVIR AGORA',\"startRadio()\")"), 'Segundo clique inicia a reprodução');
- assert.ok(app.includes("function startRadio(){radioMode=true;radioErrors=0;queue=tracks.map((_,i)=>i);position=0;start(true)}"));
+ assert.ok(app.includes('function startRadio(){'));
+ assert.ok(app.includes('window.SynthwaveStation.queueFor(tracks,stationBlock)'));
  assert.ok(!radio.includes('newsletter/newsletter.js'), 'Nenhum formulário de inscrição deve ser montado');
  assert.ok(!radio.includes('sw-newsletter-mount'));
  assert.ok(!radio.includes('id="modal"'), 'Sem janela Premium no caminho do Play');
@@ -214,4 +215,49 @@ test('pipeline de áudio usa somente roteiros originais e três identidades de e
   assert.match(html,/Prévia de roteiro|prévia editorial|roteiro original/i);
   assert.ok(!html.includes('<audio'), 'o player não pode aparecer sem MP3 disponível');
  }
+});
+
+test('grade 24 horas tem seis blocos contíguos cobrindo todas as horas locais',()=>{
+ const win={};new Function('window',read('station-programming.js'))(win);
+ const grade=win.SynthwaveStation;
+ assert.equal(grade.blocks.length,6);
+ assert.equal(grade.spots.length,12);
+ assert.equal(grade.songsPerSpot,5);
+ for(let hour=0;hour<24;hour++){
+  const slot=grade.blockAt({getHours:()=>hour});
+  assert.ok(slot.start<=hour&&hour<slot.end,'Hora sem grade: '+hour);
+ }
+ for(let i=1;i<grade.blocks.length;i++)assert.equal(grade.blocks[i-1].end,grade.blocks[i].start);
+ assert.equal(grade.blocks[0].start,0);assert.equal(grade.blocks.at(-1).end,24);
+});
+test('sequência de músicas prioriza o horário sem repetir nem omitir faixas',()=>{
+ const win={};new Function('window',read('station-programming.js'))(win);
+ const items=[
+  {category:'Focus',audioUrl:'/a.mp3'}, {category:'Drive',audioUrl:'/b.mp3'},
+  {category:'Ambient',synthPreset:'deep_focus_lofi'}, {category:'Originals',audioUrl:'/c.mp3'},
+  {category:'Drive',synthPreset:'cyber_drive'}
+ ];
+ const queue=win.SynthwaveStation.queueFor(items,win.SynthwaveStation.blockAt({getHours:()=>9}));
+ assert.equal(queue.length,items.length);
+ assert.equal(new Set(queue).size,items.length);
+ assert.deepEqual([...queue].sort((a,b)=>a-b),[0,1,2,3,4]);
+ assert.equal(queue[0],0);
+});
+test('vinheta a cada cinco músicas e fallback sem TTS, mantendo rádio aberta',()=>{
+ const win={};new Function('window',read('station-programming.js'))(win);
+ const radio=read('app.js'),markup=read('radio/index.html'),css=read('fm-features.css');
+ const block=win.SynthwaveStation.blockAt({getHours:()=>17});
+ for(const number of [0,1,2,3,4,6,7,8,9])assert.equal(win.SynthwaveStation.spotFor(number,block),null);
+ for(const number of [5,10,15,20])assert.ok(win.SynthwaveStation.spotFor(number,block)?.text);
+ assert.ok(win.SynthwaveStation.spots.every(s=>s.text.length>40));
+ assert.ok(win.SynthwaveStation.spots.every(s=>s.text.length<380));
+ assert.ok(radio.includes("function playStationSpot(){"));
+ assert.ok(radio.includes("typeof window.SpeechSynthesisUtterance!=='function'"));
+ assert.ok(radio.includes("if(radioMode&&playing)advanceRadioTrack()"));
+ assert.ok(radio.includes("function next(automatic=false){"));
+ assert.ok(radio.includes("next(true)"));
+ assert.ok(markup.indexOf('station-programming.js')<markup.indexOf('app.js?v=20261114-24h-1'));
+ assert.ok(markup.includes('station-programming.js'));
+ assert.ok(css.includes('.sw-program-timeline'));
+ assert.ok(!radio.includes('window.open('));
 });
