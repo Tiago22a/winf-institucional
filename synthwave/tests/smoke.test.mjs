@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
+import {readFileSync,statSync} from 'node:fs';
+import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {resolve,dirname} from 'node:path';
 
@@ -463,4 +464,43 @@ test('prévia de 18 experiências só é exibida após geração real e validaç
  assert.ok(read('production/export_experiences.mjs').includes('stories.length!==18'));
  assert.ok(read('production/render_experiences.py').includes('audio-preview-catalog.js'));
  assert.ok(read('../.github/workflows/synthwave-experiences-audio.yml').includes('ffprobe'));
+});
+
+
+test('release SynthWAVE: 18 MP3 reais com SHA256, 8 podcasts e 4 faixas próprias',()=>{
+ const w={};new Function('window',read('experiencias/audio-preview-catalog.js'))(w);
+ const entries=Object.entries(w.SYNTHWAVE_EXPERIENCE_AUDIO||{});
+ assert.equal(entries.length,18,'O lançamento deve disponibilizar as 18 prévias antes da divulgação');
+ const catalogue=new Set();
+ for(const [id,entry] of entries){
+  assert.match(id,/^[a-z0-9-]+$/);
+  catalogue.add(id);
+  const mp3='experiencias/audio-previews/'+id+'-previa.mp3';
+  const manifest='experiencias/audio-previews/'+id+'-manifest.json';
+  assert.ok(statSync(resolve(dir,mp3)).size>60000,'MP3 vazio: '+id);
+  const bytes=readFileSync(resolve(dir,mp3));
+  assert.ok(bytes.toString('ascii',0,3)==='ID3'||(bytes[0]===0xff&&(bytes[1]&0xe0)===0xe0),'Cabeçalho MP3 inválido: '+id);
+  const hash=createHash('sha256').update(bytes).digest('hex');
+  assert.equal(hash,entry.sha256,'SHA256 diferente do catálogo: '+id);
+  const meta=JSON.parse(read(manifest));
+  assert.equal(meta.experienceId,id);
+  assert.equal(meta.sha256,hash);
+  assert.equal(meta.finalPublicationApproved,false,'Prévia não pode virar áudio final por engano');
+  assert.equal(meta.status,'audio_preview_unreviewed');
+  assert.ok(meta.durationSecondsApprox>45);
+  assert.ok(meta.spokenTurns>=15);
+ }
+ const previews=['ep01-cuidar-conectar','ep02-padrinho','ep03-invisivel','ep04-alem-da-pintura','ep05-recomeco','ep06-cidade','ep07-brasil','ep08-institute'];
+ for(const id of previews){
+  assert.ok(statSync(resolve(dir,'podcasts/audio-previews/'+id+'-previa.mp3')).size>60000,'Podcast sem áudio: '+id);
+  const manifest=JSON.parse(read('podcasts/audio-previews/'+id+'-manifest.json'));
+  assert.equal(manifest.status,'audio_preview_unreviewed');
+ }
+ for(const file of ['foco-frequencia-clara','estrada-horizonte','refugio-chuva-sintetica','depois-das-20h']){
+  assert.ok(statSync(resolve(dir,'audio/original/'+file+'.mp3')).size>60000,'Música autoral ausente: '+file);
+ }
+ assert.equal(catalogue.size,18);
+ const radio=read('radio/index.html');
+ assert.ok(radio.includes('audio-preview-catalog.js?v=20261114-18mp3-release2'),'Página deve contornar cache de catálogo vazio anterior');
+ assert.ok(radio.includes('18 prévias de histórias'),'Descrição deve refletir conteúdos realmente gerados');
 });
