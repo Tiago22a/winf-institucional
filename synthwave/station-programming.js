@@ -81,7 +81,7 @@
  function spotFor(completed,block){
   const n=Number(completed);
   if(!Number.isInteger(n)||n<=0||n%songsPerSpot!==0)return null;
-  const shift=blocks.indexOf(block);
+  const shift=blocks.findIndex(b=>b.start===block?.start);
   const slot=blocks[Math.max(0,shift)];
   const segment=n/songsPerSpot;
   const generalSpots=spots.filter(s=>s.kind!=='capsula');
