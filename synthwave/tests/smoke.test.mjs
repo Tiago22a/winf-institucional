@@ -107,7 +107,8 @@ test('catálogo editorial bloqueia episódios publicados sem áudio, transcriç�
  assert.ok(items.every(win.SynthwaveEditorial.validEpisode));
  const first=items[0];
  assert.equal(win.SynthwaveEditorial.validEpisode({...first,status:'published',audioUrl:'https://audio.example/test.mp3'}),false);
- assert.equal(win.SynthwaveEditorial.validEpisode({...first,status:'published',audioUrl:'https://audio.example/test.mp3',transcriptUrl:'/synthwave/transcricao/',rightsStatement:'Original autorizado',rightsApprovedAt:'2026-11-14',productionReviewedAt:'2026-11-14'}),true);
+ const {previewAudioUrl: _previewOnly, ...approvedFields}=first;
+ assert.equal(win.SynthwaveEditorial.validEpisode({...approvedFields,status:'published',audioUrl:'https://audio.example/test.mp3',transcriptUrl:'/synthwave/transcricao/',rightsStatement:'Original autorizado',rightsApprovedAt:'2026-11-14',productionReviewedAt:'2026-11-14'}),true);
 });
 test('roteiro piloto pode ser lido sem fingir existir um áudio publicado',()=>{
  const page=read('podcasts/temporada-01/ep01-cuidar-conectar/index.html');
