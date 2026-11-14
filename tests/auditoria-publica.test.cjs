@@ -26,10 +26,12 @@ test('P0: locator AeroCore só inclui status ativa em unidades operacionais', ()
   assert.match(src, /mode === 'ativas'\s*\? city\.status === 'ativa'/);
   assert.doesNotMatch(src, /mode === 'ativas'\s*\? city\.siteAtivo === true/);
   assert.match(src, /city\.siteAtivo === true \|\| city\.disponivelParaAtivacao === true/);
-  assert.match(src, /em análise \(sem ativação confirmada\)/);
+  assert.match(src, /Território WINF ativo/);
+  assert.match(src, /Seleção sob consulta/);
   const html = read('aerocore/onde-comprar/index.html');
-  assert.match(html, /As centrais próprias 013 e 015 recebem solicitações/);
-  assert.match(html, /Unidades operacionais/);
+  assert.doesNotMatch(html, /As centrais próprias 013 e 015 recebem solicitações/);
+  assert.doesNotMatch(html, /central de atendimento exclusiva da rede/i);
+  assert.match(html, /[Tt]errit[oó]ri|WINF Partners/);
 });
 
 test('P1: aviso de cookies e privacidade válido em todo WINF Journal', () => {
