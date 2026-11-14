@@ -150,7 +150,7 @@ test('conta pessoal é opcional e não aparece como requisito da rádio',()=>{
  const app=read('app.js');
  const cloud=read('cloud-auth.js');
  const playlists=read('my-playlists.js');
- assert.ok(app.includes('Não pedimos nome nem conta.'));
+ assert.ok(app.includes('Grátis e sem cadastro.'), 'A rádio deve informar que é grátis e não exige conta');
  assert.ok(playlists.includes('CONTA OPCIONAL / GOOGLE'));
  assert.ok(cloud.includes('config.enabled!==true'));
  assert.ok(app.includes('start(true)'), 'O Play deve delegar diretamente à engine');
