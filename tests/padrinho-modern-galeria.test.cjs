@@ -31,3 +31,20 @@ test("layout responsivo não quebra navegação",()=>{
  const ids=[...markup.matchAll(/\bid="([^"]+)"/g)].map(x=>x[1]);
  assert.equal(new Set(ids).size,ids.length);
 });
+
+test("fotografias de parceria, família e operação digital são reais no repositório",()=>{
+ const files=[
+  ["partners/media/parceria.webp","/partners/media/parceria.webp"],
+  ["briefing/media/asset-light-familia-2026.webp","/briefing/media/asset-light-familia-2026.webp"],
+  ["briefing/media/asset-light-gestao-20261108.webp","/briefing/media/asset-light-gestao-20261108.webp"]
+ ];
+ for(const [local,url] of files){
+   assert.ok(fs.existsSync(path.join(root,local)),local);
+   assert.ok(page.includes('src="'+url+'"'),url);
+ }
+ assert.match(page,/class="pm-impact-photos"/);
+ assert.match(page,/class="pm-model-photo"/);
+ assert.match(page,/@media\(max-width:760px\)/);
+ assert.match(page,/decoding="async"/);
+ assert.match(page,/loading="lazy"/);
+});
