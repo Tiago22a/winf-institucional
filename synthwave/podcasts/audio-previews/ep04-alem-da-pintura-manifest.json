@@ -1,0 +1,18 @@
+{
+  "episodeId": "ep04-alem-da-pintura",
+  "status": "audio_preview_unreviewed",
+  "speakers": [
+    "LIA",
+    "DAVI"
+  ],
+  "speechEngine": "Piper TTS",
+  "ttsModels": {
+    "LIA": "pt_BR-cadu-medium",
+    "DAVI": "pt_BR-faber-medium"
+  },
+  "soundtrack": "original_synthesized_ambient",
+  "spokenTurns": 32,
+  "durationSecondsApprox": 190.01,
+  "sourceScript": "podcasts/temporada-01/ep04-alem-da-pintura.md",
+  "publicCatalogStatusUnchanged": true
+}
