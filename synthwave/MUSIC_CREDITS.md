@@ -4,6 +4,8 @@ Estas são as obras gravadas incluídas no catálogo em 09/11/2026. **Os arquivo
 
 | Música | Artista | Licença | Fonte |
 |---|---|---|---|
+| Gonna Be Gone | Kjartan Abel | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | [Arquivo e crédito](https://commons.wikimedia.org/wiki/File:Gonna-be-gone-by-Kjartan-Abel.ogg) |
+| In the Desert | Kjartan Abel | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | [Arquivo e crédito](https://commons.wikimedia.org/wiki/File:In-the-desert-by-Kjartan-Abel.ogg) |
 | 1984 | Frank Schroeter | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | [Arquivo e crédito](https://commons.wikimedia.org/wiki/File:1984_by_Frank_Schroeter.ogg) |
 | Driving to the Night | Frank Schroeter | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | [Arquivo e crédito](https://commons.wikimedia.org/wiki/File:Driving_to_the_Night_by_Frank_Schroeter.ogg) |
 | Synth pop with 4 on the floor | Mesostic | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) | [Arquivo e crédito](https://commons.wikimedia.org/wiki/File:Synth_pop_with_4_on_the_floor.ogg) |
@@ -17,3 +19,10 @@ Estas são as obras gravadas incluídas no catálogo em 09/11/2026. **Os arquivo
 **Nota operacional:** a licença do arquivo é distinta de autorizações eventualmente exigidas para transmissão pública, retransmissão ou operação de emissora no Brasil (inclusive direitos autorais e conexos e eventuais obrigações perante o ECAD). Antes de uma operação comercial de rádio é prudente confirmar com assessoria jurídica. O serviço atual é **playlist sob demanda no navegador**, não uma emissora de transmissão ao vivo sincronizada.
 
 **Disponibilidade:** as URLs são hospedadas por terceiros e dependem do navegador e do Wikimedia Commons. As versões MP3 transcoded são alternativas configuradas caso o arquivo OGG não funcione; a reprodução externa não pôde ser testada em navegador conectado nesta sessão. É recomendável disponibilizar cópias hospedadas em infraestrutura própria, respeitando atribuições e termos do provedor, após validar o uso operacional.
+
+
+## Inclusões em 14/11/2026
+As faixas **Gonna Be Gone** e **In the Desert**, de Kjartan Abel, estão disponibilizadas nas páginas de arquivos do Wikimedia Commons sob licença **CC BY-SA 4.0**. O crédito ao autor e os links são obrigatórios; a cláusula compartilhamento pela mesma licença incide sobre adaptações. A própria página de origem registra condições/recomendações do compositor sobre distribuição, revenda e sistemas Content ID. Os arquivos não foram editados, copiados ou hospedados pela WINF. A estabilidade dos arquivos, bloqueios de hotlink e eventual licenciamento necessário para transmissão pública no Brasil ainda exigem teste técnico e análise jurídica antes de expandir a operação para uma emissora.
+
+- Gonna Be Gone: https://commons.wikimedia.org/wiki/File:Gonna-be-gone-by-Kjartan-Abel.ogg
+- In the Desert: https://commons.wikimedia.org/wiki/File:In-the-desert-by-Kjartan-Abel.ogg

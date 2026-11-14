@@ -32,7 +32,7 @@ test('configurações pessoais permanecem desligadas até provisionamento seguro
 test('músicas reais do catálogo contêm autoria, arquivo e licença explícitos',()=>{
  const win={};
  new Function('window',read('music-library.js'))(win);
- assert.equal(win.SYNTHWAVE_LICENSED_TRACKS.length,5);
+ assert.equal(win.SYNTHWAVE_LICENSED_TRACKS.length,7);
  for(const track of win.SYNTHWAVE_LICENSED_TRACKS){
   assert.ok(track.title&&track.artist&&track.audioUrl&&track.sourceUrl);
   assert.ok(track.licenseLabel&&track.licenseUrl);
@@ -102,7 +102,7 @@ test('catálogo editorial bloqueia episódios publicados sem áudio, transcriç�
  new Function('window',read('podcast-catalog.js'))(win);
  const items=win.SYNTHWAVE_PODCAST_CATALOG;
  assert.equal(items.length,8);
- assert.equal(items.filter(x=>x.status==='scripted').length,1);
+ assert.equal(items.filter(x=>x.status==='scripted').length,3);
  assert.equal(items.filter(x=>x.status==='published').length,0);
  assert.ok(items.every(win.SynthwaveEditorial.validEpisode));
  const first=items[0];
@@ -166,4 +166,31 @@ test('MVP: entrada grátis sem barreira de cadastro ou assinatura premium',()=>{
  const editorial=read('PLANO_EDITORIAL_LANCAMENTO.md');
  assert.match(editorial,/GHOST SHOP™/);
  assert.match(editorial,/Não exigir e-mail para ouvir/);
+});
+
+test('duas faixas novas têm créditos e URLs verificáveis do Wikimedia Commons',()=>{
+ const win={};new Function('window',read('music-library.js'))(win);
+ const tracks=win.SYNTHWAVE_LICENSED_TRACKS;
+ assert.equal(new Set(tracks.map(t=>t.id)).size,7);
+ for(const id of ['licensed-gonna-be-gone','licensed-in-the-desert']){
+  const track=tracks.find(t=>t.id===id);
+  assert.ok(track);assert.equal(track.artist,'Kjartan Abel');
+  assert.equal(track.licenseLabel,'CC BY-SA 4.0');
+  assert.ok(track.sourceUrl.startsWith('https://commons.wikimedia.org/wiki/File:'));
+  assert.ok(track.audioUrl.startsWith('https://upload.wikimedia.org/wikipedia/commons/'));
+  assert.ok(read('MUSIC_CREDITS.md').includes(track.sourceUrl));
+ }
+});
+test('podcasts 2 e 3 existem apenas em modo roteiro com prévia de leitura, sem áudio fictício',()=>{
+ const win={};new Function('window',read('podcast-catalog.js'))(win);
+ for(const id of ['ep02-padrinho','ep03-invisivel']){
+  const episode=win.SYNTHWAVE_PODCAST_CATALOG.find(p=>p.id===id);
+  assert.equal(episode.status,'scripted');
+  assert.ok(episode.scriptUrl.startsWith('/synthwave/podcasts/temporada-01/'));
+  const html=read('podcasts/temporada-01/'+id+'/index.html');
+  assert.match(html,/Prévia de roteiro — não é um episódio publicado/);
+  assert.match(html,/O áudio ainda não foi gravado/);
+  assert.doesNotMatch(html,/<audio|<iframe/i);
+  assert.match(html,/LIA/);assert.match(html,/DAVI/);
+ }
 });
