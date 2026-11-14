@@ -187,3 +187,28 @@
 @media(prefers-reduced-motion:reduce){
  .winf-locator-page .directory-more{transition:none}
 }
+
+/* Correção de legibilidade: links de ação exibidos em fundos claros. */
+.winf-locator-page #vitrine-territorios ul.directory-results li>a.vitrine-cta,
+.winf-locator-page #vitrine-territorios ul.directory-results li>a.vitrine-cta:link,
+.winf-locator-page #vitrine-territorios ul.directory-results li>a.vitrine-cta:visited{
+  display:inline-flex!important;
+  opacity:1!important;
+  visibility:visible!important;
+  color:#111713!important;
+  -webkit-text-fill-color:#111713!important;
+  text-decoration:none!important;
+  font-size:13px!important;
+  font-weight:700!important;
+  letter-spacing:0!important;
+  background-color:#e9ede9!important;
+  border:1px solid #e9ede9!important;
+  min-width:180px;
+}
+.winf-locator-page #vitrine-territorios ul.directory-results li>a.vitrine-cta:hover,
+.winf-locator-page #vitrine-territorios ul.directory-results li>a.vitrine-cta:focus-visible{
+  color:#060806!important;
+  -webkit-text-fill-color:#060806!important;
+  background-color:#fff!important;
+  border-color:#fff!important;
+}
