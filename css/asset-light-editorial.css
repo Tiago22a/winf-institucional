@@ -1,0 +1,57 @@
+/* WINF Asset Light™ — painéis fotográficos exclusivos do modelo. Marcas originais preservadas. */
+.page-asset-light{overflow-x:clip}
+.page-asset-light .intro{padding-top:0}
+.page-asset-light .al-cover{
+ position:relative;isolation:isolate;display:flex;align-items:center;
+ width:100vw;min-height:clamp(490px,59vw,700px);
+ margin-left:calc(50% - 50vw);
+ padding:clamp(86px,9vw,140px) max(22px,calc((100vw - 1240px)/2)) clamp(78px,9vw,126px);
+ background:#151719 url("/briefing/media/asset-light-vida-a-dois.webp") center 46%/cover no-repeat;
+ border-bottom:1px solid #ffffff39;
+}
+.page-asset-light .al-cover::before{
+ content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+ background:linear-gradient(90deg,rgba(5,7,11,.94) 0%,rgba(5,7,11,.87) 35%,rgba(5,7,11,.54) 68%,rgba(5,7,11,.25) 100%),linear-gradient(0deg,rgba(5,7,11,.46),transparent 60%);
+}
+.page-asset-light .al-cover .intro-layout{width:100%;margin:0 auto;align-items:center;gap:clamp(30px,5vw,82px)}
+.page-asset-light .al-cover .intro-layout>div:first-child{min-width:0}
+.page-asset-light .al-cover h1{font-size:clamp(60px,8.2vw,120px);text-shadow:0 3px 28px #05070be0}
+.page-asset-light .al-cover p{color:#f0f1f4;text-shadow:0 1px 12px #05070be8}
+.page-asset-light .al-cover .eyebrow{color:#e6ecf0}
+.page-asset-light .al-cover .btn{background:#f5f5f6;color:#0d0d0f}
+.page-asset-light .al-cover .btn.secondary{background:#1118;color:#fff}
+.page-asset-light .intro .mosaic{margin-top:clamp(22px,3vw,44px)}
+.page-asset-light .al-wide-scene{
+ position:relative;isolation:isolate;display:flex;align-items:end;
+ min-height:clamp(430px,46vw,650px);overflow:hidden;
+ background:#14191b url("/briefing/media/asset-light-gestao-remota.webp") center 48%/cover no-repeat;
+ border-block:1px solid #ffffff25;
+}
+.page-asset-light .al-wide-scene::before{
+ content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+ background:linear-gradient(0deg,rgba(5,7,11,.95),rgba(5,7,11,.48) 62%,rgba(5,7,11,.15));
+}
+.page-asset-light .al-wide-copy{padding-block:clamp(75px,8vw,112px)}
+.page-asset-light .al-wide-copy h2{font:400 clamp(37px,5.7vw,74px)/1.03 Gustavo,Inter,sans-serif;letter-spacing:-.05em;text-transform:uppercase;margin:20px 0;max-width:990px;text-shadow:0 3px 24px #000c}
+.page-asset-light .al-wide-copy h2 em{font-style:normal;color:#cad3dd}
+.page-asset-light .al-wide-copy p{max-width:660px;line-height:1.7;color:#e2e4e9;text-shadow:0 1px 10px #000d}
+@media(max-width:780px){
+ .page-asset-light .al-cover{min-height:560px;background-position:58% center;padding-block:90px 92px}
+ .page-asset-light .al-cover::before{background:linear-gradient(90deg,rgba(5,7,11,.94),rgba(5,7,11,.75)),linear-gradient(0deg,#05070b7a,transparent)}
+ .page-asset-light .al-cover .intro-layout{display:block}
+ .page-asset-light .al-cover .intro-layout>div+div{margin-top:30px}
+ .page-asset-light .al-wide-scene{background-position:61% center}
+}
+@media(max-width:480px){
+ .page-asset-light .al-cover{min-height:0;padding:83px 22px 82px;background-position:62% center}
+ .page-asset-light .al-cover h1{font-size:clamp(53px,14vw,76px)}
+ .page-asset-light .al-cover .intro-layout>div+div{margin-top:26px}
+ .page-asset-light .al-cover .actions .btn{width:100%}
+ .page-asset-light .al-cover::before{background:linear-gradient(90deg,#05070bf5,#05070bcb),linear-gradient(0deg,#05070b88,transparent)}
+ .page-asset-light .al-wide-scene{min-height:500px;background-position:65% center}
+ .page-asset-light .al-wide-copy{padding-block:70px}
+ .page-asset-light .al-wide-copy h2{font-size:clamp(36px,10vw,49px)}
+}
+@media(prefers-reduced-motion:reduce){
+ .page-asset-light .al-cover,.page-asset-light .al-wide-scene{background-attachment:scroll}
+}
