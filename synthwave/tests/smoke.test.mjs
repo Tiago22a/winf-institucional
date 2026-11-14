@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
+import {readFileSync,statSync} from 'node:fs';
+import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {resolve,dirname} from 'node:path';
 
@@ -162,7 +163,7 @@ test('MVP: entrada grátis sem barreira de cadastro ou assinatura premium',()=>{
  assert.match(home,/OUVIR AGORA · GRÁTIS/);
  assert.match(home,/href="\/synthwave\/radio\/#live"/);
  assert.doesNotMatch(radio,/SYNTHWAVE PREMIUM/);
- assert.match(radio,/rádio de reprodução contínua/i);
+ assert.match(radio,/rádio musical gratuita com playlists/i);
  assert.equal(JSON.parse(read('firebase-public-config.json')).enabled,false);
  assert.equal(JSON.parse(read('newsletter/config.json')).enabled,false);
  const editorial=read('PLANO_EDITORIAL_LANCAMENTO.md');
@@ -257,7 +258,7 @@ test('vinheta a cada cinco músicas e fallback sem TTS, mantendo rádio aberta',
  assert.ok(radio.includes("if(radioMode&&playing)advanceRadioTrack()"));
  assert.ok(radio.includes("function next(automatic=false){"));
  assert.ok(radio.includes("next(true)"));
- assert.ok(markup.indexOf('station-programming.js')<markup.indexOf('app.js?v=20261114-mp3-1'));
+ assert.ok(markup.indexOf('station-programming.js')<markup.indexOf('app.js?v=20261114-18mp3-release2'));
  assert.ok(markup.includes('station-programming.js'));
  assert.ok(css.includes('.sw-program-timeline'));
  assert.ok(!radio.includes('window.open('));
@@ -340,7 +341,7 @@ test('A rádio exibe as experiências, permite narração local e preserva músi
  assert.ok(tts.includes('global.SpeechSynthesisUtterance'));
  assert.ok(tts.includes('global.speechSynthesis'));
  assert.ok(tts.includes("turn.speaker==='LIA'"),'Vozes devem ter diferenciação de narração');
- assert.ok(radio.indexOf('experiencias/voice-player.js')<radio.indexOf('app.js?v=20261114-mp3-1'));
+ assert.ok(radio.indexOf('experiencias/voice-player.js')<radio.indexOf('app.js?v=20261114-18mp3-release2'));
  assert.ok(!radio.includes('sw-newsletter-mount'));
  assert.ok(!radio.includes('newsletter/newsletter.js'));
 });
@@ -427,7 +428,7 @@ test('A aba Experiências separa volume longo e cápsulas por horário sem bloqu
  assert.ok(radio.includes('experiencias/capsulas/after-hours.js'));
  assert.ok(radio.includes('experiencias/capsulas/night-glow.js'));
  assert.ok(radio.indexOf('experiencias/capsulas/night-glow.js')<radio.indexOf('experiencias/voice-player.js'));
- assert.ok(radio.indexOf('experiencias/voice-player.js')<radio.indexOf('app.js?v=20261114-mp3-1'));
+ assert.ok(radio.indexOf('experiencias/voice-player.js')<radio.indexOf('app.js?v=20261114-18mp3-release2'));
  assert.ok(home.includes('href="/synthwave/radio/#live"'), 'Play direto preservado');
  assert.doesNotMatch(radio,/newsletter\/newsletter\.js|sw-newsletter-mount|data-required-login/i);
 });
@@ -453,14 +454,54 @@ test('prévia de 18 experiências só é exibida após geração real e validaç
   assert.equal(entry.audioUrl,'/synthwave/experiencias/audio-previews/'+id+'-previa.mp3');
   assert.match(entry.sha256,/^[0-9a-f]{64}$/);
  }
- assert.ok(radio.indexOf('experiencias/audio-preview-catalog.js')<radio.indexOf('app.js?v=20261114-mp3-1'));
+ assert.ok(radio.indexOf('experiencias/audio-preview-catalog.js')<radio.indexOf('app.js?v=20261114-18mp3-release2'));
  assert.ok(app.includes('const verifiedAudio='));
  assert.ok(app.includes("knownAudio?.status==='audio_preview_unreviewed'"));
  assert.ok(app.includes('experienceMp3'));
+ assert.ok(app.includes('experienceMp3Status'),'Áudio indisponível deve oferecer fallback legível');
  assert.ok(app.includes('window.SynthwaveExperiencesPlayer.stop()'));
  assert.ok(app.includes('function toggleExperienceVoice(id)'));
  assert.ok(app.includes('if(preview&&!preview.paused)preview.pause();'));
  assert.ok(read('production/export_experiences.mjs').includes('stories.length!==18'));
  assert.ok(read('production/render_experiences.py').includes('audio-preview-catalog.js'));
  assert.ok(read('../.github/workflows/synthwave-experiences-audio.yml').includes('ffprobe'));
+});
+
+
+test('release SynthWAVE: 18 MP3 reais com SHA256, 8 podcasts e 4 faixas próprias',()=>{
+ const w={};new Function('window',read('experiencias/audio-preview-catalog.js'))(w);
+ const entries=Object.entries(w.SYNTHWAVE_EXPERIENCE_AUDIO||{});
+ assert.equal(entries.length,18,'O lançamento deve disponibilizar as 18 prévias antes da divulgação');
+ const catalogue=new Set();
+ for(const [id,entry] of entries){
+  assert.match(id,/^[a-z0-9-]+$/);
+  catalogue.add(id);
+  const mp3='experiencias/audio-previews/'+id+'-previa.mp3';
+  const manifest='experiencias/audio-previews/'+id+'-manifest.json';
+  assert.ok(statSync(resolve(dir,mp3)).size>60000,'MP3 vazio: '+id);
+  const bytes=readFileSync(resolve(dir,mp3));
+  assert.ok(bytes.toString('ascii',0,3)==='ID3'||(bytes[0]===0xff&&(bytes[1]&0xe0)===0xe0),'Cabeçalho MP3 inválido: '+id);
+  const hash=createHash('sha256').update(bytes).digest('hex');
+  assert.equal(hash,entry.sha256,'SHA256 diferente do catálogo: '+id);
+  const meta=JSON.parse(read(manifest));
+  assert.equal(meta.experienceId,id);
+  assert.equal(meta.sha256,hash);
+  assert.equal(meta.finalPublicationApproved,false,'Prévia não pode virar áudio final por engano');
+  assert.equal(meta.status,'audio_preview_unreviewed');
+  assert.ok(meta.durationSecondsApprox>45);
+  assert.ok(meta.spokenTurns>=15);
+ }
+ const previews=['ep01-cuidar-conectar','ep02-padrinho','ep03-invisivel','ep04-alem-da-pintura','ep05-recomeco','ep06-cidade','ep07-brasil','ep08-institute'];
+ for(const id of previews){
+  assert.ok(statSync(resolve(dir,'podcasts/audio-previews/'+id+'-previa.mp3')).size>60000,'Podcast sem áudio: '+id);
+  const manifest=JSON.parse(read('podcasts/audio-previews/'+id+'-manifest.json'));
+  assert.equal(manifest.status,'audio_preview_unreviewed');
+ }
+ for(const file of ['foco-frequencia-clara','estrada-horizonte','refugio-chuva-sintetica','depois-das-20h']){
+  assert.ok(statSync(resolve(dir,'audio/original/'+file+'.mp3')).size>60000,'Música autoral ausente: '+file);
+ }
+ assert.equal(catalogue.size,18);
+ const radio=read('radio/index.html');
+ assert.ok(radio.includes('audio-preview-catalog.js?v=20261114-18mp3-release2'),'Página deve contornar cache de catálogo vazio anterior');
+ assert.ok(radio.includes('18 prévias de histórias'),'Descrição deve refletir conteúdos realmente gerados');
 });
