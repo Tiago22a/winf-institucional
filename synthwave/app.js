@@ -184,7 +184,8 @@ function openExperience(id){
  const mp3Panel=verifiedAudio
   ?'<section class="sw-exp-mp3" aria-label="Prévia sonora produzida"><h3 class="text-white text-xl">▶ Ouvir a prévia sonora</h3>'+
    '<p class="text-gray-300 text-sm my-3">LIA e DAVI em vozes sintéticas. MP3 produzido para revisão — não é edição final aprovada.</p>'+
-   '<audio id="experienceMp3" class="w-full" controls preload="none" src="'+escapeHtml(knownAudio.audioUrl)+'" onplay="pause();window.SynthwaveExperiencesPlayer.stop()" aria-label="Ouvir a prévia de '+escapeHtml(e.title)+'"></audio></section>'
+   '<audio id="experienceMp3" class="w-full" controls preload="none" src="'+escapeHtml(knownAudio.audioUrl)+'" onplay="pause();window.SynthwaveExperiencesPlayer.stop()" onerror="document.getElementById(\'experienceMp3Status\').textContent=\'Esta prévia não pôde ser carregada. Ouça com a voz do navegador ou leia o roteiro abaixo.\'" aria-label="Ouvir a prévia de '+escapeHtml(e.title)+'"></audio>'+
+   '<p id="experienceMp3Status" role="status" aria-live="polite" class="text-xs text-gray-400 mt-2">Prévia em revisão; use também a narração do navegador, se preferir.</p></section>'
   :'';
  const area=$('#experienceDetail');
  if(!area)return;
