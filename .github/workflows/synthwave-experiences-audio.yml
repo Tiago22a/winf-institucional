@@ -104,12 +104,12 @@ jobs:
         run: |
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git config user.name 'github-actions[bot]'
-          git add synthwave/experiencias/audio-previews/
+          git add synthwave/experiencias/audio-previews/ synthwave/experiencias/audio-preview-catalog.js
           if git diff --staged --quiet; then
             echo 'Prévia inalterada.'
             exit 0
           fi
-          git commit -m 'SynthWAVE: adicionar prévias MP3 das experiências [skip ci]'
+          git commit -m 'SynthWAVE: disponibilizar prévias MP3 verificadas de 18 experiências'
           git fetch origin main
           git rebase origin/main
           git push origin HEAD:main
