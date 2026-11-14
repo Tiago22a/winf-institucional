@@ -1,0 +1,21 @@
+// SYNTHWAVE.fm — integrar ao match /databases/{database}/documents EXISTENTE.
+// NÃO publicar este arquivo isoladamente: poderia substituir regras de outros apps WINF.
+match /synthwave_users/{uid}/playlists/{playlistId} {
+  function own() {
+    return request.auth != null && request.auth.uid == uid;
+  }
+  function valid() {
+    return request.resource.data.keys().hasOnly(['name', 'tracks', 'updatedAt'])
+      && request.resource.data.keys().hasAll(['name', 'tracks', 'updatedAt'])
+      && request.resource.data.name is string
+      && request.resource.data.name.size() >= 2
+      && request.resource.data.name.size() <= 48
+      && request.resource.data.tracks is list
+      && request.resource.data.tracks.size() <= 100
+      && request.resource.data.updatedAt == request.time;
+  }
+  allow get, list: if own();
+  allow create, update: if own() && valid() && playlistId.size() <= 48;
+  allow delete: if own();
+}
+// Não há escrita pública de catálogo, uploads nem leads nesta etapa.
