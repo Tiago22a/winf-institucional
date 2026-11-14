@@ -28,4 +28,4 @@ jobs:
       - name: Verificações SynthWAVE
         run: |
           node --check synthwave/email/lifecycle.cjs
-          node --test synthwave/tests/smoke.test.mjs synthwave/email/lifecycle.test.cjs
+          node --test synthwave/tests/smoke.test.mjs synthwave/email/lifecycle.test.cjs synthwave/tests/editorial-original.test.mjs
