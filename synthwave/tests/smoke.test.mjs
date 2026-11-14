@@ -102,7 +102,7 @@ test('catálogo editorial bloqueia episódios publicados sem áudio, transcriç�
  new Function('window',read('podcast-catalog.js'))(win);
  const items=win.SYNTHWAVE_PODCAST_CATALOG;
  assert.equal(items.length,8);
- assert.equal(items.filter(x=>x.status==='scripted').length,3);
+ assert.equal(items.filter(x=>x.status==='scripted').length,8);
  assert.equal(items.filter(x=>x.status==='published').length,0);
  assert.ok(items.every(win.SynthwaveEditorial.validEpisode));
  const first=items[0];
@@ -214,4 +214,27 @@ test('pipeline de áudio usa somente roteiros originais e três identidades de e
   assert.match(html,/Prévia de roteiro|prévia editorial|roteiro original/i);
   assert.ok(!html.includes('<audio'), 'o player não pode aparecer sem MP3 disponível');
  }
+});
+
+test('temporada completa possui 8 roteiros e prévias condicionadas ao MP3 real',()=>{
+ const win={};new Function('window',read('podcast-catalog.js'))(win);
+ const ids=['ep04-alem-da-pintura','ep05-recomeco','ep06-cidade','ep07-brasil','ep08-institute'];
+ const player=read('production/audio-preview.js');
+ const render=read('production/render_audio.py');
+ for(const id of ids){
+   const item=win.SYNTHWAVE_PODCAST_CATALOG.find(x=>x.id===id);
+   assert.equal(item?.status,'scripted');
+   assert.equal(item.scriptUrl,'/synthwave/podcasts/temporada-01/'+id+'/');
+   assert.ok(render.includes('"'+id+'"'));
+   assert.ok(player.includes("'"+id+"'"));
+   const script=read('podcasts/temporada-01/'+id+'.md');
+   const html=read('podcasts/temporada-01/'+id+'/index.html');
+   const lia=(script.match(/\\*\\*LIA:\\*\\*/g)||[]).length;
+   const davi=(script.match(/\\*\\*DAVI:\\*\\*/g)||[]).length;
+   assert.ok(lia>=10&&davi>=10,id);
+   assert.match(html,/Prévia de roteiro — não é um episódio publicado/);
+   assert.ok(html.includes('data-audio-episode="'+id+'"'));
+   assert.ok(!html.includes('<audio'),'player vazio não deve aparecer');
+ }
+ assert.equal(win.SYNTHWAVE_PODCAST_CATALOG.filter(x=>x.status==='published').length,0);
 });
