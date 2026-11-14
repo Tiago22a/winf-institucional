@@ -21,6 +21,8 @@ jobs:
           python-version: '3.11'
       - name: Dependências e síntese autoral
         run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
           python -m pip install --disable-pip-version-check numpy scipy
           python synthwave/audio-source/render_originals.py
       - name: Verificar formatos, duração e áudio presente
