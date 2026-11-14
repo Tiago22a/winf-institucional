@@ -4,6 +4,17 @@
  * If a file is replaced or withdrawn, verify its license before adding a substitute.
  */
 window.SYNTHWAVE_LICENSED_TRACKS = [
+  {id:'licensed-gonna-be-gone',title:'Gonna Be Gone',artist:'Kjartan Abel',category:'Drive',cover:'https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=80',duration:158,
+   audioUrl:'https://upload.wikimedia.org/wikipedia/commons/e/e1/Gonna-be-gone-by-Kjartan-Abel.ogg',
+   sourceUrl:'https://commons.wikimedia.org/wiki/File:Gonna-be-gone-by-Kjartan-Abel.ogg',
+   artistUrl:'https://kjartan-abel.com/library/',licenseLabel:'CC BY-SA 4.0',licenseUrl:'https://creativecommons.org/licenses/by-sa/4.0/',
+   changes:'Arquivo original não alterado; controle de reprodução e volume no navegador.',rightsReviewedAt:'2026-11-14'},
+  {id:'licensed-in-the-desert',title:'In the Desert',artist:'Kjartan Abel',category:'Focus',cover:'https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=900&q=80',duration:874,
+   audioUrl:'https://upload.wikimedia.org/wikipedia/commons/a/ad/In-the-desert-by-Kjartan-Abel.ogg',
+   sourceUrl:'https://commons.wikimedia.org/wiki/File:In-the-desert-by-Kjartan-Abel.ogg',
+   artistUrl:'https://kjartan-abel.com/library/',licenseLabel:'CC BY-SA 4.0',licenseUrl:'https://creativecommons.org/licenses/by-sa/4.0/',
+   changes:'Arquivo original não alterado; controle de reprodução e volume no navegador.',rightsReviewedAt:'2026-11-14'},
+
   {id:'licensed-1984',title:'1984',artist:'Frank Schroeter',category:'Drive',cover:'https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=80',duration:200,
    audioUrl:'https://upload.wikimedia.org/wikipedia/commons/2/20/1984_by_Frank_Schroeter.ogg',
    fallbackAudioUrl:'https://upload.wikimedia.org/wikipedia/commons/transcoded/2/20/1984_by_Frank_Schroeter.ogg/1984_by_Frank_Schroeter.ogg.mp3',
