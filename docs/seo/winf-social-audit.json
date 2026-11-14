@@ -1399,6 +1399,10 @@
       "reason": "noindex"
     },
     {
+      "route": "synthwave/podcasts/temporada-01/ep01-cuidar-conectar",
+      "reason": "noindex"
+    },
+    {
       "route": "synthwave/radio",
       "reason": "noindex"
     },
