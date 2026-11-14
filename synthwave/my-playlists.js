@@ -36,6 +36,59 @@ function favorite(tracks,index){
  if(!favoriteList.tracks.includes(track.id)){favoriteList.tracks.push(track.id);persist()}
  announce('Faixa salva em Favoritas neste navegador.');
 }
+
+function cloudControls(){
+ const info=global.SynthwaveCloud?.snapshot();
+ if(!info||info.status==='checking')return '<p class="text-gray-400 text-sm">Verificando disponibilidade da conta Google…</p>';
+ if(!info.ready)return '<p class="text-gray-400 text-sm">'+html(info.message)+'</p>';
+ if(!info.user)return '<div class="flex flex-wrap items-center gap-4"><button type="button" data-action="cloud-login" class="sw-moment-action">Entrar com Google ↗</button><p class="text-gray-400 text-xs">Opcional. A rádio continua livre.</p></div>';
+ return '<p class="text-gray-300 text-sm">'+html(info.message)+'</p>'+
+   '<div class="flex flex-wrap gap-3 mt-4">'+
+   '<button type="button" data-action="cloud-save" class="sw-moment-action">Salvar cópia na nuvem ↑</button>'+
+   '<button type="button" data-action="cloud-restore" class="btn-outline">Trazer playlists da nuvem ↓</button>'+
+   '<button type="button" data-action="cloud-logout" class="btn-outline">Sair da conta</button></div>'+
+   '<p class="text-gray-500 text-xs mt-4">A troca com a nuvem é manual nesta versão. Baixar ou enviar faz mesclagem sem apagar as listas existentes.</p>';
+}
+function cloudRefresh(){
+ const block=document.getElementById('sw-cloud-controls');
+ if(block)block.innerHTML=cloudControls();
+}
+function mergeCloud(tracks,remote){
+ const local=read(tracks),allowed=new Set(tracks.map(t=>t.id));
+ for(const item of remote){
+   if(!item||typeof item.id!=='string')continue;
+   const trackIds=(Array.isArray(item.tracks)?item.tracks:[]).filter(id=>allowed.has(id));
+   const existing=local.find(x=>x.id===item.id);
+   if(existing){
+     existing.tracks=[...new Set([...existing.tracks,...trackIds])].slice(0,100);
+   }else if(local.length<25&&typeof item.name==='string'){
+     local.push({id:item.id,name:item.name.slice(0,48),tracks:[...new Set(trackIds)].slice(0,100)});
+   }
+ }
+ persist();
+}
+async function cloudAction(action,tracks,redraw){
+ const service=global.SynthwaveCloud;
+ if(!service){announce('Conta Google ainda não disponível.');return}
+ try{
+   if(action==='cloud-login'){await service.login();announce('Entrada realizada. Agora você pode salvar cópias na nuvem.');}
+   else if(action==='cloud-logout'){await service.logout();announce('Você saiu da conta. Suas playlists locais continuam no aparelho.');}
+   else if(action==='cloud-save'){
+     announce('Mesclando e salvando a biblioteca na nuvem…');
+     const remote=await service.load();
+     mergeCloud(tracks,remote);
+     const count=await service.save(read(tracks));
+     redraw();announce(count+' playlist(s) salvas na sua conta Google.');
+   }else if(action==='cloud-restore'){
+     announce('Buscando suas playlists privadas…');
+     const remote=await service.load();
+     mergeCloud(tracks,remote);
+     redraw();announce('Playlists recuperadas e mescladas com as deste navegador.');
+   }
+ }catch(error){announce(error?.message||'Não foi possível sincronizar. Sua biblioteca local foi preservada.')}
+ cloudRefresh();
+}
+global.addEventListener?.('sw:cloud-state',cloudRefresh);
 function render(tracks){
  const playlists=read(tracks);
  const cards=playlists.map(item=>{
@@ -62,8 +115,8 @@ function render(tracks){
   '<p class="text-pink font-bold uppercase tracking-[.2em] text-xs">A SUA FREQUÊNCIA</p>'+
   '<h1 class="text-white text-5xl md:text-7xl mt-3">MINHAS PLAYLISTS.</h1>'+
   '<p class="text-gray-400 mt-4 max-w-3xl">Crie suas coleções e salve músicas da biblioteca SynthWAVE.fm. Ouça sem cadastro e organize seus favoritos.</p>'+
-  '<div class="panel p-5 mt-7 mb-8 sw-local-notice"><strong class="text-white">Suas escolhas, neste navegador.</strong>'+
-  '<p class="text-sm text-gray-400 mt-2">Nesta etapa, as playlists são salvas apenas neste dispositivo. Não há conta Google nem sincronização em nuvem ativada. Envio de músicas próprias exigirá confirmação de autoria, permissão de uso e moderação.</p></div>'+
+  '<div class="panel p-5 mt-7 mb-8 sw-local-notice"><strong class="text-white">Biblioteca pessoal · cópia local.</strong>'+
+  '<p class="text-sm text-gray-400 mt-2">Suas playlists funcionam imediatamente neste dispositivo. Quando a conta Google estiver ativada, você poderá fazer backup e recuperar suas seleções. Envio público de músicas próprias só virá após a verificação de direitos e moderação.</p></div><div class="panel p-5 mb-8 sw-cloud-card"><p class="text-pink text-[10px] tracking-[.18em] uppercase font-black">CONTA OPCIONAL / GOOGLE</p><h2 class="text-white text-3xl mt-2 mb-4">Leve suas playlists com você.</h2><div id="sw-cloud-controls">'+cloudControls()+'</div></div>'+
   '<form id="sw-create-list" class="flex flex-wrap gap-3 mb-8"><label for="sw-list-name" class="sr-only">Nome da nova playlist</label>'+
   '<input id="sw-list-name" type="text" class="flex-1 min-w-[220px]" maxlength="48" minlength="2" required placeholder="Nome da sua nova playlist">'+
   '<button type="submit" class="sw-moment-action">+ Criar playlist</button></form>'+
@@ -87,7 +140,9 @@ function bind(tracks,playIndices,redraw){
  root.addEventListener('click',e=>{
    const button=e.target.closest('button[data-action]');
    if(!button)return;
-   const id=button.dataset.id,action=button.dataset.action,all=read(tracks);
+   const action=button.dataset.action;
+   if(action.startsWith('cloud-')){cloudAction(action,tracks,redraw);return;}
+   const id=button.dataset.id,all=read(tracks);
    const chosen=all.find(x=>x.id===id);
    if(!chosen)return;
    if(action==='play'){

@@ -1,0 +1,19 @@
+name = "synthwave-newsletter-api"
+main = "./worker.js"
+compatibility_date = "2026-11-14"
+workers_dev = false
+
+# Configure a route on a dedicated API subdomain or path AFTER deployment.
+# [routes]
+# pattern = "api.winf.com.br/synthwave/newsletter"
+# zone_name = "winf.com.br"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "synthwave-newsletter"
+database_id = "REPLACE_WITH_REAL_D1_DATABASE_ID"
+
+[vars]
+ALLOWED_ORIGINS = "https://winf.com.br,https://www.winf.com.br"
+CONSENT_VERSION = "synthwave-newsletter-v1"
+# Set TURNSTILE_SECRET using wrangler secret put, NEVER here.

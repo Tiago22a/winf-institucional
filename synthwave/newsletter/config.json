@@ -1,0 +1,8 @@
+{
+  "enabled": false,
+  "endpoint": "",
+  "turnstileSiteKey": "",
+  "consentVersion": "synthwave-newsletter-v1",
+  "privacyUrl": "/aerocore/policies/#privacidade",
+  "note": "Turn this on only after the Worker, D1 migration, Turnstile and opt-out process have been configured."
+}
