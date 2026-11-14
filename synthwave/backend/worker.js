@@ -47,7 +47,8 @@ export default {
   try{body=await request.text();if(body.length>3000)return invalid('Dados muito extensos.',origin)}catch(_){return invalid('Requisição inválida.',origin)}
   try{body=JSON.parse(body)}catch(_){return invalid('JSON inválido.',origin)}
   const name=String(body.name||'').trim().replace(/\s+/g,' ');
-  const phone=String(body.phone||'').replace(/\D/g,'');
+  const digits=String(body.phone||'').replace(/\D/g,'');
+  const phone=digits.length===11?'55'+digits:digits;
   const consent=body.consent===true,version=String(body.consentVersion||'');
   const token=String(body.turnstileToken||'');
   if(!/^[^\x00-\x1f<>]{2,80}$/.test(name))return invalid('Informe um nome válido.',origin);
