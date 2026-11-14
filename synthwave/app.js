@@ -48,7 +48,7 @@ const ambientOptions=[
 // Episódios são gerenciados pelo catálogo editorial versionado, não pelo navegador.
 const podcasts=(window.SYNTHWAVE_PODCAST_CATALOG||[]).map(item=>({
  ...item,cover:cover(item.artwork),
- stageLabel:item.status==='published'?'ÁUDIO PUBLICADO':item.status==='scripted'?'ROTEIRO EM REVISÃO':'EM PLANEJAMENTO'
+ stageLabel:item.status==='published'?'ÁUDIO PUBLICADO':item.previewAudioUrl?'PRÉVIA SONORA DISPONÍVEL':item.status==='scripted'?'ROTEIRO EM REVISÃO':'EM PLANEJAMENTO'
 }));
 const schedules=window.SynthwaveStation.blocks;
 let queue=tracks.map((t,i)=>t.audioUrl?i:-1).filter(i=>i>=0),position=0,playing=false,elapsed=0,timer=null,activeView='home',filter='Todos',soundscape=null,radioMode=false,radioErrors=0;
@@ -81,6 +81,8 @@ function podcastCard(p){
   ?'<a class="sw-podcast-script-link" href="'+escapeHtml(p.scriptUrl)+'">Ler prévia do roteiro ↗</a>':'';
  const published=p.status==='published'&&p.audioUrl&&p.transcriptUrl&&p.rightsStatement
   ?'<div class="mt-5"><p class="text-xs sw-accent-text uppercase font-bold">Áudio disponível · produzido com vozes de IA</p><audio class="w-full mt-3" controls preload="none" src="'+escapeHtml(p.audioUrl)+'" onplay="pause()" aria-label="Ouvir episódio '+escapeHtml(p.title)+'"></audio><a class="block text-xs mt-3 underline" href="'+escapeHtml(p.transcriptUrl)+'">Ler transcrição acessível</a></div>':'';
+ const preview=p.status==='scripted'&&p.previewAudioUrl
+  ?'<div class="mt-5 sw-podcast-preview" data-preview-audio="'+escapeHtml(p.previewAudioUrl)+'"><p class="text-xs sw-accent-text uppercase font-bold">Prévia sonora · LIA e DAVI · em revisão</p><p class="text-gray-400 text-xs mt-2">Áudio de prévia produzido com vozes sintéticas; a edição final ainda não foi aprovada.</p><audio class="w-full mt-3" controls preload="none" src="'+escapeHtml(p.previewAudioUrl)+'" onplay="pause()" aria-label="Ouvir prévia de '+escapeHtml(p.title)+'"></audio></div>':'';
  const project=p.projectUrl?'<a class="sw-podcast-project" href="'+escapeHtml(p.projectUrl)+'">Conhecer iniciativa ↗</a>':'';
  return '<article class="panel overflow-hidden"><img loading="lazy" src="'+p.cover+'" alt="" class="w-full aspect-[4/3] object-cover"><div class="p-5">'+
  '<p class="sw-accent-text text-[10px] font-black tracking-widest uppercase">'+escapeHtml(p.category)+'</p>'+
@@ -89,7 +91,7 @@ function podcastCard(p){
  '<p class="text-gray-400 text-xs mt-3 leading-relaxed">'+escapeHtml(p.summary)+'</p>'+
  '<p class="text-xs sw-accent-text mt-5 uppercase font-bold tracking-wide">'+escapeHtml(p.stageLabel)+'</p>'+
  '<p class="text-gray-500 text-xs mt-2">'+escapeHtml(p.format)+'</p>'+
- '<div class="sw-podcast-actions">'+script+project+'</div>'+published+'</div></article>';
+ '<div class="sw-podcast-actions">'+script+project+'</div>'+preview+published+'</div></article>';
 }
 function home(){return '<section class="hero min-h-[480px] md:min-h-[630px] flex items-center relative overflow-hidden"><div class="max-w-7xl mx-auto w-full px-5 py-20 relative z-10"><p class="sw-accent-text font-bold tracking-[.4em] uppercase text-xs mb-5">A new frequency is born // 24.7</p><h1 class="text-white text-[clamp(5rem,14vw,13rem)] leading-[.78] glow">FEEL THE<br><span class="sw-accent-text">FREQUENCY.</span></h1><p class="text-white/70 text-base md:text-xl max-w-xl mt-9">Seu universo sonoro. Músicas licenciadas, paisagens eletrônicas e playlists que acompanham cada jornada.</p><div class="flex flex-wrap gap-3 mt-8">'+button('▶ Ouvir sem cadastro',"go('live');startRadio()")+button('Explorar playlists',"go('playlists')",'btn-outline')+'</div><p class="text-gray-500 text-xs tracking-[.3em] uppercase mt-10">Music · Technology · Motion · Culture</p></div><div class="absolute right-[-12%] top-16 w-[55vw] aspect-square rounded-full border sw-accent-border-subtle shadow-[0_0_160px_40px_#b7d5bc1b]"></div></section><section class="max-w-7xl mx-auto px-5 py-16">'+heading('Curated frequency','SONS PARA CADA MOMENTO','Faixas e soundscapes da experiência SYNTHWAVE.fm.')+'<div class="grid grid-cols-2 lg:grid-cols-4 gap-4">'+tracks.slice(0,4).map((t,i)=>trackCard(t,i)).join('')+'</div></section><section class="paper py-16 px-5"><div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center"><div><p class="sw-accent-text text-xs tracking-widest font-extrabold">EDITORIAL MANIFESTO</p><h2 class="text-6xl md:text-8xl leading-none mt-3">NÃO É SÓ<br>UMA RÁDIO.</h2><p class="mt-6 text-lg">É um território de frequências, tecnologia, movimento e identidade.</p>'+button('Conheça o manifesto',"go('about')",'btn-outline mt-8')+'</div><div class="font-brush text-5xl md:text-7xl rotate-[-6deg] text-[#d7aa7a] text-center">TURN IT UP.</div></div></section><section class="max-w-7xl mx-auto px-5 py-16">'+heading('Selected for you','PLAYLISTS EM DESTAQUE')+'<div class="grid md:grid-cols-3 gap-5">'+playlists.slice(0,3).map(playlistCard).join('')+'</div></section>'+
  '<section class="max-w-7xl mx-auto px-5 py-14">'+heading('Escolha pelo momento','CADA MOMENTO TEM UMA TRILHA','Estudar, trabalhar, viajar, namorar ou relaxar. Comece a ouvir sem cadastro.')+
@@ -124,7 +126,8 @@ function playlistView(){
 function podcastView(){
  const scripted=podcasts.filter(p=>p.status==='scripted').length;
  const published=podcasts.filter(p=>p.status==='published').length;
- const productionNote=scripted+' roteiro(s) disponíveis para leitura e revisão editorial. '+(published?published+' episódio(s) com áudio publicado.':'Nenhum episódio tem áudio publicado ainda.')+' Áudios só aparecem após revisão humana, transcrição e comprovação de direitos.';
+ const previewCount=podcasts.filter(p=>p.status==='scripted'&&p.previewAudioUrl).length;
+ const productionNote=previewCount+' prévia(s) sonoras disponíveis para escuta, sem cadastro. '+scripted+' roteiro(s) em revisão. '+(published?published+' episódio(s) com edição final aprovada.':'Nenhuma edição final foi homologada ainda.');
  return '<section class="max-w-7xl mx-auto py-12">'+
  heading('Histórias que ficam','PODCASTS','Diálogos originais entre duas vozes de IA, com histórias, ideias e experiências humanas. Cada episódio mostra seu estágio real de produção.')+
  '<div class="panel p-6 border-l-4 sw-accent-border mb-8"><p class="text-white font-bold">Primeira temporada em produção editorial.</p><p class="text-gray-400 text-sm mt-2">'+escapeHtml(productionNote)+'</p></div>'+
