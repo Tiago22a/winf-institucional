@@ -1,0 +1,31 @@
+name: WINF Turnkey — Busca dos 200 territórios para cliente final
+on:
+  pull_request:
+    paths:
+      - 'config/winf-territorios-consumidor-200.json'
+      - 'js/winf-turnkey-consumidor.js'
+      - 'onde-comprar/index.html'
+      - 'tests/winf-turnkey-consumidor-200.test.mjs'
+      - '.github/workflows/winf-turnkey-consumidor.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'config/winf-territorios-consumidor-200.json'
+      - 'js/winf-turnkey-consumidor.js'
+      - 'onde-comprar/index.html'
+      - 'tests/winf-turnkey-consumidor-200.test.mjs'
+      - '.github/workflows/winf-turnkey-consumidor.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  consumer-directory:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: |
+          node --check js/winf-turnkey-consumidor.js
+          node --test tests/winf-turnkey-consumidor-200.test.mjs

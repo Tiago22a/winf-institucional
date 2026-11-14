@@ -1,0 +1,1208 @@
+{
+  "schema": "winf.public.customer-territories.v1",
+  "count": 200,
+  "whatsapp": "5513981113001",
+  "availability": "atendimento_sob_consulta",
+  "territories": [
+    {
+      "id": "sao-paulo-sp",
+      "cidade": "São Paulo",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "barueri-sp",
+      "cidade": "Barueri",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "santana-de-parnaiba-sp",
+      "cidade": "Santana de Parnaíba",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "osasco-sp",
+      "cidade": "Osasco",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "cotia-sp",
+      "cidade": "Cotia",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "itapevi-sp",
+      "cidade": "Itapevi",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "jandira-sp",
+      "cidade": "Jandira",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "carapicuiba-sp",
+      "cidade": "Carapicuíba",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "taboao-da-serra-sp",
+      "cidade": "Taboão da Serra",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "embu-das-artes-sp",
+      "cidade": "Embu das Artes",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "itapecerica-da-serra-sp",
+      "cidade": "Itapecerica da Serra",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "sao-caetano-do-sul-sp",
+      "cidade": "São Caetano do Sul",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "santo-andre-sp",
+      "cidade": "Santo André",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "sao-bernardo-do-campo-sp",
+      "cidade": "São Bernardo do Campo",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "diadema-sp",
+      "cidade": "Diadema",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "maua-sp",
+      "cidade": "Mauá",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "ribeirao-pires-sp",
+      "cidade": "Ribeirão Pires",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "guarulhos-sp",
+      "cidade": "Guarulhos",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "aruja-sp",
+      "cidade": "Arujá",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "mairipora-sp",
+      "cidade": "Mairiporã",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "caieiras-sp",
+      "cidade": "Caieiras",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "cajamar-sp",
+      "cidade": "Cajamar",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "vargem-grande-paulista-sp",
+      "cidade": "Vargem Grande Paulista",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "campinas-sp",
+      "cidade": "Campinas",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "valinhos-sp",
+      "cidade": "Valinhos",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "vinhedo-sp",
+      "cidade": "Vinhedo",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "indaiatuba-sp",
+      "cidade": "Indaiatuba",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "paulinia-sp",
+      "cidade": "Paulínia",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "americana-sp",
+      "cidade": "Americana",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "santa-barbara-d-oeste-sp",
+      "cidade": "Santa Bárbara d'Oeste",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "nova-odessa-sp",
+      "cidade": "Nova Odessa",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "sumare-sp",
+      "cidade": "Sumaré",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "hortolandia-sp",
+      "cidade": "Hortolândia",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "jaguariuna-sp",
+      "cidade": "Jaguariúna",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "holambra-sp",
+      "cidade": "Holambra",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "pedreira-sp",
+      "cidade": "Pedreira",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "cosmopolis-sp",
+      "cidade": "Cosmópolis",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "artur-nogueira-sp",
+      "cidade": "Artur Nogueira",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "piracicaba-sp",
+      "cidade": "Piracicaba",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "limeira-sp",
+      "cidade": "Limeira",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "rio-claro-sp",
+      "cidade": "Rio Claro",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "araras-sp",
+      "cidade": "Araras",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "cordeiropolis-sp",
+      "cidade": "Cordeirópolis",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "jundiai-sp",
+      "cidade": "Jundiaí",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "itupeva-sp",
+      "cidade": "Itupeva",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "louveira-sp",
+      "cidade": "Louveira",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "itatiba-sp",
+      "cidade": "Itatiba",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "campo-limpo-paulista-sp",
+      "cidade": "Campo Limpo Paulista",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "atibaia-sp",
+      "cidade": "Atibaia",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "braganca-paulista-sp",
+      "cidade": "Bragança Paulista",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "amparo-sp",
+      "cidade": "Amparo",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "serra-negra-sp",
+      "cidade": "Serra Negra",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "socorro-sp",
+      "cidade": "Socorro",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "aguas-de-lindoia-sp",
+      "cidade": "Águas de Lindóia",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "mogi-guacu-sp",
+      "cidade": "Mogi Guaçu",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "mogi-mirim-sp",
+      "cidade": "Mogi Mirim",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "sao-joao-da-boa-vista-sp",
+      "cidade": "São João da Boa Vista",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "sao-jose-dos-campos-sp",
+      "cidade": "São José dos Campos",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "jacarei-sp",
+      "cidade": "Jacareí",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "taubate-sp",
+      "cidade": "Taubaté",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "cacapava-sp",
+      "cidade": "Caçapava",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "pindamonhangaba-sp",
+      "cidade": "Pindamonhangaba",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "tremembe-sp",
+      "cidade": "Tremembé",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "guaratingueta-sp",
+      "cidade": "Guaratinguetá",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "lorena-sp",
+      "cidade": "Lorena",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "cruzeiro-sp",
+      "cidade": "Cruzeiro",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "campos-do-jordao-sp",
+      "cidade": "Campos do Jordão",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "caraguatatuba-sp",
+      "cidade": "Caraguatatuba",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "sao-sebastiao-sp",
+      "cidade": "São Sebastião",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "ilhabela-sp",
+      "cidade": "Ilhabela",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "ubatuba-sp",
+      "cidade": "Ubatuba",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "aparecida-sp",
+      "cidade": "Aparecida",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "ribeirao-preto-sp",
+      "cidade": "Ribeirão Preto",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "sertaozinho-sp",
+      "cidade": "Sertãozinho",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "franca-sp",
+      "cidade": "Franca",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "batatais-sp",
+      "cidade": "Batatais",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "barretos-sp",
+      "cidade": "Barretos",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "olimpia-sp",
+      "cidade": "Olímpia",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "bebedouro-sp",
+      "cidade": "Bebedouro",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "jaboticabal-sp",
+      "cidade": "Jaboticabal",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "sao-joaquim-da-barra-sp",
+      "cidade": "São Joaquim da Barra",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "araraquara-sp",
+      "cidade": "Araraquara",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "sao-carlos-sp",
+      "cidade": "São Carlos",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "matao-sp",
+      "cidade": "Matão",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "mococa-sp",
+      "cidade": "Mococa",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "orlandia-sp",
+      "cidade": "Orlândia",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "monte-alto-sp",
+      "cidade": "Monte Alto",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "sao-jose-do-rio-preto-sp",
+      "cidade": "São José do Rio Preto",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "mirassol-sp",
+      "cidade": "Mirassol",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "catanduva-sp",
+      "cidade": "Catanduva",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "votuporanga-sp",
+      "cidade": "Votuporanga",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "aracatuba-sp",
+      "cidade": "Araçatuba",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "birigui-sp",
+      "cidade": "Birigui",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "bauru-sp",
+      "cidade": "Bauru",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "jau-sp",
+      "cidade": "Jaú",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "botucatu-sp",
+      "cidade": "Botucatu",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "marilia-sp",
+      "cidade": "Marília",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "assis-sp",
+      "cidade": "Assis",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "presidente-prudente-sp",
+      "cidade": "Presidente Prudente",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "ourinhos-sp",
+      "cidade": "Ourinhos",
+      "uf": "SP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "rio-branco-ac",
+      "cidade": "Rio Branco",
+      "uf": "AC",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "maceio-al",
+      "cidade": "Maceió",
+      "uf": "AL",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "manaus-am",
+      "cidade": "Manaus",
+      "uf": "AM",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "macapa-ap",
+      "cidade": "Macapá",
+      "uf": "AP",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "salvador-ba",
+      "cidade": "Salvador",
+      "uf": "BA",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "feira-de-santana-ba",
+      "cidade": "Feira de Santana",
+      "uf": "BA",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "vitoria-da-conquista-ba",
+      "cidade": "Vitória da Conquista",
+      "uf": "BA",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "camacari-ba",
+      "cidade": "Camaçari",
+      "uf": "BA",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "lauro-de-freitas-ba",
+      "cidade": "Lauro de Freitas",
+      "uf": "BA",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "fortaleza-ce",
+      "cidade": "Fortaleza",
+      "uf": "CE",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "caucaia-ce",
+      "cidade": "Caucaia",
+      "uf": "CE",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "juazeiro-do-norte-ce",
+      "cidade": "Juazeiro do Norte",
+      "uf": "CE",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "brasilia-df",
+      "cidade": "Brasília",
+      "uf": "DF",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "vitoria-es",
+      "cidade": "Vitória",
+      "uf": "ES",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "vila-velha-es",
+      "cidade": "Vila Velha",
+      "uf": "ES",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "serra-es",
+      "cidade": "Serra",
+      "uf": "ES",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "goiania-go",
+      "cidade": "Goiânia",
+      "uf": "GO",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "anapolis-go",
+      "cidade": "Anápolis",
+      "uf": "GO",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "aparecida-de-goiania-go",
+      "cidade": "Aparecida de Goiânia",
+      "uf": "GO",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "rio-verde-go",
+      "cidade": "Rio Verde",
+      "uf": "GO",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "catalao-go",
+      "cidade": "Catalão",
+      "uf": "GO",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "sao-luis-ma",
+      "cidade": "São Luís",
+      "uf": "MA",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "imperatriz-ma",
+      "cidade": "Imperatriz",
+      "uf": "MA",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "belo-horizonte-mg",
+      "cidade": "Belo Horizonte",
+      "uf": "MG",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "uberlandia-mg",
+      "cidade": "Uberlândia",
+      "uf": "MG",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "uberaba-mg",
+      "cidade": "Uberaba",
+      "uf": "MG",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "contagem-mg",
+      "cidade": "Contagem",
+      "uf": "MG",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "betim-mg",
+      "cidade": "Betim",
+      "uf": "MG",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "juiz-de-fora-mg",
+      "cidade": "Juiz de Fora",
+      "uf": "MG",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "montes-claros-mg",
+      "cidade": "Montes Claros",
+      "uf": "MG",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "ipatinga-mg",
+      "cidade": "Ipatinga",
+      "uf": "MG",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "divinopolis-mg",
+      "cidade": "Divinópolis",
+      "uf": "MG",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "pocos-de-caldas-mg",
+      "cidade": "Poços de Caldas",
+      "uf": "MG",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "nova-lima-mg",
+      "cidade": "Nova Lima",
+      "uf": "MG",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "campo-grande-ms",
+      "cidade": "Campo Grande",
+      "uf": "MS",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "dourados-ms",
+      "cidade": "Dourados",
+      "uf": "MS",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "tres-lagoas-ms",
+      "cidade": "Três Lagoas",
+      "uf": "MS",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "cuiaba-mt",
+      "cidade": "Cuiabá",
+      "uf": "MT",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "rondonopolis-mt",
+      "cidade": "Rondonópolis",
+      "uf": "MT",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "varzea-grande-mt",
+      "cidade": "Várzea Grande",
+      "uf": "MT",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "sinop-mt",
+      "cidade": "Sinop",
+      "uf": "MT",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "belem-pa",
+      "cidade": "Belém",
+      "uf": "PA",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "ananindeua-pa",
+      "cidade": "Ananindeua",
+      "uf": "PA",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "santarem-pa",
+      "cidade": "Santarém",
+      "uf": "PA",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "joao-pessoa-pb",
+      "cidade": "João Pessoa",
+      "uf": "PB",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "campina-grande-pb",
+      "cidade": "Campina Grande",
+      "uf": "PB",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "recife-pe",
+      "cidade": "Recife",
+      "uf": "PE",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "jaboatao-dos-guararapes-pe",
+      "cidade": "Jaboatão dos Guararapes",
+      "uf": "PE",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "olinda-pe",
+      "cidade": "Olinda",
+      "uf": "PE",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "caruaru-pe",
+      "cidade": "Caruaru",
+      "uf": "PE",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "teresina-pi",
+      "cidade": "Teresina",
+      "uf": "PI",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "parnaiba-pi",
+      "cidade": "Parnaíba",
+      "uf": "PI",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "curitiba-pr",
+      "cidade": "Curitiba",
+      "uf": "PR",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "londrina-pr",
+      "cidade": "Londrina",
+      "uf": "PR",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "maringa-pr",
+      "cidade": "Maringá",
+      "uf": "PR",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "cascavel-pr",
+      "cidade": "Cascavel",
+      "uf": "PR",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "foz-do-iguacu-pr",
+      "cidade": "Foz do Iguaçu",
+      "uf": "PR",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "ponta-grossa-pr",
+      "cidade": "Ponta Grossa",
+      "uf": "PR",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "sao-jose-dos-pinhais-pr",
+      "cidade": "São José dos Pinhais",
+      "uf": "PR",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "colombo-pr",
+      "cidade": "Colombo",
+      "uf": "PR",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "paranagua-pr",
+      "cidade": "Paranaguá",
+      "uf": "PR",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "rio-de-janeiro-rj",
+      "cidade": "Rio de Janeiro",
+      "uf": "RJ",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "niteroi-rj",
+      "cidade": "Niterói",
+      "uf": "RJ",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "duque-de-caxias-rj",
+      "cidade": "Duque de Caxias",
+      "uf": "RJ",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "nova-iguacu-rj",
+      "cidade": "Nova Iguaçu",
+      "uf": "RJ",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "petropolis-rj",
+      "cidade": "Petrópolis",
+      "uf": "RJ",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "volta-redonda-rj",
+      "cidade": "Volta Redonda",
+      "uf": "RJ",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "macae-rj",
+      "cidade": "Macaé",
+      "uf": "RJ",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "campos-dos-goytacazes-rj",
+      "cidade": "Campos dos Goytacazes",
+      "uf": "RJ",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "cabo-frio-rj",
+      "cidade": "Cabo Frio",
+      "uf": "RJ",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "armacao-dos-buzios-rj",
+      "cidade": "Armação dos Búzios",
+      "uf": "RJ",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "angra-dos-reis-rj",
+      "cidade": "Angra dos Reis",
+      "uf": "RJ",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "resende-rj",
+      "cidade": "Resende",
+      "uf": "RJ",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "marica-rj",
+      "cidade": "Maricá",
+      "uf": "RJ",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "sao-goncalo-rj",
+      "cidade": "São Gonçalo",
+      "uf": "RJ",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "natal-rn",
+      "cidade": "Natal",
+      "uf": "RN",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "mossoro-rn",
+      "cidade": "Mossoró",
+      "uf": "RN",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "porto-velho-ro",
+      "cidade": "Porto Velho",
+      "uf": "RO",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "ji-parana-ro",
+      "cidade": "Ji-Paraná",
+      "uf": "RO",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "boa-vista-rr",
+      "cidade": "Boa Vista",
+      "uf": "RR",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "porto-alegre-rs",
+      "cidade": "Porto Alegre",
+      "uf": "RS",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "caxias-do-sul-rs",
+      "cidade": "Caxias do Sul",
+      "uf": "RS",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "canoas-rs",
+      "cidade": "Canoas",
+      "uf": "RS",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "novo-hamburgo-rs",
+      "cidade": "Novo Hamburgo",
+      "uf": "RS",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "pelotas-rs",
+      "cidade": "Pelotas",
+      "uf": "RS",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "santa-maria-rs",
+      "cidade": "Santa Maria",
+      "uf": "RS",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "passo-fundo-rs",
+      "cidade": "Passo Fundo",
+      "uf": "RS",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "florianopolis-sc",
+      "cidade": "Florianópolis",
+      "uf": "SC",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "joinville-sc",
+      "cidade": "Joinville",
+      "uf": "SC",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "blumenau-sc",
+      "cidade": "Blumenau",
+      "uf": "SC",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "itajai-sc",
+      "cidade": "Itajaí",
+      "uf": "SC",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "balneario-camboriu-sc",
+      "cidade": "Balneário Camboriú",
+      "uf": "SC",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "sao-jose-sc",
+      "cidade": "São José",
+      "uf": "SC",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "criciuma-sc",
+      "cidade": "Criciúma",
+      "uf": "SC",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "chapeco-sc",
+      "cidade": "Chapecó",
+      "uf": "SC",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "jaragua-do-sul-sc",
+      "cidade": "Jaraguá do Sul",
+      "uf": "SC",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "aracaju-se",
+      "cidade": "Aracaju",
+      "uf": "SE",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "nossa-senhora-do-socorro-se",
+      "cidade": "Nossa Senhora do Socorro",
+      "uf": "SE",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "palmas-to",
+      "cidade": "Palmas",
+      "uf": "TO",
+      "consumerContactPhone": "5513981113001"
+    },
+    {
+      "id": "araguaina-to",
+      "cidade": "Araguaína",
+      "uf": "TO",
+      "consumerContactPhone": "5513981113001"
+    }
+  ]
+}
