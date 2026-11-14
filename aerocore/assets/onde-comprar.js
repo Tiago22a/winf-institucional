@@ -3,12 +3,28 @@
 (() => {
   const root = document.querySelector('.ac-directory');
   if (!root) return;
-  const source = [
+  const legacy = [
     ...(globalThis.WINF_CIDADES || []),
     ...(globalThis.WINF_PAGINAS_REGIONAIS || [])
-  ];
-  // Demonstration records are never advertised as real units or available territories.
-  const cities = source.filter(city => city && city.exemplo === false && ['ativa', 'pre_ativacao', 'nao_ativa'].includes(city.status));
+  ].filter(city => city && city.exemplo === false && ['ativa', 'pre_ativacao', 'nao_ativa'].includes(city.status));
+  // Inventário de 200 municípios: status de solicitação do consumidor separado
+  // da existência de loja física, do licenciamento e da confirmação de execução.
+  const onDemand = Array.isArray(globalThis.WINF_SERVICE_TERRITORIES_200)
+    ? globalThis.WINF_SERVICE_TERRITORIES_200 : [];
+  const byId = new Map(legacy.filter(city => city.id).map(city => [city.id, city]));
+  onDemand.forEach(item => {
+    if (!item || !/^[a-z0-9-]+-[a-z]{2}$/.test(item.id) ||
+        !/^[A-Z]{2}$/.test(item.uf) || !item.cidade) return;
+    const previous = byId.get(item.id) || {};
+    byId.set(item.id, {
+      ...previous, id: item.id, cidade: item.cidade, uf: item.uf,
+      status: 'pre_ativacao', exemplo: false, onDemand: true,
+      numero: '5513981113001', tipoAtendimento: null,
+      siteAtivo: false, url: null, instagram: null,
+      disponivelParaAtivacao: true
+    });
+  });
+  const cities = [...byId.values()];
   const extras = Array.isArray(globalThis.WINF_UNIDADES_EXTRAS) ? globalThis.WINF_UNIDADES_EXTRAS.filter(city => city && city.exemplo === false && city.status === 'ativa') : [];
   const extrasSection = document.getElementById('directory-extras');
   const extraResults = document.getElementById('directory-extra-results');
@@ -40,8 +56,9 @@
   const names = { automotivo: 'Automotivo', residencial: 'Residencial', ambos: 'Automotivo + residencial' };
   const normalize = value => String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
   const eligible = city => mode === 'ativas'
-    ? city.status === 'ativa'
-    : city.status !== 'ativa' && (city.siteAtivo === true || city.disponivelParaAtivacao === true);
+    ? (city.onDemand === true || city.status === 'ativa')
+    : (city.onDemand === true ||
+        (city.status !== 'ativa' && (city.siteAtivo === true || city.disponivelParaAtivacao === true)));
   function safeUrl(value) {
     if (!value) return null;
     try {
@@ -65,7 +82,7 @@
     const matchesFilter = city =>
       (!q || normalize(city.cidade + ' ' + city.uf).includes(q)) &&
       (!state.value || city.uf === state.value) &&
-      (mode === 'territorios' || !service.value || city.tipoAtendimento === service.value ||
+      (mode === 'territorios' || city.onDemand === true || !service.value || city.tipoAtendimento === service.value ||
       (service.value === 'nao_informado' && !city.tipoAtendimento) ||
       (service.value !== 'ambos' && city.tipoAtendimento === 'ambos'));
     const matched = cities.filter(city => eligible(city) && matchesFilter(city));
@@ -74,48 +91,55 @@
     function cardsFor(items) {
       const fragment = document.createDocumentFragment();
       items.forEach(city => {
-        const active = city.status === 'ativa';
+        const onDemand = city.onDemand === true;
+        const active = city.status === 'ativa' && !onDemand;
+        const serviceJourney = mode === 'ativas';
         const card = template.content.cloneNode(true);
         const article = card.querySelector('article');
-        article.dataset.status = city.status;
-        article.dataset.journey = active ? 'atendimento' : 'expansao';
+        article.dataset.status = onDemand ? 'pre_ativacao' : city.status;
+        article.dataset.journey = serviceJourney ? 'atendimento' : 'expansao';
         card.querySelector('.directory-card-state').textContent = city.uf || 'BR';
-        card.querySelector('.directory-card-status').textContent =
-          active ? '● Território WINF ativo' : city.siteAtivo ? '◌ Estrutura digital publicada' : '◌ Seleção sob consulta';
+        card.querySelector('.directory-card-status').textContent = serviceJourney
+          ? (onDemand ? '◌ Solicitações WINF abertas' : '● Atendimento WINF')
+          : (onDemand ? '◌ Titular licenciado não atribuído' :
+             city.siteAtivo ? '◌ Estrutura digital publicada' : '◌ Seleção sob consulta');
         card.querySelector('.directory-card-city').textContent = city.cidade + (city.uf ? ' — ' + city.uf : '');
-        card.querySelector('.directory-card-segment').textContent = active
-          ? (names[city.tipoAtendimento] || 'Películas para vidros') + ' · Atendimento e instalação mediante confirmação'
-          : 'WINF Asset Light™ · oportunidade territorial';
+        card.querySelector('.directory-card-segment').textContent = serviceJourney
+          ? (onDemand ? 'Atendimento sob demanda · execução e agenda mediante confirmação' :
+             (names[city.tipoAtendimento] || 'Películas para vidros') + ' · Atendimento e instalação mediante confirmação')
+          : 'WINF Asset Light™ · oportunidade de licenciamento territorial';
         const claim = card.querySelector('.directory-card-claim');
-        if (!active) {
+        if (!serviceJourney && !active) {
           claim.hidden = false;
-          claim.textContent = 'Apenas 1 licenciado selecionado por cidade. Não é para todos.';
+          claim.textContent = 'Licenciamento por seleção e contrato; o atendimento ao consumidor já recebe solicitações.';
         }
-        const tags = active
-          ? (city.tipoAtendimento === 'ambos' ? ['Automotivo', 'Residencial'] : [names[city.tipoAtendimento] || 'Soluções WINF'])
-          : [city.siteAtivo ? 'Página online' : 'Em preparação', 'Exclusividade territorial'];
+        const tags = serviceJourney
+          ? (onDemand ? ['Atendimento WINF', 'Sob consulta'] :
+             (city.tipoAtendimento === 'ambos' ? ['Automotivo', 'Residencial'] : [names[city.tipoAtendimento] || 'Soluções WINF']))
+          : (onDemand ? ['Seleção territorial', 'Sem titular licenciado'] :
+             [city.siteAtivo ? 'Página online' : 'Em preparação', 'Exclusividade territorial']);
         tags.forEach(label => {
           const tag = document.createElement('span');
           tag.textContent = label;
           card.querySelector('.directory-card-tags').append(tag);
         });
         const links = card.querySelector('.directory-card-links');
-        if (city.siteAtivo === true) {
-          addLink(links, active ? 'Ver página da cidade ↗' : 'Conhecer estrutura pronta ↗', city.url);
+        // Não ressuscitar URLs de páginas geográficas removidas do sitemap.
+        if (!onDemand && city.siteAtivo === true) {
+          addLink(links, serviceJourney ? 'Ver página da cidade ↗' : 'Conhecer estrutura pronta ↗', city.url);
         }
-        if (active) {
-          const whatsapp = /^55\d{10,11}$/.test(String(city.numero || ''))
-            ? city.numero : '5513981113001';
+        if (serviceJourney) {
+          const whatsapp = onDemand ? '5513981113001' :
+            (/^55\d{10,11}$/.test(String(city.numero || '')) ? city.numero : '5513981113001');
           const message = 'Olá! Estou em ' + city.cidade + '/' + city.uf +
-            ' e gostaria de consultar atendimento WINF Select. Pode me orientar?';
+            ' e gostaria de solicitar atendimento WINF. Podem confirmar a disponibilidade para meu serviço?';
           addLink(links, 'Solicitar atendimento ↗',
             'https://wa.me/' + whatsapp + '?text=' + encodeURIComponent(message));
-          if (city.instagram) addLink(links, 'Instagram ↗', city.instagram);
+          if (!onDemand && city.instagram) addLink(links, 'Instagram ↗', city.instagram);
         } else {
-          const message = 'Olá! Vi a estrutura digital WINF da cidade de ' + city.cidade + '/' + city.uf +
-            '. Tenho interesse em ser o único licenciado WINF Asset Light™ do município. ' +
-            'A seleção ainda está disponível? Gostaria de conhecer o pack, as condições de contratação e a ativação.';
-          addLink(links, 'Consultar exclusividade ↗',
+          const message = 'Olá! Gostaria de conhecer as condições para licenciar o território WINF de ' +
+            city.cidade + '/' + city.uf + '. Está disponível para seleção?';
+          addLink(links, 'Consultar licenciamento ↗',
             'https://wa.me/5513997815375?text=' + encodeURIComponent(message));
         }
         fragment.append(card);
@@ -144,7 +168,7 @@
       ? (matched.length + extraMatched.length) + ' cidades com atendimento WINF'
       : matched.length + (matched.length === 1 ? ' cidade na vitrine de expansão' : ' cidades na vitrine de expansão');
     networkNote.hidden = mode !== 'ativas';
-    networkNote.textContent = 'Atendimento e agenda sujeitos à confirmação';
+    networkNote.textContent = 'Atendimento WINF sob demanda · execução e agenda sob confirmação';
     document.getElementById('directory-kicker').textContent = mode === 'ativas'
       ? 'WINF SELECT™ / ATENDIMENTO' : 'WINF PARTNERS™ / TERRITÓRIOS';
     document.getElementById('directory-title').textContent = mode === 'ativas'
@@ -152,7 +176,7 @@
     document.getElementById('directory-empty-title').textContent = mode === 'ativas'
       ? 'Sua cidade pode ser a próxima.' : 'Não encontrou sua cidade?';
     document.getElementById('directory-empty-copy').textContent = mode === 'ativas'
-      ? 'Explore as cidades com estrutura digital WINF preparada para expansão. A oportunidade de representar sua cidade pode estar aberta.'
+      ? 'Não encontrou sua cidade? Envie sua solicitação à WINF para consultar cobertura, condições e agenda.'
       : 'Conte qual município você deseja desenvolver. Nossa equipe pode verificar o cadastro e as condições de seleção.';
     const contact = document.getElementById('directory-empty-contact');
     contact.textContent = mode === 'ativas' ? 'Consultar atendimento →' : 'Falar com expansão →';
