@@ -1,0 +1,29 @@
+name: SynthWAVE FM — testes da plataforma
+on:
+  pull_request:
+    paths:
+      - 'synthwave/**'
+      - '.github/workflows/synthwave-fm-smoke.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'synthwave/**'
+      - '.github/workflows/synthwave-fm-smoke.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Obter projeto
+        uses: actions/checkout@v4
+      - name: Node LTS
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verificações SynthWAVE
+        run: node --test synthwave/tests/smoke.test.mjs
