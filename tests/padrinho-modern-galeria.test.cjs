@@ -19,7 +19,8 @@ test("oito fotografias exclusivas do Padrinho estão versionadas e são WebP vá
  }
 });
 test("uma fotografia por etapa sem reutilizar outra página e sem repetir no mesmo site",()=>{
- const referenced=[...page.matchAll(/winf-padrinho-modern-([a-z]+-\d{2})\.webp/g)].map(m=>m[1]);
+ const visualPage=page.replace(/<link\b[^>]*rel="preload"[^>]*>/gi,"");
+ const referenced=[...visualPage.matchAll(/winf-padrinho-modern-([a-z]+-\d{2})\.webp/g)].map(m=>m[1]);
  assert.equal(referenced.length,8);
  assert.equal(new Set(referenced).size,8);
  for(const n of names)assert.ok(referenced.includes(n),n);
