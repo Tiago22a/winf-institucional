@@ -1313,6 +1313,25 @@
 <meta name="twitter:description" content="Uma iniciativa social WINF em estruturação: comunidade, educação, tecnologia e oportunidades.">
 <meta name="twitter:image" content="https://winf.com.br/images/og/winf-share-partners-cuidar-e-conectar-1200x630-r2.jpg">
 <meta name="twitter:image:alt" content="Imagem editorial WINF™ para WINF™: CUIDAR. E CONECTAR.. Fotografia ilustrativa.">
+<style>
+/* Cuidar & Conectar™ — narrativa fotográfica em painéis grandes, inspirado no padrão Padrinho Modern. */
+.cc-story{position:relative;isolation:isolate;display:flex;align-items:center;min-height:clamp(620px,87svh,920px);background:#101e13;overflow:hidden;border-bottom:1px solid #9eeb7847}
+.cc-story-media,.cc-story-shade{position:absolute;inset:0;pointer-events:none}
+.cc-story-media{z-index:-2}
+.cc-story-media img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 44%;filter:saturate(.88) contrast(1.04)}
+.cc-story-shade{z-index:-1;background:linear-gradient(90deg,rgba(4,13,7,.95) 0%,rgba(4,13,7,.82) 33%,rgba(4,13,7,.38) 70%,rgba(4,13,7,.14)),linear-gradient(0deg,rgba(4,13,7,.64),transparent 35%)}
+.cc-story-content{padding:clamp(85px,11vw,150px) 0;position:relative}
+.cc-story h2{font:400 clamp(46px,7vw,104px)/1.03 Anton,Impact,sans-serif;letter-spacing:.006em;text-transform:uppercase;max-width:920px;margin:24px 0}
+.cc-story h2 em{font-style:normal;color:#95f060}
+.cc-story-content>p:not(.cc-overline){max-width:590px;font:500 clamp(16px,1.75vw,21px)/1.75 Inter,Arial,sans-serif;color:#f1f9f2;margin:0 0 30px;text-shadow:0 2px 14px #0009}
+.cc-story-content small{display:block;max-width:580px;color:#d7e7d7;font:500 11px/1.7 Inter,Arial,sans-serif;margin-top:22px}
+.cc-closing-cinema{background:radial-gradient(ellipse at 85% 12%,#326c3a68,transparent 50%),linear-gradient(135deg,#08150b,#15251b 64%,#07120a)!important}
+.cc-closing-cinema .cc-closing-media{display:none!important}
+.cc-closing-cinema .cc-closing-shade{background:linear-gradient(100deg,#051008ab,transparent)!important}
+@media(max-width:800px){.cc-story{min-height:690px}.cc-story-shade{background:linear-gradient(0deg,rgba(4,13,7,.96),rgba(4,13,7,.72) 60%,rgba(4,13,7,.40))}.cc-story-media img{object-position:60% center}.cc-story h2{font-size:clamp(45px,10vw,73px)}}
+@media(max-width:560px){.cc-story{min-height:740px}.cc-story-content{padding:100px 0 85px}.cc-story h2{font-size:clamp(43px,11vw,61px)}.cc-story-content>p:not(.cc-overline){font-size:16px}}
+@media(prefers-reduced-motion:reduce){.cc-story *{animation:none!important;transition:none!important}}
+</style>
 </head><body class="pp-page pp-social winf-page-cuidar"><a class="pp-skip" href="#conteudo">Pular para o conteúdo</a>
 <header class="pp-header"><div class="pp-wrap pp-nav">
   <a class="pp-brand" href="/partners/" aria-label="WINF Partners — início"><img src="/briefing/media/winf-logo-white-official.png" alt="WINF™ — logomarca oficial" width="109" height="36"><span>PARTNERS<sup>™</sup></span></a>
@@ -1334,14 +1353,19 @@
   </div>
 </section>
 <div class="cc-values" aria-label="Pilares do projeto"><div class="cc-values-inner"><strong>EDUCAÇÃO</strong><i aria-hidden="true"></i><strong>INCLUSÃO</strong><i aria-hidden="true"></i><strong>OPORTUNIDADES</strong><i aria-hidden="true"></i><strong>TRANSFORMAÇÃO</strong></div></div>
-<section class="cc-gallery" id="historias" aria-labelledby="cc-historias-titulo"><div class="cc-wrap">
-  <header class="cc-gallery-head"><div><span class="cc-kicker">01 / NOSSA IDENTIDADE VISUAL</span><h2 id="cc-historias-titulo">CONEXÕES<br><em>QUE INSPIRAM.</em></h2></div><p>O universo visual Cuidar & Conectar™ nasce de encontros, colaboração e educação. Cada cena apresenta uma possibilidade de futuro — com pessoas no centro de tudo.</p></header>
-  <div class="cc-photo-grid">
-    <figure class="cc-photo"><div class="cc-photo-frame"><div class="cc-photo-fallback" aria-hidden="true">PESSOAS. ENCONTROS. CUIDADO.</div><img src="/media/ecossistema/cuidar-conectar-community.webp" loading="lazy" decoding="async" alt="Arte original Cuidar & Conectar: gesto de acolhimento entre voluntário e criança" onerror="this.hidden=true"></div><figcaption><strong>01 / O PODER DE ESTAR PRESENTE</strong><small>Comunidade</small></figcaption></figure>
-    <figure class="cc-photo"><div class="cc-photo-frame"><div class="cc-photo-fallback" aria-hidden="true">APRENDER. CONECTAR. CRESCER.</div><img src="/media/ecossistema/cuidar-conectar-education.webp" loading="lazy" decoding="async" alt="Arte original Cuidar & Conectar: crianças aprendendo com tecnologia em oficina educativa" onerror="this.hidden=true"></div><figcaption><strong>02 / CONHECIMENTO COMPARTILHADO</strong><small>Educação</small></figcaption></figure>
+<section class="cc-story" id="historias" aria-labelledby="cc-story-title">
+  <div class="cc-story-media" aria-hidden="true">
+    <img src="/media/ecossistema/cuidar-conectar-education.webp" alt="" loading="lazy" decoding="async" width="1600" height="900">
   </div>
-  <p class="cc-concept-note">Campanha ilustrativa criada para comunicar a proposta; imagens não documentam atividades executadas.</p>
-</div></section>
+  <div class="cc-story-shade" aria-hidden="true"></div>
+  <div class="pp-wrap cc-story-content">
+    <p class="cc-overline">01 / EDUCAÇÃO, TECNOLOGIA E PESSOAS</p>
+    <h2 id="cc-story-title">QUANDO O CONHECIMENTO<br><em>ENCONTRA OPORTUNIDADE.</em></h2>
+    <p>O Cuidar &amp; Conectar™ nasce da intenção de aproximar pessoas, compartilhar conhecimento e abrir caminhos para a inclusão. Cada conexão começa pela escuta e cresce com responsabilidade.</p>
+    <a class="cc-cta cc-cta--ghost" href="#proposito">CONHECER NOSSO PROPÓSITO ↓</a>
+    <small>Imagem conceitual da campanha. Não representa atividade social já executada.</small>
+  </div>
+</section>
 <section class="wc-section pp-social-cinema cc-cinema" id="filmes" aria-label="Filmes da campanha Cuidar & Conectar™">
   <div class="wc-head"><div><p class="wc-kicker">02 / CUIDAR & CONECTAR™ EM MOVIMENTO</p><h2>O CUIDADO SE VÊ.<br><em>A CONEXÃO SE SENTE.</em></h2></div><p>Dois filmes originais da campanha: acolhimento na comunidade e oficina educativa com tecnologia. Uma visão de possibilidades, não um registro de ações realizadas.</p></div>
   <div class="wc-film-grid">
@@ -1366,12 +1390,6 @@
 </div></section>
 <div class="pp-wrap pp-social-note"><p><strong>Estado atual:</strong> conceito em planejamento. Esta página não anuncia benefícios garantidos, inscrições, repasses financeiros ou projetos já executados.</p></div>
 <section class="pp-closing cc-closing-cinema" aria-labelledby="cc-closing-title">
-  <div class="cc-closing-media" aria-hidden="true">
-    <img src="/media/ecossistema/cuidar-conectar-education.webp" alt="" loading="lazy" decoding="async" width="1600" height="900">
-    <video data-winf-cinema autoplay muted loop playsinline preload="none" tabindex="-1" poster="/media/ecossistema/cuidar-conectar-education.webp">
-      <source data-src="/media/ecossistema/cuidar-conectar-education.mp4" type="video/mp4">
-    </video>
-  </div>
   <div class="cc-closing-shade" aria-hidden="true"></div>
   <div class="pp-wrap cc-closing-content">
     <p class="pp-kicker">06 / CONEXÃO — CUIDAR &amp; CONECTAR™</p>
