@@ -81,10 +81,10 @@
         article.dataset.journey = active ? 'atendimento' : 'expansao';
         card.querySelector('.directory-card-state').textContent = city.uf || 'BR';
         card.querySelector('.directory-card-status').textContent =
-          active ? '● Atendimento WINF' : city.siteAtivo ? '◌ Estrutura digital publicada' : '◌ Seleção sob consulta';
+          active ? '● Território WINF ativo' : city.siteAtivo ? '◌ Estrutura digital publicada' : '◌ Seleção sob consulta';
         card.querySelector('.directory-card-city').textContent = city.cidade + (city.uf ? ' — ' + city.uf : '');
         card.querySelector('.directory-card-segment').textContent = active
-          ? (names[city.tipoAtendimento] || 'Películas para vidros') + ' · Atendimento sob agendamento'
+          ? (names[city.tipoAtendimento] || 'Películas para vidros') + ' · Atendimento e instalação mediante confirmação'
           : 'WINF Asset Light™ · oportunidade territorial';
         const claim = card.querySelector('.directory-card-claim');
         if (!active) {
