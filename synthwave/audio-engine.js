@@ -13,10 +13,20 @@ const PROGRESSIONS={
  sunset_highway:[[110,164.81,220,277.18],[130.81,196,261.63,329.63],[87.31,130.81,174.61,220],[98,146.83,196,246.94]]
 };
 class AudioEngine {
- constructor(){this.ctx=null;this.master=null;this.analyser=null;this.media=null;this.mediaSource=null;this.interval=null;this.nodes=new Set();this.soundscape=null;this.soundscapeSource=null;this.volume=.65;this.playing=false;this.generation=0;this.currentTrack=null;this.onEnd=null;this.ambientType=null;}
+ constructor(){this.ctx=null;this.master=null;this.analyser=null;this.media=null;this.mediaSource=null;this.interval=null;this.nodes=new Set();this.soundscape=null;this.soundscapeSource=null;this.volume=.65;this.ambientVolume=.38;this.playing=false;this.generation=0;this.currentTrack=null;this.onEnd=null;this.ambientType=null;}
  init(){if(!this.ctx||this.ctx.state==='closed'){const AC=global.AudioContext||global.webkitAudioContext;if(!AC)throw Error('Este navegador não suporta Web Audio');this.ctx=new AC();this.master=this.ctx.createGain();this.master.gain.value=this.volume;this.analyser=this.ctx.createAnalyser();this.analyser.fftSize=128;this.analyser.smoothingTimeConstant=.78;this.master.connect(this.analyser);this.analyser.connect(this.ctx.destination);}if(this.ctx.state==='suspended')this.ctx.resume();return this.ctx;}
  setVolume(value){this.volume=Math.max(0,Math.min(1,Number(value)||0));if(this.ctx&&this.master)this.master.gain.setTargetAtTime(this.volume,this.ctx.currentTime,.05);if(this.media)this.media.volume=this.volume;}
  getAnalyser(){return this.analyser;}
+ // Music and environmental sound levels are deliberately independent.
+ _ambientLevel(){
+   const factor={white:.12,pink:.2,brown:.24,rain:.2,ocean:.25,wind:.24,traffic:.14,static:.10}[this.ambientType]||.18;
+   return this.ambientVolume*factor;
+ }
+ setAmbientVolume(value){
+   const number=Number(value);
+   this.ambientVolume=Math.max(0,Math.min(1,Number.isFinite(number)?number:0));
+   if(this.soundscape&&this.ctx)this.soundscape.gain.setTargetAtTime(this._ambientLevel(),this.ctx.currentTime,.04);
+ }
  _voice(freq,type,start,duration,level,target,attack=.04){const c=this.ctx,o=c.createOscillator(),g=c.createGain();o.type=type;o.frequency.setValueAtTime(freq,start);g.gain.setValueAtTime(.0001,start);g.gain.linearRampToValueAtTime(level,start+Math.min(attack,duration*.4));g.gain.exponentialRampToValueAtTime(.0001,start+duration);o.connect(g);g.connect(target);o.onended=()=>{this.nodes.delete(o);o.disconnect();g.disconnect()};this.nodes.add(o);o.start(start);o.stop(start+duration+.01);}
  _preset(track){const c=this.ctx,generation=this.generation,chords=PROGRESSIONS[track.synthPreset]||PROGRESSIONS.cyber_drive,bpm=Math.max(40,Math.min(210,track.bpm||110)),period=120/bpm;let step=0;const tick=()=>{if(generation!==this.generation||!this.playing)return;const now=c.currentTime,chord=chords[step++%chords.length],filter=c.createBiquadFilter();filter.type='lowpass';filter.frequency.value=track.synthPreset==='aerocore_ambient'?1200:2200;filter.Q.value=2.5;filter.connect(this.master);for(let i=0;i<chord.length;i++)this._voice(chord[i],i===0?'sawtooth':'triangle',now,period*.96,.06/chord.length,filter,.2);if(track.synthPreset!=='aerocore_ambient')this._voice(chord[0]/2,'sine',now,period*.48,.12,this.master,.05); // Filter only passes through short-lived voices.
  setTimeout(()=>{try{filter.disconnect()}catch(_){}},Math.ceil(period*1100)+100);};tick();this.interval=setInterval(tick,period*1000);}
@@ -105,7 +115,43 @@ class AudioEngine {
    this._sessionState();
  }
  _stopSoundscape(){if(this.soundscapeSource){try{this.soundscapeSource.stop()}catch(_){}this.soundscapeSource.disconnect();this.soundscapeSource=null}if(this.soundscape){this.soundscape.disconnect();this.soundscape=null}}
- setSoundscape(type){if(type!==null&&!['rain','traffic','static'].includes(type))return;this.ambientType=type;this._stopSoundscape();if(!type||!this.playing||!this.ctx)return;const c=this.ctx,size=c.sampleRate*2,buffer=c.createBuffer(1,size,c.sampleRate),samples=buffer.getChannelData(0);for(let i=0;i<size;i++)samples[i]=(Math.random()*2-1)*(type==='traffic'?.5:1);const src=c.createBufferSource(),filter=c.createBiquadFilter(),gain=c.createGain();src.buffer=buffer;src.loop=true;filter.type=type==='rain'?'highpass':'lowpass';filter.frequency.value=type==='rain'?2000:type==='traffic'?300:4500;gain.gain.value=type==='static'?.06:.12;src.connect(filter);filter.connect(gain);gain.connect(this.master);src.start();this.soundscape=gain;this.soundscapeSource=src;}
+ setSoundscape(type){
+   const allowed=['rain','traffic','static','white','pink','brown','ocean','wind'];
+   if(type!==null&&!allowed.includes(type))return;
+   this.ambientType=type;
+   this._stopSoundscape();
+   if(!type||!this.playing||!this.ctx)return;
+   const c=this.ctx,size=c.sampleRate*2,buffer=c.createBuffer(1,size,c.sampleRate);
+   const samples=buffer.getChannelData(0);
+   let brown=0,b0=0,b1=0,b2=0;
+   for(let i=0;i<size;i++){
+     const white=Math.random()*2-1;
+     if(type==='brown'){
+       brown=Math.max(-1,Math.min(1,(brown+.08*white)/1.02));
+       samples[i]=brown*.8;
+     }else if(type==='pink'){
+       b0=.99886*b0+white*.0555179;
+       b1=.99332*b1+white*.0750759;
+       b2=.96900*b2+white*.153852;
+       samples[i]=(b0+b1+b2+white*.18)*.14;
+     }else if(type==='ocean'){
+       samples[i]=white*(.18+.7*Math.pow((1+Math.sin(i/size*4*Math.PI))/2,2));
+     }else if(type==='wind'){
+       samples[i]=white*(.15+.5*Math.pow((1+Math.sin(i/size*2*Math.PI))/2,2));
+     }else samples[i]=white;
+   }
+   const src=c.createBufferSource(),filter=c.createBiquadFilter(),gain=c.createGain();
+   src.buffer=buffer;src.loop=true;
+   filter.type=['rain','static'].includes(type)?'highpass':'lowpass';
+   filter.frequency.value=({rain:1700,traffic:290,static:2600,white:16500,pink:8000,brown:900,ocean:460,wind:220})[type];
+   gain.gain.value=this._ambientLevel();
+   src.connect(filter);filter.connect(gain);
+   // Independent route: music volume does not alter the ambience.
+   gain.connect(c.destination);
+   src.start();
+   this.soundscape=gain;this.soundscapeSource=src;
+ }
+
  _setSession(t){if(!('mediaSession'in navigator))return;try{navigator.mediaSession.metadata=new MediaMetadata({title:t.title,artist:t.artist+' · SYNTHWAVE.fm',album:t.album||'SYNTHWAVE.fm',artwork:t.cover?[{src:t.cover}]:[]});navigator.mediaSession.setActionHandler('play',()=>global.togglePlay());navigator.mediaSession.setActionHandler('pause',()=>global.togglePlay());navigator.mediaSession.setActionHandler('nexttrack',()=>global.next());navigator.mediaSession.setActionHandler('previoustrack',()=>global.previous());this._sessionState()}catch(e){console.debug('Media Session unavailable',e)}}
  _sessionState(){if('mediaSession'in navigator)try{navigator.mediaSession.playbackState=this.playing?'playing':'paused'}catch(_){}}
 }
