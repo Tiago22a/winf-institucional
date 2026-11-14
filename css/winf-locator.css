@@ -212,3 +212,58 @@
   background-color:#fff!important;
   border-color:#fff!important;
 }
+
+
+/* Vitrine: controles reais Ver mais / Ver menos. Não usar botão branco sem contraste. */
+.winf-locator-page #vitrine-territorios .vitrine-action-guide{
+  max-width:800px;margin:0 0 24px;padding:15px 19px;
+  border-left:2px solid #bdc9bd;background:#101310;
+  color:#b6beb8;font:400 13px/1.75 Gustavo,Inter,Arial,sans-serif;
+}
+.winf-locator-page #vitrine-territorios .vitrine-action-guide strong,
+.winf-locator-page #vitrine-territorios .vitrine-action-guide em{
+  color:#f7f7f7;font-weight:700;font-style:normal;
+}
+.winf-locator-page #vitrine-territorios button[data-ver],
+.winf-locator-page #vitrine-territorios button.vitrine-less{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  width:auto;min-width:170px;max-width:100%;min-height:48px;
+  padding:12px 19px;margin:20px 10px 0 0;
+  font:700 13px/1.4 Gustavo,Inter,Arial,sans-serif!important;
+  letter-spacing:0!important;text-transform:none!important;
+  color:#f3f4f3!important;-webkit-text-fill-color:#f3f4f3!important;
+  background:#131714!important;border:1px solid #59615a!important;
+  border-radius:0!important;box-shadow:none!important;
+  cursor:pointer;transition:background-color .18s,border-color .18s;
+}
+.winf-locator-page #vitrine-territorios button[data-ver]:hover,
+.winf-locator-page #vitrine-territorios button.vitrine-less:hover,
+.winf-locator-page #vitrine-territorios button[data-ver]:focus-visible,
+.winf-locator-page #vitrine-territorios button.vitrine-less:focus-visible{
+  background:#242b26!important;border-color:#f1f3f0!important;
+}
+.winf-locator-page #vitrine-territorios button.vitrine-less{
+  background:#090b09!important;color:#acb7ae!important;
+  -webkit-text-fill-color:#acb7ae!important;border-color:#454a45!important;
+}
+.winf-locator-page #vitrine-territorios button[data-ver][hidden],
+.winf-locator-page #vitrine-territorios button.vitrine-less[hidden],
+.winf-locator-page #vitrine-territorios h3[hidden]{display:none!important}
+.winf-locator-page #vitrine-territorios button[data-ver]:focus-visible,
+.winf-locator-page #vitrine-territorios button.vitrine-less:focus-visible,
+.winf-locator-page #vitrine-territorios .vitrine-cta:focus-visible{
+  outline:2px solid #fff!important;outline-offset:3px!important;
+}
+.winf-locator-page #vitrine-territorios .vitrine-state{order:0}
+.winf-locator-page #vitrine-territorios .vitrine-cta{order:1}
+@media(max-width:600px){
+  .winf-locator-page #vitrine-territorios button[data-ver],
+  .winf-locator-page #vitrine-territorios button.vitrine-less{
+    min-width:0;width:calc(50% - 7px);padding:11px 8px;margin-right:9px;font-size:12px!important;
+  }
+  .winf-locator-page #vitrine-territorios .vitrine-action-guide{margin-bottom:22px;padding:12px 15px}
+}
+@media(prefers-reduced-motion:reduce){
+  .winf-locator-page #vitrine-territorios button[data-ver],
+  .winf-locator-page #vitrine-territorios button.vitrine-less{transition:none}
+}
