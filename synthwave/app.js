@@ -122,9 +122,12 @@ function playlistView(){
  '<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">'+playlists.map(playlistCard).join('')+'</div>'+mixerPanel()+'</section>';
 }
 function podcastView(){
+ const scripted=podcasts.filter(p=>p.status==='scripted').length;
+ const published=podcasts.filter(p=>p.status==='published').length;
+ const productionNote=scripted+' roteiro(s) disponíveis para leitura e revisão editorial. '+(published?published+' episódio(s) com áudio publicado.':'Nenhum episódio tem áudio publicado ainda.')+' Áudios só aparecem após revisão humana, transcrição e comprovação de direitos.';
  return '<section class="max-w-7xl mx-auto py-12">'+
  heading('Histórias que ficam','PODCASTS','Diálogos originais entre duas vozes de IA, com histórias, ideias e experiências humanas. Cada episódio mostra seu estágio real de produção.')+
- '<div class="panel p-6 border-l-4 sw-accent-border mb-8"><p class="text-white font-bold">Primeira temporada em produção editorial.</p><p class="text-gray-400 text-sm mt-2">O episódio 01 tem roteiro para leitura e revisão. Os demais estão planejados. Nenhum áudio foi lançado nesta etapa; só haverá botão de reprodução para arquivos revisados, com transcrição e direitos documentados.</p></div>'+
+ '<div class="panel p-6 border-l-4 sw-accent-border mb-8"><p class="text-white font-bold">Primeira temporada em produção editorial.</p><p class="text-gray-400 text-sm mt-2">'+escapeHtml(productionNote)+'</p></div>'+
  '<div class="grid md:grid-cols-2 xl:grid-cols-4 gap-5">'+podcasts.map(podcastCard).join('')+'</div></section>';
 }
 function explore(){let f=filter.toLowerCase();let results=tracks.map((t,i)=>({t,i})).filter(({t})=>f==='todos'||t.category.toLowerCase()===f);return '<section class="max-w-7xl mx-auto py-12">'+heading('Discover your sound','EXPLORAR','Busque e filtre o catálogo de faixas.')+'<input id="search" placeholder="Pesquisar música ou artista..." aria-label="Pesquisar" oninput="searchTracks(this.value)" class="w-full mb-5"><div class="flex flex-wrap gap-2 mb-8">'+['Todos',...new Set(tracks.map(t=>t.category))].map(c=>'<button class="pill '+(filter===c?'selected':'')+'" onclick="filter=\''+c+'\';go(\'explore\')">'+c+'</button>').join('')+'</div><div id="results" class="grid grid-cols-2 md:grid-cols-4 gap-4">'+results.map(({t,i})=>trackCard(t,i)).join('')+'</div></section>'}
