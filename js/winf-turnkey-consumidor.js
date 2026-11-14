@@ -21,7 +21,9 @@
     const title=document.createElement("strong");title.textContent=city.cidade+" / "+city.uf;
     const link=document.createElement("a");
     const msg="Olá! Encontrei a WINF Select em "+city.cidade+"/"+city.uf+" e gostaria de consultar películas para vidros e atendimento na minha cidade.";
-    link.href="https://wa.me/5513981113001?text="+encodeURIComponent(msg);
+    const phone=city.routingStatus==="licenca_verificada" && /^55[1-9][0-9]{9,10}$/.test(city.consumerContactPhone||"")
+      ? city.consumerContactPhone : "5513981113001";
+    link.href="https://wa.me/"+phone+"?text="+encodeURIComponent(msg);
     link.target="_blank";link.rel="noopener noreferrer";
     link.textContent="Consultar atendimento ↗";
     li.append(title,link);list.append(li);
