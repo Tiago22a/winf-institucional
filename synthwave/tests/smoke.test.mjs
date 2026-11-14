@@ -107,7 +107,8 @@ test('catálogo editorial bloqueia episódios publicados sem áudio, transcriç�
  assert.ok(items.every(win.SynthwaveEditorial.validEpisode));
  const first=items[0];
  assert.equal(win.SynthwaveEditorial.validEpisode({...first,status:'published',audioUrl:'https://audio.example/test.mp3'}),false);
- assert.equal(win.SynthwaveEditorial.validEpisode({...first,status:'published',audioUrl:'https://audio.example/test.mp3',transcriptUrl:'/synthwave/transcricao/',rightsStatement:'Original autorizado',rightsApprovedAt:'2026-11-14',productionReviewedAt:'2026-11-14'}),true);
+ const {previewAudioUrl: _previewOnly, ...approvedFields}=first;
+ assert.equal(win.SynthwaveEditorial.validEpisode({...approvedFields,status:'published',audioUrl:'https://audio.example/test.mp3',transcriptUrl:'/synthwave/transcricao/',rightsStatement:'Original autorizado',rightsApprovedAt:'2026-11-14',productionReviewedAt:'2026-11-14'}),true);
 });
 test('roteiro piloto pode ser lido sem fingir existir um áudio publicado',()=>{
  const page=read('podcasts/temporada-01/ep01-cuidar-conectar/index.html');
@@ -282,4 +283,26 @@ test('SynthWAVE: oito roteiros preservados e cinco novas prévias condicionadas 
    assert.ok(!html.includes('<audio'),'não apresentar player sem arquivo verificado');
  }
  assert.equal(win.SYNTHWAVE_PODCAST_CATALOG.filter(x=>x.status==='published').length,0);
+});
+
+test('todos os oito podcasts têm MP3 de prévia real e player direto sem exigir login',()=>{
+ const w={};new Function('window',read('podcast-catalog.js'))(w);
+ const items=w.SYNTHWAVE_PODCAST_CATALOG;
+ const app=read('app.js');
+ assert.equal(items.length,8);
+ assert.equal(items.filter(x=>x.status==='published').length,0);
+ for(const p of items){
+   assert.equal(p.status,'scripted');
+   assert.ok(p.previewAudioUrl,'prévia ausente: '+p.id);
+   assert.equal(p.previewAudioUrl,'/synthwave/podcasts/audio-previews/'+p.id+'-previa.mp3');
+   assert.ok(w.SynthwaveEditorial.validEpisode(p));
+   const manifest=JSON.parse(read('podcasts/audio-previews/'+p.id+'-manifest.json'));
+   assert.equal(manifest.status,'audio_preview_unreviewed');
+   assert.deepEqual(manifest.speakers,['LIA','DAVI']);
+   assert.ok(manifest.durationSecondsApprox>120);
+ }
+ assert.match(app,/Prévia sonora · LIA e DAVI · em revisão/);
+ assert.match(app,/const preview=p.status==='scripted'&&p.previewAudioUrl/);
+ assert.match(app,/\+preview\+published\+/);
+ assert.match(app,/Nenhuma edição final foi homologada ainda/);
 });

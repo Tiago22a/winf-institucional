@@ -12,10 +12,10 @@
    summary:'Uma história fictícia sobre encontro entre gerações, escuta e oportunidades que começam com respeito.',
    hook:'Quando foi a última vez que uma pergunta mudou o rumo de uma conversa?',
    artwork:'photo-1508739773434-c26b3d09e071',
-   status:'scripted',format:'Duas vozes de IA · LIA & DAVI',
+   status:'scripted',previewAudioUrl:'/synthwave/podcasts/audio-previews/ep01-cuidar-conectar-previa.mp3',format:'Duas vozes de IA · LIA & DAVI',
    scriptUrl:'/synthwave/podcasts/temporada-01/ep01-cuidar-conectar/',
    projectUrl:'/partners/cuidar-e-conectar/',
-   label:'Roteiro original pronto para revisão; áudio ainda não gravado'
+   label:'Prévia sonora disponível · versão em revisão, não episódio final'
   },
   {
    id:'ep02-padrinho',series:'PADRINHO MODERN',
@@ -23,9 +23,9 @@
    summary:'O que diferencia uma oportunidade responsável de uma promessa que não se sustenta?',
    hook:'Talento precisa de uma porta aberta. Mas de qual tipo?',
    artwork:'photo-1518709268805-4e9042af9f23',
-   status:'scripted',format:'Duas vozes de IA · LIA & DAVI',
+   status:'scripted',previewAudioUrl:'/synthwave/podcasts/audio-previews/ep02-padrinho-previa.mp3',format:'Duas vozes de IA · LIA & DAVI',
    scriptUrl:'/synthwave/podcasts/temporada-01/ep02-padrinho/',
-   label:'Roteiro original em revisão; áudio ainda não gravado',
+   label:'Prévia sonora disponível · versão em revisão, não episódio final',
    projectUrl:'/partners/padrinho-modern/'
   },
   {
@@ -34,9 +34,9 @@
    summary:'Entenda por que fazer as perguntas certas importa mais do que repetir promessas sobre películas para vidro.',
    hook:'Quando o vidro parece igual, o que muda no conforto?',
    artwork:'photo-1486406146926-c627a92ad1ab',
-   status:'scripted',format:'Duas vozes de IA · LIA & DAVI',
+   status:'scripted',previewAudioUrl:'/synthwave/podcasts/audio-previews/ep03-invisivel-previa.mp3',format:'Duas vozes de IA · LIA & DAVI',
    scriptUrl:'/synthwave/podcasts/temporada-01/ep03-invisivel/',
-   label:'Roteiro original em revisão; áudio ainda não gravado',
+   label:'Prévia sonora disponível · versão em revisão, não episódio final',
    projectUrl:'/invisible/'
   },
   {
@@ -45,9 +45,9 @@
    summary:'Cuidados, limites e escolhas conscientes sobre PPF e tratamento de superfícies.',
    hook:'O que significa proteger a história de um veículo?',
    artwork:'photo-1542282088-72c9c27ed0cd',
-   status:'scripted',format:'Duas vozes de IA · LIA & DAVI',
+   status:'scripted',previewAudioUrl:'/synthwave/podcasts/audio-previews/ep04-alem-da-pintura-previa.mp3',format:'Duas vozes de IA · LIA & DAVI',
    scriptUrl:'/synthwave/podcasts/temporada-01/ep04-alem-da-pintura/',
-   label:'Roteiro completo em revisão; áudio final não homologado',
+   label:'Prévia sonora disponível · versão em revisão, não episódio final',
    projectUrl:'/aerocore/'
   },
   {
@@ -56,9 +56,9 @@
    summary:'Uma dramatização declaradamente fictícia sobre paciência, aprendizado e recomeços.',
    hook:'E se o próximo passo não precisasse ser gigante?',
    artwork:'photo-1511671782779-c97d3d27a1d4',
-   status:'scripted',format:'Duas vozes de IA · LIA & DAVI',
+   status:'scripted',previewAudioUrl:'/synthwave/podcasts/audio-previews/ep05-recomeco-previa.mp3',format:'Duas vozes de IA · LIA & DAVI',
    scriptUrl:'/synthwave/podcasts/temporada-01/ep05-recomeco/',
-   label:'Roteiro completo em revisão; áudio final não homologado'
+   label:'Prévia sonora disponível · versão em revisão, não episódio final'
   },
   {
    id:'ep06-cidade',series:'A CIDADE QUE CONECTA',
@@ -66,9 +66,9 @@
    summary:'Ferramentas úteis surgem da escuta das pessoas, não só da vontade de lançar aplicativos.',
    hook:'E se o primeiro requisito de uma solução fosse escutar?',
    artwork:'photo-1509198397868-475647b2a1e5',
-   status:'scripted',format:'Duas vozes de IA · LIA & DAVI',
+   status:'scripted',previewAudioUrl:'/synthwave/podcasts/audio-previews/ep06-cidade-previa.mp3',format:'Duas vozes de IA · LIA & DAVI',
    scriptUrl:'/synthwave/podcasts/temporada-01/ep06-cidade/',
-   label:'Roteiro completo em revisão; áudio final não homologado'
+   label:'Prévia sonora disponível · versão em revisão, não episódio final'
   },
   {
    id:'ep07-brasil',series:'DO BRASIL PARA O MUNDO',
@@ -76,9 +76,9 @@
    summary:'Uma conversa sobre documentar processos, validar hipóteses e crescer com responsabilidade.',
    hook:'Qual a diferença entre expansão e precipitação?',
    artwork:'photo-1519608487953-e999c86e7455',
-   status:'scripted',format:'Duas vozes de IA · LIA & DAVI',
+   status:'scripted',previewAudioUrl:'/synthwave/podcasts/audio-previews/ep07-brasil-previa.mp3',format:'Duas vozes de IA · LIA & DAVI',
    scriptUrl:'/synthwave/podcasts/temporada-01/ep07-brasil/',
-   label:'Roteiro completo em revisão; áudio final não homologado'
+   label:'Prévia sonora disponível · versão em revisão, não episódio final'
   },
   {
    id:'ep08-institute',series:'UM NOVO JEITO DE APRENDER',
@@ -86,9 +86,9 @@
    summary:'Teoria, prática, segurança e evolução contínua nas formações do WINF Institute™.',
    hook:'Uma aula termina quando alguém fecha a tela?',
    artwork:'photo-1493225457124-a3eb161ffa5f',
-   status:'scripted',format:'Duas vozes de IA · LIA & DAVI',
+   status:'scripted',previewAudioUrl:'/synthwave/podcasts/audio-previews/ep08-institute-previa.mp3',format:'Duas vozes de IA · LIA & DAVI',
    scriptUrl:'/synthwave/podcasts/temporada-01/ep08-institute/',
-   label:'Roteiro completo em revisão; áudio final não homologado'
+   label:'Prévia sonora disponível · versão em revisão, não episódio final'
   }
  ];
  function validEpisode(item){
@@ -96,6 +96,7 @@
   if(!['planned','scripted','published'].includes(item.status))return false;
   if(!item.title||!item.series||!item.category||!item.summary||!item.hook)return false;
   if(item.status==='scripted'&&(!item.scriptUrl||!item.scriptUrl.startsWith('/synthwave/')))return false;
+  if(item.previewAudioUrl&&(!/^\/synthwave\/podcasts\/audio-previews\/[a-z0-9-]+-previa\.mp3$/.test(item.previewAudioUrl)||item.status!=='scripted'))return false;
   if(item.status==='published'){
    if(!item.audioUrl||!/^https:\/\//.test(item.audioUrl))return false;
    if(!item.transcriptUrl||!item.transcriptUrl.startsWith('/synthwave/'))return false;
