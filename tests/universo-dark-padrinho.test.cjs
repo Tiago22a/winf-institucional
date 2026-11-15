@@ -28,18 +28,19 @@ test("a ponte nao cria pagamento nem compartilha carteira do investidor",()=>{
 test("Universo Dark publica fotografias próprias e não repete vídeos antigos",()=>{
  const images=["hero","governanca","colegiado","analise"];
  for(const slug of images){
-  const rel=`partners/universo-dark/media/universo-dark-${slug}.webp`;
-  assert.match(dark,new RegExp(rel.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")));
+  const rel="partners/universo-dark/media/universo-dark-"+slug+".webp";
+  assert.ok(dark.includes("/"+rel),"A página deve referenciar "+rel);
   const file=fs.readFileSync(path.join(root,rel));
   assert.equal(file.subarray(0,4).toString("ascii"),"RIFF");
   assert.equal(file.subarray(8,12).toString("ascii"),"WEBP");
  }
- assert.doesNotMatch(dark,/universo-dark-(entry|equity)\\.mp4/);
+ assert.ok(!dark.includes("universo-dark-entry.mp4"));
+ assert.ok(!dark.includes("universo-dark-equity.mp4"));
 });
 
 test("Título Universo Dark tem linhas separadas e usa identidade oficial",()=>{
- assert.match(dark,/<h1 id="dark-title"><span>UNIVERSO<\\/span><span>DARK™<\\/span><\\/h1>/);
- assert.match(dark,/font-family:Anton/);
- assert.match(dark,/src="\\/winf-logo\\.svg"/);
- assert.match(dark,/noindex,follow/);
+ assert.ok(dark.includes('<h1 id="dark-title"><span>UNIVERSO</span><span>DARK™</span></h1>'));
+ assert.ok(dark.includes("font-family:Anton"));
+ assert.ok(dark.includes('src="/winf-logo.svg"'));
+ assert.ok(dark.includes("noindex,follow"));
 });
