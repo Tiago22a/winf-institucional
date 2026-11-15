@@ -1,119 +1,188 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#08090b">
-<meta name="robots" content="noindex,follow,max-image-preview:large">
-<meta name="description" content="Universo Dark™: apresentação institucional preliminar do núcleo de projetos estratégicos e governança do ecossistema WINF. Projeto em estruturação.">
-<link rel="icon" href="/favicon.ico">
-<link rel="canonical" href="https://winf.com.br/partners/universo-dark/">
-<title>Universo Dark™ | Projetos estratégicos WINF</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0a0b0d">
+  <meta name="robots" content="noindex,follow,max-image-preview:large">
+  <meta name="description" content="Universo Dark™ é o ambiente institucional de relacionamento estratégico da WINF Partners. Conheça a visão, o Padrinho Modern e as iniciativas em estruturação.">
+  <link rel="canonical" href="https://winf.com.br/partners/universo-dark/">
+  <link rel="icon" href="/winf-logo.svg">
+  <title>Universo Dark™ | Relacionamento estratégico — WINF Partners</title>
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Universo Dark™ — WINF Partners">
+  <meta property="og:description" content="Visão, patrimônio, relacionamento e expansão. Um ambiente institucional de projetos estratégicos em estruturação.">
+  <meta property="og:image" content="https://winf.com.br/partners/universo-dark/media/universo-dark-hero.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="/partners/universo-dark/media/universo-dark-hero.webp" fetchpriority="high">
+  <link rel="stylesheet" href="/css/winf-site-credit.css?v=20261112-1">
 <style>
-:root{color-scheme:dark;--bg:#070809;--line:#3d3f43;--text:#f4f4f5;--muted:#b4b5bb}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif}
-a{color:inherit}a:focus-visible{outline:2px solid #fff;outline-offset:5px}
-header{max-width:1320px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:28px clamp(18px,4vw,64px);gap:20px}
-.brand{display:inline-flex;align-items:center;gap:13px;font-size:12px;font-weight:700;letter-spacing:.23em;text-decoration:none}
-.brand img{width:76px;height:auto}.back{font-size:11px;color:var(--muted);letter-spacing:.12em;text-decoration:none;border:1px solid var(--line);padding:14px 18px;text-transform:uppercase}
-main{max-width:1320px;margin:0 auto;padding:clamp(30px,7vw,90px) clamp(18px,4vw,64px) 120px}
-.eyebrow{font-size:11px;font-weight:650;letter-spacing:.28em;text-transform:uppercase;color:#bfc0c5}
-h1{font-family:Impact,'Arial Narrow',Arial,sans-serif;font-stretch:condensed;letter-spacing:-.035em;font-size:clamp(58px,11vw,156px);line-height:.9;margin:26px 0 34px;font-weight:900}
-h1 span{display:block;color:#8d929d}.lead{max-width:690px;font-size:clamp(16px,2vw,21px);line-height:1.75;color:#c8c8cb}
-.notice{margin-top:38px;border-left:2px solid #d0d0d0;padding:8px 0 8px 20px;color:#b7b9be;max-width:740px;line-height:1.7}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin-top:95px}
-article{border:1px solid var(--line);padding:clamp(20px,2.5vw,36px);min-height:270px;background:linear-gradient(145deg,#131519,#090a0c)}
-article small{display:block;color:#91959b;letter-spacing:.2em;font-size:10px}h2{font-size:clamp(21px,2.4vw,28px);font-weight:600;line-height:1.2;margin:28px 0 20px}article p{line-height:1.75;color:var(--muted);font-size:14px;margin:0}
-.actions{margin-top:65px;display:flex;flex-wrap:wrap;gap:13px}.actions a{border:1px solid #a6a6ab;padding:16px 25px;text-decoration:none;text-transform:uppercase;font-size:11px;letter-spacing:.12em;font-weight:650}.actions a:first-child{background:#eee;color:#090909}
-footer{max-width:1320px;margin:auto;border-top:1px solid var(--line);padding:28px clamp(18px,4vw,64px) 40px;color:#95979c;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px}
-@media(max-width:780px){.grid{grid-template-columns:1fr;margin-top:60px}article{min-height:0}header{align-items:flex-start}.brand{flex-direction:column;align-items:start}h1{overflow-wrap:anywhere}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-
-/* Universo Dark editorial layout: title must never collide or overflow */
-main{position:relative;isolation:isolate;overflow:hidden}
-main::before{content:"";position:absolute;z-index:-1;right:-20%;top:-25%;width:min(85vw,900px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#292f44 0%,#171b2b 28%,transparent 68%);opacity:.65;animation:darkPulse 12s ease-in-out infinite}
-h1{max-width:100%;font-size:clamp(48px,10vw,135px);line-height:1;letter-spacing:-.035em;overflow-wrap:normal;word-break:normal;text-wrap:balance}
-h1 span{display:block;font-size:.93em;white-space:normal}
-.grid article{transition:transform .35s,border-color .35s,background .35s}
-@media(hover:hover){.grid article:hover{transform:translateY(-5px);border-color:#dadfeb9c;background:#1b1f2b}}
-@keyframes darkPulse{0%,100%{transform:scale(.92);opacity:.45}50%{transform:scale(1.06);opacity:.85}}
-@media(max-width:780px){h1{font-size:clamp(49px,12vw,90px);line-height:1.03}.lead{font-size:16px}}
-@media(prefers-reduced-motion:reduce){main::before{animation:none}.grid article{transition:none}}
-.wc-section{padding:45px 0;background:transparent;border:0}.wc-section .wc-film-grid{gap:12px}.wc-section .wc-head{margin-top:10px}.wc-section .wc-head h2{font-size:clamp(33px,4vw,65px)}.wc-section .wc-film-caption{font-size:12px}
-/* Atalho público ao Padrinho Modern: jornada de conhecimento, não captação. */
-.dark-padrinho-access{
- display:grid;grid-template-columns:minmax(0,1.25fr) minmax(240px,.75fr);
- align-items:center;gap:clamp(20px,4vw,55px);
- margin:clamp(28px,4vw,54px) 0;
- padding:clamp(24px,3.8vw,48px);
- border:1px solid #6e778887;
- background:linear-gradient(122deg,#121923,#0b0e13 65%,#171b20);
-}
-.dark-padrinho-access .eyebrow{font-size:10px;color:#bcc8d6}
-.dark-padrinho-access h2{font:900 clamp(31px,4.5vw,59px)/1.02 Impact,'Arial Narrow',Arial,sans-serif;letter-spacing:-.012em;margin:13px 0 20px}
-.dark-padrinho-access p{font-size:14px;line-height:1.75;color:#c7cbd1;max-width:680px}
-.dark-padrinho-access .dark-padrinho-actions{display:grid;gap:12px}
-.dark-padrinho-actions a{
- display:flex;align-items:center;justify-content:space-between;gap:12px;
- padding:17px 20px;text-decoration:none;font-size:12px;font-weight:850;
- text-transform:uppercase;letter-spacing:.08em;min-height:54px;
- border:1px solid #9da8ba;
-}
-.dark-padrinho-actions a:first-child{background:#e6ebed;color:#0d1217;border-color:#e6ebed}
-.dark-padrinho-actions a:hover{border-color:#fff}
-.dark-padrinho-actions a:focus-visible{outline:2px solid #fff;outline-offset:3px}
-.dark-padrinho-access .dark-padrinho-fine{font-size:11px;color:#adb5c0;line-height:1.65}
-@media(max-width:790px){.dark-padrinho-access{grid-template-columns:1fr}}
-
+  :root { color-scheme:dark; --bg:#0a0b0d; --card:#141619; --ink:#f5f5f4; --muted:#b3b7be; --line:#ffffff2b; --accent:#ddd6c8; }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth;scroll-padding-top:90px; }
+  body { margin:0; background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.7; }
+  a { color:inherit; } a:focus-visible { outline:2px solid white;outline-offset:4px; }
+  img { max-width:100%; } h1,h2,h3,p { margin-top:0; }
+  .wrap { width:min(1200px,calc(100% - 40px));margin:0 auto; }
+  .topbar { background:#0a0b0d;border-bottom:1px solid var(--line); }
+  .topbar-inner { min-height:88px;display:flex;align-items:center;justify-content:space-between;gap:20px; }
+  .brand { display:flex;align-items:center;gap:18px;text-decoration:none;min-width:0; }
+  .brand img { display:block;width:97px;height:auto; }
+  .brand span { padding-left:17px;border-left:1px solid #ffffff4b;color:#e2e4e6;font-size:11px;font-weight:800;letter-spacing:.17em;text-transform:uppercase; }
+  .toplinks { display:flex;align-items:center;gap:21px;font-size:11px;font-weight:800;letter-spacing:.09em;text-transform:uppercase; }
+  .toplinks a { text-decoration:none;white-space:nowrap;color:#d5d8de; }
+  .toplinks a:hover { color:white; }
+  .eyebrow { margin:0 0 25px;font-size:11px;line-height:1.5;font-weight:800;text-transform:uppercase;letter-spacing:.2em;color:#d7dce2; }
+  h1,h2,.display { font-family:Anton,Impact,'Arial Narrow',sans-serif;font-weight:400;text-transform:uppercase; }
+  h1 { margin:0 0 30px;max-width:100%;font-size:clamp(56px,7.4vw,106px);line-height:1.16;letter-spacing:.025em;word-break:normal;overflow-wrap:normal;white-space:normal; }
+  h1 span { display:block;white-space:nowrap; }
+  h1 span:last-child { color:#dde1e7; }
+  h2 { font-size:clamp(35px,4.6vw,62px);line-height:1.16;letter-spacing:.026em;margin:0 0 21px; }
+  h2 em { font-style:normal;color:#bbc4cf; }
+  .hero { position:relative;border-bottom:1px solid var(--line);background:linear-gradient(145deg,#101217 0%,#0a0b0d 80%); }
+  .hero-inner { display:grid;grid-template-columns:minmax(0,.91fr) minmax(0,1.09fr);gap:clamp(26px,5vw,78px);align-items:center;padding-top:clamp(54px,7.2vw,105px);padding-bottom:clamp(62px,7vw,104px); }
+  .hero-copy { min-width:0; }
+  .hero .lead { max-width:520px;font-size:clamp(17px,1.55vw,20px);line-height:1.72;color:#d4d6dd;margin-bottom:16px; }
+  .hero .support { font-size:13px;color:#aeb4bf;max-width:490px;line-height:1.82;margin-bottom:28px; }
+  .hero-art { margin:0;min-width:0; }
+  .hero-art img { display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center;background:#1c2022;border:1px solid #ffffff34; }
+  .hero-art figcaption { padding-top:15px;font-size:10px;letter-spacing:.13em;font-weight:800;color:#aeb4bf;text-transform:uppercase; }
+  .buttons { display:flex;flex-wrap:wrap;gap:11px; }
+  .btn { display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:14px 21px;font-size:11px;font-weight:800;letter-spacing:.085em;text-decoration:none;text-transform:uppercase;border:1px solid #f3f4f6;background:#f3f4f6;color:#111318;transition:background .2s,color .2s; }
+  .btn.secondary { background:transparent;color:#f3f4f6;border-color:#ffffff79; }
+  .btn:hover { background:#dedfe0; color:#08090a; }
+  .btn.secondary:hover { background:#fff2;color:white; }
+  .preliminary { background:#101215;border-bottom:1px solid var(--line); }
+  .preliminary .wrap { display:flex;gap:18px;align-items:start;padding-top:19px;padding-bottom:19px; }
+  .preliminary strong { flex:0 0 auto;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#eff0f3; }
+  .preliminary p { max-width:900px;margin:0;color:#b8bcc4;font-size:12px;line-height:1.7; }
+  .section { padding:clamp(65px,8vw,114px) 0;border-bottom:1px solid #ffffff21; }
+  .section-header { max-width:800px;margin-bottom:37px; }
+  .section-header p:not(.eyebrow),.editorial-copy p,.final-copy p { font-size:15px;line-height:1.85;color:var(--muted); }
+  .editorial { display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(24px,4.5vw,68px);align-items:center; }
+  .editorial-photo { margin:0;min-width:0; }
+  .editorial-photo img { display:block;width:100%;aspect-ratio:16/10;object-fit:cover;border:1px solid #ffffff30;background:#16191d; }
+  .editorial-photo figcaption,.photogrid figcaption span { display:block;margin-top:12px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:#bfc5cd; }
+  .editorial-copy { min-width:0; }
+  .editorial-copy p { margin-bottom:25px; }
+  .photogrid { display:grid;grid-template-columns:1fr 1fr;gap:16px; }
+  .photogrid figure { margin:0;min-width:0; }
+  .photogrid img { width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border:1px solid #ffffff2f; }
+  .photogrid figcaption { padding:12px 0 5px; }
+  .photogrid figcaption strong { display:block;font:400 clamp(25px,2.7vw,38px)/1.2 Anton,Impact,sans-serif;letter-spacing:.025em;text-transform:uppercase; }
+  .photogrid figcaption span { margin-top:4px; }
+  .principles { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:42px; }
+  .principles article { background:#15171b;padding:30px 27px;border:1px solid #ffffff2a; }
+  .principles small { font-size:11px;font-weight:800;letter-spacing:.16em;color:#adb8c6; }
+  .principles h3 { font-size:20px;line-height:1.3;margin:24px 0 10px; }
+  .principles p { color:#abb2bd;font-size:13px;line-height:1.85;margin:0; }
+  .dark-padrinho-access { display:grid;grid-template-columns:minmax(0,1.13fr) minmax(250px,.87fr);gap:clamp(25px,4vw,58px);align-items:center;padding:clamp(30px,5vw,66px);background:linear-gradient(120deg,#171a1f,#0d1014);border:1px solid #ffffff44; }
+  .dark-padrinho-access p { max-width:700px;color:#c0c5cd;font-size:14px;line-height:1.85; }
+  .dark-padrinho-access .dark-padrinho-fine { margin:18px 0 0;color:#a7afb9;font-size:11px;line-height:1.75; }
+  .dark-padrinho-actions { display:grid;gap:12px; }
+  .dark-padrinho-actions a { display:flex;align-items:center;justify-content:space-between;min-height:55px;padding:15px 18px;border:1px solid #9ba4b0;text-decoration:none;font-size:11px;font-weight:800;line-height:1.4;letter-spacing:.055em;text-transform:uppercase;gap:14px; }
+  .dark-padrinho-actions a:first-child { background:#eff0f1;border-color:#eff0f1;color:#0e1116; }
+  .dark-padrinho-actions a:hover { border-color:#fff; }
+  .closing { background:#101216; }
+  .closing .wrap { display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:40px; }
+  .closing h2 { max-width:720px; }
+  .closing p { max-width:720px; }
+  footer { background:#08090b;padding:37px 0;color:#aeb4bb;font-size:12px; }
+  .footer-inner { display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap; }
+  .footer-inner nav { display:flex;gap:19px;flex-wrap:wrap; }
+  .footer-inner a { text-decoration:none; }
+  .footer-inner a:hover { color:white; }
+  [data-territory-context] { margin:28px auto 0;padding:18px;border:1px solid #66778d; }
+  [data-territory-context] p { margin:0 0 8px;font-size:13px; }
+  @media (max-width:930px) {
+    .hero-inner { grid-template-columns:1fr;gap:35px; }
+    .hero-copy { max-width:760px; }
+    .hero-art { max-width:790px; }
+    .editorial { grid-template-columns:1fr; }
+    .editorial-copy { max-width:850px; }
+    .closing .wrap { grid-template-columns:1fr; }
+  }
+  @media (max-width:750px) {
+    .topbar-inner { min-height:75px; }
+    .toplinks { gap:12px;font-size:10px; }
+    .toplinks a:first-child { display:none; }
+    .brand img { width:75px; }
+    .brand span { font-size:9px;letter-spacing:.08em;padding-left:12px; }
+    h1 { font-size:clamp(52px,11.6vw,86px);line-height:1.16;letter-spacing:.025em; }
+    .hero-inner { padding-top:62px;padding-bottom:64px; }
+    .preliminary .wrap { display:block; }
+    .preliminary strong { display:block;margin-bottom:9px; }
+    .photogrid,.principles,.dark-padrinho-access { grid-template-columns:1fr; }
+  }
+  @media (max-width:450px) {
+    .wrap { width:calc(100% - 32px); }
+    .brand span { display:none; }
+    .hero-inner { padding-top:48px;padding-bottom:58px; }
+    h1 { font-size:clamp(50px,12.15vw,68px);line-height:1.19;letter-spacing:.035em; }
+    .buttons .btn { width:100%; }
+    .section { padding-top:65px;padding-bottom:70px; }
+    .photogrid img { aspect-ratio:4/3; }
+  }
+  @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .btn { transition:none; } }
 </style>
-<link rel="stylesheet" href="/css/winf-cinema.css?v=20261111-2">
-<style>
-/* Universo Dark — cenas próprias; nenhuma mídia emprestada da Flagship. */
-.dark-cinema-bg{position:absolute;inset:0 0 auto;height:min(94vh,900px);z-index:0;pointer-events:none;overflow:hidden;background:radial-gradient(ellipse at 70% 25%,#2b303c,#08090c 80%)}
-.dark-cinema-bg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#070809fa,#070809d9 50%,#07080988),linear-gradient(0deg,#070809 1%,transparent 48%);z-index:1}
-.dark-cinema-bg video{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s}
-.dark-cinema-bg video.wc-playing{opacity:.82}
-main>:not(.dark-cinema-bg){position:relative;z-index:1}
-main>h1{font-size:clamp(48px,10vw,142px);line-height:1.02;max-width:100%;text-shadow:0 2px 22px #000a}
-main>h1 span{white-space:normal}
-main>.lead{color:#dee1e7}
-.wc-section{background:#0c0d13!important}
-.wc-film-media{background:linear-gradient(135deg,#1b1d27,#08090c)}
-.dark-film-fallback{position:absolute;inset:0;z-index:0;display:flex;align-items:flex-end;padding:clamp(18px,3vw,42px);background:radial-gradient(circle at 75% 25%,#9ba5c326,transparent 48%)}
-.dark-film-fallback span{font:900 clamp(24px,3vw,45px)/1.03 Impact,'Arial Narrow',sans-serif;color:#eaedf3;max-width:330px;letter-spacing:.015em}
-.wc-film-poster{z-index:1}.wc-film video{z-index:2}
-@media(max-width:780px){main>h1{font-size:clamp(52px,11.8vw,88px)}.dark-cinema-bg{height:770px}.dark-cinema-bg:after{background:linear-gradient(0deg,#070809 5%,#070809bc 60%,#07080980)}}
-@media(prefers-reduced-motion:reduce){.dark-cinema-bg video{display:none}}
-</style>
-<link rel="stylesheet" href="/css/winf-site-credit.css?v=20261112-1"></head>
+</head>
 <body id="topo">
-<header><a class="brand" href="/" aria-label="WINF — início"><img src="/winf-logo.svg" alt="WINF™"> <span>PROJETOS ESTRATÉGICOS</span></a><a class="back" href="/partners/">← WINF PARTNERS™</a></header>
-<main id="conteudo"><div class="dark-cinema-bg" aria-hidden="true"><video data-winf-cinema autoplay muted loop playsinline preload="metadata" tabindex="-1"><source data-src="/media/ecossistema/universo-dark-entry.mp4" type="video/mp4"></video></div>
-<p class="eyebrow">WINF.inc® / PROJETOS ESTRATÉGICOS / UNIVERSO DARK™</p>
-<h1>UNIVERSO <span>DARK™</span></h1>
-<p class="lead">Um espaço institucional dedicado à organização de projetos estratégicos, estudos de estruturação e governança do ecossistema WINF.</p>
-<p class="notice"><strong>Projeto em estruturação.</strong> Esta página não constitui oferta pública de valores mobiliários, promessa de rentabilidade, convite para investimento ou declaração de que operações financeiras já estejam disponíveis.</p>
-<section class="dark-padrinho-access" id="ser-padrinho" aria-labelledby="dark-padrinho-title">
- <div>
-  <p class="eyebrow">UNIVERSO DARK™ × PADRINHO MODERN™</p>
-  <h2 id="dark-padrinho-title">INVESTE NA VISÃO?<br>APOIE TAMBÉM O TALENTO.</h2>
-  <p>Quem acompanha projetos do Universo Dark pode conhecer o Padrinho Modern™ e avaliar o apoio a um profissional ou território WINF. A apresentação do programa é livre: não exige novo login, cadastro ou pagamento.</p>
-  <p class="dark-padrinho-fine">O interesse em apadrinhamento não cria investimento, prioridade automática, licença territorial, sociedade nem direito a resultados. Qualquer parceria dependerá de análise e formalização específica.</p>
- </div>
- <div class="dark-padrinho-actions">
-  <a href="/partners/padrinho-modern/#como-funciona" aria-label="Entender como funciona o Padrinho Modern">CONHECER O PROGRAMA <span aria-hidden="true">↗</span></a>
-  <a href="/partners/padrinho-modern/#conversar" aria-label="Iniciar conversa sobre ser padrinho">QUERO CONVERSAR COMO PADRINHO <span aria-hidden="true">↗</span></a>
-  <span class="dark-padrinho-fine">Você será direcionado à página oficial do Padrinho Modern™. Seus dados de investimento não serão compartilhados por esse link.</span>
- </div>
-</section><div data-territory-context hidden style="padding:16px;border:1px solid #5f748f;margin-bottom:22px"><p class="eyebrow">TERRITÓRIO DE INTERESSE</p><strong data-territory-city></strong><p data-territory-status></p><a data-territory-link href="/partners/territorios/">Consultar situação territorial ↗</a></div>
-<section class="wc-section" id="filmes" aria-label="Experiências audiovisuais WINF"><div class="wc-head"><div><p class="wc-kicker">WINF UNIVERSO DARK™ / CAPITAL PRIVADO E ESTRATÉGIA</p><h2>VISÃO RESERVADA.<br><em>CRITÉRIOS CLAROS.</em></h2></div><p>Um universo institucional para discutir equity, valuation, governança e oportunidades estratégicas. Sem oferta pública ou promessa de rentabilidade.</p></div><div class="wc-film-grid"><figure class="wc-film"><div class="wc-film-media"><div class="dark-film-fallback" aria-hidden="true"><span>CAPITAL. VISÃO. ESTRATÉGIA.</span></div><img class="wc-film-poster" src="/media/ecossistema/universo-dark-entry.webp" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"><div class="wc-brand-lockup"><img src="/aerocore/assets/ghost-symbol.png" alt="" aria-hidden="true"><span>WINF.inc®</span></div><video data-winf-cinema autoplay muted loop playsinline preload="none" tabindex="-1" aria-hidden="true"><source data-src="/media/ecossistema/universo-dark-entry.mp4" type="video/mp4"></video></div><figcaption class="wc-film-caption"><strong>CAPITAL E ESTRATÉGIA</strong><span>01 / INSTITUCIONAL</span></figcaption></figure>
-<figure class="wc-film"><div class="wc-film-media"><div class="dark-film-fallback" aria-hidden="true"><span>VALOR SE CONSTRÓI COM GOVERNANÇA.</span></div><img class="wc-film-poster" src="/media/ecossistema/universo-dark-equity.webp" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"><div class="wc-brand-lockup"><img src="/aerocore/assets/ghost-symbol.png" alt="" aria-hidden="true"><span>WINF.inc®</span></div><video data-winf-cinema autoplay muted loop playsinline preload="none" tabindex="-1" aria-hidden="true"><source data-src="/media/ecossistema/universo-dark-equity.mp4" type="video/mp4"></video></div><figcaption class="wc-film-caption"><strong>EQUITY & VALUATION</strong><span>02 / GOVERNANÇA</span></figcaption></figure></div></section>
-<section class="wc-section" id="padrinhos"><div class="wrap"><p class="wc-kicker">UNIVERSO DARK™ / PADRINHOS TERRITORIAIS</p><h2>ESCOLHA A PRAÇA.<br><em>ENTENDA A OPORTUNIDADE.</em></h2><p>A vitrine pública permite conhecer os municípios selecionados para expansão WINF. O acompanhamento privado de padrinhos, contratos e aportes ainda depende de implantação e validação jurídica. Nenhum investimento é processado nesta página.</p><p><a href="/partners/territorios/" style="color:#fff;font-weight:800">CONSULTAR TERRITÓRIOS ↗</a> &nbsp; <a href="/partners/padrinho-modern/" style="color:#fff">PADRINHO MODERN™ ↗</a></p></div></section><section class="grid" aria-label="Frentes conceituais em estudo">
-<article><small>01 / GOVERNANÇA</small><h2>Estrutura e critérios</h2><p>Organização de processos, responsabilidades e requisitos de conformidade antes de qualquer iniciativa de capital.</p></article>
-<article><small>02 / PROJETOS</small><h2>Desenvolvimento estratégico</h2><p>Estudo de modelos de expansão, abastecimento e cooperação com parceiros do ecossistema.</p></article>
-<article><small>03 / TRANSPARÊNCIA</small><h2>Documentação e validação</h2><p>Escopos, responsabilidades e condições só poderão ser apresentados como operacionais após avaliação jurídica, financeira e documental.</p></article>
-</section>
-<nav class="actions" aria-label="Próximos caminhos"><a href="/partners/">Conhecer WINF Partners™ ↗</a><a href="/partners/ecossistema/">Explorar o ecossistema ↗</a><a href="/redes/">Redes oficiais ↗</a></nav>
-</main>
-<footer><span>UNIVERSO DARK™ · WINF.inc®</span><span>Informações institucionais preliminares · Sem ofertas de investimento</span><a href="/aerocore/policies/#privacidade">Privacidade ↗</a></footer>
-<script defer src="/partners/territorios/contexto.js?v=20261113-1"></script><script defer src="/js/winf-cinema.js?v=20261111-2"></script><script src="/js/winf-site-credit.js?v=20261112-1" defer></script></body></html>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="/partners/" aria-label="WINF Partners — página inicial"><img src="/winf-logo.svg" width="97" alt="WINF™"><span>WINF PARTNERS™</span></a>
+      <nav class="toplinks" aria-label="Navegação"><a href="/partners/padrinho-modern/">Padrinho Modern</a><a href="/partners/territorios/">Territórios</a><a href="/partners/">Voltar ao Partners ↗</a></nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="dark-title">
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">WINF PARTNERS™ / RELACIONAMENTO ESTRATÉGICO</p>
+          <h1 id="dark-title"><span>UNIVERSO</span><span>DARK™</span></h1>
+          <p class="lead">O universo de quem participa das decisões, acredita no talento e enxerga possibilidades antes que elas ganhem escala.</p>
+          <p class="support">Uma apresentação reservada da visão de relacionamento entre empresários, investidores-padrinhos e projetos em desenvolvimento no ecossistema WINF.</p>
+          <div class="buttons"><a class="btn" href="#visao">EXPLORAR A VISÃO ↓</a><a class="btn secondary" href="/partners/padrinho-modern/#como-funciona">CONHECER O PADRINHO ↗</a></div>
+        </div>
+        <figure class="hero-art"><img src="/partners/universo-dark/media/universo-dark-hero.webp" width="1200" height="900" fetchpriority="high" decoding="async" alt="Executiva conduz conversa de negócios em sala privativa com outros investidores, computadores e café durante o dia"><figcaption>RELAÇÕES DE CONFIANÇA · VISÃO DE LONGO PRAZO · WINF PARTNERS™</figcaption></figure>
+      </div>
+    </section>
+    <aside class="preliminary" aria-label="Aviso sobre estruturação"><div class="wrap"><strong>Projeto em estruturação</strong><p>O Universo Dark é apresentado aqui em caráter institucional. Esta página não processa aportes, não oferece valores mobiliários e não promete rentabilidade. Qualquer proposta de participação depende de análise, documentação, estruturação jurídica e formalização específica.</p></div></aside>
+    <div class="wrap"><div data-territory-context hidden><p class="eyebrow">TERRITÓRIO DE INTERESSE</p><strong data-territory-city></strong><p data-territory-status></p><a data-territory-link href="/partners/territorios/">Consultar situação territorial ↗</a></div></div>
+    <section class="section" id="visao" aria-labelledby="visao-title">
+      <div class="wrap editorial">
+        <figure class="editorial-photo"><img src="/partners/universo-dark/media/universo-dark-governanca.webp" width="1200" height="675" loading="lazy" decoding="async" alt="Investidores analisam projeto arquitetônico e perspectivas de expansão sobre mesa de reunião em escritório de alto padrão"><figcaption>AMBIENTE EXECUTIVO / ANÁLISE ESTRATÉGICA</figcaption></figure>
+        <div class="editorial-copy"><p class="eyebrow">01 / PATRIMÔNIO E VISÃO</p><h2 id="visao-title">DECISÕES QUE <em>CONSTROEM FUTURO.</em></h2><p>O valor de uma oportunidade não está apenas no capital disponível. Está na capacidade de analisar cenários, reconhecer pessoas, compreender riscos e construir relações de longo prazo.</p><p>É essa cultura de discernimento e responsabilidade que inspira o Universo Dark dentro da WINF Partners.</p><a class="btn secondary" href="/partners/ecossistema/">CONHECER O ECOSSISTEMA ↗</a></div>
+      </div>
+    </section>
+    <section class="section" id="experiencia" aria-labelledby="experiencia-title">
+      <div class="wrap">
+        <div class="section-header"><p class="eyebrow">02 / O PERFIL DO INVESTIDOR-PADRINHO</p><h2 id="experiencia-title">MAIS DO QUE APORTAR. <em>É SABER PARTICIPAR.</em></h2><p>Conversas reservadas, análise de negócios, acompanhamento e escolhas bem fundamentadas. Aqui, o protagonismo é de quem entende que relacionamento e governança caminham juntos.</p></div>
+        <div class="photogrid">
+          <figure><img src="/partners/universo-dark/media/universo-dark-colegiado.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Três empresários conversam ao redor de notebook em mesa de reunião com iluminação natural"><figcaption><strong>CONVERSAS ENTRE PARES.</strong><span>LEITURA DE CENÁRIO / DIÁLOGO / CRITÉRIO</span></figcaption></figure>
+          <figure><img src="/partners/universo-dark/media/universo-dark-analise.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Dois executivos experientes avaliam uma proposta em tablet e notebook durante reunião de negócios"><figcaption><strong>ANÁLISE ANTES DA DECISÃO.</strong><span>PLANEJAMENTO / PERSPECTIVA / RESPONSABILIDADE</span></figcaption></figure>
+        </div>
+        <div class="principles">
+          <article><small>01 / VISÃO</small><h3>Projetos e contexto</h3><p>Conhecer as iniciativas em estudo e suas premissas, sem confundir uma oportunidade potencial com uma operação aprovada.</p></article>
+          <article><small>02 / RELACIONAMENTO</small><h3>Conexões de valor</h3><p>Dialogar com a WINF Partners, avaliar possibilidades de apoio e entender o papel do investidor-padrinho.</p></article>
+          <article><small>03 / GOVERNANÇA</small><h3>Critério e formalização</h3><p>Conduzir cada etapa com clareza documental e avaliação jurídica e financeira antes de qualquer compromisso.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="padrinhos" aria-labelledby="padrinho-title">
+      <div class="wrap">
+        <section class="dark-padrinho-access" id="ser-padrinho" aria-labelledby="padrinho-title">
+          <div><p class="eyebrow">03 / UNIVERSO DARK × PADRINHO MODERN™</p><h2 id="padrinho-title">QUEM TEM VISÃO <em>PODE ABRIR CAMINHOS.</em></h2><p>O Padrinho Modern™ apresenta a possibilidade de apoiar talentos e avaliar a ativação de uma operação WINF. É uma conexão entre capacidade empreendedora, conhecimento e recursos, sujeita a critérios e aprovação.</p><p>Conhecer o programa não exige novo login, cadastro ou pagamento. O interesse em apadrinhamento não cria investimento, prioridade automática, licença territorial, sociedade nem direito a resultados.</p><p class="dark-padrinho-fine">Este é um acesso público para conhecer o modelo, não um painel de aportes ou uma carteira de investimentos.</p></div>
+          <div class="dark-padrinho-actions"><a href="/partners/padrinho-modern/#como-funciona" aria-label="Entender como funciona o Padrinho Modern">CONHECER O PROGRAMA <span aria-hidden="true">↗</span></a><a href="/partners/padrinho-modern/#conversar" aria-label="Iniciar conversa sobre ser padrinho">CONVERSAR SOBRE O PADRINHO <span aria-hidden="true">↗</span></a><p class="dark-padrinho-fine">Você será direcionado à apresentação oficial do Padrinho Modern™. Seus dados de investimento não serão compartilhados por esse link.</p></div>
+        </section>
+      </div>
+    </section>
+    <section class="section closing" aria-labelledby="closing-title"><div class="wrap"><div class="final-copy"><p class="eyebrow">WINF PARTNERS™ / DO BRASIL PARA O MUNDO</p><h2 id="closing-title">GRANDES PROJETOS <em>PEDEM GRANDES PARCEIROS.</em></h2><p>O acompanhamento privado de participantes, documentos e eventuais aportes ainda depende de implantação e validação jurídica. Enquanto isso, conheça o ecossistema, os territórios apresentados e o programa Padrinho Modern.</p></div><div class="buttons"><a class="btn" href="/partners/territorios/">EXPLORAR TERRITÓRIOS ↗</a><a class="btn secondary" href="/partners/">WINF PARTNERS ↗</a></div></div></section>
+  </main>
+  <footer><div class="wrap footer-inner"><span>UNIVERSO DARK™ · WINF PARTNERS™</span><span>Apresentação institucional · Sem oferta pública de investimento</span><nav aria-label="Rodapé"><a href="/partners/padrinho-modern/">Padrinho Modern</a><a href="/aerocore/policies/#privacidade">Privacidade</a></nav></div></footer>
+  <script src="/partners/territorios/contexto.js?v=20261113-1" defer></script>
+  <script src="/js/winf-site-credit.js?v=20261112-1" defer></script>
+</body>
+</html>
