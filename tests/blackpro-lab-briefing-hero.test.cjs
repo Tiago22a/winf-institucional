@@ -68,6 +68,7 @@ test('Catálogo preserva produto aprovado e dá opção de percentual e perspect
 });
 test('VLT altera comparação real no DOM e vista interna não utiliza a fachada externa',()=>{
  const sim=loadSimulator();
+ sim.callbacks.DOMContentLoaded();
  sim.run('populateFilmSelect(); updateSimDisplay()');
  const el=id=>sim.elements.get(id);
  assert.equal(el('sim-film-select').value,'select-blackpro');
