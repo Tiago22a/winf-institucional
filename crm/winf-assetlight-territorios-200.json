@@ -1,7 +1,7 @@
 {
   "schema": "winf.assetlight.territorios.candidatos.v1",
-  "atualizadoEm": "2026-11-13",
-  "aviso": "Primeiro lote integrado no código; duas URLs amostradas com HTTP 200; demais URLs aguardam validação HTTP. Indexação em pré-lançamento permanece noindex.",
+  "atualizadoEm": "2026-11-16",
+  "aviso": "10 páginas comerciais do Lote 01 (SP) confirmadas em produção com HTTP 200 até 16/11/2026. CSS/JS respondem 200 em teste GitHub. Indexação permanece noindex e fora do sitemap; presença de instalador e WINF OS local não confirmada. Demais territórios requerem auditoria individual. Proteção WAF limita alguns monitores.",
   "total": 200,
   "pilotosRevisao": 10,
   "territorios": [
@@ -53,7 +53,7 @@
       "licenca": "disponivel_para_ativacao",
       "site": "https://winf.com.br/winf-select/cidades/barueri-sp/",
       "siteCodigo": "codigo_na_main",
-      "siteHttp": "nao_verificado_em_producao",
+      "siteHttp": "http_200_confirmado",
       "indexacao": "noindex_ate_aprovacao_editorial",
       "instagramPlanejado": "winfselect.barueri",
       "instagramCriado": false,
@@ -69,7 +69,9 @@
       "bairrosEmPesquisa": [
         "Alphaville",
         "Jardim Belval"
-      ]
+      ],
+      "siteValidadoEm": "2026-11-15",
+      "siteValidacaoFonte": "OpenSEO — auditoria 9c5a1de9-ffd8-4267-bf52-8a4a113a99e2 (HTTP 200)"
     },
     {
       "id": "santana-de-parnaiba-sp",
@@ -83,7 +85,7 @@
       "licenca": "disponivel_para_ativacao",
       "site": "https://winf.com.br/winf-select/cidades/santana-de-parnaiba-sp/",
       "siteCodigo": "codigo_na_main",
-      "siteHttp": "nao_verificado_em_producao",
+      "siteHttp": "http_200_confirmado",
       "indexacao": "noindex_ate_aprovacao_editorial",
       "instagramPlanejado": "winfselect.santanadeparnaiba",
       "instagramCriado": false,
@@ -99,7 +101,9 @@
       "bairrosEmPesquisa": [
         "Tamboré",
         "Alphaville"
-      ]
+      ],
+      "siteValidadoEm": "2026-11-15",
+      "siteValidacaoFonte": "OpenSEO — auditoria 6c5a0c3e-ff28-42de-b87d-0d63954159af (HTTP 200)"
     },
     {
       "id": "osasco-sp",
@@ -113,7 +117,7 @@
       "licenca": "disponivel_para_ativacao",
       "site": "https://winf.com.br/winf-select/cidades/osasco-sp/",
       "siteCodigo": "codigo_na_main",
-      "siteHttp": "nao_verificado_em_producao",
+      "siteHttp": "http_200_confirmado",
       "indexacao": "noindex_ate_aprovacao_editorial",
       "instagramPlanejado": "winfselect.osasco",
       "instagramCriado": false,
@@ -129,7 +133,9 @@
       "bairrosEmPesquisa": [
         "Vila Yara",
         "Campesina"
-      ]
+      ],
+      "siteValidadoEm": "2026-11-16",
+      "siteValidacaoFonte": "OpenSEO — auditoria 871bc793-8834-4cbd-98b3-718a4798177d (HTTP 200)"
     },
     {
       "id": "cotia-sp",
@@ -143,7 +149,7 @@
       "licenca": "disponivel_para_ativacao",
       "site": "https://winf.com.br/winf-select/cidades/cotia-sp/",
       "siteCodigo": "codigo_na_main",
-      "siteHttp": "nao_verificado_em_producao",
+      "siteHttp": "http_200_confirmado",
       "indexacao": "noindex_ate_aprovacao_editorial",
       "instagramPlanejado": "winfselect.cotia",
       "instagramCriado": false,
@@ -158,7 +164,9 @@
       ],
       "bairrosEmPesquisa": [
         "Granja Viana"
-      ]
+      ],
+      "siteValidadoEm": "2026-11-15",
+      "siteValidacaoFonte": "OpenSEO — auditoria 17f5de61-6e76-45ef-897a-c22604668ebb (HTTP 200)"
     },
     {
       "id": "itapevi-sp",
@@ -172,7 +180,7 @@
       "licenca": "disponivel_para_ativacao",
       "site": "https://winf.com.br/winf-select/cidades/itapevi-sp/",
       "siteCodigo": "codigo_na_main",
-      "siteHttp": "nao_verificado_em_producao",
+      "siteHttp": "http_200_confirmado",
       "indexacao": "noindex_ate_aprovacao_editorial",
       "instagramPlanejado": "winfselect.itapevi",
       "instagramCriado": false,
@@ -185,7 +193,9 @@
         "Vila Dr. Cardoso",
         "Centro"
       ],
-      "bairrosEmPesquisa": []
+      "bairrosEmPesquisa": [],
+      "siteValidadoEm": "2026-11-15",
+      "siteValidacaoFonte": "OpenSEO — auditoria f1e26f5f-11b1-444a-af29-3a9da625428e (HTTP 200)"
     },
     {
       "id": "jandira-sp",
@@ -599,8 +609,8 @@
       "modelo": "WINF Asset Light™",
       "licenca": "disponivel_para_ativacao",
       "site": "https://winf.com.br/winf-select/cidades/vargem-grande-paulista-sp/",
-      "siteCodigo": "aguardando_pagina_original",
-      "siteHttp": "nao_verificado_em_producao",
+      "siteCodigo": "codigo_na_main",
+      "siteHttp": "http_200_confirmado",
       "indexacao": "noindex_ate_aprovacao_editorial",
       "instagramPlanejado": "winfselect.vargemgrandepaulist",
       "instagramCriado": false,
@@ -609,7 +619,9 @@
       "winfOsAtivo": false,
       "instalacaoLocal": "nao_confirmada",
       "bairrosVerificados": [],
-      "bairrosEmPesquisa": []
+      "bairrosEmPesquisa": [],
+      "siteValidadoEm": "2026-11-16",
+      "siteValidacaoFonte": "OpenSEO — auditoria ceedbbf1-6260-4edd-b865-a8f3c189a17e (HTTP 200)"
     },
     {
       "id": "campinas-sp",
@@ -622,8 +634,8 @@
       "modelo": "WINF Asset Light™",
       "licenca": "disponivel_para_ativacao",
       "site": "https://winf.com.br/winf-select/cidades/campinas-sp/",
-      "siteCodigo": "aguardando_pagina_original",
-      "siteHttp": "nao_verificado_em_producao",
+      "siteCodigo": "codigo_na_main",
+      "siteHttp": "http_200_confirmado",
       "indexacao": "noindex_ate_aprovacao_editorial",
       "instagramPlanejado": "winfselect.campinas",
       "instagramCriado": false,
@@ -637,7 +649,9 @@
         "Taquaral",
         "Nova Campinas",
         "Sousas"
-      ]
+      ],
+      "siteValidadoEm": "2026-11-16",
+      "siteValidacaoFonte": "OpenSEO — auditoria f6b5a11e-e095-4f1d-88e8-5c396cf63b92 (HTTP 200)"
     },
     {
       "id": "valinhos-sp",
@@ -675,8 +689,8 @@
       "modelo": "WINF Asset Light™",
       "licenca": "disponivel_para_ativacao",
       "site": "https://winf.com.br/winf-select/cidades/vinhedo-sp/",
-      "siteCodigo": "aguardando_pagina_original",
-      "siteHttp": "nao_verificado_em_producao",
+      "siteCodigo": "codigo_na_main",
+      "siteHttp": "http_200_confirmado",
       "indexacao": "noindex_ate_aprovacao_editorial",
       "instagramPlanejado": "winfselect.vinhedo",
       "instagramCriado": false,
@@ -687,7 +701,9 @@
       "bairrosVerificados": [],
       "bairrosEmPesquisa": [
         "Vista Alegre"
-      ]
+      ],
+      "siteValidadoEm": "2026-11-16",
+      "siteValidacaoFonte": "OpenSEO — auditoria 5e2f6fc9-b4ee-4ac6-8f5d-3f1cff408c77 (HTTP 200)"
     },
     {
       "id": "indaiatuba-sp",
@@ -700,8 +716,8 @@
       "modelo": "WINF Asset Light™",
       "licenca": "disponivel_para_ativacao",
       "site": "https://winf.com.br/winf-select/cidades/indaiatuba-sp/",
-      "siteCodigo": "aguardando_pagina_original",
-      "siteHttp": "nao_verificado_em_producao",
+      "siteCodigo": "codigo_na_main",
+      "siteHttp": "http_200_confirmado",
       "indexacao": "noindex_ate_aprovacao_editorial",
       "instagramPlanejado": "winfselect.indaiatuba",
       "instagramCriado": false,
@@ -713,7 +729,9 @@
       "bairrosEmPesquisa": [
         "Jardim Esplanada",
         "Cidade Nova"
-      ]
+      ],
+      "siteValidadoEm": "2026-11-15",
+      "siteValidacaoFonte": "OpenSEO — auditoria 3f6ef1f0-bd9a-4f86-877f-5f6d6b6a7a7e (HTTP 200)"
     },
     {
       "id": "paulinia-sp",
@@ -1101,8 +1119,8 @@
       "modelo": "WINF Asset Light™",
       "licenca": "disponivel_para_ativacao",
       "site": "https://winf.com.br/winf-select/cidades/jundiai-sp/",
-      "siteCodigo": "aguardando_pagina_original",
-      "siteHttp": "nao_verificado_em_producao",
+      "siteCodigo": "codigo_na_main",
+      "siteHttp": "http_200_confirmado",
       "indexacao": "noindex_ate_aprovacao_editorial",
       "instagramPlanejado": "winfselect.jundiai",
       "instagramCriado": false,
@@ -1115,7 +1133,9 @@
         "Anhangabaú",
         "Eloy Chaves",
         "Medeiros"
-      ]
+      ],
+      "siteValidadoEm": "2026-11-16",
+      "siteValidacaoFonte": "OpenSEO — auditoria 81aebbd4-9768-4f98-9948-1932fec008d2 (HTTP 200)"
     },
     {
       "id": "itupeva-sp",
