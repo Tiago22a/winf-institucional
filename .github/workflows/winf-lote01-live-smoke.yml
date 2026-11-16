@@ -1,0 +1,69 @@
+name: WINF Select — Teste público 10 cidades
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/winf-lote01-live-smoke.yml'
+      - 'winf-select/cidades/**'
+      - 'winf-select/assets/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - name: Verificar HTTP, conteúdo e WhatsApp da Central WINF
+        run: |
+          node --input-type=module <<'NODE'
+          const locations = {
+            'barueri-sp':'Barueri',
+            'cotia-sp':'Cotia',
+            'santana-de-parnaiba-sp':'Santana de Parnaíba',
+            'itapevi-sp':'Itapevi',
+            'indaiatuba-sp':'Indaiatuba',
+            'jundiai-sp':'Jundiaí',
+            'osasco-sp':'Osasco',
+            'campinas-sp':'Campinas',
+            'vinhedo-sp':'Vinhedo',
+            'vargem-grande-paulista-sp':'Vargem Grande Paulista'
+          };
+          const headers = {
+            'user-agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/131.0 Safari/537.36',
+            'accept':'text/html,application/xhtml+xml',
+            'cache-control':'no-cache'
+          };
+          const probe=async url=>{
+            try{
+              const r=await fetch(url,{headers,signal:AbortSignal.timeout(15000)});
+              return {status:r.status,body:await r.text()};
+            }catch(e){return {status:0,body:e.message};}
+          };
+          let success=0, blocked=0, failed=0;
+          for(const [slug,city] of Object.entries(locations)){
+            const uri='/winf-select/cidades/'+slug+'/';
+            let r=await probe('https://winf.com.br'+uri);
+            if([0,403,429].includes(r.status)){
+              await new Promise(resolve=>setTimeout(resolve,1250));
+              let backup=await probe('https://www.winf.com.br'+uri);
+              if(backup.status===200 || ![0,403,429].includes(backup.status))r=backup;
+            }
+            const valid=r.status===200 && r.body.includes('data-territory-id="'+slug+'"')
+              && r.body.includes(city) && r.body.includes('wa.me/5513981113001')
+              && r.body.includes('assets/territorio.js') && r.body.includes('assets/territorio.css');
+            console.log(city, r.status, valid?'CONTENT_OK':'NOT_VERIFIED');
+            if(valid)success++;
+            else if([0,403,429].includes(r.status))blocked++;
+            else failed++;
+          }
+          for(const f of ['territorio.css','territorio.js']){
+            const r=await probe('https://winf.com.br/winf-select/assets/'+f);
+            console.log('ASSET',f,r.status);
+            if(![200,0,403,429].includes(r.status))failed++;
+            if([0,403,429].includes(r.status))blocked++;
+          }
+          console.log(JSON.stringify({success,blocked,failed}));
+          if(failed)process.exitCode=1;
+          if(blocked)console.warn('WAF/rede tornou parte das verificações inconclusiva; não reportar 10/10 confirmado.');
+          NODE
