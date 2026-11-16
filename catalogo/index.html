@@ -2561,6 +2561,24 @@ body.winf-catalog-page #hero-title.winf-catalog-hero-all span{
           <select id="sim-model-select" aria-label="Cenário de comparação visual"></select>
           <label for="sim-film-select">02 / ESCOLHA A PELÍCULA</label>
           <select id="sim-film-select" aria-label="Película para visualização"></select>
+          <div id="sim-blackpro-settings" class="winf-lab-blackpro-settings" hidden>
+            <label for="sim-vlt-select">03 / BLACKPRO® — TONALIDADE ILUSTRATIVA (VLT)</label>
+            <select id="sim-vlt-select" aria-label="Percentual de VLT ilustrativo da BlackPro">
+              <option value="5">05% — FUMÊ INTENSO</option>
+              <option value="15" selected>15% — FUMÊ ESCURO</option>
+              <option value="20">20% — FUMÊ MÉDIO-ESCURO</option>
+              <option value="35">35% — FUMÊ INTERMEDIÁRIO</option>
+              <option value="50">50% — FUMÊ LEVE</option>
+            </select>
+            <p class="winf-lab-option-note">Percentuais usados apenas para visualizar diferenças de tonalidade. Confirme os modelos disponíveis na ficha técnica.</p>
+          </div>
+          <fieldset class="winf-lab-view-switch" id="sim-view-switch" hidden>
+            <legend>04 / ÂNGULO DE VISÃO</legend>
+            <div class="winf-lab-switches" role="group" aria-label="Escolher vista da comparação">
+              <button type="button" data-sim-view="exterior" aria-pressed="true">VISTA EXTERNA</button>
+              <button type="button" data-sim-view="interior" aria-pressed="false">VISTA INTERNA</button>
+            </div>
+          </fieldset>
           <dl class="winf-lab-metrics">
             <div><dt>TRANSMISSÃO DE LUZ (VLT)</dt><dd id="sim-vlt">—</dd></div>
             <div><dt>REJEIÇÃO IR INFORMADA</dt><dd id="sim-ir">—</dd></div>
@@ -2570,7 +2588,8 @@ body.winf-catalog-page #hero-title.winf-catalog-hero-all span{
           <p class="winf-lab-controls-note">Os dados apresentados são os informados no catálogo. Confirme ficha técnica, variante e aplicação com um especialista.</p>
         </div>
         <div class="winf-lab-visual">
-          <div class="winf-lab-panes" id="winf-lab-panes" data-mode="arch">
+          <p class="winf-lab-view-label" id="sim-view-caption" aria-live="polite">VISTA EXTERNA · FACHADA ENVIDRAÇADA</p>
+          <div class="winf-lab-panes" id="winf-lab-panes" data-mode="arch" data-view="exterior">
             <div class="winf-lab-pane">
               <div class="winf-lab-photo" id="sim-before" role="img" aria-label="Imagem ilustrativa antes da película"></div>
               <span class="winf-lab-pane-label">SEM PELÍCULA</span>
@@ -2583,7 +2602,7 @@ body.winf-catalog-page #hero-title.winf-catalog-hero-all span{
           </div>
           <div class="winf-lab-disclaimer">
             <strong>COMPARAÇÃO VISUAL ILUSTRATIVA</strong>
-            <p>É uma prévia estética aproximada, não uma fotografia de aplicação, teste térmico, medição de temperatura ou previsão certificada de desempenho. A aparência real muda conforme vidro, iluminação e modelo escolhido.</p>
+            <p>As duas vistas são referências fotográficas ilustrativas, não fotografias do mesmo imóvel. A tonalidade é uma prévia estética, não simula com precisão a transmissão de luz, a privacidade (que depende da iluminação), o desempenho térmico nem confirma variantes comerciais. Consulte ficha técnica e amostra física.</p>
           </div>
         </div>
       </div>
