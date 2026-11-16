@@ -1,4 +1,4 @@
-name: WINF Select — Teste público 10 cidades
+name: WINF Select — Arquivos + monitor HTTP 10 cidades
 on:
   push:
     branches: [main]
@@ -14,9 +14,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 9
     steps:
-      - name: Verificar HTTP, conteúdo e WhatsApp da Central WINF
+      - uses: actions/checkout@v4
+      - name: Verificar fonte, HTTP, conteúdo e WhatsApp da Central WINF
         run: |
           node --input-type=module <<'NODE'
+          import { readFileSync, existsSync } from 'node:fs';
           const locations = {
             'barueri-sp':'Barueri',
             'cotia-sp':'Cotia',
@@ -42,6 +44,16 @@ jobs:
           };
           let success=0, blocked=0, failed=0;
           for(const [slug,city] of Object.entries(locations)){
+            const localPath='winf-select/cidades/'+slug+'/index.html';
+            if(!existsSync(localPath)){console.error('FILE_MISSING',localPath);failed++;continue;}
+            const html=readFileSync(localPath,'utf8');
+            if(!html.includes('data-territory-id="'+slug+'"') ||
+               !html.includes('wa.me/5513981113001') ||
+               !html.includes('assets/territorio.js') ||
+               !html.includes('assets/territorio.css')){
+              console.error('SOURCE_BROKEN',slug);failed++;continue;
+            }
+            console.log('SOURCE_OK',city);
             const uri='/winf-select/cidades/'+slug+'/';
             let r=await probe('https://winf.com.br'+uri);
             if([0,403,429].includes(r.status)){
@@ -63,7 +75,8 @@ jobs:
             if(![200,0,403,429].includes(r.status))failed++;
             if([0,403,429].includes(r.status))blocked++;
           }
-          console.log(JSON.stringify({success,blocked,failed}));
+          for(const f of ['territorio.css','territorio.js'])if(!existsSync('winf-select/assets/'+f)){console.error('SOURCE_MISSING',f);failed++;}
+          console.log(JSON.stringify({sourceChecked:Object.keys(locations).length,remoteConfirmed:success,blocked,failed}));
           if(failed)process.exitCode=1;
-          if(blocked)console.warn('WAF/rede tornou parte das verificações inconclusiva; não reportar 10/10 confirmado.');
+          if(blocked)console.warn('::warning::WAF/rede bloqueou verificações remotas. Este job valida arquivos-fonte; NÃO declara 10/10 acessível sem auditoria externa.');
           NODE
