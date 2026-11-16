@@ -3254,70 +3254,121 @@ function populateFilmSelect() {
 }
 
 // ===================== VISUALIZADOR DE PELÍCULAS WINF =====================
-// Não estima temperaturas: VLT/IR/garantias são informações das fichas cadastradas.
+// Prévia estética somente. VLT selecionado é ILUSTRATIVO e não representa SKU homologado.
+// Antes e depois de cada vista usam a mesma fotografia; as vistas entre si são
+// fotografias de referência diferentes e NÃO representam o mesmo imóvel.
 const WINF_LAB_SCENES = {
   arch: [
-    {label:'Casa com janelas amplas',image:'/images/invisible-poster-1.webp'},
-    {label:'Fachada envidraçada',image:'/images/dualreflect-poster-1.webp'}
+    {label:'Fachada envidraçada',image:'/images/dualreflect-poster-1.webp',inside:'/images/invisible-poster-2.webp'},
+    {label:'Casa com janelas amplas',image:'/images/invisible-poster-1.webp',inside:'/images/invisible-poster-3.webp'}
   ],
   aerocore: [
     {label:'Porsche em movimento na estrada',image:'/images/ceramic-hero.webp'},
     {label:'Película automotiva AeroCore',image:'/images/aerocore-catalog/spectre-15.webp'}
   ]
 };
+const WINF_LAB_BLACKPRO_VLT = new Set(['5','15','20','35','50']);
+let winfLabView='exterior';
+
 function populateFilmSelect() {
   const select=document.getElementById('sim-film-select');
   const scene=document.getElementById('sim-model-select');
   if(!select||!scene)return;
   const mode=activeCategory==='aerocore'?'aerocore':'arch';
   const products=PRODUCT_CATALOG.filter(p=>mode==='arch'?p.category==='arch':p.line==='aerocore');
+  const lastFilm=select.value;
   select.replaceChildren(new Option('Selecione uma película...', ''));
   products.forEach(p=>select.add(new Option(p.name,p.id)));
+  // A abertura do laboratório arquitetônico já oferece o exemplo BlackPro.
+  if(products.some(p=>p.id===lastFilm))select.value=lastFilm;
+  else if(mode==='arch'&&products.some(p=>p.id==='select-blackpro'))select.value='select-blackpro';
   const previousScene=scene.value;
   scene.replaceChildren();
   WINF_LAB_SCENES[mode].forEach(p=>scene.add(new Option(p.label,p.image)));
   if(Array.from(scene.options).some(o=>o.value===previousScene))scene.value=previousScene;
-  selectedFilmId='';
+  else scene.selectedIndex=0;
+  winfLabView='exterior';
+  selectedFilmId=select.value;
 }
 function updateSimDisplay() {
   const lab=document.getElementById('winf-film-lab');
   if(!lab)return;
-  const mode=activeCategory;
-  const visible=mode==='arch'||mode==='aerocore';
+  const visible=['all','arch','aerocore'].includes(activeCategory);
   lab.hidden=!visible;
   if(!visible)return;
+  const mode=activeCategory==='aerocore'?'aerocore':'arch';
   const scene=document.getElementById('sim-model-select');
   const select=document.getElementById('sim-film-select');
-  if(!scene||!select)return;
+  const vltSelect=document.getElementById('sim-vlt-select');
+  if(!scene||!select||!vltSelect)return;
   const film=PRODUCT_CATALOG.find(p=>p.id===select.value);
   selectedFilmId=film?film.id:'';
-  const image=scene.value||WINF_LAB_SCENES[mode][0].image;
+  const isBlackPro=mode==='arch'&&film?.id==='select-blackpro';
+  document.getElementById('sim-blackpro-settings').hidden=!isBlackPro;
+  document.getElementById('sim-view-switch').hidden=!isBlackPro;
+  if(!isBlackPro)winfLabView='exterior';
+  const selectedScene=WINF_LAB_SCENES[mode].find(x=>x.image===scene.value)||WINF_LAB_SCENES[mode][0];
+  const inside=isBlackPro&&winfLabView==='interior';
+  const image=inside?selectedScene.inside:selectedScene.image;
   const panes=document.getElementById('winf-lab-panes');
   panes.dataset.mode=mode;
+  panes.dataset.view=inside?'interior':'exterior';
   const url='url("'+image.replace(/"/g,'')+'")';
-  document.getElementById('sim-before').style.backgroundImage=url;
-  document.getElementById('sim-after').style.backgroundImage=url;
-  const vltText=film&&film.specs?film.specs.vlt:'—';
-  const numeric=film?Number.parseInt(vltText,10):100;
-  // Redução visual suavizada para nunca fingir reprodução óptica ou térmica real.
-  const darken=film&&Number.isFinite(numeric)?Math.min(0.68,Math.max(0,(100-numeric)/100*0.47)):0;
+  const before=document.getElementById('sim-before');
+  const after=document.getElementById('sim-after');
+  before.style.backgroundImage=url;
+  after.style.backgroundImage=url;
+  const perspective=inside?'VISTA INTERNA · DE DENTRO PARA FORA':'VISTA EXTERNA · FACHADA ENVIDRAÇADA';
+  document.getElementById('sim-view-caption').textContent=isBlackPro?perspective:mode==='arch'?'COMPARAÇÃO DE AMBIENTE':'COMPARAÇÃO AUTOMOTIVA';
+  before.setAttribute('aria-label',perspective+'; referência fotográfica sem película');
+  after.setAttribute('aria-label',perspective+'; prévia ilustrativa com película');
+  document.querySelectorAll('[data-sim-view]').forEach(button=>{
+    button.setAttribute('aria-pressed',String(button.dataset.simView===winfLabView));
+  });
+  const vltText=film?.specs?.vlt||'—';
+  const numeric=Number.parseInt(vltText,10);
+  let darken=film&&Number.isFinite(numeric)
+    ?Math.min(.68,Math.max(0,(100-numeric)/100*.47)):0;
+  if(isBlackPro) {
+    const requested=WINF_LAB_BLACKPRO_VLT.has(vltSelect.value)?Number(vltSelect.value):15;
+    // Somente variação gráfica: não calcula transmissão óptica ou proteção real.
+    darken=Math.min(.64,Math.max(.14,.14+(50-requested)/45*.49))*(inside?.75:1);
+    document.getElementById('sim-vlt').textContent=requested+'% · PRÉVIA';
+    document.getElementById('sim-ir').textContent='CONFIRMAR VARIANTE';
+    document.getElementById('sim-warranty').textContent='CONSULTAR FICHA';
+  }else{
+    document.getElementById('sim-vlt').textContent=film?vltText:'—';
+    document.getElementById('sim-ir').textContent=film?film.keyMetrics.ir:'—';
+    document.getElementById('sim-warranty').textContent=film?film.keyMetrics.warranty:'—';
+  }
   document.getElementById('sim-tint').style.opacity=String(darken);
-  document.getElementById('sim-vlt').textContent=vltText;
-  document.getElementById('sim-ir').textContent=film?film.keyMetrics.ir:'—';
-  document.getElementById('sim-warranty').textContent=film?film.keyMetrics.warranty:'—';
   document.getElementById('winf-lab-kicker').textContent=mode==='arch'?'WINF SELECT™ / GLASS + HOME':'AEROCORE™ / WINDOW FILM AUTOMOTIVO';
   document.getElementById('winf-lab-title').innerHTML=mode==='arch'?'VISUALIZE O <span>SEU AMBIENTE.</span>':'VISUALIZE O <span>SEU AUTOMÓVEL.</span>';
-  document.getElementById('winf-lab-description').textContent=mode==='arch'
-    ? 'Cenário arquitetônico: compare de forma ilustrativa a luminosidade e a tonalidade no vidro.'
-    : 'Cenário automotivo: compare de forma ilustrativa a aparência de películas para os vidros do veículo.';
+  document.getElementById('winf-lab-description').textContent=isBlackPro
+    ?'Escolha a tonalidade BlackPro® e alterne entre a aparência da fachada e a visibilidade de dentro para fora. A comparação é apenas visual.'
+    :mode==='arch'
+    ?'Cenário arquitetônico: compare de forma ilustrativa a luminosidade e a tonalidade no vidro.'
+    :'Cenário automotivo: compare de forma ilustrativa a aparência de películas para os vidros do veículo.';
   const link=document.getElementById('winf-lab-page');
   if(link)link.href=film?productLink(film):mode==='arch'?'/aerocore/winf-select/':'/aerocore/';
 }
 document.addEventListener('DOMContentLoaded',()=>{
   const model=document.getElementById('sim-model-select');
   const film=document.getElementById('sim-film-select');
+  const vlt=document.getElementById('sim-vlt-select');
   if(model)model.addEventListener('change',updateSimDisplay);
-  if(film)film.addEventListener('change',updateSimDisplay);
+  if(film)film.addEventListener('change',()=>{
+    winfLabView='exterior';
+    updateSimDisplay();
+  });
+  if(vlt)vlt.addEventListener('change',updateSimDisplay);
+  document.querySelectorAll('[data-sim-view]').forEach(button=>{
+    button.addEventListener('click',()=>{
+      if(document.getElementById('sim-view-switch').hidden)return;
+      winfLabView=button.dataset.simView==='interior'?'interior':'exterior';
+      updateSimDisplay();
+    });
+  });
 });
 
 // ===================== MODAL DE ESPECIFICAÇÕES (vanilla JS) =====================
