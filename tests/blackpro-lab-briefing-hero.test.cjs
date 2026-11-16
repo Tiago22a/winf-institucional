@@ -60,7 +60,7 @@ test('Catálogo preserva produto aprovado e dá opção de percentual e perspect
  assert.match(catalog,/data-sim-view="exterior"/);
  assert.match(catalog,/data-sim-view="interior"/);
  assert.match(catalog,/id="sim-view-caption"/);
- for(const vlt of ['5','15','20','35','50'])assert.ok(catalog.includes('<option value="'+vlt+'">'));
+ for(const vlt of ['5','15','20','35','50'])assert.match(catalog,new RegExp('<option value="'+vlt+'"(?: selected)?>'));
  assert.match(catalog,/Não representa|não representa|não simula com precisão/);
  assert.match(catalog,/id: 'select-blackpro'/);
  assert.match(catalog,/function productLink\(p\)/);
