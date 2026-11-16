@@ -1,0 +1,42 @@
+name: WINF - BlackPro Lab e Hero Briefing
+on:
+  pull_request:
+    paths:
+      - 'catalogo/index.html'
+      - 'briefing/index.html'
+      - 'briefing/hero-motion.css'
+      - 'tests/blackpro-lab-briefing-hero.test.cjs'
+      - '.github/workflows/blackpro-lab-hero.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'catalogo/index.html'
+      - 'briefing/index.html'
+      - 'briefing/hero-motion.css'
+      - 'tests/blackpro-lab-briefing-hero.test.cjs'
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Testar seleção BlackPro, vistas e mídia de capa
+        run: node --test tests/blackpro-lab-briefing-hero.test.cjs tests/catalogo-briefing-motion.test.cjs tests/catalogo-hero.test.cjs
+      - name: Validar JavaScript inline do catálogo
+        run: |
+          python3 - <<'PY'
+          import re
+          from pathlib import Path
+          source=Path('catalogo/index.html').read_text()
+          scripts=re.findall(r'<script(?:\s[^>]*)?>([\s\S]*?)</script>',source,re.I)
+          scripts=[x for x in scripts if x.strip() and not x.lstrip().startswith('{')]
+          assert len(scripts)>0
+          for i,script in enumerate(scripts):
+              Path(f'/tmp/winf-catalogo-inline-{i}.js').write_text(script)
+          PY
+          for file in /tmp/winf-catalogo-inline-*.js; do node --check "$file"; done

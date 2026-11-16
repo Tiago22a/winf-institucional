@@ -287,6 +287,17 @@ body.winf-catalog-page #catalogo-produtos .product-card:hover .card-img-inner{fi
 .winf-lab-controls label,.winf-lab-metrics dt{font:700 10px/1.5 'JetBrains Mono',monospace;letter-spacing:.11em;color:#b6b8be}
 .winf-lab-controls select{min-height:49px;background:#08090a;color:white;border:1px solid #ffffff43;padding:12px;font:400 15px/1.35 Gustavo,Arial,sans-serif;max-width:100%;border-radius:0}
 .winf-lab-controls select option{background:#141619;color:#fff}
+.winf-lab-blackpro-settings{display:flex;flex-direction:column;gap:11px;margin-top:3px;padding:17px;border:1px solid #ffffff25;background:#0b0d11}
+.winf-lab-blackpro-settings[hidden],.winf-lab-view-switch[hidden]{display:none!important}
+.winf-lab-blackpro-settings .winf-lab-option-note{font:400 11px/1.55 Gustavo,Arial,sans-serif;color:#b6b9c0;margin:0}
+.winf-lab-view-switch{border:0;margin:4px 0 0;padding:0;min-width:0}
+.winf-lab-view-switch legend{font:700 10px/1.5 'JetBrains Mono',monospace;letter-spacing:.11em;color:#b6b8be;margin-bottom:11px}
+.winf-lab-switches{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+.winf-lab-switches button{border:1px solid #ffffff46;background:#101215;min-height:46px;color:#d1d2d6;font:700 10px/1.5 'JetBrains Mono',monospace;letter-spacing:.06em;cursor:pointer}
+.winf-lab-switches button[aria-pressed="true"]{background:#f4f5f6;color:#101215;border-color:#f4f5f6}
+.winf-lab-switches button:focus-visible,.winf-lab-controls select:focus-visible{outline:2px solid #f4f5f6;outline-offset:3px}
+.winf-lab-view-label{font:700 10px/1.5 'JetBrains Mono',monospace;color:#d6d8de;letter-spacing:.12em;padding:0 0 12px;margin:0}
+
 .winf-lab-metrics{display:grid;gap:0;margin:12px 0 10px}
 .winf-lab-metrics>div{padding:13px 0;border-bottom:1px solid #ffffff23;display:flex;justify-content:space-between;align-items:center;gap:10px}
 .winf-lab-metrics dt{font-size:9px}
@@ -2561,6 +2572,24 @@ body.winf-catalog-page #hero-title.winf-catalog-hero-all span{
           <select id="sim-model-select" aria-label="Cenário de comparação visual"></select>
           <label for="sim-film-select">02 / ESCOLHA A PELÍCULA</label>
           <select id="sim-film-select" aria-label="Película para visualização"></select>
+          <div id="sim-blackpro-settings" class="winf-lab-blackpro-settings" hidden>
+            <label for="sim-vlt-select">03 / BLACKPRO® — TONALIDADE ILUSTRATIVA (VLT)</label>
+            <select id="sim-vlt-select" aria-label="Percentual de VLT ilustrativo da BlackPro">
+              <option value="5">05% — FUMÊ INTENSO</option>
+              <option value="15" selected>15% — FUMÊ ESCURO</option>
+              <option value="20">20% — FUMÊ MÉDIO-ESCURO</option>
+              <option value="35">35% — FUMÊ INTERMEDIÁRIO</option>
+              <option value="50">50% — FUMÊ LEVE</option>
+            </select>
+            <p class="winf-lab-option-note">Percentuais usados apenas para visualizar diferenças de tonalidade. Confirme os modelos disponíveis na ficha técnica.</p>
+          </div>
+          <fieldset class="winf-lab-view-switch" id="sim-view-switch" hidden>
+            <legend>04 / ÂNGULO DE VISÃO</legend>
+            <div class="winf-lab-switches" role="group" aria-label="Escolher vista da comparação">
+              <button type="button" data-sim-view="exterior" aria-pressed="true">VISTA EXTERNA</button>
+              <button type="button" data-sim-view="interior" aria-pressed="false">VISTA INTERNA</button>
+            </div>
+          </fieldset>
           <dl class="winf-lab-metrics">
             <div><dt>TRANSMISSÃO DE LUZ (VLT)</dt><dd id="sim-vlt">—</dd></div>
             <div><dt>REJEIÇÃO IR INFORMADA</dt><dd id="sim-ir">—</dd></div>
@@ -2570,7 +2599,8 @@ body.winf-catalog-page #hero-title.winf-catalog-hero-all span{
           <p class="winf-lab-controls-note">Os dados apresentados são os informados no catálogo. Confirme ficha técnica, variante e aplicação com um especialista.</p>
         </div>
         <div class="winf-lab-visual">
-          <div class="winf-lab-panes" id="winf-lab-panes" data-mode="arch">
+          <p class="winf-lab-view-label" id="sim-view-caption" aria-live="polite">VISTA EXTERNA · FACHADA ENVIDRAÇADA</p>
+          <div class="winf-lab-panes" id="winf-lab-panes" data-mode="arch" data-view="exterior">
             <div class="winf-lab-pane">
               <div class="winf-lab-photo" id="sim-before" role="img" aria-label="Imagem ilustrativa antes da película"></div>
               <span class="winf-lab-pane-label">SEM PELÍCULA</span>
@@ -2583,7 +2613,7 @@ body.winf-catalog-page #hero-title.winf-catalog-hero-all span{
           </div>
           <div class="winf-lab-disclaimer">
             <strong>COMPARAÇÃO VISUAL ILUSTRATIVA</strong>
-            <p>É uma prévia estética aproximada, não uma fotografia de aplicação, teste térmico, medição de temperatura ou previsão certificada de desempenho. A aparência real muda conforme vidro, iluminação e modelo escolhido.</p>
+            <p>As duas vistas são referências fotográficas ilustrativas, não fotografias do mesmo imóvel. A tonalidade é uma prévia estética, não simula com precisão a transmissão de luz, a privacidade (que depende da iluminação), o desempenho térmico nem confirma variantes comerciais. Consulte ficha técnica e amostra física.</p>
           </div>
         </div>
       </div>
@@ -3224,70 +3254,121 @@ function populateFilmSelect() {
 }
 
 // ===================== VISUALIZADOR DE PELÍCULAS WINF =====================
-// Não estima temperaturas: VLT/IR/garantias são informações das fichas cadastradas.
+// Prévia estética somente. VLT selecionado é ILUSTRATIVO e não representa SKU homologado.
+// Antes e depois de cada vista usam a mesma fotografia; as vistas entre si são
+// fotografias de referência diferentes e NÃO representam o mesmo imóvel.
 const WINF_LAB_SCENES = {
   arch: [
-    {label:'Casa com janelas amplas',image:'/images/invisible-poster-1.webp'},
-    {label:'Fachada envidraçada',image:'/images/dualreflect-poster-1.webp'}
+    {label:'Fachada envidraçada',image:'/images/dualreflect-poster-1.webp',inside:'/images/invisible-poster-2.webp'},
+    {label:'Casa com janelas amplas',image:'/images/invisible-poster-1.webp',inside:'/images/invisible-poster-3.webp'}
   ],
   aerocore: [
     {label:'Porsche em movimento na estrada',image:'/images/ceramic-hero.webp'},
     {label:'Película automotiva AeroCore',image:'/images/aerocore-catalog/spectre-15.webp'}
   ]
 };
+const WINF_LAB_BLACKPRO_VLT = new Set(['5','15','20','35','50']);
+let winfLabView='exterior';
+
 function populateFilmSelect() {
   const select=document.getElementById('sim-film-select');
   const scene=document.getElementById('sim-model-select');
   if(!select||!scene)return;
   const mode=activeCategory==='aerocore'?'aerocore':'arch';
   const products=PRODUCT_CATALOG.filter(p=>mode==='arch'?p.category==='arch':p.line==='aerocore');
+  const lastFilm=select.value;
   select.replaceChildren(new Option('Selecione uma película...', ''));
   products.forEach(p=>select.add(new Option(p.name,p.id)));
+  // A abertura do laboratório arquitetônico já oferece o exemplo BlackPro.
+  if(products.some(p=>p.id===lastFilm))select.value=lastFilm;
+  else if(mode==='arch'&&products.some(p=>p.id==='select-blackpro'))select.value='select-blackpro';
   const previousScene=scene.value;
   scene.replaceChildren();
   WINF_LAB_SCENES[mode].forEach(p=>scene.add(new Option(p.label,p.image)));
   if(Array.from(scene.options).some(o=>o.value===previousScene))scene.value=previousScene;
-  selectedFilmId='';
+  else scene.selectedIndex=0;
+  winfLabView='exterior';
+  selectedFilmId=select.value;
 }
 function updateSimDisplay() {
   const lab=document.getElementById('winf-film-lab');
   if(!lab)return;
-  const mode=activeCategory;
-  const visible=mode==='arch'||mode==='aerocore';
+  const visible=['all','arch','aerocore'].includes(activeCategory);
   lab.hidden=!visible;
   if(!visible)return;
+  const mode=activeCategory==='aerocore'?'aerocore':'arch';
   const scene=document.getElementById('sim-model-select');
   const select=document.getElementById('sim-film-select');
-  if(!scene||!select)return;
+  const vltSelect=document.getElementById('sim-vlt-select');
+  if(!scene||!select||!vltSelect)return;
   const film=PRODUCT_CATALOG.find(p=>p.id===select.value);
   selectedFilmId=film?film.id:'';
-  const image=scene.value||WINF_LAB_SCENES[mode][0].image;
+  const isBlackPro=mode==='arch'&&film?.id==='select-blackpro';
+  document.getElementById('sim-blackpro-settings').hidden=!isBlackPro;
+  document.getElementById('sim-view-switch').hidden=!isBlackPro;
+  if(!isBlackPro)winfLabView='exterior';
+  const selectedScene=WINF_LAB_SCENES[mode].find(x=>x.image===scene.value)||WINF_LAB_SCENES[mode][0];
+  const inside=isBlackPro&&winfLabView==='interior';
+  const image=inside?selectedScene.inside:selectedScene.image;
   const panes=document.getElementById('winf-lab-panes');
   panes.dataset.mode=mode;
+  panes.dataset.view=inside?'interior':'exterior';
   const url='url("'+image.replace(/"/g,'')+'")';
-  document.getElementById('sim-before').style.backgroundImage=url;
-  document.getElementById('sim-after').style.backgroundImage=url;
-  const vltText=film&&film.specs?film.specs.vlt:'—';
-  const numeric=film?Number.parseInt(vltText,10):100;
-  // Redução visual suavizada para nunca fingir reprodução óptica ou térmica real.
-  const darken=film&&Number.isFinite(numeric)?Math.min(0.68,Math.max(0,(100-numeric)/100*0.47)):0;
+  const before=document.getElementById('sim-before');
+  const after=document.getElementById('sim-after');
+  before.style.backgroundImage=url;
+  after.style.backgroundImage=url;
+  const perspective=inside?'VISTA INTERNA · DE DENTRO PARA FORA':'VISTA EXTERNA · FACHADA ENVIDRAÇADA';
+  document.getElementById('sim-view-caption').textContent=isBlackPro?perspective:mode==='arch'?'COMPARAÇÃO DE AMBIENTE':'COMPARAÇÃO AUTOMOTIVA';
+  before.setAttribute('aria-label',perspective+'; referência fotográfica sem película');
+  after.setAttribute('aria-label',perspective+'; prévia ilustrativa com película');
+  document.querySelectorAll('[data-sim-view]').forEach(button=>{
+    button.setAttribute('aria-pressed',String(button.dataset.simView===winfLabView));
+  });
+  const vltText=film?.specs?.vlt||'—';
+  const numeric=Number.parseInt(vltText,10);
+  let darken=film&&Number.isFinite(numeric)
+    ?Math.min(.68,Math.max(0,(100-numeric)/100*.47)):0;
+  if(isBlackPro) {
+    const requested=WINF_LAB_BLACKPRO_VLT.has(vltSelect.value)?Number(vltSelect.value):15;
+    // Somente variação gráfica: não calcula transmissão óptica ou proteção real.
+    darken=Math.min(.64,Math.max(.14,.14+(50-requested)/45*.49))*(inside?.75:1);
+    document.getElementById('sim-vlt').textContent=requested+'% · PRÉVIA';
+    document.getElementById('sim-ir').textContent='CONFIRMAR VARIANTE';
+    document.getElementById('sim-warranty').textContent='CONSULTAR FICHA';
+  }else{
+    document.getElementById('sim-vlt').textContent=film?vltText:'—';
+    document.getElementById('sim-ir').textContent=film?film.keyMetrics.ir:'—';
+    document.getElementById('sim-warranty').textContent=film?film.keyMetrics.warranty:'—';
+  }
   document.getElementById('sim-tint').style.opacity=String(darken);
-  document.getElementById('sim-vlt').textContent=vltText;
-  document.getElementById('sim-ir').textContent=film?film.keyMetrics.ir:'—';
-  document.getElementById('sim-warranty').textContent=film?film.keyMetrics.warranty:'—';
   document.getElementById('winf-lab-kicker').textContent=mode==='arch'?'WINF SELECT™ / GLASS + HOME':'AEROCORE™ / WINDOW FILM AUTOMOTIVO';
   document.getElementById('winf-lab-title').innerHTML=mode==='arch'?'VISUALIZE O <span>SEU AMBIENTE.</span>':'VISUALIZE O <span>SEU AUTOMÓVEL.</span>';
-  document.getElementById('winf-lab-description').textContent=mode==='arch'
-    ? 'Cenário arquitetônico: compare de forma ilustrativa a luminosidade e a tonalidade no vidro.'
-    : 'Cenário automotivo: compare de forma ilustrativa a aparência de películas para os vidros do veículo.';
+  document.getElementById('winf-lab-description').textContent=isBlackPro
+    ?'Escolha a tonalidade BlackPro® e alterne entre a aparência da fachada e a visibilidade de dentro para fora. A comparação é apenas visual.'
+    :mode==='arch'
+    ?'Cenário arquitetônico: compare de forma ilustrativa a luminosidade e a tonalidade no vidro.'
+    :'Cenário automotivo: compare de forma ilustrativa a aparência de películas para os vidros do veículo.';
   const link=document.getElementById('winf-lab-page');
   if(link)link.href=film?productLink(film):mode==='arch'?'/aerocore/winf-select/':'/aerocore/';
 }
 document.addEventListener('DOMContentLoaded',()=>{
   const model=document.getElementById('sim-model-select');
   const film=document.getElementById('sim-film-select');
+  const vlt=document.getElementById('sim-vlt-select');
   if(model)model.addEventListener('change',updateSimDisplay);
-  if(film)film.addEventListener('change',updateSimDisplay);
+  if(film)film.addEventListener('change',()=>{
+    winfLabView='exterior';
+    updateSimDisplay();
+  });
+  if(vlt)vlt.addEventListener('change',updateSimDisplay);
+  document.querySelectorAll('[data-sim-view]').forEach(button=>{
+    button.addEventListener('click',()=>{
+      if(document.getElementById('sim-view-switch').hidden)return;
+      winfLabView=button.dataset.simView==='interior'?'interior':'exterior';
+      updateSimDisplay();
+    });
+  });
 });
 
 // ===================== MODAL DE ESPECIFICAÇÕES (vanilla JS) =====================
