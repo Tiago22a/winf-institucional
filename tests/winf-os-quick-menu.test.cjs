@@ -6,7 +6,7 @@ const path = require('node:path');
 const root = path.resolve(__dirname, '..');
 const read = p => fs.readFileSync(path.join(root, p), 'utf8');
 
-test('Partners: preservar logo, menu global e remover InfoS redundante do topo', () => {
+test('Partners: preservar logo, menu global e remover WINF OS redundante do topo', () => {
   const html = read('partners/index.html');
   assert.match(html, /class="partners-landing-lockup"/);
   assert.match(html, /class="wp-menu-trigger menu-trigger"/);
@@ -28,12 +28,12 @@ test('Dock inferior: botão GHOST abre menu e mantém WhatsApp independente', ()
   assert.doesNotMatch(src, /<span class="wqc-label">WINF<\/span>/);
 });
 
-test('Menu GHOST: link oficial do InfoS primeiro, demais marcas e Escape', () => {
+test('Menu GHOST+: link oficial WINF OS primeiro, demais marcas e Escape', () => {
   const src = read('js/winf-quick-contact.js');
-  assert.match(src, /const commonBrandLinks = \[\s*\['INFOS™ — Entrar no WINF OS™', 'https:\/\/painel-os\.winf\.com\.br\/login\/'\]/);
+  assert.match(src, /const commonBrandLinks = \[\s*\['WINF OS™ — ENTRAR NO APLICATIVO', 'https:\/\/painel-os\.winf\.com\.br\/login\/'\]/);
   assert.match(src, /NeoSkin™/);
   assert.match(src, /wqc-infos-action/);
-  assert.match(src, /aria-label','Entrar no InfoS/);
+  assert.match(src, /aria-label','Entrar no aplicativo WINF OS/);
   assert.match(src, /WINF Partners™/);
   assert.match(src, /if\(event\.key==='Escape'&&active\)/);
   assert.match(src, /!dock\.contains\(event\.target\)/);
