@@ -27,6 +27,9 @@
   const pageName = forPartners ? 'WINF Partners™' : /^\/aerocore/.test(path) ? 'AeroCore™ e WINF' : 'WINF™';
   const salesPhone = '5513981113001', partnerPhone = '5513997815375';
   const chosenPhone = forPartners ? partnerPhone : salesPhone;
+  // Nos ambientes Partners, reaproveitar o Ghost oficial de contorno do WINF OS.
+  const ghostMark = forPartners ? '/briefing/ghost-official-contour.svg' : '/aerocore/assets/ghost-symbol.png';
+  const ghostLabel = forPartners ? 'GHOST+' : 'GHOST';
   const whatsapp = (phone, message) => 'https://wa.me/' + phone + '?text=' + encodeURIComponent(message);
   const directMessage = forPartners
     ? 'Olá! Estou na página WINF Partners e gostaria de consultar as oportunidades de licenciamento na minha cidade.'
@@ -62,7 +65,7 @@
     if (document.querySelector('link[href^="/css/winf-quick-contact.css"]')) return;
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = '/css/winf-quick-contact.css?v=20261110-single-dock';
+    link.href = '/css/winf-quick-contact.css?v=20261116-ghost-plus1';
     document.head.appendChild(link);
   }
   function addLink(label,href) {
@@ -88,10 +91,11 @@
     addStyle();
     const dock = document.createElement('aside');
     dock.id='winf-quick-contact';
+    if (forPartners) dock.classList.add('wqc-partners-premium');
     dock.setAttribute('aria-label','Acesso rápido WINF — canais e ajuda');
     dock.innerHTML = '<div class="wqc-panel" id="wqc-panel" role="region" aria-label="Canais de atendimento WINF" hidden><div class="wqc-panel-head"><div><strong id="wqc-panel-title">WINF™ — Canais</strong><p id="wqc-panel-desc">Escolha um caminho.</p></div><button class="wqc-close" type="button" data-wqc-close aria-label="Fechar ajuda">×</button></div><div class="wqc-options" id="wqc-options"></div><p class="wqc-note" id="wqc-note"></p></div>'
       + '<div class="wqc-launchers">'
-      + '<div class="wqc-item"><button type="button" data-wqc="brands" class="wqc-circle" aria-controls="wqc-panel" aria-expanded="false" aria-label="Abrir GHOST: universo WINF e acesso ao InfoS" title="GHOST — Menu WINF e InfoS"><img src="/aerocore/assets/ghost-symbol.png" width="31" height="40" alt=""></button><span class="wqc-label">GHOST</span></div>'
+      + '<div class="wqc-item"><button type="button" data-wqc="brands" class="wqc-circle" aria-controls="wqc-panel" aria-expanded="false" aria-label="Abrir GHOST: universo WINF e acesso ao InfoS" title="GHOST+ — Menu WINF e InfoS"><img src="' + ghostMark + '" width="31" height="40" alt=""></button><span class="wqc-label">' + ghostLabel + '</span></div>'
       + '<div class="wqc-item"><a class="wqc-circle wqc-whatsapp" href="' + whatsapp(chosenPhone,directMessage) + '" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp: ' + pageName + '" title="Falar no WhatsApp">' + whatsappSymbol + '</a><span class="wqc-label">WHATSAPP</span></div>'
       + '</div>';
     document.body.appendChild(dock);
@@ -129,7 +133,15 @@
         'Orientações rápidas disponíveis nesta versão. O Hermes será integrado futuramente; para atendimento personalizado, utilize o WhatsApp.';
       options.replaceChildren();
       const records=isBrands?commonBrandLinks:(forPartners?partnerHelp:generalHelp);
-      records.forEach(([label,url])=>options.append(addLink(label,url)));
+      records.forEach(([label,url],index)=>{
+        const link=addLink(label,url);
+        if (isBrands && index===0) {
+          link.classList.add('wqc-infos-action');
+          link.setAttribute('aria-label','Entrar no InfoS — WINF OS');
+          link.setAttribute('title','Acessar o sistema InfoS™');
+        }
+        options.append(link);
+      });
       dock.querySelector('[data-wqc-close]').focus();
     }
     triggers.forEach(btn=>btn.addEventListener('click',()=>setPanel(active===btn.dataset.wqc?null:btn.dataset.wqc)));

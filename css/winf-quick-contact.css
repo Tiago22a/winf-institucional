@@ -82,3 +82,86 @@ html.winf-quick-dock-active .winf-global-floating-dock {display:none!important}
   #winf-quick-contact .wqc-circle{width:52px;height:52px}
   #winf-quick-contact .wqc-label{font-size:8px;letter-spacing:.025em}
 }
+
+/* WINF PARTNERS™ — acabamento GHOST+ premium, inspirado no botão WINF OS original.
+ * Escopo restrito a Partners/Briefing, sem redesenhar logo ou afetar docks territoriais. */
+#winf-quick-contact.wqc-partners-premium .wqc-item:first-child .wqc-circle {
+  isolation:isolate;overflow:hidden;position:relative;
+  background:linear-gradient(145deg,#626971 0%,#181b1f 12%,#050608 32%,#292e33 69%,#080a0c 86%,#727981 100%);
+  border:1px solid #676d75;
+  box-shadow:0 9px 24px #000b,inset 0 1px 1px #fff8,inset 0 -2px 4px #000,0 0 0 1px #ffffff1e;
+  animation:wqc-ghost-breathe 6s ease-in-out infinite;
+}
+#winf-quick-contact.wqc-partners-premium .wqc-item:first-child .wqc-circle::before {
+  content:"";position:absolute;inset:4px;z-index:0;pointer-events:none;border-radius:50%;
+  background:radial-gradient(ellipse at 40% 22%,#292f35,#0a0d11 63%,#050608 84%);
+  box-shadow:inset 0 3px 8px #000c,inset 0 1px 1px #fff4;
+}
+#winf-quick-contact.wqc-partners-premium .wqc-item:first-child .wqc-circle::after {
+  content:"";position:absolute;inset:5px;z-index:1;pointer-events:none;border-radius:50%;
+  border:1px solid #7d879080;box-shadow:inset 0 0 3px #c5d4e116;
+}
+#winf-quick-contact.wqc-partners-premium .wqc-item:first-child .wqc-circle img {
+  position:relative;z-index:2;width:29px;height:34px;max-width:68%;max-height:69%;
+  object-fit:contain;opacity:.82;
+  filter:grayscale(1) brightness(0) invert(1) drop-shadow(0 0 3px #fff6);
+  transition:opacity .3s ease,filter .3s ease;
+}
+#winf-quick-contact.wqc-partners-premium .wqc-item:first-child .wqc-circle:is(:hover,:focus-visible,[aria-expanded="true"]) {
+  background:linear-gradient(145deg,#8c9298,#181b20 18%,#080a0c 65%,#565d65);
+  border-color:#c3c9d0;
+  box-shadow:0 10px 27px #000c,0 0 14px #ffffff4b,inset 0 1px 1px #fff9;
+  animation:none;
+}
+#winf-quick-contact.wqc-partners-premium .wqc-item:first-child .wqc-circle:is(:hover,:focus-visible,[aria-expanded="true"]) img {
+  opacity:1;filter:grayscale(1) brightness(0) invert(1) drop-shadow(0 0 6px #fff9);
+}
+#winf-quick-contact.wqc-partners-premium .wqc-item:first-child .wqc-label{
+  color:#edf0f4;letter-spacing:.095em;text-shadow:0 0 7px #ffffff33,0 2px 5px #000;
+}
+#winf-quick-contact.wqc-partners-premium .wqc-whatsapp {
+  animation:wqc-whatsapp-breathe 7s ease-in-out infinite;
+}
+#winf-quick-contact.wqc-partners-premium .wqc-whatsapp:is(:hover,:focus-visible){
+  animation:none;transform:translateY(-3px) scale(1.035);
+  box-shadow:0 10px 26px #000a,0 0 15px #46c77b80;
+}
+/* Botão de acesso ao InfoS — primeiro e destacado ao abrir o Universo WINF. */
+#winf-quick-contact.wqc-partners-premium .wqc-options a.wqc-infos-action {
+  min-height:68px;padding:12px 13px;margin:0 0 8px;
+  border:1px solid #e8ebeea8;border-radius:8px;
+  color:#fff;background:linear-gradient(112deg,#20252c,#343c44 55%,#1a1f25);
+  box-shadow:0 6px 18px #0006,inset 0 1px 0 #ffffff2c;
+  font:800 12px/1.4 Inter,Arial,sans-serif;letter-spacing:.015em;
+  animation:wqc-infos-enter .42s ease-out both;
+}
+#winf-quick-contact.wqc-partners-premium .wqc-options a.wqc-infos-action::before{
+  content:"";display:block;flex:0 0 35px;width:35px;height:35px;border-radius:50%;
+  background:#090b0e url('/briefing/ghost-official-contour.svg') center/20px 27px no-repeat;
+  border:1px solid #929aa3;box-shadow:inset 0 1px 3px #fff2,0 0 7px #ffffff29;
+}
+#winf-quick-contact.wqc-partners-premium .wqc-options a.wqc-infos-action:hover,
+#winf-quick-contact.wqc-partners-premium .wqc-options a.wqc-infos-action:focus-visible {
+  border-color:#fff;background:linear-gradient(112deg,#333a43,#4a525b 55%,#252b31);
+  box-shadow:0 8px 22px #0009,0 0 12px #ffffff42;
+}
+#winf-quick-contact.wqc-partners-premium .wqc-options a.wqc-infos-action span:last-child{color:#fff}
+@keyframes wqc-ghost-breathe{
+  0%,100%{box-shadow:0 9px 24px #000b,inset 0 1px 1px #fff8,inset 0 -2px 4px #000,0 0 0 1px #ffffff1e}
+  50%{box-shadow:0 9px 24px #000b,inset 0 1px 1px #fff8,inset 0 -2px 4px #000,0 0 12px #d9e4f349}
+}
+@keyframes wqc-whatsapp-breathe{
+  0%,100%{box-shadow:0 8px 29px #0008,0 0 0 1px #ffffff20}
+  50%{box-shadow:0 8px 29px #0008,0 0 12px #38af6a4a}
+}
+@keyframes wqc-infos-enter{
+  from{opacity:.6;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}
+}
+@media(max-width:580px){
+ #winf-quick-contact.wqc-partners-premium .wqc-item:first-child .wqc-circle img {width:26px;height:31px}
+ #winf-quick-contact.wqc-partners-premium .wqc-options a.wqc-infos-action {min-height:62px;font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){
+ #winf-quick-contact.wqc-partners-premium .wqc-circle,
+ #winf-quick-contact.wqc-partners-premium .wqc-options a.wqc-infos-action {animation:none!important;transition:none!important}
+}
