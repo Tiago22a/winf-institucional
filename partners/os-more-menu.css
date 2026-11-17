@@ -1,0 +1,27 @@
+/* WINF Partners™ — menu discreto ao lado do acesso original ao WINF OS™.
+   Não altera o botão oficial, a autenticação nem o menu global. */
+.wp-header .wp-header-actions .wp-os-access{display:inline-flex;align-items:center;gap:3px;position:relative;min-width:0}
+.wp-header .wp-header-actions .wp-os-access .winf-os-power-link{margin:0!important}
+.wp-os-more{position:relative;align-self:center;margin-top:-8px;z-index:5}
+.wp-os-more>summary{list-style:none;display:grid;place-items:center;width:31px;height:34px;border:1px solid #ffffff5c;border-radius:8px;background:#0c0e10c9;color:#e9e9e9;cursor:pointer;box-shadow:0 4px 16px #0008;transition:background .2s,border-color .2s}
+.wp-os-more>summary::-webkit-details-marker{display:none}
+.wp-os-more>summary::marker{content:""}
+.wp-os-more>summary:hover,.wp-os-more[open]>summary{border-color:#fff;background:#26282b}
+.wp-os-more>summary svg{display:block;width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+.wp-os-more[open]>summary svg{transform:rotate(180deg)}
+.wp-os-more>summary:focus-visible{outline:2px solid #fff;outline-offset:4px}
+.wp-os-more-panel{position:absolute;right:0;top:calc(100% + 13px);width:min(332px,calc(100vw - 28px));max-height:min(580px,calc(100dvh - 120px));overflow-y:auto;overscroll-behavior:contain;padding:15px;background:#0b0d10f7;color:#fff;border:1px solid #ffffff55;border-radius:10px;box-shadow:0 24px 55px #000c;backdrop-filter:blur(20px);z-index:15}
+.wp-os-more-title{display:block;margin:2px 9px 10px;color:#acb1bb;font:800 10px/1.4 Inter,Arial,sans-serif;letter-spacing:.17em}
+.wp-os-more-links{display:flex;flex-direction:column;gap:2px}
+.wp-os-more-links a{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:11px 9px;text-decoration:none;color:#dadde2;font:650 12px/1.4 Inter,Arial,sans-serif;letter-spacing:.01em;border-radius:5px}
+.wp-os-more-links a::after{content:"↗";font-size:13px;color:#9ea3ae;flex-shrink:0}
+.wp-os-more-links a:hover,.wp-os-more-links a:focus-visible{background:#ffffff19;color:#fff}
+.wp-os-more-links a:first-child{background:#ffffff13;color:#fff;font-weight:800}
+.wp-os-more-divider{height:1px;background:#ffffff2a;margin:8px 9px}
+@media(max-width:600px){
+ .wp-header .wp-header-actions{gap:9px}
+ .wp-os-more{margin-top:-5px}
+ .wp-os-more>summary{width:28px;height:32px}
+ .wp-os-more-panel{right:-3px;width:min(308px,calc(100vw - 24px));max-height:calc(100dvh - 102px)}
+}
+@media(prefers-reduced-motion:reduce){.wp-os-more>summary,.wp-os-more>summary svg{transition:none!important}}
