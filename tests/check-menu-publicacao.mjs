@@ -52,7 +52,7 @@ const checks = [
     assert.match(home,/EXPLORAR MARCAS/);
     assert.match(home,/VER CATÁLOGO/);
   }],
-  ['WINF Partners: top menu stays clean, InfoS is first in GHOST popup', () => {
+  ['WINF Partners: top menu stays clean, WINF OS is first in GHOST popup', () => {
     const p = partners.match(/<header\b[\s\S]*?<\/header>/)?.[0]||'';
     const h = home.match(/<header\b[\s\S]*?<\/header>/)?.[0]||'';
     const a = aero.match(/<header\b[\s\S]*?<\/header>/)?.[0]||'';
@@ -61,7 +61,7 @@ const checks = [
     assert.match(p,/wp-menu-trigger menu-trigger/);
     assert.match(dock,/data-wqc="brands"/);
     assert.match(dock,/const ghostLabel = forPartners \? 'GHOST\+' : 'GHOST'/);
-    assert.match(dock,/INFOS™ — Entrar no WINF OS™/);
+    assert.match(dock,/WINF OS™ — ENTRAR NO APLICATIVO/);
     assert.match(dock,/wqc-infos-action/);
     assert.match(dock,/painel-os\.winf\.com\.br\/login/);
     assert.match(dock,/wqc-whatsapp/);
