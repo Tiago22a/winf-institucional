@@ -35,7 +35,7 @@
     ? 'Olá! Estou na página WINF Partners e gostaria de consultar as oportunidades de licenciamento na minha cidade.'
     : 'Olá! Estou no site WINF e gostaria de conhecer os produtos e serviços.';
   const commonBrandLinks = [
-    ['INFOS™ — Entrar no WINF OS™', 'https://painel-os.winf.com.br/login/'],
+    ['WINF OS™ — ENTRAR NO APLICATIVO', 'https://painel-os.winf.com.br/login/'],
     ['WINF — Premium Quality Window Film','/'],
     ['WINF Select™ — Arquitetura','/aerocore/winf-select/'],
     ['AeroCore™ — Películas','/aerocore/aerocore/'],
@@ -95,7 +95,7 @@
     dock.setAttribute('aria-label','Acesso rápido WINF — canais e ajuda');
     dock.innerHTML = '<div class="wqc-panel" id="wqc-panel" role="region" aria-label="Canais de atendimento WINF" hidden><div class="wqc-panel-head"><div><strong id="wqc-panel-title">WINF™ — Canais</strong><p id="wqc-panel-desc">Escolha um caminho.</p></div><button class="wqc-close" type="button" data-wqc-close aria-label="Fechar ajuda">×</button></div><div class="wqc-options" id="wqc-options"></div><p class="wqc-note" id="wqc-note"></p></div>'
       + '<div class="wqc-launchers">'
-      + '<div class="wqc-item"><button type="button" data-wqc="brands" class="wqc-circle" aria-controls="wqc-panel" aria-expanded="false" aria-label="Abrir GHOST: universo WINF e acesso ao InfoS" title="GHOST+ — Menu WINF e InfoS"><img src="' + ghostMark + '" width="31" height="40" alt=""></button><span class="wqc-label">' + ghostLabel + '</span></div>'
+      + '<div class="wqc-item"><button type="button" data-wqc="brands" class="wqc-circle" aria-controls="wqc-panel" aria-expanded="false" aria-label="Abrir GHOST+: universo WINF e acesso ao WINF OS" title="GHOST+ — Menu WINF e WINF OS"><img src="' + ghostMark + '" width="31" height="40" alt=""></button><span class="wqc-label">' + ghostLabel + '</span></div>'
       + '<div class="wqc-item"><a class="wqc-circle wqc-whatsapp" href="' + whatsapp(chosenPhone,directMessage) + '" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp: ' + pageName + '" title="Falar no WhatsApp">' + whatsappSymbol + '</a><span class="wqc-label">WHATSAPP</span></div>'
       + '</div>';
     document.body.appendChild(dock);
@@ -137,8 +137,8 @@
         const link=addLink(label,url);
         if (isBrands && index===0) {
           link.classList.add('wqc-infos-action');
-          link.setAttribute('aria-label','Entrar no InfoS — WINF OS');
-          link.setAttribute('title','Acessar o sistema InfoS™');
+          link.setAttribute('aria-label','Entrar no aplicativo WINF OS');
+          link.setAttribute('title','Acessar WINF OS™');
         }
         options.append(link);
       });
