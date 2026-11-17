@@ -52,15 +52,20 @@ const checks = [
     assert.match(home,/EXPLORAR MARCAS/);
     assert.match(home,/VER CATÁLOGO/);
   }],
-  ['only WINF Partners has WINF OS header access', () => {
+  ['WINF Partners: top menu stays clean, InfoS is first in GHOST popup', () => {
     const p = partners.match(/<header\b[\s\S]*?<\/header>/)?.[0]||'';
     const h = home.match(/<header\b[\s\S]*?<\/header>/)?.[0]||'';
     const a = aero.match(/<header\b[\s\S]*?<\/header>/)?.[0]||'';
-    assert.match(p,/painel-os\.winf\.com\.br\/login/);
-    assert.match(p,/WINF OS™/);
+    const dock = read('js/winf-quick-contact.js');
+    assert.doesNotMatch(p,/winf-os-power-link|wp-os-more|painel-os\.winf\.com\.br/);
+    assert.match(p,/wp-menu-trigger menu-trigger/);
+    assert.match(dock,/data-wqc="brands"/);
+    assert.match(dock,/<span class="wqc-label">GHOST<\/span>/);
+    assert.match(dock,/INFOS™ — Entrar no WINF OS™/);
+    assert.match(dock,/painel-os\.winf\.com\.br\/login/);
+    assert.match(dock,/wqc-whatsapp/);
     assert.doesNotMatch(h,/WINF OS™/);
     assert.doesNotMatch(a,/WINF OS™/);
-    assert.match(pCss,/WINF OS: acesso exclusivo/);
   }],
   ['AeroCore has minimal menu with local routes and return to the WINF universe', () => {
     assert.match(aero,/id="menu-overlay" class="ac-simple-menu ac-shell"/);
