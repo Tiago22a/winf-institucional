@@ -19,8 +19,10 @@ test('Partners: preservar logo, menu global e remover InfoS redundante do topo',
 test('Dock inferior: botão GHOST abre menu e mantém WhatsApp independente', () => {
   const src = read('js/winf-quick-contact.js');
   assert.match(src, /data-wqc="brands"/);
-  assert.match(src, /<span class="wqc-label">GHOST<\/span>/);
+  assert.match(src, /const ghostLabel = forPartners \? 'GHOST\+' : 'GHOST'/);
   assert.match(src, /wqc-panel/);
+  assert.match(src, /wqc-partners-premium/);
+  assert.match(src, /ghost-official-contour\.svg/);
   assert.match(src, /wqc-whatsapp/);
   assert.match(src, /chosenPhone = forPartners \? partnerPhone : salesPhone/);
   assert.doesNotMatch(src, /<span class="wqc-label">WINF<\/span>/);
@@ -30,10 +32,15 @@ test('Menu GHOST: link oficial do InfoS primeiro, demais marcas e Escape', () =>
   const src = read('js/winf-quick-contact.js');
   assert.match(src, /const commonBrandLinks = \[\s*\['INFOS™ — Entrar no WINF OS™', 'https:\/\/painel-os\.winf\.com\.br\/login\/'\]/);
   assert.match(src, /NeoSkin™/);
+  assert.match(src, /wqc-infos-action/);
+  assert.match(src, /aria-label','Entrar no InfoS/);
   assert.match(src, /WINF Partners™/);
   assert.match(src, /if\(event\.key==='Escape'&&active\)/);
   assert.match(src, /!dock\.contains\(event\.target\)/);
   const css = read('css/winf-quick-contact.css');
   assert.match(css, /max-height:/);
   assert.match(css, /@media\(max-width:580px\)/);
+  assert.match(css, /wqc-ghost-breathe/);
+  assert.match(css, /wqc-whatsapp-breathe/);
+  assert.match(css, /prefers-reduced-motion:reduce/);
 });
