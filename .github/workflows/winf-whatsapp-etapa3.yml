@@ -1,0 +1,39 @@
+name: WINF — Homologação WhatsApp 200 territórios (etapa 3)
+on:
+  pull_request:
+    paths:
+      - 'onde-comprar/index.html'
+      - 'config/winf-territorios-consumidor-200.json'
+      - 'js/winf-turnkey-consumidor.js'
+      - 'tests/winf-whatsapp-etapa3.test.mjs'
+      - '.github/workflows/winf-whatsapp-etapa3.yml'
+  workflow_dispatch:
+jobs:
+  atendimento-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Instalar Chromium
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install --with-deps chromium
+      - name: Subir localizador em homologação
+        run: |
+          python3 -m http.server 8766 --bind 127.0.0.1 > /tmp/winf-localizador-qa.log 2>&1 &
+          for i in $(seq 1 20); do curl -fsS http://127.0.0.1:8766/onde-comprar/ >/dev/null && break; sleep 1; done
+          mkdir -p artifacts/whatsapp
+      - name: Validar cidades e mensagens no navegador
+        run: node --test tests/winf-whatsapp-etapa3.test.mjs
+      - name: Guardar capturas
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: winf-atendimento-200-desktop-celular
+          path: artifacts/whatsapp/
+          if-no-files-found: warn

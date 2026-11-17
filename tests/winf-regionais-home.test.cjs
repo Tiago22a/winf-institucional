@@ -9,19 +9,29 @@ const css=fs.readFileSync(path.join(root,"css/winf-active-territories.css"),"utf
 const section=html.split('<section id="unidades-ativas"')[1]?.split("</section>")[0]||"";
 const cards=[...html.matchAll(/<article class="winf-active-card" data-territory="([^"]+)"[\s\S]*?<\/article>/g)];
 const byName=Object.fromEntries(cards.map(m=>[m[1],m[0]]));
-test("Rede territorial exibe sete sites existentes, uma vez cada",()=>{
+test("Rede preserva sete cards de atendimento e não vincula páginas removidas",()=>{
  assert.equal(cards.length,7);
  assert.deepEqual(Object.keys(byName).sort(),["santos","praia-grande","guaruja","sorocaba","pilar-do-sul","cuiaba","campina-grande"].sort());
- const urls=[
- "/pelicula-de-controle-solar-santos-sp/",
- "/pelicula-de-controle-solar-praia-grande-sp/",
- "/pelicula-de-controle-solar-guaruja-sp/",
- "/insulfilm-residencial-sorocaba-sp/",
- "/pelicula-de-controle-solar-pilar-do-sul-sp/",
- "/pelicula-de-controle-solar-cuiaba-mt/",
- "/pelicula-de-controle-solar-campina-grande-pb/"
- ];
- for(const url of urls){assert.ok(html.includes('href="'+url+'"'),url);assert.ok(fs.existsSync(path.join(root,url.slice(1),"index.html")),url)}
+ const published={
+  santos:"/pelicula-de-controle-solar-santos-sp/",
+  sorocaba:"/insulfilm-residencial-sorocaba-sp/"
+ };
+ for(const [city,url] of Object.entries(published)){
+  assert.ok(byName[city].includes('href="'+url+'"'),city+" preservado");
+  assert.ok(fs.existsSync(path.join(root,url.slice(1),"index.html")),city+" tem arquivo real");
+ }
+ const removed={
+  "praia-grande":"/pelicula-de-controle-solar-praia-grande-sp/",
+  guaruja:"/pelicula-de-controle-solar-guaruja-sp/",
+  "pilar-do-sul":"/pelicula-de-controle-solar-pilar-do-sul-sp/",
+  cuiaba:"/pelicula-de-controle-solar-cuiaba-mt/",
+  "campina-grande":"/pelicula-de-controle-solar-campina-grande-pb/"
+ };
+ for(const [city,url] of Object.entries(removed)){
+  assert.equal(fs.existsSync(path.join(root,url.slice(1),"index.html")),false,city+" permanece removida");
+  assert.doesNotMatch(byName[city],/SITE DA CIDADE/,city+" não anuncia página inexistente");
+  assert.equal(byName[city].includes('href="'+url+'"'),false,city+" sem link quebrado");
+ }
 });
 test("Atendimento das regionais 013 e 015 não se mistura",()=>{
  for(const city of ["santos","guaruja","praia-grande"]){assert.match(byName[city],/wa\.me\/5513981113001\?text=/,city);assert.doesNotMatch(byName[city],/5515997909049/,city)}

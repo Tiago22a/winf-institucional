@@ -33,7 +33,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "santos-sp",
@@ -74,7 +74,7 @@ globalThis.WINF_CIDADES = [
     "cidade": "Campina Grande",
     "uf": "PB",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": "5513981113001",
     "url": "/pelicula-de-controle-solar-campina-grande-pb/",
@@ -97,7 +97,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "belo-horizonte-mg",
@@ -129,7 +129,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "florianopolis-sc",
@@ -145,7 +145,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "salvador-ba",
@@ -161,7 +161,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "recife-pe",
@@ -177,7 +177,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "brasilia-df",
@@ -225,7 +225,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "jundiai-sp",
@@ -241,7 +241,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "sao-jose-dos-campos-sp",
@@ -257,7 +257,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "ribeirao-preto-sp",
@@ -273,7 +273,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "santo-andre-sp",
@@ -289,7 +289,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "sao-bernardo-do-campo-sp",
@@ -305,7 +305,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "sao-caetano-do-sul-sp",
@@ -321,7 +321,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "barueri-alphaville-sp",
@@ -353,7 +353,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "piracicaba-sp",
@@ -369,7 +369,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "bauru-sp",
@@ -401,7 +401,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "sao-jose-do-rio-preto-sp",
@@ -417,7 +417,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "presidente-prudente-sp",
@@ -433,7 +433,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "franca-sp",
@@ -449,7 +449,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "limeira-sp",
@@ -465,7 +465,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "sao-vicente-sp",
@@ -490,7 +490,7 @@ globalThis.WINF_CIDADES = [
     "cidade": "Guarujá",
     "uf": "SP",
     "status": "ativa",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": "residencial",
     "numero": "5513981113001",
     "url": "/pelicula-de-controle-solar-guaruja-sp/",
@@ -506,7 +506,7 @@ globalThis.WINF_CIDADES = [
     "cidade": "Praia Grande",
     "uf": "SP",
     "status": "ativa",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": "residencial",
     "numero": "5513981113001",
     "url": "/pelicula-de-controle-solar-praia-grande-sp/",
@@ -680,7 +680,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "petropolis-rj",
@@ -696,7 +696,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "volta-redonda-rj",
@@ -712,7 +712,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "nova-iguacu-rj",
@@ -728,7 +728,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "cabo-frio-rj",
@@ -760,7 +760,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "vitoria-es",
@@ -776,7 +776,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "vila-velha-es",
@@ -792,7 +792,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "linhares-es",
@@ -808,7 +808,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "nova-lima-mg",
@@ -824,7 +824,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "contagem-mg",
@@ -840,7 +840,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "uberlandia-mg",
@@ -856,7 +856,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "juiz-de-fora-mg",
@@ -872,7 +872,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "uberaba-mg",
@@ -888,7 +888,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "ipatinga-mg",
@@ -904,7 +904,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "governador-valadares-mg",
@@ -920,7 +920,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "montes-claros-mg",
@@ -936,7 +936,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "divinopolis-mg",
@@ -952,7 +952,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "londrina-pr",
@@ -968,7 +968,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "fortaleza-ce",
@@ -984,7 +984,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "goiania-go",
@@ -1000,7 +1000,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "cuiaba-mt",
@@ -1009,7 +1009,7 @@ globalThis.WINF_CIDADES = [
     "cidade": "Cuiabá",
     "uf": "MT",
     "status": "nao_ativa",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": "5513981113001",
     "url": "/pelicula-de-controle-solar-cuiaba-mt/",
@@ -1032,7 +1032,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "manaus-am",
@@ -1048,7 +1048,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "porto-alegre-rs",
@@ -1064,7 +1064,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "guarulhos-sp",
@@ -1080,7 +1080,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "osasco-sp",
@@ -1096,7 +1096,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "maua-sp",
@@ -1112,7 +1112,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "diadema-sp",
@@ -1128,7 +1128,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "carapicuiba-sp",
@@ -1144,7 +1144,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "itaquaquecetuba-sp",
@@ -1160,7 +1160,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "taubate-sp",
@@ -1176,7 +1176,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "suzano-sp",
@@ -1192,7 +1192,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "sumare-sp",
@@ -1208,7 +1208,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "cotia-sp",
@@ -1224,7 +1224,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "taboao-da-serra-sp",
@@ -1240,7 +1240,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "indaiatuba-sp",
@@ -1256,7 +1256,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "sao-carlos-sp",
@@ -1272,7 +1272,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "embu-das-artes-sp",
@@ -1288,7 +1288,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "araraquara-sp",
@@ -1320,7 +1320,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "americana-sp",
@@ -1352,7 +1352,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "itapevi-sp",
@@ -1368,7 +1368,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "rio-claro-sp",
@@ -1384,7 +1384,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "aracatuba-sp",
@@ -1416,7 +1416,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "ferraz-de-vasconcelos-sp",
@@ -1432,7 +1432,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "braganca-paulista-sp",
@@ -1464,7 +1464,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "pindamonhangaba-sp",
@@ -1480,7 +1480,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "francisco-morato-sp",
@@ -1496,7 +1496,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "atibaia-sp",
@@ -1528,7 +1528,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "itapetininga-sp",
@@ -1560,7 +1560,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "mogi-guacu-sp",
@@ -1576,7 +1576,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "botucatu-sp",
@@ -1608,7 +1608,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   },
   {
     "id": "caraguatatuba-sp",
@@ -1624,7 +1624,7 @@ globalThis.WINF_CIDADES = [
     "observacoes": "Página WINF Select publicada. Consulte a equipe WINF para avaliar as possibilidades de atendimento.",
     "disponivelParaAtivacao": false,
     "exemplo": false,
-    "siteAtivo": true
+    "siteAtivo": false
   }
 ];
 
@@ -1637,7 +1637,7 @@ globalThis.WINF_UNIDADES_EXTRAS = [
     "cidade": "Pilar do Sul",
     "uf": "SP",
     "status": "ativa",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": "residencial",
     "numero": "5515997909049",
     "url": "/pelicula-de-controle-solar-pilar-do-sul-sp/",
@@ -2523,7 +2523,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Paulínia",
     "uf": "SP",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-paulinia-sp/",
@@ -2537,7 +2537,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Cajamar",
     "uf": "SP",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-cajamar-sp/",
@@ -2551,7 +2551,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Louveira",
     "uf": "SP",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-louveira-sp/",
@@ -2565,7 +2565,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "São Sebastião",
     "uf": "SP",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-sao-sebastiao-sp/",
@@ -2579,7 +2579,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Ilhabela",
     "uf": "SP",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-ilhabela-sp/",
@@ -2593,7 +2593,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Vinhedo",
     "uf": "SP",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-vinhedo-sp/",
@@ -2607,7 +2607,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Jaguariúna",
     "uf": "SP",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-jaguariuna-sp/",
@@ -2621,7 +2621,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Salto",
     "uf": "SP",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-salto-sp/",
@@ -2635,7 +2635,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Itupeva",
     "uf": "SP",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-itupeva-sp/",
@@ -2663,7 +2663,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Itatiba",
     "uf": "SP",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-itatiba-sp/",
@@ -2677,7 +2677,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Valinhos",
     "uf": "SP",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-valinhos-sp/",
@@ -2705,7 +2705,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Sertãozinho",
     "uf": "SP",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-sertaozinho-sp/",
@@ -2719,7 +2719,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Lins",
     "uf": "SP",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-lins-sp/",
@@ -2733,7 +2733,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Guaratinguetá",
     "uf": "SP",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-guaratingueta-sp/",
@@ -2747,7 +2747,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Mogi Mirim",
     "uf": "SP",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-mogi-mirim-sp/",
@@ -2761,7 +2761,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Matão",
     "uf": "SP",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-matao-sp/",
@@ -2789,7 +2789,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Catanduva",
     "uf": "SP",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-catanduva-sp/",
@@ -2831,7 +2831,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Lençóis Paulista",
     "uf": "SP",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-lencois-paulista-sp/",
@@ -2845,7 +2845,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Jaú",
     "uf": "SP",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-jau-sp/",
@@ -2859,7 +2859,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Caçapava",
     "uf": "SP",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-cacapava-sp/",
@@ -2873,7 +2873,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Itapira",
     "uf": "SP",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-itapira-sp/",
@@ -2887,7 +2887,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Monte Mor",
     "uf": "SP",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-monte-mor-sp/",
@@ -2901,7 +2901,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Nova Odessa",
     "uf": "SP",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-nova-odessa-sp/",
@@ -2915,7 +2915,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Jandira",
     "uf": "SP",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-jandira-sp/",
@@ -2929,7 +2929,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Caieiras",
     "uf": "SP",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-caieiras-sp/",
@@ -2957,7 +2957,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "São João da Boa Vista",
     "uf": "SP",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-sao-joao-da-boa-vista-sp/",
@@ -2971,7 +2971,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Leme",
     "uf": "SP",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-leme-sp/",
@@ -2985,7 +2985,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Ourinhos",
     "uf": "SP",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-ourinhos-sp/",
@@ -3013,7 +3013,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Ribeirão Pires",
     "uf": "SP",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-ribeirao-pires-sp/",
@@ -3041,7 +3041,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Várzea Paulista",
     "uf": "SP",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-varzea-paulista-sp/",
@@ -3069,7 +3069,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Poá",
     "uf": "SP",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-poa-sp/",
@@ -3083,7 +3083,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Maricá",
     "uf": "RJ",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-marica-rj/",
@@ -3097,7 +3097,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Duque de Caxias",
     "uf": "RJ",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-duque-de-caxias-rj/",
@@ -3111,7 +3111,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Saquarema",
     "uf": "RJ",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-saquarema-rj/",
@@ -3139,7 +3139,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Joinville",
     "uf": "SC",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-joinville-sc/",
@@ -3153,7 +3153,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Itajaí",
     "uf": "SC",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-itajai-sc/",
@@ -3167,7 +3167,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "São Luís",
     "uf": "MA",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-sao-luis-ma/",
@@ -3181,7 +3181,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Caxias do Sul",
     "uf": "RS",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-caxias-do-sul-rs/",
@@ -3195,7 +3195,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Serra",
     "uf": "ES",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-serra-es/",
@@ -3223,7 +3223,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "São José dos Pinhais",
     "uf": "PR",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-sao-jose-dos-pinhais-pr/",
@@ -3237,7 +3237,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Maceió",
     "uf": "AL",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-maceio-al/",
@@ -3251,7 +3251,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Natal",
     "uf": "RN",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-natal-rn/",
@@ -3265,7 +3265,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Teresina",
     "uf": "PI",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-teresina-pi/",
@@ -3279,7 +3279,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Canoas",
     "uf": "RS",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-canoas-rs/",
@@ -3293,7 +3293,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "João Pessoa",
     "uf": "PB",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-joao-pessoa-pb/",
@@ -3307,7 +3307,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Maringá",
     "uf": "PR",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-maringa-pr/",
@@ -3321,7 +3321,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Camaçari",
     "uf": "BA",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-camacari-ba/",
@@ -3335,7 +3335,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "São Francisco do Conde",
     "uf": "BA",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-sao-francisco-do-conde-ba/",
@@ -3349,7 +3349,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Parauapebas",
     "uf": "PA",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-parauapebas-pa/",
@@ -3363,7 +3363,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Ponta Grossa",
     "uf": "PR",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-ponta-grossa-pr/",
@@ -3377,7 +3377,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Porto Velho",
     "uf": "RO",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-porto-velho-ro/",
@@ -3405,7 +3405,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "São Gonçalo",
     "uf": "RJ",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-sao-goncalo-rj/",
@@ -3419,7 +3419,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Macaé",
     "uf": "RJ",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-macae-rj/",
@@ -3433,7 +3433,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Rio Verde",
     "uf": "GO",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-rio-verde-go/",
@@ -3461,7 +3461,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Feira de Santana",
     "uf": "BA",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-feira-de-santana-ba/",
@@ -3503,7 +3503,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Jaboatão dos Guararapes",
     "uf": "PE",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-jaboatao-dos-guararapes-pe/",
@@ -3517,7 +3517,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Dourados",
     "uf": "MS",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-dourados-ms/",
@@ -3531,7 +3531,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Extrema",
     "uf": "MG",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-extrema-mg/",
@@ -3545,7 +3545,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Cariacica",
     "uf": "ES",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-cariacica-es/",
@@ -3559,7 +3559,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Cascavel",
     "uf": "PR",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-cascavel-pr/",
@@ -3573,7 +3573,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Macapá",
     "uf": "AP",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-macapa-ap/",
@@ -3601,7 +3601,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Ipojuca",
     "uf": "PE",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-ipojuca-pe/",
@@ -3615,7 +3615,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Chapecó",
     "uf": "SC",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-chapeco-sc/",
@@ -3629,7 +3629,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Foz do Iguaçu",
     "uf": "PR",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-foz-do-iguacu-pr/",
@@ -3643,7 +3643,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Canaã dos Carajás",
     "uf": "PA",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-canaa-dos-carajas-pa/",
@@ -3657,7 +3657,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Rondonópolis",
     "uf": "MT",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-rondonopolis-mt/",
@@ -3685,7 +3685,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "São José",
     "uf": "SC",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-sao-jose-sc/",
@@ -3699,7 +3699,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Gravataí",
     "uf": "RS",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-gravatai-rs/",
@@ -3713,7 +3713,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Jaraguá do Sul",
     "uf": "SC",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-jaragua-do-sul-sc/",
@@ -3727,7 +3727,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Paranaguá",
     "uf": "PR",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-paranagua-pr/",
@@ -3741,7 +3741,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Sete Lagoas",
     "uf": "MG",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-sete-lagoas-mg/",
@@ -3755,7 +3755,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Três Lagoas",
     "uf": "MS",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-tres-lagoas-ms/",
@@ -3769,7 +3769,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Pouso Alegre",
     "uf": "MG",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-pouso-alegre-mg/",
@@ -3783,7 +3783,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Palmas",
     "uf": "TO",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-palmas-to/",
@@ -3797,7 +3797,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Rio Grande",
     "uf": "RS",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-rio-grande-rs/",
@@ -3811,7 +3811,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Passo Fundo",
     "uf": "RS",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-passo-fundo-rs/",
@@ -3825,7 +3825,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "São João da Barra",
     "uf": "RJ",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-sao-joao-da-barra-rj/",
@@ -3839,7 +3839,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Várzea Grande",
     "uf": "MT",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-varzea-grande-mt/",
@@ -3853,7 +3853,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Goiana",
     "uf": "PE",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-goiana-pe/",
@@ -3867,7 +3867,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Sorriso",
     "uf": "MT",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-sorriso-mt/",
@@ -3881,7 +3881,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Maracanaú",
     "uf": "CE",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-maracanau-ce/",
@@ -3895,7 +3895,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Santa Cruz do Sul",
     "uf": "RS",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-santa-cruz-do-sul-rs/",
@@ -3923,7 +3923,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Rio Branco",
     "uf": "AC",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-rio-branco-ac/",
@@ -3937,7 +3937,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Vitória da Conquista",
     "uf": "BA",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-vitoria-da-conquista-ba/",
@@ -3951,7 +3951,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Pelotas",
     "uf": "RS",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-pelotas-rs/",
@@ -3965,7 +3965,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Criciúma",
     "uf": "SC",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-criciuma-sc/",
@@ -3979,7 +3979,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Resende",
     "uf": "RJ",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-resende-rj/",
@@ -3993,7 +3993,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Novo Hamburgo",
     "uf": "RS",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-novo-hamburgo-rs/",
@@ -4021,7 +4021,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "São Leopoldo",
     "uf": "RS",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-sao-leopoldo-rs/",
@@ -4035,7 +4035,7 @@ globalThis.WINF_PAGINAS_REGIONAIS = [
     "cidade": "Sinop",
     "uf": "MT",
     "status": "pre_ativacao",
-    "siteAtivo": true,
+    "siteAtivo": false,
     "tipoAtendimento": null,
     "numero": null,
     "url": "/pelicula-para-vidro-controle-solar-sinop-mt/",

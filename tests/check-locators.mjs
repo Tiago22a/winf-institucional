@@ -55,12 +55,21 @@ const tests=[
    assert.equal(list.find(x=>x.id==='campina-grande-pb')?.status,'pre_ativacao');
    for(const id of ['sorocaba-sp','guaruja-sp','praia-grande-sp']) {
      assert.equal(list.find(x=>x.id===id)?.status,'ativa');
-     assert.equal(list.find(x=>x.id===id)?.siteAtivo,true);
    }
+   assert.equal(list.find(x=>x.id==='sorocaba-sp')?.siteAtivo,true,'Página Sorocaba preservada');
+   for(const id of ['guaruja-sp','praia-grande-sp'])
+     assert.equal(list.find(x=>x.id===id)?.siteAtivo,false,'Página removida não pode ser anunciada: '+id);
    assert.equal(list.find(x=>x.id==='cuiaba-mt')?.status,'nao_ativa');
    assert.equal(extra.filter(x=>x.status==='ativa').length,1);
    assert.equal(regional.filter(x=>x.status==='ativa').length,62);
    assert.equal(list.filter(x=>x.status==='ativa').length+extra.filter(x=>x.status==='ativa').length+regional.filter(x=>x.status==='ativa').length,71);
+   // O catálogo de 200 municípios é somente de consulta comercial sob demanda.
+   const onDemand=JSON.parse(read('config/winf-territorios-consumidor-200.json'));
+   assert.equal(onDemand.territories.length,200);
+   assert.equal(onDemand.territories.filter(x=>x.uf==='SP').length,100);
+   assert.equal(onDemand.whatsapp,'5513981113001');
+   assert.match(winf,/id="winf-turnkey-consumer"/);
+   assert.match(winf,/winf-turnkey-consumidor\.js/);
    const santos=list.find(x=>x.id==='santos-sp');
    assert.equal(santos.url,'/pelicula-de-controle-solar-santos-sp/');
    assert.equal(santos.numero,'5513981113001');

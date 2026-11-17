@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="/css/winf-locator.css?v=20261114-vitrine-recolhida-3">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Onde comprar WINF — unidades e atendimento","url":"https://winf.com.br/onde-comprar/","description":"Diretório oficial de unidades cadastradas e consulta de atendimento WINF no Brasil.","inLanguage":"pt-BR","isPartOf":{"@type":"WebSite","url":"https://winf.com.br/","name":"WINF"}}</script>
   <script defer src="/js/cidades.js?v=20261114-selecao-1"></script>
+  <script defer src="/js/winf-turnkey-consumidor.js?v=20261114-atendimento-etapa3"></script>
   <script defer src="/aerocore/assets/onde-comprar.js?v=20261114-controles-3"></script>
   <script defer src="/js/winf-locator-menu.js?v=20261108-1"></script>
 <script defer src="/js/winf-quick-contact.js?v=20261108-unified-2"></script>
@@ -2142,7 +2143,7 @@
   <div class="directory-wrap">
     <p class="directory-eyebrow">WINF SELECT™ / ATENDIMENTO &amp; EXPANSÃO</p>
     <h1>Sua proteção.<br><span>Mais perto.</span></h1>
-    <p class="directory-lede">Encontre atendimento WINF na sua região ou descubra como levar o universo WINF Select™ para sua cidade. Há estruturas digitais preparadas para a próxima etapa de expansão.</p>
+    <p class="directory-lede">Solicite atendimento WINF para seu projeto, inclusive em cidades ainda sem licenciado. A equipe central verifica a viabilidade do serviço sob demanda. A seleção de licenciados permanece em uma jornada separada.</p>
     <p class="directory-exclusive-hero"><strong>APENAS 1 SELECIONADO POR CIDADE.</strong><span>WINF ASSET LIGHT™ · EXCLUSIVIDADE TERRITORIAL MEDIANTE SELEÇÃO E CONTRATAÇÃO</span></p>
     <div class="directory-tabs" role="group" aria-label="Escolher sua jornada">
       <button type="button" data-directory-mode="ativas" aria-pressed="true">Atendimento WINF <span aria-hidden="true">↗</span></button>
@@ -2206,6 +2207,20 @@
     <div class="directory-card-links"></div>
   </article>
 </template>
+
+<section class="winf-turnkey-consumer" id="winf-turnkey-consumer" aria-labelledby="turnkey-consumer-title">
+ <div class="winf-turnkey-consumer__header">
+  <p class="directory-eyebrow">WINF SELECT™ / ATENDIMENTO COMERCIAL EM TODO O BRASIL</p>
+  <h2 id="turnkey-consumer-title">Solicite atendimento na sua cidade.</h2>
+  <p>São 200 municípios no cadastro comercial WINF: 100 em São Paulo e 100 nos demais estados. Ainda que não haja licenciado local, você pode solicitar uma avaliação para películas arquitetônicas. Nosso atendimento central confirma a disponibilidade do serviço antes de agendar.</p>
+ </div>
+ <label for="turnkey-city-search">Procure sua cidade</label>
+ <input type="search" id="turnkey-city-search" placeholder="Cidade ou UF, por exemplo Cuiabá ou PB" autocomplete="off">
+ <p id="turnkey-city-count" role="status" aria-live="polite">Carregando os territórios de atendimento…</p>
+ <ul id="turnkey-city-results" class="winf-turnkey-consumer__cities"></ul>
+ <button id="turnkey-city-more" type="button" hidden>Ver mais cidades ↓</button>
+ <p class="winf-turnkey-consumer__note">A cidade integra nosso catálogo de atendimento sob demanda, não necessariamente possui unidade física, equipe de instalação ou licença ativa. Orçamento, deslocamento e agenda dependem de confirmação.</p>
+</section>
 
 </main>
 
