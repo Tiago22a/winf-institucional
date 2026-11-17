@@ -60,8 +60,9 @@ const checks = [
     assert.doesNotMatch(p,/winf-os-power-link|wp-os-more|painel-os\.winf\.com\.br/);
     assert.match(p,/wp-menu-trigger menu-trigger/);
     assert.match(dock,/data-wqc="brands"/);
-    assert.match(dock,/<span class="wqc-label">GHOST<\/span>/);
+    assert.match(dock,/const ghostLabel = forPartners \? 'GHOST\+' : 'GHOST'/);
     assert.match(dock,/INFOS™ — Entrar no WINF OS™/);
+    assert.match(dock,/wqc-infos-action/);
     assert.match(dock,/painel-os\.winf\.com\.br\/login/);
     assert.match(dock,/wqc-whatsapp/);
     assert.doesNotMatch(h,/WINF OS™/);
