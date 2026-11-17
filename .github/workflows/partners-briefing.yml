@@ -37,7 +37,6 @@ jobs:
         run: node --test tests/padrinho-modern.test.cjs
       - name: Validar menu do WINF OS e WhatsApp unico
         run: |
-          node --check partners/os-more-menu.js
           node --check js/winf-quick-contact.js
           node --test tests/winf-os-quick-menu.test.cjs
       - name: Validar script da Partners
