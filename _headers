@@ -8,3 +8,7 @@
   Cache-Control: public, max-age=0, must-revalidate
 /js/winf-footer.js
   Cache-Control: public, max-age=0, must-revalidate
+
+# O menu GHOST+ deve receber revisões sem reter atalhos privados.
+/js/winf-quick-contact.js
+  Cache-Control: public, max-age=0, must-revalidate
