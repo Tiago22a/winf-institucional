@@ -15,7 +15,7 @@
     document.querySelectorAll('#winf-quick-contact .wqc-options a').forEach(function (link) {
       var href = link.getAttribute('href') || '';
       var name = (link.textContent || '').trim();
-      if (/painel-os\\.winf\\.com\\.br\\/login\\/?/i.test(href) || /WINF OS.*ENTRAR NO APLICATIVO/i.test(name)) link.remove();
+      if (href.indexOf('painel-os.winf.com.br/login') !== -1 || /WINF OS.*ENTRAR NO APLICATIVO/i.test(name)) link.remove();
     });
   }
   function watchGhostMenu() {
