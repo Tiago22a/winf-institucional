@@ -12,3 +12,6 @@
 # O menu GHOST+ deve receber revisões sem reter atalhos privados.
 /js/winf-quick-contact.js
   Cache-Control: public, max-age=0, must-revalidate
+
+/aerocore/assets/contact-dock.js
+  Cache-Control: public, max-age=0, must-revalidate
