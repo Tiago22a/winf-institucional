@@ -20,7 +20,7 @@
   }
   function watchGhostMenu() {
     // Páginas de produtos e territórios têm widgets próprios, sem o menu GHOST+ compartilhado.
-    var currentPath = window.location.pathname.toLowerCase().replace(/\/+\/g, '/');
+    var currentPath = window.location.pathname.toLowerCase();
     if (/^\/(?:pelicula-de-controle-solar-[a-z0-9-]+|insulfilm-residencial-[a-z0-9-]+|blackpro|dual-reflect|invisible|securityblind|miniblind-venetian)(?:\/|$)/.test(currentPath)) return;
     if (/^\/partners\/carro-midia(?:\/|$)/.test(currentPath)) return;
     if (document.querySelector('#ws-product-contact, #winf-global-dock, [data-winf-territory-dock], .winf-city-dock')) return;
