@@ -19,7 +19,7 @@
 
   if (!document.querySelector('script[src^="/js/winf-footer.js"]')) {
     const script = document.createElement('script');
-    script.src = '/js/winf-footer.js?v=20261103-aerocore-unified-1';
+    script.src = '/js/winf-footer.js?v=20261122-no-os-link-v2';
     document.head.appendChild(script);
   }
 })();
