@@ -4,10 +4,37 @@
   // Atendimento institucional fixo em todas as páginas públicas que usam os utilitários WINF.
   if (!document.querySelector('script[src^="/js/winf-quick-contact.js"]')) {
     const quickContact = document.createElement('script');
-    quickContact.src = '/js/winf-quick-contact.js?v=20261122-public-navigation';
+    quickContact.src = '/js/winf-quick-contact.js?v=20261122-no-os-link-v2';
     quickContact.defer = true;
     document.head.appendChild(quickContact);
   }
+
+  // Defesa de compatibilidade para páginas que ainda carreguem o menu GHOST+ antigo em cache.
+  // Remove SOMENTE o atalho ao login restrito; mantém GHOST+, WhatsApp e todas as marcas.
+  function removePrivateOSShortcut() {
+    document.querySelectorAll('#winf-quick-contact .wqc-options a').forEach(function (link) {
+      var href = link.getAttribute('href') || '';
+      var name = (link.textContent || '').trim();
+      if (/painel-os\\.winf\\.com\\.br\\/login\\/?/i.test(href) || /WINF OS.*ENTRAR NO APLICATIVO/i.test(name)) link.remove();
+    });
+  }
+  function watchGhostMenu() {
+    var dock = document.getElementById('winf-quick-contact');
+    if (dock) {
+      if (dock.dataset.privateLinkGuard === 'true') return;
+      dock.dataset.privateLinkGuard = 'true';
+      removePrivateOSShortcut();
+      new MutationObserver(removePrivateOSShortcut).observe(dock, {childList:true,subtree:true});
+      return;
+    }
+    // O GHOST+ é inserido depois do carregamento do rodapé em algumas páginas.
+    var observer = new MutationObserver(function () {
+      if (document.getElementById('winf-quick-contact')) { observer.disconnect(); watchGhostMenu(); }
+    });
+    observer.observe(document.documentElement, {childList:true,subtree:true});
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', watchGhostMenu, {once:true});
+  else watchGhostMenu();
 
   function enhance() {
     var footer = document.getElementById('winf-global-footer');
