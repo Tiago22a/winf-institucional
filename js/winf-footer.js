@@ -70,20 +70,34 @@
       link.textContent = /SYNTHWAVE/i.test(title) ? 'SYNTHWAVE.fm' : 'UNIVERSO DARK™';
       placeholder.replaceWith(link);
     });
-    // GHOST SHOP™: um único acesso público à vitrine nas páginas que usam o rodapé compartilhado.
-    footer.querySelectorAll('.whr-pending').forEach(function (placeholder) {
-      if (!/GHOST SHOP/i.test(placeholder.textContent || '')) return;
-      var link = document.createElement('a');
-      link.href = '/ghost-shop/';
-      link.textContent = 'GHOST SHOP™ / VITRINE DE MEMBROS ↗';
-      placeholder.replaceWith(link);
-    });
-    var shopNav = footer.querySelector('.wf-ref-primary') || footer.querySelector('.whr-columns .whr-column:last-child');
-    if (shopNav && !shopNav.querySelector('a[href="/ghost-shop/"]')) {
-      var shop = document.createElement('a');
-      shop.href = '/ghost-shop/';
-      shop.textContent = 'GHOST SHOP™ / VITRINE ↗';
-      shopNav.appendChild(shop);
+    // A vitrine GHOST SHOP™ pertence às jornadas de expansão/licenciamento,
+    // não à navegação comercial destinada ao consumidor final.
+    var currentPath = window.location.pathname.toLowerCase();
+    var isExpansionPage = /^\/(?:partners|briefing)(?:\/|$)/.test(currentPath) ||
+      /^\/aerocore\/licenciamento(?:\/|$)/.test(currentPath);
+    var isGhostShopPage = /^\/ghost-shop(?:\/|$)/.test(currentPath);
+    if (isExpansionPage) {
+      footer.querySelectorAll('.whr-pending').forEach(function (placeholder) {
+        if (!/GHOST SHOP/i.test(placeholder.textContent || '')) return;
+        var link = document.createElement('a');
+        link.href = '/ghost-shop/';
+        link.textContent = 'GHOST SHOP™ / VITRINE DE MEMBROS ↗';
+        placeholder.replaceWith(link);
+      });
+      var shopNav = footer.querySelector('.wf-ref-primary') || footer.querySelector('.whr-columns .whr-column:last-child');
+      if (shopNav && !shopNav.querySelector('a[href="/ghost-shop/"]')) {
+        var shop = document.createElement('a');
+        shop.href = '/ghost-shop/';
+        shop.textContent = 'GHOST SHOP™ / VITRINE ↗';
+        shopNav.appendChild(shop);
+      }
+    } else if (!isGhostShopPage) {
+      // Compatibilidade com HTML antigo em cache: elimina somente referências
+      // ao shop sem alterar navegação de produtos, atendimento ou licenciamento.
+      footer.querySelectorAll('a[href="/ghost-shop/"], a[href="/ghost-shop"]').forEach(function (link) { link.remove(); });
+      footer.querySelectorAll('.whr-pending').forEach(function (placeholder) {
+        if (/GHOST SHOP/i.test(placeholder.textContent || '')) placeholder.remove();
+      });
     }
     footer.querySelectorAll('a[href*="instagram.com/maw.winf/"]').forEach(function (link) {
       link.href = 'https://www.instagram.com/maw.partners/';
