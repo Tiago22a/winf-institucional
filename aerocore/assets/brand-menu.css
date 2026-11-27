@@ -67,3 +67,24 @@ body.brand-menu-open .brand-menu-panel { animation:brand-menu-in .25s ease-out b
 .brand-menu-panel :is(a,button,summary):focus-visible { outline:2px solid #d6e5cc; outline-offset:3px; }
 .brand-menu-primary a:hover { background:#1b1b1b; }
 @media(max-width:480px) { .brand-menu-panel { padding:18px 20px; } }
+
+/* GHOST | subcategorias das marcas, sem modificar seus logotipos e fontes institucionais. */
+#brand-menu-layer .brand-menu-card .brand-menu-card-copy{
+ display:flex;flex-direction:column;gap:4px;align-items:flex-start;
+ min-width:0;line-height:1.35;
+}
+#brand-menu-layer .brand-menu-card .brand-menu-card-copy small{
+ display:block;color:#a7a7ac;font:600 9px/1.4 'JetBrains Mono',ui-monospace,monospace;
+ letter-spacing:.07em;text-transform:uppercase;
+}
+#brand-menu-layer .brand-menu-card:hover .brand-menu-card-copy small,
+#brand-menu-layer .brand-menu-card.is-current .brand-menu-card-copy small{
+ color:#d1d1d6;
+}
+#brand-menu-layer .brand-menu-card{
+ min-height:55px;background:#0e0e0f;
+}
+#brand-menu-layer .brand-menu-card:hover,
+#brand-menu-layer .brand-menu-card.is-current{
+ background:#1b1b1d;
+}
