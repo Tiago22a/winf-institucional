@@ -37,9 +37,9 @@
   const commonBrandLinks = [
     ['WINF — Premium Quality Window Film','/'],
     ['WINF Select™ — Arquitetura','/aerocore/winf-select/'],
-    ['AeroCore™ — Automotivo, Aeronáutico e Náutico','/aerocore/'],
-    ['NeoSkin™ — PPF','/aerocore/neoskin/'],
-    ['Ceramic Armoring™','/aerocore/ceramic-armoring/'],
+    ['AeroCore™ — Mobilidade · Automotivo · Marine · Aviation','/aerocore/'],
+    ['NeoSkin™ — PPF · Proteção de Pintura','/aerocore/neoskin/'],
+    ['Ceramic Armoring™ — Revestimento Cerâmico','/aerocore/ceramic-armoring/'],
     ['WINF Partners™ — Expansão','/partners/'],
     ['Redes sociais oficiais — Todas as marcas','/redes/?origem=' + encodeURIComponent(location.pathname)],
     ['Locator — Unidades ativas','/aerocore/onde-comprar/']
