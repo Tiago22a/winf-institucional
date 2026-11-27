@@ -17,10 +17,13 @@ test('GHOST+ apresenta AeroCore como mobilidade e mantém WINF Select em arquite
 });
 test('menu global da homepage mantém divisões claras',()=>{
  const home=read('index.html');
- assert.match(home,/AEROCORE™ <small class="winf-aerocore-menu-scope">AUTOMOTIVO · AERONÁUTICO · NÁUTICO<\/small>/);
+ assert.match(home,/AEROCORE™<small class="winf-brand-menu-scope">MOBILIDADE · AUTOMOTIVO · MARINE · AVIATION<\/small>/);
+ assert.match(home,/WINF SELECT™<small class="winf-brand-menu-scope">ARQUITETURA · GLASS \+ HOME<\/small>/);
+ assert.match(home,/NEOSKIN™<small class="winf-brand-menu-scope">PPF · PROTEÇÃO DE PINTURA<\/small>/);
+ assert.match(home,/CERAMIC ARMORING™<small class="winf-brand-menu-scope">REVESTIMENTO CERÂMICO · PROTEÇÃO DE SUPERFÍCIES<\/small>/);
  assert.match(home,/href="\/aerocore\/winf-select\/"/);
  assert.match(home,/href="\/aerocore\/"/);
- assert.match(read('css/winf-global-menu.css'),/\.winf-aerocore-menu-scope/);
+ assert.match(read('css/winf-global-menu.css'),/\.winf-brand-menu-scope/);
 });
 test('Catálogo Universal separa aplicações sem alterar o filtro e os cards',()=>{
  const s=read('catalogo/index.html');
