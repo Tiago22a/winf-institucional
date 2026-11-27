@@ -29,6 +29,7 @@ jobs:
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
       SITE_URL: https://www.winf.com.br
+      ALT_SITE_URL: https://winf.com.br
       FULL_PURGE: ${{ inputs.full_purge || 'false' }}
       BEFORE_SHA: ${{ github.event.before }}
     steps:
@@ -70,6 +71,7 @@ jobs:
           token = os.environ['CLOUDFLARE_API_TOKEN']
           zone = os.environ['CLOUDFLARE_ZONE_ID']
           base = os.environ['SITE_URL'].rstrip('/')
+          bases = tuple(dict.fromkeys(u for u in (base, os.environ.get('ALT_SITE_URL', '').rstrip('/')) if u))
           endpoint = f'https://api.cloudflare.com/client/v4/zones/{zone}/purge_cache'
           full = os.environ.get('FULL_PURGE', 'false').lower() == 'true'
           def purge(payload):
@@ -107,11 +109,12 @@ jobs:
           urls = set()
           def add(path):
               path = path.lstrip('/')
-              urls.add(base + '/' + quote(path, safe='/'))
-              if path == 'index.html':
-                  urls.add(base + '/')
-              elif path.endswith('/index.html'):
-                  urls.add(base + '/' + quote(path[:-10], safe='/'))
+              for host in bases:
+                  urls.add(host + '/' + quote(path, safe='/'))
+                  if path == 'index.html':
+                      urls.add(host + '/')
+                  elif path.endswith('/index.html'):
+                      urls.add(host + '/' + quote(path[:-10], safe='/'))
           htmls = list(pathlib.Path('.').rglob('*.html'))
           htmls = [p for p in htmls if '.git' not in p.parts and 'node_modules' not in p.parts]
           for name in changed:
