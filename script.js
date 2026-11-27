@@ -18,6 +18,37 @@
   let menuCloseTimer = null;
   let lastMenuTrigger = null;
   const menuTriggers = [...document.querySelectorAll('[data-action="open-menu"]')];
+  // GHOST superior e menu de dois traços são botões distintos.
+  // O painel tem conteúdo estático e funciona mesmo se o rodapé/quick-contact atrasar.
+  const topGhost = document.getElementById('winf-home-top-ghost');
+  const topGhostPanel = document.getElementById('winf-home-ghost-panel');
+  const setTopGhostOpen = (open, restoreFocus=false) => {
+    if (!topGhost || !topGhostPanel) return;
+    topGhostPanel.hidden = !open;
+    topGhostPanel.setAttribute('aria-hidden', String(!open));
+    topGhost.setAttribute('aria-expanded', String(open));
+    if (open) topGhostPanel.querySelector('[data-winf-home-ghost-close]')?.focus();
+    else if (restoreFocus) topGhost.focus();
+  };
+  topGhost?.addEventListener('click', () => {
+    if (menu?.getAttribute('aria-hidden') === 'false') return;
+    setTopGhostOpen(Boolean(topGhostPanel?.hidden));
+  });
+  topGhostPanel?.querySelector('[data-winf-home-ghost-close]')?.addEventListener('click', () => {
+    setTopGhostOpen(false,true);
+  });
+  document.addEventListener('click', event => {
+    if (topGhostPanel && !topGhostPanel.hidden && !topGhostPanel.contains(event.target) && !topGhost?.contains(event.target)) {
+      setTopGhostOpen(false);
+    }
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && topGhostPanel && !topGhostPanel.hidden) {
+      event.preventDefault();
+      setTopGhostOpen(false,true);
+    }
+  });
+
   const menuFocusables = () => menu
     ? [...menu.querySelectorAll('a[href],button:not([disabled]),summary')]
         .filter(element => element.getClientRects().length > 0)
@@ -25,6 +56,7 @@
 
   const openMenu = () => {
     if (!menu || menu.getAttribute('aria-hidden') === 'false') return;
+    setTopGhostOpen(false);
     if (menuCloseTimer !== null) {
       window.clearTimeout(menuCloseTimer);
       menuCloseTimer = null;
