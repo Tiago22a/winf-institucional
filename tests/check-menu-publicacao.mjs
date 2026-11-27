@@ -22,8 +22,8 @@ const checks = [
   ['global WINF uses editorial AeroCore-inspired navigation', () => {
     assert.match(home,/id="menu-overlay" class="ac-roadmap-menu winf-global-roadmap hidden"/);
     assert.match(home,/WINF™ \/ UNIVERSO GLOBAL/);
-    assert.match(home,/AEROCORE™ <small class="winf-aerocore-menu-scope">AUTOMOTIVO · AERONÁUTICO · NÁUTICO<\/small>/);
-    assert.match(home,/aria-label="AeroCore — Automotivo, Aeronáutico e Náutico"/);
+    assert.match(home,/AEROCORE™<small class="winf-brand-menu-scope">MOBILIDADE · AUTOMOTIVO · MARINE · AVIATION<\/small>/);
+    assert.match(home,/aria-label="AeroCore — Mobilidade, automotivo, marine e aviação"/);
     for (const href of ['/aerocore/winf-select/','/aerocore/','/aerocore/neoskin/','/aerocore/ceramic-armoring/','/catalogo/','/blog/','/partners/']) {
       assert.ok(home.includes('href="'+href+'"'), 'Missing '+href);
     }
@@ -40,6 +40,9 @@ const checks = [
     assert.match(home,/class="winf-home-statement winf-home-statement--impact"/);
     assert.match(home,/O SOL NÃO MANDA\.<span>NO SEU CONFORTO\.<\/span><\/h1>/);
     assert.match(header,/winf-home-ghost-lines/);
+    assert.match(header,/id="winf-home-top-ghost"/);
+    assert.match(header,/class="menu-trigger winf-home-ghost-trigger winf-home-menu-trigger"/);
+    assert.equal((header.match(/ghost-symbol\.png/g)||[]).length,1);
     assert.match(header,/ghost-symbol\.png/);
     assert.match(header,/aria-expanded="false"/);
     assert.doesNotMatch(header,/WINF OS|painel-os/);
@@ -63,9 +66,7 @@ const checks = [
     assert.match(p,/wp-menu-trigger menu-trigger/);
     assert.match(dock,/data-wqc="brands"/);
     assert.match(dock,/const ghostLabel = forPartners \? 'GHOST\+' : 'GHOST'/);
-    assert.match(dock,/WINF OS™ — ENTRAR NO APLICATIVO/);
-    assert.match(dock,/wqc-infos-action/);
-    assert.match(dock,/painel-os\.winf\.com\.br\/login/);
+    assert.doesNotMatch(dock,/WINF OS™ — ENTRAR NO APLICATIVO|painel-os\.winf\.com\.br\/login/);
     assert.match(dock,/wqc-whatsapp/);
     assert.doesNotMatch(h,/WINF OS™/);
     assert.doesNotMatch(a,/WINF OS™/);
