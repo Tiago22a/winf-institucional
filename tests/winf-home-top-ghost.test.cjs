@@ -1,0 +1,34 @@
+"use strict";
+const test=require("node:test");
+const assert=require("node:assert/strict");
+const fs=require("node:fs");
+const vm=require("node:vm");
+const read=p=>fs.readFileSync(p,"utf8");
+test("Ghost superior substitui Ghost flutuante apenas na home",()=>{
+  const home=read("index.html");
+  const header=home.match(/<header class="winf-home-header[\s\S]*?<\/header>/)?.[0]||"";
+  const q=read("js/winf-quick-contact.js");
+  const css=read("css/winf-quick-contact.css");
+  assert.match(header,/id="winf-home-top-ghost"/);
+  assert.match(header,/data-wqc="brands" aria-controls="wqc-panel" aria-expanded="false"/);
+  assert.match(header,/data-action="open-menu"/);
+  assert.equal((header.match(/ghost-symbol\.png/g)||[]).length,1);
+  assert.match(q,/const headerGhost=/);
+  assert.match(q,/getElementById\('winf-home-top-ghost'\)/);
+  assert.match(q,/if \(headerGhost\) dock\.classList\.add\('wqc-home-ghost-in-header'\)/);
+  assert.match(q,/headerGhost \? '' : '<div class="wqc-item">/);
+  assert.match(q,/if\(headerGhost\)triggers\.push\(headerGhost\)/);
+  assert.match(q,/defaultGhostTrigger=headerGhost\|\|dock/);
+  assert.match(q,/!headerGhost\?\.contains\(event\.target\)/);
+  assert.match(css,/#winf-quick-contact\.wqc-home-ghost-in-header \.wqc-panel/);
+  new vm.Script(q);
+});
+test("WhatsApp continua flutuante, restante do site conserva Ghost próprio",()=>{
+  const q=read("js/winf-quick-contact.js");
+  assert.match(q,/wqc-whatsapp/);
+  assert.match(q,/chosenPhone = forPartners \? partnerPhone : salesPhone/);
+  assert.match(q,/if \(forPartners\) dock\.classList\.add\('wqc-partners-premium'\)/);
+  assert.match(q,/headerGhost \? '' :/);
+  assert.match(read("js/winf-footer.js"),/20261127-top-ghost-1/);
+  assert.match(read("index.html"),/winf-footer\.js\?v=20261127-top-ghost-1/);
+});
