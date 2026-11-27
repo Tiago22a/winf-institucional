@@ -51,13 +51,13 @@
 <link rel="stylesheet" href="/css/winf-home-roadmap.css?v=20261107-1">
 <link rel="stylesheet" href="/aerocore/assets/nav-roadmap.css?v=20261107-1">
 <link rel="stylesheet" href="/css/winf-global-menu.css?v=20261127-scope-1">
-<link rel="stylesheet" href="/css/winf-home-header.css?v=20261127-ghost-split-1">
+<link rel="stylesheet" href="/css/winf-home-header.css?v=20261127-top-ghost-direct-2">
 <link rel="stylesheet" href="/css/winf-active-territories.css?v=20261112-regions3">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap">
 <link rel="stylesheet" href="/css/winf-return.css?v=20261104-5">
 <script defer src="/js/winf-return.js?v=20261104-scroll-3"></script>
 <link rel="stylesheet" href="/css/winf-brand-marks.css?v=20261109-mark2">
-<!-- Dock flutuante único: WINF branco + WhatsApp verde, gerenciado por /js/winf-quick-contact.js -->
+<!-- GHOST permanece no topo; somente WhatsApp flutua na home. Nas demais paginas, o dock original permanece. -->
 
 <!-- WINF social / previews oficiais e URLs canônicas sem parâmetros -->
 
@@ -2143,6 +2143,30 @@
         </div>
       </div>
 
+
+      <!-- GHOST da home: aberto diretamente pelo símbolo original no cabeçalho. -->
+      <aside id="winf-home-ghost-panel" class="winf-home-ghost-panel" role="region" aria-label="GHOST — Universo WINF e canais oficiais" aria-hidden="true" hidden>
+        <div class="winf-home-ghost-panel-head">
+          <div>
+            <span>/ GHOST · NAVEGAÇÃO RÁPIDA</span>
+            <strong>UNIVERSO WINF™</strong>
+            <p>PREMIUM QUALITY WINDOW FILM</p>
+          </div>
+          <button type="button" data-winf-home-ghost-close aria-label="Fechar GHOST">×</button>
+        </div>
+        <nav class="winf-home-ghost-panel-links" aria-label="Marcas e canais oficiais WINF">
+          <a href="/">WINF™ — PREMIUM QUALITY WINDOW FILM <span aria-hidden="true">↗</span></a>
+          <a href="/aerocore/winf-select/">WINF SELECT™ — ARQUITETURA <span aria-hidden="true">↗</span></a>
+          <a href="/aerocore/">AEROCORE™ — MOBILIDADE <span aria-hidden="true">↗</span></a>
+          <a href="/aerocore/neoskin/">NEOSKIN™ — PPF / PROTEÇÃO DE PINTURA <span aria-hidden="true">↗</span></a>
+          <a href="/aerocore/ceramic-armoring/">CERAMIC ARMORING™ — REVESTIMENTO CERÂMICO <span aria-hidden="true">↗</span></a>
+          <a href="/partners/">WINF PARTNERS™ — EXPANSÃO <span aria-hidden="true">↗</span></a>
+          <a href="/redes/?origem=%2F">REDES SOCIAIS OFICIAIS <span aria-hidden="true">↗</span></a>
+          <a href="/aerocore/onde-comprar/">LOCATOR — UNIDADES ATIVAS <span aria-hidden="true">↗</span></a>
+        </nav>
+        <p class="winf-home-ghost-panel-note">DO BRASIL PARA O MUNDO.</p>
+      </aside>
+
       <main id="conteudo" class="w-full min-h-screen bg-black text-white">
         <section id="topo" class="hero-section relative z-10 flex min-h-screen w-full select-none flex-col justify-between overflow-hidden p-6 sm:p-10 md:p-14">
           <div class="hero-media absolute inset-0 z-0 overflow-hidden pointer-events-none">
@@ -2163,7 +2187,7 @@
               <button type="button" data-action="open-menu" aria-controls="menu-overlay" aria-expanded="false" aria-label="Abrir menu WINF" class="menu-trigger winf-home-ghost-trigger winf-home-menu-trigger">
                 <span class="winf-home-ghost-lines" aria-hidden="true"><span></span><span></span></span>
               </button>
-              <button type="button" id="winf-home-top-ghost" class="winf-home-top-ghost-trigger" data-wqc="brands" aria-controls="wqc-panel" aria-expanded="false" aria-label="Abrir GHOST: universo WINF, marcas e canais" title="GHOST — Universo WINF">
+              <button type="button" id="winf-home-top-ghost" class="winf-home-top-ghost-trigger" aria-controls="winf-home-ghost-panel" aria-expanded="false" aria-label="Abrir GHOST: universo WINF, marcas e canais" title="GHOST — Universo WINF">
                 <img src="/aerocore/assets/ghost-symbol.png" width="28" height="34" alt="" aria-hidden="true" decoding="async">
               </button>
             </div>
@@ -2588,9 +2612,9 @@
   <!-- Um único dock fixo é inserido pelo rodapé compartilhado; sem duplicação de ícones. -->
     <script src="/js/cidades.js?v=20261113-centrais" defer></script>
     <script src="/js/winf-active-territories.js?v=20261109-seven-channels2" defer></script>
-    <script src="./script.js" defer></script>
+    <script src="./script.js?v=20261127-top-ghost-direct-2" defer></script>
 
-    <script charset="utf-8" src="/js/winf-footer.js?v=20261127-top-ghost-1" defer></script>
+    <script charset="utf-8" src="/js/winf-footer.js?v=20261127-top-ghost-direct-2" defer></script>
   <script src="/js/winf-site-credit.js?v=20261112-1" defer></script></body>
 </html>
 
