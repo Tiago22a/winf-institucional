@@ -22,6 +22,8 @@ const checks = [
   ['global WINF uses editorial AeroCore-inspired navigation', () => {
     assert.match(home,/id="menu-overlay" class="ac-roadmap-menu winf-global-roadmap hidden"/);
     assert.match(home,/WINF™ \/ UNIVERSO GLOBAL/);
+    assert.match(home,/AEROCORE™ <small class="winf-aerocore-menu-scope">AUTOMOTIVO · AERONÁUTICO · NÁUTICO<\/small>/);
+    assert.match(home,/aria-label="AeroCore — Automotivo, Aeronáutico e Náutico"/);
     for (const href of ['/aerocore/winf-select/','/aerocore/','/aerocore/neoskin/','/aerocore/ceramic-armoring/','/catalogo/','/blog/','/partners/']) {
       assert.ok(home.includes('href="'+href+'"'), 'Missing '+href);
     }
