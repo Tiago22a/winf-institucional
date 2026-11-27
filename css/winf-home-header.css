@@ -132,3 +132,69 @@
 @media(prefers-reduced-motion:reduce){
  .winf-home-header .winf-home-top-ghost-trigger>img{transition:none}
 }
+
+/* WINF HOME GHOST — painel independente do rodapé, premium e sem duplicação. */
+body.winf-home-page #winf-home-ghost-panel,
+#winf-home-ghost-panel{box-sizing:border-box}
+#winf-home-ghost-panel[hidden]{display:none!important}
+#winf-home-ghost-panel{
+ position:fixed;top:88px;right:clamp(17px,5vw,70px);z-index:10001;
+ width:min(390px,calc(100vw - 28px));max-height:min(75dvh,670px);
+ overflow-y:auto;overscroll-behavior:contain;background:rgba(8,8,10,.985);
+ color:#f5f5f7;border:1px solid #ffffff4d;
+ box-shadow:0 22px 70px #000e;backdrop-filter:blur(18px);
+ font-family:Gustavo,Inter,Arial,sans-serif;padding:18px;
+}
+#winf-home-ghost-panel .winf-home-ghost-panel-head{
+ display:flex;justify-content:space-between;align-items:flex-start;gap:12px;
+ padding-bottom:16px;border-bottom:1px solid #ffffff30;
+}
+#winf-home-ghost-panel .winf-home-ghost-panel-head div{
+ display:flex;flex-direction:column;gap:6px;
+}
+#winf-home-ghost-panel .winf-home-ghost-panel-head span{
+ font:600 9px/1.4 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.095em;color:#b9b9bd;
+}
+#winf-home-ghost-panel .winf-home-ghost-panel-head strong{
+ font:700 23px/1.15 Gustavo,Inter,Arial,sans-serif;letter-spacing:-.02em;
+}
+#winf-home-ghost-panel .winf-home-ghost-panel-head p{
+ margin:0;font:600 9px/1.5 'JetBrains Mono',ui-monospace,monospace;color:#a7a7af;
+}
+#winf-home-ghost-panel .winf-home-ghost-panel-head button{
+ display:flex;align-items:center;justify-content:center;min-width:37px;min-height:37px;
+ border:1px solid #ffffff50;color:white;background:#18181b;cursor:pointer;font-size:26px;
+}
+#winf-home-ghost-panel .winf-home-ghost-panel-links{
+ display:flex;flex-direction:column;gap:7px;margin-top:16px;
+}
+#winf-home-ghost-panel .winf-home-ghost-panel-links a{
+ display:flex;justify-content:space-between;align-items:center;gap:12px;
+ padding:13px 12px;min-height:47px;background:#101013;border:1px solid #ffffff2a;
+ text-decoration:none;color:#f1f1f3;font:650 11px/1.35 Gustavo,Inter,Arial,sans-serif;
+ letter-spacing:.03em;transition:background .18s,border-color .18s;
+}
+#winf-home-ghost-panel .winf-home-ghost-panel-links a:hover{
+ background:#222227;border-color:#ffffff80;
+}
+#winf-home-ghost-panel .winf-home-ghost-panel-links a span{flex:none;color:#c9c9cf}
+#winf-home-ghost-panel .winf-home-ghost-panel-note{
+ margin:16px 0 0;color:#aaaab1;font:600 10px/1.5 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.15em;
+}
+#winf-home-ghost-panel :is(a,button):focus-visible{outline:2px solid #fff;outline-offset:3px}
+/* Defesa contra widgets antigos em cache: esconder apenas o Ghost duplicado;
+   o link verde do WhatsApp continua visível. */
+body:has(#winf-home-top-ghost) #winf-quick-contact .wqc-item:has(button[data-wqc="brands"]){
+ display:none!important;
+}
+@media(max-width:640px){
+ #winf-home-ghost-panel{
+   top:74px;right:12px;width:min(390px,calc(100vw - 24px));
+   padding:14px;max-height:min(78dvh,660px);
+ }
+ #winf-home-ghost-panel .winf-home-ghost-panel-head strong{font-size:21px}
+ #winf-home-ghost-panel .winf-home-ghost-panel-links a{font-size:10px;min-height:43px;padding:11px 10px}
+}
+@media(prefers-reduced-motion:reduce){
+ #winf-home-ghost-panel .winf-home-ghost-panel-links a{transition:none}
+}

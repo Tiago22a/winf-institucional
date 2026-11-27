@@ -64,7 +64,7 @@
     if (document.querySelector('link[href^="/css/winf-quick-contact.css"]')) return;
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = '/css/winf-quick-contact.css?v=20261127-top-ghost-1';
+    link.href = '/css/winf-quick-contact.css?v=20261127-top-ghost-direct-2';
     document.head.appendChild(link);
   }
   function addLink(label,href) {
@@ -89,6 +89,7 @@
     document.getElementById('winf-global-dock')?.remove();
     const headerGhost=(path==='/'||path==='/index.html')
       ? document.getElementById('winf-home-top-ghost') : null;
+    const topGhostManagedHere = Boolean(headerGhost && document.getElementById('winf-home-ghost-panel'));
     addStyle();
     const dock = document.createElement('aside');
     dock.id='winf-quick-contact';
@@ -121,8 +122,8 @@
     const panel=dock.querySelector('#wqc-panel'),options=dock.querySelector('#wqc-options');
     const title=dock.querySelector('#wqc-panel-title'),description=dock.querySelector('#wqc-panel-desc'),note=dock.querySelector('#wqc-note');
     const triggers=[...dock.querySelectorAll('button[data-wqc]')];
-    if(headerGhost)triggers.push(headerGhost);
-    const defaultGhostTrigger=headerGhost||dock.querySelector('button[data-wqc="brands"]');
+    if(headerGhost && !topGhostManagedHere)triggers.push(headerGhost);
+    const defaultGhostTrigger=(!topGhostManagedHere && headerGhost) || dock.querySelector('button[data-wqc="brands"]');
     let active = null;
     function setPanel(type,restoreFocus=true) {
       active=type;
