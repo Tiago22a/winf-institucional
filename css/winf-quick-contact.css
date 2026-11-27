@@ -165,3 +165,19 @@ html.winf-quick-dock-active .winf-global-floating-dock {display:none!important}
  #winf-quick-contact.wqc-partners-premium .wqc-circle,
  #winf-quick-contact.wqc-partners-premium .wqc-options a.wqc-infos-action {animation:none!important;transition:none!important}
 }
+
+/* WINF HOME: o Ghost do topo abre o mesmo painel; não existe Ghost flutuante extra. */
+#winf-quick-contact.wqc-home-ghost-in-header .wqc-panel{
+  position:fixed;top:87px;right:clamp(18px,5vw,65px);bottom:auto;
+  width:min(376px,calc(100vw - 30px));max-height:min(70dvh,590px);
+  z-index:1000;background:#09090bf7;border-color:#ffffff55;
+}
+#winf-quick-contact.wqc-home-ghost-in-header .wqc-launchers{
+  justify-content:flex-end;
+}
+@media(max-width:580px){
+  #winf-quick-contact.wqc-home-ghost-in-header .wqc-panel{
+    top:72px;right:13px;width:min(376px,calc(100vw - 26px));
+    max-height:min(70dvh,590px);
+  }
+}
