@@ -64,7 +64,7 @@
     if (document.querySelector('link[href^="/css/winf-quick-contact.css"]')) return;
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = '/css/winf-quick-contact.css?v=20261116-ghost-plus1';
+    link.href = '/css/winf-quick-contact.css?v=20261127-top-ghost-1';
     document.head.appendChild(link);
   }
   function addLink(label,href) {
