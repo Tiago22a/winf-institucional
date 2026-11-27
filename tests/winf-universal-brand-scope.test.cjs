@@ -9,10 +9,10 @@ const read=p=>readFileSync(join(root,p),'utf8');
 test('GHOST+ apresenta AeroCore como mobilidade e mantém WINF Select em arquitetura',()=>{
  const s=read('js/winf-quick-contact.js');
  assert.match(s,/\['WINF Select™ — Arquitetura','\/aerocore\/winf-select\/'\]/);
- assert.match(s,/\['AeroCore™ — Automotivo, Aeronáutico e Náutico','\/aerocore\/'\]/);
+ assert.match(s,/\['AeroCore™ — Mobilidade · Automotivo · Marine · Aviation','\/aerocore\/'\]/);
  assert.doesNotMatch(s,/AeroCore™ — Películas/);
- assert.match(s,/\['NeoSkin™ — PPF','\/aerocore\/neoskin\/'\]/);
- assert.match(s,/\['Ceramic Armoring™','\/aerocore\/ceramic-armoring\/'\]/);
+ assert.match(s,/\['NeoSkin™ — PPF · Proteção de Pintura','\/aerocore\/neoskin\/'\]/);
+ assert.match(s,/\['Ceramic Armoring™ — Revestimento Cerâmico','\/aerocore\/ceramic-armoring\/'\]/);
  assert.match(s,/if \(\/\^\\\/\(\?:pelicula-de-controle-solar-/);
 });
 test('menu global da homepage mantém divisões claras',()=>{
