@@ -87,14 +87,19 @@
     if (nativeDock) return;
     // Eliminar o dock legado quando HTML previamente em cache ainda estiver disponível.
     document.getElementById('winf-global-dock')?.remove();
+    const headerGhost=(path==='/'||path==='/index.html')
+      ? document.getElementById('winf-home-top-ghost') : null;
     addStyle();
     const dock = document.createElement('aside');
     dock.id='winf-quick-contact';
     if (forPartners) dock.classList.add('wqc-partners-premium');
+    // A home possui o Ghost original ao lado do menu de dois traços.
+    // A função é transferida para ele; apenas o WhatsApp fica flutuante.
+    if (headerGhost) dock.classList.add('wqc-home-ghost-in-header');
     dock.setAttribute('aria-label','Acesso rápido WINF — canais e ajuda');
     dock.innerHTML = '<div class="wqc-panel" id="wqc-panel" role="region" aria-label="Canais de atendimento WINF" hidden><div class="wqc-panel-head"><div><strong id="wqc-panel-title">WINF™ — Canais</strong><p id="wqc-panel-desc">Escolha um caminho.</p></div><button class="wqc-close" type="button" data-wqc-close aria-label="Fechar ajuda">×</button></div><div class="wqc-options" id="wqc-options"></div><p class="wqc-note" id="wqc-note"></p></div>'
       + '<div class="wqc-launchers">'
-      + '<div class="wqc-item"><button type="button" data-wqc="brands" class="wqc-circle" aria-controls="wqc-panel" aria-expanded="false" aria-label="Abrir GHOST+: universo WINF" title="GHOST+ — Universo WINF"><img src="' + ghostMark + '" width="31" height="40" alt=""></button><span class="wqc-label">' + ghostLabel + '</span></div>'
+      + (headerGhost ? '' : '<div class="wqc-item"><button type="button" data-wqc="brands" class="wqc-circle" aria-controls="wqc-panel" aria-expanded="false" aria-label="Abrir GHOST+: universo WINF" title="GHOST+ — Universo WINF"><img src="' + ghostMark + '" width="31" height="40" alt=""></button><span class="wqc-label">' + ghostLabel + '</span></div>')
       + '<div class="wqc-item"><a class="wqc-circle wqc-whatsapp" href="' + whatsapp(chosenPhone,directMessage) + '" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp: ' + pageName + '" title="Falar no WhatsApp">' + whatsappSymbol + '</a><span class="wqc-label">WHATSAPP</span></div>'
       + '</div>';
     document.body.appendChild(dock);
@@ -116,13 +121,15 @@
     const panel=dock.querySelector('#wqc-panel'),options=dock.querySelector('#wqc-options');
     const title=dock.querySelector('#wqc-panel-title'),description=dock.querySelector('#wqc-panel-desc'),note=dock.querySelector('#wqc-note');
     const triggers=[...dock.querySelectorAll('button[data-wqc]')];
+    if(headerGhost)triggers.push(headerGhost);
+    const defaultGhostTrigger=headerGhost||dock.querySelector('button[data-wqc="brands"]');
     let active = null;
     function setPanel(type,restoreFocus=true) {
       active=type;
       panel.hidden=!type;
       triggers.forEach(btn=>btn.setAttribute('aria-expanded',String(btn.dataset.wqc===type)));
       if (!type) {
-        if (restoreFocus) dock.querySelector('button[data-wqc="brands"]')?.focus();
+        if (restoreFocus) defaultGhostTrigger?.focus();
         return;
       }
       const isBrands=type==='brands';
@@ -140,7 +147,9 @@
     }
     triggers.forEach(btn=>btn.addEventListener('click',()=>setPanel(active===btn.dataset.wqc?null:btn.dataset.wqc)));
     dock.querySelector('[data-wqc-close]').addEventListener('click',()=>setPanel(null));
-    document.addEventListener('click',event=>{if(active && !dock.contains(event.target))setPanel(null,false);});
+    document.addEventListener('click',event=>{
+      if(active&&!dock.contains(event.target)&&!headerGhost?.contains(event.target))setPanel(null,false);
+    });
     document.addEventListener('keydown',event=>{
       if(event.key==='Escape'&&active){event.preventDefault();setPanel(null);}
     });
