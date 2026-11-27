@@ -1,0 +1,23 @@
+name: WINF — Menu Ghost e Catálogo Universal
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'js/winf-quick-contact.js'
+      - 'css/winf-global-menu.css'
+      - 'catalogo/index.html'
+      - 'tests/winf-universal-brand-scope.test.cjs'
+      - '.github/workflows/winf-universal-brand-scope.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  brand-scope:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test tests/winf-universal-brand-scope.test.cjs
