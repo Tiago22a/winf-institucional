@@ -14,6 +14,7 @@ on:
       - "css/winf-home-header.css"
       - "css/winf-global-menu.css"
       - "tests/check-menu-publicacao.mjs"
+      - "tests/winf-home-top-ghost.test.cjs"
       - ".github/workflows/menu-publish-smoke.yml"
   push:
     branches: [main]
@@ -38,4 +39,6 @@ jobs:
         with:
           node-version: "22"
       - name: Validate WINF/AeroCore/Partners navigation
-        run: node tests/check-menu-publicacao.mjs
+        run: |
+          node tests/check-menu-publicacao.mjs
+          node --test tests/winf-home-top-ghost.test.cjs
