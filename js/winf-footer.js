@@ -4,7 +4,7 @@
   // Atendimento institucional fixo em todas as páginas públicas que usam os utilitários WINF.
   if (!document.querySelector('script[src^="/js/winf-quick-contact.js"]')) {
     const quickContact = document.createElement('script');
-    quickContact.src = '/js/winf-quick-contact.js?v=20261122-no-os-link-v2';
+    quickContact.src = '/js/winf-quick-contact.js?v=20261127-top-ghost-1';
     quickContact.defer = true;
     document.head.appendChild(quickContact);
   }

@@ -54,3 +54,60 @@ body #menu-overlay.winf-global-roadmap .ac-roadmap-global>a small{color:#555}
 
 /* Especialidade AeroCore visível sem estender a tipografia principal ou alterar menus territoriais. */
 body #menu-overlay.winf-global-roadmap .ac-roadmap-hero-links a strong .winf-aerocore-menu-scope{display:block;margin-top:5px;font:600 10px/1.45 'JetBrains Mono',monospace!important;letter-spacing:.06em;color:#b7b7be;white-space:normal}
+
+/* GHOST 2026 — diretório das verticais: preto editorial e especialidade explícita. */
+body #menu-overlay.winf-global-roadmap .ac-roadmap-hero-links a{
+  display:grid;grid-template-columns:25px minmax(0,1fr) 22px;align-items:center;gap:13px;
+  margin:7px 0;padding:13px 17px;min-height:75px;border:1px solid #ffffff25;
+  background:#0e0e10;transition:background .2s,border-color .2s,transform .2s;
+}
+body #menu-overlay.winf-global-roadmap .ac-roadmap-hero-links a:last-child{border-bottom:1px solid #ffffff25}
+body #menu-overlay.winf-global-roadmap .ac-roadmap-hero-links a:hover{
+  background:#1a1a1d;border-color:#ffffff66;transform:translateX(3px);
+}
+body #menu-overlay.winf-global-roadmap .ac-roadmap-hero-links .winf-brand-menu-no{
+  font:600 10px/1.4 'JetBrains Mono',ui-monospace,monospace;color:#98989f;
+}
+body #menu-overlay.winf-global-roadmap .ac-roadmap-hero-links .winf-brand-menu-name{
+  font-family:Gustavo,Arial,sans-serif!important;font-size:clamp(1.2rem,2vw,2rem);
+  font-weight:700;line-height:1.12;letter-spacing:-.025em;min-width:0;
+}
+body #menu-overlay.winf-global-roadmap .ac-roadmap-hero-links .winf-brand-menu-scope{
+  display:block;margin-top:7px;white-space:normal;color:#c2c2c8;
+  font:600 clamp(8px,.74vw,10px)/1.6 'JetBrains Mono',ui-monospace,monospace!important;
+  letter-spacing:.055em;
+}
+body #menu-overlay.winf-global-roadmap .ac-roadmap-hero-links a>span:last-child{
+  font-size:21px;text-align:right;color:#d7d7dc;
+}
+body #menu-overlay.winf-global-roadmap .ac-roadmap-global{
+  background:#0e0e10;color:#f0f0f1;border:1px solid #ffffff28;
+}
+body #menu-overlay.winf-global-roadmap .ac-roadmap-global>div>span,
+body #menu-overlay.winf-global-roadmap .ac-roadmap-global>a strong{
+  color:#f1f1f3;
+}
+body #menu-overlay.winf-global-roadmap .ac-roadmap-global>div>p,
+body #menu-overlay.winf-global-roadmap .ac-roadmap-global>a small{
+  color:#b4b4bc;
+}
+body #menu-overlay.winf-global-roadmap .ac-roadmap-global>a{
+  border-color:#ffffff55;background:#18181a;
+}
+body #menu-overlay.winf-global-roadmap .ac-roadmap-global>a:hover{background:#252528}
+body #menu-overlay.winf-global-roadmap .ac-roadmap-global>a>span{color:#fff}
+@media(max-width:600px){
+  body #menu-overlay.winf-global-roadmap .ac-roadmap-hero-links a{
+    grid-template-columns:18px minmax(0,1fr) 17px;gap:9px;
+    padding:10px 12px;min-height:67px;
+  }
+  body #menu-overlay.winf-global-roadmap .ac-roadmap-hero-links .winf-brand-menu-name{
+    font-size:clamp(18px,5vw,25px);
+  }
+  body #menu-overlay.winf-global-roadmap .ac-roadmap-hero-links .winf-brand-menu-scope{
+    font-size:8px;letter-spacing:.015em;line-height:1.45;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  body #menu-overlay.winf-global-roadmap .ac-roadmap-hero-links a{transition:none}
+}

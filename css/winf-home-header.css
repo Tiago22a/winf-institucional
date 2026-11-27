@@ -97,3 +97,38 @@
 }
 @media(max-width:370px){.hero-copy .winf-home-statement.winf-home-statement--impact{font-size:7vw}}
 @media(prefers-reduced-motion:reduce){.hero-copy .winf-home-hero-eyebrow,.hero-copy .winf-home-statement.winf-home-statement--impact{animation:none}}
+
+/* WINF GHOST — dois controles no topo, preservando a silhueta original. */
+.winf-home-header .winf-home-header-actions{gap:clamp(11px,1vw,17px)}
+.winf-home-header .winf-home-menu-trigger{
+  min-width:34px!important;width:auto!important;height:56px!important;
+  padding:8px 0!important;gap:0!important;
+}
+.winf-home-header .winf-home-top-ghost-trigger{
+  display:inline-flex;align-items:center;justify-content:center;
+  flex:0 0 auto;width:34px;min-height:52px;height:56px;
+  padding:0;border:0;border-radius:0;background:transparent;
+  color:#fff;cursor:pointer;
+}
+.winf-home-header .winf-home-top-ghost-trigger>img{
+  display:block;width:auto;height:41px;max-width:34px;object-fit:contain;
+  filter:drop-shadow(0 0 10px #ffffff5e);
+  transition:transform .2s ease;
+}
+.winf-home-header .winf-home-top-ghost-trigger:hover>img,
+.winf-home-header .winf-home-top-ghost-trigger[aria-expanded="true"]>img{
+  transform:scale(1.05);
+}
+@media(max-width:640px){
+ .winf-home-header .winf-home-header-actions{gap:9px}
+ .winf-home-header .winf-home-menu-trigger{
+   min-width:27px!important;height:49px!important;min-height:49px!important;padding:5px 0!important;
+ }
+ .winf-home-header .winf-home-top-ghost-trigger{
+   width:31px;height:49px;min-height:49px;
+ }
+ .winf-home-header .winf-home-top-ghost-trigger>img{height:36px}
+}
+@media(prefers-reduced-motion:reduce){
+ .winf-home-header .winf-home-top-ghost-trigger>img{transition:none}
+}

@@ -70,3 +70,16 @@
 }
 @media(max-width:350px){#menu-overlay.ac-simple-menu .ac-simple-brand-small{display:none}#menu-overlay.ac-simple-menu .ac-simple-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){#menu-overlay.ac-simple-menu .ac-simple-main>a{transition:none}}
+
+/* Ghost AeroCore — descriptoras curtas sob cada marca, sem tratar a mobilidade como 'película'. */
+#menu-overlay.ac-simple-menu .ac-simple-main>a .ac-simple-scope{
+ display:block;max-width:100%;margin:7px 0 6px;
+ color:#bdbdc4;font:600 clamp(10px,.9vw,12px)/1.5 'JetBrains Mono',ui-monospace,monospace;
+ letter-spacing:.09em;
+}
+#menu-overlay.ac-simple-menu .ac-simple-main>a:hover .ac-simple-scope{color:#e5e5e9}
+@media(max-width:600px){
+ #menu-overlay.ac-simple-menu .ac-simple-main>a .ac-simple-scope{
+  font-size:9px;letter-spacing:.035em;margin:5px 0 7px;
+ }
+}
