@@ -1,0 +1,26 @@
+name: WINF — Verificação HTTP de produção (somente leitura)
+on:
+  pull_request:
+    paths:
+      - 'scripts/check-winf-production.mjs'
+      - '.github/workflows/winf-production-readonly.yml'
+  workflow_dispatch:
+jobs:
+  public-http:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verificar www e domínio principal, sem alterar cache nem dados
+        run: node scripts/check-winf-production.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: winf-production-http-evidence
+          path: test-results/winf-public-check.json
+          if-no-files-found: warn
