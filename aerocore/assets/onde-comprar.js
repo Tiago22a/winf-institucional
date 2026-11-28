@@ -81,27 +81,27 @@
         article.dataset.journey = active ? 'atendimento' : 'expansao';
         card.querySelector('.directory-card-state').textContent = city.uf || 'BR';
         card.querySelector('.directory-card-status').textContent =
-          active ? '● Território WINF ativo' : city.siteAtivo ? '◌ Estrutura digital publicada' : '◌ Seleção sob consulta';
+          active ? '● Atendimento pela Central WINF' : '◌ Em breve';
         card.querySelector('.directory-card-city').textContent = city.cidade + (city.uf ? ' — ' + city.uf : '');
         card.querySelector('.directory-card-segment').textContent = active
           ? (names[city.tipoAtendimento] || 'Películas para vidros') + ' · Atendimento e instalação mediante confirmação'
-          : 'WINF Asset Light™ · oportunidade territorial';
+          : 'Em breve · sem atendimento local ativo';
         const claim = card.querySelector('.directory-card-claim');
         if (!active) {
           claim.hidden = false;
-          claim.textContent = 'Apenas 1 licenciado selecionado por cidade. Não é para todos.';
+          claim.textContent = 'Cidade em preparação. Sem operação local anunciada.';
         }
         const tags = active
           ? (city.tipoAtendimento === 'ambos' ? ['Automotivo', 'Residencial'] : [names[city.tipoAtendimento] || 'Soluções WINF'])
-          : [city.siteAtivo ? 'Página online' : 'Em preparação', 'Exclusividade territorial'];
+          : ['Em breve', 'Expansão WINF'];
         tags.forEach(label => {
           const tag = document.createElement('span');
           tag.textContent = label;
           card.querySelector('.directory-card-tags').append(tag);
         });
         const links = card.querySelector('.directory-card-links');
-        if (city.siteAtivo === true) {
-          addLink(links, active ? 'Ver página da cidade ↗' : 'Conhecer estrutura pronta ↗', city.url);
+        if (active && city.siteAtivo === true) {
+          addLink(links, 'Ver página da cidade ↗', city.url);
         }
         if (active) {
           const whatsapp = /^55\d{10,11}$/.test(String(city.numero || ''))
@@ -115,7 +115,7 @@
           const message = 'Olá! Vi a estrutura digital WINF da cidade de ' + city.cidade + '/' + city.uf +
             '. Tenho interesse em ser o único licenciado WINF Asset Light™ do município. ' +
             'A seleção ainda está disponível? Gostaria de conhecer o pack, as condições de contratação e a ativação.';
-          addLink(links, 'Consultar exclusividade ↗',
+          addLink(links, 'Consultar expansão ↗',
             'https://wa.me/5513997815375?text=' + encodeURIComponent(message));
         }
         fragment.append(card);
