@@ -45,7 +45,7 @@ const tests=[
    assert.doesNotMatch(home,/href="\/aerocore\/onde-comprar\/"/);
    assert.match(home,/winf-active-territories\.js/);
  }],
- ['Legacy register keeps 100 entries, with 71 regional municipalities active and expansion separate',()=>{
+ ['Legacy register keeps 100 entries, with confirmed active service and expansion separate',()=>{
    const list=JSON.parse(cities.match(/globalThis\.WINF_CIDADES\s*=\s*(\[[\s\S]*?\]);/)[1]);
    const extra=JSON.parse(cities.match(/globalThis\.WINF_UNIDADES_EXTRAS\s*=\s*(\[[\s\S]*?\]);/)[1]);
    const regional=JSON.parse(cities.match(/globalThis\.WINF_PAGINAS_REGIONAIS\s*=\s*(\[[\s\S]*?\]);/)[1]);
@@ -57,10 +57,10 @@ const tests=[
      assert.equal(list.find(x=>x.id===id)?.status,'ativa');
      assert.equal(list.find(x=>x.id===id)?.siteAtivo,true);
    }
-   assert.equal(list.find(x=>x.id==='cuiaba-mt')?.status,'nao_ativa');
+   assert.equal(list.find(x=>x.id==='cuiaba-mt')?.status,'ativa');
    assert.equal(extra.filter(x=>x.status==='ativa').length,1);
-   assert.equal(regional.filter(x=>x.status==='ativa').length,62);
-   assert.equal(list.filter(x=>x.status==='ativa').length+extra.filter(x=>x.status==='ativa').length+regional.filter(x=>x.status==='ativa').length,71);
+   assert.equal(regional.filter(x=>x.status==='ativa').length,16);
+   assert.equal(list.filter(x=>x.status==='ativa').length+extra.filter(x=>x.status==='ativa').length+regional.filter(x=>x.status==='ativa').length,25);
    const santos=list.find(x=>x.id==='santos-sp');
    assert.equal(santos.url,'/pelicula-de-controle-solar-santos-sp/');
    assert.equal(santos.numero,'5513981113001');
