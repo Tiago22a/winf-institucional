@@ -1,0 +1,29 @@
+name: WINF — Cidades e WhatsApp
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'js/cidades.js'
+      - 'aerocore/assets/onde-comprar.js'
+      - 'insulfilm-residencial-sorocaba-sp/index.html'
+      - 'pelicula-de-controle-solar-pilar-do-sul-sp/index.html'
+      - 'pelicula-de-controle-solar-cuiaba-mt/index.html'
+      - 'tests/territories-contact.test.mjs'
+      - '.github/workflows/territories-contact-smoke.yml'
+  workflow_dispatch:
+jobs:
+  cities-contact:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate contact and territory registry
+        run: node --test tests/territories-contact.test.mjs
+      - name: Syntax-check city scripts
+        run: |
+          node --check js/cidades.js
+          node --check aerocore/assets/onde-comprar.js
