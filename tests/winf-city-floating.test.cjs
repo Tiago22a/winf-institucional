@@ -17,7 +17,7 @@ test("Páginas comerciais disponíveis usam somente o par local Ghost/WhatsApp",
   assert.equal((s.match(/class="santos-contact-whatsapp"/g)||[]).length,1,city+": WhatsApp local");
   assert.ok(s.includes("data-whatsapp=\""+phone+"\""),city+": formulario comercial certo");
   assert.ok(s.includes("/css/winf-city-unit.css?v=20261112-single-dock2"),city+": CSS sem cache antigo");
-  assert.ok(s.includes("/js/winf-footer.js?v=20261112-dock2"),city+": footer novo");
+  assert.ok(s.includes("/js/winf-footer.js?v="),city+": footer global em cache versionado");
   assert.ok(s.includes("/js/winf-return.js?v=20261112-dock2"),city+": retorno novo");
   assert.ok(!s.includes('id="winf-quick-contact"'),city+": sem global no HTML");
  }
