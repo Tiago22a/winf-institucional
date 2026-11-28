@@ -7,13 +7,12 @@ import { chromium } from 'playwright';
 import { mkdirSync, writeFileSync } from 'node:fs';
 const BASE = process.env.WINF_TEST_BASE || 'https://winf.com.br';
 const CANONICAL_BASE = 'https://winf.com.br';
+// Smoke local para páginas versionadas deste repositório. As demais regiões
+// podem existir no CDN, mas não podem ser auditadas por um servidor HTTP local.
 const cities = [
   ['santos','pelicula-de-controle-solar-santos-sp'],
-  ['praia-grande','pelicula-de-controle-solar-praia-grande-sp'],
-  ['guaruja','pelicula-de-controle-solar-guaruja-sp'],
   ['sorocaba','insulfilm-residencial-sorocaba-sp'],
   ['pilar-do-sul','pelicula-de-controle-solar-pilar-do-sul-sp'],
-  ['campina-grande','pelicula-de-controle-solar-campina-grande-pb'],
   ['cuiaba','pelicula-de-controle-solar-cuiaba-mt'],
 ];
 const modes = [
@@ -44,7 +43,7 @@ for(const mode of modes) {
         const og=document.querySelector('meta[property="og:image"]')?.getAttribute('content');
         const robots=document.querySelector('meta[name="robots"]')?.getAttribute('content')||'';
         const grids=['.winf-guide-grid','.winf-intent-grid'];
-        const expectedNumber=/sorocaba|pilar-do-sul/.test(location.pathname)?'5515997909049':'5513981113001';
+        const expectedNumber='5513981113001';
         const nav=document.querySelector('a[href*="wa.me/'+expectedNumber+'"]');
         return {
           h1Count:h1.length,
@@ -113,7 +112,7 @@ for(const mode of modes) {
     results.push(check);
     console.log(JSON.stringify({city:slug,mode:mode.name,status:check.status,ogStatus:check.ogStatus,errors:check.errors,warnings:check.warnings}));
   }
-  // A página inicial tem sete cards em três regiões, com três canais por cidade.
+  // A home destaca 3 cards de DDD 013 e 3 cidades com atendimento online pela central.
   const homeCheck={city:'home-cards',mode:mode.name,url:BASE+'/',errors:[],warnings:[]};
   try{
     const response=await page.goto(BASE+'/',{waitUntil:'domcontentloaded',timeout:45000});
@@ -131,13 +130,13 @@ for(const mode of modes) {
       };
     }));
     homeCheck.metrics={cards};
-    if(cards.length!==7)homeCheck.errors.push('Esperados 7 cards: '+cards.length);
+    if(cards.length!==6)homeCheck.errors.push('Esperados 6 cards: '+cards.length);
     for(const card of cards){
       if(card.links.length!==3)homeCheck.errors.push(card.id+' com '+card.links.length+' canais');
       if(card.navDisplay!=='grid')homeCheck.errors.push(card.id+' sem grid de contatos');
       if(card.links.some(x=>x.width<40||x.height<34||!x.visible))homeCheck.errors.push(card.id+' com botão invisível/pequeno');
       if(!card.links.some(x=>x.href?.startsWith('/')))homeCheck.errors.push(card.id+' sem site local');
-      const expectedPhone=['sorocaba','pilar-do-sul'].includes(card.id)?'5515997909049':'5513981113001';
+      const expectedPhone='5513981113001';
       if(!card.links.some(x=>x.href?.includes('wa.me/'+expectedPhone+'?text=')))homeCheck.errors.push(card.id+' sem WhatsApp da central regional');
       if(!card.links.some(x=>x.href?.includes('instagram.com/')))homeCheck.errors.push(card.id+' sem Instagram');
     }
@@ -146,6 +145,7 @@ for(const mode of modes) {
       const items=controls?[...controls.querySelectorAll('.wqc-launchers .wqc-circle')]:[];
       const wa=controls?.querySelector('.wqc-whatsapp');
       return {totalQuick:document.querySelectorAll('#winf-quick-contact').length,
+        topGhost:!!document.getElementById('winf-home-top-ghost'),
         legacy:document.querySelectorAll('#winf-global-dock,.winf-global-floating-dock').length,
         count:items.length,
         whatsapp:wa?.getAttribute('href')||null,
@@ -168,7 +168,9 @@ for(const mode of modes) {
     });
     homeCheck.metrics.dock=dockState;
     if(dockState.totalQuick!==1||dockState.legacy!==0)homeCheck.errors.push('Dock fixo duplicado ou ausente');
-    if(dockState.count!==2)homeCheck.errors.push('Esperado fantasma e WhatsApp únicos');
+    // Na home o GHOST oficial fica no topo; só o WhatsApp permanece flutuante.
+    const floatingCount=dockState.topGhost?1:2;
+    if(dockState.count!==floatingCount)homeCheck.errors.push('Quantidade incorreta de atalhos flutuantes: '+dockState.count);
     if(!dockState.whatsapp?.includes('wa.me/5513981113001'))homeCheck.errors.push('WhatsApp não usa a central');
     if(!dockState.inViewport||!dockState.labelsVisible)homeCheck.errors.push('Dock/rótulos extrapolam viewport');
     if(dockState.labelsOverlap||dockState.cookieOverlap)homeCheck.errors.push('Dock/rótulos sobrepostos');
