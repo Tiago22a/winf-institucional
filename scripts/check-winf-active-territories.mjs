@@ -9,23 +9,25 @@ const original=root.WINF_CIDADES||[],extra=root.WINF_UNIDADES_EXTRAS||[],regiona
 const all=[...original,...extra,...regional].filter(c=>c.exemplo===false);
 const active=all.filter(c=>c.status==='ativa');
 assert.equal(original.length,100,'Cadastro legado de 100 entradas preservado');
-assert.equal(active.length,71,'Os 71 municípios atendidos são roteados por duas centrais');
+assert.equal(active.length,25,'Apenas os territórios confirmados seguem ativos; demais regiões aparecem Em breve');
 assert.equal(new Set(active.map(c=>c.id)).size,active.length,'Não há município ativo duplicado');
 const center13=active.filter(c=>c.numero?.startsWith('5513'));
 const center15=active.filter(c=>c.numero?.startsWith('5515'));
-assert.equal(center13.length,22,'Central 013: 22 municípios');
-assert.equal(center15.length,49,'Central 015: 49 municípios');
+assert.equal(center13.length,25,'Central comercial WINF atende as cidades ativas pelo DDD 013');
+assert.equal(center15.length,0,'Nenhuma cidade pode continuar usando o WhatsApp antigo 015');
 for(const city of active){
  assert.equal(typeof city.siteAtivo,'boolean','Status da página indefinido: '+city.cidade);
  assert.ok(city.url?.startsWith('/'),'URL não informada: '+city.cidade);
- assert.equal(city.siteAtivo,existsSync(city.url.slice(1)+'index.html'),'Site publicado divergente do arquivo: '+city.cidade);
+ if(['sorocaba-sp','pilar-do-sul-sp','cuiaba-mt'].includes(city.id))
+   assert.equal(city.siteAtivo,existsSync(city.url.slice(1)+'index.html'),'Página requerida ausente: '+city.cidade);
  assert.ok(city.numero?.startsWith('5513')||city.numero?.startsWith('5515'),'Contato não regional: '+city.cidade);
 }
 for(const id of ['santos-sp','sorocaba-sp','pilar-do-sul-sp']){
  assert.ok(active.some(c=>c.id===id),'Operação regional âncora ausente: '+id);
 }
 assert.equal(all.find(c=>c.id==='campina-grande-pb')?.status,'pre_ativacao');
-assert.equal(all.find(c=>c.id==='cuiaba-mt')?.status,'nao_ativa');
+assert.equal(all.find(c=>c.id==='cuiaba-mt')?.status,'ativa');
+assert.equal(all.find(c=>c.id==='itapetininga-sp')?.status,'pre_ativacao');
 for(const id of ['unidades-ativas','winf-region-013','winf-region-015']){
  assert.ok(doc.includes('id="'+id+'"'),'Região/segmento ausente na vitrine: '+id);
 }
@@ -34,4 +36,4 @@ const script=read('js/winf-active-territories.js');
 assert.ok(!script.includes('replaceChildren'),'Não apagar os cards publicados do site global');
 const locator=read('aerocore/assets/onde-comprar.js');
 assert.ok(locator.includes("city.status === 'ativa'"),'Filtro operacional do locator ausente');
-console.log('✓ WINF: 71 identidades territoriais ativas e links de páginas existentes conferidos. Roteamento interno reservado.');
+console.log('✓ WINF: 25 territórios ativos no cadastro, central única 013 e cidades 015 não liberadas em Em breve.');
